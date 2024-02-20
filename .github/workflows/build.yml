@@ -1,89 +1,56 @@
-name: CI
-
 on:
   push:
-    branches: [ master ]
-  pull_request:
+    # Sequence of patterns matched against refs/tags
+    tags:
+    - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+name: Upload Release Asset
 
 jobs:
   build:
+    name: Upload Release Asset
     runs-on: ubuntu-latest
-    env:
-      GAME_VERSION: FIRERED
-      GAME_LANGUAGE: ENGLISH
-      GAME_REVISION: 0
-      MODERN: 0
-      COMPARE: 1
+    container: devkitpro/devkitarm:latest
+    
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
-
-      - name: Checkout agbcc
-        uses: actions/checkout@master
+      - name: Cache Build Environment
+        id: cache-build
+        uses: actions/cache@v2
         with:
-          path: 'agbcc'
-          repository: 'pret/agbcc'
+          path: |
+                /usr
+                /opt
+                /agbcc
+                /Pokemon-Rekindled-Red
+                /bin
+          key: default-cache
+          
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Checkout symbols
-        if: ${{ github.event_name == 'push' }}
-        uses: actions/checkout@master
+      - name: Prepare dependencies
+        if: steps.cache-build.outputs.cache-hit != 'true'
+        run: |
+              sudo apt update -y -qq
+              sudo apt install build-essential -y -qq
+              sudo apt install binutils-arm-none-eabi -y -qq
+              sudo apt-get install libpng-dev -y -qq
+              cd ..
+              git clone https://github.com/pret/agbcc --quiet
+              cd ./agbcc
+              ./build.sh
+              ./install.sh ../Pokemon-Rekindled-Red
+              cd ../Pokemon-Rekindled-Red
+      
+      - name: Ensure setup
+        if: steps.cache-build.outputs.cache-hit
+        run: |
+              cd ./Pokemon-Rekindled-Red
+      - name: Build project 
+        run: make
+        
+      - name: Release and upload ROM
+        id: upload-rom
+        uses: softprops/action-gh-release@v1
         with:
-          path: 'symbols'
-          ref: 'symbols'
-
-      - name: Install binutils
-        run: sudo apt install gcc-arm-none-eabi binutils-arm-none-eabi
-        # build-essential, git, and libpng-dev are already installed
-        # gcc-arm-none-eabi is only needed for the modern build
-        # as an alternative to dkP
-
-      - name: Install agbcc
-        run: |
-          ./build.sh
-          ./install.sh ../
-        working-directory: ./agbcc
-
-      - name: Compare FireRed
-        run: |
-          make -j${nproc} all syms
-
-      - name: Compare FireRed rev1
-        env:
-          GAME_REVISION: 1
-        run: |
-          make -j${nproc} all syms
-
-      - name: Compare LeafGreen
-        env:
-          GAME_VERSION: LEAFGREEN
-        run: |
-          make -j${nproc} all syms
-
-      - name: Compare LeafGreen rev1
-        env:
-          GAME_VERSION: LEAFGREEN
-          GAME_REVISION: 1
-        run: |
-          make -j${nproc} all syms
-
-      - name: Build Modern
-        env:
-          MODERN: 1
-          COMPARE: 0
-        run: |
-          make -j${nproc} all
-
-      - name: Move symfiles
-        if: ${{ github.event_name == 'push' }}
-        run: |
-          cp *.sym symbols/
-          echo "SYMBOLS_COMMIT_MSG=$( git log --format=%s ${GITHUB_SHA} )" >> $GITHUB_ENV
-
-      - name: Update symfiles
-        if: ${{ github.event_name == 'push' }}
-        uses: EndBug/add-and-commit@v7
-        with:
-          branch: symbols
-          cwd: "./symbols"
-          add: "*.sym"
-          message: ${{ env.SYMBOLS_COMMIT_MSG }}
+          files: pokefirered.gba
