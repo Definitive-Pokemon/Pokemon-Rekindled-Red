@@ -34,7 +34,7 @@ jobs:
               sudo apt update -y -qq
               sudo apt install build-essential -y -qq
               sudo apt install binutils-arm-none-eabi -y -qq
-              sudo apt install gcc-arm-none-eabi
+              sudo apt install gcc-arm-none-eabi -y -qq
               cd ..
               git clone https://github.com/pret/agbcc --quiet
               cd ./agbcc
