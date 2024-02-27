@@ -2966,7 +2966,7 @@
       "blockdata_filepath": "data/layouts/SevenIsland_House_Room2/map.bin"
     },
     {
-      "id": "LAYOUT_VIRIDIAN_CITY_HOUSE2",
+      "id": "LAYOUT_VIRIDIAN_CITY_SCHOOL",
       "name": "ViridianCity_School_Layout",
       "width": 10,
       "height": 9,
@@ -3086,7 +3086,7 @@
       "blockdata_filepath": "data/layouts/Route5_PokemonDayCare/map.bin"
     },
     {
-      "id": "LAYOUT_VIRIDIAN_CITY_HOUSE1",
+      "id": "LAYOUT_VIRIDIAN_CITY_HOUSE",
       "name": "ViridianCity_House_Layout",
       "width": 11,
       "height": 9,
