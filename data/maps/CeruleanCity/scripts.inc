@@ -459,7 +459,7 @@ Cerulean_City_EventScript_BuyTotodileParty::
 CeladonCity_Condominiums_RoofRoom_EventScript_NicknameTotodileParty::
 	call EventScript_GetGiftMonPartySlot
 	fadescreen FADE_TO_BLACK
-	hidemoneybox 0, 0
+	hidemoneybox
 	special ChangePokemonNickname
 	waitstate
 	goto Cerulean_City_EventScript_BoughtTotodile
@@ -475,7 +475,7 @@ Cerulean_City_EventScript_BuyTotodilePC::
 	goto_if_eq Cerulean_City_EventScript_TransferTotodileCloseMoneyBox
 CeladonCity_Condominiums_RoofRoom_EventScript_NicknameTotodilePC::
 	fadescreen FADE_TO_BLACK
-	hidemoneybox 0, 0
+	hidemoneybox
 	special ChangeBoxPokemonNickname
 	waitstate
 	lock
@@ -494,7 +494,7 @@ Cerulean_City_EventScript_TransferTotodile::
 	end
 
 Cerulean_City_EventScript_EndPurchaseTotodile::
-	hidemoneybox 0, 0
+	hidemoneybox
 	goto Cerulean_City_EventScript_BoughtTotodile
 	end
 
@@ -515,13 +515,13 @@ Cerulean_City_EventScript_PayForTotodile::
 
 Cerulean_City_EventScript_DeclineTotodile::
 	msgbox Cerulean_City_Text_OnlyDoingThisAsFavorToYou
-	hidemoneybox 0, 0
+	hidemoneybox
 	release
 	end
 
 Cerulean_City_EventScript_NotEnoughMoney::
 	msgbox Cerulean_City_Text_YoullNeedMoreMoney
-	hidemoneybox 0, 0
+	hidemoneybox
 	release
 	end
 
@@ -533,6 +533,6 @@ Cerulean_City_EventScript_AlreadyBoughtTotodile::
 Cerulean_City_EventScript_NoRoomForTotodile::
 	textcolor 0
 	msgbox Cerulean_City_Text_NoRoomForMorePokemon
-	hidemoneybox 0, 0
+	hidemoneybox
 	release
 	end

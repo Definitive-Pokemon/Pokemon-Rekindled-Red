@@ -46,6 +46,3 @@ EventTicket_Text_AsYouLike:
 FarawayIsland_Exterior_Text_SailorReturn:
     .string "Do you want to return to VERMILION?$"
 	
-Common_Movement_WalkInPlaceFasterDown:
-	walk_in_place_faster_down
-	step_end

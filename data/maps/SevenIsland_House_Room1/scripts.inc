@@ -154,9 +154,9 @@ SevenIsland_House_Room1_EventScript_Blaine::
 
 SevenIsland_House_Room1_EventScript_Daisy::
 	setvar 0x8004, FAMECHECKER_DAISY
-	getstring 0, gText_Daisy
-	getstring 1, SevenIsland_House_Room1_Text_SheString
-	getstring 2, gFameCheckerFlavorTextOriginLocation_Daisy0
+	bufferstring 0, gText_Daisy
+	bufferstring 1, SevenIsland_House_Room1_Text_SheString
+	bufferstring 2, gFameCheckerFlavorTextOriginLocation_Daisy0
 	callnative CheckFilledFameCheckerFor0x8004
 	compare VAR_RESULT, TRUE
 	goto_if_eq SevenIsland_House_Room1_EventScript_FullFamecheckerForPerson

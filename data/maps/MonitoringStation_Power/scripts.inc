@@ -14,7 +14,7 @@ MonitoringStation_Power_EventScript_OnLoad::
 	end
 
 MonitoringStation_Power_EventScript_Weather::
-	setflashradius 0
+	setflashlevel 0
 	setweather WEATHER_NONE
 	doweather
 	return
@@ -92,7 +92,7 @@ MonitoringStation_Power_EventScript_Restore_Power::
 	delay 60
 	playse SE_M_CONFUSE_RAY
 	animateflash 0
-	setflashradius 0
+	setflashlevel 0
 	playse SE_SLIDING_DOOR
 	setweather WEATHER_NONE
 	doweather

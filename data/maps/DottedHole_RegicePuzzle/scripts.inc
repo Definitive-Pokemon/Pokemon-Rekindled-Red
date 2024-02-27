@@ -64,7 +64,7 @@ DottedHole_RegicePuzzle_EventScript_FallThroughIce::
 	waitmovement 0
 	playse SE_FALL
 	delay 60
-	formatwarphole MAP_DOTTED_HOLE_REGICE_PUZZLE2
+	warphole MAP_DOTTED_HOLE_REGICE_PUZZLE2
 	waitstate
 	releaseall
 	end

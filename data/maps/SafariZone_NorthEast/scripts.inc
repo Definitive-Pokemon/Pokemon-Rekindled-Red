@@ -35,7 +35,7 @@ SafariZone_NorthEast_EventScript_Anabel::
 	waitmovement 0
 	msgbox SafariZone_NorthEast_Text_AnabelHelp
 	closemessage
-	applymovement SafariZone_NorthEast_Movement_AnabelContinue
+	applymovement LOCALID_ANABEL, SafariZone_NorthEast_Movement_AnabelContinue
 	waitmovement 0
 	msgbox SafariZone_NorthEast_Text_AnabelHm
 	closemessage

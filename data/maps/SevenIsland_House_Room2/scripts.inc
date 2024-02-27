@@ -1334,7 +1334,7 @@ SevenIsland_House_Room2_Movement_DaisyAroundPlayer:
 	walk_right
 	walk_right
 	walk_right
-	walk_in_place_fastest_left
+	walk_in_place_faster_left
 	step_end
 
 SevenIsland_House_Room2_Movement_DaisyDownToMat:
@@ -1347,7 +1347,7 @@ SevenIsland_House_Room2_Movement_DaisyDownToMat:
 	walk_right
 	walk_right
 	walk_right
-	walk_in_place_fastest_left
+	walk_in_place_faster_left
 	step_end
 
 SevenIsland_House_Room2_Eventscript_DaisyBattle:
