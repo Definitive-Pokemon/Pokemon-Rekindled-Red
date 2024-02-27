@@ -187,3 +187,61 @@ CeruleanCity_House5_EventScript_BerryCrushRankings::
 	waitstate
 	releaseall
 	end
+
+CeruleanCity_House5_EventScript_RRBerryPowderMan::
+	lock
+	faceplayer
+	goto_if_set FLAG_GOT_POWDER_JAR, CeruleanCity_House5_EventScript_RRBerryPowderShop
+	checkitem ITEM_POWDER_JAR, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq CeruleanCity_House5_EventScript_RRGiveJar
+	msgbox CeruleanCity_House5_Text_RRNeedBerryPowder
+	release
+	end
+	
+CeruleanCity_House5_EventScript_RRGiveJar::
+	msgbox CeruleanCity_House5_Text_RRGotJar, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq CeruleanCity_House5_EventScript_RRTooBad
+	msgbox CeruleanCity_House5_Text_RRGiveJar
+	removeitem ITEM_POWDER_JAR, 1
+	setflag FLAG_GOT_POWDER_JAR
+	textcolor 3
+	playfanfare MUS_OBTAIN_TMHM
+	message CeruleanCity_House5_Text_RRDeliverJar
+	waitmessage
+	waitfanfare
+	call EventScript_RestorePrevTextColor
+	msgbox CeruleanCity_House5_Text_Buy
+	release
+	end
+	
+CeruleanCity_House5_EventScript_RRTooBad::
+	msgbox CeruleanCity_House5_Text_RRTooBad
+	release
+	end
+	
+CeruleanCity_House5_EventScript_RRBerryPowderShop::
+	message CeruleanCity_House5_Text_RRShop
+	waitmessage
+	pokemart CeruleanCity_Herbs_Items
+	msgbox CeruleanCity_House5_Text_Thanks
+	release
+	end
+	
+	.align 2
+CeruleanCity_Herbs_Items::
+	.2byte ITEM_ENERGY_POWDER
+	.2byte ITEM_ENERGY_ROOT
+	.2byte ITEM_HEAL_POWDER
+	.2byte ITEM_REVIVAL_HERB
+	.2byte ITEM_PROTEIN
+	.2byte ITEM_IRON
+	.2byte ITEM_CARBOS
+	.2byte ITEM_CALCIUM
+	.2byte ITEM_ZINC
+	.2byte ITEM_HP_UP
+	.2byte ITEM_PP_UP
+	.2byte ITEM_NONE
+	release
+	end

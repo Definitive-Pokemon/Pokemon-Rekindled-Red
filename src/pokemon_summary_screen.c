@@ -196,6 +196,7 @@ struct PokemonSummaryScreenData
 
         u8 ALIGNED(4) abilityNameStrBuf[13];
         u8 ALIGNED(4) abilityDescStrBuf[52];
+        u8 ALIGNED(4) formSymbolStrBuf[1];
     } summary;
 
     u8 ALIGNED(4) isEgg; /* 0x3200 */
@@ -2094,12 +2095,21 @@ static void BufferMonInfo(void)
     u16 gender;
     u16 heldItem;
     u32 otId;
+    u16 species = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPECIES);
 
-    dexNum = SpeciesToPokedexNum(GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPECIES));
+    dexNum = SpeciesToPokedexNum(StripFormToSpecies(species));
     if (dexNum == 0xffff)
         StringCopy(sMonSummaryScreen->summary.dexNumStrBuf, gText_PokeSum_DexNoUnknown);
     else
         ConvertIntToDecimalStringN(sMonSummaryScreen->summary.dexNumStrBuf, dexNum, STR_CONV_MODE_LEADING_ZEROS, 3);
+
+    if (species > NUM_SPECIES)
+    {
+        const u8 *formSymbol = GetFormSymbolBySpecies(species);
+        StringCopy(sMonSummaryScreen->summary.formSymbolStrBuf, formSymbol);
+    }
+    else
+        StringCopy(sMonSummaryScreen->summary.formSymbolStrBuf, gExpandedPlaceholder_Empty);
 
     sMonSkillsPrinterXpos->unk00 = 0;
 
@@ -2680,6 +2690,7 @@ static void PrintInfoPage(void)
     if (!sMonSummaryScreen->isEgg)
     {
         AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 47 + sMonSkillsPrinterXpos->unk00, 5, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.dexNumStrBuf);
+        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], 2, 70 + sMonSkillsPrinterXpos->unk00, 5, sLevelNickTextColors[0], TEXT_SPEED_FF, sMonSummaryScreen->summary.formSymbolStrBuf);
         AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 47, 49, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.otNameStrBuf);
         AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 47, 64, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.unk306C);
         AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 47, 79, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.itemNameStrBuf);

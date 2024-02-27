@@ -135,7 +135,7 @@ extern u8 gStringVar4[];
 
 #define ROUND_BITS_TO_BYTES(numBits) DIV_ROUND_UP(numBits, 8)
 
-#define DEX_FLAGS_NO ROUND_BITS_TO_BYTES(NUM_SPECIES)
+#define DEX_FLAGS_NO ROUND_BITS_TO_BYTES(NUM_DEX_ENTRIES_WITH_FORMS)
 #define NUM_FLAG_BYTES ROUND_BITS_TO_BYTES(FLAGS_COUNT)
 #define NUM_ADDITIONAL_PHRASE_BYTES ROUND_BITS_TO_BYTES(NUM_ADDITIONAL_PHRASES)
 
@@ -198,6 +198,7 @@ struct Pokedex
     /*0x0C*/ u32 unknown3;
     /*0x10*/ u8 owned[DEX_FLAGS_NO];
     /*0x44*/ u8 seen[DEX_FLAGS_NO];
+    u8 firstFormEncounter[NUM_ORIGINAL_SPECIES_WITH_FORMS];
 };
 
 struct PokemonJumpRecords

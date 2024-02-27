@@ -419,8 +419,24 @@
 #define SPECIES_DEOXYS 410
 #define SPECIES_CHIMECHO 411
 #define SPECIES_EGG 412
+// This is where you would add new pokemon (species)
+
+// FORMS
+// always needs to be updated if a new species is to be added. Final sprited mon num + 1
+#define NUM_NON_FORM_MON_SPRITES 440 
+// deprecate this
+// add new form/variant mons here
+#define SPECIES_FOSSILIZED_KABUTOPS 440
+#define SPECIES_SEVIIAN_AERODACTYL 441
+#define NUM_FORMS 2
+#define NUM_ORIGINAL_SPECIES_WITH_FORMS 2
 
 #define NUM_SPECIES SPECIES_EGG
+#define NUM_SPECIES_WITH_FORMS (NUM_NON_FORM_MON_SPRITES + NUM_FORMS)
+#define NUM_DEX_ENTRIES_WITH_FORMS (NUM_SPECIES + NUM_FORMS)
+
+// arbitrary limit
+#define MAX_NUM_OF_FORMS 4
 
 #define SPECIES_UNOWN_B (NUM_SPECIES + 1)
 #define SPECIES_UNOWN_C (NUM_SPECIES + 2)

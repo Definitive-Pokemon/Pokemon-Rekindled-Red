@@ -55,7 +55,7 @@ NavelRock_Base_EventScript_Lugia::
 	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
 	waitmoncry
 	delay 20
-	seteventmon SPECIES_LUGIA, 70
+	seteventmon SPECIES_LUGIA, 90
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartLegendaryBattle
 	waitstate

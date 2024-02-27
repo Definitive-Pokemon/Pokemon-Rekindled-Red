@@ -974,6 +974,11 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_AWARD_SCOTT_BATTLE_TOWER
 	setflag FLAG_HIDE_NATIONAL_DEX_AIDE
 	setflag FLAG_HIDE_MASTER_TRAINERS
+	setflag FLAG_HIDE_ANABEL_FIRST
+	setflag FLAG_HIDE_ANABEL_SECOND
+	setflag FLAG_HIDE_ANABEL_THIRD
+	setflag FLAG_HIDE_LATIAS_FOURTH
+	setflag FLAG_HIDE_ANABEL_FOURTH
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
 	end
 
@@ -1328,3 +1333,108 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/BattleFrontier_RankingHall/scripts.inc"
 	.include "data/maps/BattleFrontier_RankingHall/text.inc"
+
+	.include "data/maps/ViridianCity_NewHouse/scripts.inc"
+	.include "data/maps/ViridianCity_NewHouse/text.inc"
+
+	.include "data/maps/ViridianForestDepths/scripts.inc"
+	.include "data/maps/ViridianForestDepths/text.inc"
+
+	.include "data/maps/PewterCity_Museum_B1F/scripts.inc"
+	.include "data/maps/PewterCity_Museum_B1F/text.inc"
+
+	.include "data/maps/MtMoon_Square/scripts.inc"
+	.include "data/maps/MtMoon_Square/text.inc"
+
+	.include "data/maps/Fiery_Passage/scripts.inc"
+	.include "data/maps/Fiery_Passage/text.inc"
+
+	.include "data/maps/MonitoringStation/scripts.inc"
+	.include "data/maps/MonitoringStation/text.inc"
+
+	.include "data/maps/MtEmber_RegirockPuzzle/scripts.inc"
+	.include "data/maps/MtEmber_RegirockPuzzle/text.inc"
+
+	.include "data/maps/Stone_Tomb/scripts.inc"
+	.include "data/maps/Stone_Tomb/text.inc"
+
+	.include "data/maps/Icy_Tomb/scripts.inc"
+	.include "data/maps/Icy_Tomb/text.inc"
+
+	.include "data/maps/Metal_Tomb/scripts.inc"
+	.include "data/maps/Metal_Tomb/text.inc"
+
+	.include "data/maps/DottedHole_RegicePuzzle/scripts.inc"
+	.include "data/maps/DottedHole_RegicePuzzle/text.inc"
+
+	.include "data/maps/DottedHole_RegicePuzzle2/scripts.inc"
+	.include "data/maps/DottedHole_RegicePuzzle2/text.inc"
+
+	.include "data/maps/MonitoringStation_RegisteelPuzzle/scripts.inc"
+	.include "data/maps/MonitoringStation_RegisteelPuzzle/text.inc"
+
+	.include "data/maps/MonitoringStation_Central/scripts.inc"
+	.include "data/maps/MonitoringStation_Central/text.inc"
+
+	.include "data/maps/MonitoringStation_Shortcut/scripts.inc"
+	.include "data/maps/MonitoringStation_Shortcut/text.inc"
+
+	.include "data/maps/MonitoringStation_Power/scripts.inc"
+	.include "data/maps/MonitoringStation_Power/text.inc"
+
+	.include "data/maps/MonitoringStation_Hallway2/scripts.inc"
+	.include "data/maps/MonitoringStation_Hallway2/text.inc"
+
+	.include "data/maps/MonitoringStation_ConferenceRoom/scripts.inc"
+	.include "data/maps/MonitoringStation_ConferenceRoom/text.inc"
+
+	.include "data/maps/MonitoringStation_Storage/scripts.inc"
+	.include "data/maps/MonitoringStation_Storage/text.inc"
+
+	.include "data/maps/MonitoringStation_Pokemon/scripts.inc"
+	.include "data/maps/MonitoringStation_Pokemon/text.inc"
+
+	.include "data/maps/MonitoringStation_Hallway3/scripts.inc"
+	.include "data/maps/MonitoringStation_Hallway3/text.inc"
+
+	.include "data/maps/MonitoringStation_Quarters/scripts.inc"
+	.include "data/maps/MonitoringStation_Quarters/text.inc"
+
+	.include "data/maps/MonitoringStation_Office/scripts.inc"
+	.include "data/maps/MonitoringStation_Office/text.inc"
+
+	.include "data/maps/MonitoringStation_End/scripts.inc"
+	.include "data/maps/MonitoringStation_End/text.inc"
+
+	.include "data/maps/MonitoringStation_EmeraldRoom/scripts.inc"
+	.include "data/maps/MonitoringStation_EmeraldRoom/text.inc"
+
+	.include "data/maps/MonitoringStation_Lair/scripts.inc"
+	.include "data/maps/MonitoringStation_Lair/text.inc"
+
+	.include "data/maps/PokeCenter/scripts.inc"
+	.include "data/maps/PokeCenter/text.inc"
+
+	.include "data/maps/Special/scripts.inc"
+	.include "data/maps/Special/text.inc"
+
+	.include "data/maps/FakePallet1/scripts.inc"
+	.include "data/maps/FakePallet1/text.inc"
+
+	.include "data/maps/FakePallet2/scripts.inc"
+	.include "data/maps/FakePallet2/text.inc"
+
+	.include "data/maps/NewMap1/scripts.inc"
+	.include "data/maps/NewMap1/text.inc"
+
+	.include "data/maps/KyogreDen/scripts.inc"
+	.include "data/maps/KyogreDen/text.inc"
+
+	.include "data/maps/CinnabarVolcano/scripts.inc"
+	.include "data/maps/CinnabarVolcano/text.inc"
+
+	.include "data/maps/CinnabarIsland_House/scripts.inc"
+	.include "data/maps/CinnabarIsland_House/text.inc"
+
+	.include "data/maps/CinnabarIsland_BerryFarm/scripts.inc"
+	.include "data/maps/CinnabarIsland_BerryFarm/text.inc"

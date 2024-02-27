@@ -36,11 +36,11 @@ u16 GetNationalPokedexCount(u8 caseID)
         switch (caseID)
         {
         case FLAG_GET_SEEN:
-            if (GetSetPokedexFlag(i + 1, FLAG_GET_SEEN))
+            if (GetSetPokedexFlag(i + 1, FLAG_GET_SEEN_ANY_FORM))
                 count++;
             break;
         case FLAG_GET_CAUGHT:
-            if (GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
+            if (GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT_ANY_FORM))
                 count++;
             break;
         }
@@ -82,11 +82,11 @@ u16 GetKantoPokedexCount(u8 caseID)
         switch (caseID)
         {
         case FLAG_GET_SEEN:
-            if (GetSetPokedexFlag(i + 1, FLAG_GET_SEEN))
+            if (GetSetPokedexFlag(i + 1, FLAG_GET_SEEN_ANY_FORM))
                 count++;
             break;
         case FLAG_GET_CAUGHT:
-            if (GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
+            if (GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT_ANY_FORM))
                 count++;
             break;
         }
@@ -104,11 +104,11 @@ u16 GetExtendedPokedexCount(u8 caseID)
         switch (caseID)
         {
         case FLAG_GET_SEEN:
-            if (GetSetPokedexFlag(ExtendedToNationalOrder(i + 1), FLAG_GET_SEEN))
+            if (GetSetPokedexFlag(ExtendedToNationalOrder(i + 1), FLAG_GET_SEEN_ANY_FORM))
                 count++;
             break;
         case FLAG_GET_CAUGHT:
-            if (GetSetPokedexFlag(ExtendedToNationalOrder(i + 1), FLAG_GET_CAUGHT))
+            if (GetSetPokedexFlag(ExtendedToNationalOrder(i + 1), FLAG_GET_CAUGHT_ANY_FORM))
                 count++;
             break;
         }
@@ -120,10 +120,9 @@ bool16 HasAllHoennMons(void)
 {
     u32 i;
 
-    // -2 excludes Jirachi and Deoxys
     for (i = 0; i < HOENN_DEX_COUNT - 2; i++)
     {
-        if (!GetSetPokedexFlag(HoennToNationalOrder(i + 1), FLAG_GET_CAUGHT))
+        if (!GetSetPokedexFlag(HoennToNationalOrder(i + 1), FLAG_GET_CAUGHT_ANY_FORM))
             return FALSE;
     }
     return TRUE;
@@ -135,7 +134,7 @@ bool16 HasAllExtendedMons(void)
 
     for (i = 0; i < EXTENDED_DEX_COUNT - 2; i++)
     {
-        if (!GetSetPokedexFlag(ExtendedToNationalOrder(i + 1), FLAG_GET_CAUGHT))
+        if (!GetSetPokedexFlag(ExtendedToNationalOrder(i + 1), FLAG_GET_CAUGHT_ANY_FORM))
             return FALSE;
     }
     return TRUE;
@@ -148,7 +147,7 @@ bool16 HasAllKantoMons(void)
     // -1 excludes Mew
     for (i = 0; i < KANTO_DEX_COUNT - 1; i++)
     {
-        if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
+        if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT_ANY_FORM))
             return FALSE;
     }
     return TRUE;
@@ -161,21 +160,19 @@ bool16 HasAllMons(void)
     // -1 excludes Mew
     for (i = 0; i < KANTO_DEX_COUNT - 1; i++)
     {
-        if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
+        if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT_ANY_FORM))
             return FALSE;
     }
-
     // -3 excludes Lugia, Ho-Oh, and Celebi
     for (i = KANTO_DEX_COUNT; i < JOHTO_DEX_COUNT - 3; i++)
     {
-        if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
+        if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT_ANY_FORM))
             return FALSE;
     }
-
     // -2 excludes Jirachi and Deoxys
     for (i = JOHTO_DEX_COUNT; i < NATIONAL_DEX_COUNT - 2; i++)
     {
-        if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
+        if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT_ANY_FORM))
             return FALSE;
     }
     return TRUE;
@@ -187,7 +184,7 @@ bool16 HasNationalMon(void)
 
     for (i = EXTENDED_DEX_COUNT + 1; i < NATIONAL_DEX_COUNT; i++)
     {
-        if (GetSetPokedexFlag(ExtendedToNationalOrder(i + 1), FLAG_GET_CAUGHT))
+        if (GetSetPokedexFlag(ExtendedToNationalOrder(i + 1), FLAG_GET_CAUGHT_ANY_FORM))
             return TRUE;
     }
     return FALSE;
@@ -200,7 +197,7 @@ bool16 HasAllKantoMonsNew(void)
 
     for (i = 0; i < KANTO_DEX_COUNT; i++)
     {
-        if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
+        if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT_ANY_FORM))
             return FALSE;
     }
     return TRUE;

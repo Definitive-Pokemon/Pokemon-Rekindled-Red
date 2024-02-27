@@ -701,9 +701,9 @@ static void SetTitleScreenScene_Cry(s16 *data)
         if (!gPaletteFade.active)
         {
             if(gSaveBlock1Ptr->keyFlags.version == 0)
-                PlayCry_Normal(SPECIES_CHARIZARD, 0);
+                PlayCry_Normal(SPECIES_MOLTRES, 0);
             else
-                PlayCry_Normal(SPECIES_VENUSAUR, 0);
+                PlayCry_Normal(SPECIES_MOLTRES, 0);
             DeactivateSlashSprite(tSlashSpriteId);
             data[2] = 0;
             tState++;

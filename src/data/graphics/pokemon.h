@@ -2820,3 +2820,15 @@ const u8 gMonIcon_UnownExclamationMark[] = INCBIN_U8("graphics/pokemon/unown/exc
 const u32 gMonFrontPic_UnownQuestionMark[] = INCBIN_U32("graphics/pokemon/unown/question_mark/front.4bpp.lz");
 const u32 gMonBackPic_UnownQuestionMark[] = INCBIN_U32("graphics/pokemon/unown/question_mark/back.4bpp.lz");
 const u8 gMonIcon_UnownQuestionMark[] = INCBIN_U8("graphics/pokemon/unown/question_mark/icon.4bpp");
+
+const u32 gMonFrontPic_FossilizedKabutops[] = INCBIN_U32("graphics/pokemon/s_kabutops/front.4bpp.lz");
+const u32 gMonPalette_FossilizedKabutops[] = INCBIN_U32("graphics/pokemon/s_kabutops/normal.gbapal.lz");
+const u32 gMonBackPic_FossilizedKabutops[] = INCBIN_U32("graphics/pokemon/s_kabutops/back.4bpp.lz");
+const u32 gMonShinyPalette_FossilizedKabutops[] = INCBIN_U32("graphics/pokemon/s_kabutops/shiny.gbapal.lz");
+const u8 gMonIcon_FossilizedKabutops[] = INCBIN_U8("graphics/pokemon/s_kabutops/icon.4bpp");
+
+const u32 gMonFrontPic_SeviianAerodactyl[] = INCBIN_U32("graphics/pokemon/s_aerodactyl/front.4bpp.lz");
+const u32 gMonPalette_SeviianAerodactyl[] = INCBIN_U32("graphics/pokemon/s_aerodactyl/normal.gbapal.lz");
+const u32 gMonBackPic_SeviianAerodactyl[] = INCBIN_U32("graphics/pokemon/s_aerodactyl/back.4bpp.lz");
+const u32 gMonShinyPalette_SeviianAerodactyl[] = INCBIN_U32("graphics/pokemon/s_aerodactyl/shiny.gbapal.lz");
+const u8 gMonIcon_SeviianAerodactyl[] = INCBIN_U8("graphics/pokemon/s_aerodactyl/icon.4bpp");

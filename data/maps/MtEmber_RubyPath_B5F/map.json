@@ -2,7 +2,7 @@
   "id": "MAP_MT_EMBER_RUBY_PATH_B5F",
   "name": "MtEmber_RubyPath_B5F",
   "layout": "LAYOUT_MT_EMBER_RUBY_PATH_B5F",
-  "music": "MUS_MT_CHIMNEY",
+  "music": "MUS_SEALED_CHAMBER",
   "region_map_section": "MAPSEC_MT_EMBER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -38,6 +38,13 @@
       "elevation": 3,
       "dest_map": "MAP_MT_EMBER_RUBY_PATH_B4F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_MT_EMBER_REGIROCK_PUZZLE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -47,7 +54,7 @@
     {
       "type": "sign",
       "x": 7,
-      "y": 2,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "MtEmber_RubyPath_B5F_EventScript_BrailleMessage"

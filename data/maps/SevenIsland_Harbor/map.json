@@ -18,6 +18,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+      "in_connection": false,
       "x": 8,
       "y": 9,
       "elevation": 0,
@@ -32,6 +33,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "in_connection": false,
       "x": 8,
       "y": 6,
       "elevation": 3,

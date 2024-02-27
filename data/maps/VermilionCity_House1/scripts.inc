@@ -1,33 +1,34 @@
 VermilionCity_House1_MapScripts::
 	.byte 0
 
-VermilionCity_House1_EventScript_FishingGuru::
+VermilionCity_House1_EventScript_FishingGurusBrother::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_OLD_ROD, VermilionCity_House1_EventScript_AlreadyGotOldRod
-	msgbox VermilionCity_House1_Text_ImFishingGuruDoYouLikeToFish, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, VermilionCity_House1_EventScript_GiveOldRod
-	msgbox VermilionCity_House1_Text_OhThatsSoDisappointing
+	goto_if_set FLAG_GOT_GOOD_ROD, VermilionCity_House1_EventScript_AlreadyGotGoodRod
+	msgbox VermilionCity_House1_Text_DoYouLikeToFish, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq VermilionCity_House1_EventScript_GiveGoodRod
+	msgbox VermilionCity_House1_Text_OhThatsDisappointing
 	release
 	end
 
-VermilionCity_House1_EventScript_AlreadyGotOldRod::
+VermilionCity_House1_EventScript_AlreadyGotGoodRod::
 	msgbox VermilionCity_House1_Text_HowAreTheFishBiting
 	release
 	end
 
-VermilionCity_House1_EventScript_GiveOldRod::
-	checkitemspace ITEM_OLD_ROD
-	goto_if_eq VAR_RESULT, FALSE, VermilionCity_House1_EventScript_NoRoomForOldRod
-	additem ITEM_OLD_ROD
-	msgbox VermilionCity_House1_Text_TakeThisAndFish
-	msgreceiveditem VermilionCity_House1_Text_ReceivedOldRodFromFishingGuru, ITEM_OLD_ROD
-	setflag FLAG_GOT_OLD_ROD
-	msgbox VermilionCity_House1_Text_FishingIsAWayOfLife
+VermilionCity_House1_EventScript_GiveGoodRod::
+	msgbox VermilionCity_House1_Text_LikeYourStyleTakeThis
+	checkitemspace ITEM_GOOD_ROD, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq VermilionCity_House1_EventScript_NoRoomForGoodRod
+	giveitem_msg VermilionCity_House1_Text_ReceivedGoodRod, ITEM_GOOD_ROD
+	msgbox VermilionCity_House1_Text_GoodRodCanCatchBetterMons
+	setflag FLAG_GOT_GOOD_ROD
 	release
 	end
 
-VermilionCity_House1_EventScript_NoRoomForOldRod::
-	msgbox VermilionCity_House1_Text_NoRoomForNiceGift
+VermilionCity_House1_EventScript_NoRoomForGoodRod::
+	msgbox VermilionCity_House1_Text_YouHaveNoRoomForGift
 	release
 	end

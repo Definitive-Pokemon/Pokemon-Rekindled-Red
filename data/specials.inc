@@ -315,7 +315,7 @@ gSpecials::
 	def_special IsThereRoomInAnyBoxForMorePokemon
 	def_special NullFieldSpecial
 	def_special DrawElevatorCurrentFloorWindow
-	def_special NullFieldSpecial
+	def_special SetRegicePuzzleCrackedIceMetatiles
 	def_special IsPokerusInParty
 	def_special SetIcefallCaveCrackedIceMetatiles
 	def_special ShakeScreen

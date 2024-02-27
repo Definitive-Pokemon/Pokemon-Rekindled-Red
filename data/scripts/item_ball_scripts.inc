@@ -17,7 +17,28 @@ ViridianForest_EventScript_ItemAntidote::
 ViridianForest_EventScript_ItemPotion::
 	finditem ITEM_POTION
 	end
+	
+ViridianForestDepths_EventScript_ItemGreatBall::
+	finditem ITEM_GREAT_BALL
+	end
 
+ViridianForestDepths_EventScript_ItemTM10::
+	finditem ITEM_TM10
+	end
+
+ViridianForestDepths_EventScript_ItemSpellTag::
+	finditem ITEM_SPELL_TAG
+	end
+	
+ViridianForestDepths_EventScript_ItemSuperPotion::
+	finditem ITEM_SUPER_POTION
+	end
+	
+MonitoringStation_Office_EventScript_ItemRedKey::
+	finditem ITEM_RED_KEY
+	setflag FLAG_GOT_RED_KEY
+	end
+	
 MtMoon_1F_EventScript_ItemParalyzeHeal::
 	finditem ITEM_PARALYZE_HEAL
 	end

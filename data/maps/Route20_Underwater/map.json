@@ -24,7 +24,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 72,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_KYOGRE_DEN",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

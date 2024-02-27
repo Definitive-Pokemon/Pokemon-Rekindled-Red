@@ -102,4 +102,44 @@ ViridianForest_Text_WeakenMonsBeforeCapture::
 ViridianForest_Text_LeavingViridianForest::
     .string "LEAVING VIRIDIAN FOREST\n"
     .string "PEWTER CITY AHEAD$"
+	
+ViridianForest_Text_TorchicNoise::
+    .string "Chiiiiic!!$"
 
+ViridianForest_Text_TorchicScared::
+    .string "The TORCHIC looks\n"
+    .string "very scared!$"
+
+ViridianForest_Text_TorchicSaved::
+    .string "TORCHIC looks relieved.\p"
+    .string "It seems to want to join you!\p"
+	.string "Do you want to bring TORCHIC\n"
+	.string "along?$"
+	
+ViridianForest_Text_TorchicSad::
+    .string "TORCHIC is looking slightly\n"
+	.string "disappointed.$"
+
+ViridianForest_Text_ObtainedTorchic::
+    .string "{PLAYER} obtained a TORCHIC!$"
+
+ViridianForest_Text_Grunt::
+    .string "And you are?\p"
+	.string "Yes, I'm trying to get this stupid\n"
+	.string "thing to listen.\p"
+	.string "Is that so bad?\p"
+	.string "W-wait, it's my POKéMON.\p"
+	.string "I can do whatever I want with it!\p"
+	.string "I really think you need to be\n"
+	.string "taught a lesson.\p"
+	.string "I will teach you not to mess\n"
+	.string "with TEAM ROCKET!$"
+
+ViridianForest_Text_GruntDefeat::
+    .string "Okay, okay! Whatever!$"
+
+ViridianForest_Text_GruntLeave::
+	.string "You know what?\p"
+	.string "You can keep the stupid POKéMON,\n"
+	.string "I will just catch a new one!\p"
+	.string "Whahaha!$"

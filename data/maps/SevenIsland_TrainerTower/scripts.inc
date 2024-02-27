@@ -13,3 +13,12 @@ SevenIsland_TrainerTower_EventScript_TrainerTowerSign::
 SevenIsland_TrainerTower_EventScript_TrainerTowerAheadSign::
 	msgbox SevenIsland_TrainerTower_Text_TrainerTowerAhead, MSGBOX_SIGN
 	end
+
+SevenIsland_TrainerTower_EventScript_Guard::
+	lock
+	faceplayer
+	msgbox SevenIsland_TrainerTower_Text_Renovations
+	closemessage
+	release
+	end
+

@@ -140,8 +140,8 @@ TrainerTower_Lobby_Mart_Items::
 	.2byte ITEM_HYPER_POTION
 	.2byte ITEM_REVIVE
 	.2byte ITEM_FULL_HEAL
-	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_ETHER
+	.2byte ITEM_FRESH_WATER
 	.2byte ITEM_NONE
 	release
 	end
@@ -268,4 +268,12 @@ TrainerTower_Lobby_EventScript_CooltrainerF::
 
 TrainerTower_Lobby_EventScript_BaldingMan::
 	msgbox TrainerTower_Lobby_Text_StairsTougherThanAnyBattle, MSGBOX_NPC
+	end
+
+TrainerTower_Lobby_EventScript_Camper::
+	msgbox TrainerTower_Lobby_Text_Lore, MSGBOX_NPC
+	end
+	
+TrainerTower_Lobby_EventScript_Guard::
+	msgbox TrainerTower_Lobby_Text_Guard, MSGBOX_NPC
 	end

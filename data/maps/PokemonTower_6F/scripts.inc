@@ -8,23 +8,25 @@ PokemonTower_6F_MapScripts::
 PokemonTower_6F_MapScript_SetMasterTrainerMovementTypes::
 	setvar TRAINER, MASTER_RAICHU
 	callnative ShouldChangeMasterTrainerMovementType
-	call_if_eq VAR_RESULT, FALSE, PokemonTower_6F_MapScript_RaichuMasterMovementType
+	compare VAR_RESULT, FALSE
+	call_if_eq PokemonTower_6F_MapScript_RaichuMasterMovementType
 	end
 
 PokemonTower_6F_MapScript_RaichuMasterMovementType::
-	setobjectmovementtype LOCALID_RAICHU_MASTER, MOVEMENT_TYPE_RAISE_HAND_AND_STOP
+	setobjectmovementtype LOCALID_RAICHU_MASTER, MOVEMENT_TYPE_VS_SEEKER_4D
 	return
 
 PokemonTower_6F_EventScript_MarowakGhost::
 	lockall
-	textcolor NPC_TEXT_COLOR_MON
+	textcolor 2
 	msgbox PokemonTower_6F_Text_BeGoneIntruders
 	goto_if_questlog EventScript_ReleaseEnd
-	setwildbattle SPECIES_MAROWAK, 30
+	setwildbattle SPECIES_MAROWAK, 30, ITEM_NONE
 	special StartMarowakBattle
 	waitstate
 	special QuestLog_CutRecording
-	goto_if_eq VAR_RESULT, FALSE, PokemonTower_6F_EventScript_DefeatedMarowakGhost  @ VAR_RESULT set by CB2_EndMarowakBattle
+	compare VAR_RESULT, FALSE CB2_EndMarowakBattle
+	goto_if_eq PokemonTower_6F_EventScript_DefeatedMarowakGhost
 	applymovement OBJ_EVENT_ID_PLAYER, PokemonTower_6F_Movement_ForcePlayerUp
 	waitmovement 0
 	releaseall

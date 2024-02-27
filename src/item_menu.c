@@ -1444,7 +1444,7 @@ static bool8 IsUnregisterableKeyItem(u16 item)
     switch(item)
     {
         case ITEM_MACH_BIKE ... ITEM_SUPER_ROD:
-        case ITEM_WAILMER_PAIL:
+        case ITEM_BLUE_KEY:
         case ITEM_SOOT_SACK:
         case ITEM_ACRO_BIKE:
         case ITEM_POKEBLOCK_CASE:

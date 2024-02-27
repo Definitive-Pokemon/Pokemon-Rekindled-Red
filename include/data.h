@@ -41,7 +41,7 @@ extern const struct CompressedSpritePalette gTrainerBackPicPaletteTable[];
 extern const struct CompressedSpriteSheet gSpriteSheet_EnemyShadow;
 extern const struct SpriteTemplate gSpriteTemplate_EnemyShadow;
 
-extern const u8 gEnemyMonElevation[NUM_SPECIES];
+extern const u8 gEnemyMonElevation[NUM_SPECIES_WITH_FORMS];
 
 extern const u8 *const gBattleAnims_General[];
 extern const u8 *const gBattleAnims_Special[];

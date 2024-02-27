@@ -101,22 +101,22 @@ PalletTown_ProfessorOaksLab_Text_OakHeyDontGoAwayYet::
     .string "Don't go away yet!$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingCharmander::
-    .string "Ah! CHARMANDER is your choice.\n"
+    .string "Ah! ELEKID is your choice.\n"
     .string "You should raise it patiently.\p"
     .string "So, {PLAYER}, you're claiming the\n"
-    .string "FIRE POKéMON CHARMANDER?$"
+    .string "ELECTRIC POKéMON ELEKID?$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingSquirtle::
-    .string "Hm! SQUIRTLE is your choice.\n"
+    .string "Hm! SMOOCHUM is your choice.\n"
     .string "It's one worth raising.\p"
     .string "So, {PLAYER}, you've decided on the\n"
-    .string "WATER POKéMON SQUIRTLE?$"
+    .string "ICE POKéMON SMOOCHUM?$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur::
-    .string "I see! BULBASAUR is your choice.\n"
+    .string "I see! MAGBY is your choice.\n"
     .string "It's very easy to raise.\p"
     .string "So, {PLAYER}, you want to go with\n"
-    .string "the GRASS POKéMON BULBASAUR?$"
+    .string "the FIRE POKéMON MAGBY?$"
 
 PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic::
     .string "This POKéMON is really quite\n"
@@ -355,3 +355,40 @@ PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
     .string "ONE ISLAND first…\p"
     .string "Anyways, I'm outta here!$"
 
+PalletTown_ProfessorOaksLab_Text_HaveThisLetter::
+    .string "Ah, {PLAYER}, there you are!\p"
+	.string "I wanted to congratulate you\n"
+	.string "on your second victory at\p"
+	.string "the POKéMON LEAGUE.\p"
+	.string "Though your adventure has been\n"
+	.string "eventful, it feels as if it\p"
+	.string "has been only yesterday since you\n"
+	.string "started your journey here in\p"
+	.string "PALLET TOWN.\p"
+	.string "Remember when you returned with\n"
+	.string "that PARCEL from the MART in\p"
+	.string "VIRIDIAN CITY?\p"
+	.string "I feel like I can trust you to run\n"
+	.string "another delivery job for me.\p"
+	.string "Please take this LETTER with you,\n"
+	.string "{PLAYER}.$"
+	
+PalletTown_ProfessorOaksLab_Text_ReceivedLetterFromOak::
+    .string "{PLAYER} received a LETTER from\n"
+	.string "PROFESSOR OAK!$"
+
+PalletTown_ProfessorOaksLab_Text_BringToSelphy::
+    .string "Haha, this LETTER isn't meant\n"
+	.string "for you, {PLAYER}.\p"
+	.string "I want you to deliver this to a\n"
+	.string "distant acquaintance of mine.\p"
+	.string "Her name is LADY SELPHY.\p"
+	.string "SELPHY lives far away from here, at\n"
+	.string "RESORT GORGEOUS on FIVE ISLAND.\p"
+	.string "You have been on that island before,\n"
+	.string "haven't you, {PLAYER}?\p"
+	.string "Well, I want you to go take a good\n"
+	.string "look as you explore FIVE ISLAND.\p"
+	.string "Bringing this LETTER to SELPHY is a\n"
+	.string "great opportunity to do so,\p"
+	.string "don't you think, {PLAYER}?$"

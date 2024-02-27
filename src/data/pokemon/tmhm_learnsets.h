@@ -3486,6 +3486,7 @@ static const u8 sMagmarTMHMLearnset[] =
     TMHM(TM44_REST),
     TMHM(TM45_ATTRACT),
     TMHM(TM46_THIEF),
+	TMHM(TM50_OVERHEAT),
     TMHM(HM04_STRENGTH),
     TMHM(HM06_ROCK_SMASH),
     0xFF,
@@ -3877,6 +3878,39 @@ static const u8 sKabutopsTMHMLearnset[] =
     0xFF,
 };
 
+static const u8 sFossilKabutopsTMHMLearnset[] = 
+{
+    TMHM(TM30_SHADOW_BALL),
+    TMHM(TM06_TOXIC),
+    TMHM(TM07_HAIL),
+    TMHM(TM10_HIDDEN_POWER),
+    TMHM(TM13_ICE_BEAM),
+    TMHM(TM14_BLIZZARD),
+    TMHM(TM15_HYPER_BEAM),
+    TMHM(TM17_PROTECT),
+    TMHM(TM19_GIGA_DRAIN),
+    TMHM(TM21_FRUSTRATION),
+    TMHM(TM27_RETURN),
+    TMHM(TM28_DIG),
+    TMHM(TM29_PSYCHIC),
+    TMHM(TM31_BRICK_BREAK),
+    TMHM(TM32_DOUBLE_TEAM),
+    TMHM(TM36_SLUDGE_BOMB),
+    TMHM(TM37_SANDSTORM),
+    TMHM(TM39_ROCK_TOMB),
+    TMHM(TM40_AERIAL_ACE),
+    TMHM(TM41_TORMENT),
+    TMHM(TM42_FACADE),
+    TMHM(TM43_SECRET_POWER),
+    TMHM(TM44_REST),
+    TMHM(TM45_ATTRACT),
+    TMHM(TM46_THIEF),
+    TMHM(TM48_SKILL_SWAP),
+    TMHM(HM01_CUT),
+    TMHM(HM06_ROCK_SMASH),
+    0xFF,
+};
+
 static const u8 sAerodactylTMHMLearnset[] = 
 {
     TMHM(TM02_DRAGON_CLAW),
@@ -3908,6 +3942,12 @@ static const u8 sAerodactylTMHMLearnset[] =
     TMHM(HM02_FLY),
     TMHM(HM04_STRENGTH),
     TMHM(HM06_ROCK_SMASH),
+    0xFF,
+};
+
+static const u8 sSeviianAerodactylTMHMLearnset[] = 
+{
+    TMHM(HM04_STRENGTH),
     0xFF,
 };
 
@@ -4014,6 +4054,7 @@ static const u8 sMoltresTMHMLearnset[] =
     TMHM(TM18_RAIN_DANCE),
     TMHM(TM20_SAFEGUARD),
     TMHM(TM21_FRUSTRATION),
+	TMHM(TM22_SOLAR_BEAM),
     TMHM(TM27_RETURN),
     TMHM(TM32_DOUBLE_TEAM),
     TMHM(TM35_FLAMETHROWER),
@@ -8717,11 +8758,13 @@ static const u8 sManectricTMHMLearnset[] =
     TMHM(TM27_RETURN),
     TMHM(TM32_DOUBLE_TEAM),
     TMHM(TM34_SHOCK_WAVE),
+	TMHM(TM35_FLAMETHROWER),
     TMHM(TM42_FACADE),
     TMHM(TM43_SECRET_POWER),
     TMHM(TM44_REST),
     TMHM(TM45_ATTRACT),
     TMHM(TM46_THIEF),
+	TMHM(TM50_OVERHEAT),
     TMHM(HM04_STRENGTH),
     TMHM(HM05_FLASH),
     0xFF,
@@ -11282,5 +11325,7 @@ const u8 *const gTMHMLearnsets[] =
     [SPECIES_LATIOS] = sLatiosTMHMLearnset,
     [SPECIES_JIRACHI] = sJirachiTMHMLearnset,
     [SPECIES_DEOXYS] = sDeoxysTMHMLearnset,
-    [SPECIES_CHIMECHO] = sChimechoTMHMLearnset
+    [SPECIES_CHIMECHO] = sChimechoTMHMLearnset,
+    [SPECIES_FOSSILIZED_KABUTOPS] = sFossilKabutopsTMHMLearnset,
+    [SPECIES_SEVIIAN_AERODACTYL] = sSeviianAerodactylTMHMLearnset
 };

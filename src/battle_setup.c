@@ -168,6 +168,19 @@ static const struct TrainerBattleParameter sEarlyRivalBattleParams[] =
     {&sTrainerBattleEndScript,      TRAINER_PARAM_LOAD_SCRIPT_RET_ADDR},
 };
 
+static const struct TrainerBattleParameter sNoWhiteoutBattleParams[] =
+{
+    {&sTrainerBattleMode,           TRAINER_PARAM_LOAD_VAL_8BIT},
+    {&gTrainerBattleOpponent_A,     TRAINER_PARAM_LOAD_VAL_16BIT},
+    {&sTrainerObjectEventLocalId,   TRAINER_PARAM_LOAD_VAL_16BIT},
+    {&sTrainerAIntroSpeech,         TRAINER_PARAM_CLEAR_VAL_32BIT},
+    {&sTrainerADefeatSpeech,        TRAINER_PARAM_LOAD_VAL_32BIT},
+    {&sTrainerVictorySpeech,        TRAINER_PARAM_LOAD_VAL_32BIT},
+    {&sTrainerCannotBattleSpeech,   TRAINER_PARAM_CLEAR_VAL_32BIT},
+    {&sTrainerABattleScriptRetAddr, TRAINER_PARAM_CLEAR_VAL_32BIT},
+    {&sTrainerBattleEndScript,      TRAINER_PARAM_LOAD_SCRIPT_RET_ADDR},
+};
+
 static const struct TrainerBattleParameter sContinueScriptDoubleBattleParams[] =
 {
     {&sTrainerBattleMode,           TRAINER_PARAM_LOAD_VAL_8BIT},
@@ -265,7 +278,8 @@ const u8 NuzlockeLUT[MAPSEC_COUNT] = //84 used, 214 total
     [MAPSEC_ARTISAN_CAVE] = 0x54,
     [MAPSEC_SOUTHERN_ISLAND] = 0x55, //84
     [MAPSEC_UNDERWATER_124] = 0x33, //reused Bond Bridge; same area but Underwater
-    [MAPSEC_BATTLE_FRONTIER] = 0x56
+    [MAPSEC_BATTLE_FRONTIER] = 0x56,
+    [MAPSEC_PEWTER_CITY] = 0x57
 };
 
 
@@ -450,7 +464,7 @@ void StartLegendaryBattle(void)
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_MEWTWO);
         break;
     case SPECIES_MEW:
-        CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEWTWO);
+        CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
         break;
     case SPECIES_DEOXYS:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_DEOXYS);
@@ -462,6 +476,13 @@ void StartLegendaryBattle(void)
     case SPECIES_LUGIA:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_LEGEND);
         break;
+    case SPECIES_CYNDAQUIL:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_WILD);
+    break;
+	case SPECIES_FOSSILIZED_KABUTOPS:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RS_VS_WILD);
+        break;
+	default:
     default:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RS_VS_TRAINER);
         break;
@@ -476,9 +497,9 @@ void StartGroudonKyogreBattle(void)
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_KYOGRE_GROUDON;
     if (gGameVersion == VERSION_FIRE_RED)
-        CreateBattleStartTask(B_TRANSITION_ANGLED_WIPES, MUS_RS_VS_TRAINER);
+        CreateBattleStartTask(B_TRANSITION_BLACK_DOODLES, MUS_VS_KYOGRE_GROUDON);
     else // pointless, exactly the same
-        CreateBattleStartTask(B_TRANSITION_ANGLED_WIPES, MUS_RS_VS_TRAINER);
+        CreateBattleStartTask(B_TRANSITION_BLACK_DOODLES, MUS_VS_KYOGRE_GROUDON);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
 }
@@ -979,6 +1000,9 @@ const u8 *BattleSetup_ConfigureTrainerBattle(const u8 *data)
     case TRAINER_BATTLE_EARLY_RIVAL:
         TrainerBattleLoadArgs(sEarlyRivalBattleParams, data);
         return EventScript_DoNoIntroTrainerBattle;
+    case TRAINER_BATTLE_NO_WHITEOUT:
+        TrainerBattleLoadArgs(sNoWhiteoutBattleParams, data);
+        return EventScript_DoNoIntroTrainerBattle;
     default:
         TrainerBattleLoadArgs(sOrdinaryBattleParams, data);
         SetMapVarsToTrainer();
@@ -1106,6 +1130,24 @@ static void CB2_EndTrainerBattle(void)
             QuestLogEvents_HandleEndTrainerBattle();
         }
 
+    }
+    else if (sTrainerBattleMode == TRAINER_BATTLE_NO_WHITEOUT)
+    {
+        if (IsPlayerDefeated(gBattleOutcome) == TRUE)
+        {
+            gSpecialVar_Result = TRUE;
+            //heal?
+            SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+            SetBattledTrainerFlag();
+            QuestLogEvents_HandleEndTrainerBattle();
+        }
+        else
+        {
+            gSpecialVar_Result = FALSE;
+            SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+            SetBattledTrainerFlag();
+            QuestLogEvents_HandleEndTrainerBattle();
+        }
     }
     else
     {

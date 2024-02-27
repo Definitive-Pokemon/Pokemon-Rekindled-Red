@@ -45,6 +45,14 @@ TrainerTower_Lobby_Text_MoveCounterHereWhenTrainersSwitch::
     .string "To avoid the stampede, we moved\n"
     .string "the reception counter here.\p"
     .string "I'm sorry for the inconvenience.$"
+	
+TrainerTower_Roof_Text_ObtainedEmerald::
+    .string "{PLAYER} received the EMERALD\n"
+	.string "from the owner of the tower!$"
+	
+TrainerTower_Roof_Text_AboutTimes::
+    .string "Now, let us see how long\n"
+	.string "it took you to reach me.$"
 
 TrainerTower_Roof_Text_ImOwnerBattledPerfectly::
     .string "Hello…\p"
@@ -115,3 +123,15 @@ TrainerTower_Lobby_Text_StairsTougherThanAnyBattle::
     .string "Never mind battling! These stairs…\n"
     .string "They're tougher than any battle…$"
 
+TrainerTower_Lobby_Text_Lore::
+    .string "The legendary prize they offer\n"
+    .string "here at the tower…\p"
+    .string "They say it was found in a cave\n"
+    .string "underneath the building site.\p"
+    .string "I wonder if they were right in\n"
+    .string "just taking it like that.$"
+	
+TrainerTower_Lobby_Text_Guard::
+	.string "I'm terribly sorry.\n"
+	.string "No trespassing!\p"
+	.string "Scram!$"

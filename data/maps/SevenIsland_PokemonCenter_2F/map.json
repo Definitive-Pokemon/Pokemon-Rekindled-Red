@@ -18,6 +18,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CABLE_CLUB_RECEPTIONIST",
+      "in_connection": false,
       "x": 6,
       "y": 2,
       "elevation": 3,
@@ -32,6 +33,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CABLE_CLUB_RECEPTIONIST",
+      "in_connection": false,
       "x": 2,
       "y": 2,
       "elevation": 3,
@@ -46,6 +48,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CABLE_CLUB_RECEPTIONIST",
+      "in_connection": false,
       "x": 10,
       "y": 2,
       "elevation": 3,
@@ -60,6 +63,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MG_DELIVERYMAN",
+      "in_connection": false,
       "x": 1,
       "y": 2,
       "elevation": 3,

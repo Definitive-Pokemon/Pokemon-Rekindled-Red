@@ -75,7 +75,7 @@ Route12_EventScript_Snorlax::
 	msgbox Text_WantToUsePokeFlute, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route12_EventScript_DontUsePokeFlute
 	call EventScript_AwakenSnorlax
-	setwildbattle SPECIES_SNORLAX, 30
+	setwildbattle SPECIES_SNORLAX, 40
 	waitse
 	playmoncry SPECIES_SNORLAX, CRY_MODE_ENCOUNTER
 	delay 40

@@ -43,6 +43,7 @@ SaffronCity_Dojo_EventScript_TriggerMasterBattleRight::
 SaffronCity_Dojo_EventScript_HitmonleeBall::
 	lock
 	faceplayer
+	goto_if_set FLAG_CAN_GET_HITMON_2, SaffronCity_Dojo_EventScript_GetLeeSecond
 	goto_if_set FLAG_GOT_HITMON_FROM_DOJO, SaffronCity_Dojo_EventScript_AlreadyGotHitmon
 	showmonpic SPECIES_HITMONLEE, 10, 3
 	setvar VAR_TEMP_1, SPECIES_HITMONLEE
@@ -55,6 +56,20 @@ SaffronCity_Dojo_EventScript_HitmonleeBall::
 	hidemonpic
 	release
 	end
+	
+SaffronCity_Dojo_EventScript_GetLeeSecond::
+	showmonpic SPECIES_HITMONLEE, 10, 3
+	setvar VAR_TEMP_1, SPECIES_HITMONLEE
+	applymovement LOCALID_KARATE_MASTER, Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	textcolor 0
+	msgbox SaffronCity_Dojo_Text_YouWantHitmonlee, MSGBOX_YESNO
+	call EventScript_RestorePrevTextColor
+	compare VAR_RESULT, YES
+	goto_if_eq SaffronCity_Dojo_EventScript_GiveHitmon
+	hidemonpic
+	release
+	end
 
 SaffronCity_Dojo_EventScript_AlreadyGotHitmon::
 	msgbox SaffronCity_Dojo_Text_BetterNotGetGreedy
@@ -64,6 +79,7 @@ SaffronCity_Dojo_EventScript_AlreadyGotHitmon::
 SaffronCity_Dojo_EventScript_HitmonchanBall::
 	lock
 	faceplayer
+	goto_if_set FLAG_CAN_GET_HITMON_2, SaffronCity_Dojo_EventScript_GetChanSecond
 	goto_if_set FLAG_GOT_HITMON_FROM_DOJO, SaffronCity_Dojo_EventScript_AlreadyGotHitmon
 	showmonpic SPECIES_HITMONCHAN, 10, 3
 	setvar VAR_TEMP_1, SPECIES_HITMONCHAN
@@ -73,6 +89,20 @@ SaffronCity_Dojo_EventScript_HitmonchanBall::
 	msgbox SaffronCity_Dojo_Text_YouWantHitmonchan, MSGBOX_YESNO
 	call EventScript_RestorePrevTextColor
 	goto_if_eq VAR_RESULT, YES, SaffronCity_Dojo_EventScript_GiveHitmon
+	hidemonpic
+	release
+	end
+	
+SaffronCity_Dojo_EventScript_GetChanSecond::
+	showmonpic SPECIES_HITMONCHAN, 10, 3
+	setvar VAR_TEMP_1, SPECIES_HITMONCHAN
+	applymovement LOCALID_KARATE_MASTER, Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	textcolor 0
+	msgbox SaffronCity_Dojo_Text_YouWantHitmonchan, MSGBOX_YESNO
+	call EventScript_RestorePrevTextColor
+	compare VAR_RESULT, YES
+	goto_if_eq SaffronCity_Dojo_EventScript_GiveHitmon
 	hidemonpic
 	release
 	end
@@ -113,10 +143,12 @@ SaffronCity_Dojo_EventScript_ReceivedHitmonPC::
 	waitfanfare
 	setflag FLAG_GOT_HITMON_FROM_DOJO
 	callnative CheckNuzlockeMode
-	goto_if_eq VAR_RESULT, TRUE, SaffronCity_Dojo_EventScript_NicknameHitmonPC
+	compare VAR_RESULT, TRUE
+	goto_if_eq CeladonCity_Condominiums_RoofRoom_EventScript_NicknameHitmonPC
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, SaffronCity_Dojo_EventScript_TransferredHitmonToPC
-SaffronCity_Dojo_EventScript_NicknameHitmonPC::
+	compare VAR_RESULT, NO
+	goto_if_eq SaffronCity_Dojo_EventScript_TransferredHitmonToPC
+CeladonCity_Condominiums_RoofRoom_EventScript_NicknameHitmonPC::
 	call EventScript_NameReceivedBoxMon
 	goto SaffronCity_Dojo_EventScript_TransferredHitmonToPC
 	end
@@ -127,6 +159,12 @@ SaffronCity_Dojo_EventScript_TransferredHitmonToPC::
 	end
 
 SaffronCity_Dojo_EventScript_EndGiveMon::
+	goto_if_set FLAG_CAN_GET_HITMON_2, SaffronCity_Dojo_EventScript_SetFinalFlag
+	release
+	end
+	
+SaffronCity_Dojo_EventScript_SetFinalFlag::
+	setflag FLAG_GOT_HITMON_2_FROM_DOJO
 	release
 	end
 
@@ -164,8 +202,32 @@ SaffronCity_Dojo_EventScript_Mike::
 
 SaffronCity_Dojo_EventScript_MasterKoichi::
 	trainerbattle_single TRAINER_BLACK_BELT_KOICHI, SaffronCity_Dojo_Text_MasterKoichiIntro, SaffronCity_Dojo_Text_MasterKoichiDefeat, SaffronCity_Dojo_EventScript_DefeatedMasterKoichi
-	goto_if_set FLAG_GOT_HITMON_FROM_DOJO, SaffronCity_Dojo_EventScript_MasterKoichiAlreadyGotHitmon
+	goto_if_set FLAG_GOT_HITMON_2_FROM_DOJO, SaffronCity_Dojo_EventScript_MasterKoichiAlreadyGotHitmon
+	goto_if_set FLAG_CAN_GET_HITMON_2, SaffronCity_Dojo_EventScript_MasterKoichiGoAhead
+	goto_if_set FLAG_GOT_HITMON_FROM_DOJO, SaffronCity_Dojo_EventScript_MasterKoichiAnotherHitmon
 	msgbox SaffronCity_Dojo_Text_ChoosePrizedFightingMon, MSGBOX_AUTOCLOSE
+	end
+	
+SaffronCity_Dojo_EventScript_MasterKoichiAnotherHitmon::
+	msgbox SaffronCity_Dojo_Text_AnotherHitmon, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq SaffronCity_Dojo_EventScript_AnotherBattle
+	msgbox SaffronCity_Dojo_Text_ChallengeAnytime
+	release
+	end
+	
+SaffronCity_Dojo_EventScript_AnotherBattle::
+	message SaffronCity_Dojo_Text_MasterKoichiIntro2
+	playbgm MUS_ENCOUNTER_BOY, 0
+	waitbuttonpress
+	trainerbattle_no_intro TRAINER_BLACK_BELT_KOICHI2, SaffronCity_Dojo_Text_MasterKoichiDefeat2
+	setflag FLAG_CAN_GET_HITMON_2
+	msgbox SaffronCity_Dojo_Text_ChoosePrizedFightingMon2, MSGBOX_AUTOCLOSE
+	end
+	
+SaffronCity_Dojo_EventScript_MasterKoichiGoAhead::
+	msgbox SaffronCity_Dojo_Text_GoAhead
+	release
 	end
 
 SaffronCity_Dojo_EventScript_MasterKoichiAlreadyGotHitmon::

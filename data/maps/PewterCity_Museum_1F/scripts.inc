@@ -17,6 +17,13 @@ PewterCity_Museum_1F_MapScript_AerodactylMasterMovementType::
 	setobjectmovementtype LOCALID_AERODACTYL_MASTER, MOVEMENT_TYPE_RAISE_HAND_AND_STOP
 	return
 
+PewterCity_Museum_1F_EventScript_ScientistEscape::
+	lock
+	faceplayer
+	msgbox PewterCity_Museum_1F_Text_Escaped
+	release
+	end
+
 PewterCity_Museum_1F_EventScript_Scientist1::
 	lock
 	faceplayer

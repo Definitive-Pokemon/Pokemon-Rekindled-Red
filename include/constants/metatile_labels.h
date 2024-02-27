@@ -79,7 +79,9 @@
 #define METATILE_GameCorner_StairsTop                 0x29E
 
 // gTileset_General
+#define METATILE_General_Black                   0x008
 #define METATILE_General_CalmWater               0x12B
+#define METATILE_General_CaveWall                0x079
 #define METATILE_General_Door                    0x03D
 #define METATILE_General_EmeraldMowed            0x229
 #define METATILE_General_LongGrass_Bottom        0x23B
@@ -109,7 +111,27 @@
 #define METATILE_Mart_CounterMid_Top     0x2BF
 
 // gTileset_MtEmber
+#define METATILE_MtEmber_CaveDoor1     0x28B
+#define METATILE_MtEmber_CaveDoor2     0x28C
+#define METATILE_MtEmber_CaveDoor3     0x28D
+#define METATILE_MtEmber_CaveDoor4     0x293
+#define METATILE_MtEmber_CaveDoor5     0x294
+#define METATILE_MtEmber_CaveDoor6     0x295
 #define METATILE_MtEmber_CaveEntrance  0x346
+#define METATILE_MtEmber_Floor         0x281
+#define METATILE_MtEmber_Lower_Wall    0x299
+#define METATILE_MtEmber_Rock          0x282
+#define METATILE_MtEmber_Upper_Wall    0x2C4
+
+// gTileset_NavelRock
+#define METATILE_NavelRock_CaveDoor1   0x28B
+#define METATILE_NavelRock_CaveDoor2   0x28C
+#define METATILE_NavelRock_CaveDoor3   0x28D
+#define METATILE_NavelRock_CaveDoor4   0x293
+#define METATILE_NavelRock_CaveDoor5   0x294
+#define METATILE_NavelRock_CaveDoor6   0x295
+#define METATILE_NavelRock_Lower_Wall  0x299
+#define METATILE_NavelRock_Upper_Wall  0x2C4
 
 // gTileset_PalletTown
 #define METATILE_PalletTown_Door         0x2A3
@@ -212,8 +234,11 @@
 #define METATILE_SeaCottage_Teleporter_Light_Yellow      0x2B5
 
 // gTileset_SeafoamIslands
+#define METATILE_SeafoamIslands_CaveIce       0x299
 #define METATILE_SeafoamIslands_CrackedIce    0x35A
 #define METATILE_SeafoamIslands_IceHole       0x35B
+#define METATILE_SeafoamIslands_IceUnderIce   0x353
+#define METATILE_SeafoamIslands_RockUnderIce  0x35C
 #define METATILE_SeafoamIslands_SlidingIce    0x34B
 #define METATILE_SeafoamIslands_UncrackedIce  0x359
 
@@ -333,7 +358,9 @@
 #define METATILE_SilphCo_VerticalBarrier_TopLeft        0x3C0
 #define METATILE_SilphCo_VerticalBarrier_TopRight       0x3C1
 #define METATILE_SilphCo_Wall_LeftEdge                  0x347
+#define METATILE_SilphCo_Wall_Lower                     0x291
 #define METATILE_SilphCo_Wall_RightEdge                 0x346
+#define METATILE_SilphCo_Wall_Upper                     0x289
 
 // gTileset_TrainerTower
 #define METATILE_TrainerTower_CounterBarrier         0x2B4

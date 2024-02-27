@@ -277,6 +277,15 @@ TrainerTower_EventScript_SpeakToOwner::
 	case 1, TrainerTower_Roof_EventScript_GivePrize
 	case 2, TrainerTower_Roof_EventScript_OwnerEnd
 
+	
+TrainerTower_Roof_EventScript_GiveEmerald:
+	msgbox TrainerTower_Roof_Text_ThisIsForYou
+	waitmessage
+	giveitem_msg TrainerTower_Roof_Text_ObtainedEmerald, ITEM_EMERALD
+	setflag FLAG_GOT_EMERALD
+	msgbox TrainerTower_Roof_Text_AboutTimes
+	goto TrainerTower_Roof_EventScript_CheckFinalTime
+
 TrainerTower_Roof_EventScript_Arrived:
 	msgbox TrainerTower_Roof_Text_ImOwnerBattledPerfectly
 TrainerTower_Roof_EventScript_GivePrize:
@@ -287,6 +296,9 @@ TrainerTower_Roof_EventScript_GivePrize:
 	case 2, TrainerTower_Roof_EventScript_CheckFinalTime
 
 TrainerTower_Roof_EventScript_ReceivePrize:
+	checkitem ITEM_EMERALD, 1
+	compare VAR_RESULT, TRUE
+	goto_if_ne TrainerTower_Roof_EventScript_GiveEmerald
 	msgbox TrainerTower_Roof_Text_ThisIsForYou
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	playfanfare MUS_LEVEL_UP

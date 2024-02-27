@@ -17,25 +17,28 @@ SaffronCity_OnTransition::
 SaffronCity_MapScript_SetMasterTrainerMovementTypes::
 	setvar TRAINER, MASTER_PONYTA
 	callnative ShouldChangeMasterTrainerMovementType
-	call_if_eq VAR_RESULT, FALSE, SaffronCity_MapScript_PonytaMasterMovementType
+	compare VAR_RESULT, FALSE
+	call_if_eq SaffronCity_MapScript_PonytaMasterMovementType
 	setvar TRAINER, MASTER_RAPIDASH
 	callnative ShouldChangeMasterTrainerMovementType
-	call_if_eq VAR_RESULT, FALSE, SaffronCity_MapScript_RapidashMasterMovementType
+	compare VAR_RESULT, FALSE
+	call_if_eq SaffronCity_MapScript_RapidashMasterMovementType
 	setvar TRAINER, MASTER_CLEFAIRY
 	callnative ShouldChangeMasterTrainerMovementType
-	call_if_eq VAR_RESULT, FALSE, SaffronCity_MapScript_ClefairyMasterMovementType
+	compare VAR_RESULT, FALSE
+	call_if_eq SaffronCity_MapScript_ClefairyMasterMovementType
 	end
 
 SaffronCity_MapScript_PonytaMasterMovementType::
-	setobjectmovementtype LOCALID_PONYTA_MASTER, MOVEMENT_TYPE_RAISE_HAND_AND_STOP
+	setobjectmovementtype LOCALID_PONYTA_MASTER, MOVEMENT_TYPE_VS_SEEKER_4D
 	return
 	
 SaffronCity_MapScript_RapidashMasterMovementType::
-	setobjectmovementtype LOCALID_RAPIDASH_MASTER, MOVEMENT_TYPE_RAISE_HAND_AND_STOP
+	setobjectmovementtype LOCALID_RAPIDASH_MASTER, MOVEMENT_TYPE_VS_SEEKER_4D
 	return
 
 SaffronCity_MapScript_ClefairyMasterMovementType::
-	setobjectmovementtype LOCALID_CLEFAIRY_MASTER, MOVEMENT_TYPE_RAISE_HAND_AND_STOP
+	setobjectmovementtype LOCALID_CLEFAIRY_MASTER, MOVEMENT_TYPE_VS_SEEKER_4D
 	return
 
 SaffronCity_EventScript_MoveDoorGuardGrunt::
@@ -73,14 +76,14 @@ SaffronCity_EventScript_RocketGrunt7::
 SaffronCity_EventScript_DoorGuardGrunt::
 	lock
 	goto_if_set FLAG_RESCUED_MR_FUJI, SaffronCity_EventScript_DoorGuardAsleep
-	applymovement LOCALID_DOOR_GUARD_GRUNT, Common_Movement_FacePlayer
+	applymovement LOCALID_DOOR_GUARD_GRUNT, Movement_FacePlayer
 	waitmovement 0
 	msgbox SaffronCity_Text_ImASecurityGuard
 	release
 	end
 
 SaffronCity_EventScript_DoorGuardAsleep::
-	textcolor NPC_TEXT_COLOR_NEUTRAL
+	textcolor 3
 	msgbox SaffronCity_Text_HesTakingASnooze
 	release
 	end

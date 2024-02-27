@@ -1,0 +1,49 @@
+{
+  "id": "MAP_STONE_TOMB",
+  "name": "Stone_Tomb",
+  "layout": "LAYOUT_STONE_TOMB",
+  "music": "MUS_SEALED_CHAMBER",
+  "region_map_section": "MAPSEC_THREE_ISLE_PORT",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_REGIROCK",
+      "in_connection": false,
+      "x": 8,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Stone_Tomb_EventScript_Regirock",
+      "flag": "FLAG_HIDE_REGIROCK"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_THREE_ISLAND_PORT",
+      "dest_warp_id": 3
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ],
+  "level_scaling": "0"
+}

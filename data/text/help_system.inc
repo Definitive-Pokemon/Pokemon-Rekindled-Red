@@ -1206,9 +1206,6 @@ Help_Text_Money2::
 Help_Text_Badges2::
 	.string "BADGES$"
 
-Help_Text_Version::
-	.string "VERSION$"
-
 Help_Text_Difficulty::
 	.string "DIFFICULTY$"
 
@@ -1547,15 +1544,6 @@ Help_Text_DefineBadges2::
 	.string "LEAGUE BADGES that you have won.\l"
 	.string "Earn BADGES by defeating GYM LEADERS\l"
 	.string "in various cities and towns.$"
-
-Help_Text_DefineVersion::
-	.string "You can change your game version\n"
-	.string "between FIRERED VERSION and\l"
-	.string "LEAFGREEN VERSION. Your game version\l"
-	.string "determines what POKéMON are available,\l"
-	.string "themes graphics for some interfaces,\l"
-	.string "what the titlescreen looks like, and the\l"
-	.string "text entries of your POKéDEX data.$"
 
 Help_Text_DefineDifficulty::
 	.string "You can adjust the game's difficulty.\n"
@@ -2062,19 +2050,18 @@ Help_Text_Back::
 	.string "BACK$"
 
 Help_Text_AdvancedKeys::
-	.string "ADVANCED KEYS$"
+	.string "KEY SYSTEM MENU$"
 
 Help_Text_DefineAdvancedKeys::
-	.string "Press the A Button to go to a submenu\n"
-	.string "with options to modify the difficulty\n"
-	.string "by changing experience gain or adding\n"
-	.string "additional rules onto the gameplay\n"
-	.string "experience.$"
+    .string "This menu contains options to modify\n"
+	.string "the difficulty:\n"
+	.string "change experience gain or add\n"
+	.string "additional rules to the gameplay.$"
 
 Help_Text_DefineAdvancedKeysBack::
 	.string "The settings will be changed to the\n"
 	.string "selections shown in red, and you will\n"
-	.string "return to the KEY SYSTEM MENU.$"
+	.string "return to the HOME SCREEN.$"
 
 Help_Text_UsingKeySystemSubmenu::
 	.string " Using “ADVANCED KEYS”$"
@@ -2099,27 +2086,3 @@ Help_Text_DefineExpMod::
 	.string "1/2× halves given Experience Points.\l"
 	.string "1× is the standard modifier.\l"
 	.string "2× doubles given Experience Points.$"
-
-Help_Text_FRExclusives::
-	.string "  POKéMON exclusive to FIRERED$"
-
-Help_Text_LGExclusives::
-	.string "  POKéMON exclusive to LEAFGREEN$"
-
-Help_Text_DefineFRExclusives::
-	.string "The POKéMON exclusive to FIRERED\n"
-	.string "VERSION are EKANS, ODDISH, PSYDUCK,\l"
-	.string "GROWLITHE, SHELLDER, SCYTHER,\l"
-	.string "ELECTABUZZ, WOOPER, MURKROW,\l"
-	.string "QWILFISH, DELIBIRD, SKARMORY,\l"
-	.string "LATIOS, and their evolutionary\l"
-	.string "relatives.$"
-
-Help_Text_DefineLGExclusives::
-	.string "The POKéMON exclusive to LEAFGREEN\n"
-	.string "VERSION are SANDSHREW, VULPIX,\l"
-	.string "BELLSPROUT, SLOWPOKE, STARYU,\l"
-	.string "MAGMAR, PINSIR, MARILL,\l"
-	.string "MISDREAVUS, SNEASEL, REMORAID,\l"
-	.string "MANTINE, LATIAS, and their\l"
-	.string "evolutionary relatives.$"

@@ -1,5 +1,5 @@
-const u32 gTrainerFrontPic_AquaLeaderArchie[] = INCBIN_U32("graphics/trainers/front_pics/aqua_leader_archie_front_pic.4bpp.lz");
-const u32 gTrainerPalette_AquaLeaderArchie[] = INCBIN_U32("graphics/trainers/palettes/aqua_leader_archie.gbapal.lz");
+const u32 gTrainerFrontPic_AquaLeaderArchie[] = INCBIN_U32("graphics/trainers/front_pics/anabel_front_pic.4bpp.lz");
+const u32 gTrainerPalette_AquaLeaderArchie[] = INCBIN_U32("graphics/trainers/palettes/anabel.gbapal.lz");
 
 const u32 gTrainerFrontPic_AquaGruntM[] = INCBIN_U32("graphics/trainers/front_pics/aqua_grunt_m_front_pic.4bpp.lz");
 const u32 gTrainerPalette_AquaGruntM[] = INCBIN_U32("graphics/trainers/palettes/aqua_grunt_m.gbapal.lz");
@@ -397,6 +397,9 @@ const u32 gTrainerPalette_SisAndBro[] = INCBIN_U32("graphics/trainers/palettes/s
 const u32 gTrainerFrontPic_ProfessorOak[] = INCBIN_U32("graphics/trainers/front_pics/professor_oak_front_pic.4bpp.lz");
 const u32 gTrainerPalette_ProfessorOak[] = INCBIN_U32("graphics/trainers/palettes/professor_oak.gbapal.lz");
 
+const u32 gTrainerFrontPic_Daisy[] = INCBIN_U32("graphics/trainers/front_pics/daisy_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Daisy[] = INCBIN_U32("graphics/trainers/palettes/daisy.gbapal.lz");
+
 const u32 gTrainerFrontPic_RSBrendan2[] = INCBIN_U32("graphics/trainers/front_pics/ruby_sapphire_brendan_front_pic.4bpp.lz");
 const u32 gTrainerPalette_RSBrendan2[] = INCBIN_U32("graphics/trainers/palettes/ruby_sapphire_brendan.gbapal.lz");
 
@@ -495,3 +498,6 @@ const u32 gTrainerPalette_RedBackPic[] = INCBIN_U32("graphics/trainers/palettes/
 const u32 gTrainerPalette_LeafBackPic[] = INCBIN_U32("graphics/trainers/palettes/leaf_back_pic.gbapal.lz");
 const u32 gTrainerPalette_PokedudeBackPic[] = INCBIN_U32("graphics/trainers/palettes/pokedude_back_pic.gbapal.lz");
 const u32 gTrainerPalette_OldManBackPic[] = INCBIN_U32("graphics/trainers/palettes/old_man_back_pic.gbapal.lz");
+
+const u32 gTrainerFrontPic_Anabel[] = INCBIN_U32("graphics/trainers/front_pics/anabel_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Anabel[] = INCBIN_U32("graphics/trainers/palettes/anabel.gbapal.lz");

@@ -675,7 +675,7 @@ static u16 GetEggSpecies(u16 species)
     for (i = 0; i < EVOS_PER_MON; i++)
     {
         found = FALSE;
-        for (j = 1; j < NUM_SPECIES; j++)
+        for (j = 1; j < NUM_SPECIES_WITH_FORMS; j++)
         {
             for (k = 0; k < EVOS_PER_MON; k++)
             {
@@ -691,7 +691,7 @@ static u16 GetEggSpecies(u16 species)
                 break;
         }
 
-        if (j == NUM_SPECIES)
+        if (j == NUM_SPECIES) // this should just be SPECIES_EGG, no?
             break;
     }
 
@@ -1160,13 +1160,13 @@ void GiveRivalStarterEgg(void)
     switch(*playerStarter)
     {
         case 0:
-            species = SPECIES_CHARMANDER;
+            species = SPECIES_ELEKID;
             break;
         case 1:
-            species = SPECIES_BULBASAUR;
+            species = SPECIES_MAGBY;
             break;
         case 2:
-            species = SPECIES_SQUIRTLE;
+            species = SPECIES_SMOOCHUM;
             break;
     }
 
@@ -1174,17 +1174,17 @@ void GiveRivalStarterEgg(void)
     CreateMon(&egg, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS, TRUE, ((((Random()) % 0xFFFE) + 1) | (Random() << 16)), OT_ID_PLAYER_ID, 0);
     switch(species)
     {
-        case SPECIES_CHARMANDER:
-            GiveMoveToMon(&egg, MOVE_EMBER);
-            GiveMoveToMon(&egg, MOVE_BELLY_DRUM);
+        case SPECIES_ELEKID:
+            GiveMoveToMon(&egg, MOVE_THUNDER_PUNCH);
+            GiveMoveToMon(&egg, MOVE_CROSS_CHOP);
             break;
-        case SPECIES_BULBASAUR:
-            GiveMoveToMon(&egg, MOVE_LEECH_SEED);
-            GiveMoveToMon(&egg, MOVE_CURSE);
+        case SPECIES_MAGBY:
+            GiveMoveToMon(&egg, MOVE_FIRE_PUNCH);
+            GiveMoveToMon(&egg, MOVE_CROSS_CHOP);
             break;
-        case SPECIES_SQUIRTLE:
-            GiveMoveToMon(&egg, MOVE_BUBBLE);
-            GiveMoveToMon(&egg, MOVE_MIRROR_COAT);
+        case SPECIES_SMOOCHUM:
+            GiveMoveToMon(&egg, MOVE_ICE_PUNCH);
+            GiveMoveToMon(&egg, MOVE_WISH);
             break;
     }
     metLevel = 0;

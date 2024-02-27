@@ -1357,6 +1357,7 @@ static const u8 *const sListMenuLabels[][12] = {
         gText_Koga,
         gText_Sabrina,
         gText_Blaine,
+        gText_Daisy,
         gOtherText_Exit,
     },
     [LISTMENU_MASTER_TRAINER_TITLES] =
@@ -1697,7 +1698,7 @@ static bool8 HasMonBeenRenamed(u8 idx)
     language = GetMonData(pokemon, MON_DATA_LANGUAGE, &language);
     if (language != LANGUAGE_ENGLISH)
         return TRUE;
-    else if (StringCompare(gSpeciesNames[GetMonData(pokemon, MON_DATA_SPECIES, NULL)], gStringVar1) != 0)
+    else if (StringCompare(gSpeciesNames[StripFormToSpecies(GetMonData(pokemon, MON_DATA_SPECIES, NULL))], gStringVar1) != 0)
         return TRUE;
     else
         return FALSE;

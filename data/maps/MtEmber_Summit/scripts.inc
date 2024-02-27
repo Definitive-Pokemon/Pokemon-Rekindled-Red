@@ -9,7 +9,8 @@ MtEmber_Summit_OnResume::
 
 MtEmber_Summit_EventScript_TryRemoveMoltres::
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, EventScript_Return
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_ne EventScript_Return
 	removeobject VAR_LAST_TALKED
 	return
 
@@ -32,9 +33,9 @@ MtEmber_Summit_EventScript_Moltres::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_MOLTRES, 50
+	setwildbattle SPECIES_MOLTRES, 50, ITEM_NONE
 	waitse
-	playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_MOLTRES, 2
 	message Text_Gyaoo
 	waitmessage
 	waitmoncry
@@ -46,9 +47,12 @@ MtEmber_Summit_EventScript_Moltres::
 	waitstate
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MtEmber_Summit_EventScript_DefeatedMoltres
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MtEmber_Summit_EventScript_RanFromMoltres
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, MtEmber_Summit_EventScript_RanFromMoltres
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq MtEmber_Summit_EventScript_DefeatedMoltres
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq MtEmber_Summit_EventScript_RanFromMoltres
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq MtEmber_Summit_EventScript_RanFromMoltres
 	setflag FLAG_FOUGHT_MOLTRES
 	release
 	end

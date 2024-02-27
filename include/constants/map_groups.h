@@ -139,6 +139,7 @@
 #define MAP_SIX_ISLAND_DOTTED_HOLE_SAPPHIRE_ROOM (123 | (1 << 8))
 #define MAP_SIX_ISLAND_PATTERN_BUSH              (124 | (1 << 8))
 #define MAP_SIX_ISLAND_ALTERING_CAVE             (125 | (1 << 8))
+#define MAP_VIRIDIAN_FOREST_DEPTHS               (126 | (1 << 8))
 
 // gMapGroup_SpecialArea
 #define MAP_NAVEL_ROCK_EXTERIOR                       (0 | (2 << 8))
@@ -213,6 +214,34 @@
 #define MAP_CERULEAN_CAVE_1F_YELLOW                   (69 | (2 << 8))
 #define MAP_CERULEAN_CAVE_2F_YELLOW                   (70 | (2 << 8))
 #define MAP_CERULEAN_CAVE_B1F_YELLOW                  (71 | (2 << 8))
+#define MAP_MT_MOON_SQUARE                            (72 | (2 << 8))
+#define MAP_FIERY_PASSAGE                             (73 | (2 << 8))
+#define MAP_MT_EMBER_REGIROCK_PUZZLE                  (74 | (2 << 8))
+#define MAP_STONE_TOMB                                (75 | (2 << 8))
+#define MAP_ICY_TOMB                                  (76 | (2 << 8))
+#define MAP_METAL_TOMB                                (77 | (2 << 8))
+#define MAP_DOTTED_HOLE_REGICE_PUZZLE                 (78 | (2 << 8))
+#define MAP_DOTTED_HOLE_REGICE_PUZZLE2                (79 | (2 << 8))
+#define MAP_MONITORING_STATION_REGISTEEL_PUZZLE       (80 | (2 << 8))
+#define MAP_MONITORING_STATION                        (81 | (2 << 8))
+#define MAP_MONITORING_STATION_CENTRAL                (82 | (2 << 8))
+#define MAP_MONITORING_STATION_SHORTCUT               (83 | (2 << 8))
+#define MAP_MONITORING_STATION_POWER                  (84 | (2 << 8))
+#define MAP_MONITORING_STATION_HALLWAY2               (85 | (2 << 8))
+#define MAP_MONITORING_STATION_CONFERENCE_ROOM        (86 | (2 << 8))
+#define MAP_MONITORING_STATION_STORAGE                (87 | (2 << 8))
+#define MAP_MONITORING_STATION_POKEMON                (88 | (2 << 8))
+#define MAP_MONITORING_STATION_HALLWAY3               (89 | (2 << 8))
+#define MAP_MONITORING_STATION_QUARTERS               (90 | (2 << 8))
+#define MAP_MONITORING_STATION_OFFICE                 (91 | (2 << 8))
+#define MAP_MONITORING_STATION_END                    (92 | (2 << 8))
+#define MAP_MONITORING_STATION_EMERALD_ROOM           (93 | (2 << 8))
+#define MAP_MONITORING_STATION_LAIR                   (94 | (2 << 8))
+#define MAP_POKE_CENTER                               (95 | (2 << 8))
+#define MAP_SPECIAL                                   (96 | (2 << 8))
+#define MAP_FAKE_PALLET1                              (97 | (2 << 8))
+#define MAP_FAKE_PALLET2                              (98 | (2 << 8))
+#define MAP_NEW_MAP1                                  (99 | (2 << 8))
 
 // gMapGroup_TownsAndRoutes
 #define MAP_PALLET_TOWN                          (0 | (3 << 8))
@@ -284,6 +313,8 @@
 #define MAP_ROUTE20_UNDERWATER                   (66 | (3 << 8))
 #define MAP_THREE_ISLAND_BOND_BRIDGE_UNDERWATER  (67 | (3 << 8))
 #define MAP_FOUR_ISLAND_BASE                     (68 | (3 << 8))
+#define MAP_KYOGRE_DEN                           (69 | (3 << 8))
+#define MAP_CINNABAR_VOLCANO                     (70 | (3 << 8))
 
 // gMapGroup_IndoorPallet
 #define MAP_PALLET_TOWN_PLAYERS_HOUSE_1F   (0 | (4 << 8))
@@ -292,12 +323,13 @@
 #define MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB (3 | (4 << 8))
 
 // gMapGroup_IndoorViridian
-#define MAP_VIRIDIAN_CITY_HOUSE             (0 | (5 << 8))
+#define MAP_VIRIDIAN_CITY_HOUSE1            (0 | (5 << 8))
 #define MAP_VIRIDIAN_CITY_GYM               (1 | (5 << 8))
-#define MAP_VIRIDIAN_CITY_SCHOOL            (2 | (5 << 8))
+#define MAP_VIRIDIAN_CITY_HOUSE2            (2 | (5 << 8))
 #define MAP_VIRIDIAN_CITY_MART              (3 | (5 << 8))
 #define MAP_VIRIDIAN_CITY_POKEMON_CENTER_1F (4 | (5 << 8))
 #define MAP_VIRIDIAN_CITY_POKEMON_CENTER_2F (5 | (5 << 8))
+#define MAP_VIRIDIAN_CITY_NEW_HOUSE         (6 | (5 << 8))
 
 // gMapGroup_IndoorPewter
 #define MAP_PEWTER_CITY_MUSEUM_1F         (0 | (6 << 8))
@@ -308,6 +340,7 @@
 #define MAP_PEWTER_CITY_POKEMON_CENTER_1F (5 | (6 << 8))
 #define MAP_PEWTER_CITY_POKEMON_CENTER_2F (6 | (6 << 8))
 #define MAP_PEWTER_CITY_HOUSE2            (7 | (6 << 8))
+#define MAP_PEWTER_CITY_MUSEUM_B1F        (8 | (6 << 8))
 
 // gMapGroup_IndoorCerulean
 #define MAP_CERULEAN_CITY_HOUSE1            (0 | (7 << 8))
@@ -382,6 +415,8 @@
 #define MAP_CINNABAR_ISLAND_POKEMON_CENTER_1F           (5 | (12 << 8))
 #define MAP_CINNABAR_ISLAND_POKEMON_CENTER_2F           (6 | (12 << 8))
 #define MAP_CINNABAR_ISLAND_MART                        (7 | (12 << 8))
+#define MAP_CINNABAR_ISLAND_HOUSE                       (8 | (12 << 8))
+#define MAP_CINNABAR_ISLAND_BERRY_FARM                  (9 | (12 << 8))
 
 // gMapGroup_IndoorIndigoPlateau
 #define MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F (0 | (13 << 8))

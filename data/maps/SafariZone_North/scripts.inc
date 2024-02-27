@@ -3,7 +3,7 @@ SafariZone_North_MapScripts::
 	.byte 0
 
 SafariZone_North_EventScript_MakeExtension::
-	goto_if_unset FLAG_SYS_GAME_CLEAR, EventScript_ReleaseEnd
+	goto_if_unset FLAG_HORROR_DONE, EventScript_ReleaseEnd
 	setmetatile 12, 2, 0x0DB, 1
 	setmetatile 12, 3, 0x0DB, 1
 	setmetatile 12, 4, 0x0DB, 1

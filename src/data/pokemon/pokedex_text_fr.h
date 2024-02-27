@@ -2707,4 +2707,13 @@ const u8 gDeoxysPokedexText_FR[] = _(
     "aggressive guise. It can fool enemies by\n"
     "altering its appearance.");
 
+    
+const u8 gFossilizedKabutopsPokedexText_FR[] = _(
+    "This KABUTOPS fossil is being inhabited\n"
+    "by an ancient spirit, tasked with the\n"
+    "guarding of dangerous secrets.");
+
+const u8 gSeviianAerodactylPokedexText_FR[] = _(
+    "Lorum Ipsy");
+
 const u8 gDeoxysPokedexTextUnused_FR[] = _("");

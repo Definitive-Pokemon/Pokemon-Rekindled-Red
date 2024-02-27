@@ -19,7 +19,7 @@ BattleTower_Lobby_EventScript_16029C::
 	compare VAR_RESULT, TRUE
 	goto_if_eq BattleTower_Lobby_EventScript_CheckShouldGiveEonTicket
 	callnative GetBestBattleTowerStreakToVar0x8007
-	compare VAR_0x8007, 28
+	compare VAR_0x8007, 21
 	goto_if_lt BattleTower_Lobby_EventScript_HideScott
 	clearflag FLAG_HIDE_AWARD_SCOTT_BATTLE_TOWER
 	callnative TryInitBattleTowerAwardManObjectEvent
@@ -27,7 +27,7 @@ BattleTower_Lobby_EventScript_16029C::
 
 BattleTower_Lobby_EventScript_CheckShouldGiveEonTicket::
 	callnative GetBestBattleTowerStreakToVar0x8007
-	compare VAR_0x8007, 56
+	compare VAR_0x8007, 42
 	goto_if_lt BattleTower_Lobby_EventScript_HideScott
 	clearflag FLAG_HIDE_AWARD_SCOTT_BATTLE_TOWER
 	callnative TryInitBattleTowerAwardManObjectEvent
@@ -382,7 +382,7 @@ BattleTower_Lobby_EventScript_Scott::
 
 BattleTower_Lobby_EventScript_Scott_TryGiveEonTicket::
 	callnative GetBestBattleTowerStreakToVar0x8007
-	compare VAR_0x8007, 56
+	compare VAR_0x8007, 42
 	goto_if_lt BattleTower_Lobby_EventScript_Scott_GaveAuroraTicket
 	msgbox BattleTower_Lobby_Text_Scott56Wins, MSGBOX_DEFAULT
 	giveitem ITEM_EON_TICKET, 1

@@ -1,5 +1,7 @@
 .set LOCALID_PIKACHU_MASTER, 12
 .set LOCALID_WEEDLE_MASTER, 13
+.set LOCALID_GRUNT, 14
+.set LOCALID_TORCHIC, 15
 .set TRAINER, VAR_0x8009
 
 ViridianForest_MapScripts::
@@ -83,4 +85,104 @@ ViridianForest_EventScript_Anthony::
 ViridianForest_EventScript_Charlie::
 	trainerbattle_single TRAINER_BUG_CATCHER_CHARLIE, ViridianForest_Text_CharlieIntro, ViridianForest_Text_CharlieDefeat
 	msgbox ViridianForest_Text_CharliePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+ViridianForest_EventScript_Torchic::
+	lock
+	faceplayer
+	call_if_set FLAG_BEAT_VIRIDIAN_GRUNT, ViridianForest_EventScript_ObtainTorchic
+	waitse
+	playmoncry SPECIES_TORCHIC, CRY_MODE_ENCOUNTER
+	msgbox ViridianForest_Text_TorchicNoise
+	waitmoncry
+	msgbox ViridianForest_Text_TorchicScared
+	release
+	end
+	
+ViridianForest_EventScript_ObtainTorchic::
+	waitse
+	playmoncry SPECIES_TORCHIC, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox ViridianForest_Text_TorchicSaved, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq ViridianForest_EventScript_GiveTorchic
+	msgbox ViridianForest_Text_TorchicSad
+	release
+	end
+	
+ViridianForest_EventScript_GiveTorchic::
+	setvar VAR_TEMP_1, SPECIES_TORCHIC
+	givemon SPECIES_TORCHIC, 5, ITEM_SITRUS_BERRY
+	compare VAR_RESULT, 0
+	goto_if_eq ViridianForest_EventScript_ReceiveTorchicParty
+	compare VAR_RESULT, 1
+	goto_if_eq ViridianForest_EventScript_ReceiveTorchicPC
+	compare VAR_RESULT, 2
+	goto_if_eq EventScript_NoMoreRoomForPokemon
+	release
+	end
+
+ViridianForest_EventScript_ReceiveTorchicParty::
+	removeobject LOCALID_TORCHIC
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_LEVEL_UP
+	message ViridianForest_Text_ObtainedTorchic
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_TORCHIC
+	callnative CheckNuzlockeMode
+	compare VAR_RESULT, TRUE
+	goto_if_eq ViridianForest_EventScript_NicknameTorchicParty
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq ViridianForest_EventScript_EndReceiveTorchic
+	ViridianForest_EventScript_NicknameTorchicParty::
+	call EventScript_GetGiftMonPartySlot
+	call EventScript_ChangePokemonNickname
+	goto ViridianForest_EventScript_EndReceiveTorchic
+	end
+
+ViridianForest_EventScript_ReceiveTorchicPC::
+	removeobject LOCALID_TORCHIC
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_LEVEL_UP
+	message ViridianForest_Text_ObtainedTorchic
+	waitmessage
+	waitfanfare
+	bufferspeciesname 0, SPECIES_TORCHIC
+	callnative CheckNuzlockeMode
+	compare VAR_RESULT, TRUE
+	goto_if_eq ViridianForest_EventScript_NicknameTorchicPC
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq ViridianForest_EventScript_TorchicTransferredToPC
+	ViridianForest_EventScript_NicknameTorchicPC::
+	call EventScript_NameReceivedBoxMon
+	goto ViridianForest_EventScript_TorchicTransferredToPC
+	end
+
+ViridianForest_EventScript_TorchicTransferredToPC::
+	call EventScript_TransferredToPC
+	goto ViridianForest_EventScript_EndReceiveTorchic
+	end
+	
+ViridianForest_EventScript_EndReceiveTorchic::
+	setflag FLAG_GOT_TORCHIC
+	release
+	end
+	
+	ViridianForest_EventScript_Grunt::
+	lock
+	faceplayer
+	message ViridianForest_Text_Grunt
+	waitmessage
+	playbgm MUS_ENCOUNTER_ROCKET, 0
+	waitbuttonpress
+	trainerbattle_no_intro TRAINER_TEAM_ROCKET_JUNGLE, ViridianForest_Text_GruntDefeat
+	msgbox ViridianForest_Text_GruntLeave
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_GRUNT
+	fadescreen FADE_FROM_BLACK
+	setflag FLAG_BEAT_VIRIDIAN_GRUNT
+	release
 	end

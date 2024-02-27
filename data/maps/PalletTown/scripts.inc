@@ -44,6 +44,32 @@ PalletTown_EventScript_PlaceMasterYoungsterOutsideLab::
 	setobjectmovementtype LOCALID_MASTER_YOUNGSTER, MOVEMENT_TYPE_FACE_RIGHT
 	return
 
+PalletTown_EventScript_DebugGive::
+	lock
+	givemon SPECIES_SEVIIAN_AERODACTYL , 5, ITEM_NONE
+	release
+	end
+
+PalletTown_EventScript_DebugBattle::
+	lock
+	setwildbattle SPECIES_SEVIIAN_AERODACTYL, 3, ITEM_NONE
+	delay 40
+	dowildbattle
+	release
+	end
+
+PalletTown_EventScript_DebugGiveNormal::
+	lock
+	givemon SPECIES_AERODACTYL, 5, ITEM_NONE
+	release
+	end
+
+PalletTown_EventScript_DebugGiveIndex::
+	lock
+	givemon SPECIES_CHIMECHO, 5, ITEM_NONE
+	release
+	end
+
 PalletTown_OnFrame::
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_OAK, 2, PalletTown_EventScript_OakRatingScene
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_OAK, 3, PalletTown_EventScript_MasterTrainerYoungster
@@ -149,6 +175,83 @@ PalletTown_EventScript_EnoughMonsForNationalDex::
 	msgbox PalletTown_Text_CaughtXImpressiveFollowMe
 	closemessage
 	return
+	
+PalletTown_EventScript_BaldingManHM07CheckNo::
+	lock
+	faceplayer
+	clearflag FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY
+	msgbox PalletTown_Text_BaldingManHM07CheckNo
+	release
+	end
+	
+PalletTown_Text_BaldingManHM07CheckNo::
+	.string "SELPHY arrived!$"
+	
+PalletTown_EventScript_BeautyOakHasLetterCheckNo::
+	lock
+	faceplayer 
+	goto_if_set FLAG_OAK_HAS_LETTER, PalletTown_EventScript_BeautyOakHasLetterCheckYes
+	msgbox PalletTown_Text_BeautyOakHasLetterCheckNo
+	release
+	end
+	
+PalletTown_Text_BeautyOakHasLetterCheckNo::
+	.string "Professor Oak does NOT have a letter\n"
+	.string "to give!$"
+	
+PalletTown_EventScript_BeautyOakHasLetterCheckYes::
+	msgbox PalletTown_Text_BeautyOakHasLetterCheckYes
+	release
+	end
+	
+PalletTown_Text_BeautyOakHasLetterCheckYes::
+	.string "Professor Oak DOES have a letter\n"
+	.string "to give!\p"
+	.string "Congratulations!$"
+	
+PalletTown_EventScript_OldManOakGaveLetterCheckNo::
+	lock
+	faceplayer
+	goto_if_set FLAG_OAK_GIVEN_LETTER, PalletTown_EventScript_OldManOakGaveLetterCheckYes
+	msgbox PalletTown_Text_OldManOakGaveLetterCheckNo
+	release
+	end
+	
+PalletTown_Text_OldManOakGaveLetterCheckNo::
+	.string "The game thinks Professor Oak did\n"
+	.string "NOT give you the letter!$"
+	
+PalletTown_EventScript_OldManOakGaveLetterCheckYes::
+	msgbox PalletTown_Text_OldManOakGaveLetterCheckYes
+	release
+	end
+	
+PalletTown_Text_OldManOakGaveLetterCheckYes::
+	.string "The game thinks Professor Oak DID\n"
+	.string "give you the letter!\p"
+	.string "Congratulations!$"
+	
+PalletTown_EventScript_BikerLetterCheckNo::
+	lock
+	faceplayer
+	checkitem ITEM_LETTER, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq PalletTown_EventScript_BikerLetterCheckYes
+	msgbox PalletTown_Text_BikerLetterCheckYes
+	release
+	end
+	
+PalletTown_Text_BikerLetterCheckNo::
+	.string "You do NOT have the letter!$"
+	
+PalletTown_EventScript_BikerLetterCheckYes::
+	msgbox PalletTown_Text_BikerLetterCheckYes
+	release
+	end
+	
+PalletTown_Text_BikerLetterCheckYes::
+	.string "You DO have the letter!\p"
+	.string "Congratulations!$"
 
 PalletTown_Movement_OakWalkToPlayersDoor::
 	walk_left

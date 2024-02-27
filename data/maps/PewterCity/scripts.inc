@@ -876,3 +876,63 @@ PewterCity_Movement_AideExit3::
 PewterCity_Movement_WalkInPlaceLeft::
 	walk_in_place_left
 	step_end
+
+PewterCity_EventScript_EggGentleman::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	goto_if_set FLAG_GOT_TOGEPI_EGG, PewterCity_EventScript_PostEggComment
+	goto_if_set FLAG_NO_ROOM_FOR_TOGEPI_EGG, PewterCity_EventScript_ReturnForEgg
+	msgbox PewterCity_Text_LetMeTakeLookAtMons
+	msgbox PewterCity_Text_TreatMonRightHaveThis
+	goto PewterCity_EventScript_TryGiveEgg
+	end
+
+PewterCity_EventScript_TryGiveEgg::
+	getpartysize
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq PewterCity_EventScript_NoRoomForEgg
+	setflag FLAG_GOT_TOGEPI_EGG
+	giveegg SPECIES_TOGEPI
+	textcolor 3
+	playfanfare MUS_LEVEL_UP
+	message PewterCity_Text_ReceivedEggFromMan
+	waitfanfare
+	waitmessage
+	call EventScript_RestorePrevTextColor
+	goto PewterCity_EventScript_PostEggComment
+	end
+
+PewterCity_EventScript_MonDaisyComment::
+	famechecker FAMECHECKER_DAISY, 2
+	msgbox PewterCity_Text_CuteMonRemindsMeOfDaisy
+	release
+	end
+
+@ If the player has a Togepi/Togetic from this game (assumed to be the one the man gave you) then comment on it
+@ Otherwise make normal comment
+PewterCity_EventScript_PostEggComment::
+	bufferspeciesname 1, SPECIES_TOGEPI
+	setvar VAR_0x8004, SPECIES_TOGEPI
+	specialvar VAR_RESULT, PlayerPartyContainsSpeciesWithPlayerID
+	compare VAR_RESULT, TRUE
+	goto_if_eq PewterCity_EventScript_MonDaisyComment
+	bufferspeciesname 1, SPECIES_TOGETIC
+	setvar VAR_0x8004, SPECIES_TOGETIC
+	specialvar VAR_RESULT, PlayerPartyContainsSpeciesWithPlayerID
+	compare VAR_RESULT, TRUE
+	goto_if_eq PewterCity_EventScript_MonDaisyComment
+	msgbox PewterCity_Text_GladIMetSomeoneLikeYou
+	release
+	end
+
+PewterCity_EventScript_NoRoomForEgg::
+	setflag FLAG_NO_ROOM_FOR_TOGEPI_EGG
+	msgbox PewterCity_Text_DontHaveSpaceInYourParty
+	release
+	end
+
+PewterCity_EventScript_ReturnForEgg::
+	goto PewterCity_EventScript_TryGiveEgg
+	end

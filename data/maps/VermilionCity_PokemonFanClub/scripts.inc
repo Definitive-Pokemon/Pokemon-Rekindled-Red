@@ -12,11 +12,12 @@ VermilionCity_PokemonFanClub_MapScripts::
 VermilionCity_PokemonFanClub_MapScript_SetMasterTrainerMovementTypes::
 	setvar TRAINER, MASTER_KRABBY
 	callnative ShouldChangeMasterTrainerMovementType
-	call_if_eq VAR_RESULT, FALSE, VermilionCity_PokemonFanClub_MapScript_KrabbyMasterMovementType
+	compare VAR_RESULT, FALSE
+	call_if_eq VermilionCity_PokemonFanClub_MapScript_KrabbyMasterMovementType
 	end
 
 VermilionCity_PokemonFanClub_MapScript_KrabbyMasterMovementType::
-	setobjectmovementtype LOCALID_KRABBY_MASTER, MOVEMENT_TYPE_RAISE_HAND_AND_STOP
+	setobjectmovementtype LOCALID_KRABBY_MASTER, MOVEMENT_TYPE_VS_SEEKER_4D
 	return
 
 VermilionCity_PokemonFanClub_EventScript_Chairman::
@@ -24,7 +25,8 @@ VermilionCity_PokemonFanClub_EventScript_Chairman::
 	faceplayer
 	goto_if_set FLAG_GOT_BIKE_VOUCHER, VermilionCity_PokemonFanClub_EventScript_AlreadyHeardStory
 	msgbox VermilionCity_PokemonFanClub_Text_DidYouComeToHearAboutMyMons, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, VermilionCity_PokemonFanClub_EventScript_ChairmanStory
+	compare VAR_RESULT, YES
+	goto_if_eq VermilionCity_PokemonFanClub_EventScript_ChairmanStory
 	msgbox VermilionCity_PokemonFanClub_Text_ComeBackToHearStory
 	release
 	end
@@ -36,8 +38,9 @@ VermilionCity_PokemonFanClub_EventScript_AlreadyHeardStory::
 
 VermilionCity_PokemonFanClub_EventScript_ChairmanStory::
 	msgbox VermilionCity_PokemonFanClub_Text_ChairmansStory
-	checkitemspace ITEM_BIKE_VOUCHER
-	goto_if_eq VAR_RESULT, FALSE, VermilionCity_PokemonFanClub_EventScript_NoRoomForBikeVoucher
+	checkitemspace ITEM_BIKE_VOUCHER, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq VermilionCity_PokemonFanClub_EventScript_NoRoomForBikeVoucher
 	setflag FLAG_GOT_BIKE_VOUCHER
 	giveitem_msg VermilionCity_PokemonFanClub_Text_ReceivedBikeVoucherFromChairman, ITEM_BIKE_VOUCHER, 1, MUS_OBTAIN_KEY_ITEM
 	msgbox VermilionCity_PokemonFanClub_Text_ExplainBikeVoucher
@@ -69,7 +72,7 @@ VermilionCity_PokemonFanClub_EventScript_Woman::
 	goto_if_set SPOKE_TO_FAT_MAN_LAST, VermilionCity_PokemonFanClub_EventScript_WomanSpokeToFatMan
 	msgbox VermilionCity_PokemonFanClub_Text_AdoreMySeel
 	closemessage
-	applymovement LOCALID_WOMAN, Common_Movement_FaceOriginalDirection
+	applymovement LOCALID_WOMAN, Movement_FaceOriginalDirection
 	waitmovement 0
 	setflag SPOKE_TO_WOMAN_LAST
 	release
@@ -78,7 +81,7 @@ VermilionCity_PokemonFanClub_EventScript_Woman::
 VermilionCity_PokemonFanClub_EventScript_WomanSpokeToFatMan::
 	msgbox VermilionCity_PokemonFanClub_Text_SeelFarMoreAttractive
 	closemessage
-	applymovement LOCALID_WOMAN, Common_Movement_FaceOriginalDirection
+	applymovement LOCALID_WOMAN, Movement_FaceOriginalDirection
 	waitmovement 0
 	clearflag SPOKE_TO_FAT_MAN_LAST
 	release
@@ -90,7 +93,7 @@ VermilionCity_PokemonFanClub_EventScript_FatMan::
 	goto_if_set SPOKE_TO_WOMAN_LAST, VermilionCity_PokemonFanClub_EventScript_FatManSpokeToWoman
 	msgbox VermilionCity_PokemonFanClub_Text_AdmirePikachusTail
 	closemessage
-	applymovement LOCALID_FAT_MAN, Common_Movement_FaceOriginalDirection
+	applymovement LOCALID_FAT_MAN, Movement_FaceOriginalDirection
 	waitmovement 0
 	setflag SPOKE_TO_FAT_MAN_LAST
 	release
@@ -99,7 +102,7 @@ VermilionCity_PokemonFanClub_EventScript_FatMan::
 VermilionCity_PokemonFanClub_EventScript_FatManSpokeToWoman::
 	msgbox VermilionCity_PokemonFanClub_Text_PikachuTwiceAsCute
 	closemessage
-	applymovement LOCALID_FAT_MAN, Common_Movement_FaceOriginalDirection
+	applymovement LOCALID_FAT_MAN, Movement_FaceOriginalDirection
 	waitmovement 0
 	clearflag SPOKE_TO_WOMAN_LAST
 	release

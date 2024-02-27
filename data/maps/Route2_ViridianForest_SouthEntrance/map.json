@@ -72,6 +72,20 @@
       "elevation": 3,
       "dest_map": "MAP_VIRIDIAN_FOREST",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_FOREST_DEPTHS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_FOREST_DEPTHS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

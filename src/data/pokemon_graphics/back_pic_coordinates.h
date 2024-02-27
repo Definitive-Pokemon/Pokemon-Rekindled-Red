@@ -2200,5 +2200,15 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = MON_COORDS_SIZE(32, 56),
         .y_offset = 6,
     },
+    [SPECIES_FOSSILIZED_KABUTOPS] =
+    {
+        .size = 0x47,
+        .y_offset = 0x06,
+    },
+    [SPECIES_SEVIIAN_AERODACTYL] = 
+    {
+        .size = 0x86,
+        .y_offset = 0x08,
+    },
 };
 

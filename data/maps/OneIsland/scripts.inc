@@ -37,6 +37,12 @@ OneIsland_EventScript_EnterOneIslandFirstTime::
 	releaseall
 	end
 
+OneIsland_EventScript_DiveGiver::
+	lock
+	giveitem ITEM_HM08, 1
+	release
+	end
+
 	.macro walk_to_pokecenter
 	walk_up
 	walk_up

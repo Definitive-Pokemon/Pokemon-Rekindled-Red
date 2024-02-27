@@ -129,6 +129,8 @@ u8 ScriptGiveMon(u16 species, u8 level, u16 item, u32 unused1, u32 unused2, u8 u
     CalculateMonStats(mon, FALSE);
     sentToPc = GiveMonToPlayer(mon);
     nationalDexNum = SpeciesToNationalPokedexNum(species);
+    HandleSetPokedexFlag(nationalDexNum, FLAG_SET_CAUGHT, GetMonData(mon, MON_DATA_PERSONALITY, NULL));
+    // Before this change, the game would not register first personalities/forms with mons through this script
 
     switch(sentToPc)
     {

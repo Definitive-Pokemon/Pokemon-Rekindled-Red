@@ -26,11 +26,11 @@
 #define TRAINER_SWIMMER_FEMALE_SEDEF_2            22
 #define TRAINER_MASTER_OAK                        23
 #define TRAINER_MISTY_REMATCH_CHALLENGE           24
-#define TRAINER_ELITE_FOUR_SIDNEY                 25
-#define TRAINER_ELITE_FOUR_PHOEBE                 26
-#define TRAINER_LEADER_ROXANNE                    27
-#define TRAINER_LEADER_BRAWLY                     28
-#define TRAINER_LEADER_TATE_LIZA                  29
+#define TRAINER_DAISY                             25
+#define TRAINER_LEADER_GIOVANNI_REMATCH           26
+#define TRAINER_TEAM_ROCKET_JUNGLE                27
+#define TRAINER_BLACK_BELT_KOICHI2                28
+#define TRAINER_MYSTERY_GIRL_ANABEL               29
 #define TRAINER_SCHOOL_KID_M                      30
 #define TRAINER_SCHOOL_KID_F                      31
 #define TRAINER_SR_AND_JR                         32
@@ -83,7 +83,7 @@
 #define TRAINER_AQUA_ADMIN_SHELLY                 79
 #define TRAINER_MAGMA_ADMIN_TABITHA               80
 #define TRAINER_MAGMA_ADMIN_COURTNEY              81
-#define TRAINER_LEADER_WATTSON                    82
+#define TRAINER_BURGLAR_HECKEL                    82
 #define TRAINER_LEADER_FLANNERY                   83
 #define TRAINER_LEADER_NORMAN                     84
 #define TRAINER_LEADER_WINONA                     85

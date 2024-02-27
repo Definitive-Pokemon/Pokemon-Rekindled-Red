@@ -222,6 +222,12 @@
 #define MAPSEC_TRAINER_HILL                 0xD4
 #define MAPSEC_NONE                         0xD5
 #define MAPSEC_COUNT                        0xD6
+#define MAPSEC_STONE_TOMB                   0xD5
+#define MAPSEC_ICY_TOMB                     0xD6
+#define MAPSEC_METAL_TOMB                   0xD7
+#define MAPSEC_MONITORING_STATION           0xD8
+#define MAPSEC_NONE                         0xD9
+#define MAPSEC_COUNT                        0xDA
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

@@ -3,12 +3,14 @@
 SixIsland_PokemonCenter_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SixIsland_PokemonCenter_1F_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, PokemonCenter_1F_OnLoad
+	//map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, SixIsland_PokemonCenter_1F_OnFrame
 	.byte 0
 
 SixIsland_PokemonCenter_1F_OnTransition::
 	setrespawn SPAWN_SIX_ISLAND
-	call_if_eq VAR_MAP_SCENE_SIX_ISLAND_POKEMON_CENTER_1F, 0, SixIsland_PokemonCenter_1F_EventScript_ShowRival
+	compare VAR_MAP_SCENE_SIX_ISLAND_POKEMON_CENTER_1F, 0
+	call_if_eq SixIsland_PokemonCenter_1F_EventScript_ShowRival
 	end
 
 SixIsland_PokemonCenter_1F_EventScript_ShowRival::
@@ -21,13 +23,13 @@ SixIsland_PokemonCenter_1F_OnFrame::
 
 SixIsland_PokemonCenter_1F_EventScript_RivalScene::
 	lockall
-	textcolor NPC_TEXT_COLOR_MALE
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterDown
+	textcolor 0
+	applymovement LOCALID_RIVAL, Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	playbgm MUS_ENCOUNTER_RIVAL, 0
-	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
+	applymovement LOCALID_RIVAL, Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
+	applymovement LOCALID_RIVAL, Movement_Delay48
 	waitmovement 0
 	delay 25
 	applymovement LOCALID_RIVAL, SixIsland_PokemonCenter_1F_Movement_RivalApproach

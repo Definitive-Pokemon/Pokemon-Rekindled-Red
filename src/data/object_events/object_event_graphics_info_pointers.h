@@ -49,6 +49,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WorkerM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WorkerF;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketM;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Petrel;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GBAKid;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SuperNerd;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Biker;
@@ -101,6 +102,10 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ruby;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sapphire;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldAmber;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GymSign;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlueDoor;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GreyDoor;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RedDoor;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_YellowDoor;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sign;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrainerTips;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clipboard;
@@ -108,6 +113,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Meteorite;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LaprasDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Seagallop;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Snorlax;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Venusaur;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spearow;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cubone;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Poliwrath;
@@ -180,6 +186,22 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmBrendan;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EmMay;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CableCar;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sudowoodo;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chikorita;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cyndaquil;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Totodile;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Magby;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Elekid;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Smoochum;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Treecko;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Torchic;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mudkip;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regirock;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regice;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Registeel;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kabutops_Shadow;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dusclops;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FossilizedKabutops;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LatiasHurt;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Abra;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SwimmerFWater2;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MasterBeauty;
@@ -254,6 +276,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_WORKER_F]                 = &gObjectEventGraphicsInfo_WorkerF,
     [OBJ_EVENT_GFX_ROCKET_M]                 = &gObjectEventGraphicsInfo_RocketM,
     [OBJ_EVENT_GFX_ROCKET_F]                 = &gObjectEventGraphicsInfo_RocketF,
+    [OBJ_EVENT_GFX_PETREL]                   = &gObjectEventGraphicsInfo_Petrel,
     [OBJ_EVENT_GFX_GBA_KID]                  = &gObjectEventGraphicsInfo_GBAKid,
     [OBJ_EVENT_GFX_SUPER_NERD]               = &gObjectEventGraphicsInfo_SuperNerd,
     [OBJ_EVENT_GFX_BIKER]                    = &gObjectEventGraphicsInfo_Biker,
@@ -307,12 +330,17 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_OLD_AMBER]                = &gObjectEventGraphicsInfo_OldAmber,
     [OBJ_EVENT_GFX_GYM_SIGN]                 = &gObjectEventGraphicsInfo_GymSign,
     [OBJ_EVENT_GFX_SIGN]                     = &gObjectEventGraphicsInfo_Sign,
+    [OBJ_EVENT_GFX_BLUE_DOOR]                = &gObjectEventGraphicsInfo_BlueDoor,
+    [OBJ_EVENT_GFX_GREY_DOOR]                = &gObjectEventGraphicsInfo_GreyDoor,
+    [OBJ_EVENT_GFX_RED_DOOR]                 = &gObjectEventGraphicsInfo_RedDoor,
+    [OBJ_EVENT_GFX_YELLOW_DOOR]              = &gObjectEventGraphicsInfo_YellowDoor,
     [OBJ_EVENT_GFX_TRAINER_TIPS]             = &gObjectEventGraphicsInfo_TrainerTips,
     [OBJ_EVENT_GFX_CLIPBOARD]                = &gObjectEventGraphicsInfo_Clipboard,
     [OBJ_EVENT_GFX_METEORITE]                = &gObjectEventGraphicsInfo_Meteorite,
     [OBJ_EVENT_GFX_LAPRAS_DOLL]              = &gObjectEventGraphicsInfo_LaprasDoll,
     [OBJ_EVENT_GFX_SEAGALLOP]                = &gObjectEventGraphicsInfo_Seagallop,
     [OBJ_EVENT_GFX_SNORLAX]                  = &gObjectEventGraphicsInfo_Snorlax,
+    [OBJ_EVENT_GFX_VENUSAUR]                 = &gObjectEventGraphicsInfo_Venusaur,
     [OBJ_EVENT_GFX_SPEAROW]                  = &gObjectEventGraphicsInfo_Spearow,
     [OBJ_EVENT_GFX_CUBONE]                   = &gObjectEventGraphicsInfo_Cubone,
     [OBJ_EVENT_GFX_POLIWRATH]                = &gObjectEventGraphicsInfo_Poliwrath,
@@ -385,6 +413,22 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_EM_MAY]                   = &gObjectEventGraphicsInfo_EmMay,
     [OBJ_EVENT_GFX_CABLE_CAR]                = &gObjectEventGraphicsInfo_CableCar,
     [OBJ_EVENT_GFX_SUDOWOODO]                = &gObjectEventGraphicsInfo_Sudowoodo,
+    [OBJ_EVENT_GFX_CHIKORITA]                = &gObjectEventGraphicsInfo_Chikorita,
+    [OBJ_EVENT_GFX_CYNDAQUIL]                = &gObjectEventGraphicsInfo_Cyndaquil,
+    [OBJ_EVENT_GFX_TOTODILE]                 = &gObjectEventGraphicsInfo_Totodile,
+    [OBJ_EVENT_GFX_MAGBY]                    = &gObjectEventGraphicsInfo_Magby,
+    [OBJ_EVENT_GFX_ELEKID]                   = &gObjectEventGraphicsInfo_Elekid,
+    [OBJ_EVENT_GFX_SMOOCHUM]                 = &gObjectEventGraphicsInfo_Smoochum,
+    [OBJ_EVENT_GFX_TREECKO]                  = &gObjectEventGraphicsInfo_Treecko,
+    [OBJ_EVENT_GFX_TORCHIC]                  = &gObjectEventGraphicsInfo_Torchic,
+    [OBJ_EVENT_GFX_MUDKIP]                   = &gObjectEventGraphicsInfo_Mudkip,
+    [OBJ_EVENT_GFX_REGIROCK]                 = &gObjectEventGraphicsInfo_Regirock,
+    [OBJ_EVENT_GFX_REGICE]                   = &gObjectEventGraphicsInfo_Regice,
+    [OBJ_EVENT_GFX_REGISTEEL]                = &gObjectEventGraphicsInfo_Registeel,
+    [OBJ_EVENT_GFX_KABUTOPS_SHADOW]          = &gObjectEventGraphicsInfo_Kabutops_Shadow,
+    [OBJ_EVENT_GFX_DUSCLOPS]                 = &gObjectEventGraphicsInfo_Dusclops,
+    [OBJ_EVENT_GFX_FOSSILIZED_KABUTOPS]      = &gObjectEventGraphicsInfo_FossilizedKabutops,
+    [OBJ_EVENT_GFX_LATIAS_HURT]              = &gObjectEventGraphicsInfo_LatiasHurt,
     [OBJ_EVENT_GFX_ABRA]                     = &gObjectEventGraphicsInfo_Abra,
     [OBJ_EVENT_GFX_SWIMMER_F_WATER_2]        = &gObjectEventGraphicsInfo_SwimmerFWater2,
     [OBJ_EVENT_GFX_MASTER_BEAUTY]            = &gObjectEventGraphicsInfo_MasterBeauty,

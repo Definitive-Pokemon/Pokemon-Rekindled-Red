@@ -22,6 +22,30 @@ SaffronCity_Dojo_Text_StayAndTrainWithUs::
     .string "Grunt!\n"
     .string "Stay and train at karate with us!$"
 
+SaffronCity_Dojo_Text_AnotherHitmon::
+    .string "You wish to battle me once again?\p"
+    .string "I warn you! this time, I will not\n"
+	.string "hold back!$"
+	
+SaffronCity_Dojo_Text_ChallengeAnytime::
+   .string "You can chellenge me anytime!$"
+	
+SaffronCity_Dojo_Text_MasterKoichiIntro2::
+    .string "That is the spirit! HYAAH!$"
+	
+SaffronCity_Dojo_Text_MasterKoichiDefeat2::
+    .string "Hwa!\n"
+    .string "Beaten again!$"
+	
+SaffronCity_Dojo_Text_ChoosePrizedFightingMon2::
+    .string "You and your POKéMON fought\n"
+	.string "admirably!\p"
+    .string "I will give you my remaining prized\n"
+    .string "FIGHTING POKéMON!\p"
+	
+SaffronCity_Dojo_Text_GoAhead::
+    .string "Go ahead! You deserve this prize!$"
+
 SaffronCity_Dojo_Text_MikeIntro::
     .string "Hoargh!\n"
     .string "Take your shoes off!$"

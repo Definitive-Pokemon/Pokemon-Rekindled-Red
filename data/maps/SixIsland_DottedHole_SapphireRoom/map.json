@@ -2,7 +2,7 @@
   "id": "MAP_SIX_ISLAND_DOTTED_HOLE_SAPPHIRE_ROOM",
   "name": "SixIsland_DottedHole_SapphireRoom",
   "layout": "LAYOUT_SIX_ISLAND_DOTTED_HOLE_SAPPHIRE_ROOM",
-  "music": "MUS_SEVII_DUNGEON",
+  "music": "MUS_SEALED_CHAMBER",
   "region_map_section": "MAPSEC_DOTTED_HOLE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -60,6 +60,13 @@
       "elevation": 3,
       "dest_map": "MAP_SIX_ISLAND_DOTTED_HOLE_B4F",
       "dest_warp_id": "3"
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_DOTTED_HOLE_REGICE_PUZZLE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -69,7 +76,7 @@
     {
       "type": "sign",
       "x": 7,
-      "y": 2,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "SixIsland_DottedHole_SapphireRoom_EventScript_BrailleMessage"

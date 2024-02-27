@@ -2,7 +2,21 @@
 .equ LOCALID_THIEF,    2
 
 SixIsland_DottedHole_SapphireRoom_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, SixIsland_DottedHole_SapphireRoom_EventScript_OnLoad
 	.byte 0
+	
+SixIsland_DottedHole_SapphireRoom_EventScript_OnLoad::
+	goto_if_unset FLAG_HIDE_SAPPHIRE, SixIsland_DottedHole_SapphireRoom_EventScript_PuzzleDoorClosed
+	end
+	
+SixIsland_DottedHole_SapphireRoom_EventScript_PuzzleDoorClosed::
+	setmetatile 6, 1, METATILE_NavelRock_Upper_Wall, 1
+	setmetatile 7, 1, METATILE_NavelRock_Upper_Wall, 1
+	setmetatile 8, 1, METATILE_NavelRock_Upper_Wall, 1
+	setmetatile 6, 2, METATILE_NavelRock_Lower_Wall, 1
+	setmetatile 7, 2, METATILE_NavelRock_Lower_Wall, 1
+	setmetatile 8, 2, METATILE_NavelRock_Lower_Wall, 1
+	return
 
 SixIsland_DottedHole_SapphireRoom_EventScript_Sapphire::
 	lock
@@ -47,10 +61,29 @@ SixIsland_DottedHole_SapphireRoom_EventScript_Sapphire::
 	call_if_eq VAR_FACING, DIR_WEST, SixIsland_DottedHole_SapphireRoom_EventScript_PlayerFaceThiefDown2
 	msgbox SixIsland_DottedHole_SapphireRoom_Text_SellToTeamRocketTellPassword
 	closemessage
-	call_if_eq VAR_FACING, DIR_NORTH, SixIsland_DottedHole_SapphireRoom_EventScript_ThiefExitNorth
-	call_if_eq VAR_FACING, DIR_SOUTH, SixIsland_DottedHole_SapphireRoom_EventScript_ThiefExitSouth
-	call_if_eq VAR_FACING, DIR_EAST, SixIsland_DottedHole_SapphireRoom_EventScript_ThiefExitEast
-	call_if_eq VAR_FACING, DIR_WEST, SixIsland_DottedHole_SapphireRoom_EventScript_ThiefExitWest
+	delay 40
+	setmetatile 6, 1, METATILE_NavelRock_CaveDoor1, 1
+	setmetatile 7, 1, METATILE_NavelRock_CaveDoor2, 1
+	setmetatile 8, 1, METATILE_NavelRock_CaveDoor3, 1
+	setmetatile 6, 2, METATILE_NavelRock_CaveDoor4, 1
+	setmetatile 7, 2, METATILE_NavelRock_CaveDoor5, 0
+	setmetatile 8, 2, METATILE_NavelRock_CaveDoor6, 1
+	playse SE_DOOR
+	special DrawWholeMapView
+	waitse
+	playse SE_PIN
+	applymovement LOCALID_THIEF, SixIsland_DottedHole_SapphireRoom_Movement_ThiefLookUp
+	waitmovement 0
+	msgbox SixIsland_DottedHole_SapphireRoom_Text_BotherWithThat
+	closemessage
+	compare VAR_FACING, DIR_NORTH
+	call_if_eq SixIsland_DottedHole_SapphireRoom_EventScript_ThiefExitNorth
+	compare VAR_FACING, DIR_SOUTH
+	call_if_eq SixIsland_DottedHole_SapphireRoom_EventScript_ThiefExitSouth
+	compare VAR_FACING, DIR_EAST
+	call_if_eq SixIsland_DottedHole_SapphireRoom_EventScript_ThiefExitEast
+	compare VAR_FACING, DIR_WEST
+	call_if_eq SixIsland_DottedHole_SapphireRoom_EventScript_ThiefExitWest
 	playse SE_EXIT
 	delay 35
 	removeobject LOCALID_THIEF
@@ -217,6 +250,11 @@ SixIsland_DottedHole_SapphireRoom_Movement_ThiefFallIn::
 SixIsland_DottedHole_SapphireRoom_Movement_PlayerWatchThiefExit::
 	delay_16
 	walk_in_place_faster_right
+	step_end
+	
+SixIsland_DottedHole_SapphireRoom_Movement_ThiefLookUp::
+	face_up
+	emote_exclamation_mark
 	step_end
 
 SixIsland_DottedHole_SapphireRoom_EventScript_BrailleMessage::

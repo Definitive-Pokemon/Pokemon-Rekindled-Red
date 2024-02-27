@@ -178,7 +178,8 @@
     "SixIsland_DottedHole_B4F",
     "SixIsland_DottedHole_SapphireRoom",
     "SixIsland_PatternBush",
-    "SixIsland_AlteringCave"
+    "SixIsland_AlteringCave",
+    "ViridianForestDepths"
   ],
   "gMapGroup_SpecialArea": [
     "NavelRock_Exterior",
@@ -252,7 +253,35 @@
     "CeruleanCave_B1F_Blue",
     "CeruleanCave_1F_Yellow",
     "CeruleanCave_2F_Yellow",
-    "CeruleanCave_B1F_Yellow"
+    "CeruleanCave_B1F_Yellow",
+    "MtMoon_Square",
+    "Fiery_Passage",
+    "MtEmber_RegirockPuzzle",
+    "Stone_Tomb",
+    "Icy_Tomb",
+    "Metal_Tomb",
+    "DottedHole_RegicePuzzle",
+    "DottedHole_RegicePuzzle2",
+    "MonitoringStation_RegisteelPuzzle",
+    "MonitoringStation",
+    "MonitoringStation_Central",
+    "MonitoringStation_Shortcut",
+    "MonitoringStation_Power",
+    "MonitoringStation_Hallway2",
+    "MonitoringStation_ConferenceRoom",
+    "MonitoringStation_Storage",
+    "MonitoringStation_Pokemon",
+    "MonitoringStation_Hallway3",
+    "MonitoringStation_Quarters",
+    "MonitoringStation_Office",
+    "MonitoringStation_End",
+    "MonitoringStation_EmeraldRoom",
+    "MonitoringStation_Lair",
+    "PokeCenter",
+    "Special",
+    "FakePallet1",
+    "FakePallet2",
+    "NewMap1"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -323,7 +352,9 @@
     "SevenIsland_TanobyRuins",
     "Route20_Underwater",
     "ThreeIsland_BondBridge_Underwater",
-    "FourIsland_Base"
+    "FourIsland_Base",
+    "KyogreDen",
+    "CinnabarVolcano"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",
@@ -332,12 +363,13 @@
     "PalletTown_ProfessorOaksLab"
   ],
   "gMapGroup_IndoorViridian": [
-    "ViridianCity_House",
+    "ViridianCity_House1",
     "ViridianCity_Gym",
-    "ViridianCity_School",
+    "ViridianCity_House2",
     "ViridianCity_Mart",
     "ViridianCity_PokemonCenter_1F",
-    "ViridianCity_PokemonCenter_2F"
+    "ViridianCity_PokemonCenter_2F",
+    "ViridianCity_NewHouse"
   ],
   "gMapGroup_IndoorPewter": [
     "PewterCity_Museum_1F",
@@ -347,7 +379,8 @@
     "PewterCity_House1",
     "PewterCity_PokemonCenter_1F",
     "PewterCity_PokemonCenter_2F",
-    "PewterCity_House2"
+    "PewterCity_House2",
+    "PewterCity_Museum_B1F"
   ],
   "gMapGroup_IndoorCerulean": [
     "CeruleanCity_House1",
@@ -421,7 +454,9 @@
     "CinnabarIsland_PokemonLab_ExperimentRoom",
     "CinnabarIsland_PokemonCenter_1F",
     "CinnabarIsland_PokemonCenter_2F",
-    "CinnabarIsland_Mart"
+    "CinnabarIsland_Mart",
+    "CinnabarIsland_House",
+    "CinnabarIsland_BerryFarm"
   ],
   "gMapGroup_IndoorIndigoPlateau": [
     "IndigoPlateau_PokemonCenter_1F",

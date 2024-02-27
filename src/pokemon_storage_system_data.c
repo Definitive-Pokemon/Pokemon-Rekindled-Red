@@ -1323,7 +1323,7 @@ static void SetDisplayMonData(void *pokemon, u8 mode)
         if(gStorage->displayMonSpecies >= 65530 && gStorage->displayMonSpecies <= 65533)
             StringCopyPadded(txtPtr, gSpeciesNames[SPECIES_DEOXYS], CHAR_SPACE, 5);
         else
-            StringCopyPadded(txtPtr, gSpeciesNames[gStorage->displayMonSpecies], CHAR_SPACE, 5);
+            StringCopyPadded(txtPtr, gSpeciesNames[StripFormToSpecies(gStorage->displayMonSpecies)], CHAR_SPACE, 5);
 
         // Buffer gender and level
         txtPtr = gStorage->displayMonGenderAndLevelText;

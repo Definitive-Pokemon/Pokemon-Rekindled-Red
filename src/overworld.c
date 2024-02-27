@@ -1070,6 +1070,32 @@ static u16 GetLocationMusic(struct WarpData * warp)
     return Overworld_GetMapHeaderByGroupAndId(warp->mapGroup, warp->mapNum)->music;
 }
 
+//TODO:MIGRATION group maybe exists?
+static bool8 IsWarpInsideMonitoringStation(struct WarpData * warp)
+{
+    bool8 result = FALSE;
+    u8 mapGroup = warp->mapGroup;
+    if (warp->mapGroup == 0x02) // there is no definition for any group!
+    {
+        if (warp->mapNum == ((u8)MAP_MONITORING_STATION) ||
+            warp->mapNum == ((u8)MAP_MONITORING_STATION_CENTRAL) ||
+            warp->mapNum == ((u8)MAP_MONITORING_STATION_SHORTCUT) ||
+            warp->mapNum == ((u8)MAP_MONITORING_STATION_POWER) ||
+            warp->mapNum == ((u8)MAP_MONITORING_STATION_HALLWAY2) ||
+            warp->mapNum == ((u8)MAP_MONITORING_STATION_CONFERENCE_ROOM) ||
+            warp->mapNum == ((u8)MAP_MONITORING_STATION_STORAGE) ||
+            warp->mapNum == ((u8)MAP_MONITORING_STATION_POKEMON) ||
+            warp->mapNum == ((u8)MAP_MONITORING_STATION_HALLWAY3) ||
+            warp->mapNum == ((u8)MAP_MONITORING_STATION_QUARTERS) ||
+            warp->mapNum == ((u8)MAP_MONITORING_STATION_OFFICE) ||
+            warp->mapNum == ((u8)MAP_MONITORING_STATION_END))
+        {
+            result = TRUE;
+        }
+    }
+    return result;
+}
+
 static u16 GetCurrLocationDefaultMusic(void)
 {
     u16 music;
@@ -1077,6 +1103,21 @@ static u16 GetCurrLocationDefaultMusic(void)
     if(music == MUS_SILPH && FlagGet(FLAG_HIDE_SILPH_ROCKETS))
     {
         music = MUS_GSC_PEWTER;
+    }
+    else if((bool8)IsWarpInsideMonitoringStation(&gSaveBlock1Ptr->location))
+    {
+        if (FlagGet(FLAG_HORROR_DONE))
+        {
+            return music;
+        }
+        else if(FlagGet(FLAG_GOT_BLUE_KEY))
+        {
+            music = MUS_DUMMY;
+        }
+        else if (FlagGet(FLAG_HORROR_ROCKET_MOVED))
+        {
+            music = MUS_WEATHER_GROUDON;
+        }
     }
     return music;
 }
@@ -1087,6 +1128,21 @@ static u16 GetWarpDestinationMusic(void)
     if(music == MUS_SILPH && FlagGet(FLAG_HIDE_SILPH_ROCKETS))
     {
         music = MUS_GSC_PEWTER;
+    }
+    else if((bool8)IsWarpInsideMonitoringStation(&sWarpDestination))
+    {
+        if (FlagGet(FLAG_HORROR_DONE))
+        {
+            return music;
+        }
+        else if(FlagGet(FLAG_GOT_BLUE_KEY))
+        {
+            music = MUS_DUMMY;
+        }
+        else if (FlagGet(FLAG_HORROR_ROCKET_MOVED))
+        {
+            music = MUS_WEATHER_GROUDON;
+        }
     }
     return music;
 }
@@ -1620,14 +1676,12 @@ static bool8 RunFieldCallback(void)
 
 void CB2_NewGame(void)
 {
-    u8 versionBackup = gSaveBlock1Ptr->keyFlags.version;
     FieldClearVBlankHBlankCallbacks();
     StopMapMusic();
     ResetSafariZoneFlag_();
     NewGameInitData();
     AddBagItem(ITEM_BERRY_POUCH, 1);
     AddBagItem(ITEM_TM_CASE, 1);
-    gSaveBlock1Ptr->keyFlags.version = versionBackup;
     ResetInitialPlayerAvatarState();
     PlayTimeCounter_Start();
     ScriptContext_Init();

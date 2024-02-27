@@ -18,10 +18,8 @@ bool32 IsActiveOverworldLinkBusy(void);
 // Menu items
 enum
 {
-    MENUITEM_VERSION = 0,
-    MENUITEM_DIFFICULTY,
+    MENUITEM_DIFFICULTY = 0,
     MENUITEM_ADVANCED,
-    MENUITEM_CANCEL,
     MENUITEM_COUNT
 };
 
@@ -32,7 +30,7 @@ enum
     MENUITEM_EV,
     MENUITEM_NO_PMC,
     MENUITEM_EXP_MOD,
-    MENUITEM_BACK,
+    MENUITEM_CANCEL,
     MENUITEM_COUNT2
 };
 
@@ -143,15 +141,13 @@ static const struct BgTemplate sKeySystemMenuBgTemplates[] =
 };
 
 static const u16 sKeySystemMenuPalette[] = INCBIN_U16("graphics/misc/option_menu.gbapal");
-static const u16 sKeySystemMenuItemCounts[MENUITEM_COUNT] = {2, 3, 1, 0};
+static const u16 sKeySystemMenuItemCounts[MENUITEM_COUNT] = {2, 1};
 static const u16 sKeySystemSubMenuItemCounts[MENUITEM_COUNT2] = {2, 3, 2, 2, 4, 0};
 
 static const u8 *const sKeySystemMenuItemsNames[MENUITEM_COUNT] =
 {
-    [MENUITEM_VERSION]    = gText_Version,
     [MENUITEM_DIFFICULTY] = gText_Difficulty,
     [MENUITEM_ADVANCED]   = gText_Advanced,
-    [MENUITEM_CANCEL]     = gText_OptionMenuSaveAndExit,
 };
 
 static const u8 *const sKeySystemSubMenuItemsNames[MENUITEM_COUNT2] ={
@@ -160,13 +156,7 @@ static const u8 *const sKeySystemSubMenuItemsNames[MENUITEM_COUNT2] ={
     [MENUITEM_EV]         = gText_EVCalc,
     [MENUITEM_NO_PMC]     = gText_NoPMC,
     [MENUITEM_EXP_MOD]    = gText_ExpMod,
-    [MENUITEM_BACK]       = gText_Back,
-};
-
-static const u8 *const sVersionOptions[] =
-{
-    gText_FireredVersion, 
-    gText_LeafgreenVersion
+    [MENUITEM_CANCEL]     = gText_OptionMenuSaveAndExit,
 };
 
 static const u8 *const sDifficultyOptions[] =
@@ -237,8 +227,7 @@ void CB2_KeySystemMenuFromContinueScreen(void)
     sKeySystemMenuPtr->loadPaletteState = 0;
     sKeySystemMenuPtr->state = 0;
     sKeySystemMenuPtr->cursorPos = 0;
-    sKeySystemMenuPtr->inSubMenu = 0;
-    sKeySystemMenuPtr->option[MENUITEM_VERSION] = gSaveBlock1Ptr->keyFlags.version;
+    sKeySystemMenuPtr->inSubMenu = 1;
     sKeySystemMenuPtr->option[MENUITEM_DIFFICULTY] = gSaveBlock1Ptr->keyFlags.difficulty;
     sKeySystemMenuPtr->option[MENUITEM_ADVANCED] = 0;
     sKeySystemMenuPtr->subOption[MENUITEM_NUZLOCKE] = gSaveBlock1Ptr->keyFlags.nuzlocke;
@@ -387,8 +376,8 @@ static void KeySystemMenu_PickSwitchCancel(void)
     }
     else
     {
-        x = 0xE4 - GetStringWidth(0, gText_PickSwitchBack, 0);
-        AddTextPrinterParameterized3(2, 0, x, 0, sKeySystemMenuPickSwitchCancelTextColor, 0, gText_PickSwitchBack);
+        x = 0xE4 - GetStringWidth(0, gText_PickSwitchExit, 0);
+        AddTextPrinterParameterized3(2, 0, x, 0, sKeySystemMenuPickSwitchCancelTextColor, 0, gText_PickSwitchExit);
     }
     PutWindowTilemap(2);
     CopyWindowToVram(2, COPYWIN_FULL);
@@ -555,7 +544,7 @@ static u8 KeySystemMenu_ProcessInput(void)
     {
         if(!sKeySystemMenuPtr->inSubMenu)
         {
-            if (sKeySystemMenuPtr->cursorPos == MENUITEM_VERSION)
+            if (sKeySystemMenuPtr->cursorPos == MENUITEM_DIFFICULTY)
                 sKeySystemMenuPtr->cursorPos = MENUITEM_CANCEL;
             else
                 sKeySystemMenuPtr->cursorPos = sKeySystemMenuPtr->cursorPos - 1;
@@ -563,7 +552,7 @@ static u8 KeySystemMenu_ProcessInput(void)
         else
         {
             if (sKeySystemMenuPtr->cursorPos == MENUITEM_NUZLOCKE)
-                sKeySystemMenuPtr->cursorPos = MENUITEM_BACK;
+                sKeySystemMenuPtr->cursorPos = MENUITEM_CANCEL;
             else
                 sKeySystemMenuPtr->cursorPos = sKeySystemMenuPtr->cursorPos - 1;
         }
@@ -575,13 +564,13 @@ static u8 KeySystemMenu_ProcessInput(void)
         if(!sKeySystemMenuPtr->inSubMenu)
         {
             if (sKeySystemMenuPtr->cursorPos == MENUITEM_CANCEL)
-                sKeySystemMenuPtr->cursorPos = MENUITEM_VERSION;
+                sKeySystemMenuPtr->cursorPos = MENUITEM_DIFFICULTY;
             else
                 sKeySystemMenuPtr->cursorPos = sKeySystemMenuPtr->cursorPos + 1;
         }
         else
         {
-            if (sKeySystemMenuPtr->cursorPos == MENUITEM_BACK)
+            if (sKeySystemMenuPtr->cursorPos == MENUITEM_CANCEL)
                 sKeySystemMenuPtr->cursorPos = MENUITEM_NUZLOCKE;
             else
                 sKeySystemMenuPtr->cursorPos = sKeySystemMenuPtr->cursorPos + 1;
@@ -591,22 +580,11 @@ static u8 KeySystemMenu_ProcessInput(void)
     }
     else if (JOY_NEW(A_BUTTON))
     {
-        if(!sKeySystemMenuPtr->inSubMenu)
-        {
-            if(sKeySystemMenuPtr->cursorPos == MENUITEM_ADVANCED)
-                return 6;
-            if(sKeySystemMenuPtr->cursorPos == MENUITEM_CANCEL)
-                return 1;
-        }
-        else
-            return 6;
+        return 1;
     }
     else if (JOY_NEW(B_BUTTON))
     {
-        if(sKeySystemMenuPtr->inSubMenu)
-            return 6;
-        else
-            return 1;
+        return 1;
     }
     else
     {
@@ -630,9 +608,6 @@ static void BufferKeySystemMenuString(u8 selection)
     {
         switch (selection)
         {
-            case MENUITEM_VERSION:
-                AddTextPrinterParameterized3(1, 2, x, y, dst, -1, sVersionOptions[sKeySystemMenuPtr->option[selection]]);
-                break;
             case MENUITEM_DIFFICULTY:
                 AddTextPrinterParameterized3(1, 2, x, y, dst, -1, sDifficultyOptions[sKeySystemMenuPtr->option[selection]]);
                 break;
@@ -675,7 +650,6 @@ static void CloseAndSaveKeySystemMenu(u8 taskId)
     gFieldCallback = FieldCB_DefaultWarpExit;
     SetMainCallback2(gMain.savedCallback);
     FreeAllWindowBuffers();
-    gSaveBlock1Ptr->keyFlags.version = sKeySystemMenuPtr->option[MENUITEM_VERSION];
     gSaveBlock1Ptr->keyFlags.difficulty = sKeySystemMenuPtr->option[MENUITEM_DIFFICULTY];
     gSaveBlock1Ptr->keyFlags.nuzlocke = sKeySystemMenuPtr->subOption[MENUITEM_NUZLOCKE];
     if(gSaveBlock1Ptr->keyFlags.ivCalcMode != sKeySystemMenuPtr->subOption[MENUITEM_IV] || gSaveBlock1Ptr->keyFlags.evCalcMode != sKeySystemMenuPtr->subOption[MENUITEM_EV])
@@ -694,10 +668,7 @@ static void CloseAndSaveKeySystemMenu(u8 taskId)
 static void PrintKeySystemMenuHeader(void)
 {
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
-    if(!sKeySystemMenuPtr->inSubMenu)
-        AddTextPrinterParameterized(WIN_TEXT_KEY, 2, gText_KeySystemSettings, 8, 1, TEXT_SKIP_DRAW, NULL);
-    else
-        AddTextPrinterParameterized(WIN_TEXT_KEY, 2, gText_Advanced, 8, 1, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(WIN_TEXT_KEY, 2, gText_KeySystemSettings, 8, 1, TEXT_SKIP_DRAW, NULL);
     PutWindowTilemap(0);
     CopyWindowToVram(0, COPYWIN_FULL);
 }

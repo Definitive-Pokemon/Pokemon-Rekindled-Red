@@ -24,6 +24,11 @@ CinnabarIsland_Gym_OnTransition::
 CinnabarIsland_Gym_EventScript_HideBlaine::
 	setflag FLAG_TEMP_1
 	return
+	
+CinnabarIsland_Gym_EventScript_SetMapVar1::
+	setvar VAR_MAP_SCENE_CINNABAR_ISLAND, 1
+	clearflag FLAG_HIDE_CINNABAR_BILL
+	end
 
 CinnabarIsland_Gym_OnLoad::
 	goto_if_set FLAG_DEFEATED_BLAINE, CinnabarIsland_Gym_OnLoadOpenAllDoors
@@ -67,6 +72,41 @@ CinnabarIsland_Gym_OnLoadOpenDoor5::
 CinnabarIsland_Gym_OnLoadOpenDoor6::
 	call CinnabarIsland_Gym_EventScript_OpenDoor6
 	return
+	
+CinnabarIsland_Gym_EventScript_Celio::
+	trainerbattle_single TRAINER_LEADER_BLAINE, CinnabarIsland_Gym_Text_CelioIntro, CinnabarIsland_Gym_Text_CelioDefeat, CinnabarIsland_Gym_EventScript_DefeatedCelio, NO_MUSIC
+	settrainerflag TRAINER_LEADER_BLAINE_CHALLENGE
+	goto_if_unset FLAG_GOT_TM38_FROM_BLAINE, CinnabarIsland_Gym_EventScript_GiveTM38
+	msgbox CinnabarIsland_Gym_Text_BlainePostBattle
+	release
+	end
+	
+CinnabarIsland_Gym_EventScript_DefeatedCelio::
+	famechecker FAMECHECKER_BLAINE, 1
+	setflag FLAG_DEFEATED_BLAINE
+	setflag FLAG_BADGE07_GET
+	setrespawn SPAWN_CINNABAR_ISLAND
+	setvar VAR_MAP_SCENE_CINNABAR_ISLAND, 1
+	clearflag FLAG_HIDE_CINNABAR_BILL
+	set_gym_trainers 7
+	goto CinnabarIsland_Gym_EventScript_CelioGiveTM38
+	end
+
+CinnabarIsland_Gym_EventScript_CelioGiveTM38::
+	msgbox CinnabarIsland_Gym_Text_CelioExplainVolcanoBadge
+	checkitemspace ITEM_TM38, 1
+	compare VAR_RESULT, FALSE
+	goto_if_eq CinnabarIsland_Gym_EventScript_CelioNoRoomForTM38
+	giveitem_msg CinnabarIsland_Gym_Text_ReceivedTM38FromCelio, ITEM_TM38
+	setflag FLAG_GOT_TM38_FROM_BLAINE
+	msgbox CinnabarIsland_Gym_Text_CelioFireBlastIsUltimateFireMove
+	release
+	end
+
+CinnabarIsland_Gym_EventScript_CelioNoRoomForTM38::
+	msgbox CinnabarIsland_Gym_Text_CelioMakeSpaceForThis
+	release
+	end
 
 CinnabarIsland_Gym_EventScript_Blaine::
 	famechecker FAMECHECKER_BLAINE, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
@@ -243,8 +283,10 @@ CinnabarIsland_Gym_EventScript_Quz1Right::
 CinnabarIsland_Gym_EventScript_Quiz1::
 	msgbox CinnabarIsland_Gym_Text_PokemonQuizRules
 	msgbox CinnabarIsland_Gym_Text_QuizQuestion1, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, CinnabarIsland_Gym_EventScript_Quiz1Correct
-	goto_if_eq VAR_RESULT, NO, CinnabarIsland_Gym_EventScript_Quiz1Incorrect
+	compare VAR_RESULT, YES
+	goto_if_eq CinnabarIsland_Gym_EventScript_Quiz1Correct
+	compare VAR_RESULT, NO
+	goto_if_eq CinnabarIsland_Gym_EventScript_Quiz1Incorrect
 	end
 
 CinnabarIsland_Gym_EventScript_CorrectAnswer::

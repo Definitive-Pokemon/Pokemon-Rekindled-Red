@@ -13,10 +13,10 @@ VermilionCity_Text_SSAnneHasDepartedForYear::
     .string "this time next year.$"
 
 VermilionCity_Text_BuildingOnThisLand::
-    .string "I'm putting up a building on this\n"
+    .string "I'm watching POKéMON on this\n"
     .string "plot of land. I own it all.\p"
-    .string "My POKéMON is tamping the land\n"
-    .string "to lay the foundation.$"
+    .string "My POKéMON is playing with\n"
+    .string "the other POKéMON.$"
 
 VermilionCity_Text_Machop::
     .string "MACHOP: Guoh! Gogogoh!$"
@@ -153,11 +153,37 @@ VermilionCity_Text_Route2AideHasPackageForYou::
     .string "Oh, hello, {PLAYER}!\n"
     .string "How are you doing?\p"
     .string "It's me, one of PROF. OAK's AIDES.\p"
-    .string "Did you meet the other AIDE?\p"
-    .string "He had a package from PROF. OAK\n"
-    .string "for you, {PLAYER}.\p"
-    .string "He said he'd look for you around\n"
-    .string "ROUTE 2, {PLAYER}.\p"
-    .string "If you're in the ROUTE 2 area,\n"
-    .string "please look for him.$"
+    .string "Did you visit the MUSEUM in\n"
+	.string "PEWTER CITY?\p"
+    .string "The UNDERGROUND CHALLENGE exhibit\n"
+	.string "was opened a few weeks ago.\p"
+    .string "It's made to give visitors a taste\n"
+    .string "of exploring a cave system.\p"
+    .string "It is said that the prize at the\n"
+    .string "end is very useful for exploring\p"
+    .string "pitch-black caves.$"
 
+VermilionCity_Text_JustCaughtASquirtle::
+    .string "I just caught a SQUIRTLE that was\n"
+    .string "always getting into misschief.\p"
+    .string "I think it needs a good TRAINER\n"
+    .string "to set it straight.$"
+
+VermilionCity_Text_WantThisSquirtle::
+    .string "You have the THUNDERBADGE?\p"
+    .string "You must be a good TRAINER!\p"
+    .string "I just caught a SQUIRTLE that was\n"
+    .string "always getting into misschief.\p"
+    .string "Would you take good care of it?$"
+
+VermilionCity_Text_Oh::
+    .string "Oh… What am I to do now?$"
+
+VermilionCity_Text_ObtainedSquirtleFromPolice::
+    .string "{PLAYER} obtained a SQUIRTLE!$"
+
+VermilionCity_Text_TreatHimRight::
+    .string "OK! Please treat SQUIRTLE right!$"
+
+VermilionCity_Text_HowIsSquirtle::
+    .string "Hello! How is SQUIRTLE doing?$"

@@ -60,7 +60,7 @@ SouthernIsland_Interior_EventScript_Lati::
 	waitmovement 0
 	delay 50
 	waitse
-	playmoncry VAR_TEMP_4, 0
+	playmoncry VAR_TEMP_4, CRY_MODE_NORMAL
 	delay 30
 	waitmoncry
 	addobject LOCALID_LATI
@@ -153,14 +153,14 @@ SouthernIsland_Interior_EventScript_SetLatiosBattleVars::
 	setvar VAR_0x8004, SPECIES_LATIOS
 	setvar VAR_0x8005, 50 @ level
 	setvar VAR_0x8006, ITEM_SOUL_DEW
-	special CreateEnemyEventMon
+	special CreateEventLegalEnemyMon
 	return
 
 SouthernIsland_Interior_EventScript_SetLatiasBattleVars::
 	setvar VAR_0x8004, SPECIES_LATIAS
 	setvar VAR_0x8005, 50 @ level
 	setvar VAR_0x8006, ITEM_SOUL_DEW
-	special CreateEnemyEventMon
+	special CreateEventLegalEnemyMon
 	return
 
 SouthernIsland_Interior_Movement_CameraPanUp:

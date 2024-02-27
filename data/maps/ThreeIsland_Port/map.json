@@ -2,7 +2,7 @@
   "id": "MAP_THREE_ISLAND_PORT",
   "name": "ThreeIsland_Port",
   "layout": "LAYOUT_THREE_ISLAND_PORT",
-  "music": "MUS_ROUTE104",
+  "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_THREE_ISLE_PORT",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -87,6 +87,13 @@
       "y": 13,
       "elevation": 3,
       "dest_map": "MAP_THREE_ISLAND_HARBOR",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 51,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_STONE_TOMB",
       "dest_warp_id": "0"
     }
   ],

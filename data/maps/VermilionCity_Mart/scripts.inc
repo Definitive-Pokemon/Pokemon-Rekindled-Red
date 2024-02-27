@@ -22,7 +22,7 @@ VermilionCity_Mart_EventScript_Clerk::
 
 	.align 2
 VermilionCity_Mart_Items::
-	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_PARALYZE_HEAL

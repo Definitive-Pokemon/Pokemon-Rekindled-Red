@@ -13,6 +13,8 @@ BattleTower_BattleRoom_EventScript_1608EB::
 
 BattleTower_BattleRoom_EventScript_1608FA::
 	special ChooseNextBattleTowerTrainer
+    compare VAR_RESULT, TRUE
+	goto_if_eq BattleTower_BattleRoom_EventScript_BeginBrainEntry
 	addobject 1
 	applymovement 1, BattleTower_BattleRoom_Movement_160AC0
 	waitmovement 0

@@ -114,3 +114,174 @@ Braille_Text_WorldWaits::
 
 Braille_Text_ForYou::
 	.braille "FOR YOU.$"
+		
+Braille_Text_Submit::
+	.braille "SUBMIT.$"
+	
+Braille_Text_Welcome::
+	.braille "WELCOME.$"
+	
+Braille_Text_Journey::
+	.braille "THIS JOURNEY$"
+	
+Braille_Text_Gone::
+	.braille "HAS GONE$"
+	
+Braille_Text_For::
+	.braille "ON FOR$"
+	
+Braille_Text_Enough::
+	.braille "LONG ENOUGH.$"
+	
+Braille_Text_Give::
+	.braille "TO GIVE$"
+	
+Braille_Text_Life::
+	.braille "LIFE TO$"
+	
+Braille_Text_Idea::
+	.braille "AN IDEA IS$"
+	
+Braille_Text_Achieve::
+	.braille "TO ACHIEVE$"
+	
+Braille_Text_Highest::
+	.braille "THE HIGHEST$"
+	
+Braille_Text_Purpose::
+	.braille "PURPOSE.$"
+	
+Braille_Text_Memories::
+	.braille "MEMORIES OF$"
+	
+Braille_Text_Past2::
+	.braille "PAST$"
+	
+Braille_Text_Rekindled::
+	.braille "REKINDLED$"
+	
+Braille_Text_Buried::
+	.braille "BURIED$"
+	
+Braille_Text_Concepts::
+	.braille "CONCEPTS$"
+	
+Braille_Text_Reused::
+	.braille "REUSED.$"
+	
+Braille_Text_Community::
+	.braille "BY COMMUNITY$"
+	
+Braille_Text_Reunited::
+	.braille "REUNITED.$"
+	
+Braille_Text_Given::
+	.braille "AND GIVEN$"
+	
+Braille_Text_Shape::
+	.braille "SHAPE$"
+	
+Braille_Text_Passion::
+	.braille "BY PASSION.$"
+	
+Braille_Text_Continue::
+	.braille "CONTINUE$"
+	
+Braille_Text_Legacy::
+	.braille "THE LEGACY.$"
+	
+Braille_Text_Create::
+	.braille "CREATE$"
+	
+Braille_Text_Worlds::
+	.braille "NEW WORLDS$"
+	
+Braille_Text_Show:
+	.braille "AND SHOW$"
+	
+Braille_Text_New::
+	.braille "A NEW$"
+	
+Braille_Text_Generation::
+	.braille "GENERATION$"
+	
+Braille_Text_Meaning::
+	.braille "THE MEANING$"
+	
+Braille_Text_Adventure::
+	.braille "OF ADVENTURE$"
+	
+Braille_Text_Discovery::
+	.braille "DISCOVERY$"
+	
+Braille_Text_Joy::
+	.braille "AND JOY.$"	
+	
+Braille_Text_Three::
+	.braille "IN THREE$"
+	
+Braille_Text_Caverns::
+	.braille "CAVERNS$"
+	
+Braille_Text_Sealed::
+	.braille "WE SEALED$"
+	
+Braille_Text_Away::
+	.braille "AWAY THE$"
+	
+Braille_Text_Pokemon::
+	.braille "POKEMON.$"
+	
+Braille_Text_ForWe::
+	.braille "FOR WE$"
+	
+Braille_Text_Feared::
+	.braille "FEARED THEM.$"
+	
+Braille_Text_Two::
+	.braille "OUR TWO$"
+	
+Braille_Text_Protectors::
+	.braille "PROTECTORS$"
+	
+Braille_Text_Watch::
+	.braille "WATCH OVER$"
+	
+Braille_Text_Them::
+	.braille "THEM$"
+	
+Braille_Text_Peace::
+	.braille "IN PEACE.$"
+	
+Braille_Text_You::
+	.braille "YOU WHO$"
+	
+Braille_Text_Disrupted::
+	.braille "DISRUPTED$"
+	
+Braille_Text_ThePeace::
+	.braille "THE PEACE$"
+	
+Braille_Text_Bested::
+	.braille "AND BESTED$"
+	
+Braille_Text_OneOf::
+	.braille "ONE OF THE$"
+	
+Braille_Text_Guardians::
+	.braille "GUARDIANS.$"
+	
+Braille_Text_Door::
+	.braille "A DOOR$"
+	
+Braille_Text_Opens::
+	.braille "OPENS$"
+	
+Braille_Text_Eternal::
+	.braille "AN ETERNAL$"
+	
+Braille_Text_Pokemon2::
+	.braille "POKEMON$"
+	
+Braille_Text_Waits::
+	.braille "WAITS.$"

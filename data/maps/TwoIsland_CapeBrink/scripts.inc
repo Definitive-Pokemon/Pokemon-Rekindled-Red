@@ -1,5 +1,115 @@
+.set LOCALID_ANABEL, 8
+
 TwoIsland_CapeBrink_MapScripts::
 	.byte 0
+
+CapeBrink_EventScript_Anabel::
+	lock
+	faceplayer
+	msgbox CapeBrink_Text_Anabel
+	closemessage
+	applymovement LOCALID_ANABEL, CapeBrink_Movement_AnaLookUp
+	waitmovement 0
+	msgbox CapeBrink_Text_Anabel2
+	closemessage
+	applymovement LOCALID_ANABEL, CapeBrink_Movement_AnabelConcentrate
+	waitmovement 0
+	msgbox CapeBrink_Text_Anabel3
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, CapeBrink_Movement_PlayerTell
+	waitmovement 0
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox ThreeIsland_BerryForest_Text_PlayerRelay
+	closemessage
+	applymovement LOCALID_ANABEL, CapeBrink_Movement_AnabelTalkBack
+	waitmovement 0
+	textcolor NPC_TEXT_COLOR_FEMALE
+	msgbox CapeBrink_Text_Anabel4
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_ANABEL
+	setflag FLAG_HIDE_ANABEL_SECOND
+	fadescreen FADE_FROM_BLACK
+	clearflag FLAG_HIDE_ANABEL_THIRD
+	release
+	end
+	
+CapeBrink_Text_Anabel::
+	.string "Ah, you have arrived…\n"
+	.string "Unfortunately, I was too late…$"
+	
+CapeBrink_Text_Anabel2::
+	.string "I fail to understand…\p"
+	.string "Why was LATIAS so inclined to let\n"
+	.string "me touch its forehead, only to\p"
+	.string "flee every subsequent encounter?\p"
+	.string "Normally, I understand everything\n"
+	.string "that happens to and around me.\p"
+	.string "But I have never understood\n"
+	.string "LATIAS…\p"
+	.string "Oh well…\p"
+	.string "I will just reveal LATIAS' current\n"
+	.string "hiding place to you…$"
+	
+CapeBrink_Text_Anabel3::
+	.string "Exotic POKéMON…\n"
+	.string "Somewhere on the mainland…\p"
+	.string "I'm sorry…\n"
+	.string "It's hard to be any more specific.\p"
+	.string "Do you know of any fitting\n"
+	.string "locations?$"
+	
+CapeBrink_Text_Anabel4::
+	.string "… … Let us hope you are correct.\n"
+	.string "I am certain we will meet again.$"
+	
+CapeBrink_Movement_AnaLookUp::
+	walk_in_place_up
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_in_place_down
+	step_end
+	
+CapeBrink_Movement_AnabelConcentrate::
+	walk_in_place_up
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_in_place_down
+	step_end
+	
+CapeBrink_Movement_PlayerTell::
+	walk_in_place_up
+	step_end
+
+CapeBrink_Movement_AnabelTalkBack::
+	walk_in_place_down
+	step_end
 
 CapeBrink_EventScript_Helena::
 	trainerbattle_single TRAINER_PKMN_RANGER_HELENA, CapeBrink_Text_HelenaIntro, CapeBrink_Text_HelenaDefeat
@@ -197,3 +307,4 @@ CapeBrink_Text_Tuber:
 	.string "strong TRAINERS from all over.\p"
 	.string "I like watching their battles\n"
 	.string "from up here.$"
+	
