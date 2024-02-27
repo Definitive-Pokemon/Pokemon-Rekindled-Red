@@ -532,7 +532,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
 };
 
  // Assigns all species to the National Dex Index (Summary No. for National Dex)
-static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
+static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES_WITH_FORMS - 1] =
 {
     SPECIES_TO_NATIONAL(BULBASAUR),
     SPECIES_TO_NATIONAL(IVYSAUR),
