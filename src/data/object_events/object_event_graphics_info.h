@@ -3623,7 +3623,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Totodile = {
 	.oam = &gObjectEventBaseOam_16x16,
 	.subspriteTables = gObjectEventSpriteOamTables_16x16,
 	.anims = sAnimTable_Standard,
-	.images = sPicTable_Tododile,
+	.images = sPicTable_Totodile,
 	.affineAnims = gDummySpriteAffineAnimTable,
 };
 
