@@ -459,6 +459,7 @@
 #define FACILITY_CLASS_CHAMPION_RIVAL_2       149
 #define FACILITY_CLASS_EM_BRENDAN             150
 #define FACILITY_CLASS_EM_MAY                 151
+#define FACILITY_CLASS_MYSTERY_GIRL           152
 
 #define F_TRAINER_FEMALE (1 << 7)
 
