@@ -2701,7 +2701,6 @@ static void PrintInfoPage(void)
         u8 hatchMsgIndex;
 
         eggCycles = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_FRIENDSHIP);
-
         if (eggCycles <= 5)
             hatchMsgIndex = 3;
         else if (eggCycles <= 10)
