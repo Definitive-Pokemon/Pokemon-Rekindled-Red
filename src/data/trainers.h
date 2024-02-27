@@ -1980,7 +1980,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_BikerAlex),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_BikerAlex),
     },
     [TRAINER_BIKER_LAO] = {
         .trainerClass = TRAINER_CLASS_BIKER,
@@ -2070,7 +2070,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = ITEM_CUSTOM_MOVES(sParty_BikerLukas),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_BikerLukas),
     },
     [TRAINER_BIKER_ISAAC] = {
         .trainerClass = TRAINER_CLASS_BIKER,
