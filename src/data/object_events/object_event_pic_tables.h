@@ -1479,7 +1479,7 @@ static const struct SpriteFrameImage sPicTable_Sign[] = {
     overworld_frame(gObjectEventPic_Sign, 2, 2, 0),
 };
 
-static const struct SpriteFrameImage sPicTable_BlueDoor[] = {
+const struct SpriteFrameImage sPicTable_BlueDoor[] = {
     overworld_frame(gObjectEventPic_BlueDoor, 2, 4, 0),
 };
 
