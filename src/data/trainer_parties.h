@@ -1336,7 +1336,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BoarderM[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BoarderM[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_BoarderF[] = {
     {
         .iv = 0,
         .lvl = 5,
@@ -1448,7 +1448,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MagmaLeader[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamMagmaM[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_MagmaGruntM[] = {
     {
         .iv = 0,
         .lvl = 5,
@@ -1456,7 +1456,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamMagmaM[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_TeamMagmaF[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_MagmaGruntF[] = {
     {
         .iv = 0,
         .lvl = 5,
