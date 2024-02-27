@@ -263,7 +263,7 @@ const struct Trainer gTrainers[] = {
         .party = ITEM_CUSTOM_MOVES(sParty_LeaderGiovanniRematch),
     },
     [TRAINER_TEAM_ROCKET_JUNGLE] = {
-        .trainerClass = CLASS_TEAM_ROCKET,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
         .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
         .trainerName = _("GRUNT"),
@@ -273,7 +273,7 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_TeamRocketJungle),
     },
     [TRAINER_BLACK_BELT_KOICHI2] = {
-        .trainerClass = CLASS_BLACK_BELT_2,
+        .trainerClass = TRAINER_CLASS_BLACK_BELT,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_BLACK_BELT,
         .trainerName = _("KIYO"),
@@ -283,7 +283,7 @@ const struct Trainer gTrainers[] = {
         .party = ITEM_CUSTOM_MOVES(sParty_BlackBeltKoichi2),
     },
     [TRAINER_MYSTERY_GIRL_ANABEL] = {
-        .trainerClass = CLASS_MYSTERY_GIRL,
+        .trainerClass = TRAINER_CLASS_MYSTERY_GIRL,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_AQUA_LEADER_ARCHIE,
         .trainerName = _("ANABEL"),
