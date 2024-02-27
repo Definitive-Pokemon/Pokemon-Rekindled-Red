@@ -505,7 +505,7 @@ Cerulean_City_EventScript_BoughtTotodile::
 
 Cerulean_City_EventScript_PayForTotodile::
 	removemoney TOTODILE_PRICE, 0
-	updatemoneybox 0, 0, 0
+	updatemoneybox 0
 	playfanfare MUS_LEVEL_UP
 	message Cerulean_City_Text_PaidOutrageouslyForTotodile
 	waitmessage
