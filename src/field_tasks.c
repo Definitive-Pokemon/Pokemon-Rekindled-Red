@@ -280,7 +280,7 @@ static bool32 CoordInIcePuzzleRegion(s16 x, s16 y)
         return FALSE;
 }
 
-static void MarkIcePuzzleCoordVisited(s16 x, s16 y)
+static void MarkRegicePuzzleCoordVisited(s16 x, s16 y)
 {
     *GetVarPointer(sRegicePuzzleIceColumnVars[x]) |= (1 << (y - 4));
 }
@@ -363,7 +363,7 @@ static void RegicePuzzleIcePerStepCallback(u8 taskId)
                 PlaySE(SE_ICE_CRACK);
                 MapGridSetMetatileIdAt(x, y, METATILE_SeafoamIslands_CrackedIce);
                 CurrentMapDrawMetatileAt(x, y);
-                MarkIcePuzzleCoordVisited(x - 7, y - 7);
+                MarkRegicePuzzleCoordVisited(x - 7, y - 7);
                 data[1] = 1;
             }
             break;
