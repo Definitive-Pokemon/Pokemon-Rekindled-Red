@@ -63,6 +63,10 @@ CapeBrink_Text_Anabel4::
 	.string "… … Let us hope you are correct.\n"
 	.string "I am certain we will meet again.$"
 	
+CapeBrink_Movement_AnabelTalkBack::
+	walk_in_place_down
+	step_end
+
 CapeBrink_Movement_AnaLookUp::
 	walk_in_place_up
 	delay_16
@@ -105,10 +109,6 @@ CapeBrink_Movement_AnabelConcentrate::
 	
 CapeBrink_Movement_PlayerTell::
 	walk_in_place_up
-	step_end
-
-CapeBrink_Movement_AnabelTalkBack::
-	walk_in_place_down
 	step_end
 
 CapeBrink_EventScript_Helena::
