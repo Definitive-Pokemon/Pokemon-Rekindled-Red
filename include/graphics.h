@@ -3327,7 +3327,7 @@ extern const u32 gItemIcon_Gem[];
 extern const u32 gItemIconPalette_Ruby[];
 extern const u32 gItemIconPalette_Sapphire[];
 extern const u32 gItemIcon_Emerald[];
-extern const u32 gItemIconPalette_Emeral[];
+extern const u32 gItemIconPalette_Emerald[];
 extern const u32 gItemIcon_OldSeaMap[];
 extern const u32 gItemIconPalette_OldSeaMap[];
 extern const u32 gItemIcon_LinkBracelet[];
