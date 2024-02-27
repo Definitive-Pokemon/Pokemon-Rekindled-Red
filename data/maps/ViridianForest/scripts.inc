@@ -129,7 +129,7 @@ ViridianForest_EventScript_ReceiveTorchicParty::
 	message ViridianForest_Text_ObtainedTorchic
 	waitmessage
 	waitfanfare
-	bufferspeciesname 0, SPECIES_TORCHIC
+	bufferspeciesname STR_VAR_1, SPECIES_TORCHIC
 	callnative CheckNuzlockeMode
 	compare VAR_RESULT, TRUE
 	goto_if_eq ViridianForest_EventScript_NicknameTorchicParty
@@ -149,7 +149,7 @@ ViridianForest_EventScript_ReceiveTorchicPC::
 	message ViridianForest_Text_ObtainedTorchic
 	waitmessage
 	waitfanfare
-	bufferspeciesname 0, SPECIES_TORCHIC
+	bufferspeciesname STR_VAR_1, SPECIES_TORCHIC
 	callnative CheckNuzlockeMode
 	compare VAR_RESULT, TRUE
 	goto_if_eq ViridianForest_EventScript_NicknameTorchicPC

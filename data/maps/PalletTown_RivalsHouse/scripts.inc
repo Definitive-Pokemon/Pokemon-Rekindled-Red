@@ -325,19 +325,19 @@ PalletTown_RivalsHouse_EventScript_GiveFinalStarter_2:
 	goto PalletTown_RivalsHouse_EventScript_GiveFinalStarter_1
 
 PalletTown_RivalsHouse_EventScript_GiveFinalStarter_6:
-	bufferspeciesname 0, SPECIES_SMOOCHUM
+	bufferspeciesname STR_VAR_1, SPECIES_SMOOCHUM
 	getstring 1, PalletTown_RivalsHouse_EventScript_GiveFinalStarter_Text_0
 	setvar VAR_TEMP_2, SPECIES_SMOOCHUM
 	goto PalletTown_RivalsHouse_EventScript_GiveFinalStarter_4
 
 PalletTown_RivalsHouse_EventScript_GiveFinalStarter_7:
-	bufferspeciesname 0, SPECIES_ELEKID
+	bufferspeciesname STR_VAR_1, SPECIES_ELEKID
 	getstring 1, PalletTown_RivalsHouse_EventScript_GiveFinalStarter_Text_1
 	setvar VAR_TEMP_2, SPECIES_ELEKID
 	goto PalletTown_RivalsHouse_EventScript_GiveFinalStarter_4
 
 PalletTown_RivalsHouse_EventScript_GiveFinalStarter_8:
-	bufferspeciesname 0, SPECIES_MAGBY
+	bufferspeciesname STR_VAR_1, SPECIES_MAGBY
 	getstring 1, PalletTown_RivalsHouse_EventScript_GiveFinalStarter_Text_2
 	setvar VAR_TEMP_2, SPECIES_MAGBY
 	goto PalletTown_RivalsHouse_EventScript_GiveFinalStarter_4

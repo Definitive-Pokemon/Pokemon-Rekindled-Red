@@ -46,7 +46,7 @@ Route5_EventScript_ReceiveChikoritaParty::
 	message Route5_Text_ObtainedChikorita
 	waitmessage
 	waitfanfare
-	getspeciesname 0, SPECIES_CHIKORITA
+	bufferspeciesname STR_VAR_1, SPECIES_CHIKORITA
 	callnative CheckNuzlockeMode
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route5_EventScript_NicknameChikoritaParty
@@ -65,7 +65,7 @@ Route5_EventScript_ReceiveChikoritaPC::
 	message Route5_Text_ObtainedChikorita
 	waitmessage
 	waitfanfare
-	getspeciesname 0, SPECIES_CHIKORITA
+	bufferspeciesname STR_VAR_1, SPECIES_CHIKORITA
 	callnative CheckNuzlockeMode
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route5_EventScript_NicknameChikoritaPC

@@ -88,7 +88,7 @@ RockTunnel_1F_EventScript_ReceiveCharmanderParty::
 	message RockTunnel_1F_Text_ObtainedCharmanderFromGuy
 	waitmessage
 	waitfanfare
-	getspeciesname 0, SPECIES_CHARMANDER
+	bufferspeciesname STR_VAR_1, SPECIES_CHARMANDER
 	callnative CheckNuzlockeMode
 	compare VAR_RESULT, TRUE
 	goto_if_eq RockTunnel_1F_EventScript_NicknameCharmanderParty
@@ -107,7 +107,7 @@ RockTunnel_1F_EventScript_ReceiveCharmanderPC::
 	message RockTunnel_1F_Text_ObtainedCharmanderFromGuy
 	waitmessage
 	waitfanfare
-	getspeciesname 0, SPECIES_CHARMANDER
+	bufferspeciesname STR_VAR_1, SPECIES_CHARMANDER
 	callnative CheckNuzlockeMode
 	compare VAR_RESULT, TRUE
 	goto_if_eq RockTunnel_1F_EventScript_NicknameCharmanderPC

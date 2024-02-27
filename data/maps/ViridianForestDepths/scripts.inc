@@ -75,7 +75,7 @@ ViridianForestDepths_EventScript_ReceiveTreeckoParty::
 	message ViridianForestDepths_Text_ObtainedTreecko
 	waitmessage
 	waitfanfare
-	bufferspeciesname 0, SPECIES_TREECKO
+	bufferspeciesname STR_VAR_1, SPECIES_TREECKO
 	callnative CheckNuzlockeMode
 	compare VAR_RESULT, TRUE
 	goto_if_eq ViridianForestDepths_EventScript_NicknameTreeckoParty
@@ -95,7 +95,7 @@ ViridianForestDepths_EventScript_ReceiveTreeckoPC::
 	message ViridianForestDepths_Text_ObtainedTreecko
 	waitmessage
 	waitfanfare
-	bufferspeciesname 0, SPECIES_TREECKO
+	bufferspeciesname STR_VAR_1, SPECIES_TREECKO
 	callnative CheckNuzlockeMode
 	compare VAR_RESULT, TRUE
 	goto_if_eq ViridianForestDepths_EventScript_NicknameTreeckoPC
