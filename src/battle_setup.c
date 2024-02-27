@@ -482,7 +482,6 @@ void StartLegendaryBattle(void)
 	case SPECIES_FOSSILIZED_KABUTOPS:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RS_VS_WILD);
         break;
-	default:
     default:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RS_VS_TRAINER);
         break;
@@ -497,9 +496,9 @@ void StartGroudonKyogreBattle(void)
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_KYOGRE_GROUDON;
     if (gGameVersion == VERSION_FIRE_RED)
-        CreateBattleStartTask(B_TRANSITION_BLACK_DOODLES, MUS_VS_KYOGRE_GROUDON);
+        CreateBattleStartTask(B_TRANSITION_ANGLED_WIPES, MUS_VS_KYOGRE_GROUDON);
     else // pointless, exactly the same
-        CreateBattleStartTask(B_TRANSITION_BLACK_DOODLES, MUS_VS_KYOGRE_GROUDON);
+        CreateBattleStartTask(B_TRANSITION_ANGLED_WIPES, MUS_VS_KYOGRE_GROUDON);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
 }

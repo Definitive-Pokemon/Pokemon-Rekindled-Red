@@ -220,8 +220,6 @@
 #define MAPSEC_ALTERING_CAVE_E              0xD2
 #define MAPSEC_NAVEL_ROCK_E                 0xD3
 #define MAPSEC_TRAINER_HILL                 0xD4
-#define MAPSEC_NONE                         0xD5
-#define MAPSEC_COUNT                        0xD6
 #define MAPSEC_STONE_TOMB                   0xD5
 #define MAPSEC_ICY_TOMB                     0xD6
 #define MAPSEC_METAL_TOMB                   0xD7
