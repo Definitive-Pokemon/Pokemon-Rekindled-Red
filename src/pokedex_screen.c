@@ -3984,7 +3984,7 @@ static u8 DexScreen_PageNumberToRenderablePages(u16 page)
 void DexScreen_InputHandler_StartToCry(void)
 {
     if (JOY_NEW(START_BUTTON))
-        PlayCry2(sPokedexScreenData->dexSpecies, 0, 125, 10);
+        PlayCry_NormalNoDucking(sPokedexScreenData->dexSpecies, 0, 125, 10);
 }
 
 u8 DexScreen_RegisterMonToPokedex(u16 species)
