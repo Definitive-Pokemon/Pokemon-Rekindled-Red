@@ -7,6 +7,7 @@
 #include "new_menu_helpers.h"
 #include "link.h"
 #include "menu.h"
+#include "random.h"
 #include "save.h"
 #include "new_game.h"
 #include "title_screen.h"
