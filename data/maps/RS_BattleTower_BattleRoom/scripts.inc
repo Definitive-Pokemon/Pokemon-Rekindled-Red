@@ -125,6 +125,11 @@ BattleTower_BattleRoom_EventScript_160A94::
 	waitse
 	msgbox BattleTower_BattleRoom_Text_1C6D05, MSGBOX_DEFAULT
 
+
+BattleTower_BattleRoom_EventScript_BeginBrainEntry::
+	addobject 1 @ add brain sprite
+	end
+	
 BattleTower_BattleRoom_EventScript_160AB1::
 	fadescreen FADE_TO_BLACK
 	special BattleTower_SoftReset

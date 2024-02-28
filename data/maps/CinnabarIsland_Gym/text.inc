@@ -1,3 +1,54 @@
+CinnabarIsland_Gym_Text_CelioIntro::
+    .string "What have we here?\p"
+    .string "I'm surprised you managed to\n"
+    .string "get inside of this GYM.\p"
+    .string "I'm sure I had it locked when\n"
+    .string "BLAINE departed.\p"
+    .string "He forgot his key somewhere and\n"
+	.string "you found it, am I right?\p"
+    .string "Oh well, that's okay.\p"
+	.string "I am CELIO, BLAINE's lab assistant.\p"
+	.string "I look after the GYM for the duration\n"
+	.string "of his absence.\p"
+	.string "However, I happen to be quite\n"
+	.string "the TRAINER myself.\p"
+	.string "In fact, I would consider myself\n"
+	.string "a better TRAINER than BLAINE.\p"
+	.string "BLAINE's style is unrefined\n"
+	.string "and hot-headed.\p"
+    .string "As the INTERIM GYM LEADER of\n"
+	.string "CINNABAR ISLAND, I accept\p"
+	.string "your challenge!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+	
+CinnabarIsland_Gym_Text_CelioDefeat::
+    .string "I have burned down to nothing!\n"
+    .string "Not even ashes remain!\p"
+    .string "You have earned the VOLCANOBADGE.$"
+
+CinnabarIsland_Gym_Text_CelioFireBlastIsUltimateFireMove::
+    .string "FIRE BLAST is the ultimate fire\n"
+    .string "technique.\p"
+    .string "Don't waste it on WATER POKéMON.$"
+
+CinnabarIsland_Gym_Text_CelioExplainVolcanoBadge::
+    .string "Hah!\p"
+    .string "The VOLCANOBADGE heightens the\n"
+    .string "SPECIAL stats of your POKéMON.\p"
+    .string "Here, you can have this, too!$"
+
+CinnabarIsland_Gym_Text_ReceivedTM38FromCelio::
+    .string "{PLAYER} received TM38\n"
+    .string "from BLAINE.$"
+
+CinnabarIsland_Gym_Text_CelioPostBattle::
+    .string "TM38 contains FIRE BLAST.\n"
+    .string "Teach it to FIRE-type POKéMON.\p"
+    .string "VULPIX or CHARMELEON would be\n"
+    .string "ideal for that move.$"
+
+CinnabarIsland_Gym_Text_CelioMakeSpaceForThis::
+    .string "Make space for this, child!$"
+
 CinnabarIsland_Gym_Text_BlaineIntro::
     .string "Hah!\p"
     .string "I am BLAINE, the red-hot LEADER\n"

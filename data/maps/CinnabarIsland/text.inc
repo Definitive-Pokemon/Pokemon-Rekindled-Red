@@ -1,6 +1,27 @@
 CinnabarIsland_Text_DoorIsLocked::
     .string "The door is locked…$"
+	
+CinnabarIsland_Text_BerrySign::
+    .string "CINNABAR BERRY FARM\n"
+    .string "Providing food for all islanders!$"
 
+CinnabarIsland_Text_FatMan::
+	.string "That there, my friend, is the\n"
+	.string "CINNABAR BERRY FARM!\p"
+	.string "It's a paradise for BERRY lovers\n"
+	.string "such as me.\p"
+	.string "If only they would let me into\n"
+	.string "the fields…$"
+
+CinnabarIsland_Text_BaldingMan::
+	.string "Not many outsiders know this,\n"
+	.string "but the island is, in fact,\p"
+	.string "a volcano.\p"
+	.string "It's the volcano's rich soil that\n"
+	.string "attracted the island's settlers.\p"
+	.string "After all, it's because of this soil\n"
+	.string "that we can grow the best BERRIES.$"
+	
 CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
     .string "CINNABAR GYM's BLAINE is quite the\n"
     .string "odd fellow.\p"
@@ -15,7 +36,8 @@ CinnabarIsland_Text_ScientistsExperimentInMansion::
 
 CinnabarIsland_Text_IslandSign::
     .string "CINNABAR ISLAND\n"
-    .string "The Fiery Town of Burning Desire$"
+    .string "Passion and discipline\l"
+	.string "have worked the land.$"
 
 CinnabarIsland_Text_PokemonLab::
     .string "POKéMON LAB$"
@@ -41,7 +63,11 @@ CinnabarIsland_Text_ComeWithMeToOneIsland::
     .string "A friend invited me, so I'm on my\n"
     .string "way out there.\p"
     .string "How about it?\n"
-    .string "Do you feel like coming with me?$"
+    .string "Do you feel like coming with me?\p"
+    .string "I'll be waiting at the POKéMON\n"
+    .string "CENTER over there.\p"
+    .string "Come see me if you want to go\n"
+    .string "with me.$"
 
 CinnabarIsland_Text_AllRightLetsGo::
     .string "All right, then.\n"

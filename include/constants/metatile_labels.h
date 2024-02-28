@@ -324,6 +324,13 @@
 #define METATILE_SilphCo_Arrow_Left                     0x2A1
 #define METATILE_SilphCo_Arrow_Right                    0x2A9
 #define METATILE_SilphCo_Arrow_Up                       0x2A0
+#define METATILE_SilphCo_Cage1                          0x3F0
+#define METATILE_SilphCo_Cage2                          0x3F1
+#define METATILE_SilphCo_Cage3                          0x3F8
+#define METATILE_SilphCo_Cage4                          0x3F9
+#define METATILE_SilphCo_CageShadow1                    0x285
+#define METATILE_SilphCo_CageShadow2                    0x286
+#define METATILE_SilphCo_CageShadow3                    0x283
 #define METATILE_SilphCo_ElevatorDoor                   0x2E2
 #define METATILE_SilphCo_ElevatorWindow_Bottom0         0x2F8
 #define METATILE_SilphCo_ElevatorWindow_Bottom1         0x2F9

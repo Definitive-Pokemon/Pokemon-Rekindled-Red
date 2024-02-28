@@ -34,7 +34,7 @@ FiveIsland_ResortGorgeous_House_EventScript_SelphyLetter::
 	removeitem ITEM_LETTER, 1
 	setflag FLAG_SELPHY_RECEIVED_LETTER
 	playse SE_PIN
-	applymovement LOCALID_SELPHY, Movement_ExclamationMark
+	applymovement LOCALID_SELPHY, Common_Movement_ExclamationMark
 	waitmovement 0
 	msgbox FiveIsland_ResortGorgeous_House_Text_SelphyThisLetter
 	release

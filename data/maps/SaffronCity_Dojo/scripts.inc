@@ -60,7 +60,7 @@ SaffronCity_Dojo_EventScript_HitmonleeBall::
 SaffronCity_Dojo_EventScript_GetLeeSecond::
 	showmonpic SPECIES_HITMONLEE, 10, 3
 	setvar VAR_TEMP_1, SPECIES_HITMONLEE
-	applymovement LOCALID_KARATE_MASTER, Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_KARATE_MASTER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	textcolor 0
 	msgbox SaffronCity_Dojo_Text_YouWantHitmonlee, MSGBOX_YESNO
@@ -96,7 +96,7 @@ SaffronCity_Dojo_EventScript_HitmonchanBall::
 SaffronCity_Dojo_EventScript_GetChanSecond::
 	showmonpic SPECIES_HITMONCHAN, 10, 3
 	setvar VAR_TEMP_1, SPECIES_HITMONCHAN
-	applymovement LOCALID_KARATE_MASTER, Movement_WalkInPlaceFasterUp
+	applymovement LOCALID_KARATE_MASTER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	textcolor 0
 	msgbox SaffronCity_Dojo_Text_YouWantHitmonchan, MSGBOX_YESNO

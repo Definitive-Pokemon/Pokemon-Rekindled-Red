@@ -1,6 +1,6 @@
 .set LOCALID_ANABEL, 10
 
-afariZone_NorthEast_MapScripts::
+SafariZone_NorthEast_MapScripts::
 	.byte 0
 
 SafariZone_NorthEast_EventScript_AreaSign::
@@ -30,7 +30,7 @@ SafariZone_NorthEast_EventScript_Anabel::
 	waitmoncry
 	playmoncry SPECIES_LATIAS, CRY_MODE_WEAK
 	waitmoncry
-	playse SE_PING
+	playse SE_PIN
 	applymovement LOCALID_ANABEL, SafariZone_NorthEast_Movement_AnabelInterrupt
 	waitmovement 0
 	msgbox SafariZone_NorthEast_Text_AnabelHelp

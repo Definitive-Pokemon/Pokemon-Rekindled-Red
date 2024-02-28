@@ -309,7 +309,7 @@ MonitoringStation_Movement_AdminMove::
 	
 MonitoringStation_EventScript_ElevatorBroken::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkInPlaceFasterUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	delay 20
 	msgbox MonitoringStation_Text_OutOfOrder

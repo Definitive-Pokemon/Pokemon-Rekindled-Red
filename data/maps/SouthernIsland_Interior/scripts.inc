@@ -153,14 +153,14 @@ SouthernIsland_Interior_EventScript_SetLatiosBattleVars::
 	setvar VAR_0x8004, SPECIES_LATIOS
 	setvar VAR_0x8005, 50 @ level
 	setvar VAR_0x8006, ITEM_SOUL_DEW
-	special CreateEventLegalEnemyMon
+	special CreateEnemyEventMon
 	return
 
 SouthernIsland_Interior_EventScript_SetLatiasBattleVars::
 	setvar VAR_0x8004, SPECIES_LATIAS
 	setvar VAR_0x8005, 50 @ level
 	setvar VAR_0x8006, ITEM_SOUL_DEW
-	special CreateEventLegalEnemyMon
+	special CreateEnemyEventMon
 	return
 
 SouthernIsland_Interior_Movement_CameraPanUp:
