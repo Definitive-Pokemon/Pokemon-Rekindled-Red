@@ -183,7 +183,7 @@
       "y": 18,
       "elevation": 3,
       "item": "ITEM_BIG_PEARL",
-      "flag": "FLAG_HIDDEN_ITEM_CAPE_BRINK_BIG_PEARL",
+      "flag": "HIDDEN_ITEM_CAPE_BRINK_BIG_PEARL",
       "quantity": 1,
       "underfoot": false
     }
