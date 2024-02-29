@@ -1,18 +1,33 @@
-# Pokémon FireRed and LeafGreen+
+# Pokémon Rekindled Red (Under construction)
 
-This is the repository for the Pokémon FireRed and LeafGreen+ hack, based on [pret's decompilation of Pokémon FireRed and LeafGreen](https://github.com/pret/pokefirered).
-* [**View the FAQ**](https://github.com/Deokishisu/FRLG-Plus/blob/master/FAQ.md)
-* [**View the full features list**](https://github.com/Deokishisu/FRLG-Plus/blob/master/FEATURES.md)
-* [**Download the patch**](https://github.com/Deokishisu/FRLG-Plus/releases/latest)
-* Please direct questions and comments to [**the PokéCommunity thread**](https://www.pokecommunity.com/showthread.php?t=454382).
+## Based on Pokémon FireRed and LeafGreen+
+This hack is based on the [FRLG+ hack](https://github.com/Deokishisu/FRLG-Plus/releases/latest), retaining many of it's features. Nuzlocke mode, leader rematches and faster loading among others.
 
-* Support Development
-  * [I have a Ko-fi link](https://ko-fi.com/deokishisu), tips are appreciated!
+## Based on Pokémon Fire Red Omega
+Most wild pokemons and trainer encounters have been adopted from [Drayano's](https://www.romhacking.net/community/2785/) Fire Red Omega hack.
 
-## See also
+## Features introduced in Rekindled Red
+* Pokemon variants/forms
+* Catchable regi's with new puzzles
+* Catchable starters
+* New area's
+* Sevii music update
+* Ghost and Dark damage types swapped
+* New events
 
-For other pret projects, see [pret.github.io](https://pret.github.io/).
+## Credits
+* Dialogue and text: Thirteen
+* conception and direction: Thirteen
+* Map editing: Thirteen
+* Pokemon and trainer data: Thirteen
+* Overworld scripting: Thirteen & Elwin
+* Repository management and CI/CD: Elwin
+* Testing and debugging: Thirteen & Elwin
+* Novel code and engine changes: Elwin
+* members of the pret discord server, for helping with technical questions and feedback
 
-## Discord server for pret
+## Questions
+WIP
 
-You can find pret on [Discord](https://discord.gg/d5dubZ3). This is not the Discord server for this hack.
+## Contact
+WIP
