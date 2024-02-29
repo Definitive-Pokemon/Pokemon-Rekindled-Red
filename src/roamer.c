@@ -89,7 +89,7 @@ u16 GetRoamerSpecies(void)
 
     switch(starter)
     {
-        case SPECIES_SQUIRTLE:
+        case SPECIES_ELEKID:
             if(!FlagGet(FLAG_CAUGHT_RAIKOU))
             {
                 species = SPECIES_RAIKOU;
@@ -103,7 +103,7 @@ u16 GetRoamerSpecies(void)
                 species = SPECIES_SUICUNE;
             }
             break;
-        case SPECIES_BULBASAUR:
+        case SPECIES_MAGBY:
             if(!FlagGet(FLAG_CAUGHT_ENTEI))
             {
                 species = SPECIES_ENTEI;
@@ -117,7 +117,7 @@ u16 GetRoamerSpecies(void)
                 species = SPECIES_RAIKOU;
             }
             break;
-        case SPECIES_CHARMANDER:
+        case SPECIES_SMOOCHUM:
             if(!FlagGet(FLAG_CAUGHT_SUICUNE))
             {
                 species = SPECIES_SUICUNE;
