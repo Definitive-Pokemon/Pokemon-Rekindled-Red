@@ -1,26 +1,27 @@
 # Pokémon Rekindled Red (Under construction)
 
 ## Based on Pokémon FireRed and LeafGreen+
-This hack is based on the [FRLG+ hack](https://github.com/Deokishisu/FRLG-Plus/releases/latest), retaining many of it's features. Nuzlocke mode, leader rematches and faster loading among others.
+This hack is based on the [FRLG+ hack](https://github.com/Deokishisu/FRLG-Plus/releases/latest), retaining many of it's features. Nuzlocke mode, Leader rematches and faster loading, among others.
 
 ## Based on Pokémon Fire Red Omega
-Most wild pokemons and trainer encounters have been adopted from [Drayano's](https://www.romhacking.net/community/2785/) Fire Red Omega hack.
+Most wild Pokémon and Trainer encounters have been adopted from [Drayano's](https://www.romhacking.net/community/2785/) FireRed Omega hack.
 
 ## Features introduced in Rekindled Red
-* Pokemon variants/forms
-* Catchable regi's with new puzzles
-* Catchable starters
-* New area's
-* Sevii music update
-* Ghost and Dark damage types swapped
-* New events
+* Pokémon variants/forms.
+* Catchable Regis with new puzzles.
+* Catchable Starters.
+* New areas.
+* Sevii music update.
+* Ghost Type is now Special.
+* Dark Type is now Physical. 
+* New events.
 
 ## Credits
-* Dialogue and text: Thirteen
-* conception and direction: Thirteen
-* Map editing: Thirteen
-* Pokemon and trainer data: Thirteen
-* Overworld scripting: Thirteen & Elwin
+* Dialogue and text: Thirteen1355
+* conception and direction: Thirteen1355
+* Map editing: Thirteen1355
+* Pokemon and trainer data: Thirteen1355
+* Overworld scripting: Thirteen1355 & Elwin
 * Repository management and CI/CD: Elwin
 * Testing and debugging: Thirteen & Elwin
 * Novel code and engine changes: Elwin
