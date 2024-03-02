@@ -36,7 +36,7 @@
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_THREE_ISLAND_PORT",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [

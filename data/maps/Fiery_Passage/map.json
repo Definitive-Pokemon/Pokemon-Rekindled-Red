@@ -36,14 +36,14 @@
       "y": 4,
       "elevation": 0,
       "dest_map": "MAP_ROUTE24",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 3,
       "y": 38,
       "elevation": 0,
       "dest_map": "MAP_MT_MOON_B1F",
-      "dest_warp_id": 8
+      "dest_warp_id": "8"
     }
   ],
   "coord_events": [
