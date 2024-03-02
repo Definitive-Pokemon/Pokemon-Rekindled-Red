@@ -74,7 +74,7 @@ PokeCenter_EventScript_TheEnd::
 	clearflag FLAG_HIDE_HORROR_NPC
 	setvar VAR_HONEY1, 0
 	setvar VAR_HONEY2, 0
-	formatwarp MAP_MONITORING_STATION_SHORTCUT, 255, 3, 3
+	warp MAP_MONITORING_STATION_SHORTCUT, 255, 3, 3
 	delay 50
 	release
 	end
