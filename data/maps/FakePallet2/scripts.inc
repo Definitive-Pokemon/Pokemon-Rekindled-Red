@@ -52,7 +52,7 @@ FakePallet2_EventScript_Mom1::
 	removeobject LOCALID_KABUTOPS_SHADOW
 	fadescreen FADE_FROM_WHITE
 	delay 200
-	formatwarp MAP_MONITORING_STATION_STORAGE, 255, 19, 11
+	warp MAP_MONITORING_STATION_STORAGE, 255, 19, 11
 	waitstate
 	releaseall
 	end
@@ -106,7 +106,7 @@ FakePallet2_EventScript_Mom2::
 	removeobject LOCALID_KABUTOPS_SHADOW
 	fadescreen FADE_FROM_WHITE
 	delay 200
-	formatwarp MAP_MONITORING_STATION_STORAGE, 255, 19, 11
+	warp MAP_MONITORING_STATION_STORAGE, 255, 19, 11
 	waitstate
 	releaseall
 	end
@@ -160,7 +160,7 @@ FakePallet2_EventScript_Mom3::
 	removeobject LOCALID_KABUTOPS_SHADOW
 	fadescreen FADE_FROM_WHITE
 	delay 200
-	formatwarp MAP_MONITORING_STATION_STORAGE, 255, 19, 11
+	warp MAP_MONITORING_STATION_STORAGE, 255, 19, 11
 	waitstate
 	releaseall
 	end
