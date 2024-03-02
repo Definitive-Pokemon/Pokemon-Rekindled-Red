@@ -254,6 +254,9 @@
       "script": "MonitoringStation_EventScript_AdminConvo"
     }
   ],
+  "coord_events": [
+
+  ],
   "bg_events": [
 
   ],
