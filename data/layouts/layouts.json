@@ -5184,6 +5184,18 @@
       "secondary_tileset": "gTileset_GameCorner",
       "border_filepath": "data/layouts/CinnabarIsland_BerryFarm/border.bin",
       "blockdata_filepath": "data/layouts/CinnabarIsland_BerryFarm/map.bin"
+    },
+    {
+      "id": "LAYOUT_DEBUG",
+      "name": "Debug_Layout",
+      "width": 21,
+      "height": 21,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_BerryForest",
+      "border_filepath": "data/layouts/Debug/border.bin",
+      "blockdata_filepath": "data/layouts/Debug/map.bin"
     }
   ]
 }

@@ -1438,3 +1438,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/CinnabarIsland_BerryFarm/scripts.inc"
 	.include "data/maps/CinnabarIsland_BerryFarm/text.inc"
+
+	.include "data/maps/Debug/scripts.inc"
+	.include "data/maps/Debug/text.inc"

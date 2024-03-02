@@ -50,7 +50,8 @@
     "TradeCenter",
     "RecordCorner",
     "BattleColosseum_4P",
-    "UnionRoom"
+    "UnionRoom",
+    "Debug"
   ],
   "gMapGroup_Dungeons": [
     "ViridianForest",
