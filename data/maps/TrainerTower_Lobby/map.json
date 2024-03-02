@@ -140,7 +140,7 @@
       "x": 23,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_MONITORING_STATION",
+      "dest_map": "MAP_MONITORING_STATION_CENTRAL",
       "dest_warp_id": "2"
     }
   ],
