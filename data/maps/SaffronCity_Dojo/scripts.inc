@@ -109,7 +109,7 @@ SaffronCity_Dojo_EventScript_GetChanSecond::
 
 SaffronCity_Dojo_EventScript_GiveHitmon::
 	hidemonpic
-	givemon VAR_TEMP_1, 25
+	givemon VAR_TEMP_1, 30
 	goto_if_eq VAR_RESULT, 0, SaffronCity_Dojo_EventScript_ReceivedHitmonParty
 	goto_if_eq VAR_RESULT, 1, SaffronCity_Dojo_EventScript_ReceivedHitmonPC
 	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
