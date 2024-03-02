@@ -68,7 +68,7 @@
       "y": 9,
       "elevation": 3,
       "dest_map": "MAP_SIX_ISLAND_PATTERN_BUSH",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     },
     {
       "x": 47,

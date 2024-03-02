@@ -204,21 +204,21 @@
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_MONITORING_STATION",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 9,
       "y": 27,
       "elevation": 0,
       "dest_map": "MAP_MONITORING_STATION_SHORTCUT",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 25,
       "y": 27,
       "elevation": 0,
       "dest_map": "MAP_MONITORING_STATION_HALLWAY2",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

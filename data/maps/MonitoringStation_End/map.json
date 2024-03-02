@@ -50,14 +50,14 @@
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_MONITORING_STATION_HALLWAY3",
-      "dest_warp_id": 4
+      "dest_warp_id": "4"
     },
     {
       "x": 9,
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_NEW_MAP1",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

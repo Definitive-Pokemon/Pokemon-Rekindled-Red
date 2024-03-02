@@ -64,14 +64,14 @@
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_MONITORING_STATION_HALLWAY2",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     },
     {
       "x": 19,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_MONITORING_STATION_POKEMON",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

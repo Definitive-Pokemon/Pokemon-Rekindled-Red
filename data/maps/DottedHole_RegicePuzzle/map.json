@@ -23,14 +23,14 @@
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_SIX_ISLAND_DOTTED_HOLE_SAPPHIRE_ROOM",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 11,
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_DOTTED_HOLE_REGICE_PUZZLE2",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

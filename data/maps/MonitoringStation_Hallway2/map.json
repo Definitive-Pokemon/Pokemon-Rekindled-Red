@@ -64,28 +64,28 @@
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_MONITORING_STATION_CENTRAL",
-      "dest_warp_id": 2
+      "dest_warp_id": "2"
     },
     {
       "x": 20,
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_MONITORING_STATION_CONFERENCE_ROOM",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 21,
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_MONITORING_STATION_CONFERENCE_ROOM",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_MONITORING_STATION_STORAGE",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

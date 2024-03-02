@@ -148,7 +148,7 @@
       "y": 15,
       "elevation": 0,
       "dest_map": "MAP_MT_EMBER_RUBY_PATH_B5F",
-      "dest_warp_id": 1
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
