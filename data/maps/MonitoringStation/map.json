@@ -190,21 +190,21 @@
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_MONITORING_STATION_CENTRAL",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 3,
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_TRAINER_TOWER_ELEVATOR",
-      "dest_warp_id": 0
+      "dest_warp_id": "0"
     },
     {
       "x": 9,
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_TRAINER_TOWER_LOBBY",
-      "dest_warp_id": 3
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [
