@@ -308,14 +308,6 @@ static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
         .tilesptr = sMoneanChamberMapPreviewTiles,
         .tilemapptr = sMoneanChamberMapPreviewTilemap,
         .palptr = sMoneanChamberMapPreviewPalette
-    },
-	[MPS_MONITORING_STATION] = {
-        .mapsec = MAPSEC_MONITORING_STATION,
-        .type = MPS_TYPE_FOREST,
-        .flagId = FLAG_WORLD_MAP_MONITORING_STATION,
-        .tilesptr = sMonitoringStationMapPreviewTiles,
-        .tilemapptr = sMonitoringStationMapPreviewTilemap,
-        .palptr = sMonitoringStationMapPreviewPalette
     }
 };
 
