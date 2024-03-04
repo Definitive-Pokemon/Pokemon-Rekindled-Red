@@ -544,7 +544,7 @@
 #define FLAG_HIDE_VIRIDIAN_FOREST_DEPTHS_SUPER_POTION           0x208
 #define FLAG_HIDE_VIRIDIAN_FOREST_DEPTHS_GREAT_BALL             0x209
 #define FLAG_HIDE_MONITORING_STATION_OFFICE_RED_KEY             0x20A
-#define FLAG_0x20B               0x20B
+#define FLAG_HIDE_ROUTE20_UNDERWATER_SHELL_BELL    	            0x20B
 #define FLAG_0x20C               0x20C
 #define FLAG_0x20D               0x20D
 #define FLAG_0x20E               0x20E

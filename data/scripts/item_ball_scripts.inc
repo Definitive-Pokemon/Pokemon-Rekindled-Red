@@ -602,6 +602,10 @@ SixIsland_RuinValley_EventScript_ItemSunStone::
 SevenIsland_SevaultCanyon_EventScript_ItemKingsRock::
 	finditem ITEM_KINGS_ROCK
 	end
+	
+Route20_Underwater_EventScript_ItemShellBell::
+	finditem ITEM_SHELL_BELL
+	end
 
 SevenIsland_SevaultCanyon_EventScript_ItemMaxElixir::
 	finditem ITEM_MAX_ELIXIR
