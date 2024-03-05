@@ -17,7 +17,7 @@
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_OMANYTE",
+      "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
       "x": 0,
       "y": 9,
       "elevation": 0,
@@ -26,12 +26,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PalletTown_EventScript_DebugBattle",
+      "script": "Debug_Battle",
       "flag": "0"
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_KABUTO",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 0,
       "y": 7,
       "elevation": 0,
@@ -40,12 +40,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PalletTown_EventScript_DebugGive",
+      "script": "Debug_GiveFormMon",
       "flag": "0"
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_KABUTO",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 0,
       "y": 8,
       "elevation": 0,
@@ -54,7 +54,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PalletTown_EventScript_DebugGiveNormal",
+      "script": "Debug_GiveNormalMon",
       "flag": "0"
     }
   ],
