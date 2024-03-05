@@ -5030,4 +5030,29 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 337,
         .trainerOffset = 2,
     },
+    [NATIONAL_DEX_FOSSILIZED_KABUTOPS] =
+    {
+        .categoryName = _("HAUNTED"),
+        .height = 13,
+        .weight = 405,
+        .description_FR = gFossilizedKabutopsPokedexText_FR,
+        .description_LG = gDeoxysPokedexText_LG,
+        .pokemonScale = 293,
+        .pokemonOffset = 0,
+        .trainerScale = 337,
+        .trainerOffset = 2,
+    },
+
+    [NATIONAL_DEX_SEVIIAN_AERODACTYL] =
+    {
+        .categoryName = _("FOSSIL"),
+        .height = 18,
+        .weight = 590,
+        .description_FR = gSeviianAerodactylPokedexText_FR,
+        .description_LG = gAerodactylPokedexText_LG,
+        .pokemonScale = 275,
+        .pokemonOffset = -1,
+        .trainerScale = 317,
+        .trainerOffset = 2,
+    },
 };

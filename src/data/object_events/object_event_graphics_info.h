@@ -3819,7 +3819,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kabutops_Shadow = 
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Petrel = {
 	.tileTag = TAG_NONE,
-	.paletteTag = PALSLOT_NPC_SPECIAL,
+	.paletteTag = OBJ_EVENT_PAL_TAG_PETREL,
 	.reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
 	.size = 256,
 	.width = 16,
