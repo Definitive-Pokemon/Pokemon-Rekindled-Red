@@ -4211,7 +4211,7 @@ BattleScript_AbilityCuredStatus::
 
 BattleScript_SlowStartActivates::
 	pause B_WAIT_TIME_SHORT
-	printstring STRINGID_PKMNCANTGETGOING
+	printstring STRINGID_PKMNCANTGETITGOING
 	waitstate
 	end3
 
