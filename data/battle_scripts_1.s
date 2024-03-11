@@ -4212,7 +4212,7 @@ BattleScript_AbilityCuredStatus::
 BattleScript_SlowStartActivates::
 	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_PKMNCANTGETITGOING
-	waitstate
+	waitmessage B_WAIT_TIME_LONG
 	end3
 
 BattleScript_IgnoresWhileAsleep::
