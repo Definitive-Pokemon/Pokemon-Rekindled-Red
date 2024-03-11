@@ -1880,7 +1880,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         gBattleMons[battler].speed = gBattleMons[battler].speed * 2;
                         gBattleMons[battler].slowStartCount++;
                     }
-                    else (gBattleMons[battler].slowStartCount == 5)
+                    else if (gBattleMons[battler].slowStartCount == 5)
                     {
                         //do nothing
                     }
