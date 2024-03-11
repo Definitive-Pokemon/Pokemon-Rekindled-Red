@@ -76,7 +76,7 @@ static const u8 sPurePowerDescription[] = _("Raises ATTACK.");
 static const u8 sShellArmorDescription[] = _("Blocks critical hits.");
 static const u8 sCacophonyDescription[] = _("Avoids sound-based moves.");
 static const u8 sAirLockDescription[] = _("Negates weather effects.");
-static const u8 sSlowStartDescription[] = _("Temporarily halves stats.");
+static const u8 sSlowStartDescription[] = _("Temporarily halves speed and attack.");
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
 {
