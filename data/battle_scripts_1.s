@@ -4213,7 +4213,7 @@ BattleScript_SlowStartActivates::
 	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_PKMNCANTGETITGOING
 	waitmessage B_WAIT_TIME_LONG
-	end3
+	return
 
 BattleScript_IgnoresWhileAsleep::
 	printstring STRINGID_PKMNIGNORESASLEEP
