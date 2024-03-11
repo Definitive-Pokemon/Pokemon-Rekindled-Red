@@ -3,13 +3,13 @@ Debug_MapScripts::
 
 Debug_GiveFormMon::
 	lock
-	givemon SPECIES_FOSSILIZED_KABUTOPS , 5, ITEM_NONE
+	givemon SPECIES_REGIGIGAS, 5, ITEM_NONE
 	release
 	end
 
 Debug_Battle::
 	lock
-	setwildbattle SPECIES_FOSSILIZED_KABUTOPS, 3, ITEM_NONE
+	setwildbattle SPECIES_REGIGIGAS, 3, ITEM_NONE
 	delay 40
 	dowildbattle
 	release

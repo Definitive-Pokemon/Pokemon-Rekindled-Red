@@ -174,6 +174,7 @@ extern const u8 BattleScript_ApplySecondaryEffect[];
 extern const u8 BattleScript_SynchronizeActivates[];
 extern const u8 BattleScript_NoItemSteal[];
 extern const u8 BattleScript_AbilityCuredStatus[];
+extern const u8 BattleScript_SlowStartActivates[];
 extern const u8 BattleScript_IgnoresAndUsesRandomMove[];
 extern const u8 BattleScript_MoveUsedLoafingAround[];
 extern const u8 BattleScript_IgnoresAndFallsAsleep[];

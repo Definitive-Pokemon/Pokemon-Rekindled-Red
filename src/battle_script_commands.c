@@ -310,6 +310,7 @@ static void Cmd_subattackerhpbydmg(void);
 static void Cmd_removeattackerstatus1(void);
 static void Cmd_finishaction(void);
 static void Cmd_finishturn(void);
+static void Cmd_targethpdependentdamagecalculation(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -561,6 +562,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_removeattackerstatus1,                   //0xF5
     Cmd_finishaction,                            //0xF6
     Cmd_finishturn,                              //0xF7
+    Cmd_targethpdependentdamagecalculation,
 };
 
 struct StatFractions
@@ -8303,6 +8305,12 @@ static void Cmd_friendshiptodamagecalculation(void)
     else // EFFECT_FRUSTRATION
         gDynamicBasePower = 10 * (255 - gBattleMons[gBattlerAttacker].friendship) / 25;
 
+    gBattlescriptCurrInstr++;
+}
+
+static void Cmd_targethpdependentdamagecalculation(void)
+{
+    gDynamicBasePower = 1 + 120 * (gBattleMons[gBattlerTarget].hp / gBattleMons[gBattlerTarget].maxHP);
     gBattlescriptCurrInstr++;
 }
 

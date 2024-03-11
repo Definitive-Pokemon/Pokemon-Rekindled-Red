@@ -1811,6 +1811,14 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                 }
                 break;
+            case ABILITY_SLOW_START:
+                {
+                    BattleScriptPushCursorAndCallback(BattleScript_SlowStartActivates);
+                    gBattleMons[battler].attack = gBattleMons[battler].attack / 2;
+                    gBattleMons[battler].speed = gBattleMons[battler].speed / 2;
+                    effect++;
+                }
+                break;
             }
             break;
         case ABILITYEFFECT_ENDTURN: // 1
@@ -1864,6 +1872,20 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         gBattleScripting.battler = battler;
                         effect++;
                     }
+                    break;
+                case ABILITY_SLOW_START:
+                    if (gBattleMons[battler].slowStartCount == 4)
+                    { 
+                        gBattleMons[battler].attack = gBattleMons[battler].attack * 2;
+                        gBattleMons[battler].speed = gBattleMons[battler].speed * 2;
+                        gBattleMons[battler].slowStartCount++;
+                    }
+                    else (gBattleMons[battler].slowStartCount == 5)
+                    {
+                        //do nothing
+                    }
+                    else
+                        gBattleMons[battler].slowStartCount++;
                     break;
                 case ABILITY_TRUANT:
                     gDisableStructs[gBattlerAttacker].truantCounter ^= 1;

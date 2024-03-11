@@ -25,6 +25,7 @@ Most wild Pokémon and Trainer encounters have been adopted from [Drayano's](htt
 * Repository management and CI/CD: Elwin
 * Testing and debugging: Thirteen & Elwin
 * Novel code and engine changes: Elwin
+* Regigigas sprites: [MrDollSteak and other contributors from this PC thread](https://www.pokecommunity.com/threads/sugimori-palettes-the-ds-style-64x64-pok%C3%A9mon-sprite-resource.336945/)
 * members of the pret discord server, for helping with technical questions and feedback
 
 ## Questions

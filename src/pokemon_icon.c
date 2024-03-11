@@ -23,7 +23,8 @@ const u16 gMonIconPalettes[][16] = {
     INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_0.gbapal"),
     INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_1.gbapal"),
     INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_2.gbapal"),
-    INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_3.gbapal")
+    INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_3.gbapal"),
+    INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_4.gbapal")
 };
 
 const u8 *const gMonIconTable[] = {
@@ -439,6 +440,7 @@ const u8 *const gMonIconTable[] = {
     [SPECIES_JIRACHI]     = gMonIcon_Jirachi,
     [SPECIES_DEOXYS]      = gMonIcon_Deoxys,
     [SPECIES_CHIMECHO]    = gMonIcon_Chimecho,
+    [SPECIES_REGIGIGAS]   = gMonIcon_Regigigas,
     [SPECIES_EGG]         = gMonIcon_Egg,
     [SPECIES_UNOWN_B]     = gMonIcon_UnownB,
     [SPECIES_UNOWN_C]     = gMonIcon_UnownC,
@@ -884,6 +886,7 @@ const u8 gMonIconPaletteIndices[] = {
     [SPECIES_JIRACHI]     = 0,
     [SPECIES_DEOXYS]      = 0,
     [SPECIES_CHIMECHO]    = 0,
+    [SPECIES_REGIGIGAS]   = 4,
     [SPECIES_EGG]         = 1,
     [SPECIES_UNOWN_B]     = 0,
     [SPECIES_UNOWN_C]     = 0,

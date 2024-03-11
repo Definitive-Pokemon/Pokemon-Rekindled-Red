@@ -10912,6 +10912,46 @@ static const u8 sChimechoTMHMLearnset[] =
     0xFF,
 };
 
+static const u8 sRegigigasTMHMLearnset[] =
+{
+    TMHM(TM01_FOCUS_PUNCH),
+    TMHM(TM06_TOXIC),
+    TMHM(HIDDEN_POWER),
+    TMHM(TM11_SUNNY_DAY),
+    TMHM(HYPER_BEAM),
+    TMHM(RAIN_DANCE),
+    TMHM(SAFEGUARD),
+    TMHM(TM21_FRUSTRATION),
+    TMHM(THUNDERBOLT),
+    TMHM(THUNDER),
+    TMHM(EARTHQUAKE),
+    TMHM(TM27_RETURN),
+    TMHM(BRICK_BREAK),
+    TMHM(DOUBLE_TEAM),
+    TMHM(SHOCK_WAVE),
+    TMHM(ROCK_TOMB),
+    TMHM(AERIAL_ACE),
+    TMHM(FACADE),
+    TMHM(SECRET_POWER),
+    TMHM(FOCUS_BLAST),
+    TMHM(FLING),
+    TMHM(ENDURE),
+    TMHM(DRAIN_PUNCH),
+    TMHM(GIGA_IMPACT),
+    TMHM(ROCK_POLISH),
+    TMHM(STONE_EDGE),
+    TMHM(AVALANCHE),
+    TMHM(PSYCH_UP),
+    TMHM(ROCK_SLIDE),
+    TMHM(SLEEP_TALK),
+    TMHM(NATURAL_GIFT),
+    TMHM(SWAGGER),
+    TMHM(SUBSTITUTE),
+    TMHM(STRENGTH),
+    TMHM(ROCK_SMASH),
+    0xFF,
+};
+
 const u8 *const gTMHMLearnsets[] =
 {
     [SPECIES_NONE] = sBulbasaurTMHMLearnset,
@@ -11326,6 +11366,7 @@ const u8 *const gTMHMLearnsets[] =
     [SPECIES_JIRACHI] = sJirachiTMHMLearnset,
     [SPECIES_DEOXYS] = sDeoxysTMHMLearnset,
     [SPECIES_CHIMECHO] = sChimechoTMHMLearnset,
+    [SPECIES_REGIGIGAS] = sRegigigasTMHMLearnset,
     [SPECIES_FOSSILIZED_KABUTOPS] = sFossilKabutopsTMHMLearnset,
     [SPECIES_SEVIIAN_AERODACTYL] = sSeviianAerodactylTMHMLearnset
 };

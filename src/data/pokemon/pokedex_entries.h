@@ -5030,6 +5030,19 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 337,
         .trainerOffset = 2,
     },
+    [NATIONAL_DEX_REGIGIGAS] =
+    {
+        .categoryName = _("COLOSSAL"),
+        .height = 37,
+        .weight = 4200,
+        .description_FR = gRegigigasPokedexText,
+        .description_LG = gDeoxysPokedexText_LG,
+        //TODO:REGIGIGAS
+        .pokemonScale = 293,
+        .pokemonOffset = 0,
+        .trainerScale = 337,
+        .trainerOffset = 2,
+    },
     [NATIONAL_DEX_FOSSILIZED_KABUTOPS] =
     {
         .categoryName = _("HAUNTED"),
