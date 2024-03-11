@@ -1816,7 +1816,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     BattleScriptPushCursorAndCallback(BattleScript_SlowStartActivates);
                     gBattleMons[battler].attack = gBattleMons[battler].attack / 2;
                     gBattleMons[battler].speed = gBattleMons[battler].speed / 2;
-                    effect++;
                 }
                 break;
             }
