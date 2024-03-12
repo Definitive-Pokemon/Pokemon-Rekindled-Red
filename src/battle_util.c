@@ -1779,6 +1779,15 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     gSpecialStatuses[battler].intimidatedMon = 1;
                 }
                 break;
+            case ABILITY_SLOW_START:
+                {
+                    PlaySE(SE_DING_DONG);
+                    BattleScriptPushCursorAndCallback(BattleScript_SlowStartActivates);
+                    gBattleMons[battler].attack = gBattleMons[battler].attack / 2;
+                    gBattleMons[battler].speed = gBattleMons[battler].speed / 2;
+                    effect++;
+                }
+            break;
             case ABILITY_FORECAST:
                 effect = CastformDataTypeChange(battler);
                 if (effect != 0)
@@ -2240,14 +2249,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                     break;
                 }
-            }
-            break;
-        case ABILITY_SLOW_START:
-            {
-                BattleScriptPushCursorAndCallback(BattleScript_SlowStartActivates);
-                gBattleMons[battler].attack = gBattleMons[battler].attack / 2;
-                gBattleMons[battler].speed = gBattleMons[battler].speed / 2;
-                effect++;
             }
             break;
         case ABILITYEFFECT_TRACE: // 11
