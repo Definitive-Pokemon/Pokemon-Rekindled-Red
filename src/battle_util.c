@@ -1811,15 +1811,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                 }
                 break;
-            case ABILITY_SLOW_START:
-                {
-                    BattleScriptPushCursorAndCallback(BattleScript_SlowStartActivates);
-                    gBattleMons[battler].attack = gBattleMons[battler].attack / 2;
-                    gBattleMons[battler].speed = gBattleMons[battler].speed / 2;
-                }
-                break;
-            }
-            break;
         case ABILITYEFFECT_ENDTURN: // 1
             if (gBattleMons[battler].hp != 0)
             {
@@ -2249,6 +2240,16 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 }
             }
             break;
+        case ABILITY_SLOW_START:
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_SlowStartActivates);
+                gBattleMons[battler].attack = gBattleMons[battler].attack / 2;
+                gBattleMons[battler].speed = gBattleMons[battler].speed / 2;
+                effect++;
+            }
+            break;
+        }
+        break;
         case ABILITYEFFECT_TRACE: // 11
             for (i = 0; i < gBattlersCount; i++)
             {
