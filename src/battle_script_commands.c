@@ -9091,7 +9091,12 @@ static void Cmd_tryswapabilities(void)
         gBattleMons[gBattlerAttacker].ability = gBattleMons[gBattlerTarget].ability;
         gBattleMons[gBattlerTarget].ability = abilityAtk;
 
-            gBattlescriptCurrInstr += 5;
+        if(gBattleMons[gBattlerAttacker].ability == ABILITY_SLOW_START)
+            gDisableStructs[gBattlerAttacker].slowStartTimer == 5;
+        if(gBattleMons[gBattlerTarget].ability == ABILITY_SLOW_START)
+            gDisableStructs[gBattlerTarget].slowStartTimer == 5;
+
+        gBattlescriptCurrInstr += 5;
     }
 }
 

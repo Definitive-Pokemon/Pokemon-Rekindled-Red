@@ -1875,18 +1875,12 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_SLOW_START:
-                    if (gBattleMons[battler].slowStartCount == 4)
-                    { 
-                        gBattleMons[battler].attack = gBattleMons[battler].attack * 2;
-                        gBattleMons[battler].speed = gBattleMons[battler].speed * 2;
-                        gBattleMons[battler].slowStartCount++;
-                    }
-                    else if (gBattleMons[battler].slowStartCount == 5)
+                    if (gDisableStructs[battler].slowStartTimer == 0)
                     {
                         //do nothing
                     }
                     else
-                        gBattleMons[battler].slowStartCount++;
+                        gDisableStructs[battler].slowStartTimer--;
                     break;
                 case ABILITY_TRUANT:
                     gDisableStructs[gBattlerAttacker].truantCounter ^= 1;

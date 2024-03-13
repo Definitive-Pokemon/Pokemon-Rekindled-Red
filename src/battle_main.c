@@ -3557,6 +3557,10 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         holdEffect = ItemId_GetHoldEffect(gBattleMons[battler1].item);
         holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler1].item);
     }
+
+    if (gDisableStructs[battler1].slowStartTimer > 0  && gBattleMons[battlerIdAtk].ability == ABILITY_SLOW_START)
+        speedBattler1 /= 2;
+
     // badge boost
     if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && gSaveBlock1Ptr->keyFlags.difficulty != DIFFICULTY_CHALLENGE
      && FlagGet(FLAG_BADGE03_GET)
@@ -3582,6 +3586,10 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         holdEffect = ItemId_GetHoldEffect(gBattleMons[battler2].item);
         holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler2].item);
     }
+
+    if (gDisableStructs[battler2].slowStartTimer > 0  && gBattleMons[battlerIdAtk].ability == ABILITY_SLOW_START)
+        speedBattler2 /= 2;
+        
     // badge boost
     if (!(gBattleTypeFlags & BATTLE_TYPE_LINK)
      && FlagGet(FLAG_BADGE03_GET)
