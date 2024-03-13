@@ -5037,11 +5037,10 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 4200,
         .description_FR = gRegigigasPokedexText,
         .description_LG = gDeoxysPokedexText_LG,
-        //TODO:REGIGIGAS
-        .pokemonScale = 293,
+        .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 337,
-        .trainerOffset = 2,
+        .trainerScale = 530,
+        .trainerOffset = 12,
     },
     [NATIONAL_DEX_FOSSILIZED_KABUTOPS] =
     {

@@ -3558,7 +3558,7 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler1].item);
     }
 
-    if (gDisableStructs[battler1].slowStartTimer > 0  && gBattleMons[battlerIdAtk].ability == ABILITY_SLOW_START)
+    if (gDisableStructs[battler1].slowStartTimer > 0  && gBattleMons[battler1].ability == ABILITY_SLOW_START)
         speedBattler1 /= 2;
 
     // badge boost
@@ -3587,7 +3587,7 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler2].item);
     }
 
-    if (gDisableStructs[battler2].slowStartTimer > 0  && gBattleMons[battlerIdAtk].ability == ABILITY_SLOW_START)
+    if (gDisableStructs[battler2].slowStartTimer > 0  && gBattleMons[battler2].ability == ABILITY_SLOW_START)
         speedBattler2 /= 2;
         
     // badge boost

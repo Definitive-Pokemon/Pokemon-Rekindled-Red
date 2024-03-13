@@ -2252,6 +2252,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 {
                     gLastUsedAbility = ABILITY_SLOW_START;
                     gStatuses3[i] &= ~STATUS3_SLOW_START;
+                    gActiveBattler = GetBattlerAtPosition(i);
                     BattleScriptPushCursorAndCallback(BattleScript_SlowStartActivates);
                     effect++;
                     break;

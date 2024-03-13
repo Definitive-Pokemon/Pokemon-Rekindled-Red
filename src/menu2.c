@@ -423,7 +423,8 @@ static const u8 sMonSpriteAnchorCoords[][5] = {
     [SPECIES_DEOXYS          - 1] = {0x1b, 0x08, 0x28, 0x1c, 0x16},
     [SPECIES_CHIMECHO        - 1] = {0x1d, 0x0c, 0x08, 0x1c, 0x1a},
     [SPECIES_OLD_UNOWN_EMARK - 1] = {0x20, 0x21, 0x08, 0x20, 0x2b},
-    [SPECIES_OLD_UNOWN_QMARK - 1] = {0x20, 0x23, 0x08, 0x20, 0x2d}
+    [SPECIES_OLD_UNOWN_QMARK - 1] = {0x20, 0x23, 0x08, 0x20, 0x2d},
+    [SPECIES_REGIGIAS        - 1] = {0x04, 0x0b, 0x28, 0x0a, 0x19}
 };
 
 void AddTextPrinterParameterized3(u8 windowId, u8 fontId, u8 x, u8 y, const u8 * color, s8 speed, const u8 * str)

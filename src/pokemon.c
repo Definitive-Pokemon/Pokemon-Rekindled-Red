@@ -1363,6 +1363,7 @@ static const u16 sSpeciesToExtendedPokedexNum[] = // Assigns all species to the 
     SPECIES_TO_EXTENDED(JIRACHI),
     SPECIES_TO_EXTENDED(DEOXYS),
     SPECIES_TO_EXTENDED(CHIMECHO),
+    SPECIES_TO_EXTENDED(REGIGIGAS),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
