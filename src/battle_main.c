@@ -2997,6 +2997,7 @@ static void TryDoEventsBeforeFirstTurn(void)
         if (effect != 0)
             return;
     }
+    PlaySE(SE_EFFECTIVE);
     if (AbilityBattleEffects(ABILITYEFFECT_INTIMIDATE1, 0, 0, 0, 0) != 0)
         return;
     if (AbilityBattleEffects(ABILITYEFFECT_TRACE, 0, 0, 0, 0) != 0)
