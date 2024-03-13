@@ -1209,6 +1209,7 @@ bool8 HandleFaintedMonActions(void)
             break;
         case 6:
             if (AbilityBattleEffects(ABILITYEFFECT_INTIMIDATE1, 0, 0, 0, 0)
+             || AbilityBattleEffects(ABILITYEFFECT_SLOW_START, 0, 0, 0, 0)
              || AbilityBattleEffects(ABILITYEFFECT_TRACE, 0, 0, 0, 0)
              || ItemBattleEffects(ITEMEFFECT_NORMAL, 0, TRUE)
              || AbilityBattleEffects(ABILITYEFFECT_FORECAST, 0, 0, 0, 0))
@@ -1698,8 +1699,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
         GET_MOVE_TYPE(move, moveType);
 
         if (IS_BATTLE_TYPE_GHOST_WITHOUT_SCOPE(gBattleTypeFlags)
-         && (gLastUsedAbility == ABILITY_INTIMIDATE || gLastUsedAbility == ABILITY_TRACE
-             || gLastUsedAbility == ABILITY_SLOW_START))
+         && (gLastUsedAbility == ABILITY_INTIMIDATE || gLastUsedAbility == ABILITY_TRACE))
             return effect;
 
         switch (caseID)
@@ -1785,9 +1785,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             case ABILITY_SLOW_START:
                 {
                     PlaySE(SE_DING_DONG);
-                    BattleScriptPushCursorAndCallback(BattleScript_SlowStartActivates);
-                    gBattleMons[battler].attack = gBattleMons[battler].attack / 2;
-                    gBattleMons[battler].speed = gBattleMons[battler].speed / 2;
+                    gStatuses3[battler] |= STATUS3_SLOW_START;
                 }
                 break;
             case ABILITY_FORECAST:
@@ -2248,6 +2246,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     gStatuses3[i] &= ~STATUS3_INTIMIDATE_POKES;
                     BattleScriptPushCursorAndCallback(BattleScript_IntimidateActivatesEnd3);
                     gBattleStruct->intimidateBattler = i;
+                    effect++;
+                    break;
+                }
+            }
+            break;
+        case ABILITYEFFECT_SLOW_START: //20
+            for (i = 0; i < gBattlersCount; i++)
+            {
+                if (gBattleMons[i].ability == ABILITY_SLOW_START && gStatuses3[i] & STATUS3_SLOW_START)
+                {
+                    gLastUsedAbility = ABILITY_SLOW_START;
+                    gStatuses3[i] &= ~STATUS3_SLOW_START;
+                    BattleScriptPushCursorAndCallback(BattleScript_SlowStartActivates);
                     effect++;
                     break;
                 }
