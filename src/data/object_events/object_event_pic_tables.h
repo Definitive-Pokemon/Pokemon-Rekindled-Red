@@ -2308,6 +2308,18 @@ static const struct SpriteFrameImage sPicTable_Registeel[] = {
     overworld_frame(gObjectEventPic_Registeel, 4, 4, 0),
 };
 
+static const struct SpriteFrameImage sPicTable_Regigigas[] = {
+    overworld_frame(gObjectEventPic_Regigigas, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Regigigas, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Regigigas, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Regigigas, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Regigigas, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Regigigas, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Regigigas, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Regigigas, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Regigigas, 8, 8, 0),
+};
+
 static const struct SpriteFrameImage sPicTable_Kabutops_Shadow[] = {
     overworld_frame(gObjectEventPic_Kabutops_Shadow, 4, 4, 0),
     overworld_frame(gObjectEventPic_Kabutops_Shadow, 4, 4, 1),

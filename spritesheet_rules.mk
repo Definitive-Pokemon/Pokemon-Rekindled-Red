@@ -573,3 +573,6 @@ $(OBJEVENTGFXDIR)/pokemon/dusclops.4bpp: %.4bpp: %.png
 
 $(OBJEVENTGFXDIR)/pokemon/venusaur.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
+
+$(OBJEVENTGFXDIR)/pokemon/regigigas.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 8

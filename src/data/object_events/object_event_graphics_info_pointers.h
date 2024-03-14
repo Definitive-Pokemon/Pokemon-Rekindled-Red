@@ -198,6 +198,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mudkip;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regirock;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regice;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Registeel;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regigigas;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kabutops_Shadow;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dusclops;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FossilizedKabutops;
@@ -425,6 +426,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_REGIROCK]                 = &gObjectEventGraphicsInfo_Regirock,
     [OBJ_EVENT_GFX_REGICE]                   = &gObjectEventGraphicsInfo_Regice,
     [OBJ_EVENT_GFX_REGISTEEL]                = &gObjectEventGraphicsInfo_Registeel,
+    [OBJ_EVENT_GFX_REGIGIGAS]                = &gObjectEventGraphicsInfo_Regigigas,
     [OBJ_EVENT_GFX_KABUTOPS_SHADOW]          = &gObjectEventGraphicsInfo_Kabutops_Shadow,
     [OBJ_EVENT_GFX_DUSCLOPS]                 = &gObjectEventGraphicsInfo_Dusclops,
     [OBJ_EVENT_GFX_FOSSILIZED_KABUTOPS]      = &gObjectEventGraphicsInfo_FossilizedKabutops,

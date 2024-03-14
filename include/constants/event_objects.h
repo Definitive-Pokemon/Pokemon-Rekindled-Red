@@ -227,7 +227,8 @@
 #define OBJ_EVENT_GFX_DUSCLOPS 222
 #define OBJ_EVENT_GFX_FOSSILIZED_KABUTOPS 223
 #define OBJ_EVENT_GFX_LATIAS_HURT 224
-#define NUM_OBJ_EVENT_GFX     225
+#define OBJ_EVENT_GFX_REGIGIGAS 225
+#define NUM_OBJ_EVENT_GFX     226
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

@@ -482,6 +482,7 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_PETREL 0x1126
 #define OBJ_EVENT_PAL_TAG_DUSCLOPS 0x1126
 #define OBJ_EVENT_PAL_TAG_FOSSILIZED_KABUTOPS 0x1127
+#define OBJ_EVENT_PAL_TAG_FUSION 0x1128
 #define OBJ_EVENT_PAL_TAG_NONE 0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -519,6 +520,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Petrel,                  OBJ_EVENT_PAL_TAG_PETREL},
     {gObjectEventPal_Dusclops,                  OBJ_EVENT_PAL_TAG_DUSCLOPS},
     {gObjectEventPal_FossilizedKabutops,      OBJ_EVENT_PAL_TAG_FOSSILIZED_KABUTOPS},
+    {gObjectEventPal_Fusion,                  OBJ_EVENT_PAL_TAG_FUSION},
     {},
 };
 

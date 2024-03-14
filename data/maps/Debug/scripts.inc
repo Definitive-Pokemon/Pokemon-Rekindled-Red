@@ -20,3 +20,12 @@ Debug_GiveNormalMon::
 	givemon SPECIES_KABUTOPS, 5, ITEM_NONE
 	release
 	end
+
+Debug_TestSprite::
+	lock
+	msgbox Debug_Text1
+	release
+	end
+
+Debug_Text1:
+	.string "Guuuooon!$"

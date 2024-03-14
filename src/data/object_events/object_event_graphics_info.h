@@ -3798,6 +3798,25 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Registeel = {
 	.affineAnims = gDummySpriteAffineAnimTable,
 };
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regigigas = {
+	.tileTag = TAG_NONE,
+	.paletteTag = OBJ_EVENT_PAL_TAG_FUSION,
+	.reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+	.size = 4096,
+	.width = 64,
+	.height = 64,
+	.paletteSlot = PALSLOT_NPC_SPECIAL,
+	.shadowSize = SHADOW_SIZE_XL,
+	.inanimate = FALSE,
+	.disableReflectionPaletteLoad = FALSE,
+	.tracks = TRACKS_FOOT,
+	.oam = &gObjectEventBaseOam_64x64,
+	.subspriteTables = gObjectEventSpriteOamTables_64x64,
+	.anims = sAnimTable_Standard,
+	.images = sPicTable_Regigigas,
+	.affineAnims = gDummySpriteAffineAnimTable,
+};
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kabutops_Shadow = {
 	.tileTag = TAG_NONE,
 	.paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
@@ -3835,8 +3854,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Petrel = {
 	.images = sPicTable_Petrel,
 	.affineAnims = gDummySpriteAffineAnimTable,
 };
-
-// fix upwards
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dusclops = {
 	.tileTag = TAG_NONE,
