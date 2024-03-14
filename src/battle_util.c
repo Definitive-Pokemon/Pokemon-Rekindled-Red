@@ -2250,6 +2250,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     gLastUsedAbility = ABILITY_SLOW_START;
                     gStatuses3[i] &= ~STATUS3_SLOW_START;
                     BattleScriptPushCursorAndCallback(BattleScript_SlowStartActivates);
+                    gBattleScripting.battler = i;
                     effect++;
                     break;
                 }
