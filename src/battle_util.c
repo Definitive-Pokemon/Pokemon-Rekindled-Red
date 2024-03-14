@@ -10,14 +10,12 @@
 #include "field_weather.h"
 #include "event_data.h"
 #include "battle.h"
-#include "sound.h"
 #include "battle_anim.h"
 #include "battle_scripts.h"
 #include "battle_message.h"
 #include "constants/battle_anim.h"
 #include "battle_controllers.h"
 #include "battle_ai_script_commands.h"
-#include "constants/songs.h"
 #include "constants/battle.h"
 #include "constants/moves.h"
 #include "constants/items.h"
@@ -1784,7 +1782,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 break;
             case ABILITY_SLOW_START:
                 {
-                    PlaySE(SE_DING_DONG);
                     gStatuses3[battler] |= STATUS3_SLOW_START;
                 }
                 break;
@@ -2252,7 +2249,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 {
                     gLastUsedAbility = ABILITY_SLOW_START;
                     gStatuses3[i] &= ~STATUS3_SLOW_START;
-                    gActiveBattler = GetBattlerAtPosition(i);
                     BattleScriptPushCursorAndCallback(BattleScript_SlowStartActivates);
                     effect++;
                     break;

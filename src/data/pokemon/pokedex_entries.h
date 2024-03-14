@@ -5038,7 +5038,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .description_FR = gRegigigasPokedexText,
         .description_LG = gDeoxysPokedexText_LG,
         .pokemonScale = 256,
-        .pokemonOffset = 0,
+        .pokemonOffset = -2,
         .trainerScale = 530,
         .trainerOffset = 12,
     },

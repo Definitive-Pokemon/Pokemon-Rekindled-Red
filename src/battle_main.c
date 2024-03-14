@@ -2988,15 +2988,12 @@ static void TryDoEventsBeforeFirstTurn(void)
         gBattleStruct->overworldWeatherDone = TRUE;
         return;
     }
-    
-    PlaySE(SE_EFFECTIVE);
     // Check all switch in abilities happening from the fastest mon to slowest.
     while (gBattleStruct->switchInAbilitiesCounter < gBattlersCount)
     {
         if (AbilityBattleEffects(ABILITYEFFECT_ON_SWITCHIN, gBattlerByTurnOrder[gBattleStruct->switchInAbilitiesCounter], 0, 0, 0) != 0)
             effect++;
         ++gBattleStruct->switchInAbilitiesCounter;
-        PlaySE(SE_NOT_EFFECTIVE);
         if (effect != 0)
             return;
     }
