@@ -33,7 +33,7 @@ SafariZone_NorthEast_EventScript_Anabel::
 	waitse
 	playmoncry SPECIES_LATIAS, CRY_MODE_WEAK
 	waitmoncry
-	delay_16
+	delay 20
 	playmoncry SPECIES_CLEFAIRY, CRY_MODE_ENCOUNTER
 	waitmoncry
 	playse SE_M_COMET_PUNCH
