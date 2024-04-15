@@ -56,6 +56,9 @@ SafariZone_NorthEast_EventScript_Anabel::
 	fadescreen FADE_FROM_BLACK
 	fadeinbgm 1
 	setflag FLAG_HIDE_ANABEL_THIRD
+	clearflag FLAG_HIDE_LATIOS_FOURTH
+	clearflag FLAG_HIDE_CLEFAIRY
+	clearflag FLAG_HIDE_AERODACTYL
 	setvar VAR_LATIAS_FOURTH, 1
 	release
 	end

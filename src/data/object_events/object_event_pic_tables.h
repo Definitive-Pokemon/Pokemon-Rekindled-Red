@@ -2356,16 +2356,16 @@ static const struct SpriteFrameImage sPicTable_FossilizedKabutops[] = {
     overworld_frame(gObjectEventPic_FossilizedKabutops, 4, 4, 0),
 };
 
-static const struct SpriteFrameImage sPicTable_LatiasHurt[] = {
-    overworld_frame(gObjectEventPic_LatiasHurt, 4, 4, 0),
-    overworld_frame(gObjectEventPic_LatiasHurt, 4, 4, 0),
-    overworld_frame(gObjectEventPic_LatiasHurt, 4, 4, 0),
-    overworld_frame(gObjectEventPic_LatiasHurt, 4, 4, 0),
-    overworld_frame(gObjectEventPic_LatiasHurt, 4, 4, 0),
-    overworld_frame(gObjectEventPic_LatiasHurt, 4, 4, 0),
-    overworld_frame(gObjectEventPic_LatiasHurt, 4, 4, 0),
-    overworld_frame(gObjectEventPic_LatiasHurt, 4, 4, 0),
-    overworld_frame(gObjectEventPic_LatiasHurt, 4, 4, 0),
+static const struct SpriteFrameImage sPicTable_FossilizedAerodactyl[] = {
+    overworld_frame(gObjectEventPic_FossilizedAerodactyl, 4, 4, 0),
+    overworld_frame(gObjectEventPic_FossilizedAerodactyl, 4, 4, 0),
+    overworld_frame(gObjectEventPic_FossilizedAerodactyl, 4, 4, 0),
+    overworld_frame(gObjectEventPic_FossilizedAerodactyl, 4, 4, 0),
+    overworld_frame(gObjectEventPic_FossilizedAerodactyl, 4, 4, 0),
+    overworld_frame(gObjectEventPic_FossilizedAerodactyl, 4, 4, 0),
+    overworld_frame(gObjectEventPic_FossilizedAerodactyl, 4, 4, 0),
+    overworld_frame(gObjectEventPic_FossilizedAerodactyl, 4, 4, 0),
+    overworld_frame(gObjectEventPic_FossilizedAerodactyl, 4, 4, 0),
 };
 
 

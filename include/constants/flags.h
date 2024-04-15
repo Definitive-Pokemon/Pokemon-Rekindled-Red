@@ -546,7 +546,7 @@
 #define FLAG_HIDE_MONITORING_STATION_OFFICE_RED_KEY             0x20A
 #define FLAG_HIDE_ROUTE20_UNDERWATER_SHELL_BELL    	            0x20B
 #define FLAG_HIDE_CLEFAIRY						                0x20C
-#define FLAG_0x20D               0x20D
+#define FLAG_HIDE_AERODACTYL                                    0x20D
 #define FLAG_0x20E               0x20E
 #define FLAG_0x20F               0x20F
 #define FLAG_0x210               0x210
@@ -985,9 +985,9 @@
 #define FLAG_HIDE_ANABEL_THIRD         0x3B4
 #define FLAG_HIDE_ANABEL_FOURTH        0x3B5
 #define FLAG_HIDE_LATIAS_FOURTH        0x3B6
+#define FLAG_FLAG_FOUGHT_AERODACTYL    0x3B7
 
 // Unused?
-#define FLAG_0x3B7               0x3B7
 #define FLAG_0x3B8               0x3B8
 #define FLAG_0x3B9               0x3B9
 #define FLAG_0x3BA               0x3BA

@@ -5,10 +5,35 @@
 .set LOCALID_CLEFAIRY3, 5
 .set LOCALID_CLEFAIRY4, 6
 .set LOCALID_CLEFAIRY5, 7
+.set LOCALID_AERODACTYL, 8
 
 
 MtMoon_Square_MapScripts::
 	.byte 0
+
+MtMoon_Square_EventScript_LatiasFinal::
+	lock
+	faceplayer
+	setwildbattle SPECIES_SEVIIAN_AERODACTYL, 70, ITEM_NONE
+	waitse
+	playmoncry SPECIES_LATIAS, 2
+	waitmoncry
+	delay 30
+	applymovement LOCALID_AERODACTYL, MtMoon_Square_Movement_AerodactylScare
+	playmoncry SPECIES_AERODACTYL, CRY_MODE_ECHO_START
+	waitmoncry
+	delay 10
+	waitbuttonpress
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq MtMoon_Square_EventScript_DefeatedAerodactyl
+	setflag FLAG_FOUGHT_AERODACTYL
+	release
+	end
 
 MtMoon_Square_EventScript_Latias4::
 	lockall
@@ -53,7 +78,6 @@ MtMoon_Square_EventScript_Latias4::
 	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_Clefairy4Leave
 	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_Clefairy5Leave
 	waitmovement 0
-	setflag FLAG_HIDE_CLEFAIRY
 	playmoncry SPECIES_LATIAS, CRY_MODE_NORMAL
 	waitmoncry
 	delay 60
@@ -67,6 +91,7 @@ MtMoon_Square_EventScript_Latias4::
 	removeobject LOCALID_CLEFAIRY3
 	removeobject LOCALID_CLEFAIRY4
 	removeobject LOCALID_CLEFAIRY5
+	setflag FLAG_HIDE_CLEFAIRY
 	setvar VAR_LATIAS_FOURTH, 2
 	setvar VAR_LATIAS_FINAL, 1
 	releaseall
