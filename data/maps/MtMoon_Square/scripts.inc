@@ -34,6 +34,19 @@ MtMoon_Square_EventScript_LatiasFinal::
 	setflag FLAG_FOUGHT_AERODACTYL
 	release
 	end
+	
+MtMoon_Square_EventScript_DefeatedAerodactyl::
+	setvar VAR_0x8004, SPECIES_AERODACTYL
+	goto MtMoon_Square_EventScript_AerodactylFled
+	end
+	
+MtMoon_Square_EventScript_AerodactylFled::
+    fadescreenswapbuffers FADE_TO_BLACK
+    removeobject VAR_LAST_TALKED
+    fadescreenswapbuffers FADE_FROM_BLACK
+    msgbox MtMoon_Square_Text_AerodactylFled
+    release
+    end
 
 MtMoon_Square_EventScript_Latias4::
 	lockall
@@ -237,6 +250,16 @@ MtMoon_Square_EventScript_EndReceiveMudkip::
 	setflag FLAG_GOT_MUDKIP
 	release
 	end
+	
+MtMoon_Square_Movement_AerodactylScare::
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	step_end
 	
 MtMoon_Square_Movement_Clefairy1Leave::
 	jump_2_up

@@ -1,3 +1,7 @@
+MtMoon_Square_Text_AerodactylFled::
+    .string "The AERODACTYL faded away\n"
+    .string "into nothingness…$"
+
 MtMoon_Square_Text_Sign::
     .string "This is MT. MOON SQUARE.\p"
 	.string "Please don't litter. Put trash\n"
