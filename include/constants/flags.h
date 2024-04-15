@@ -985,7 +985,7 @@
 #define FLAG_HIDE_ANABEL_THIRD         0x3B4
 #define FLAG_HIDE_ANABEL_FOURTH        0x3B5
 #define FLAG_HIDE_LATIAS_FOURTH        0x3B6
-#define FLAG_FOUGHT_AERODACTYL    0x3B7
+#define FLAG_FOUGHT_AERODACTYL         0x3B7
 
 // Unused?
 #define FLAG_0x3B8               0x3B8
