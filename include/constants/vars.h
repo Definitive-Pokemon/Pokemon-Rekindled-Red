@@ -228,7 +228,7 @@
 #define VAR_LATIAS_FIRST           0x40AF
 #define VAR_LATIAS_THIRD           0x40B0
 #define VAR_LATIAS_FOURTH          0x40B1
-#define VAR_0x40B2                 0x40B2
+#define VAR_LATIAS_FINAL           0x40B2
 #define VAR_0x40B3                 0x40B3
 #define VAR_PORTHOLE               0x40B4
 #define VAR_EVENT_PICHU_SLOT       0x40B5

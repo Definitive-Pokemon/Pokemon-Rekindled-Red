@@ -29,6 +29,8 @@ MtMoon_Square_EventScript_Latias4::
 	playse SE_LEDGE
 	waitse
 	waitmovement 0
+	playmoncry SPECIES_LATIAS, CRY_MODE_NORMAL
+	waitmoncry
 	delay 60
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, MtMoon_Square_Movement_PanToActionFromTop
@@ -36,6 +38,7 @@ MtMoon_Square_EventScript_Latias4::
 	special RemoveCameraObject
 	delay 60
 	setvar VAR_LATIAS_FOURTH, 2
+	setvar VAR_LATIAS_FINAL, 1
 	releaseall
 	end
 

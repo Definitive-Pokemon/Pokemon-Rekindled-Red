@@ -157,6 +157,15 @@
       "var": "VAR_LATIAS_FOURTH",
       "var_value": "1",
       "script": "MtMoon_Square_EventScript_Latias4"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_LATIAS_FINAL",
+      "var_value": "1",
+      "script": "NULL"
     }
   ],
   "bg_events": [
