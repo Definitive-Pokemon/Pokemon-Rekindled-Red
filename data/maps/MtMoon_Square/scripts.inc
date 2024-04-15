@@ -45,11 +45,11 @@ MtMoon_Square_EventScript_Latias4::
 	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_ClefairyLookDown
 	waitse
 	waitmovement 0
-	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_ClefairyLeave
-	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_ClefairyLeave
-	applymovement LOCALID_CLEFAIRY3, MtMoon_Square_Movement_ClefairyLeave
-	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_ClefairyLeave
-	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_ClefairyLeave
+	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_Clefairy1Leave
+	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_Clefairy2Leave
+	applymovement LOCALID_CLEFAIRY3, MtMoon_Square_Movement_Clefairy3Leave
+	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_Clefairy4Leave
+	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_Clefairy5Leave
 	waitmovement 0
 	playmoncry SPECIES_LATIAS, CRY_MODE_NORMAL
 	waitmoncry	
@@ -205,8 +205,7 @@ MtMoon_Square_EventScript_EndReceiveMudkip::
 	release
 	end
 	
-MtMoon_Square_Movement_ClefairyLeave::
-	jump_2_up
+MtMoon_Square_Movement_Clefairy1Leave::
 	jump_2_up
 	jump_2_up
 	jump_2_up
@@ -214,6 +213,29 @@ MtMoon_Square_Movement_ClefairyLeave::
 	jump_2_up
 	step_end
 	
+MtMoon_Square_Movement_Clefairy2Leave::
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	step_end
+	
+MtMoon_Square_Movement_Clefairy3Leave::
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	step_end
+	
+MtMoon_Square_Movement_Clefairy4Leave::
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	step_end
+	
+MtMoon_Square_Movement_Clefairy5Leave::
+	jump_2_up
+	step_end
 	
 MtMoon_Square_Movement_ClefairyLookDown::
 	face_down
