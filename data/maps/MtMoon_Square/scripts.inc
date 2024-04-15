@@ -31,6 +31,7 @@ MtMoon_Square_EventScript_Latias4::
 	waitmovement 0
 	playmoncry SPECIES_LATIAS, CRY_MODE_NORMAL
 	waitmoncry
+	delay 100
 	playse SE_PIN
 	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_MudkipExclamation
 	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_MudkipExclamation
