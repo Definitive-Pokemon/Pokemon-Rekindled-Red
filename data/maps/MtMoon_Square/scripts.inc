@@ -45,6 +45,7 @@ MtMoon_Square_EventScript_Latias4::
 	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_ClefairyLookDown
 	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_ClefairyLookDown
 	waitse
+	delay 30
 	waitmovement 0
 	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_Clefairy1Leave
 	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_Clefairy2Leave
