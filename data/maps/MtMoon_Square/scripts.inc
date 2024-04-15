@@ -31,6 +31,28 @@ MtMoon_Square_EventScript_Latias4::
 	waitmovement 0
 	playmoncry SPECIES_LATIAS, CRY_MODE_NORMAL
 	waitmoncry
+	playse SE_PIN
+	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_MudkipExclamation
+	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_MudkipExclamation
+	applymovement LOCALID_CLEFAIRY3, MtMoon_Square_Movement_MudkipExclamation
+	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_MudkipExclamation
+	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_MudkipExclamation
+	waitmovement 0
+	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_ClefairyLookDown
+	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_ClefairyLookDown
+	applymovement LOCALID_CLEFAIRY3, MtMoon_Square_Movement_ClefairyLookDown
+	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_ClefairyLookDown
+	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_ClefairyLookDown
+	waitse
+	waitmovement 0
+	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_ClefairyLeave
+	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_ClefairyLeave
+	applymovement LOCALID_CLEFAIRY3, MtMoon_Square_Movement_ClefairyLeave
+	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_ClefairyLeave
+	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_ClefairyLeave
+	waitmovement 0
+	playmoncry SPECIES_LATIAS, CRY_MODE_NORMAL
+	waitmoncry	
 	delay 60
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, MtMoon_Square_Movement_PanToActionFromTop
@@ -183,6 +205,20 @@ MtMoon_Square_EventScript_EndReceiveMudkip::
 	release
 	end
 	
+MtMoon_Square_Movement_ClefairyLeave::
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	step_end
+	
+	
+MtMoon_Square_Movement_ClefairyLookDown::
+	look_down
+	step_end
+
 MtMoon_Square_Movement_ClefairyJump1::
 	jump_in_place_up
 	step_end
