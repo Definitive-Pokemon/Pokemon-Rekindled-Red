@@ -40,6 +40,8 @@ SafariZone_NorthEast_EventScript_Anabel::
 	waitse
 	playmoncry SPECIES_AERODACTYL, CRY_MODE_WEAK
 	waitmoncry
+	playse SE_M_FLY
+	waitse
 	playse SE_PIN
 	applymovement LOCALID_ANABEL, SafariZone_NorthEast_Movement_AnabelInterrupt
 	waitmovement 0
