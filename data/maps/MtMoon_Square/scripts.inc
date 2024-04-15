@@ -51,8 +51,14 @@ MtMoon_Square_EventScript_Latias4::
 	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_Clefairy4Leave
 	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_Clefairy5Leave
 	waitmovement 0
+	removeobject LOCALID_CLEFAIRY1
+	removeobject LOCALID_CLEFAIRY2
+	removeobject LOCALID_CLEFAIRY3
+	removeobject LOCALID_CLEFAIRY4
+	removeobject LOCALID_CLEFAIRY5
+	setflag FLAG_HIDE_CLEFAIRY
 	playmoncry SPECIES_LATIAS, CRY_MODE_NORMAL
-	waitmoncry	
+	waitmoncry
 	delay 60
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, MtMoon_Square_Movement_PanToActionFromTop
@@ -234,6 +240,7 @@ MtMoon_Square_Movement_Clefairy4Leave::
 	step_end
 	
 MtMoon_Square_Movement_Clefairy5Leave::
+	jump_2_up
 	jump_2_up
 	step_end
 	
