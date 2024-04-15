@@ -216,7 +216,7 @@ MtMoon_Square_Movement_ClefairyLeave::
 	
 	
 MtMoon_Square_Movement_ClefairyLookDown::
-	look_down
+	face_down
 	step_end
 
 MtMoon_Square_Movement_ClefairyJump1::
