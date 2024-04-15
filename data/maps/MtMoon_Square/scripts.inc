@@ -243,6 +243,7 @@ MtMoon_Square_Movement_Clefairy4Leave::
 MtMoon_Square_Movement_Clefairy5Leave::
 	jump_2_up
 	jump_2_up
+	jump_2_up
 	step_end
 	
 MtMoon_Square_Movement_ClefairyLookDown::
