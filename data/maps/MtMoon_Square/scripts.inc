@@ -1,7 +1,43 @@
 .set LOCALID_MUDKIP, 1
+.set LOCALID_LATIAS, 2
+.set LOCALID_CLEFAIRY1, 3
+.set LOCALID_CLEFAIRY2, 4
+.set LOCALID_CLEFAIRY3, 5
+.set LOCALID_CLEFAIRY4, 6
+.set LOCALID_CLEFAIRY5, 7
+
 
 MtMoon_Square_MapScripts::
 	.byte 0
+
+MtMoon_Square_EventScript_Latias4::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, MtMoon_Square_Movement_FaceUp
+	waitmovement 0
+	delay 60
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, MtMoon_Square_Movement_PanToActionFromBottom
+	waitmovement 0
+	special RemoveCameraObject
+	delay 60
+	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_ClefairyJump
+	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_ClefairyJump
+	applymovement LOCALID_CLEFAIRY3, MtMoon_Square_Movement_ClefairyJump
+	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_ClefairyJump
+	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_ClefairyJump
+	waitse
+	playse SE_LEDGE
+	waitse
+	waitmovement 0
+	delay 60
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, MtMoon_Square_Movement_PanToActionFromTop
+	waitmovement 0
+	special RemoveCameraObject
+	delay 60
+	setvar VAR_LATIAS_FOURTH, 2
+	releaseall
+	end
 
 MtMoon_Square_EventScript_WelcomeSign::
 	msgbox MtMoon_Square_Text_Sign, MSGBOX_SIGN
@@ -143,6 +179,22 @@ MtMoon_Square_EventScript_EndReceiveMudkip::
 	setflag FLAG_GOT_MUDKIP
 	release
 	end
+	
+MtMoon_Square_Movement_PanToActionFromBottom::
+	walk_slow_up
+	walk_slow_up
+	walk_slow_left
+	step_end
+	
+MtMoon_Square_Movement_PanToActionFromTop::
+	walk_slow_right
+	walk_slow_down
+	walk_slow_down
+	step_end
+	
+MtMoon_Square_Movement_FaceUp::
+	walk_in_place_up
+	step_end
 	
 MtMoon_Square_Movement_MudkipExclamation::
 	emote_exclamation_mark

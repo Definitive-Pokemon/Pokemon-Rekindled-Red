@@ -44,6 +44,7 @@ SafariZone_NorthEast_EventScript_Anabel::
 	setflag FLAG_HIDE_ANABEL_SECOND
 	fadescreen FADE_FROM_BLACK
 	clearflag FLAG_HIDE_ANABEL_THIRD
+	setvar VAR_LATIAS_FOURTH, 1
 	release
 	end
 	
