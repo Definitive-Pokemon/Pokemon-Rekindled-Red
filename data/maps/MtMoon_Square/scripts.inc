@@ -20,11 +20,11 @@ MtMoon_Square_EventScript_Latias4::
 	waitmovement 0
 	special RemoveCameraObject
 	delay 60
-	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_ClefairyJump
-	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_ClefairyJump
-	applymovement LOCALID_CLEFAIRY3, MtMoon_Square_Movement_ClefairyJump
-	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_ClefairyJump
-	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_ClefairyJump
+	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_ClefairyJump1
+	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_ClefairyJump2
+	applymovement LOCALID_CLEFAIRY3, MtMoon_Square_Movement_ClefairyJump3
+	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_ClefairyJump4
+	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_ClefairyJump5
 	waitse
 	playse SE_LEDGE
 	waitse
@@ -179,6 +179,26 @@ MtMoon_Square_EventScript_EndReceiveMudkip::
 	setflag FLAG_GOT_MUDKIP
 	release
 	end
+	
+MtMoon_Square_Movement_ClefairyJump1::
+	jump_in_place_up
+	step_end
+	
+MtMoon_Square_Movement_ClefairyJump2::
+	jump_in_place_up
+	step_end
+	
+MtMoon_Square_Movement_ClefairyJump3::
+	jump_in_place_left
+	step_end
+	
+MtMoon_Square_Movement_ClefairyJump4::
+	jump_in_place_right
+	step_end
+	
+MtMoon_Square_Movement_ClefairyJump5::
+	jump_in_place_down
+	step_end
 	
 MtMoon_Square_Movement_PanToActionFromBottom::
 	walk_slow_up
