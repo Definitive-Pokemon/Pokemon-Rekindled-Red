@@ -1,6 +1,6 @@
-MtMoon_Square_Text_AerodactylFled::
-    .string "The AERODACTYL faded away\n"
-    .string "into nothingness…$"
+MtMoon_Square_Text_LatiasFled::
+    .string "The AERODACTYL flew away\n"
+    .string "in the blink of an eye.$"
 
 MtMoon_Square_Text_Sign::
     .string "This is MT. MOON SQUARE.\p"
