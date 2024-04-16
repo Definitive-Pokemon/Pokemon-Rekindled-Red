@@ -61,6 +61,7 @@ MtMoon_Square_EventScript_LatiasFinal::
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
 	goto_if_eq MtMoon_Square_EventScript_RanFromLatias
 	setflag FLAG_FOUGHT_LATIAS
+	goto MtMoon_Square_EventScript_AnabelEnd
 	release
 	end
 
@@ -80,6 +81,7 @@ MtMoon_Square_EventScript_LatiasFled::
     removeobject VAR_LAST_TALKED
     fadescreenswapbuffers FADE_FROM_BLACK
     msgbox MtMoon_Square_Text_LatiasFled
+	goto MtMoon_Square_EventScript_AnabelEnd
     release
     end
 	
