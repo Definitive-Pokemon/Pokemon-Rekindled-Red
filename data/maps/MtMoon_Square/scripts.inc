@@ -18,7 +18,7 @@ MtMoon_Square_EventScript_LatiasFinal::
 	waitse
 	playmoncry SPECIES_LATIAS, 2
 	message MtMoon_Square_Text_Latias
-	waitmessageMtMooLatias
+	waitmessage
 	waitmoncry
 	delay 10
 	waitbuttonpress
