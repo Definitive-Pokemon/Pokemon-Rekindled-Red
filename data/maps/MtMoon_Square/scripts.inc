@@ -94,6 +94,7 @@ MtMoon_Square_EventScript_AnabelEnd::
 	waitmessage
 	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelRight
 	waitmovement 0
+	setflag FLAG_HIDE_ANABEL_FOURTH
 	release
 	end
 
