@@ -35,18 +35,18 @@ MtMoon_Square_EventScript_LatiasFinal::
 	goto_if_eq MtMoon_Square_EventScript_RanFromAerodactyl
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
 	goto_if_eq MtMoon_Square_EventScript_RanFromAerodactyl
-	setflag FLAG_FOUGHT_Aerodactyl
+	setflag FLAG_FOUGHT_AERODACTYL
 	release
 	end
 
 MtMoon_Square_EventScript_DefeatedAerodactyl::
-	setflag FLAG_Aerodactyl_FLED
-	setvar VAR_0x8004, SPECIES_Aerodactyl
+	setflag FLAG_AERODACTYL_FLED
+	setvar VAR_0x8004, SPECIES_AERODACTYL
 	goto MtMoon_Square_EventScript_AerodactylFled
 	end
 
 MtMoon_Square_EventScript_RanFromAerodactyl::
-	setvar VAR_0x8004, SPECIES_Aerodactyl
+	setvar VAR_0x8004, SPECIES_AERODACTYL
 	goto MtMoon_Square_EventScript_AerodactylFled
 	end
 	
