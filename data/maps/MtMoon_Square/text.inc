@@ -32,3 +32,6 @@ MtMoon_Square_Text_MudkipSad::
 
 MtMoon_Square_Text_ObtainedMudkip::
     .string "{PLAYER} obtained a MUDKIP!$"
+
+MtMoon_Square_Text_Latias::
+	.string "Huaaaaann!$"

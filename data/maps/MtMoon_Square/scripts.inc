@@ -17,6 +17,8 @@ MtMoon_Square_EventScript_LatiasFinal::
 	setwildbattle SPECIES_LATIAS, 70, ITEM_NONE
 	waitse
 	playmoncry SPECIES_LATIAS, 2
+	message MtMoon_Square_Text_Latias
+	waitmessageMtMooLatias
 	waitmoncry
 	delay 10
 	waitbuttonpress
