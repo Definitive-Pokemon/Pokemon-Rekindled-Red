@@ -6,14 +6,41 @@
 .set LOCALID_CLEFAIRY4, 6
 .set LOCALID_CLEFAIRY5, 7
 .set LOCALID_LATIAS, 8
+.set LOCALID_ANABEL, 9
 
 
 MtMoon_Square_MapScripts::
 	.byte 0
 
+MtMoon_Square_OnResume::
+	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, MtMoon_Square_EventScript_TryRemoveLatias
+	end
+
+MtMoon_Square_EventScript_TryRemoveLatias::
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_ne EventScript_Return
+	removeobject VAR_LAST_TALKED
+	return
+
+MtMoon_Square_OnTransition::
+	call_if_set FLAG_FOUGHT_LATIAS, MtMoon_Square_EventScript_HideLatias
+	call_if_unset FLAG_FOUGHT_LATIAS, MtMoon_Square_EventScript_TryShowLatias
+	end
+
+MtMoon_Square_EventScript_TryShowLatias::
+	goto_if_set FLAG_LATIAS_FLED, EventScript_Return
+	clearflag FLAG_HIDE_LATIAS
+	return
+
+MtMoon_Square_EventScript_HideLatias::
+	setflag FLAG_HIDE_LATIAS
+	return
+
 MtMoon_Square_EventScript_LatiasFinal::
 	lock
 	faceplayer
+	clearflag FLAG_HIDE_ANABEL_FOURTH
 	setwildbattle SPECIES_LATIAS, 70, ITEM_NONE
 	waitse
 	playmoncry SPECIES_LATIAS, 2
@@ -55,6 +82,20 @@ MtMoon_Square_EventScript_LatiasFled::
     msgbox MtMoon_Square_Text_LatiasFled
     release
     end
+	
+MtMoon_Square_EventScript_AnabelEnd::
+	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelLeft
+	waitmovement 0
+	msgbox MtMoon_Square_Text_AnabelCongrats
+	waitmessage
+	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelDownUp
+	waitmovement 0
+	msgbox MtMoon_Square_Text_AnabelAero
+	waitmessage
+	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelRight
+	waitmovement 0
+	release
+	end
 
 MtMoon_Square_EventScript_Latias4::
 	lockall
@@ -258,16 +299,6 @@ MtMoon_Square_EventScript_EndReceiveMudkip::
 	release
 	end
 	
-MtMoon_Square_Movement_LatiasScare::
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	step_end
-	
 MtMoon_Square_Movement_Clefairy1Leave::
 	jump_2_up
 	jump_2_up
@@ -355,4 +386,36 @@ MtMoon_Square_Movement_MudkipJump3times::
 MtMoon_Square_Movement_MudkipJump2times::
 	jump_in_place_down
 	jump_in_place_down
+	step_end
+	
+MtMoon_Square_Movement_AnabelLeft::
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_in_place_up
+	step_end
+	
+MtMoon_Square_Movement_AnabelDownUp::
+	walk_in_place_down
+	delay_16
+	delay_16
+	walk_in_place_up
+	step_end
+	
+MtMoon_Square_Movement_AnabelRight::
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
 	step_end

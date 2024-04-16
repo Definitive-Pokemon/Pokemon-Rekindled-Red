@@ -35,3 +35,24 @@ MtMoon_Square_Text_ObtainedMudkip::
 
 MtMoon_Square_Text_Latias::
 	.string "Huaaaaann!$"
+	
+MtMoon_Square_Text_AnabelCongrats::
+	.string "You battled LATIAS.\n"
+	.string "Well done…\p" 
+	.string "It seems that LATIAS was hurt by\n"
+	.string "another POKéMON.\p"
+	.string "The CLEFAIRY came to her rescue…$"
+	
+MtMoon_Square_Text_AnabelAero::
+	.string "The offending POKéMON seems to have\n"
+	.string "flown away.\p"
+	.string "Such an aggressive POKéMON…\n"
+	.string "I wonder where it is now.\p"
+	.string "It may be roaming throughout\n"
+	.string "this region.\p"
+	.string "…… …… ……\n"
+	.string "Anyway.\p"
+	.string "It seems I cannot be the one\n"
+	.string "to touch LATIAS' forehead.\p"
+	.string "Maybe it is meant to be\n"
+	.string "a one-time occurrence.$"
