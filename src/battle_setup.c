@@ -482,6 +482,9 @@ void StartLegendaryBattle(void)
 	case SPECIES_FOSSILIZED_KABUTOPS:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RS_VS_WILD);
         break;
+    case SPECIES_SEVIIAN_AERODACTYL:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RS_VS_WILD);
+        break;
     default:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RS_VS_TRAINER);
         break;

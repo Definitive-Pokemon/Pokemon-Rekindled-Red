@@ -5,7 +5,7 @@
 .set LOCALID_CLEFAIRY3, 5
 .set LOCALID_CLEFAIRY4, 6
 .set LOCALID_CLEFAIRY5, 7
-.set LOCALID_AERODACTYL, 8
+.set LOCALID_LATIAS, 8
 
 
 MtMoon_Square_MapScripts::
@@ -14,13 +14,9 @@ MtMoon_Square_MapScripts::
 MtMoon_Square_EventScript_LatiasFinal::
 	lock
 	faceplayer
-	setwildbattle SPECIES_SEVIIAN_AERODACTYL, 70, ITEM_NONE
+	setwildbattle SPECIES_LATIAS, 70, ITEM_NONE
 	waitse
 	playmoncry SPECIES_LATIAS, 2
-	waitmoncry
-	delay 30
-	applymovement LOCALID_AERODACTYL, MtMoon_Square_Movement_AerodactylScare
-	playmoncry SPECIES_AERODACTYL, CRY_MODE_ECHO_START
 	waitmoncry
 	delay 10
 	waitbuttonpress
@@ -30,31 +26,31 @@ MtMoon_Square_EventScript_LatiasFinal::
 	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq MtMoon_Square_EventScript_DefeatedAerodactyl
+	goto_if_eq MtMoon_Square_EventScript_DefeatedLatias
 	compare VAR_RESULT, B_OUTCOME_RAN
-	goto_if_eq MtMoon_Square_EventScript_RanFromAerodactyl
+	goto_if_eq MtMoon_Square_EventScript_RanFromLatias
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
-	goto_if_eq MtMoon_Square_EventScript_RanFromAerodactyl
-	setflag FLAG_FOUGHT_AERODACTYL
+	goto_if_eq MtMoon_Square_EventScript_RanFromLatias
+	setflag FLAG_FOUGHT_LATIAS
 	release
 	end
 
-MtMoon_Square_EventScript_DefeatedAerodactyl::
-	setflag FLAG_AERODACTYL_FLED
-	setvar VAR_0x8004, SPECIES_AERODACTYL
-	goto MtMoon_Square_EventScript_AerodactylFled
+MtMoon_Square_EventScript_DefeatedLatias::
+	setflag FLAG_LATIAS_FLED
+	setvar VAR_0x8004, SPECIES_LATIAS
+	goto MtMoon_Square_EventScript_LatiasFled
 	end
 
-MtMoon_Square_EventScript_RanFromAerodactyl::
-	setvar VAR_0x8004, SPECIES_AERODACTYL
-	goto MtMoon_Square_EventScript_AerodactylFled
+MtMoon_Square_EventScript_RanFromLatias::
+	setvar VAR_0x8004, SPECIES_LATIAS
+	goto MtMoon_Square_EventScript_LatiasFled
 	end
 	
-MtMoon_Square_EventScript_AerodactylFled::
+MtMoon_Square_EventScript_LatiasFled::
     fadescreenswapbuffers FADE_TO_BLACK
     removeobject VAR_LAST_TALKED
     fadescreenswapbuffers FADE_FROM_BLACK
-    msgbox MtMoon_Square_Text_AerodactylFled
+    msgbox MtMoon_Square_Text_LatiasFled
     release
     end
 
@@ -260,7 +256,7 @@ MtMoon_Square_EventScript_EndReceiveMudkip::
 	release
 	end
 	
-MtMoon_Square_Movement_AerodactylScare::
+MtMoon_Square_Movement_LatiasScare::
 	walk_faster_down
 	walk_faster_down
 	walk_faster_down
