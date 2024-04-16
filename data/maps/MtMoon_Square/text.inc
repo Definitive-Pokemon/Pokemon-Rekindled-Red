@@ -1,5 +1,5 @@
 MtMoon_Square_Text_LatiasFled::
-    .string "The AERODACTYL flew away\n"
+    .string "The LATIAS flew away\n"
     .string "in the blink of an eye.$"
 
 MtMoon_Square_Text_Sign::
