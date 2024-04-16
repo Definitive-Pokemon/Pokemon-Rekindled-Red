@@ -31,12 +31,22 @@ MtMoon_Square_EventScript_LatiasFinal::
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq MtMoon_Square_EventScript_DefeatedAerodactyl
-	setflag FLAG_FOUGHT_AERODACTYL
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq MtMoon_Square_EventScript_RanFromAerodactyl
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq MtMoon_Square_EventScript_RanFromAerodactyl
+	setflag FLAG_FOUGHT_Aerodactyl
 	release
 	end
-	
+
 MtMoon_Square_EventScript_DefeatedAerodactyl::
-	setvar VAR_0x8004, SPECIES_AERODACTYL
+	setflag FLAG_Aerodactyl_FLED
+	setvar VAR_0x8004, SPECIES_Aerodactyl
+	goto MtMoon_Square_EventScript_AerodactylFled
+	end
+
+MtMoon_Square_EventScript_RanFromAerodactyl::
+	setvar VAR_0x8004, SPECIES_Aerodactyl
 	goto MtMoon_Square_EventScript_AerodactylFled
 	end
 	
@@ -106,7 +116,6 @@ MtMoon_Square_EventScript_Latias4::
 	removeobject LOCALID_CLEFAIRY5
 	setflag FLAG_HIDE_CLEFAIRY
 	setvar VAR_LATIAS_FOURTH, 2
-	setvar VAR_LATIAS_FINAL, 1
 	releaseall
 	end
 

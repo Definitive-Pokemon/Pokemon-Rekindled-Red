@@ -41,7 +41,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "MtMoon_Square_EventScript_LatiasFinal",
       "flag": "FLAG_HIDE_LATIAS_FOURTH",
       "in_connection": false
     },
@@ -171,15 +171,6 @@
       "var": "VAR_LATIAS_FOURTH",
       "var_value": "1",
       "script": "MtMoon_Square_EventScript_Latias4"
-    },
-    {
-      "type": "trigger",
-      "x": 12,
-      "y": 16,
-      "elevation": 0,
-      "var": "VAR_LATIAS_FINAL",
-      "var_value": "1",
-      "script": "MtMoon_Square_EventScript_LatiasFinal"
     }
   ],
   "bg_events": [
