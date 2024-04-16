@@ -86,6 +86,7 @@ MtMoon_Square_EventScript_LatiasFled::
     end
 	
 MtMoon_Square_EventScript_AnabelEnd::
+	addobject LOCALID_ANABEL
 	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelLeft
 	waitmovement 0
 	msgbox MtMoon_Square_Text_AnabelCongrats
