@@ -40,7 +40,6 @@ MtMoon_Square_EventScript_HideLatias::
 MtMoon_Square_EventScript_LatiasFinal::
 	lock
 	faceplayer
-	clearflag FLAG_HIDE_ANABEL_FOURTH
 	setwildbattle SPECIES_LATIAS, 70, ITEM_NONE
 	waitse
 	playmoncry SPECIES_LATIAS, 2
@@ -86,6 +85,7 @@ MtMoon_Square_EventScript_LatiasFled::
     end
 	
 MtMoon_Square_EventScript_AnabelEnd::
+	clearflag FLAG_HIDE_ANABEL_FOURTH
 	addobject LOCALID_ANABEL
 	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelLeft
 	waitmovement 0
