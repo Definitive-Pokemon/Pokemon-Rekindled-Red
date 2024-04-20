@@ -13,6 +13,7 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent1::
 	lockall
 	setweather WEATHER_FOG_HORIZONTAL
 	doweather
+	delay 60
 	fadescreen FADE_TO_WHITE
 	clearflag FLAG_HIDE_SAMUEL1
 	clearflag FLAG_HIDE_AGATHA1
@@ -46,9 +47,11 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent1::
 	closemessage
 	applymovement LOCALID_SAMUEL, FiveIsland_LostCave_Entrance_Movement_Oak4
 	waitmovement 0
+	playse SE_EXIT
 	removeobject LOCALID_SAMUEL
 	applymovement LOCALID_AGATHA, FiveIsland_LostCave_Entrance_Movement_Agatha3
 	waitmovement 0
+	playse SE_EXIT
 	removeobject LOCALID_AGATHA
 	setflag FLAG_HIDE_SAMUEL1
 	setflag FLAG_HIDE_AGATHA1
