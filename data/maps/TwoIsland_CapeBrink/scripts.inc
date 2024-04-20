@@ -78,7 +78,7 @@ CapeBrink_Movement_AnaLookUp::
 	step_end
 	
 CapeBrink_Movement_AnabelConcentrate::
-	face_away_player
+	walk_in_place_up
 	delay_16
 	delay_16
 	delay_16
