@@ -2,7 +2,7 @@
   "id": "MAP_SEVEN_ISLAND_TANOBY_RUINS_VIAPOIS_CHAMBER",
   "name": "SevenIsland_TanobyRuins_ViapoisChamber",
   "layout": "LAYOUT_SEVEN_ISLAND_TANOBY_RUINS_VIAPOIS_CHAMBER",
-  "music": "MUS_SEALED_CHAMBER",
+  "music": "MUS_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_VIAPOIS_CHAMBER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -13,8 +13,10 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_INDOOR_1",
-  "connections": null,
-  "object_events": [],
+  "connections": 0,
+  "object_events": [
+
+  ],
   "warp_events": [
     {
       "x": 11,
@@ -24,7 +26,11 @@
       "dest_warp_id": "6"
     }
   ],
-  "coord_events": [],
-  "bg_events": [],
-	"level_scaling": "0"
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ],
+  "level_scaling": "0"
 }

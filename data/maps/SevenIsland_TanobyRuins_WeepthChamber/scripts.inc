@@ -11,16 +11,18 @@ SevenIsland_TanobyRuins_WeepthChamber_OnTransition::
 SevenIsland_TanobyRuins_WeepthChamber_EventScript_Entei::
 	lockall
 	message SevenIsland_TanobyRuins_WeepthChamber_Text_EnteiCry
-	closemessage
+	closeonkeypress
 	showmonpic SPECIES_ENTEI, 10, 3
 	delay 20
 	waitbuttonpress
 	hidemonpic
 	setvar VAR_0x8004, SPECIES_ENTEI
 	special SetSeenMon
+	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ENTEI
 	setflag FLAG_HIDE_ENTEI
 	@roaming command
+	fadescreen FADE_FROM_BLACK
 	releaseall
 	end
 	
