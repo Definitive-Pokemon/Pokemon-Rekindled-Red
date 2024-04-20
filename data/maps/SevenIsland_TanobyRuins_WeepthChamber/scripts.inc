@@ -23,6 +23,7 @@ SevenIsland_TanobyRuins_WeepthChamber_EventScript_Entei::
 	setflag FLAG_HIDE_ENTEI
 	@roaming command
 	fadescreen FADE_FROM_BLACK
+	delay 20
 	msgbox SevenIsland_TanobyRuins_WeepthChamber_Text_EnteiGone
 	releaseall
 	end
