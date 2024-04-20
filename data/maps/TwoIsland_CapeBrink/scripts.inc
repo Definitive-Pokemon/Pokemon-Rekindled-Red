@@ -108,7 +108,9 @@ CapeBrink_Movement_AnabelConcentrate::
 	step_end
 	
 CapeBrink_Movement_PlayerTell::
+	lock_facing_direction
 	walk_in_place_up
+	unlock_facing_direction
 	step_end
 
 CapeBrink_EventScript_Helena::
