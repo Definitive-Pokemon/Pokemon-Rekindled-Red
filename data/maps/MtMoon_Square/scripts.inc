@@ -63,7 +63,7 @@ MtMoon_Square_EventScript_LatiasFinal::
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
 	goto_if_eq MtMoon_Square_EventScript_RanFromLatias
 	setflag FLAG_FOUGHT_LATIAS
-	goto MtMoon_Square_EventScript_AnabelEnd
+	call MtMoon_Square_EventScript_AnabelEnd
 	release
 	end
 
@@ -83,6 +83,11 @@ MtMoon_Square_EventScript_LatiasFled::
     removeobject VAR_LAST_TALKED
     fadescreenswapbuffers FADE_FROM_BLACK
     msgbox MtMoon_Square_Text_LatiasFled
+	call MtMoon_Square_EventScript_AnabelEnd
+	release
+	end
+	
+MtMoon_Square_EventScript_AnabelEnd::
 	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelLeft
 	waitmovement 0
 	textcolor 1
@@ -95,8 +100,7 @@ MtMoon_Square_EventScript_LatiasFled::
 	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelRight
 	waitmovement 0
 	setflag FLAG_HIDE_ANABEL_FOURTH
-	release
-	end
+	return
 
 MtMoon_Square_EventScript_Latias4::
 	lockall
