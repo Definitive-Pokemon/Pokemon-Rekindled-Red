@@ -98,7 +98,7 @@ MtMoon_Square_EventScript_AnabelEnd::
 	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelDownUp
 	waitmovement 0
 	msgbox MtMoon_Square_Text_AnabelAero
-	waitmessage
+	closemessage
 	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelRight
 	waitmovement 0
 	setflag FLAG_HIDE_ANABEL_FOURTH
