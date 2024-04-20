@@ -924,7 +924,7 @@
 #define FLAG_CAN_GET_HITMON_2          0x376
 #define FLAG_OAK_HAS_LETTER            0x377
 #define FLAG_OAK_GIVEN_LETTER          0x378
-#define FLAG_SELPHY_RECEIVED_LETTER    0x379
+#define FLAG_HIDE_LOST_HIKER           0x379
 #define FLAG_REGIROCK_DOOR_OPENED      0x37A
 #define FLAG_FOUGHT_REGIROCK           0x37B
 #define FLAG_HIDE_REGIROCK             0x37C
@@ -990,20 +990,20 @@
 #define FLAG_HIDE_ENTEI                0x3B9
 #define FLAG_HIDE_SUICUNE              0x3BA
 #define FLAG_HIDE_RAIKOU               0x3BB
-#define FLAG_HIDE_SAMUEL1              0x3BC
-#define FLAG_HIDE_AGATHA1              0x3BD
+#define FLAG_HIDE_DUO1                 0x3BC
+#define FLAG_HIDE_DUO2                 0x3BD
+#define FLAG_HIDE_DUO3                 0x3BE
+#define FLAG_HIDE_DUO4                 0x3BF
+#define FLAG_HIDE_DUO5                 0x3C0
+#define FLAG_HIDE_DUO6                 0x3C1
 
 // Unused?
-#define FLAG_HIDE_SAMUEL2              0x3BE
-#define FLAG_HIDE_AGATHA2              0x3BF
-#define FLAG_0x3C0               0x3C0
-#define FLAG_0x3C1               0x3C1
-#define FLAG_0x3C2               0x3C2
-#define FLAG_0x3C3               0x3C3
-#define FLAG_0x3C4               0x3C4
-#define FLAG_0x3C5               0x3C5
-#define FLAG_0x3C6               0x3C6
-#define FLAG_0x3C7               0x3C7
+#define FLAG_0x3C2              0x3C2
+#define FLAG_0x3C3              0x3C3
+#define FLAG_0x3C4              0x3C4
+#define FLAG_0x3C5              0x3C5
+#define FLAG_0x3C6              0x3C6
+#define FLAG_0x3C7              0x3C7
 #define FLAG_0x3C8               0x3C8
 #define FLAG_0x3C9               0x3C9
 #define FLAG_0x3CA               0x3CA
