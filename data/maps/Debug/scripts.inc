@@ -71,3 +71,10 @@ GiveMasterBall::
 	giveitem ITEM_MASTER_BALL, 99
 	release
 	end
+	
+GiveLetter::
+	lock
+	giveitem ITEM_LETTER
+	release
+	end
+	
