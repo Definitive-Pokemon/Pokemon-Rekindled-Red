@@ -5196,6 +5196,18 @@
       "secondary_tileset": "gTileset_BerryForest",
       "border_filepath": "data/layouts/Debug/border.bin",
       "blockdata_filepath": "data/layouts/Debug/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRIMORDIAL_ALTAR",
+      "name": "PrimordialAltar_Layout",
+      "width": 15,
+      "height": 15,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/PrimordialAltar/border.bin",
+      "blockdata_filepath": "data/layouts/PrimordialAltar/map.bin"
     }
   ]
 }

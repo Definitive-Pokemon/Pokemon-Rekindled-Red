@@ -316,6 +316,7 @@
 #define MAP_FOUR_ISLAND_BASE                     (68 | (3 << 8))
 #define MAP_KYOGRE_DEN                           (69 | (3 << 8))
 #define MAP_CINNABAR_VOLCANO                     (70 | (3 << 8))
+#define MAP_PRIMORDIAL_ALTAR                     (71 | (3 << 8))
 
 // gMapGroup_IndoorPallet
 #define MAP_PALLET_TOWN_PLAYERS_HOUSE_1F   (0 | (4 << 8))

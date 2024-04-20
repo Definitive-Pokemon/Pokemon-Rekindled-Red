@@ -32,7 +32,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "in_connection": false,
       "x": 12,
       "y": 11,
       "elevation": 3,
@@ -42,12 +41,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_BERRY_FOREST_CUT_TREE_2"
+      "flag": "FLAG_BERRY_FOREST_CUT_TREE_2",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "in_connection": false,
       "x": 19,
       "y": 7,
       "elevation": 3,
@@ -57,12 +56,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_BERRY_FOREST_CUT_TREE_1"
+      "flag": "FLAG_BERRY_FOREST_CUT_TREE_1",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "in_connection": false,
       "x": 23,
       "y": 17,
       "elevation": 3,
@@ -72,12 +71,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_BERRY_FOREST_CUT_TREE_3"
+      "flag": "FLAG_BERRY_FOREST_CUT_TREE_3",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "in_connection": false,
       "x": 38,
       "y": 23,
       "elevation": 3,
@@ -87,12 +86,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_BERRY_FOREST_CUT_TREE_4"
+      "flag": "FLAG_BERRY_FOREST_CUT_TREE_4",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "in_connection": false,
       "x": 44,
       "y": 23,
       "elevation": 3,
@@ -102,12 +101,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_BERRY_FOREST_CUT_TREE_5"
+      "flag": "FLAG_BERRY_FOREST_CUT_TREE_5",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "in_connection": false,
       "x": 44,
       "y": 29,
       "elevation": 3,
@@ -117,12 +116,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_BERRY_FOREST_CUT_TREE_6"
+      "flag": "FLAG_BERRY_FOREST_CUT_TREE_6",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "in_connection": false,
       "x": 16,
       "y": 43,
       "elevation": 3,
@@ -132,12 +131,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_BERRY_FOREST_CUT_TREE_10"
+      "flag": "FLAG_BERRY_FOREST_CUT_TREE_10",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "in_connection": false,
       "x": 17,
       "y": 39,
       "elevation": 3,
@@ -147,12 +146,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_BERRY_FOREST_CUT_TREE_9"
+      "flag": "FLAG_BERRY_FOREST_CUT_TREE_9",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "in_connection": false,
       "x": 14,
       "y": 39,
       "elevation": 3,
@@ -162,12 +161,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_BERRY_FOREST_CUT_TREE_8"
+      "flag": "FLAG_BERRY_FOREST_CUT_TREE_8",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "in_connection": false,
       "x": 11,
       "y": 39,
       "elevation": 3,
@@ -177,12 +176,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_BERRY_FOREST_CUT_TREE_7"
+      "flag": "FLAG_BERRY_FOREST_CUT_TREE_7",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 12,
       "y": 5,
       "elevation": 3,
@@ -192,12 +191,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_BerryForest_EventScript_ItemMaxEther",
-      "flag": "FLAG_HIDE_THREE_ISLAND_BERRY_FOREST_MAX_ETHER"
+      "flag": "FLAG_HIDE_THREE_ISLAND_BERRY_FOREST_MAX_ETHER",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 27,
       "y": 11,
       "elevation": 3,
@@ -207,12 +206,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_BerryForest_EventScript_ItemFullHeal",
-      "flag": "FLAG_HIDE_THREE_ISLAND_BERRY_FOREST_FULL_HEAL"
+      "flag": "FLAG_HIDE_THREE_ISLAND_BERRY_FOREST_FULL_HEAL",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 12,
       "y": 43,
       "elevation": 3,
@@ -222,11 +221,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_BerryForest_EventScript_ItemMaxElixir",
-      "flag": "FLAG_HIDE_THREE_ISLAND_BERRY_FOREST_MAX_ELIXIR"
+      "flag": "FLAG_HIDE_THREE_ISLAND_BERRY_FOREST_MAX_ELIXIR",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LATIAS",
-      "in_connection": false,
       "x": 70,
       "y": 22,
       "elevation": 3,
@@ -236,11 +236,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_LATIAS_FIRST"
+      "flag": "FLAG_HIDE_LATIAS_FIRST",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ANABEL",
-      "in_connection": false,
       "x": 65,
       "y": 32,
       "elevation": 3,
@@ -250,7 +251,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ANABEL_FIRST"
+      "flag": "FLAG_HIDE_ANABEL_FIRST",
+      "in_connection": false
     }
   ],
   "warp_events": [
@@ -294,6 +296,13 @@
       "y": 41,
       "elevation": 3,
       "dest_map": "MAP_THREE_ISLAND_BOND_BRIDGE",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 72,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_DEBUG",
       "dest_warp_id": "5"
     }
   ],

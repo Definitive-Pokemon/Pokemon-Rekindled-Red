@@ -18,7 +18,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCK_SMASH_ROCK",
-      "in_connection": false,
       "x": 5,
       "y": 10,
       "elevation": 3,
@@ -28,12 +27,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_RockSmash",
-      "flag": "FLAG_TEMP_12"
+      "flag": "FLAG_TEMP_12",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 5,
       "y": 5,
       "elevation": 3,
@@ -43,12 +42,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FourIsland_EventScript_ItemStarPiece",
-      "flag": "FLAG_HIDE_FOUR_ISLAND_STAR_PIECE"
+      "flag": "FLAG_HIDE_FOUR_ISLAND_STAR_PIECE",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLUE",
-      "in_connection": false,
       "x": 10,
       "y": 24,
       "elevation": 3,
@@ -58,7 +57,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_FOUR_ISLAND_RIVAL"
+      "flag": "FLAG_HIDE_FOUR_ISLAND_RIVAL",
+      "in_connection": false
     }
   ],
   "warp_events": [

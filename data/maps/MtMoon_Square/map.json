@@ -142,6 +142,13 @@
       "elevation": 3,
       "dest_map": "MAP_MT_MOON_1F",
       "dest_warp_id": "4"
+    },
+    {
+      "x": 25,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_DEBUG",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [

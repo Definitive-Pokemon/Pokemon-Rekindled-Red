@@ -1442,3 +1442,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/Debug/scripts.inc"
 	.include "data/maps/Debug/text.inc"
+
+	.include "data/maps/PrimordialAltar/scripts.inc"
+	.include "data/maps/PrimordialAltar/text.inc"
