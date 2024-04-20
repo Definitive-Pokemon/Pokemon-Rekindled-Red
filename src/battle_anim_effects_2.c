@@ -1278,9 +1278,9 @@ const struct SpriteTemplate gCrushGripAwayTemplate =
     .tileTag = ANIM_TAG_GRAB_AWAY,
     .paletteTag = ANIM_TAG_GRAB_AWAY,
     .oam = &gOamData_AffineOff_ObjNormal_64x64,
-    .anims = gDummySpriteAnimTable,
     .images = NULL,
     .anims = sCrushGripAnimTable,
+    .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimCrushGrip,
 };
 
@@ -1289,9 +1289,9 @@ const struct SpriteTemplate gCrushGripTowardTemplate =
     .tileTag = ANIM_TAG_GRAB_TOWARDS,
     .paletteTag = ANIM_TAG_GRAB_TOWARDS,
     .oam = &gOamData_AffineOff_ObjNormal_64x64,
-    .anims = gDummySpriteAnimTable,
     .images = NULL,
     .anims = sCrushGripAnimTable,
+    .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimCrushGrip,
 };
 
