@@ -65,3 +65,9 @@ GiveGroudon::
 	givemon SPECIES_GROUDON, 100, ITEM_LEFTOVERS
 	release
 	end
+	
+GiveMasterBall::
+	lock
+	giveitem ITEM_MASTER_BALL, 99
+	release
+	end

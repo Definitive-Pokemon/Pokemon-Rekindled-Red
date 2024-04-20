@@ -90,7 +90,7 @@ MtMoon_Square_EventScript_AnabelEnd::
 	addobject LOCALID_ANABEL
 	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelLeft
 	waitmovement 0
-	textcolor 1 
+	textcolor 1
 	msgbox MtMoon_Square_Text_AnabelCongrats
 	waitmessage
 	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelDownUp

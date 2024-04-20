@@ -987,11 +987,11 @@
 #define FLAG_HIDE_LATIAS_FOURTH        0x3B6
 #define FLAG_FOUGHT_LATIAS             0x3B7
 #define FLAG_LATIAS_FLED               0x3B8
+#define FLAG_HIDE_ENTEI                0x3B9
+#define FLAG_HIDE_SUICUNE              0x3BA
+#define FLAG_HIDE_RAIKOU               0x3BB
 
 // Unused?
-#define FLAG_0x3B9               0x3B9
-#define FLAG_0x3BA               0x3BA
-#define FLAG_0x3BB               0x3BB
 #define FLAG_0x3BC               0x3BC
 #define FLAG_0x3BD               0x3BD
 #define FLAG_0x3BE               0x3BE
