@@ -11,8 +11,6 @@ SevenIsland_TanobyRuins_WeepthChamber_OnTransition::
 SevenIsland_TanobyRuins_WeepthChamber_EventScript_Entei::
 	lockall
 	showmonpic SPECIES_ENTEI, 10, 3
-	message SevenIsland_TanobyRuins_WeepthChamber_Text_EnteiCry
-	closemessage
 	delay 20
 	waitbuttonpress
 	hidemonpic
@@ -27,9 +25,6 @@ SevenIsland_TanobyRuins_WeepthChamber_EventScript_Entei::
 	msgbox SevenIsland_TanobyRuins_WeepthChamber_Text_EnteiGone
 	releaseall
 	end
-	
-SevenIsland_TanobyRuins_WeepthChamber_Text_EnteiCry::
-	.string "Borlrorl!$"
 	
 SevenIsland_TanobyRuins_WeepthChamber_Text_EnteiGone::
 	.string "ENTEI has ran off to roam\n"
