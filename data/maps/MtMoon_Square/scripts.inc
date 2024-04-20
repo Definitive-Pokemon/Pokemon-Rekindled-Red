@@ -47,6 +47,7 @@ MtMoon_Square_EventScript_LatiasFinal::
 	waitmessage
 	waitmoncry
 	delay 10
+	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartLegendaryBattle

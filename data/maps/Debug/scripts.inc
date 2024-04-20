@@ -30,8 +30,38 @@ Debug_TestSprite::
 Debug_Text1::
 	.string "Guuuooon!$"
 
-GiveStrongMon::
+GiveMewtwo::
 	lock
 	givemon SPECIES_MEWTWO, 100, ITEM_LEFTOVERS
+	release
+	end
+	
+GiveLugia::
+	lock
+	givemon SPECIES_LUGIA, 100, ITEM_LEFTOVERS
+	release
+	end
+	
+GiveHoOh::
+	lock
+	givemon SPECIES_HO_OH, 100, ITEM_LEFTOVERS
+	release
+	end
+	
+GiveRayquaza::
+	lock
+	givemon SPECIES_RAYQUAZA, 100, ITEM_LEFTOVERS
+	release
+	end
+	
+GiveKyogre::
+	lock
+	givemon SPECIES_KYOGRE, 100, ITEM_LEFTOVERS
+	release
+	end
+	
+GiveGroudon::
+	lock
+	givemon SPECIES_GROUDON, 100, ITEM_LEFTOVERS
 	release
 	end
