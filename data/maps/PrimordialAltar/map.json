@@ -18,7 +18,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 7,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_ONE_ISLAND_TREASURE_BEACH",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
