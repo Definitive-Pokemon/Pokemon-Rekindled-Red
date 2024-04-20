@@ -80,6 +80,7 @@ MtMoon_Square_EventScript_LatiasFled::
     removeobject VAR_LAST_TALKED
     fadescreenswapbuffers FADE_FROM_BLACK
     msgbox MtMoon_Square_Text_LatiasFled
+	closemessage
 	call MtMoon_Square_EventScript_AnabelEnd
 	release
 	end
