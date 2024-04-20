@@ -3920,7 +3920,7 @@ static void HandleEndTurn_BattleLost(void)
                 gBattleCommunication[MULTISTRING_CHOOSER] = 2; // Do white out text
             gBattlerAttacker = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
         }
-        else if (GetTrainerBattleMode() == TRAINER_BATTLE_NO_WHITEOUT)
+        else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && GetTrainerBattleMode() == TRAINER_BATTLE_NO_WHITEOUT)
         {
             gBattleCommunication[MULTISTRING_CHOOSER] = 1;
         }
