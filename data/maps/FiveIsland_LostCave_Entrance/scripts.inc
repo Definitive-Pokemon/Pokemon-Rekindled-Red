@@ -18,34 +18,34 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent1::
 	addobject LOCALID_AGATHA
 	fadescreen FADE_FROM_WHITE
 	delay 20
-	applymovement FiveIsland_LostCave_Entrance_Movement_AgathaMove1
+	applymovement FiveIsland_LostCave_Entrance_Movement_Agatha1
 	waitmovement 0
 	textcolor 1
-	msgbox FiveIsland_LostCave_Entrance_Text_AgathaText1
+	msgbox FiveIsland_LostCave_Entrance_Text_Agatha1
 	closemessage
-	applymovement FiveIsland_LostCave_Entrance_Movement_OakMove1
+	applymovement FiveIsland_LostCave_Entrance_Movement_Oak1
 	waitmovement 0
 	textcolor 0
-	msgbox FiveIsland_LostCave_Entrance_Text_OakText1
+	msgbox FiveIsland_LostCave_Entrance_Text_Oak1
 	closemessage
-	applymovement FiveIsland_LostCave_Entrance_Movement_AgathaMove2
+	applymovement FiveIsland_LostCave_Entrance_Movement_Agatha2
 	waitmovement 0
 	textcolor 1
-	msgbox FiveIsland_LostCave_Entrance_Text_AgathaText2
+	msgbox FiveIsland_LostCave_Entrance_Text_Agatha2
 	closemessage
-	applymovement FiveIsland_LostCave_Entrance_Movement_OakMove2
+	applymovement FiveIsland_LostCave_Entrance_Movement_Oak2
 	waitmovement 0
 	textcolor 0
-	msgbox FiveIsland_LostCave_Entrance_Text_OakText2
+	msgbox FiveIsland_LostCave_Entrance_Text_Oak2
 	closemessage
-	applymovement FiveIsland_LostCave_Entrance_Movement_OakMove3
+	applymovement FiveIsland_LostCave_Entrance_Movement_Oak3
 	waitmovement 0
-	msgbox FiveIsland_LostCave_Entrance_Text_OakText3
+	msgbox FiveIsland_LostCave_Entrance_Text_Oak3
 	closemessage
-	applymovement FiveIsland_LostCave_Entrance_Movement_OakMove4
+	applymovement FiveIsland_LostCave_Entrance_Movement_Oak4
 	waitmovement 0
 	removeobject LOCALID_SAMUEL
-	applymovement FiveIsland_LostCave_Entrance_Movement_AgathaMove3
+	applymovement FiveIsland_LostCave_Entrance_Movement_Agatha3
 	waitmovement 0
 	removeobject LOCALID_AGATHA
 	setflag FLAG_HIDE_SAMUEL1
@@ -55,4 +55,47 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent1::
 	setvar VAR_CELEBI_EVENT1, 2
 	setvar VAR_CELEBI_EVENT2, 1
 	
+FiveIsland_LostCave_Entrance_Text_Agatha1::
+	.string "So, is this it, sweetheart?$"
 	
+FiveIsland_LostCave_Entrance_Text_Oak1::
+	.string "Yes AGATHA, this is it.$"
+	
+FiveIsland_LostCave_Entrance_Text_Agatha2::
+	.string "So you are about to become more\n"
+	.string "powerful than ever before?$"
+	
+FiveIsland_LostCave_Entrance_Text_Oak2::
+	.string "Yes love, I guess that's correct.$"
+	
+FiveIsland_LostCave_Entrance_Text_Oak2::
+	.string "Well, time to get to business.$"
+	
+FiveIsland_LostCave_Entrance_Movement_Agatha1::
+	walk_in_place_faster_right
+	step_end
+	
+FiveIsland_LostCave_Entrance_Movement_Oak1::
+	walk_in_place_faster_down
+	step_end
+	
+FiveIsland_LostCave_Entrance_Movement_Agatha2::
+	walk_in_place_faster_right
+	step_end
+	
+FiveIsland_LostCave_Entrance_Movement_Oak2::
+	walk_in_place_faster_down
+	step_end
+	
+FiveIsland_LostCave_Entrance_Movement_Oak3::
+	walk_in_place_faster_down
+	step_end
+	
+FiveIsland_LostCave_Entrance_Movement_Oak4::
+	walk_down
+	step_end
+	
+FiveIsland_LostCave_Entrance_Movement_Agatha3::
+	walk_right
+	walk_down
+	step_end
