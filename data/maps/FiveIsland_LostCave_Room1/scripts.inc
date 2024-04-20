@@ -75,15 +75,15 @@ FiveIsland_LostCave_Room1_Text_Agatha3::
 	.string "Stop it, you're making me blush!\p"
 	.string "Let's get a move on!$"
 	
-FiveIsland_LostCave_Room1_Movement_Oak1
+FiveIsland_LostCave_Room1_Movement_Oak1::
 	walk_in_place_right
 	step_end
 	
-FiveIsland_LostCave_Room1_Movement_Agatha1
+FiveIsland_LostCave_Room1_Movement_Agatha1::
 	walk_in_place_left
 	step_end
 	
-FiveIsland_LostCave_Room1_Movement_Agatha2
+FiveIsland_LostCave_Room1_Movement_Agatha2::
 	face_up
 	delay_16
 	face_left
@@ -108,24 +108,24 @@ FiveIsland_LostCave_Room1_Movement_Agatha2
 	delay_16
 	face_right
 	delay_16
-	emote_heart
+	emote_smile
 	delay_16
 	walk_in_place_right
 	step_end
 	
-FiveIsland_LostCave_Room1_Movement_Oak2
+FiveIsland_LostCave_Room1_Movement_Oak2::
 	walk_in_place_left
 	step_end
 	
-FiveIsland_LostCave_Room1_Movement_Oak3
+FiveIsland_LostCave_Room1_Movement_Oak3::
 	walk_in_place_left
 	step_end
 	
-FiveIsland_LostCave_Room1_Movement_Agatha3
+FiveIsland_LostCave_Room1_Movement_Agatha3::
 	walk_in_place_right
 	step_end
 	
-FiveIsland_LostCave_Room1_Movement_Oak4
+FiveIsland_LostCave_Room1_Movement_Oak4::
 	walk_right
 	walk_right
 	walk_right
@@ -133,7 +133,7 @@ FiveIsland_LostCave_Room1_Movement_Oak4
 	walk_in_place_right
 	step_end
 	
-FiveIsland_LostCave_Room1_Movement_Agatha4
+FiveIsland_LostCave_Room1_Movement_Agatha4::
 	walk_right
 	walk_right
 	walk_right
