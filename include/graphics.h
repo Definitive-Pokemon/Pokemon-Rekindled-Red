@@ -3638,6 +3638,8 @@ extern const u32 gBattleAnimBgTilemap_ScaryFaceOpponent[];
 extern const u32 gBattleAnimBgTilemap_ScaryFaceContest[];
 extern const u32 gBattleAnimSpriteGfx_Bird[];
 extern const u32 gBattleAnimSpriteGfx_CrossImpact[];
+extern const u32 gBattleAnimSpriteGfx_GrabHandAway[];
+extern const u32 gBattleAnimSpriteGfx_GrabHandToward[];
 
 // battle anim particle pals
 extern const u32 gBattleAnimSpritePal_Bone[];

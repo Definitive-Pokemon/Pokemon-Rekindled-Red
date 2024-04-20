@@ -104,6 +104,7 @@ static void Cmd_visible(void);
 static void Cmd_teamattack_moveback(void);
 static void Cmd_teamattack_movefwd(void);
 static void Cmd_stopsound(void);
+static void Cmd_jumpnbspanim(void);
 
 #include "data/battle_anim.h"
 
@@ -157,6 +158,7 @@ static void (*const sScriptCmdTable[])(void) =
     Cmd_teamattack_moveback,  // 0x2D
     Cmd_teamattack_movefwd,   // 0x2E
     Cmd_stopsound,            // 0x2F
+    Cmd_jumpnbspanim,        // 0x30
 };
 
 void ClearBattleAnimationVars(void)
@@ -1722,4 +1724,14 @@ static void Cmd_stopsound(void)
     m4aMPlayStop(&gMPlayInfo_SE1);
     m4aMPlayStop(&gMPlayInfo_SE2);
     sBattleAnimScriptPtr++;
+}
+
+//NotBattleSidePlayer
+static void Cmd_jumpnbspanim(void)
+{
+    sBattleAnimScriptPtr++;
+    if (GetBattlerSide(battler) != B_SIDE_PLAYER)
+        sBattleAnimScriptPtr = T2_READ_PTR(sBattleAnimScriptPtr + 3);
+    else
+        sBattleAnimScriptPtr += 4;
 }
