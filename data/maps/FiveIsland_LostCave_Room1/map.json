@@ -68,7 +68,51 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_CELEBI_EVENT2",
+      "var_value": "1",
+      "script": "FiveIsland_LostCave_Entrance_EventScript_CelebiEvent2"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_CELEBI_EVENT2",
+      "var_value": "1",
+      "script": "FiveIsland_LostCave_Entrance_EventScript_CelebiEvent2"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_CELEBI_EVENT2",
+      "var_value": "1",
+      "script": "FiveIsland_LostCave_Entrance_EventScript_CelebiEvent2"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_CELEBI_EVENT2",
+      "var_value": "1",
+      "script": "FiveIsland_LostCave_Entrance_EventScript_CelebiEvent2"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_CELEBI_EVENT2",
+      "var_value": "1",
+      "script": "FiveIsland_LostCave_Entrance_EventScript_CelebiEvent2"
+    }
   ],
   "bg_events": [
 
