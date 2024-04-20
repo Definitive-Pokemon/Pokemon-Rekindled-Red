@@ -52,7 +52,7 @@ MonitoringStation_Pokemon_EventScript_Cage2::
 MonitoringStation_Pokemon_EventScript_GoInCage1::
 	msgbox MonitoringStation_Pokemon_Text_StepInCage
 	closemessage
-	formatwarp MAP_SPECIAL, 255, 0, 0
+	warp MAP_SPECIAL, 255, 0, 0
 	waitstate
 	releaseall
 	end
@@ -60,7 +60,7 @@ MonitoringStation_Pokemon_EventScript_GoInCage1::
 MonitoringStation_Pokemon_EventScript_GoInCage2::
 	msgbox MonitoringStation_Pokemon_Text_StepInCage
 	closemessage
-	formatwarp MAP_SPECIAL, 255, 1, 0
+	warp MAP_SPECIAL, 255, 1, 0
 	waitstate
 	releaseall
 	end

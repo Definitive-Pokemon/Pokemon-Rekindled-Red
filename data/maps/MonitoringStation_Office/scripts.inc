@@ -32,7 +32,7 @@ MonitoringStation_Office_EventScript_Continue::
 	waitmovement 0
 	msgbox MonitoringStation_Office_Text_Done
 	closemessage
-	formatwarp MAP_MONITORING_STATION, 255, 3, 11
+	warp MAP_MONITORING_STATION, 255, 3, 11
 	setvar VAR_GOT_RED_KEY, 2
 	setflag FLAG_HIDE_OFFICE_ADMIN
 	setflag FLAG_ENDGAME
