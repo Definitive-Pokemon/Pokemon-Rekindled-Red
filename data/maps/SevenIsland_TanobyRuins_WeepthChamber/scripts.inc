@@ -10,9 +10,9 @@ SevenIsland_TanobyRuins_WeepthChamber_OnTransition::
 	
 SevenIsland_TanobyRuins_WeepthChamber_EventScript_Entei::
 	lockall
+	showmonpic SPECIES_ENTEI, 10, 3
 	message SevenIsland_TanobyRuins_WeepthChamber_Text_EnteiCry
 	waitbuttonpress
-	showmonpic SPECIES_ENTEI, 10, 3
 	delay 20
 	waitbuttonpress
 	hidemonpic
