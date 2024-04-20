@@ -1280,7 +1280,7 @@ const struct SpriteTemplate gCrushGripAwayTemplate =
     .oam = &gOamData_AffineOff_ObjNormal_64x64,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
-    .affineAnims = sCrushGripAnimTable,
+    .anims = sCrushGripAnimTable,
     .callback = AnimCrushGrip,
 };
 
@@ -1291,7 +1291,7 @@ const struct SpriteTemplate gCrushGripTowardTemplate =
     .oam = &gOamData_AffineOff_ObjNormal_64x64,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
-    .affineAnims = sCrushGripAnimTable,
+    .anims = sCrushGripAnimTable,
     .callback = AnimCrushGrip,
 };
 
