@@ -27,5 +27,11 @@ Debug_TestSprite::
 	release
 	end
 
-Debug_Text1:
+Debug_Text1::
 	.string "Guuuooon!$"
+
+GiveStrongMon::
+	lock
+	givemon SPECIES_MEWTWO, 100, ITEM_LEFTOVERS
+	release
+	end
