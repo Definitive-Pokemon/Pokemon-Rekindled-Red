@@ -9,6 +9,8 @@
 
 
 MtMoon_Square_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MtMoon_Square_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, MtMoon_Square_OnResume
 	.byte 0
 
 MtMoon_Square_OnResume::
