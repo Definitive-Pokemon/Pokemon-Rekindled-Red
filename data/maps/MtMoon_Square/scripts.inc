@@ -105,6 +105,7 @@ MtMoon_Square_EventScript_AnabelEnd::
 	waitmovement 0
 	removeobject LOCALID_ANABEL
 	setflag FLAG_HIDE_ANABEL_FOURTH
+	@roaming Aero activate
 	return
 
 MtMoon_Square_EventScript_Latias4::
