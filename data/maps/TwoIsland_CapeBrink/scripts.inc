@@ -64,17 +64,17 @@ CapeBrink_Text_Anabel4::
 	.string "I am certain we will meet again.$"
 	
 CapeBrink_Movement_AnabelTalkBack::
-	faceplayer
+	walk_in_place_left
 	step_end
 
 CapeBrink_Movement_AnaLookUp::
-	face_away_player
+	walk_in_place_up
 	delay_16
 	delay_16
 	delay_16
 	delay_16
 	delay_16
-	faceplayer
+	walk_in_place_left
 	step_end
 	
 CapeBrink_Movement_AnabelConcentrate::
@@ -104,13 +104,11 @@ CapeBrink_Movement_AnabelConcentrate::
 	delay_16
 	delay_16
 	delay_16
-	faceplayer
+	walk_in_place_left
 	step_end
 	
 CapeBrink_Movement_PlayerTell::
-	lock_facing_direction
-	walk_in_place_up
-	unlock_facing_direction
+	walk_in_place_right
 	step_end
 
 CapeBrink_EventScript_Helena::
