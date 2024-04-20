@@ -5,8 +5,7 @@
 .set LOCALID_CLEFAIRY3, 5
 .set LOCALID_CLEFAIRY4, 6
 .set LOCALID_CLEFAIRY5, 7
-.set LOCALID_LATIAS, 8
-.set LOCALID_ANABEL, 9
+.set LOCALID_ANABEL, 8
 
 
 MtMoon_Square_MapScripts::
@@ -90,7 +89,9 @@ MtMoon_Square_EventScript_AnabelEnd::
 	addobject LOCALID_ANABEL
 	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelLeft
 	waitmovement 0
-	textcolor 1
+	applymovement OBJ_EVENT_ID_PLAYER, MtMoon_Square_Movement_PlayerTurn
+	waitmovement 0
+	textcolor NPC_TEXT_COLOR_FEMALE
 	msgbox MtMoon_Square_Text_AnabelCongrats
 	waitmessage
 	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelDownUp
@@ -423,4 +424,8 @@ MtMoon_Square_Movement_AnabelRight::
 	walk_slow_right
 	walk_slow_right
 	walk_slow_right
+	step_end
+	
+MtMoon_Square_Movement_PlayerTurn::
+	walk_in_place_down
 	step_end
