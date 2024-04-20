@@ -13,7 +13,7 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent1::
 	lockall
 	setweather WEATHER_FOG_HORIZONTAL
 	doweather
-	delay 60
+	delay 100
 	fadescreen FADE_TO_WHITE
 	clearflag FLAG_HIDE_SAMUEL1
 	clearflag FLAG_HIDE_AGATHA1
