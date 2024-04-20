@@ -243,6 +243,7 @@
 #define MAP_FAKE_PALLET1                              (97 | (2 << 8))
 #define MAP_FAKE_PALLET2                              (98 | (2 << 8))
 #define MAP_NEW_MAP1                                  (99 | (2 << 8))
+#define MAP_MARINE_CAVE                               (100 | (2 << 8))
 
 // gMapGroup_TownsAndRoutes
 #define MAP_PALLET_TOWN                          (0 | (3 << 8))

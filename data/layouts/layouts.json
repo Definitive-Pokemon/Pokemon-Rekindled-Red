@@ -5208,6 +5208,18 @@
       "secondary_tileset": "gTileset_NavelRock",
       "border_filepath": "data/layouts/PrimordialAltar/border.bin",
       "blockdata_filepath": "data/layouts/PrimordialAltar/map.bin"
+    },
+    {
+      "id": "LAYOUT_MARINE_CAVE",
+      "name": "MarineCave_Layout",
+      "width": 27,
+      "height": 30,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MarineCave/border.bin",
+      "blockdata_filepath": "data/layouts/MarineCave/map.bin"
     }
   ]
 }

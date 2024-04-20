@@ -1448,3 +1448,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/PrimordialAltar/scripts.inc"
 	.include "data/maps/PrimordialAltar/text.inc"
+
+	.include "data/maps/MarineCave/scripts.inc"
+	.include "data/maps/MarineCave/text.inc"
