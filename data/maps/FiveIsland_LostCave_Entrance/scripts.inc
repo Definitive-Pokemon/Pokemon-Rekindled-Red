@@ -72,23 +72,23 @@ FiveIsland_LostCave_Entrance_Text_Oak3::
 	.string "Well, time to get to business.$"
 	
 FiveIsland_LostCave_Entrance_Movement_Agatha1::
-	walk_in_place_faster_right
+	walk_in_place_right
 	step_end
 	
 FiveIsland_LostCave_Entrance_Movement_Oak1::
-	walk_in_place_faster_down
+	walk_in_place_down
 	step_end
 	
 FiveIsland_LostCave_Entrance_Movement_Agatha2::
-	walk_in_place_faster_right
+	walk_in_place_right
 	step_end
 	
 FiveIsland_LostCave_Entrance_Movement_Oak2::
-	walk_in_place_faster_down
+	walk_in_place_down
 	step_end
 	
 FiveIsland_LostCave_Entrance_Movement_Oak3::
-	walk_in_place_faster_down
+	walk_in_place_down
 	step_end
 	
 FiveIsland_LostCave_Entrance_Movement_Oak4::
