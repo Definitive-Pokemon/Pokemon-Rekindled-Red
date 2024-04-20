@@ -1,3 +1,6 @@
+.set LOCALID_SAMUEL, 1
+.set LOCALID_AGATHA, 2
+
 FiveIsland_LostCave_Entrance_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, FiveIsland_LostCave_Entrance_OnTransition
 	.byte 0
@@ -5,3 +8,51 @@ FiveIsland_LostCave_Entrance_MapScripts::
 FiveIsland_LostCave_Entrance_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_FIVE_ISLAND_LOST_CAVE_ENTRANCE
 	end
+
+FiveIsland_LostCave_Entrance_EventScript_CelebiEvent1::
+	lockall
+	fadescreen FADE_TO_WHITE
+	clearflag FLAG_HIDE_SAMUEL1
+	clearflag FLAG_HIDE_AGATHA1
+	addobject LOCALID_SAMUEL
+	addobject LOCALID_AGATHA
+	fadescreen FADE_FROM_WHITE
+	delay 20
+	applymovement FiveIsland_LostCave_Entrance_Movement_AgathaMove1
+	waitmovement 0
+	textcolor 1
+	msgbox FiveIsland_LostCave_Entrance_Text_AgathaText1
+	closemessage
+	applymovement FiveIsland_LostCave_Entrance_Movement_OakMove1
+	waitmovement 0
+	textcolor 0
+	msgbox FiveIsland_LostCave_Entrance_Text_OakText1
+	closemessage
+	applymovement FiveIsland_LostCave_Entrance_Movement_AgathaMove2
+	waitmovement 0
+	textcolor 1
+	msgbox FiveIsland_LostCave_Entrance_Text_AgathaText2
+	closemessage
+	applymovement FiveIsland_LostCave_Entrance_Movement_OakMove2
+	waitmovement 0
+	textcolor 0
+	msgbox FiveIsland_LostCave_Entrance_Text_OakText2
+	closemessage
+	applymovement FiveIsland_LostCave_Entrance_Movement_OakMove3
+	waitmovement 0
+	msgbox FiveIsland_LostCave_Entrance_Text_OakText3
+	closemessage
+	applymovement FiveIsland_LostCave_Entrance_Movement_OakMove4
+	waitmovement 0
+	removeobject LOCALID_SAMUEL
+	applymovement FiveIsland_LostCave_Entrance_Movement_AgathaMove3
+	waitmovement 0
+	removeobject LOCALID_AGATHA
+	setflag FLAG_HIDE_SAMUEL1
+	setflag FLAG_HIDE_AGATHA1
+	clearflag FLAG_HIDE_SAMUEL2
+	clearflag FLAG_HIDE_AGATHA2
+	setvar VAR_CELEBI_EVENT1, 2
+	setvar VAR_CELEBI_EVENT2, 1
+	
+	

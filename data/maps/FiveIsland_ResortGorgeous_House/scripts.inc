@@ -33,6 +33,7 @@ FiveIsland_ResortGorgeous_House_EventScript_SelphyLetter::
 	call EventScript_RestorePrevTextColor
 	removeitem ITEM_LETTER, 1
 	setflag FLAG_SELPHY_RECEIVED_LETTER
+	setvar VAR_CELEBI_EVENT1, 1
 	playse SE_PIN
 	applymovement LOCALID_SELPHY, Common_Movement_ExclamationMark
 	waitmovement 0

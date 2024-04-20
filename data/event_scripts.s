@@ -983,6 +983,8 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_ENTEI
 	setflag FLAG_HIDE_SUICUNE
 	setflag FLAG_HIDE_RAIKOU
+	setflag FLAG_HIDE_SAMUEL1
+	setflag FLAG_HIDE_AGATHA1
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
 	end
 

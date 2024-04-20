@@ -990,12 +990,12 @@
 #define FLAG_HIDE_ENTEI                0x3B9
 #define FLAG_HIDE_SUICUNE              0x3BA
 #define FLAG_HIDE_RAIKOU               0x3BB
+#define FLAG_HIDE_SAMUEL1              0x3BC
+#define FLAG_HIDE_AGATHA1              0x3BD
 
 // Unused?
-#define FLAG_0x3BC               0x3BC
-#define FLAG_0x3BD               0x3BD
-#define FLAG_0x3BE               0x3BE
-#define FLAG_0x3BF               0x3BF
+#define FLAG_HIDE_SAMUEL2              0x3BE
+#define FLAG_HIDE_AGATHA2              0x3BF
 #define FLAG_0x3C0               0x3C0
 #define FLAG_0x3C1               0x3C1
 #define FLAG_0x3C2               0x3C2
