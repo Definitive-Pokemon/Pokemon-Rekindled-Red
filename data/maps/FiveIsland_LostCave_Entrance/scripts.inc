@@ -68,7 +68,7 @@ FiveIsland_LostCave_Entrance_Text_Agatha2::
 FiveIsland_LostCave_Entrance_Text_Oak2::
 	.string "Yes love, I guess that's correct.$"
 	
-FiveIsland_LostCave_Entrance_Text_Oak2::
+FiveIsland_LostCave_Entrance_Text_Oak3::
 	.string "Well, time to get to business.$"
 	
 FiveIsland_LostCave_Entrance_Movement_Agatha1::
