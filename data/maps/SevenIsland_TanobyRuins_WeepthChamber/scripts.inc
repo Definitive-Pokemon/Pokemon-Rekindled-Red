@@ -23,8 +23,13 @@ SevenIsland_TanobyRuins_WeepthChamber_EventScript_Entei::
 	setflag FLAG_HIDE_ENTEI
 	@roaming command
 	fadescreen FADE_FROM_BLACK
+	msgbox SevenIsland_TanobyRuins_WeepthChamber_Text_EnteiGone
 	releaseall
 	end
 	
 SevenIsland_TanobyRuins_WeepthChamber_Text_EnteiCry::
 	.string "Borlrorl!$"
+	
+SevenIsland_TanobyRuins_WeepthChamber_Text_EnteiGone::
+	.string "ENTEI has ran off to roam\n"
+	.string "the KANTO region.$"
