@@ -101,6 +101,7 @@ MtMoon_Square_EventScript_AnabelEnd::
 	closemessage
 	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelRight
 	waitmovement 0
+	removeobject LOCALID_ANABEL
 	setflag FLAG_HIDE_ANABEL_FOURTH
 	return
 
@@ -410,6 +411,10 @@ MtMoon_Square_Movement_AnabelLeft::
 	
 MtMoon_Square_Movement_AnabelDownUp::
 	walk_in_place_down
+	delay_16
+	delay_16
+	delay_16
+	delay_16
 	delay_16
 	delay_16
 	walk_in_place_up
