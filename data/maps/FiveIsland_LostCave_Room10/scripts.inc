@@ -22,6 +22,7 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent6::
 	delay 60
 	setweather WEATHER_NONE
 	doweather
+	playbgm MUS_DUMMY
 	delay 100
 	applymovement LOCALID_AGATHA, FiveIsland_LostCave_Room10_Movement_Agatha1
 	waitmovement 0
@@ -449,9 +450,9 @@ FiveIsland_LostCave_Room10_Movement_Agatha4::
 	step_end
 	
 FiveIsland_LostCave_Room10_Movement_Agatha5::
-	walk_faster_up
+	walk_fast_up
 	walk_in_place_up
-	walk_faster_down
+	walk_fast_down
 	step_end
 	
 FiveIsland_LostCave_Room10_Movement_Agatha6::
@@ -459,9 +460,9 @@ FiveIsland_LostCave_Room10_Movement_Agatha6::
 	step_end
 	
 FiveIsland_LostCave_Room10_Movement_Agatha7::
-	walk_faster_down
-	walk_faster_down
-	walk_in_place_faster_down
+	walk_fast_down
+	walk_fast_down
+	walk_in_place_fast_down
 	step_end
 	
 FiveIsland_LostCave_Room10_Movement_Oak4::
@@ -469,5 +470,5 @@ FiveIsland_LostCave_Room10_Movement_Oak4::
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
-	walk_in_place_faster_down
+	walk_in_place_fast_down
 	step_end
