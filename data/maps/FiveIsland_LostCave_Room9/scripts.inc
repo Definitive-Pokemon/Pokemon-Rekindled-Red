@@ -77,6 +77,7 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent5::
 	playse SE_EXIT
 	setflag FLAG_HIDE_DUO5
 	clearflag FLAG_HIDE_DUO6
+	clearflag FLAG_HIDE_STORY_CELEBI
 	setvar VAR_CELEBI_EVENT5, 2
 	setvar VAR_CELEBI_EVENT6, 1
 	fadeinbgm 1

@@ -77,10 +77,13 @@ FiveIsland_LostCave_Room10_EventScript_CelebiFled::
     fadescreenswapbuffers FADE_TO_BLACK
     removeobject VAR_LAST_TALKED
     fadescreenswapbuffers FADE_FROM_BLACK
-    msgbox MtMoon_Square_Text_LatiasFled
+    msgbox FiveIsland_LostCave_Room10_Text_CelebiFled
 	closemessage
 	release
 	end
+	
+FiveIsland_LostCave_Room10_Text_CelebiFled::
+	.string "The CELEBI suddenly disappeared.$"
 	
 FiveIsland_LostCave_Entrance_EventScript_CelebiEvent6::
 	lockall
