@@ -94,7 +94,7 @@ FiveIsland_LostCave_Room9_Text_Agatha2::
 	.string "This POKéMON… is really powerful,\n"
 	.string "right?$"
 
-FiveIsland_LostCave_Room9_Text_Oak1::
+FiveIsland_LostCave_Room9_Text_Oak2::
 	.string "So I've heard…$"
 	
 FiveIsland_LostCave_Room9_Text_Agatha3::
