@@ -50,6 +50,7 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent2::
 	setflag FLAG_HIDE_DUO2
 	clearflag FLAG_HIDE_DUO3
 	clearflag FLAG_HIDE_LOST_HIKER
+	delay 20
 	fadescreen FADE_TO_BLACK
 	addobject LOCALID_HIKER
 	fadescreen FADE_FROM_BLACK
