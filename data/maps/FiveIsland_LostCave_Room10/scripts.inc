@@ -62,6 +62,26 @@ FiveIsland_LostCave_Room10_EventScript_Celebi::
 	release
 	end
 	
+FiveIsland_LostCave_Room10_EventScript_DefeatedCelebi::
+	setflag FLAG_CELEBI_FLED
+	setvar VAR_0x8004, SPECIES_CELEBI
+	goto FiveIsland_LostCave_Room10_EventScript_CelebiFled
+	end
+
+FiveIsland_LostCave_Room10_EventScript_RanFromCelebi::
+	setvar VAR_0x8004, SPECIES_CELEBI
+	goto FiveIsland_LostCave_Room10_EventScript_CelebiFled
+	end
+	
+FiveIsland_LostCave_Room10_EventScript_CelebiFled::
+    fadescreenswapbuffers FADE_TO_BLACK
+    removeobject VAR_LAST_TALKED
+    fadescreenswapbuffers FADE_FROM_BLACK
+    msgbox MtMoon_Square_Text_LatiasFled
+	closemessage
+	release
+	end
+	
 FiveIsland_LostCave_Entrance_EventScript_CelebiEvent6::
 	lockall
 	delay 60
