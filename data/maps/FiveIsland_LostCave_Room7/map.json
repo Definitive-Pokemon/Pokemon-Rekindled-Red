@@ -82,7 +82,7 @@
       "elevation": 0,
       "var": "VAR_CELEBI_EVENT4",
       "var_value": "1",
-      "script": "NULL"
+      "script": "FiveIsland_LostCave_Entrance_EventScript_CelebiEvent4"
     },
     {
       "type": "trigger",
@@ -91,7 +91,7 @@
       "elevation": 0,
       "var": "VAR_CELEBI_EVENT4",
       "var_value": "1",
-      "script": "NULL"
+      "script": "FiveIsland_LostCave_Entrance_EventScript_CelebiEvent4"
     },
     {
       "type": "trigger",
@@ -100,7 +100,7 @@
       "elevation": 0,
       "var": "VAR_CELEBI_EVENT4",
       "var_value": "1",
-      "script": "NULL"
+      "script": "FiveIsland_LostCave_Entrance_EventScript_CelebiEvent4"
     }
   ],
   "bg_events": [
