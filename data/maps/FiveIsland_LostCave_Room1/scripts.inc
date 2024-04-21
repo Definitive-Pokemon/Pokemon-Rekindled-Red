@@ -26,7 +26,7 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent2::
 	waitmovement 0
 	applymovement LOCALID_SAMUEL, FiveIsland_LostCave_Room1_Movement_Oak2
 	waitmovement 0
-	msgbox FiveIsland_LostCave_Room1_Text_Agatha1
+	msgbox FiveIsland_LostCave_Room1_Text_Agatha2
 	closemessage
 	applymovement LOCALID_SAMUEL, FiveIsland_LostCave_Room1_Movement_Oak3
 	waitmovement 0
