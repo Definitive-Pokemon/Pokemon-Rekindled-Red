@@ -70,19 +70,18 @@ FiveIsland_LostCave_Room7_Text_Agatha1::
 	.string "This mist is crazy!$"
 	
 FiveIsland_LostCave_Room7_Text_Oak1::
-	.string "Just follow the sound of my voice\p"
+	.string "Just follow the sound of my voice.\p"
 	.string "You're all safe and sound with me.$"
 	
 FiveIsland_LostCave_Room7_Text_Agatha2::
 	.string "Safe and sound, with you?\p"
 	.string "You can't even find your own\n"
 	.string "RUNNING SHOES whenever you\p"
-	.string "go out.\n"
-	.string "Giggle…$"
+	.string "head out.$"
 	
 FiveIsland_LostCave_Room7_Text_Oak2::
-	.string "Should I just leave you\n"
-	.string "behind, then?$"
+	.string "Should I just leave you behind,\n"
+	.string "then?$"
 	
 FiveIsland_LostCave_Room7_Text_Agatha3::
 	.string "Stop joking around and help me!$"
