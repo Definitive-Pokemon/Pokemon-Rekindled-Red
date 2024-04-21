@@ -43,6 +43,7 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent2::
 	waitmovement 0
 	removeobject LOCALID_SAMUEL
 	playse SE_EXIT
+	applymovement LOCALID_AGATHA, FiveIsland_LostCave_Room1_Movement_Agatha5
 	removeobject LOCALID_AGATHA
 	playse SE_EXIT
 	setflag FLAG_HIDE_DUO2
@@ -88,25 +89,37 @@ FiveIsland_LostCave_Room1_Movement_Agatha1::
 FiveIsland_LostCave_Room1_Movement_Agatha2::
 	face_up
 	delay_16
+	delay_16
 	face_left
+	delay_16
 	delay_16
 	face_down
 	delay_16
+	delay_16
 	walk_down
 	walk_down
+	delay_16
 	delay_16
 	walk_in_place_right
+	walk_in_place_right
+	delay_16
 	delay_16
 	walk_left
 	walk_left
 	walk_left
+	delay_16
 	delay_16
 	walk_in_place_down
+	walk_in_place_down
+	delay_16
 	delay_16
 	walk_up
 	walk_up
+	delay_16
 	delay_16
 	walk_in_place_up
+	walk_in_place_up
+	delay_16
 	delay_16
 	face_right
 	delay_16
@@ -140,6 +153,9 @@ FiveIsland_LostCave_Room1_Movement_Agatha4::
 	walk_right
 	walk_right
 	walk_right
+	step_end
+	
+FiveIsland_LostCave_Room1_Movement_Agatha5::
 	walk_right
 	walk_in_place_right
 	step_end
