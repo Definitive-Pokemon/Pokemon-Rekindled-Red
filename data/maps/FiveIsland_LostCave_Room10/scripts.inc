@@ -1,8 +1,7 @@
 .set LOCALID_SELPHY, 1
-.set LOCALID_BALL, 2
-.set LOCALID_SAMUEL, 3
-.set LOCALID_AGATHA, 4
-.set LOCALID_CELEBI, 5
+.set LOCALID_SAMUEL, 2
+.set LOCALID_AGATHA, 3
+.set LOCALID_CELEBI, 4
 
 FiveIsland_LostCave_Room10_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, FiveIsland_LostCave_Room10_OnResume
