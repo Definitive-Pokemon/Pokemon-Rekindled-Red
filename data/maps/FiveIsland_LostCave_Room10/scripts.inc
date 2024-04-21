@@ -72,7 +72,7 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent6::
 	delay 60
 	setweather WEATHER_NONE
 	doweather
-	playbgm MUS_DUMMY
+	playbgm MUS_DUMMY, 0
 	delay 100
 	applymovement LOCALID_AGATHA, FiveIsland_LostCave_Room10_Movement_Agatha1
 	waitmovement 0
