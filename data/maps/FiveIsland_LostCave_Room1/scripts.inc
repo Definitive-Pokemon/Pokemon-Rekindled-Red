@@ -44,6 +44,7 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent2::
 	removeobject LOCALID_SAMUEL
 	playse SE_EXIT
 	applymovement LOCALID_AGATHA, FiveIsland_LostCave_Room1_Movement_Agatha5
+	waitmovement 0
 	removeobject LOCALID_AGATHA
 	playse SE_EXIT
 	setflag FLAG_HIDE_DUO2
