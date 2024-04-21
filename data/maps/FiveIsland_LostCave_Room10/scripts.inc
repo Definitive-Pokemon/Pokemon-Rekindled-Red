@@ -403,7 +403,7 @@ FiveIsland_LostCave_Room10_Text_Oak12::
 	.string "in here!$"
 	
 FiveIsland_LostCave_Room10_Text_Agatha14::
-	.string I know my way around here, OAK!\p"
+	.string "I know my way around here, OAK!\p"
 	.string "Don't be silly!$"
 	
 FiveIsland_LostCave_Room10_Movement_PanToActionFromBottom::
