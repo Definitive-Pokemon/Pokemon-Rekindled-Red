@@ -989,6 +989,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_DUO4
 	setflag FLAG_HIDE_DUO5
 	setflag FLAG_HIDE_DUO6
+	setflag FLAG_HIDE_STORY_CELEBI
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
 	end
 
