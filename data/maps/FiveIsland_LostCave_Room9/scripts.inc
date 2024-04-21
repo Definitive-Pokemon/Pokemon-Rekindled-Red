@@ -64,14 +64,14 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent5::
 	applymovement LOCALID_AGATHA, FiveIsland_LostCave_Room9_Movement_Agatha2
 	applymovement LOCALID_SAMUEL, FiveIsland_LostCave_Room9_Movement_Oak2
 	waitmovement 0
-	applymovement LOCALID_AGATHA, FiveIsland_LostCave_Room9_Movement_Agatha2
+	applymovement LOCALID_AGATHA, FiveIsland_LostCave_Room9_Movement_Agatha3
 	applymovement LOCALID_SAMUEL, FiveIsland_LostCave_Room9_Movement_Oak2
 	waitmovement 0
 	applymovement LOCALID_SAMUEL, FiveIsland_LostCave_Room9_Movement_Oak1
 	waitmovement 0
 	removeobject LOCALID_SAMUEL
 	playse SE_EXIT
-	applymovement LOCALID_AGATHA, FiveIsland_LostCave_Room9_Movement_Agatha3
+	applymovement LOCALID_AGATHA, FiveIsland_LostCave_Room9_Movement_Agatha4
 	waitmovement 0
 	removeobject LOCALID_AGATHA
 	playse SE_EXIT
@@ -136,6 +136,11 @@ FiveIsland_LostCave_Room9_Movement_Oak2::
 	step_end
 	
 FiveIsland_LostCave_Room9_Movement_Agatha3::
+	walk_up
+	walk_in_place_right
+	step_end
+	
+FiveIsland_LostCave_Room9_Movement_Agatha4::
 	walk_right
 	walk_in_place_up
 	step_end
