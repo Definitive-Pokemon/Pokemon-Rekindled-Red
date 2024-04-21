@@ -59,7 +59,7 @@ FiveIsland_LostCave_Room1_Text_Oak1::
 	
 FiveIsland_LostCave_Room1_Text_Agatha1::
 	.string "…always so impulsive.\n"
-	.string "Let me take a good look first$"
+	.string "Let me take a good look first.$"
 	
 FiveIsland_LostCave_Room1_Text_Agatha2::
 	.string "Found it!\p"
