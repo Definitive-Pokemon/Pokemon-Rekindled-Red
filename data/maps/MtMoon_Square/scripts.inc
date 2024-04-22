@@ -32,7 +32,7 @@ MtMoon_Square_OnTransition::
 MtMoon_Square_EventScript_TryShowLatias::
 	goto_if_set FLAG_LATIAS_FLED, EventScript_Return
 	compare_var_to_value VAR_LATIAS_FOURTH, 1
-	goto_if_eq, EventScript_Return
+	goto_if_eq EventScript_Return
 	clearflag FLAG_HIDE_LATIAS_FOURTH
 	return
 
