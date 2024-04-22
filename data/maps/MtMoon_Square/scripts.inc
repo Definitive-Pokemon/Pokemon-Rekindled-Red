@@ -17,6 +17,7 @@ MtMoon_Square_MapScripts::
 MtMoon_Square_OnLoad::
 	compare_var_to_value VAR_LATIAS_FOURTH, 1
 	goto_if_eq EventScript_Return
+	call_if_unset FLAG_FOUGHT_LATIAS, MtMoon_Square_EventScript_TryShowLatias
 	end
 
 MtMoon_Square_OnResume::
@@ -32,11 +33,10 @@ MtMoon_Square_EventScript_TryRemoveLatias::
 
 MtMoon_Square_OnTransition::
 	call_if_set FLAG_FOUGHT_LATIAS, MtMoon_Square_EventScript_HideLatias
-	call_if_unset FLAG_FOUGHT_LATIAS, MtMoon_Square_EventScript_TryShowLatias
 	end
 
 MtMoon_Square_EventScript_TryShowLatias::
-	goto_if_unset FLAG_LATIAS_FLED, EventScript_Return
+	goto_if_set FLAG_LATIAS_FLED, EventScript_Return
 	clearflag FLAG_HIDE_LATIAS_FOURTH
 	return
 
