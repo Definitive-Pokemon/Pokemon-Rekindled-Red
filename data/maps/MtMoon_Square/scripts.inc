@@ -16,8 +16,9 @@ MtMoon_Square_MapScripts::
 
 MtMoon_Square_OnLoad::
 	compare_var_to_value VAR_LATIAS_FOURTH, 1
-	goto_if_eq EventScript_Return
+	goto_if_eq DontShowLatiasYet
 	call_if_unset FLAG_FOUGHT_LATIAS, MtMoon_Square_EventScript_TryShowLatias
+DontShowLatiasYet::
 	end
 
 MtMoon_Square_OnResume::
