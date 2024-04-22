@@ -9,9 +9,15 @@
 
 
 MtMoon_Square_MapScripts::
+    map_script MAP_SCRIPT_ON_LOAD, MtMoon_Square_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, MtMoon_Square_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, MtMoon_Square_OnResume
 	.byte 0
+
+MtMoon_Square_OnLoad::
+	compare_var_to_value VAR_LATIAS_FOURTH, 1
+	goto_if_eq EventScript_Return
+	end
 
 MtMoon_Square_OnResume::
 	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, MtMoon_Square_EventScript_TryRemoveLatias
@@ -30,9 +36,7 @@ MtMoon_Square_OnTransition::
 	end
 
 MtMoon_Square_EventScript_TryShowLatias::
-	goto_if_set FLAG_LATIAS_FLED, EventScript_Return
-	compare_var_to_value VAR_LATIAS_FOURTH, 2
-	goto_if_eq EventScript_Return
+	goto_if_unset FLAG_LATIAS_FLED, EventScript_Return
 	clearflag FLAG_HIDE_LATIAS_FOURTH
 	return
 
