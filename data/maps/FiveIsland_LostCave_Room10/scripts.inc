@@ -453,7 +453,7 @@ FiveIsland_LostCave_Room10_Text_Oak11::
 	.string "Sweet…$"
 	
 FiveIsland_LostCave_Room10_Text_Agatha12::
-	.string "Spare me your 'sweet.'\p"
+	.string "Spare me your sweet-talking.\p"
 	.string "If you won't work towards our future,\n"
 	.string "I'll have to do it myself!$"
 	
