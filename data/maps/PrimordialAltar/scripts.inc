@@ -114,6 +114,10 @@ EventScript_PlaceEmerald::
 	waitstate
 	releaseall
 	end
+	
+EventScript_PlaceNothing::
+	releaseall
+	end
 
 PrimordialAltar_Text_Altar::
 	.string "PLACE ALTAR.$"
