@@ -344,8 +344,6 @@ FiveIsland_LostCave_Room10_Text_Oak3::
 	
 FiveIsland_LostCave_Room10_Text_Agatha4::
 	.string "But what about being the strongest?\p"
-	.string "You said CELEBI rivals LUGIA\n"
-	.string "and HO-OH!\p"
 	.string "This… thing isn't going to secure your\n"
 	.string "future as the CHAMPION of KANTO.$"
 	
