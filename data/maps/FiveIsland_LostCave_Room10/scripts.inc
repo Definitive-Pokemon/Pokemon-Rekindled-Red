@@ -331,8 +331,8 @@ FiveIsland_LostCave_Room10_Text_Agatha3::
 	.string "So what if it is intelligent!\p"
 	.string "You said CELEBI rivals LUGIA\n"
 	.string "and HO-OH!\p"
-	.string "This 'intelligent creature' won't\n"
-	.string "even harm a RATICATE!$"
+	.string "This so-called intelligent creature\n"
+	.string "won't even harm a RATICATE!$"
 	
 FiveIsland_LostCave_Room10_Text_Oak3::
 	.string "Maybe so, but even then…\p"
