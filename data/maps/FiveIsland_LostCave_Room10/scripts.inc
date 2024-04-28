@@ -407,8 +407,8 @@ FiveIsland_LostCave_Room10_Text_Oak8::
 	.string "Yes, that is probably true.\p"
 	.string "But to be honest, I don't care if I\n"
 	.string "get to be CHAMPION or not.\p"
-	.string "I became CHAMPION because I wanted\n"
-	.string "to see what the world has to offer.\p"
+	.string "I came this far because I wanted to\n"
+	.string "see what the world has to offer.\p"
 	.string "There's no need to be CHAMPION just\n"
 	.string "for the sake of it.$"
 	
