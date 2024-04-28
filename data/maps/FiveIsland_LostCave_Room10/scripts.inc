@@ -244,7 +244,7 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent6::
 	setweather WEATHER_SHADE
 	doweather
 	fadescreen FADE_FROM_WHITE
-	fadedefaultbgm 3
+	fadedefaultbgm
 	delay 60
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, FiveIsland_LostCave_Room10_Movement_PanToActionFromTop
