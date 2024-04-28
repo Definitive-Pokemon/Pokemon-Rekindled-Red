@@ -998,12 +998,12 @@
 #define FLAG_HIDE_DUO6                 0x3C1
 #define FLAG_HIDE_STORY_CELEBI         0x3C2
 #define FLAG_FOUGHT_CELEBI             0x3C3
-#define FLAG_CELEBI_FLED              0x3C4
+#define FLAG_CELEBI_FLED               0x3C4
+#define FLAG_UNPLACED_SAPPHIRE         0x3C5
+#define FLAG_UNPLACED_RUBY             0x3C6
+#define FLAG_UNPLACED_EMERALD          0x3C7
 
 // Unused?
-#define FLAG_0x3C5              0x3C5
-#define FLAG_0x3C6              0x3C6
-#define FLAG_0x3C7              0x3C7
 #define FLAG_0x3C8               0x3C8
 #define FLAG_0x3C9               0x3C9
 #define FLAG_0x3CA               0x3CA
