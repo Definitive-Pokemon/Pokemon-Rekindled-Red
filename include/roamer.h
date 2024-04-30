@@ -8,7 +8,6 @@ void StartRoaming(void);
 void UpdateLocationHistoryForRoamer(void);
 void RoamerMoveToOtherLocationSet(void);
 void RoamerMove(void);
-u8 TryStartRoamerEncounter(void);
 u8 TryInitializeRoamerEncounter(struct Pokemon *mon);
 void UpdateRoamerHPStatus(struct Pokemon *mon);
 void SetRoamerInactive(u16 roamerSpecies);
