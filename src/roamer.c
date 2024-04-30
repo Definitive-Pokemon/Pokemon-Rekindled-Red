@@ -89,7 +89,7 @@ static struct Roamer * GetRoamer(u8 slot)
     {
         result = ROAMER(4);
     }
-    return result
+    return result;
 }
 
 void ClearRoamerData(void)
@@ -333,10 +333,7 @@ static u8 SetRoamerDataToMon(struct Pokemon * mon, struct Roamer * slotMon)
     SetMonData(mon, MON_DATA_CUTE, &slotMon->cute);
     SetMonData(mon, MON_DATA_SMART, &slotMon->smart);
     SetMonData(mon, MON_DATA_TOUGH, &slotMon->tough);
-    //for (i = 0; i < MAX_MON_MOVES; i++)
-    //    SetMonMoveSlot(mon, src->moves[i], i);
-    //SetMonData(mon, MON_DATA_HELD_ITEM, &src->heldItem);
-    return &slotMon->level;
+    return slotMon->level;
 }
 
 static u8 AllActiveRoamersAtLocation(u8 mapGroup, u8 mapNum, u8 list[])
