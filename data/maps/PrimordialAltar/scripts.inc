@@ -61,6 +61,9 @@ PrimordialAltar_EventScript_Altar_RubyEmerald::
 	case 127, EventScript_PlaceNothing
 	end
 	
+PrimordialAltar_EventScript_Altar_SapphireEmerald::
+	end
+
 PrimordialAltar_EventScript_Altar_EmeraldOnly::
 	multichoice 19, 5, MULTICHOICE_EMERALD, FALSE
 	case 0, EventScript_PlaceEmerald
