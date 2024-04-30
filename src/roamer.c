@@ -20,10 +20,7 @@ enum
 };
 
 #define MAX_ROAMERS 4
-#define ROAMER (&gSaveBlock1Ptr->roamer)
 #define ROAMER(num) (&gSaveBlock1Ptr->roamer##num)
-EWRAM_DATA u8 sLocationHistory[3][2] = {};
-EWRAM_DATA u8 sRoamerLocation[2] = {};
 
 EWRAM_DATA u8 sLocationHistory[4][3][2] = {};
 EWRAM_DATA u8 sRoamerLocation[4][2] = {};
@@ -74,6 +71,26 @@ static const u8 sRoamerLocations[][7] = {
 #undef ___
 #define NUM_LOCATION_SETS (ARRAY_COUNT(sRoamerLocations) - 1)
 #define NUM_LOCATIONS_PER_SET (ARRAY_COUNT(sRoamerLocations[0]))
+
+static struct Roamer * GetRoamer(u8 slot)
+{
+    struct Roamer * result = ROAMER(1);
+    // get properties of roamer struct?
+    // first get the next free spot
+    if (slot == 2)
+    {
+        result = ROAMER(2);
+    }
+    else if (slot == 3)
+    {
+        result = ROAMER(3);
+    }
+    else if (slot == 4)
+    {
+        result = ROAMER(4);
+    }
+    return result
+}
 
 void ClearRoamerData(void)
 {
@@ -149,31 +166,10 @@ u16 GetRoamerSpecies(void)
     return species;
 }
 
-void CreateInitialRoamerMon(void)
-{
-    struct Pokemon * mon = &gEnemyParty[0];
-    u16 species = GetRoamerSpecies();
-    CreateMon(mon, species, 65, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
-    ROAMER->species = species;
-    ROAMER->level = 65;
-    ROAMER->status = 0;
-    ROAMER->active = TRUE;
-    ROAMER->ivs = GetMonData(mon, MON_DATA_IVS);
-    ROAMER->personality = GetMonData(mon, MON_DATA_PERSONALITY);
-    ROAMER->hp = GetMonData(mon, MON_DATA_MAX_HP);
-    ROAMER->cool = GetMonData(mon, MON_DATA_COOL);
-    ROAMER->beauty = GetMonData(mon, MON_DATA_BEAUTY);
-    ROAMER->cute = GetMonData(mon, MON_DATA_CUTE);
-    ROAMER->smart = GetMonData(mon, MON_DATA_SMART);
-    ROAMER->tough = GetMonData(mon, MON_DATA_TOUGH);
-    sRoamerLocation[MAP_GRP] = ROAMER_MAP_GROUP;
-    sRoamerLocation[MAP_NUM] = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
-}
-
 void UpdateLocationHistoryForRoamer(void)
 {
     u32 i;
-    for (i = 1; i < MAX_ROAMERS + 1; i++)
+    for (i = 0; i < MAX_ROAMERS; i++)
     {
         sLocationHistory[i][2][MAP_GRP] = sLocationHistory[i][1][MAP_GRP];
         sLocationHistory[i][2][MAP_NUM] = sLocationHistory[i][1][MAP_NUM];
@@ -199,7 +195,7 @@ void RoamerMoveToOtherLocationSet(void)
         {
             while (1)
             {
-                mapNum = sRoamerLocations[i][Random() % NUM_LOCATION_SETS][0];
+                mapNum = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
                 if (sRoamerLocation[i][MAP_NUM] != mapNum)
                 {
                     sRoamerLocation[i][MAP_NUM] = mapNum;
@@ -227,14 +223,14 @@ void RoamerMove(void)
             while (locSet < NUM_LOCATION_SETS)
             {
                 // Find the location set that starts with the roamer's current map
-                if (sRoamerLocation[i][MAP_NUM] == sRoamerLocations[i][locSet][0])
+                if (sRoamerLocation[i][MAP_NUM] == sRoamerLocations[locSet][0])
                 {
                     u8 mapNum;
                     while (1)
                     {
                         // Choose a new map (excluding the first) within this set
                         // Also exclude a map if the roamer was there 2 moves ago
-                        mapNum = sRoamerLocations[i][locSet][(Random() % (NUM_LOCATIONS_PER_SET - 1)) + 1];
+                        mapNum = sRoamerLocations[locSet][(Random() % (NUM_LOCATIONS_PER_SET - 1)) + 1];
                         if (!(sLocationHistory[i][2][MAP_GRP] == ROAMER_MAP_GROUP
                         && sLocationHistory[i][2][MAP_NUM] == mapNum)
                         && mapNum != MAP_NUM(UNDEFINED))
@@ -258,7 +254,7 @@ static bool8 IsSpeciesActiveRoamer(u16 species, struct Roamer * possibleSlot)
         slotData = GetRoamer(i);
         if (slotData->active)
         {
-            if (slotData->species == GetMonData(mon, MON_DATA_SPECIES))
+            if (slotData->species == species)
             {
                 possibleSlot = slotData;
                 return TRUE;
@@ -435,26 +431,6 @@ static void AssignNewLocationToRoamer(u8 slot)
 }
 
 
-static struct Roamer * GetRoamer(u8 slot)
-{
-    struct Roamer * result = ROAMER(1);
-    // get properties of roamer struct?
-    // first get the next free spot
-    if (slot == 2)
-    {
-        result = ROAMER(2);
-    }
-    else if (slot == 3)
-    {
-        result = ROAMER(3);
-    }
-    else if (slot == 4)
-    {
-        result = ROAMER(4);
-    }
-    return result
-}
-
 void StartRoaming(u8 mon)
 {
     // first get the next free spot
@@ -462,25 +438,25 @@ void StartRoaming(u8 mon)
     {
         // temp
         InsertRoamerMon(&ROAMER(1), mon);
-        AssignNewLocationToRoamer(1-1);
+        AssignNewLocationToRoamer(0);
     }
     else if (!ROAMER(2)->active)
     {
         // temp
         InsertRoamerMon(&ROAMER(2), mon);
-        AssignNewLocationToRoamer(2-1);
+        AssignNewLocationToRoamer(1);
     }
     else if (!ROAMER(3)->active)
     {
         // temp
         InsertRoamerMon(&ROAMER(3), mon);
-        AssignNewLocationToRoamer(3-1);
+        AssignNewLocationToRoamer(2);
     }
     else if (!ROAMER(4)->active)
     {
         // temp
         InsertRoamerMon(&ROAMER(4), mon);
-        AssignNewLocationToRoamer(4-1);
+        AssignNewLocationToRoamer(3);
     }
 }
 

@@ -52,12 +52,12 @@
     friendship = 0,                             \
     }
 
-const struct BattleTowerPokemon * gRoamersTable[] = 
-[
+const struct BattleTowerPokemon gRoamersTable[] = 
+{
     {},
     ROAMING_MON(SPECIES_ENTEI, 65),
     ROAMING_MON(SPECIES_SUICINE, 65),
     ROAMING_MON(SPECIES_RAIKOU, 65),
     ROAMING_MON(SPECIES_SEVIIAN_AERODACTYL, 50),
-];
+};
 
