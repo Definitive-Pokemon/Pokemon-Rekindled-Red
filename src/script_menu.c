@@ -705,6 +705,13 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
 	[MULTICHOICE_SOUTHERN_BIRTH_NAVEL]                       = MULTICHOICE(sMultichoiceList_SouthernBirthNavel),
 	[MULTICHOICE_SOUTHERN_BIRTH_NAVEL_FARAWAY]               = MULTICHOICE(sMultichoiceList_SouthernBirthNavelFaraway),
 	[MULTICHOICE_MASTER_YOUNGSTER]                           = MULTICHOICE(sMultichoiceList_MasterYoungster),
+    [MULTICHOICE_NO_STONES]                                       = MULTICHOICE(sMultichoiceList_Exit),
+    [MULTICHOICE_SAPPHIRE]                                       = MULTICHOICE(sMultichoiceList_Exit),
+    [MULTICHOICE_RUBYSAPPHIRE]                                       = MULTICHOICE(sMultichoiceList_Exit),
+    [MULTICHOICE_RUBY]                                       = MULTICHOICE(sMultichoiceList_Exit),
+    [MULTICHOICE_RUBYEMERALD]                                       = MULTICHOICE(sMultichoiceList_Exit),
+    [MULTICHOICE_EMERALD]                                       = MULTICHOICE(sMultichoiceList_Exit),
+    [MULTICHOICE_ALLSTONES]                                       = MULTICHOICE(sMultichoiceList_Exit),
 };
 
 // From Cool to Berries goes unused
