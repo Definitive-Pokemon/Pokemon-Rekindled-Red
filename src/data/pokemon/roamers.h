@@ -1,9 +1,11 @@
+#include "pokemon.h"
+
 #define ROAMING_MON(roamerSpecies, roamerLevel) \
 {                                               \
-    species = roamerSpecies,                    \
+    species = (roamerSpecies),                  \
     heldItem = ITEM_NONE,                       \
     moves[MAX_MON_MOVES] = {},                  \
-    level = roamerLevel,                        \
+    level = (roamerLevel),                      \
     ppBonuses = 0,                              \
     hpEV = 0,                                   \
     attackEV = 0,                               \
