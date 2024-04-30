@@ -402,13 +402,13 @@ u8 TryInitializeRoamerEncounter(struct Pokemon *mon)
 
 static void InsertRoamerMon(struct Roamer * slot, u8 template)
 {
-    const struct BattleTowerMon * roamerData = &(gRoamersTable[template]);
+    //struct BattleTowerMon * roamerData = &(gRoamersTable[template]);
     struct Pokemon * mon = &gEnemyParty[0];
-    u16 species = roamerData->species;
-    u8 level = roamerData->level;
-    CreateMon(mon, species, level, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
-    slot->species = species;
-    slot->level = level;
+    //u16 species = roamerData->species;
+    //u8 level = roamerData->level;
+    CreateMon(mon, species, 1, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+    slot->species = SPECIES_BULBASAUR;
+    slot->level = 1;
     slot->status = 0;
     slot->active = TRUE;
     slot->ivs = GetMonData(mon, MON_DATA_IVS);
