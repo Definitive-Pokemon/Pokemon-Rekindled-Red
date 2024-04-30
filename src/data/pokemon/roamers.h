@@ -1,11 +1,11 @@
 #include "pokemon.h"
 
 #define ROAMING_MON(roamerSpecies, roamerLevel) \
-{                                               \
-    species = (roamerSpecies),                  \
+[ROAMER_##roamerSpecies] = {                    \
+    species = SPECIES_##roamerSpecies,          \
     heldItem = ITEM_NONE,                       \
     moves[MAX_MON_MOVES] = {},                  \
-    level = (roamerLevel),                      \
+    level = roamerLevel,                        \
     ppBonuses = 0,                              \
     hpEV = 0,                                   \
     attackEV = 0,                               \
@@ -56,9 +56,10 @@
 
 const struct BattleTowerPokemon gRoamersTable[] = 
 {
-    ROAMING_MON(SPECIES_ENTEI, 65),
-    ROAMING_MON(SPECIES_SUICINE, 65),
-    ROAMING_MON(SPECIES_RAIKOU, 65),
-    ROAMING_MON(SPECIES_SEVIIAN_AERODACTYL, 50),
+    [0] = {},
+    ROAMING_MON(ENTEI, 65),
+    ROAMING_MON(SUICUNE, 65),
+    ROAMING_MON(RAIKOU, 65),
+    ROAMING_MON(SEVIIAN_AERODACTYL, 50),
 };
 
