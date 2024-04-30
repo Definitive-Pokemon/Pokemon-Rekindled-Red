@@ -433,26 +433,22 @@ void StartRoaming(u8 mon)
     // first get the next free spot
     if (!ROAMER(1)->active)
     {
-        // temp
-        InsertRoamerMon(&ROAMER(1), mon);
+        InsertRoamerMon(ROAMER(1), mon);
         AssignNewLocationToRoamer(0);
     }
     else if (!ROAMER(2)->active)
     {
-        // temp
-        InsertRoamerMon(&ROAMER(2), mon);
+        InsertRoamerMon(ROAMER(2), mon);
         AssignNewLocationToRoamer(1);
     }
     else if (!ROAMER(3)->active)
     {
-        // temp
-        InsertRoamerMon(&ROAMER(3), mon);
+        InsertRoamerMon(ROAMER(3), mon);
         AssignNewLocationToRoamer(2);
     }
     else if (!ROAMER(4)->active)
     {
-        // temp
-        InsertRoamerMon(&ROAMER(4), mon);
+        InsertRoamerMon(ROAMER(4), mon);
         AssignNewLocationToRoamer(3);
     }
 }
