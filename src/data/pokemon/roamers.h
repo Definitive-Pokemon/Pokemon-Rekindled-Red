@@ -57,9 +57,5 @@
 const struct BattleTowerPokemon gRoamersTable[] = 
 {
     [0] = {},
-    ROAMING_MON(ENTEI, 65),
-    ROAMING_MON(SUICUNE, 65),
-    ROAMING_MON(RAIKOU, 65),
-    ROAMING_MON(SEVIIAN_AERODACTYL, 50),
 };
 
