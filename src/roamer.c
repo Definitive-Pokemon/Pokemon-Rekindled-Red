@@ -406,7 +406,7 @@ static void InsertRoamerMon(struct Roamer * slot, u8 template)
     struct Pokemon * mon = &gEnemyParty[0];
     //u16 species = roamerData->species;
     //u8 level = roamerData->level;
-    CreateMon(mon, species, 1, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+    CreateMon(mon, SPECIES_BULBASAUR, 1, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
     slot->species = SPECIES_BULBASAUR;
     slot->level = 1;
     slot->status = 0;
