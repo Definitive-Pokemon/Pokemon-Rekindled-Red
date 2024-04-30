@@ -4068,9 +4068,10 @@ static void ReturnFromBattleToOverworld(void)
         if (gBattleTypeFlags & BATTLE_TYPE_ROAMER)
         {
             UpdateRoamerHPStatus(&gEnemyParty[0]);
+            RoamerMoveToOtherLocationSet();
             if ((gBattleOutcome == B_OUTCOME_WON) || gBattleOutcome == B_OUTCOME_CAUGHT) // & with B_OUTCOME_WON (1) will return TRUE and deactivates the roamer.
             {
-                SetRoamerInactive();
+                SetRoamerInactive(GetMonData(&gEnemyParty[0], MON_DATA_SPECIES));
                 if(gBattleOutcome == B_OUTCOME_CAUGHT) //caught roamer
                 {
                     u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, 0);
