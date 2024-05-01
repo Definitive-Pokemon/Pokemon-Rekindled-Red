@@ -300,7 +300,7 @@ void GetRoamerLocation(u16 species, u8 *mapGroup, u8 *mapNum)
 
 u16 GetRoamerLocationMapSectionId(u16 species) 
 {
-    u32 i; //roamer slot
+    u32 i;
     struct Roamer * slotData;
     for (i = 0; i < MAX_ROAMERS; i++)
     {
@@ -402,7 +402,7 @@ u8 TryInitializeRoamerEncounter(struct Pokemon *mon)
 
 static void InsertRoamerMon(struct Roamer * slot, u8 template)
 {
-    //struct BattleTowerMon * roamerData = &(gRoamersTable[template]);
+    struct BattleTowerMon * roamerData = &(gRoamersTable[template]);
     struct Pokemon * mon = &gEnemyParty[0];
     //u16 species = roamerData->species;
     //u8 level = roamerData->level;
