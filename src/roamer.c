@@ -357,7 +357,6 @@ static u8 AllActiveRoamersAtLocation(u8 mapGroup, u8 mapNum, u8 list[])
     return size;
 }
 
-// TODO this random logic is all very simple
 static u8 RandomRoamerFromList(u8 size)
 {
     u8 result = size;
