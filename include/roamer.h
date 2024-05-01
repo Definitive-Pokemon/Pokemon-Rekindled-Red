@@ -4,7 +4,7 @@
 #include "global.h"
 
 void ClearRoamerData(void);
-void StartRoaming(void);
+void StartRoaming(u8 mon);
 void UpdateLocationHistoryForRoamer(void);
 void RoamerMoveToOtherLocationSet(void);
 void RoamerMove(void);
