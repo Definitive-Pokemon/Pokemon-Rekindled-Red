@@ -138,7 +138,7 @@ void RoamerMoveToOtherLocationSet(void)
     // different from the roamer's current map
     for (i = 0; i < MAX_ROAMERS; i++)
     {
-        if (GetRoamer(i + 1)->active)
+        if (GetRoamer(i)->active)
         {
             while (1)
             {
@@ -263,9 +263,8 @@ u16 GetRoamerLocationMapSectionId(u16 species)
 
 static u8 SetRoamerDataToMon(struct Pokemon * mon, struct Roamer * slotMon)
 {
-    // struct BattleTowerPokemon * template = &gRoamersTable[&slotMon->roamerDataIndex];
     u32 status;
-    CreateMonWithIVsPersonality(mon, slotMon->species, slotMon->level, slotMon->ivs, slotMon->personality);
+    CreateMonWithIVsPersonality(mon, gRoamersTable[slotMon->roamerDataIndex].species, gRoamersTable[slotMon->roamerDataIndex].level, slotMon->ivs, slotMon->personality);
     // The roamer's status field is u8, but SetMonData expects status to be u32, so will set the roamer's status
     // using the status field and the following 3 bytes (cool, beauty, and cute).
 #ifdef BUGFIX
