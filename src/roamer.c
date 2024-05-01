@@ -402,7 +402,7 @@ u8 TryInitializeRoamerEncounter(struct Pokemon *mon)
 
 static void InsertRoamerMon(struct Roamer * slot, u8 template)
 {
-    struct BattleTowerMon * roamerData = &(gRoamersTable[template]);
+    const struct BattleTowerMon * roamerData = &(gRoamersTable[template]);
     struct Pokemon * mon = &gEnemyParty[0];
     //u16 species = roamerData->species;
     //u8 level = roamerData->level;
