@@ -3,7 +3,8 @@ Debug_MapScripts::
 
 Debug_GiveFormMon::
 	lock
-	givemon SPECIES_REGIGIGAS, 5, ITEM_NONE
+	givemon SPECIES_RAIKOU, 5, ITEM_NONE
+	startroaming ROAMER_RAIKOU
 	release
 	end
 
@@ -17,7 +18,8 @@ Debug_Battle::
 
 Debug_GiveNormalMon::
 	lock
-	givemon SPECIES_KABUTOPS, 5, ITEM_NONE
+	givemon SPECIES_ENTEI, 5, ITEM_NONE
+	startroaming ROAMER_ENTEI
 	release
 	end
 
