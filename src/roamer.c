@@ -113,59 +113,6 @@ void ClearRoamerData(void)
     }
 }
 
-u16 GetRoamerSpecies(void)
-{
-    u16 species = SPECIES_NONE;
-    u16 starter = GetStarterSpecies();
-
-    switch(starter)
-    {
-        case SPECIES_ELEKID:
-            if(!FlagGet(FLAG_CAUGHT_RAIKOU))
-            {
-                species = SPECIES_RAIKOU;
-            }
-            else if(!FlagGet(FLAG_CAUGHT_ENTEI))
-            {
-                species = SPECIES_ENTEI;
-            }
-            else
-            {
-                species = SPECIES_SUICUNE;
-            }
-            break;
-        case SPECIES_MAGBY:
-            if(!FlagGet(FLAG_CAUGHT_ENTEI))
-            {
-                species = SPECIES_ENTEI;
-            }
-            else if(!FlagGet(FLAG_CAUGHT_SUICUNE))
-            {
-                species = SPECIES_SUICUNE;
-            }
-            else
-            {
-                species = SPECIES_RAIKOU;
-            }
-            break;
-        case SPECIES_SMOOCHUM:
-            if(!FlagGet(FLAG_CAUGHT_SUICUNE))
-            {
-                species = SPECIES_SUICUNE;
-            }
-            else if(!FlagGet(FLAG_CAUGHT_RAIKOU))
-            {
-                species = SPECIES_RAIKOU;
-            }
-            else
-            {
-                species = SPECIES_ENTEI;
-            }
-            break;
-    }
-    return species;
-}
-
 void UpdateLocationHistoryForRoamer(void)
 {
     u32 i;
