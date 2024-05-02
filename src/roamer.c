@@ -129,27 +129,32 @@ void UpdateLocationHistoryForRoamer(void)
     }
 }
 
-void RoamerMoveToOtherLocationSet(void)
+void SlotRoamerMoveToOtherLocationSet(u8 slot)
 {
     u8 mapNum = 0;
-    u32 i;
-
     // Choose a location set that starts with a map
     // different from the roamer's current map
-    for (i = 0; i < MAX_ROAMERS; i++)
+    if (GetRoamer(slot)->active)
     {
-        if (GetRoamer(i)->active)
+        while (1)
         {
-            while (1)
+            mapNum = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
+            if (sRoamerLocation[slot][MAP_NUM] != mapNum)
             {
-                mapNum = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
-                if (sRoamerLocation[i][MAP_NUM] != mapNum)
-                {
-                    sRoamerLocation[i][MAP_NUM] = mapNum;
-                    return;
-                }
+                sRoamerLocation[slot][MAP_NUM] = mapNum;
+                return;
             }
         }
+    }
+}
+
+
+void RoamerMoveToOtherLocationSet(void)
+{
+    u32 i;
+    for (i = 0; i < MAX_ROAMERS; i++)
+    {
+        SlotRoamerMoveToOtherLocationSet(i);
     }
 }
 
@@ -163,7 +168,7 @@ void RoamerMove(void)
             continue;
         if ((Random() % 16) == 0)
         {
-            RoamerMoveToOtherLocationSet();
+            SlotRoamerMoveToOtherLocationSet(i);
         }
         else
         {
