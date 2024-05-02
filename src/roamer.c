@@ -77,15 +77,15 @@ static struct Roamer * GetRoamer(u8 slot)
     struct Roamer * result = ROAMER(1);
     // get properties of roamer struct?
     // first get the next free spot
-    if (slot == 2)
+    if (slot + 1 == 2)
     {
         result = ROAMER(2);
     }
-    else if (slot == 3)
+    else if (slot + 1 == 3)
     {
         result = ROAMER(3);
     }
-    else if (slot == 4)
+    else if (slot + 1 == 4)
     {
         result = ROAMER(4);
     }
@@ -219,8 +219,6 @@ void UpdateRoamerHPStatus(struct Pokemon *mon)
     slotData->status = GetMonData(mon, MON_DATA_STATUS);
 }
 
-
-
 void SetRoamerInactive(u16 roamerSpecies)
 {
     struct Roamer * slot;
@@ -287,7 +285,7 @@ static u8 AllActiveRoamersAtLocation(u8 mapGroup, u8 mapNum, u8 list[])
     u8 size = 0;
     u32 i;
     struct Roamer * slot;
-    for (i = 1; i < MAX_ROAMERS + 1; i++)
+    for (i = 0; i < MAX_ROAMERS; i++)
     {
         slot = GetRoamer(i);
         if (slot->active)
@@ -342,7 +340,7 @@ u8 TryInitializeRoamerEncounter(struct Pokemon *mon)
     {
         return 0;
     }
-    return SetRoamerDataToMon(mon, GetRoamer(select));
+    return SetRoamerDataToMon(mon, GetRoamer(select - 1));
 }
 
 static void InsertRoamerMon(struct Roamer * slot, u8 template)
