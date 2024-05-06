@@ -100,7 +100,7 @@ static struct Roamer * GetRoamer(u8 slot)
     return result;
 }
 
-static u8 * GetRoamerHistory(u8 slot)
+static u8 ** GetRoamerHistory(u8 slot)
 {
     if (slot == 1)
     {
