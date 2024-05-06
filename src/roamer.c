@@ -104,17 +104,17 @@ static u8 ** GetRoamerHistory(u8 slot)
 {
     if (slot == 1)
     {
-        return ROAMER_HISTORY(2);
+        return (u8 **)ROAMER_HISTORY(2);
     }
     else if (slot == 2)
     {
-        return ROAMER_HISTORY(3);
+        return (u8 **)ROAMER_HISTORY(3);
     }
     else if (slot == 3)
     {
-        return ROAMER_HISTORY(4);
+        return (u8 **)ROAMER_HISTORY(4);
     }
-    return ROAMER_HISTORY(1);
+    return (u8 **)ROAMER_HISTORY(1);
 }
 
 static u8 * GetSlotLocation(u8 slot)
