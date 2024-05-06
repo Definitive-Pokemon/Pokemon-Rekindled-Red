@@ -117,21 +117,21 @@ static u8 * GetRoamerHistory(u8 slot)
     return ROAMER_HISTORY(1);
 }
 
-static u8 * GetRoamerLocation(u8 slot)
+static u8 * GetSlotLocation(u8 slot)
 {
     if (slot == 1)
     {
-        return ROAMER_LOCATION(2);
+        return (u8 *)ROAMER_LOCATION(2);
     }
     else if (slot == 2)
     {
-        return ROAMER_LOCATION(3);
+        return (u8 *)ROAMER_LOCATION(3);
     }
     else if (slot == 3)
     {
-        return ROAMER_LOCATION(4);
+        return (u8 *)ROAMER_LOCATION(4);
     }
-    return ROAMER_LOCATION(1);
+    return (u8 *)ROAMER_LOCATION(1);
 }
 
 void ClearRoamerData(void)
@@ -145,9 +145,9 @@ void ClearRoamerData(void)
     
     for (i = 0; i < MAX_ROAMERS; i++)
     {
-        GetRoamerLocation(i)[MAP_GRP] = 0;
-        GetRoamerLocation(i)[MAP_NUM] = 0;
-        for (j = 0; j < ARRAY_COUNT(sLocationHistory); j++)
+        GetSlotLocation(i)[MAP_GRP] = 0;
+        GetSlotLocation(i)[MAP_NUM] = 0;
+        for (j = 0; j < 3; j++)
         {
             GetRoamerHistory(i)[j][MAP_GRP] = 0;
             GetRoamerHistory(i)[j][MAP_NUM] = 0;
@@ -181,9 +181,9 @@ void SlotRoamerMoveToOtherLocationSet(u8 slot)
         while (1)
         {
             mapNum = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
-            if (GetRoamerLocation(slot)[MAP_NUM] != mapNum)
+            if (GetSlotLocation(slot)[MAP_NUM] != mapNum)
             {
-                GetRoamerLocation(slot)[MAP_NUM] = mapNum;
+                GetSlotLocation(slot)[MAP_NUM] = mapNum;
                 return;
             }
         }
@@ -217,7 +217,7 @@ void RoamerMove(void)
             while (locSet < NUM_LOCATION_SETS)
             {
                 // Find the location set that starts with the roamer's current map
-                if (GetRoamerLocation(i)[MAP_NUM] == sRoamerLocations[locSet][0])
+                if (GetSlotLocation(i)[MAP_NUM] == sRoamerLocations[locSet][0])
                 {
                     u8 mapNum;
                     while (1)
@@ -230,7 +230,7 @@ void RoamerMove(void)
                         && mapNum != MAP_NUM(UNDEFINED))
                             break;
                     }
-                    GetRoamerLocation(i)[MAP_NUM] = mapNum;
+                    GetSlotLocation(i)[MAP_NUM] = mapNum;
                     return;
                 }
                 locSet++;
@@ -284,8 +284,8 @@ void GetRoamerLocation(u16 species, u8 *mapGroup, u8 *mapNum)
         slotData = GetRoamer(i);
         if (slotData->species == species)
         {
-                *mapGroup = GetRoamerLocation(i)[MAP_GRP];
-                *mapNum = GetRoamerLocation(i)[MAP_NUM];
+                *mapGroup = GetSlotLocation(i)[MAP_GRP];
+                *mapNum = GetSlotLocation(i)[MAP_NUM];
         }
     }
 }
@@ -301,7 +301,7 @@ u16 GetRoamerLocationMapSectionId(u16 species)
         {
             if (!slotData->active)
                 return MAPSEC_NONE;
-            return Overworld_GetMapHeaderByGroupAndId(GetRoamerLocation(i)[MAP_GRP], GetRoamerLocation(i)[MAP_NUM])->regionMapSectionId;
+            return Overworld_GetMapHeaderByGroupAndId(GetSlotLocation(i)[MAP_GRP], GetSlotLocation(i)[MAP_NUM])->regionMapSectionId;
         }
     }
 }
@@ -337,8 +337,8 @@ static u8 AllActiveRoamersAtLocation(u8 mapGroup, u8 mapNum, u8 list[])
         slot = GetRoamer(i);
         if (slot->active)
         {
-            if (mapGroup == GetRoamerLocation(i)[MAP_GRP] &&
-                mapNum == GetRoamerLocation(i)[MAP_NUM])
+            if (mapGroup == GetSlotLocation(i)[MAP_GRP] &&
+                mapNum == GetSlotLocation(i)[MAP_NUM])
             {
                 list[size] = i;
                 size++;
@@ -412,8 +412,8 @@ static void InsertRoamerMon(struct Roamer * slot, u8 template)
 
 static void AssignNewLocationToRoamer(u8 slot)
 {
-    GetRoamerLocation(slot)[MAP_GRP] = ROAMER_MAP_GROUP;
-    GetRoamerLocation(slot)[MAP_NUM] = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
+    GetSlotLocation(slot)[MAP_GRP] = ROAMER_MAP_GROUP;
+    GetSlotLocation(slot)[MAP_NUM] = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
 }
 
 
