@@ -208,7 +208,7 @@ bool8 DoesPartyHaveEnigmaBerry(void)
 void SetAllTrainersBattled(void)
 {
     u32 flagIndex;
-    for (flagIndex = TRAINER_FLAGS_START; flagIndex < TRAINER_FLASGS_END; flagIndex++)
+    for (flagIndex = TRAINER_FLAGS_START; flagIndex < TRAINER_FLAGS_END; flagIndex++)
     {
         FlagSet(flagIndex);
     }
