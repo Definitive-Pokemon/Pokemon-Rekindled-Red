@@ -205,6 +205,15 @@ bool8 DoesPartyHaveEnigmaBerry(void)
     return hasItem;
 }
 
+void SetAllTrainersBattled(void)
+{
+    u32 flagIndex;
+    for (flagIndex = TRAINER_FLAGS_START; flagIndex < TRAINER_FLASGS_END; flagIndex++)
+    {
+        FlagSet(flagIndex);
+    }
+}
+
 void CreateScriptedWildMon(u16 species, u8 level, u16 item)
 {
     u8 heldItem[2];

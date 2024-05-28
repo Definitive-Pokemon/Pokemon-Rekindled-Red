@@ -342,7 +342,7 @@ gSpecials::
 	def_special LoadPlayerBag
 	def_special Script_FadeOutMapMusic
 	def_special NullFieldSpecial
-	def_special NullFieldSpecial
+	def_special SetAllTrainersBattled
 	def_special HasAllKantoMons
 	def_special IsMonOTNameNotPlayers
 	def_special NullFieldSpecial
