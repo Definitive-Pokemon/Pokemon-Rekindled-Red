@@ -27,8 +27,11 @@ FiveIsland_LostCave_Room10_OnTransition::
 	end
 	
 FiveIsland_LostCave_Room10_EventScript_TryShowCelebi::
+	compare_var_to_value VAR_CELEBI_EVENT6, 0
+	goto_if_eq DontShowCelebiYet
 	goto_if_set FLAG_CELEBI_FLED, EventScript_Return
 	clearflag FLAG_HIDE_STORY_CELEBI
+DontShowCelebiYet::
 	return
 	
 FiveIsland_LostCave_Room10_EventScript_HideCelebi::
