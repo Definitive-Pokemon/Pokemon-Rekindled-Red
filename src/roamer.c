@@ -327,6 +327,7 @@ static u8 SetRoamerDataToMon(struct Pokemon * mon, struct Roamer * slotMon)
     return slotMon->level;
 }
 
+// changes the given list to include zero index roamers and returns amount of roamers active
 static u8 AllActiveRoamersAtLocation(u8 mapGroup, u8 mapNum, u8 list[])
 {
     u8 size = 0;
@@ -350,14 +351,10 @@ static u8 AllActiveRoamersAtLocation(u8 mapGroup, u8 mapNum, u8 list[])
 
 static u8 RandomRoamerFromList(u8 size)
 {
-    u8 result = size;
-    if ((Random() % (MAX_ROAMERS + 1 - size)) == 0)
-    {
-        result = Random() % size;
-    }
-    return result; //larger than list means no roamer encounter should happen
+    return Random() % size; 
 }
 
+// Returns roamer slot index, but as 1,2,3 or 4, instead of zero-based
 static u8 EncounterRoamerSlot()
 {
     u8 numberOfRoamers;
@@ -372,11 +369,11 @@ static u8 EncounterRoamerSlot()
     else
     {
         u8 selectedRoamer = RandomRoamerFromList(numberOfRoamers);
-        if (selectedRoamer == numberOfRoamers)
+        /*if (selectedRoamer == numberOfRoamers)
         {
             return 0;
-        }
-        return localActiveRoamerSlots[selectedRoamer];
+        } impossible to happen anyway, random should select a proper index*/
+        return localActiveRoamerSlots[selectedRoamer] + 1;
     }
 }
 
