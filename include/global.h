@@ -825,7 +825,7 @@ struct SaveBlock1
     /*0x30A7*/ struct ExternalEventData externalEventData;
     /*0x30BB*/ struct ExternalEventFlags externalEventFlags;
     /*0x30D0*/ struct Roamer roamer1;
-               u8 filler_for_roamers[8];
+               u8 filler_for_roamers[0x8];
     /*0x30EC*/ struct EnigmaBerry enigmaBerry;
     /*0x3120*/ struct MysteryGiftSave mysteryGift; //0x36C in length
     /*0x348C*/ u8 unused_348C[176];

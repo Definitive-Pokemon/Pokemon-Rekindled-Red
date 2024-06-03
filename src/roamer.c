@@ -304,6 +304,7 @@ u16 GetRoamerLocationMapSectionId(u16 species)
             return Overworld_GetMapHeaderByGroupAndId(GetSlotLocation(i)[MAP_GRP], GetSlotLocation(i)[MAP_NUM])->regionMapSectionId;
         }
     }
+    return 0;
 }
 
 static u8 SetRoamerDataToMon(struct Pokemon * mon, struct Roamer * slotMon)
@@ -413,29 +414,26 @@ static void AssignNewLocationToRoamer(u8 slot)
     GetSlotLocation(slot)[MAP_NUM] = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
 }
 
-
 void StartRoaming(u8 mon)
 {
-    // first get the next free spot
-    if (!ROAMER(1)->active)
+    u32 i;
+    struct Roamer * current;
+    for (i = 0; i < MAX_ROAMERS; i++)
     {
-        InsertRoamerMon(ROAMER(1), mon);
-        AssignNewLocationToRoamer(0);
-    }
-    else if (!ROAMER(2)->active)
-    {
-        InsertRoamerMon(ROAMER(2), mon);
-        AssignNewLocationToRoamer(1);
-    }
-    else if (!ROAMER(3)->active)
-    {
-        InsertRoamerMon(ROAMER(3), mon);
-        AssignNewLocationToRoamer(2);
-    }
-    else if (!ROAMER(4)->active)
-    {
-        InsertRoamerMon(ROAMER(4), mon);
-        AssignNewLocationToRoamer(3);
+        current = GetRoamer(i);
+        if (!current->active)
+        {
+            InsertRoamerMon(current, mon);
+            AssignNewLocationToRoamer(i);
+            break; // return would be allowed, but is poor coding
+        }
     }
 }
 
+bool8 DEBUG_IsRoamerActiveAt(u8 mapGroup, u8 mapNum)
+{
+    u8 localActiveRoamerSlots[] = {0,0,0,0};
+    if (AllActiveRoamersAtLocation(mapGroup, mapNum, localActiveRoamerSlots) > 0)
+        return TRUE;
+    return FALSE;
+}
