@@ -135,6 +135,6 @@ EventScript_EggHatch::
 	releaseall
 	end
 
-EventScript_RoamerPresence
+EventScript_RoamerPresence::
 	msgbox RoamerPresence_Text
 	end
