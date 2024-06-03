@@ -700,11 +700,6 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
             ScriptContext_SetupScript(EventScript_EggHatch);
             return TRUE;
         }
-        else if (DEBUG_IsRoamerActiveAt(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum))
-        {
-            ScriptContext_SetupScript(EventScript_RoamerPresence);
-            return TRUE;
-        }
     }
     if (SafariZoneTakeStep() == TRUE)
         return TRUE;
