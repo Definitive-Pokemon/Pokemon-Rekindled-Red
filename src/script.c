@@ -897,10 +897,6 @@ static bool8 AllPossibleGymLeadersPresent(void)
     {
         return FALSE;
     }
-    if(BattleHouseVar->toldDaisy && !BattleHouseVar->visitorDaisy)
-    {
-        return FALSE;
-    }
     return TRUE;
 }
 
@@ -948,8 +944,6 @@ void UpdateBattleHouseStepCounter(void)
                     BattleHouseVar->visitorSabrina = 1;
                 if(BattleHouseVar->toldBlaine)
                     BattleHouseVar->visitorBlaine = 1;
-                if(BattleHouseVar->toldDaisy)
-                    BattleHouseVar->visitorDaisy = 1;
                 return;
             }
             if(BattleHouseVar->spearowState)
@@ -964,7 +958,7 @@ void UpdateBattleHouseStepCounter(void)
             {   //Gym Leader visiting, ~18% chance; will start forcing visits after 6 misses
                 u8 counter = 0;
                 do{
-                    u8 leader = Random() % 8;
+                    u8 leader = Random() % 7;
                     switch(leader)
                     {
                         case 0:
@@ -1019,14 +1013,6 @@ void UpdateBattleHouseStepCounter(void)
                             if(BattleHouseVar->toldBlaine && !BattleHouseVar->visitorBlaine)
                             {
                                 BattleHouseVar->visitorBlaine = 1;
-                                BattleHouseVar->spawnFails = 0;
-                                return;
-                            }
-                            break;
-                        case 7:
-                            if(BattleHouseVar->toldDaisy && !BattleHouseVar->visitorDaisy)
-                            {
-                                BattleHouseVar->visitorDaisy = 1;
                                 BattleHouseVar->spawnFails = 0;
                                 return;
                             }
@@ -1086,9 +1072,6 @@ void UseBattleHouseVar(void)
                 case FAMECHECKER_BLAINE:
                     BattleHouseVar->toldBlaine = 1;
                     break;
-                case FAMECHECKER_DAISY:
-                    BattleHouseVar->toldDaisy = 1;
-                    break;
             }
             break;
         case SET_VISITOR_STATE:
@@ -1114,9 +1097,6 @@ void UseBattleHouseVar(void)
                     break;
                 case FAMECHECKER_BLAINE:
                     BattleHouseVar->visitorBlaine ^= 1;
-                    break;
-               case FAMECHECKER_DAISY:
-                    BattleHouseVar->visitorDaisy ^= 1;
                     break;
             }
             break;
@@ -1151,9 +1131,6 @@ void UseBattleHouseVar(void)
                 case FAMECHECKER_BLAINE:
                     gSpecialVar_Result = BattleHouseVar->toldBlaine;
                     break;
-                case FAMECHECKER_DAISY:
-                    gSpecialVar_Result = BattleHouseVar->toldDaisy;
-                    break;
             }
             break;
         case CHECK_VISITOR_STATE:
@@ -1179,9 +1156,6 @@ void UseBattleHouseVar(void)
                     break;
                 case FAMECHECKER_BLAINE:
                     gSpecialVar_Result = BattleHouseVar->visitorBlaine;
-                    break;
-                case FAMECHECKER_DAISY:
-                    gSpecialVar_Result = BattleHouseVar->visitorDaisy;
                     break;
             }
             break;
@@ -1234,11 +1208,6 @@ void UseBattleHouseVar(void)
                 gSpecialVar_Result++;
                 StringCopy(gStringVar1, gText_Blaine);
             }
-            if(BattleHouseVar->visitorDaisy)
-            {
-                gSpecialVar_Result++;
-                StringCopy(gStringVar1, gText_Daisy);
-            }
             break;
         case CHECK_ALL_TOLD:
             gSpecialVar_Result = 0;
@@ -1256,8 +1225,6 @@ void UseBattleHouseVar(void)
                 gSpecialVar_Result++;
             if(BattleHouseVar->toldBlaine)
                 gSpecialVar_Result++;
-            if(BattleHouseVar->toldDaisy)
-                gSpecialVar_Result++;
             break;
         case CREATE_VISITOR_STRING: //used for mailbox outside
             if(BattleHouseVar->visitorBrock)
@@ -1273,8 +1240,6 @@ void UseBattleHouseVar(void)
             if(BattleHouseVar->visitorSabrina)
                 totalCount++;
             if(BattleHouseVar->visitorBlaine)
-                totalCount++;
-            if(BattleHouseVar->visitorDaisy)
                 totalCount++;
             StringCopy(gStringVar1, gExpandedPlaceholder_Empty);
             gSpecialVar_Result = 0;
