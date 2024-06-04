@@ -24,6 +24,7 @@
 #include "load_save.h"
 #include "malloc.h"
 #include "constants/trainers.h"
+#include "constants/songs.h"
 #include "constants/species.h"
 #include "constants/items.h"
 #include "constants/moves.h"
@@ -385,7 +386,8 @@ static bool8 ChooseSpecialBattleTowerTrainer(void)
     }
     else
     {
-        if (winStreak == 42 || winStreak == 21)
+        //TODO: change back
+        if (winStreak == 42 || winStreak == 7)
         {
             // return true and set special trainer value to brain
             gSaveBlock2Ptr->battleTower.battleTowerTrainerId = 0xFF;
@@ -1066,6 +1068,17 @@ void StartSpecialBattle(void)
 
         CreateTask(Task_WaitBT, 1);
         PlayMapChosenOrBattleBGM(0);
+        transition = BattleSetup_GetBattleTowerBattleTransition();
+        BattleTransition_StartOnField(transition);
+        break;
+    case 3: // battle tower brain battle
+        gBattleTypeFlags = (BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_TRAINER);
+        gTrainerBattleOpponent_A = 0;
+
+        FillBattleTowerTrainerParty(); // overwrite?
+
+        CreateTask(Task_WaitBT, 1);
+        PlayMapChosenOrBattleBGM(MUS_VS_FRONTIER_BRAIN);
         transition = BattleSetup_GetBattleTowerBattleTransition();
         BattleTransition_StartOnField(transition);
         break;
