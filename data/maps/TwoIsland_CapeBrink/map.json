@@ -15,15 +15,15 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "down",
+      "map": "MAP_TWO_ISLAND",
       "offset": 3,
-      "map": "MAP_TWO_ISLAND"
+      "direction": "down"
     }
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_POKEMON_RANGER_F",
-      "in_connection": false,
       "x": 14,
       "y": 15,
       "elevation": 3,
@@ -33,11 +33,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "CapeBrink_EventScript_Helena",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
-      "in_connection": false,
       "x": 15,
       "y": 18,
       "elevation": 3,
@@ -47,11 +48,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "CapeBrink_EventScript_Atticus",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
-      "in_connection": false,
       "x": 22,
       "y": 18,
       "elevation": 3,
@@ -61,11 +63,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CapeBrink_EventScript_Deforest",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIRD_KEEPER",
-      "in_connection": false,
       "x": 17,
       "y": 22,
       "elevation": 3,
@@ -75,11 +78,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "CapeBrink_EventScript_Spedo",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
-      "in_connection": false,
       "x": 19,
       "y": 17,
       "elevation": 4,
@@ -89,11 +93,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "CapeBrink_EventScript_Caspara",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_LAND",
-      "in_connection": false,
       "x": 23,
       "y": 22,
       "elevation": 3,
@@ -103,11 +108,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CapeBrink_EventScript_Sedef",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TUBER_M_LAND",
-      "in_connection": false,
       "x": 16,
       "y": 25,
       "elevation": 3,
@@ -117,12 +123,13 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CapeBrink_EventScript_Tuber",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ANABEL",
-      "in_connection": false,
-      "x": 34,
+      "x": 38,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -131,7 +138,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CapeBrink_EventScript_Anabel",
-      "flag": "FLAG_HIDE_ANABEL_SECOND"
+      "flag": "FLAG_HIDE_ANABEL_SECOND",
+      "in_connection": false
     }
   ],
   "warp_events": [
@@ -141,6 +149,13 @@
       "elevation": 0,
       "dest_map": "MAP_TWO_ISLAND_CAPE_BRINK_HOUSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 37,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_DEBUG",
+      "dest_warp_id": "4"
     }
   ],
   "coord_events": [

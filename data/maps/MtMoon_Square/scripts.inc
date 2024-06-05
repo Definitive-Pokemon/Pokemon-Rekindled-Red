@@ -1,7 +1,180 @@
 .set LOCALID_MUDKIP, 1
+.set LOCALID_LATIAS, 2
+.set LOCALID_CLEFAIRY1, 3
+.set LOCALID_CLEFAIRY2, 4
+.set LOCALID_CLEFAIRY3, 5
+.set LOCALID_CLEFAIRY4, 6
+.set LOCALID_CLEFAIRY5, 7
+.set LOCALID_ANABEL, 8
+
 
 MtMoon_Square_MapScripts::
+    map_script MAP_SCRIPT_ON_LOAD, MtMoon_Square_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, MtMoon_Square_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, MtMoon_Square_OnResume
 	.byte 0
+
+MtMoon_Square_OnLoad::
+	compare_var_to_value VAR_LATIAS_FOURTH, 0
+	goto_if_eq DontShowLatiasYet
+	call_if_unset FLAG_FOUGHT_LATIAS, MtMoon_Square_EventScript_TryShowLatias
+DontShowLatiasYet::
+	end
+
+MtMoon_Square_OnResume::
+	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, MtMoon_Square_EventScript_TryRemoveLatias
+	end
+
+MtMoon_Square_EventScript_TryRemoveLatias::
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_ne EventScript_Return
+	removeobject VAR_LAST_TALKED
+	return
+
+MtMoon_Square_OnTransition::
+	call_if_set FLAG_FOUGHT_LATIAS, MtMoon_Square_EventScript_HideLatias
+	end
+
+MtMoon_Square_EventScript_TryShowLatias::
+	goto_if_set FLAG_LATIAS_FLED, EventScript_Return
+	clearflag FLAG_HIDE_LATIAS_FOURTH
+	return
+
+MtMoon_Square_EventScript_HideLatias::
+	setflag FLAG_HIDE_LATIAS_FOURTH
+	return
+
+MtMoon_Square_EventScript_LatiasFinal::
+	lock
+	faceplayer
+	setwildbattle SPECIES_LATIAS, 70, ITEM_NONE
+	waitse
+	playmoncry SPECIES_LATIAS, 2
+	message MtMoon_Square_Text_Latias
+	waitmessage
+	waitmoncry
+	delay 10
+	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
+	waitbuttonpress
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq MtMoon_Square_EventScript_DefeatedLatias
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq MtMoon_Square_EventScript_RanFromLatias
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq MtMoon_Square_EventScript_RanFromLatias
+	setflag FLAG_FOUGHT_LATIAS
+	call MtMoon_Square_EventScript_AnabelEnd
+	release
+	end
+
+MtMoon_Square_EventScript_DefeatedLatias::
+	setflag FLAG_LATIAS_FLED
+	setvar VAR_0x8004, SPECIES_LATIAS
+	goto MtMoon_Square_EventScript_LatiasFled
+	end
+
+MtMoon_Square_EventScript_RanFromLatias::
+	setvar VAR_0x8004, SPECIES_LATIAS
+	goto MtMoon_Square_EventScript_LatiasFled
+	end
+	
+MtMoon_Square_EventScript_LatiasFled::
+    fadescreenswapbuffers FADE_TO_BLACK
+    removeobject VAR_LAST_TALKED
+    fadescreenswapbuffers FADE_FROM_BLACK
+    msgbox MtMoon_Square_Text_LatiasFled
+	closemessage
+	call MtMoon_Square_EventScript_AnabelEnd
+	release
+	end
+	
+MtMoon_Square_EventScript_AnabelEnd::
+	clearflag FLAG_HIDE_ANABEL_FOURTH
+	addobject LOCALID_ANABEL
+	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, MtMoon_Square_Movement_PlayerTurn
+	waitmovement 0
+	textcolor NPC_TEXT_COLOR_FEMALE
+	msgbox MtMoon_Square_Text_AnabelCongrats
+	waitmessage
+	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelDownUp
+	waitmovement 0
+	msgbox MtMoon_Square_Text_AnabelAero
+	closemessage
+	applymovement LOCALID_ANABEL, MtMoon_Square_Movement_AnabelRight
+	waitmovement 0
+	removeobject LOCALID_ANABEL
+	setflag FLAG_HIDE_ANABEL_FOURTH
+	@roaming Aero activate
+	return
+
+MtMoon_Square_EventScript_Latias4::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, MtMoon_Square_Movement_FaceUp
+	waitmovement 0
+	delay 60
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, MtMoon_Square_Movement_PanToActionFromBottom
+	waitmovement 0
+	special RemoveCameraObject
+	delay 60
+	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_ClefairyJump1
+	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_ClefairyJump2
+	applymovement LOCALID_CLEFAIRY3, MtMoon_Square_Movement_ClefairyJump3
+	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_ClefairyJump4
+	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_ClefairyJump5
+	waitse
+	playse SE_LEDGE
+	waitse
+	waitmovement 0
+	playmoncry SPECIES_LATIAS, CRY_MODE_NORMAL
+	waitmoncry
+	delay 100
+	playse SE_PIN
+	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_MudkipExclamation
+	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_MudkipExclamation
+	applymovement LOCALID_CLEFAIRY3, MtMoon_Square_Movement_MudkipExclamation
+	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_MudkipExclamation
+	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_MudkipExclamation
+	waitmovement 0
+	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_ClefairyLookDown
+	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_ClefairyLookDown
+	applymovement LOCALID_CLEFAIRY3, MtMoon_Square_Movement_ClefairyLookDown
+	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_ClefairyLookDown
+	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_ClefairyLookDown
+	waitse
+	delay 30
+	waitmovement 0
+	applymovement LOCALID_CLEFAIRY1, MtMoon_Square_Movement_Clefairy1Leave
+	applymovement LOCALID_CLEFAIRY2, MtMoon_Square_Movement_Clefairy2Leave
+	applymovement LOCALID_CLEFAIRY3, MtMoon_Square_Movement_Clefairy3Leave
+	applymovement LOCALID_CLEFAIRY4, MtMoon_Square_Movement_Clefairy4Leave
+	applymovement LOCALID_CLEFAIRY5, MtMoon_Square_Movement_Clefairy5Leave
+	waitmovement 0
+	playmoncry SPECIES_LATIAS, CRY_MODE_NORMAL
+	waitmoncry
+	delay 60
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, MtMoon_Square_Movement_PanToActionFromTop
+	waitmovement 0
+	special RemoveCameraObject
+	delay 60
+	removeobject LOCALID_CLEFAIRY1
+	removeobject LOCALID_CLEFAIRY2
+	removeobject LOCALID_CLEFAIRY3
+	removeobject LOCALID_CLEFAIRY4
+	removeobject LOCALID_CLEFAIRY5
+	setflag FLAG_HIDE_CLEFAIRY
+	setvar VAR_LATIAS_FOURTH, 2
+	releaseall
+	end
 
 MtMoon_Square_EventScript_WelcomeSign::
 	msgbox MtMoon_Square_Text_Sign, MSGBOX_SIGN
@@ -144,6 +317,80 @@ MtMoon_Square_EventScript_EndReceiveMudkip::
 	release
 	end
 	
+MtMoon_Square_Movement_Clefairy1Leave::
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	step_end
+	
+MtMoon_Square_Movement_Clefairy2Leave::
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	step_end
+	
+MtMoon_Square_Movement_Clefairy3Leave::
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	step_end
+	
+MtMoon_Square_Movement_Clefairy4Leave::
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	step_end
+	
+MtMoon_Square_Movement_Clefairy5Leave::
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	step_end
+	
+MtMoon_Square_Movement_ClefairyLookDown::
+	face_down
+	step_end
+
+MtMoon_Square_Movement_ClefairyJump1::
+	jump_in_place_up
+	step_end
+	
+MtMoon_Square_Movement_ClefairyJump2::
+	jump_in_place_up
+	step_end
+	
+MtMoon_Square_Movement_ClefairyJump3::
+	jump_in_place_left
+	step_end
+	
+MtMoon_Square_Movement_ClefairyJump4::
+	jump_in_place_right
+	step_end
+	
+MtMoon_Square_Movement_ClefairyJump5::
+	jump_in_place_down
+	step_end
+	
+MtMoon_Square_Movement_PanToActionFromBottom::
+	walk_slow_up
+	walk_slow_up
+	walk_slow_left
+	step_end
+	
+MtMoon_Square_Movement_PanToActionFromTop::
+	walk_slow_right
+	walk_slow_down
+	walk_slow_down
+	step_end
+	
+MtMoon_Square_Movement_FaceUp::
+	walk_in_place_up
+	step_end
+	
 MtMoon_Square_Movement_MudkipExclamation::
 	emote_exclamation_mark
 	step_end
@@ -157,4 +404,44 @@ MtMoon_Square_Movement_MudkipJump3times::
 MtMoon_Square_Movement_MudkipJump2times::
 	jump_in_place_down
 	jump_in_place_down
+	step_end
+	
+MtMoon_Square_Movement_AnabelLeft::
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_slow_left
+	walk_in_place_up
+	step_end
+	
+MtMoon_Square_Movement_AnabelDownUp::
+	walk_in_place_down
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_in_place_up
+	step_end
+	
+MtMoon_Square_Movement_AnabelRight::
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	walk_slow_right
+	step_end
+	
+MtMoon_Square_Movement_PlayerTurn::
+	walk_in_place_down
 	step_end

@@ -32,11 +32,12 @@ FiveIsland_ResortGorgeous_House_EventScript_SelphyLetter::
 	waitfanfare
 	call EventScript_RestorePrevTextColor
 	removeitem ITEM_LETTER, 1
-	setflag FLAG_SELPHY_RECEIVED_LETTER
+	setvar VAR_CELEBI_EVENT1, 1
 	playse SE_PIN
 	applymovement LOCALID_SELPHY, Common_Movement_ExclamationMark
 	waitmovement 0
 	msgbox FiveIsland_ResortGorgeous_House_Text_SelphyThisLetter
+	setflag FLAG_HIDE_LOST_HIKER
 	release
 	end
 

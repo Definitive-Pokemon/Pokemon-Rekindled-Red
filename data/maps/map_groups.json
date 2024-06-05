@@ -282,7 +282,8 @@
     "Special",
     "FakePallet1",
     "FakePallet2",
-    "NewMap1"
+    "NewMap1",
+    "MarineCave"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -355,7 +356,8 @@
     "ThreeIsland_BondBridge_Underwater",
     "FourIsland_Base",
     "KyogreDen",
-    "CinnabarVolcano"
+    "CinnabarVolcano",
+    "PrimordialAltar"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

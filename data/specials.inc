@@ -305,7 +305,7 @@ gSpecials::
 	def_special AreLeadMonEVsMaxedOut
 	def_special Script_FacePlayer
 	def_special Script_ClearHeldMovement
-	def_special InitRoamer
+	def_special NullFieldSpecial
 	def_special NullFieldSpecial
 	def_special PlayerHasGrassPokemonInParty
 	def_special NullFieldSpecial
@@ -342,7 +342,7 @@ gSpecials::
 	def_special LoadPlayerBag
 	def_special Script_FadeOutMapMusic
 	def_special NullFieldSpecial
-	def_special NullFieldSpecial
+	def_special SetAllTrainersBattled
 	def_special HasAllKantoMons
 	def_special IsMonOTNameNotPlayers
 	def_special NullFieldSpecial

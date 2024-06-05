@@ -945,6 +945,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES_WITH_FORMS - 1] =
     SPECIES_TO_NATIONAL(JIRACHI),
     SPECIES_TO_NATIONAL(DEOXYS),
     SPECIES_TO_NATIONAL(CHIMECHO),
+    SPECIES_TO_NATIONAL(REGIGIGAS),
     SPECIES_TO_NATIONAL(FOSSILIZED_KABUTOPS),
     SPECIES_TO_NATIONAL(SEVIIAN_AERODACTYL),
 };
@@ -1362,6 +1363,7 @@ static const u16 sSpeciesToExtendedPokedexNum[] = // Assigns all species to the 
     SPECIES_TO_EXTENDED(JIRACHI),
     SPECIES_TO_EXTENDED(DEOXYS),
     SPECIES_TO_EXTENDED(CHIMECHO),
+    SPECIES_TO_EXTENDED(REGIGIGAS),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -3879,6 +3881,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 
     if (attacker->ability == ABILITY_HUGE_POWER || attacker->ability == ABILITY_PURE_POWER)
         attack *= 2;
+    
+    if (gDisableStructs[battlerIdAtk].slowStartTimer > 0 && gBattleMons[battlerIdAtk].ability == ABILITY_SLOW_START)
+        attack /= 2;
 
     if (ShouldGetStatBadgeBoost(FLAG_BADGE01_GET, battlerIdAtk))
         attack = (110 * attack) / 100;

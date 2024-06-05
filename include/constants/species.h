@@ -418,16 +418,17 @@
 #define SPECIES_JIRACHI 409
 #define SPECIES_DEOXYS 410
 #define SPECIES_CHIMECHO 411
-#define SPECIES_EGG 412
+#define SPECIES_REGIGIGAS 412
+#define SPECIES_EGG 413
 // This is where you would add new pokemon (species)
 
 // FORMS
 // always needs to be updated if a new species is to be added. Final sprited mon num + 1
-#define NUM_NON_FORM_MON_SPRITES 440 
+#define NUM_NON_FORM_MON_SPRITES 441
 // deprecate this
 // add new form/variant mons here
-#define SPECIES_FOSSILIZED_KABUTOPS 440
-#define SPECIES_SEVIIAN_AERODACTYL 441
+#define SPECIES_FOSSILIZED_KABUTOPS 441
+#define SPECIES_SEVIIAN_AERODACTYL 442
 #define NUM_FORMS 2
 #define NUM_ORIGINAL_SPECIES_WITH_FORMS 2
 

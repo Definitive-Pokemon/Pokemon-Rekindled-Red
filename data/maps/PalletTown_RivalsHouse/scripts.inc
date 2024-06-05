@@ -1,6 +1,5 @@
 .equ LOCALID_DAISY,    1
 .equ LOCALID_TOWN_MAP, 2
-.equ CHECK_VISITOR_STATE, 8
 .equ TYPE, VAR_0x8003
 .equ ARGUMENT, VAR_0x8004
 .equ RECEIVED_TOWN_MAP, VAR_TEMP_1
@@ -12,11 +11,6 @@ PalletTown_RivalsHouse_MapScripts::
 
 PalletTown_RivalsHouse_OnTransition::
 	clearflag FLAG_TEMP_3
-	setvar TYPE, CHECK_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_DAISY
-	callnative UseBattleHouseVar
-	compare VAR_RESULT, 1
-	call_if_eq CeladonCity_Gym_EventScript_HideDaisy
 	compare VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 2
 	call_if_lt PalletTown_RivalsHouse_EventScript_MoveDaisyToTable
 	compare VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 2
@@ -24,10 +18,6 @@ PalletTown_RivalsHouse_OnTransition::
 	goto_if_unset FLAG_GOT_DAISY_STARTER, PalletTown_RivalsHouse_EventScript_CheckRemoveStarter
 	setflag FLAG_TEMP_1
 	end
-
-CeladonCity_Gym_EventScript_HideDaisy::
-	setflag FLAG_TEMP_3
-	return
 
 PalletTown_RivalsHouse_EventScript_CheckRemoveStarter::
 	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, PalletTown_RivalsHouse_EventScript_PositionForStarterGiveaway

@@ -2707,6 +2707,10 @@ const u8 gDeoxysPokedexText_FR[] = _(
     "aggressive guise. It can fool enemies by\n"
     "altering its appearance.");
 
+const u8 gRegigigasPokedexText[] = _(
+    "It is believed to have shaped\n"
+    "Regirock, Regice, and Registeel\n"
+    "out of clay, ice, and magma.");
     
 const u8 gFossilizedKabutopsPokedexText_FR[] = _(
     "This KABUTOPS fossil is being inhabited\n"

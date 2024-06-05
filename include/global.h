@@ -429,9 +429,9 @@ struct Roamer
     /*0x10*/ u8 cute;
     /*0x11*/ u8 smart;
     /*0x12*/ u8 tough;
-    /*0x13*/ bool8 active;
-    /*0x14*/ u8 filler[0x8];
-};
+    /*0x13*/ u8 active:1;
+    /*0x13*/ u8 roamerDataIndex:7;
+}; // level and species are now obsolete
 
 struct RamScriptData
 {
@@ -824,7 +824,8 @@ struct SaveBlock1
     /*0x309C*/ u8 giftRibbons[GIFT_RIBBONS_COUNT];
     /*0x30A7*/ struct ExternalEventData externalEventData;
     /*0x30BB*/ struct ExternalEventFlags externalEventFlags;
-    /*0x30D0*/ struct Roamer roamer;
+    /*0x30D0*/ struct Roamer roamer1;
+               u8 filler_for_roamers[0x8];
     /*0x30EC*/ struct EnigmaBerry enigmaBerry;
     /*0x3120*/ struct MysteryGiftSave mysteryGift; //0x36C in length
     /*0x348C*/ u8 unused_348C[176];
@@ -833,15 +834,18 @@ struct SaveBlock1
                u8 nuzlockeDupeFlags[52]; //taken from filler_348c field, which was originally 400 bytes. Used to prevent hijacking the dupe clause in Nuzlocke by catching fainted Pokemon.
                struct ItemSlot bagPocket_Berries[BAG_BERRIES_COUNT]; //taken from filler_348C field, which was originally 400 bytes
     /*0x361C*/ struct RamScript ramScript;
-    /*0x3A08*/ u8 filler3A08[16]; //RecordMixingGift recordMixingGift. Unused.
+    /*0x3A08*/ struct Roamer roamer2;
     /*0x3A18*/ u8 seen2[52]; //made unreferenced & can be gotten rid of, though PKHeX presumably will still set this
     /*0x3A4C*/ u8 rivalName[PLAYER_NAME_LENGTH + 1];
     /*0x3A54*/ struct FameCheckerSaveData fameChecker[NUM_FAMECHECKER_PERSONS];
-    /*0x3A94*/ u8 unused_3A94[44]; //max fame checker people is actually 32, so this is the unused 16 entries
+    /*......*/ struct Roamer roamer3;
+    /*......*/ struct Roamer roamer4;
+    /*0x3A94*/ u8 unused_3A94[12]; //max fame checker people is actually 32, so this is the unused 16 entries
                u8 masterTrainerFlags[20]; //taken from above unused_3A94 field, which was originally 64 bytes long. 1 byte longer than necessary for alignment.
     /*0x3AD4*/ u8 registeredTexts[UNION_ROOM_KB_ROW_COUNT][21];
     /*0x3BA8*/ struct TrainerNameRecord trainerNameRecords[20];
     /*0x3C98*/ struct DaycareMon route5DayCareMon;
+
     /*0x3D24*/ u8 unused_3D24[16]; //some sort of win/loss/draw records that are never referred to. An RFU thing. Mystery Event?
     /*0x3D34*/ u32 towerChallengeId;
     /*0x3D38*/ struct TrainerTower trainerTower[NUM_TOWER_CHALLENGE_TYPES];

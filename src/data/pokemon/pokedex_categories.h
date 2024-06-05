@@ -550,6 +550,10 @@ static const u16 sDexCategory_CavePkmn_Page10[] = {
     SPECIES_REGISTEEL,
 };
 
+static const u16 sDexCategory_CavePkmn_Page11[] = {
+    SPECIES_REGIGIGAS,
+};
+
 static const u16 sDexCategory_MountainPkmn_Page1[] = {
     SPECIES_GEODUDE,
     SPECIES_GRAVELER,
@@ -932,6 +936,7 @@ static const struct PokedexCategoryPage sDexCategory_CavePkmn[] = {
     DEX_CATEGORY(CavePkmn_Page8),
     DEX_CATEGORY(CavePkmn_Page9),
     DEX_CATEGORY(CavePkmn_Page10),
+    DEX_CATEGORY(CavePkmn_Page11),
 };
 
 static const struct PokedexCategoryPage sDexCategory_MountainPkmn[] = {

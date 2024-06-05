@@ -227,7 +227,7 @@
 
 #define VAR_LATIAS_FIRST           0x40AF
 #define VAR_LATIAS_THIRD           0x40B0
-#define VAR_0x40B1                 0x40B1
+#define VAR_LATIAS_FOURTH          0x40B1
 #define VAR_0x40B2                 0x40B2
 #define VAR_0x40B3                 0x40B3
 #define VAR_PORTHOLE               0x40B4
@@ -239,12 +239,12 @@
 #define VAR_MYSTERY_GIFT_5         0x40BA
 #define VAR_MYSTERY_GIFT_6         0x40BB
 #define VAR_MYSTERY_GIFT_7         0x40BC
-#define VAR_0x40BD                 0x40BD
-#define VAR_0x40BE                 0x40BE
-#define VAR_0x40BF                 0x40BF
-#define VAR_0x40C0                 0x40C0
-#define VAR_0x40C1                 0x40C1
-#define VAR_0x40C2                 0x40C2
+#define VAR_CELEBI_EVENT1          0x40BD
+#define VAR_CELEBI_EVENT2          0x40BE
+#define VAR_CELEBI_EVENT3          0x40BF
+#define VAR_CELEBI_EVENT4          0x40C0
+#define VAR_CELEBI_EVENT5          0x40C1
+#define VAR_CELEBI_EVENT6          0x40C2
 #define VAR_0x40C3                 0x40C3
 #define VAR_0x40C4                 0x40C4
 #define VAR_0x40C5                 0x40C5

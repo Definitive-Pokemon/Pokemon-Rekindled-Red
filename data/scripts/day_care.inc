@@ -134,3 +134,7 @@ EventScript_EggHatch::
 	waitstate
 	releaseall
 	end
+
+EventScript_RoamerPresence::
+	msgbox RoamerPresence_Text
+	end

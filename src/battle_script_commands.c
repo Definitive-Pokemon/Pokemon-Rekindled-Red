@@ -310,6 +310,7 @@ static void Cmd_subattackerhpbydmg(void);
 static void Cmd_removeattackerstatus1(void);
 static void Cmd_finishaction(void);
 static void Cmd_finishturn(void);
+static void Cmd_targethpdependentdamagecalculation(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -561,6 +562,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_removeattackerstatus1,                   //0xF5
     Cmd_finishaction,                            //0xF6
     Cmd_finishturn,                              //0xF7
+    Cmd_targethpdependentdamagecalculation,
 };
 
 struct StatFractions
@@ -8306,6 +8308,12 @@ static void Cmd_friendshiptodamagecalculation(void)
     gBattlescriptCurrInstr++;
 }
 
+static void Cmd_targethpdependentdamagecalculation(void)
+{
+    gDynamicBasePower = 1 + 120 * (gBattleMons[gBattlerTarget].hp / gBattleMons[gBattlerTarget].maxHP);
+    gBattlescriptCurrInstr++;
+}
+
 static void Cmd_presentdamagecalculation(void)
 {
     s32 rand = Random() & 0xFF;
@@ -9083,7 +9091,12 @@ static void Cmd_tryswapabilities(void)
         gBattleMons[gBattlerAttacker].ability = gBattleMons[gBattlerTarget].ability;
         gBattleMons[gBattlerTarget].ability = abilityAtk;
 
-            gBattlescriptCurrInstr += 5;
+        if(gBattleMons[gBattlerAttacker].ability == ABILITY_SLOW_START)
+            gDisableStructs[gBattlerAttacker].slowStartTimer == 5;
+        if(gBattleMons[gBattlerTarget].ability == ABILITY_SLOW_START)
+            gDisableStructs[gBattlerTarget].slowStartTimer == 5;
+
+        gBattlescriptCurrInstr += 5;
     }
 }
 

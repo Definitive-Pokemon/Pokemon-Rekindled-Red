@@ -2346,6 +2346,12 @@ extern const u32 gMonBackPic_Chimecho[];
 extern const u32 gMonShinyPalette_Chimecho[];
 extern const u8 gMonIcon_Chimecho[];
 extern const u8 gMonFootprint_Chimecho[];
+extern const u32 gMonFrontPic_Regigigas[];
+extern const u32 gMonPalette_Regigigas[];
+extern const u32 gMonBackPic_Regigigas[];
+extern const u32 gMonShinyPalette_Regigigas[];
+extern const u8 gMonIcon_Regigigas[];
+extern const u8 gMonFootprint_Regigigas[];
 extern const u32 gMonFrontPic_Egg[];
 extern const u32 gMonPalette_Egg[];
 extern const u8 gMonIcon_Egg[];
@@ -3632,6 +3638,8 @@ extern const u32 gBattleAnimBgTilemap_ScaryFaceOpponent[];
 extern const u32 gBattleAnimBgTilemap_ScaryFaceContest[];
 extern const u32 gBattleAnimSpriteGfx_Bird[];
 extern const u32 gBattleAnimSpriteGfx_CrossImpact[];
+extern const u32 gBattleAnimSpriteGfx_GrabHandAway[];
+extern const u32 gBattleAnimSpriteGfx_GrabHandToward[];
 
 // battle anim particle pals
 extern const u32 gBattleAnimSpritePal_Bone[];

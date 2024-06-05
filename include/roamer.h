@@ -4,18 +4,15 @@
 #include "global.h"
 
 void ClearRoamerData(void);
-u16 GetRoamerSpecies(void);
-void ClearRoamerLocationData(void);
-void InitRoamer(void);
+void StartRoaming(u8 mon);
 void UpdateLocationHistoryForRoamer(void);
 void RoamerMoveToOtherLocationSet(void);
 void RoamerMove(void);
-bool8 IsRoamerAt(u8 mapGroup, u8 mapNum);
-void CreateRoamerMonInstance(void);
-u8 TryStartRoamerEncounter(void);
+u8 TryInitializeRoamerEncounter(struct Pokemon *mon);
 void UpdateRoamerHPStatus(struct Pokemon *mon);
-void SetRoamerInactive(void);
-void GetRoamerLocation(u8 *mapGroup, u8 *mapNum);
-u16 GetRoamerLocationMapSectionId(void);
+void SetRoamerInactive(u16 roamerSpecies);
+void GetRoamerLocation(u8 *mapGroup, u8 *mapNum);//unused
+u16 GetRoamerLocationMapSectionId(u16 roamerSpecies);
+bool8 DEBUG_IsRoamerActiveAt(u8 mapGroup, u8 mapNum);
 
 #endif // GUARD_ROAMER_H

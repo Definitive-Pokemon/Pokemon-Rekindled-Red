@@ -24,12 +24,24 @@ SafariZone_NorthEast_EventScript_Anabel::
 	faceplayer
 	msgbox SafariZone_NorthEast_Text_Anabel
 	closemessage
+	fadeoutbgm 1
 	applymovement LOCALID_ANABEL, SafariZone_NorthEast_Movement_AnabelConcentrate
 	waitmovement 0
 	playmoncry SPECIES_AERODACTYL, CRY_MODE_ENCOUNTER
 	waitmoncry
+	playse SE_M_SCRATCH
+	waitse
 	playmoncry SPECIES_LATIAS, CRY_MODE_WEAK
 	waitmoncry
+	delay 20
+	playmoncry SPECIES_CLEFAIRY, CRY_MODE_ENCOUNTER
+	waitmoncry
+	playse SE_M_COMET_PUNCH
+	waitse
+	playmoncry SPECIES_AERODACTYL, CRY_MODE_WEAK
+	waitmoncry
+	playse SE_M_FLY
+	waitse
 	playse SE_PIN
 	applymovement LOCALID_ANABEL, SafariZone_NorthEast_Movement_AnabelInterrupt
 	waitmovement 0
@@ -41,9 +53,12 @@ SafariZone_NorthEast_EventScript_Anabel::
 	closemessage
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ANABEL
-	setflag FLAG_HIDE_ANABEL_SECOND
 	fadescreen FADE_FROM_BLACK
-	clearflag FLAG_HIDE_ANABEL_THIRD
+	fadeinbgm 1
+	setflag FLAG_HIDE_ANABEL_THIRD
+	clearflag FLAG_HIDE_LATIAS_FOURTH
+	clearflag FLAG_HIDE_CLEFAIRY
+	setvar VAR_LATIAS_FOURTH, 1
 	release
 	end
 	

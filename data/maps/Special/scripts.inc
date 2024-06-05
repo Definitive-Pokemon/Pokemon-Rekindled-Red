@@ -12,7 +12,7 @@ Special_EventScript_Cage::
 	delay 300
 	msgbox SpecialArea_Text_Asleep
 	closemessage
-	formatwarp MAP_FAKE_PALLET1, 255, 2, 5
+	warp MAP_FAKE_PALLET1, 255, 2, 5
 	releaseall
 	end
 	

@@ -2997,7 +2997,10 @@ static void TryDoEventsBeforeFirstTurn(void)
         if (effect != 0)
             return;
     }
+    
     if (AbilityBattleEffects(ABILITYEFFECT_INTIMIDATE1, 0, 0, 0, 0) != 0)
+        return;
+    if (AbilityBattleEffects(ABILITYEFFECT_SLOW_START, 0, 0, 0, 0) != 0)
         return;
     if (AbilityBattleEffects(ABILITYEFFECT_TRACE, 0, 0, 0, 0) != 0)
         return;
@@ -3551,6 +3554,10 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         holdEffect = ItemId_GetHoldEffect(gBattleMons[battler1].item);
         holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler1].item);
     }
+
+    if (gDisableStructs[battler1].slowStartTimer > 0  && gBattleMons[battler1].ability == ABILITY_SLOW_START)
+        speedBattler1 /= 2;
+
     // badge boost
     if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && gSaveBlock1Ptr->keyFlags.difficulty != DIFFICULTY_CHALLENGE
      && FlagGet(FLAG_BADGE03_GET)
@@ -3576,6 +3583,10 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         holdEffect = ItemId_GetHoldEffect(gBattleMons[battler2].item);
         holdEffectParam = ItemId_GetHoldEffectParam(gBattleMons[battler2].item);
     }
+
+    if (gDisableStructs[battler2].slowStartTimer > 0  && gBattleMons[battler2].ability == ABILITY_SLOW_START)
+        speedBattler2 /= 2;
+        
     // badge boost
     if (!(gBattleTypeFlags & BATTLE_TYPE_LINK)
      && FlagGet(FLAG_BADGE03_GET)
@@ -3909,7 +3920,7 @@ static void HandleEndTurn_BattleLost(void)
                 gBattleCommunication[MULTISTRING_CHOOSER] = 2; // Do white out text
             gBattlerAttacker = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
         }
-        else if (GetTrainerBattleMode() == TRAINER_BATTLE_NO_WHITEOUT)
+        else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && GetTrainerBattleMode() == TRAINER_BATTLE_NO_WHITEOUT)
         {
             gBattleCommunication[MULTISTRING_CHOOSER] = 1;
         }
@@ -4057,9 +4068,10 @@ static void ReturnFromBattleToOverworld(void)
         if (gBattleTypeFlags & BATTLE_TYPE_ROAMER)
         {
             UpdateRoamerHPStatus(&gEnemyParty[0]);
+            RoamerMoveToOtherLocationSet();
             if ((gBattleOutcome == B_OUTCOME_WON) || gBattleOutcome == B_OUTCOME_CAUGHT) // & with B_OUTCOME_WON (1) will return TRUE and deactivates the roamer.
             {
-                SetRoamerInactive();
+                SetRoamerInactive(GetMonData(&gEnemyParty[0], MON_DATA_SPECIES));
                 if(gBattleOutcome == B_OUTCOME_CAUGHT) //caught roamer
                 {
                     u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, 0);

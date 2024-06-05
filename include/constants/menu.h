@@ -88,6 +88,13 @@
 #define MULTICHOICE_SOUTHERN_BIRTH_NAVEL                       81
 #define MULTICHOICE_SOUTHERN_BIRTH_NAVEL_FARAWAY               82
 #define MULTICHOICE_MASTER_YOUNGSTER                           83
+#define MULTICHOICE_NO_STONES                                  84
+#define MULTICHOICE_SAPPHIRE                                   85
+#define MULTICHOICE_RUBYSAPPHIRE                               86
+#define MULTICHOICE_RUBY                                       87
+#define MULTICHOICE_RUBYEMERALD                                88
+#define MULTICHOICE_EMERALD                                    89
+#define MULTICHOICE_ALLSTONES                                  90
 
 
 #define MULTICHOICE_NONE                                      255

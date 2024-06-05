@@ -235,6 +235,8 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCalmMind               @ EFFECT_CALM_MIND
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
+	.4byte BattleScript_EffectCrushGrip
+	@ here goes crush grip as well
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -1655,6 +1657,12 @@ BattleScript_EffectFrustration::
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	friendshiptodamagecalculation
+	goto BattleScript_HitFromAtkString
+
+BattleScript_EffectCrushGrip::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	targethpdependentdamagecalculation
 	goto BattleScript_HitFromAtkString
 
 BattleScript_EffectPresent::
@@ -4200,6 +4208,12 @@ BattleScript_AbilityCuredStatus::
 	waitmessage B_WAIT_TIME_LONG
 	updatestatusicon BS_SCRIPTING
 	return
+
+BattleScript_SlowStartActivates::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNCANTGETITGOING
+	waitmessage B_WAIT_TIME_LONG
+	end3
 
 BattleScript_IgnoresWhileAsleep::
 	printstring STRINGID_PKMNIGNORESASLEEP

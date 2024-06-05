@@ -243,6 +243,7 @@
 #define MAP_FAKE_PALLET1                              (97 | (2 << 8))
 #define MAP_FAKE_PALLET2                              (98 | (2 << 8))
 #define MAP_NEW_MAP1                                  (99 | (2 << 8))
+#define MAP_MARINE_CAVE                               (100 | (2 << 8))
 
 // gMapGroup_TownsAndRoutes
 #define MAP_PALLET_TOWN                          (0 | (3 << 8))
@@ -316,6 +317,7 @@
 #define MAP_FOUR_ISLAND_BASE                     (68 | (3 << 8))
 #define MAP_KYOGRE_DEN                           (69 | (3 << 8))
 #define MAP_CINNABAR_VOLCANO                     (70 | (3 << 8))
+#define MAP_PRIMORDIAL_ALTAR                     (71 | (3 << 8))
 
 // gMapGroup_IndoorPallet
 #define MAP_PALLET_TOWN_PLAYERS_HOUSE_1F   (0 | (4 << 8))

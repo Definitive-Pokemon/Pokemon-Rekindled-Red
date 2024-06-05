@@ -464,6 +464,7 @@ void StartLegendaryBattle(void)
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_MEWTWO);
         break;
     case SPECIES_MEW:
+	case SPECIES_CELEBI:
         CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
         break;
     case SPECIES_DEOXYS:
@@ -480,6 +481,12 @@ void StartLegendaryBattle(void)
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_WILD);
     break;
 	case SPECIES_FOSSILIZED_KABUTOPS:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RS_VS_WILD);
+        break;
+    case SPECIES_SEVIIAN_AERODACTYL:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RS_VS_WILD);
+        break;
+    case SPECIES_LATIAS:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RS_VS_WILD);
         break;
     default:
@@ -508,7 +515,7 @@ void StartRegiBattle(void)
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_REGI;
-    CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RS_VS_TRAINER);
+    CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_REGI);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
 }

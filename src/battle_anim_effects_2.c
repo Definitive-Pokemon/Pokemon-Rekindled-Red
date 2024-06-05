@@ -98,6 +98,8 @@ static void AnimPinkHeart(struct Sprite *);
 static void AnimDevil(struct Sprite *);
 static void AnimFurySwipes(struct Sprite *);
 static void AnimGuardRing(struct Sprite *);
+static void AnimCrushGrip(struct Sprite *);
+static void CrushGripFinal(struct Sprite *);
 
 // Unused
 static const struct SpriteTemplate sCirclingFingerSpriteTemplate =
@@ -1249,6 +1251,48 @@ const struct SpriteTemplate gGuardRingSpriteTemplate =
     .images = NULL,
     .affineAnims = sGuardRingAffineAnimTable,
     .callback = AnimGuardRing,
+};
+
+static const union AnimCmd sCrushGripAnimCmds[] =
+{
+    ANIMCMD_FRAME(0, 0),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sCrushGripClosingAnimCmds[] =
+{
+    ANIMCMD_FRAME(4096, 5),
+    ANIMCMD_FRAME(4096 * 2, 5),
+    ANIMCMD_FRAME(4096 * 3, 32),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sCrushGripAnimTable[] =
+{
+    sCrushGripAnimCmds,
+    sCrushGripClosingAnimCmds,
+};
+
+const struct SpriteTemplate gCrushGripAwayTemplate =    
+{
+    .tileTag = ANIM_TAG_GRAB_AWAY,
+    .paletteTag = ANIM_TAG_GRAB_AWAY,
+    .oam = &gOamData_AffineOff_ObjNormal_64x64,
+    .images = NULL,
+    .anims = sCrushGripAnimTable,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimCrushGrip,
+};
+
+const struct SpriteTemplate gCrushGripTowardTemplate =    
+{
+    .tileTag = ANIM_TAG_GRAB_TOWARDS,
+    .paletteTag = ANIM_TAG_GRAB_TOWARDS,
+    .oam = &gOamData_AffineOff_ObjNormal_64x64,
+    .images = NULL,
+    .anims = sCrushGripAnimTable,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimCrushGrip,
 };
 
 #define sAmplitudeX  data[1]
@@ -3862,4 +3906,19 @@ void AnimTask_GetFuryCutterHitCount(u8 taskId)
 {
     gBattleAnimArgs[ARG_RET_ID] = gAnimDisableStructPtr->furyCutterCounter;
     DestroyAnimVisualTask(taskId);
+}
+
+static void AnimCrushGrip(struct Sprite *sprite)
+{
+    InitSpritePosToAnimAttacker(sprite, TRUE);
+    sprite->data[0] = 5;
+    sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
+    sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
+    sprite->callback = StartAnimLinearTranslation;
+    StoreSpriteCallbackInData6(sprite, CrushGripFinal);
+}
+
+static void CrushGripFinal(struct Sprite *sprite)
+{
+    StartSpriteAnim(sprite, 1);
 }

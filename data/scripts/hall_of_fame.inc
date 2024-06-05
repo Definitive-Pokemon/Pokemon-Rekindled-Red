@@ -25,7 +25,6 @@ EventScript_ResetLegendaries::
 	clearflag FLAG_DEFEATED_LATIOS
 	clearflag FLAG_DEFEATED_LATIAS
 	clearflag FLAG_DEFEATED_SUDOWOODO
-	special InitRoamer
 	return
 
 EventScript_ResetEliteFourEnd::

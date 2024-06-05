@@ -115,7 +115,7 @@ MonitoringStation_Power_EventScript_Absolute::
 	delay 20
 	fadescreen FADE_TO_BLACK
 	fadeinbgm 1
-	formatwarp MAP_POKE_CENTER, 255, 8, 5
+	warp MAP_POKE_CENTER, 255, 8, 5
 	release
 	end
 	
