@@ -468,7 +468,6 @@ bool8 ScrCmd_additem(struct ScriptContext * ctx)
     u32 quantity = VarGet(ScriptReadHalfword(ctx));
 
     gSpecialVar_Result = AddBagItem(itemId, (u8)quantity);
-    TrySetObtainedItemQuestLogEvent(itemId);
     return FALSE;
 }
 
@@ -924,8 +923,6 @@ bool8 ScrCmd_playbgm(struct ScriptContext * ctx)
     u16 songId = ScriptReadHalfword(ctx);
     bool8 save = ScriptReadByte(ctx);
 
-    if (QL_IS_PLAYBACK_STATE)
-        return FALSE;
     if (save == TRUE)
         Overworld_SetSavedMusic(songId);
     PlayNewMapMusic(songId);
@@ -949,8 +946,6 @@ bool8 ScrCmd_fadedefaultbgm(struct ScriptContext * ctx)
 bool8 ScrCmd_fadenewbgm(struct ScriptContext * ctx)
 {
     u16 music = ScriptReadHalfword(ctx);
-    if (QL_IS_PLAYBACK_STATE)
-        return FALSE;
     Overworld_ChangeMusicTo(music);
     return FALSE;
 }
@@ -959,8 +954,6 @@ bool8 ScrCmd_fadeoutbgm(struct ScriptContext * ctx)
 {
     u8 speed = ScriptReadByte(ctx);
 
-    if (QL_IS_PLAYBACK_STATE)
-        return FALSE;
     if (speed != 0)
         FadeOutBGMTemporarily(4 * speed);
     else
@@ -973,8 +966,6 @@ bool8 ScrCmd_fadeinbgm(struct ScriptContext * ctx)
 {
     u8 speed = ScriptReadByte(ctx);
 
-    if (QL_IS_PLAYBACK_STATE)
-        return FALSE;
     if (speed != 0)
         FadeInBGM(4 * speed);
     else
@@ -1821,7 +1812,7 @@ bool8 ScrCmd_showmoneybox(struct ScriptContext * ctx)
     u8 y = ScriptReadByte(ctx);
     u8 ignore = ScriptReadByte(ctx);
 
-    if (!ignore && QL_AvoidDisplay(QL_DestroyAbortedDisplay) != TRUE)
+    if (!ignore)
         DrawMoneyBox(GetMoney(&gSaveBlock1Ptr->money), x, y);
     return FALSE;
 }
@@ -1850,9 +1841,7 @@ bool8 ScrCmd_showcoinsbox(struct ScriptContext * ctx)
 {
     u8 x = ScriptReadByte(ctx);
     u8 y = ScriptReadByte(ctx);
-
-    if (QL_AvoidDisplay(QL_DestroyAbortedDisplay) != TRUE)
-        ShowCoinsWindow(GetCoins(), x, y);
+    ShowCoinsWindow(GetCoins(), x, y);
     return FALSE;
 }
 

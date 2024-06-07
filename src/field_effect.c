@@ -1223,7 +1223,6 @@ void FieldCB_FallWarpExit(void)
 {
     Overworld_PlaySpecialMapMusic();
     WarpFadeInScreen();
-    QuestLog_DrawPreviouslyOnQuestHeaderIfInPlaybackMode();
     LockPlayerFieldControls();
     FreezeObjectEvents();
     CreateTask(Task_FallWarpFieldEffect, 0);
@@ -1407,7 +1406,6 @@ static bool8 EscalatorWarpEffect_1(struct Task *task)
     FreezeObjectEvents();
     CameraObjectReset2();
     StartEscalator(task->data[1]);
-    QuestLog_OnEscalatorWarp(QL_ESCALATOR_OUT);
     task->data[0]++;
     return FALSE;
 }
@@ -1526,7 +1524,6 @@ static void FieldCB_EscalatorWarpIn(void)
 {
     Overworld_PlaySpecialMapMusic();
     WarpFadeInScreen();
-    QuestLog_DrawPreviouslyOnQuestHeaderIfInPlaybackMode();
     LockPlayerFieldControls();
     FreezeObjectEvents();
     CreateTask(Task_EscalatorWarpInFieldEffect, 0);
@@ -1648,7 +1645,6 @@ static bool8 EscalatorWarpInEffect_7(struct Task *task)
         UnfreezeObjectEvents();
         ObjectEventSetHeldMovement(objectEvent, GetWalkNormalMovementAction(DIR_EAST));
         DestroyTask(FindTaskIdByFunc(Task_EscalatorWarpInFieldEffect));
-        QuestLog_OnEscalatorWarp(QL_ESCALATOR_IN);
     }
     return FALSE;
 }
@@ -1936,7 +1932,6 @@ static void FieldCB_LavaridgeGymB1FWarpExit(void)
 {
     Overworld_PlaySpecialMapMusic();
     WarpFadeInScreen();
-    QuestLog_DrawPreviouslyOnQuestHeaderIfInPlaybackMode();
     LockPlayerFieldControls();
     gFieldCallback = NULL;
     CreateTask(Task_LavaridgeGymB1FWarpExit, 0);
@@ -2337,7 +2332,6 @@ static void FieldCallback_EscapeRopeExit(void)
 {
     Overworld_PlaySpecialMapMusic();
     WarpFadeInScreen();
-    QuestLog_DrawPreviouslyOnQuestHeaderIfInPlaybackMode();
     LockPlayerFieldControls();
     FreezeObjectEvents();
     gFieldCallback = NULL;
@@ -2514,7 +2508,6 @@ static void FieldCallback_TeleportIn(void)
 {
     Overworld_PlaySpecialMapMusic();
     WarpFadeInScreen();
-    QuestLog_DrawPreviouslyOnQuestHeaderIfInPlaybackMode();
     LockPlayerFieldControls();
     FreezeObjectEvents();
     gFieldCallback = NULL;
@@ -3169,8 +3162,6 @@ static void (*const sUseVsSeekerEffectFuncs[])(struct Task *task) = {
 
 u32 FldEff_UseVsSeeker(void)
 {
-    if (gQuestLogState == QL_STATE_RECORDING)
-        QuestLogRecordPlayerAvatarGfxTransitionWithDuration(8, 89);
     CreateTask(Task_FldEffUseVsSeeker, 0xFF);
     return 0;
 }
