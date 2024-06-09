@@ -4,7 +4,6 @@ Debug_MapScripts::
 Debug_GiveFormMon::
 	lock
 	givemon SPECIES_RAIKOU, 5, ITEM_NONE
-	startroaming ROAMER_RAIKOU
 	release
 	end
 
@@ -19,7 +18,7 @@ Debug_Battle::
 Debug_GiveNormalMon::
 	lock
 	givemon SPECIES_ENTEI, 5, ITEM_NONE
-	startroaming ROAMER_ENTEI
+	special InitRoamer
 	release
 	end
 
