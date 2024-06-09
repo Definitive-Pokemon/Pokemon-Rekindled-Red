@@ -880,31 +880,6 @@ void QuestLog_AdvancePlayhead_(void)
 #define tState data[1]
 #define DATA_IDX_CALLBACK 14 // data[14] and data[15]
 
-// This is used to avoid recording or displaying certain windows or images, like a shop menu.
-// During playback it returns TRUE (meaning the action should be avoided) and calls the
-// provided callback, which would be used to e.g. destroy any resources that were set up to do
-// whatever is being avoided. In all cases the provided callback will be QL_DestroyAbortedDisplay.
-// If we are not currently in playback return FALSE (meaning allow the action to occur) and
-// stop recording (if we are currently).
-bool8 QL_AvoidDisplay(void (*callback)(void))
-{
-    u8 taskId;
-
-    switch (gQuestLogState)
-    {
-    case QL_STATE_RECORDING:
-        QuestLog_CutRecording();
-        break;
-    case QL_STATE_PLAYBACK:
-        gQuestLogPlaybackState = QL_PLAYBACK_STATE_ACTION_END;
-        taskId = CreateTask(Task_AvoidDisplay, 80);
-        gTasks[taskId].tTimer = 0;
-        gTasks[taskId].tState = 0;
-        SetWordTaskArg(taskId, DATA_IDX_CALLBACK, (uintptr_t)callback);
-        return TRUE;
-    }
-    return FALSE;
-}
 
 static void Task_AvoidDisplay(u8 taskId)
 {

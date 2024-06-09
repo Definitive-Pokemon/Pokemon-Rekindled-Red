@@ -114,9 +114,6 @@ void DisplayBerryPowderVendorMenu(void)
 {
     struct WindowTemplate template;
 
-    if (QL_AvoidDisplay(QL_DestroyAbortedDisplay) == TRUE)
-        return;
-
     template = SetWindowTemplateFields(0, 1, 1, 8, 3, 15, 32);
     sBerryPowderVendorWindowId = AddWindow(&template);
     FillWindowPixelBuffer(sBerryPowderVendorWindowId, 0);

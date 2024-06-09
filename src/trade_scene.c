@@ -2626,7 +2626,6 @@ static void CB2_SaveAndEndTrade(void)
         }
         else
         {
-            SetQuestLogEvent(QL_EVENT_LINK_TRADED, (void *)&sTradeAnim->questLogData);
             IncrementGameStat(GAME_STAT_POKEMON_TRADES);
         }
         if (gWirelessCommType)
