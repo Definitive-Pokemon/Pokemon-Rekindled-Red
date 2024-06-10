@@ -1663,11 +1663,6 @@
 	.2byte \localId
 	.endm
 
-	.macro startroaming roamer:req
-	.byte 0xd8
-	.byte \roamer
-	.endm
-
 @ Supplementary
 
 	.macro goto_if_unset flag:req, dest:req

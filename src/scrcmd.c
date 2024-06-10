@@ -2280,10 +2280,3 @@ bool8 ScrCmd_resetobjectmovementtype(struct ScriptContext * ctx)
     ResetObjEventTemplateMovementType(localId);
     return FALSE;
 }
-
-bool8 ScrCmd_startroaming(struct ScriptContext * ctx)
-{
-    u8 roamerId = ScriptReadByte(ctx);
-    StartRoaming(roamerId);
-    return FALSE;
-}
