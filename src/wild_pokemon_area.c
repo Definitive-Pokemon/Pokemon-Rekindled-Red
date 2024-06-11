@@ -167,8 +167,7 @@ s32 GetSpeciesPokedexAreaMarkers(u16 species, struct Subsprite * subsprites)
     s32 alteringCaveNum;
     s32 i;
 
-    dexArea = GetRoamerLocationMapSectionId(species); //variable hackery
-    if (dexArea != MAPSEC_NONE)
+    if (GetRoamerLocationMapSectionId() != MAPSEC_NONE)
         return GetRoamerPokedexAreaMarkers(species, dexArea, subsprites);
 
     seviiAreas = GetUnlockedSeviiAreas();
