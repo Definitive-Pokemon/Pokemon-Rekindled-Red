@@ -160,8 +160,8 @@ void InitRoamer(void)
 {
     if (ROAMER->active)
         return;
-    if(FlagGet(FLAG_CAUGHT_RAIKOU) && FlagGet(FLAG_CAUGHT_ENTEI) && FlagGet(FLAG_CAUGHT_SUICUNE))
-        return;
+    //if(FlagGet(FLAG_CAUGHT_RAIKOU) && FlagGet(FLAG_CAUGHT_ENTEI) && FlagGet(FLAG_CAUGHT_SUICUNE))
+    //    return;
     ClearRoamerData();
     CreateInitialRoamerMon();
 }
