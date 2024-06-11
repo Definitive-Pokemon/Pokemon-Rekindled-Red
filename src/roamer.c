@@ -104,6 +104,8 @@ u16 GetRoamerSpecies(void)
             }
             break;
         case SPECIES_MAGBY:
+            species = SPECIES_ENTEI;
+        /*
             if(!FlagGet(FLAG_CAUGHT_ENTEI))
             {
                 species = SPECIES_ENTEI;
@@ -116,6 +118,7 @@ u16 GetRoamerSpecies(void)
             {
                 species = SPECIES_RAIKOU;
             }
+            */
             break;
         case SPECIES_SMOOCHUM:
             if(!FlagGet(FLAG_CAUGHT_SUICUNE))
