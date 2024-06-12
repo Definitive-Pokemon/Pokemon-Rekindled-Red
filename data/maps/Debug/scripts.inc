@@ -9,9 +9,7 @@ Debug_GiveFormMon::
 
 Debug_Battle::
 	lock
-	setwildbattle SPECIES_REGIGIGAS, 3, ITEM_NONE
-	delay 40
-	dowildbattle
+	givemon SPECIES_SUICUNE, 5, ITEM_NONE
 	release
 	end
 

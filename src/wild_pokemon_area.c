@@ -227,13 +227,12 @@ s32 GetSpeciesPokedexAreaMarkers(u16 species, struct Subsprite * subsprites)
 
 static s32 GetRoamerIndex(u16 species)
 {
-    s32 i;
-    for (i = 0; i < ARRAY_COUNT(sRoamerPairs); i++)
-    {
-        if (sRoamerPairs[i].roamer == species)
-            return i;
-    }
-
+    if (species == SPECIES_ENTEI)
+        return 0;
+    if (species == SPECIES_SUICUNE)
+        return 1;
+    if (species == SPECIES_RAIKOU)
+        return 2;
     return -1;
 }
 
