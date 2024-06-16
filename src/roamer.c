@@ -1,6 +1,7 @@
 #include "global.h"
 #include "event_data.h"
 #include "random.h"
+#include "sound.h"
 #include "overworld.h"
 #include "field_specials.h"
 #include "constants/flags.h"
@@ -86,6 +87,13 @@ u16 GetRoamerSpecies(void)
 {
     u16 species = SPECIES_NONE;
     u16 starter = GetStarterSpecies();
+
+    if(FlagGet(FLAG_CAUGHT_RAIKOU))
+        PlaySE(SE_EXP);
+    if(FlagGet(FLAG_CAUGHT_ENTEI))
+        PlaySE(SE_EXP);
+    if(FlagGet(FLAG_CAUGHT_SUICUNE))
+        PlaySE(SE_EXP);
 
     switch(starter)
     {
