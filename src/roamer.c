@@ -4,6 +4,7 @@
 #include "sound.h"
 #include "overworld.h"
 #include "field_specials.h"
+#include "constants/songs.h"
 #include "constants/flags.h"
 #include "constants/species.h"
 #include "constants/maps.h"
