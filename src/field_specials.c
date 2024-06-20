@@ -1632,9 +1632,9 @@ void ForcePlayerToStartSurfing(void)
 }
 
 static const u16 sStarterSpecies[] = {
-    SPECIES_ELEKID,
     SPECIES_MAGBY,
-    SPECIES_SMOOCHUM
+    SPECIES_SMOOCHUM,
+    SPECIES_ELEKID
 };
 
 static u16 GetStarterSpeciesById(u16 idx)
