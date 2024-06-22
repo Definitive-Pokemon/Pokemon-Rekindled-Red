@@ -24,7 +24,7 @@ enum
 EWRAM_DATA u8 sLocationHistory[MAX_ROAMERS][3][2] = {};
 EWRAM_DATA u8 sRoamerLocation[MAX_ROAMERS][2] = {};
 
-static const struct Roamer * sRoamerSlots[MAX_ROAMERS] = {
+static struct Roamer * sRoamerSlots[MAX_ROAMERS] = {
     &gSaveBlock1Ptr->roamer1,
     &gSaveBlock1Ptr->roamer2,
     &gSaveBlock1Ptr->roamer3,
@@ -185,7 +185,7 @@ void RoamerMove(void)
 static bool8 IsSpeciesActiveRoamer(u16 species, struct Roamer * possibleSlot)
 {
     u32 i; //roamer slot
-    const struct Roamer * slotData;
+    struct Roamer * slotData;
     for (i = 0; i < MAX_ROAMERS; i++)
     {
         slotData = sRoamerSlots[i];
@@ -221,7 +221,7 @@ void SetRoamerInactive(u16 roamerSpecies)
 void GetRoamerLocation(u16 species, u8 *mapGroup, u8 *mapNum)
 {
     u32 i; //roamer slot
-    const struct Roamer * slotData;
+    struct Roamer * slotData;
     for (i = 0; i < MAX_ROAMERS; i++)
     {
         slotData = sRoamerSlots[i];
@@ -236,7 +236,7 @@ void GetRoamerLocation(u16 species, u8 *mapGroup, u8 *mapNum)
 u16 GetRoamerLocationMapSectionId(u16 species) 
 {
     u32 i;
-    const struct Roamer * slotData;
+    struct Roamer * slotData;
     for (i = 0; i < MAX_ROAMERS; i++)
     {
         slotData = sRoamerSlots[i];
@@ -276,7 +276,7 @@ static u8 AllActiveRoamersAtLocation(u8 mapGroup, u8 mapNum, u8 list[])
 {
     u8 size = 0;
     u32 i;
-    const struct Roamer * slot;
+    struct Roamer * slot;
     for (i = 0; i < MAX_ROAMERS; i++)
     {
         slot = sRoamerSlots[i];
@@ -363,7 +363,7 @@ void StartRoaming(u8 mon)
     struct Roamer * current;
     for (i = 0; i < MAX_ROAMERS; i++)
     {
-        current = (struct Roamer *)sRoamerSlots[i];
+        current = sRoamerSlots[i];
         if (!current->active)
         {
             InsertRoamerMon(current, mon);
