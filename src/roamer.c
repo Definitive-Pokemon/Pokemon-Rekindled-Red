@@ -19,13 +19,8 @@ enum
     MAP_NUM, // map number
 };
 
-#define MAX_ROAMERS 4
-
 EWRAM_DATA u8 sLocationHistory[MAX_ROAMERS][3][2] = {};
 EWRAM_DATA u8 sRoamerLocation[MAX_ROAMERS][2] = {};
-
-// work with create index/species then assign to predetermined slot
-
 
 #define ___ MAP_NUM(UNDEFINED) // For empty spots in the location table
 
@@ -74,17 +69,6 @@ static const u8 sRoamerLocations[][7] = {
 #define NUM_LOCATION_SETS (ARRAY_COUNT(sRoamerLocations) - 1)
 #define NUM_LOCATIONS_PER_SET (ARRAY_COUNT(sRoamerLocations[0]))
 
-static struct Roamer * RoamerSlots(void)
-{
-    struct Roamer * result[MAX_ROAMERS] = {
-        &gSaveBlock1Ptr->roamer1,
-        &gSaveBlock1Ptr->roamer2,
-        &gSaveBlock1Ptr->roamer3,
-        &gSaveBlock1Ptr->roamer4
-    };
-    return result;
-}
-
 void ClearRoamerData(void)
 {
     u32 i;
@@ -92,7 +76,7 @@ void ClearRoamerData(void)
     
     for (i = 0; i < MAX_ROAMERS; i++)
     {
-        *RoamerSlots()[i] = (struct Roamer) {};
+        *sRoamerSlots[i] = (struct Roamer) {};
         sRoamerLocation[i][MAP_GRP] = 0;
         sRoamerLocation[i][MAP_NUM] = 0;
         for (j = 0; j < 3; j++)
@@ -124,7 +108,7 @@ void SlotRoamerMoveToOtherLocationSet(u8 slot)
     u8 mapNum = 0;
     // Choose a location set that starts with a map
     // different from the roamer's current map
-    if (RoamerSlots()[slot]->active)
+    if ((&gSaveBlock1Ptr->roamers[slot])->active)
     {
         while (1)
         {
@@ -154,7 +138,7 @@ void RoamerMove(void)
     u8 locSet = 0;
     for (i = 0; i < MAX_ROAMERS; i++)
     {
-        if (!RoamerSlots()[i]->active)
+        if (!(&gSaveBlock1Ptr->roamers[i])->active)
             continue;
         if ((Random() % 16) == 0)
         {
@@ -193,7 +177,7 @@ static bool8 IsSpeciesActiveRoamer(u16 species, struct Roamer * possibleSlot)
     struct Roamer * slotData;
     for (i = 0; i < MAX_ROAMERS; i++)
     {
-        slotData = RoamerSlots()[i];
+        slotData = &gSaveBlock1Ptr->roamers[i];
         if (slotData->active)
         {
             if (slotData->species == species)
@@ -229,7 +213,7 @@ void GetRoamerLocation(u16 species, u8 *mapGroup, u8 *mapNum)
     struct Roamer * slotData;
     for (i = 0; i < MAX_ROAMERS; i++)
     {
-        slotData = RoamerSlots()[i];
+        slotData = &gSaveBlock1Ptr->roamers[i];
         if (slotData->species == species)
         {
                 *mapGroup = sRoamerLocation[i][MAP_GRP];
@@ -244,7 +228,7 @@ u16 GetRoamerLocationMapSectionId(u16 species)
     struct Roamer * slotData;
     for (i = 0; i < MAX_ROAMERS; i++)
     {
-        slotData = RoamerSlots()[i];
+        slotData = &gSaveBlock1Ptr->roamers[i];
         if (slotData->species == species)
         {
             if (!slotData->active)
@@ -284,7 +268,7 @@ static u8 AllActiveRoamersAtLocation(u8 mapGroup, u8 mapNum, u8 list[])
     struct Roamer * slot;
     for (i = 0; i < MAX_ROAMERS; i++)
     {
-        slot = RoamerSlots()[i];
+        slot = &gSaveBlock1Ptr->roamers[i];
         if (slot->active)
         {
             if (mapGroup == sRoamerLocation[i][MAP_GRP] &&
@@ -333,7 +317,7 @@ u8 TryInitializeRoamerEncounter(struct Pokemon *mon)
     {
         return 0;
     }
-    return SetRoamerDataToMon(mon, (struct Roamer *)RoamerSlots()[select - 1]);
+    return SetRoamerDataToMon(mon, (struct Roamer *)sRoamerSlots[select - 1]);
 }
 
 static void InsertRoamerMon(struct Roamer * slot, u8 template)
@@ -368,7 +352,7 @@ void StartRoaming(u8 mon)
     struct Roamer * current;
     for (i = 0; i < MAX_ROAMERS; i++)
     {
-        current = RoamerSlots()[i];
+        current = &gSaveBlock1Ptr->roamers[i];
         if (!current->active)
         {
             InsertRoamerMon(current, mon);
