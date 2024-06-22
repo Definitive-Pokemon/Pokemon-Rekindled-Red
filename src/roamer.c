@@ -76,7 +76,7 @@ void ClearRoamerData(void)
     
     for (i = 0; i < MAX_ROAMERS; i++)
     {
-        *sRoamerSlots[i] = (struct Roamer) {};
+        *gSaveBlock1Ptr->roamers[i] = (struct Roamer) {};
         sRoamerLocation[i][MAP_GRP] = 0;
         sRoamerLocation[i][MAP_NUM] = 0;
         for (j = 0; j < 3; j++)
@@ -317,7 +317,7 @@ u8 TryInitializeRoamerEncounter(struct Pokemon *mon)
     {
         return 0;
     }
-    return SetRoamerDataToMon(mon, (struct Roamer *)sRoamerSlots[select - 1]);
+    return SetRoamerDataToMon(mon, &gSaveBlock1Ptr->roamers[select - 1]);
 }
 
 static void InsertRoamerMon(struct Roamer * slot, u8 template)
