@@ -82,7 +82,7 @@ static struct Roamer * RoamerSlots(void)
         &gSaveBlock1Ptr->roamer3,
         &gSaveBlock1Ptr->roamer4
     };
-    return result
+    return result;
 }
 
 void ClearRoamerData(void)
