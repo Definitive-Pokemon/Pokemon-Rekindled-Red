@@ -76,7 +76,7 @@ void ClearRoamerData(void)
     
     for (i = 0; i < MAX_ROAMERS; i++)
     {
-        *gSaveBlock1Ptr->roamers[i] = (struct Roamer) {};
+        gSaveBlock1Ptr->roamers[i] = (struct Roamer) {};
         sRoamerLocation[i][MAP_GRP] = 0;
         sRoamerLocation[i][MAP_NUM] = 0;
         for (j = 0; j < 3; j++)
