@@ -134,36 +134,35 @@ void RoamerMoveToOtherLocationSet(void)
 
 void RoamerMove(void)
 {
-    u32 i; //roamer slot
+    u32 i;
     u8 locSet = 0;
-    for (i = 0; i < MAX_ROAMERS; i++)
+
+    if ((Random() % 16) == 0)
     {
-        if (!(&gSaveBlock1Ptr->roamers[i])->active)
-            continue;
-        if ((Random() % 16) == 0)
+        RoamerMoveToOtherLocationSet();
+    }
+    else
+    {
+        for(i = 0; i < MAX_ROAMERS; i++)
         {
-            SlotRoamerMoveToOtherLocationSet(i);
-        }
-        else
-        {
+            struct Roamer *roamer = &gSaveBlock1Ptr->roamers[i];
+
+            if (!roamer->active)
+                break;
+
             while (locSet < NUM_LOCATION_SETS)
             {
-                // Find the location set that starts with the roamer's current map
                 if (sRoamerLocation[i][MAP_NUM] == sRoamerLocations[locSet][0])
                 {
                     u8 mapNum;
                     while (1)
                     {
-                        // Choose a new map (excluding the first) within this set
-                        // Also exclude a map if the roamer was there 2 moves ago
-                        mapNum = sRoamerLocations[locSet][(Random() % (NUM_LOCATIONS_PER_SET - 1)) + 1];
-                        if (!(sLocationHistory[i][2][MAP_GRP] == ROAMER_MAP_GROUP
-                        && sLocationHistory[i][2][MAP_NUM] == mapNum)
-                        && mapNum != MAP_NUM(UNDEFINED))
+                        mapNum = sRoamerLocations[locSet][(Random() % 5) + 1];
+                        if (!(sLocationHistory[i][2][MAP_GRP] == 0 && sLocationHistory[i][2][MAP_NUM] == mapNum) && mapNum != 0xFF)
                             break;
                     }
                     sRoamerLocation[i][MAP_NUM] = mapNum;
-                    return;
+                    break;
                 }
                 locSet++;
             }
