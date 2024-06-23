@@ -103,32 +103,29 @@ void UpdateLocationHistoryForRoamer(void)
     }
 }
 
-void SlotRoamerMoveToOtherLocationSet(u8 slot)
-{
-    u8 mapNum = 0;
-    // Choose a location set that starts with a map
-    // different from the roamer's current map
-    if ((&gSaveBlock1Ptr->roamers[slot])->active)
-    {
-        while (1)
-        {
-            mapNum = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
-            if (sRoamerLocation[slot][MAP_NUM] != mapNum)
-            {
-                sRoamerLocation[slot][MAP_NUM] = mapNum;
-                return;
-            }
-        }
-    }
-}
-
-
 void RoamerMoveToOtherLocationSet(void)
 {
     u32 i;
-    for (i = 0; i < MAX_ROAMERS; i++)
+    u8 mapNum = 0;
+
+    for(i = 0; i < MAX_ROAMERS; i++)
     {
-        SlotRoamerMoveToOtherLocationSet(i);
+        struct Roamer *roamer = &gSaveBlock1Ptr->roamers[i];
+
+        if (!roamer->active)
+            continue;
+
+        sRoamerLocation[i][MAP_GRP] = 0;
+
+        while (1)
+        {
+            mapNum = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
+            if (sRoamerLocation[i][MAP_NUM] != mapNum)
+            {
+                sRoamerLocation[i][MAP_NUM] = mapNum;
+                break;
+            }
+        }
     }
 }
 
