@@ -15,7 +15,8 @@ struct RoamerPair
     u16 starter;
 };
 
-static s32 GetRoamerPokedexAreaMarkers(u16 species, u16 mapSecId, struct Subsprite * subsprites);
+static s32 GetRoamerIndex(u16 species);
+static s32 GetRoamerPokedexAreaMarkers(u16 species, struct Subsprite * subsprites);
 static bool32 IsSpeciesOnMap(const struct WildPokemonHeader * data, s32 species);
 static bool32 IsSpeciesInEncounterTable(const struct WildPokemonInfo * pokemon, s32 species, s32 count);
 static u16 GetMapSecIdFromWildMonHeader(const struct WildPokemonHeader * header);
@@ -153,6 +154,12 @@ static const struct
     { sDexAreas_Sevii7, ARRAY_COUNT(sDexAreas_Sevii7) }
 };
 
+static const struct RoamerPair sRoamerPairs[] = {
+    { SPECIES_ENTEI,   SPECIES_BULBASAUR  },
+    { SPECIES_SUICUNE, SPECIES_CHARMANDER },
+    { SPECIES_RAIKOU,  SPECIES_SQUIRTLE   }
+};
+
 // Scans for the given species and populates 'subsprites' with the area markers.
 // Returns the number of areas where the species was found.
 s32 GetSpeciesPokedexAreaMarkers(u16 species, struct Subsprite * subsprites)
@@ -167,9 +174,8 @@ s32 GetSpeciesPokedexAreaMarkers(u16 species, struct Subsprite * subsprites)
     s32 alteringCaveNum;
     s32 i;
 
-    dexArea = GetRoamerLocationMapSectionId(species); //variable hackery
-    if (dexArea != MAPSEC_NONE)
-        return GetRoamerPokedexAreaMarkers(species, dexArea, subsprites);
+    if (GetRoamerIndex(species) >= 0)
+        return GetRoamerPokedexAreaMarkers(species, subsprites);
 
     seviiAreas = GetUnlockedSeviiAreas();
     alteringCaveCount = 0;
@@ -219,13 +225,33 @@ s32 GetSpeciesPokedexAreaMarkers(u16 species, struct Subsprite * subsprites)
     return areaCount;
 }
 
-
-static s32 GetRoamerPokedexAreaMarkers(u16 species, u16 mapSecId, struct Subsprite * subsprites)
+static s32 GetRoamerIndex(u16 species)
 {
+    s32 i;
+    for (i = 0; i < ARRAY_COUNT(sRoamerPairs); i++)
+    {
+        if (sRoamerPairs[i].roamer == species)
+            return i;
+    }
+
+    return -1;
+}
+
+static s32 GetRoamerPokedexAreaMarkers(u16 species, struct Subsprite * subsprites)
+{
+    u16 mapSecId;
     s32 roamerIdx;
     u16 dexArea;
     s32 tableIndex;
 
+    // Make sure that this is a roamer species, and that it corresponds to the player's starter.
+    roamerIdx = GetRoamerIndex(species);
+    if (roamerIdx < 0)
+        return 0;
+    if (sRoamerPairs[roamerIdx].roamer != GetRoamerSpecies())
+        return 0;
+
+    mapSecId = GetRoamerLocationMapSectionId();
     tableIndex = 0;
     if (FindDexAreaByMapSec(mapSecId, sDexAreas_Kanto, ARRAY_COUNT(sDexAreas_Kanto), &tableIndex, &dexArea))
     {

@@ -425,7 +425,6 @@ static bool8 DoGlobalWildEncounterDiceRoll(void)
 
 bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
 {
-    u8 roamerLevel; // replace with struct ROAMING MON
     u16 headerId;
     struct Roamer * roamer;
     const struct WildPokemonInfo * currentLandTable;
@@ -454,18 +453,20 @@ bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
                 return FALSE;
             else if (previousMetatileBehavior != ExtractMetatileAttribute(currMetatileAttrs, METATILE_ATTRIBUTE_BEHAVIOR) && !DoGlobalWildEncounterDiceRoll())
                 return FALSE;
-            roamerLevel = TryInitializeRoamerEncounter(&gEnemyParty[0]);
             if (DoWildEncounterRateTest(currentLandTable->encounterRate, FALSE) != TRUE)
             {
                 AddToWildEncounterRateBuff(currentLandTable->encounterRate);
                 return FALSE;
             }
-            else if (roamerLevel != 0)
+
+            else if (TryStartRoamerEncounter() == TRUE)
             {
-                if (!IsWildLevelAllowedByRepel(roamerLevel))
+                roamer = &gSaveBlock1Ptr->roamer;
+                if (!IsWildLevelAllowedByRepel(roamer->level))
                 {
                     return FALSE;
                 }
+
                 StartRoamerBattle();
                 return TRUE;
             }
@@ -496,10 +497,11 @@ bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
                 AddToWildEncounterRateBuff(currentWaterTable->encounterRate);
                 return FALSE;
             }
-            roamerLevel = TryInitializeRoamerEncounter(&gEnemyParty[0]);
-            if (roamerLevel != 0)
+
+            if (TryStartRoamerEncounter() == TRUE)
             {
-                if (!IsWildLevelAllowedByRepel(roamerLevel))
+                roamer = &gSaveBlock1Ptr->roamer;
+                if (!IsWildLevelAllowedByRepel(roamer->level))
                 {
                     return FALSE;
                 }
@@ -577,8 +579,7 @@ bool8 SweetScentWildEncounter(void)
     {
         if (MapGridGetMetatileAttributeAt(x, y, METATILE_ATTRIBUTE_ENCOUNTER_TYPE) == TILE_ENCOUNTER_LAND)
         {
-            
-            if (TryInitializeRoamerEncounter(&gEnemyParty[0]) != 0)
+            if (TryStartRoamerEncounter() == TRUE)
             {
                 StartRoamerBattle();
                 return TRUE;
@@ -594,7 +595,7 @@ bool8 SweetScentWildEncounter(void)
         }
         else if (MapGridGetMetatileAttributeAt(x, y, METATILE_ATTRIBUTE_ENCOUNTER_TYPE) == TILE_ENCOUNTER_WATER)
         {
-            if (TryInitializeRoamerEncounter(&gEnemyParty[0]) != 0)
+            if (TryStartRoamerEncounter() == TRUE)
             {
                 StartRoamerBattle();
                 return TRUE;
