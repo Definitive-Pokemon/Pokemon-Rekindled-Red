@@ -222,3 +222,6 @@ const u32 gMetatileAttributes_SeviiIslands6[] = INCBIN_U32("data/tilesets/second
 
 const u16 gMetatiles_BattleFrontierRankingHall[] = INCBIN_U16("data/tilesets/secondary/battlefrontierrankinghall/metatiles.bin");
 const u32 gMetatileAttributes_BattleFrontierRankingHall[] = INCBIN_U32("data/tilesets/secondary/battlefrontierrankinghall/metatile_attributes.bin");
+
+const u16 gMetatiles_Lava[] = INCBIN_U16("data/tilesets/primary/lava/metatiles.bin");
+const u32 gMetatileAttributes_Lava[] = INCBIN_U32("data/tilesets/primary/lava/metatile_attributes.bin");

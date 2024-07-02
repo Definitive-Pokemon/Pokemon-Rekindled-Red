@@ -1540,3 +1540,23 @@ const u16 gTilesetPalettes_BattleFrontierRankingHall[][16] =
 	INCBIN_U16("data/tilesets/secondary/battlefrontierrankinghall/palettes/11.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/battlefrontierrankinghall/palettes/12.gbapal"),
 };
+
+const u16 gTilesetPalettes_Lava[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/lava/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/lava/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/lava/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/lava/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/lava/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/lava/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/lava/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/lava/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/lava/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/lava/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/lava/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/lava/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/lava/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/lava/palettes/13.gbapal"),
+};
+
+const u32 gTilesetTiles_Lava[] = INCBIN_U32("data/tilesets/primary/lava/tiles.4bpp.lz");

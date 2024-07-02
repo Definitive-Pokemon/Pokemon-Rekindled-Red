@@ -824,3 +824,14 @@ const struct Tileset gTileset_BattleFrontierRankingHall =
 	.metatileAttributes = gMetatileAttributes_BattleFrontierRankingHall,
 	.callback = NULL
 };
+
+const struct Tileset gTileset_Lava =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Lava,
+    .palettes = gTilesetPalettes_Lava,
+    .metatiles = gMetatiles_Lava,
+    .metatileAttributes = gMetatileAttributes_Lava,
+    .callback = InitTilesetAnim_Lava,
+};

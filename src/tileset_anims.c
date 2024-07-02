@@ -212,6 +212,23 @@ static const u16 *const gTilesetAnims_Mossdeep_Tree_Base[] = {
     gTilesetAnims_Mossdeep_Tree_Base_Frame7
 };
 
+// needs to be palette 2
+static const u16 sTilesetAnims_Lava_Frame0[] = INCBIN_U16("data/tilesets/primary/lava/anim/lava/0.4bpp");
+static const u16 sTilesetAnims_Lava_Frame1[] = INCBIN_U16("data/tilesets/primary/lava/anim/lava/1.4bpp");
+static const u16 sTilesetAnims_Lava_Frame2[] = INCBIN_U16("data/tilesets/primary/lava/anim/lava/2.4bpp");
+static const u16 sTilesetAnims_Lava_Frame3[] = INCBIN_U16("data/tilesets/primary/lava/anim/lava/3.4bpp");
+static const u16 sTilesetAnims_Lava_Frame4[] = INCBIN_U16("data/tilesets/primary/lava/anim/lava/4.4bpp");
+static const u16 sTilesetAnims_Lava_Frame5[] = INCBIN_U16("data/tilesets/primary/lava/anim/lava/5.4bpp");
+static const u16 sTilesetAnims_Lava_Frame6[] = INCBIN_U16("data/tilesets/primary/lava/anim/lava/6.4bpp");
+static const u16 sTilesetAnims_Lava_Frame7[] = INCBIN_U16("data/tilesets/primary/lava/anim/lava/7.4bpp");
+
+static const u16 *const sTilesetAnims_Lava[] = {
+    sTilesetAnims_Lava_Frame0,
+    sTilesetAnims_Lava_Frame1,
+    sTilesetAnims_Lava_Frame2,
+    sTilesetAnims_Lava_Frame3,
+};
+
 static void ResetTilesetAnimBuffer(void)
 {
     sTilesetDMA3TransferBufferSize = 0;
@@ -299,6 +316,11 @@ static void QueueAnimTiles_General_SandWatersEdge(u16 timer)
     AppendTilesetAnimToBuffer(sTilesetAnims_General_SandWatersEdge[timer % ARRAY_COUNT(sTilesetAnims_General_SandWatersEdge)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(464)), 18 * TILE_SIZE_4BPP);
 }
 
+static void QueueAnimTiles_Lava_Flow(u16 timer)
+{
+    AppendTilesetAnimToBuffer(sTilesetAnims_Lava[timer % 4], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(416)), 18 * TILE_SIZE_4BPP);
+}
+
 static void TilesetAnim_General(u16 timer)
 {
     if (timer % 8 == 0)
@@ -314,6 +336,19 @@ void InitTilesetAnim_General(void)
     sPrimaryTilesetAnimCounter = 0;
     sPrimaryTilesetAnimCounterMax = 640;
     sPrimaryTilesetAnimCallback = TilesetAnim_General;
+}
+
+static void TilesetAnim_General(u16 timer)
+{
+    if (timer % 8 == 0)
+        QueueAnimTiles_Lava_Flow(timer / 8);
+}
+
+void InitTilesetAnim_Lava(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 640;
+    sPrimaryTilesetAnimCallback = TilesetAnim_Lava;
 }
 
 static void QueueAnimTiles_CeladonCity_Fountain(u16 timer)

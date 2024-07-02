@@ -728,7 +728,7 @@
       "height": 20,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_Lava",
       "secondary_tileset": "gTileset_PalletTown",
       "border_filepath": "data/layouts/PalletTown/border.bin",
       "blockdata_filepath": "data/layouts/PalletTown/map.bin"
