@@ -338,7 +338,7 @@ void InitTilesetAnim_General(void)
     sPrimaryTilesetAnimCallback = TilesetAnim_General;
 }
 
-static void TilesetAnim_General(u16 timer)
+static void TilesetAnim_Lava(u16 timer)
 {
     if (timer % 8 == 0)
         QueueAnimTiles_Lava_Flow(timer / 8);
