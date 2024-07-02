@@ -1556,7 +1556,6 @@ const u16 gTilesetPalettes_Lava[][16] =
     INCBIN_U16("data/tilesets/primary/lava/palettes/10.gbapal"),
     INCBIN_U16("data/tilesets/primary/lava/palettes/11.gbapal"),
     INCBIN_U16("data/tilesets/primary/lava/palettes/12.gbapal"),
-	INCBIN_U16("data/tilesets/primary/lava/palettes/13.gbapal"),
 };
 
 const u32 gTilesetTiles_Lava[] = INCBIN_U32("data/tilesets/primary/lava/tiles.4bpp.lz");
