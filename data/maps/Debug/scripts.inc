@@ -17,7 +17,7 @@ Debug_Battle::
 
 Debug_GiveNormalMon::
 	lock
-	givemon SPECIES_ENTEI, 5, ITEM_NONE
+	givemon SPECIES_REGIGIGAS, 5, ITEM_NONE
 	release
 	end
 
