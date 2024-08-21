@@ -1731,7 +1731,7 @@ static void Cmd_jumpnbspanim(void)
 {
     sBattleAnimScriptPtr++;
     if (GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)
-        sBattleAnimScriptPtr = T2_READ_PTR(sBattleAnimScriptPtr + 4);
+        sBattleAnimScriptPtr = T2_READ_PTR(sBattleAnimScriptPtr + 1);
     else
         sBattleAnimScriptPtr += 4;
 }
