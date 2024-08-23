@@ -89,7 +89,7 @@ VictoryRoad_2F_EventScript_RanFromEntei::
 	goto EventScript_EnteiFled
 	end
 	
-VictoryRoad_2F_EventScript_EnteiFled::
+EventScript_EnteiFled::
 	fadescreenswapbuffers FADE_TO_BLACK
     removeobject VAR_LAST_TALKED
     fadescreenswapbuffers FADE_FROM_BLACK
@@ -98,7 +98,7 @@ VictoryRoad_2F_EventScript_EnteiFled::
     release
     end
 	
-VictoryRoad_2F_Text_EnteiFled::
+Text_EnteiFled::
 	.string "ENTEI fled the scene!$"
 	
 VictoryRoad_2F_EventScript_MoveSwitch1Boulder::

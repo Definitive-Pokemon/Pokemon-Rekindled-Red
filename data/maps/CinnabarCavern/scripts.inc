@@ -67,7 +67,7 @@ CinnabarCavern_EventScript_RanFromRaikou::
 	goto EventScript_RaikouFled
 	end
 	
-CinnabarCavern_EventScript_RaikouFled::
+EventScript_RaikouFled::
 	fadescreenswapbuffers FADE_TO_BLACK
     removeobject VAR_LAST_TALKED
     fadescreenswapbuffers FADE_FROM_BLACK
@@ -76,9 +76,8 @@ CinnabarCavern_EventScript_RaikouFled::
     release
     end
 	
-CinnabarCavern_Text_RaikouFled::
+Text_RaikouFled::
 	.string "RAIKOU fled outside!$"
-	
 
 CinnabarCavern_EventScript_Computer::
 	msgbox CinnabarCavern_Text_Message, MSGBOX_SIGN

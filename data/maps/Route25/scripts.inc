@@ -88,7 +88,7 @@ Route25_EventScript_RanFromSuicune::
 	goto EventScript_SuicuneFled
 	end
 	
-Route25_EventScript_SuicuneFled::
+EventScript_SuicuneFled::
 	fadescreenswapbuffers FADE_TO_BLACK
     removeobject VAR_LAST_TALKED
     fadescreenswapbuffers FADE_FROM_BLACK
@@ -97,5 +97,5 @@ Route25_EventScript_SuicuneFled::
     release
     end
 	
-Route25_Text_SuicuneFled::
+Text_SuicuneFled::
 	.string "SUICUNE fled to the north!$"
