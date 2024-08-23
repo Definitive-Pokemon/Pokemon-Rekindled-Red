@@ -42,12 +42,12 @@ Route25_OnTransition::
 	end
 
 Route25_EventScript_TryShowSuicune::
-	goto_if_set FLAG_SUICUNE_FLEW_AWAY, EventScript_Return
-	clearflag FLAG_HIDE_SUICUNE
+	goto_if_set FLAG_SUICUNE_FLED, EventScript_Return
+	clearflag FLAG_HIDE_SUICUNE_ROAM
 	return
 
 Route25_EventScript_HideSuicune::
-	setflag FLAG_HIDE_SUICUNE
+	setflag FLAG_HIDE_SUICUNE_ROAM
 	return
 
 Route25_EventScript_Suicune::

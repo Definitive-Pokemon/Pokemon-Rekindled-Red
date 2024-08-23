@@ -43,12 +43,12 @@ VictoryRoad_2F_OnTransition::
 	end
 
 VictoryRoad_2F_EventScript_TryShowEntei::
-	goto_if_set FLAG_ENTEI_FLEW_AWAY, EventScript_Return
-	clearflag FLAG_HIDE_ENTEI
+	goto_if_set FLAG_ENTEI_FLED, EventScript_Return
+	clearflag FLAG_HIDE_ENTEI_ROAM
 	return
 
 VictoryRoad_2F_EventScript_HideEntei::
-	setflag FLAG_HIDE_ENTEI
+	setflag FLAG_HIDE_ENTEI_ROAM
 	return
 
 VictoryRoad_2F_EventScript_Entei::

@@ -21,12 +21,12 @@ CinnabarCavern_OnTransition::
 	end
 
 CinnabarCavern_EventScript_TryShowRaikou::
-	goto_if_set FLAG_RAIKOU_FLEW_AWAY, EventScript_Return
-	clearflag FLAG_HIDE_RAIKOU
+	goto_if_set FLAG_RAIKOU_FLED, EventScript_Return
+	clearflag FLAG_HIDE_RAIKOU_ROAM
 	return
 
 CinnabarCavern_EventScript_HideRaikou::
-	setflag FLAG_HIDE_RAIKOU
+	setflag FLAG_HIDE_RAIKOU_ROAM
 	return
 
 CinnabarCavern_EventScript_Raikou::

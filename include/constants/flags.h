@@ -1010,8 +1010,8 @@
 #define FLAG_SUICUNE_FLED              0x3CB
 #define FLAG_RAIKOU_FLED               0x3CC
 #define FLAG_ENTEI_FLED                0x3CD
-#define FLAG_0x3CE               0x3CE
-#define FLAG_0x3CF               0x3CF
+#define FLAG_FOUGHT_ENTEI              0x3CE
+#define FLAG_FOUGHT_RAIKOU             0x3CF
 //New move tutors
 #define FLAG_MOVE_TUTOR_TAUGHT_FURY_CUTTER  0x3D0
 #define FLAG_MOVE_TUTOR_TAUGHT_ROLLOUT      0x3D1
@@ -1260,7 +1260,7 @@
 #define HIDDEN_ITEM_CAPE_BRINK_BIG_PEARL                              213 //continued from above numbering because of how these are set by GetHiddenItemAttr
 #define FLAG_HIDDEN_ITEM_CINNABAR_BERRY               214
 #define FLAG_0xHIDDEN_ITEM_CINNABAR_FIRE_STONE               215
-#define FLAG_0x4C0               0x4C0
+#define FLAG_FOUGHT_SUICUNE      0x4C0
 #define FLAG_0x4C1               0x4C1
 #define FLAG_0x4C2               0x4C2
 #define FLAG_0x4C3               0x4C3
