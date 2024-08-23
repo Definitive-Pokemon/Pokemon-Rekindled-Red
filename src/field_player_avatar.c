@@ -760,15 +760,21 @@ static void PlayerAvatarTransition_Dummy(struct ObjectEvent * playerObjEvent)
 
 static void PlayerAvatarTransition_Normal(struct ObjectEvent * playerObjEvent)
 {
+    QuestLogTryRecordPlayerAvatarGfxTransition(QL_PLAYER_GFX_NORMAL);
+    QuestLogCallUpdatePlayerSprite(QL_PLAYER_GFX_NORMAL);
 }
 
 static void PlayerAvatarTransition_Bike(struct ObjectEvent * playerObjEvent)
 {
+    QuestLogTryRecordPlayerAvatarGfxTransition(QL_PLAYER_GFX_BIKE);
+    QuestLogCallUpdatePlayerSprite(QL_PLAYER_GFX_BIKE);
     BikeClearState(0, 0);
 }
 
 static void PlayerAvatarTransition_Surfing(struct ObjectEvent * playerObjEvent)
 {
+    QuestLogTryRecordPlayerAvatarGfxTransition(QL_PLAYER_GFX_SURF);
+    QuestLogCallUpdatePlayerSprite(QL_PLAYER_GFX_SURF);
 }
 
 static void PlayerAvatarTransition_Underwater(struct ObjectEvent * playerObjEvent)

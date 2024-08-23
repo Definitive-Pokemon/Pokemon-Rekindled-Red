@@ -106,29 +106,39 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
     u8 tileTransitionState = gPlayerAvatar.tileTransitionState;
     bool8 forcedMove = MetatileBehavior_IsForcedMovementTile(GetPlayerCurMetatileBehavior());
 
+    if (!ScriptContext_IsEnabled() && IsQuestLogInputDpad() == TRUE)
+    {
+        QuestLogOverrideJoyVars(input, &newKeys, &heldKeys);
+    }
     if ((tileTransitionState == T_TILE_CENTER && forcedMove == FALSE) || tileTransitionState == T_NOT_MOVING)
     {
         if (GetPlayerSpeed() != PLAYER_SPEED_FASTEST)
         {
             if ((newKeys & START_BUTTON) && !(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_FORCED))
                 input->pressedStartButton = TRUE;
-            if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_FORCED))
+            if (!QL_IS_PLAYBACK_STATE)
             {
-                if (newKeys & SELECT_BUTTON)
-                    input->pressedSelectButton = TRUE;
-                if (newKeys & A_BUTTON)
-                    input->pressedAButton = TRUE;
-                if (newKeys & B_BUTTON)
-                    input->pressedBButton = TRUE;
-                if (newKeys & R_BUTTON)
-                    input->pressedRButton = TRUE;
+                if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_FORCED))
+                {
+                    if (newKeys & SELECT_BUTTON)
+                        input->pressedSelectButton = TRUE;
+                    if (newKeys & A_BUTTON)
+                        input->pressedAButton = TRUE;
+                    if (newKeys & B_BUTTON)
+                        input->pressedBButton = TRUE;
+                    if (newKeys & R_BUTTON)
+                        input->pressedRButton = TRUE;
+                }
             }
         }
 
-        if (heldKeys & (DPAD_UP | DPAD_DOWN | DPAD_LEFT | DPAD_RIGHT))
+        if (!QL_IS_PLAYBACK_STATE)
         {
-            input->heldDirection = TRUE;
-            input->heldDirection2 = TRUE;
+            if (heldKeys & (DPAD_UP | DPAD_DOWN | DPAD_LEFT | DPAD_RIGHT))
+            {
+                input->heldDirection = TRUE;
+                input->heldDirection2 = TRUE;
+            }
         }
 
     }
@@ -141,14 +151,17 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
             input->checkStandardWildEncounter = TRUE;
     }
 
-    if (heldKeys & DPAD_UP)
-        input->dpadDirection = DIR_NORTH;
-    else if (heldKeys & DPAD_DOWN)
-        input->dpadDirection = DIR_SOUTH;
-    else if (heldKeys & DPAD_LEFT)
-        input->dpadDirection = DIR_WEST;
-    else if (heldKeys & DPAD_RIGHT)
-        input->dpadDirection = DIR_EAST;
+    if (!QL_IS_PLAYBACK_STATE)
+    {
+        if (heldKeys & DPAD_UP)
+            input->dpadDirection = DIR_NORTH;
+        else if (heldKeys & DPAD_DOWN)
+            input->dpadDirection = DIR_SOUTH;
+        else if (heldKeys & DPAD_LEFT)
+            input->dpadDirection = DIR_WEST;
+        else if (heldKeys & DPAD_RIGHT)
+            input->dpadDirection = DIR_EAST;
+    }
 }
 
 static void QuestLogOverrideJoyVars(struct FieldInput *input, u16 *newKeys, u16 *heldKeys)
@@ -662,6 +675,8 @@ static bool8 TryStartMiscWalkingScripts(u16 metatileBehavior)
 static bool8 TryStartStepCountScript(u16 metatileBehavior)
 {
     if (InUnionRoom() == TRUE)
+        return FALSE;
+    if (gQuestLogState == QL_STATE_PLAYBACK)
         return FALSE;
 
     UpdateHappinessStepCounter();

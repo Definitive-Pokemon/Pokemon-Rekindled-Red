@@ -101,7 +101,7 @@ static void Task_RunTimeBasedEvents(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-    if (!ArePlayerFieldControlsLocked())
+    if (!ArePlayerFieldControlsLocked() && !QL_IS_PLAYBACK_STATE)
         UpdateAmbientCry(&tAmbientCryState, &tAmbientCryDelay);
 }
 

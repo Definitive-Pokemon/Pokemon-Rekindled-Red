@@ -181,6 +181,7 @@ void SetQuestLogEvent(u16, const u16 *);
 void SetQLPlayedTheSlots(void);
 void QuestLog_RecordEnteredMap(u16);
 u8 QL_GetPlaybackState(void);
+bool8 QL_AvoidDisplay(void (*func)(void));
 void QuestLog_BackUpPalette(u16 offset, u16 size);
 void CommitQuestLogWindow1(void);
 void QuestLog_DrawPreviouslyOnQuestHeaderIfInPlaybackMode(void);

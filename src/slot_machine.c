@@ -3,6 +3,7 @@
 #include "decompress.h"
 #include "task.h"
 #include "coins.h"
+#include "quest_log.h"
 #include "overworld.h"
 #include "menu.h"
 #include "new_menu_helpers.h"
@@ -1016,6 +1017,7 @@ static void MainTask_SlotsGameLoop(u8 taskId)
         }
         break;
     case 2:
+        SetQLPlayedTheSlots();
         CalcSlotBias();
         StartReels();
         sSlotMachineState->currentReel = 0;

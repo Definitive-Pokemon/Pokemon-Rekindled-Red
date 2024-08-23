@@ -1724,7 +1724,10 @@ void CopyObjectGraphicsInfoToSpriteTemplate(u16 graphicsId, void (*callback)(str
     
     do
     {
-        spriteTemplate->callback = callback;
+        if (ScriptContext_IsEnabled() != TRUE && QL_GetPlaybackState() == QL_PLAYBACK_STATE_RUNNING)
+            spriteTemplate->callback = QL_UpdateObject;
+        else
+            spriteTemplate->callback = callback;
     } while (0);
     
     *subspriteTables = graphicsInfo->subspriteTables;
@@ -5327,6 +5330,9 @@ static void ObjectEventSetSingleMovement(struct ObjectEvent *objectEvent, struct
 {
     objectEvent->movementActionId = movementActionId;
     sprite->data[2] = 0;
+    
+    if (gQuestLogPlaybackState == QL_PLAYBACK_STATE_RECORDING)
+        QuestLogRecordNPCStep(objectEvent->localId, objectEvent->mapNum, objectEvent->mapGroup, movementActionId);
 }
 
 static void FaceDirection(struct ObjectEvent *objectEvent, struct Sprite *sprite, u8 direction)

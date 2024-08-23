@@ -1098,6 +1098,9 @@ void DrawElevatorCurrentFloorWindow(void)
     const u8 *floorname;
     u32 strwidth;
 
+    if (QL_AvoidDisplay(QL_DestroyAbortedDisplay) == TRUE)
+        return;
+
     sElevatorCurrentFloorWindowId = AddWindow(&sElevatorCurrentFloorWindowTemplate);
     LoadStdWindowGfx(sElevatorCurrentFloorWindowId, 0x21D, BG_PLTT_ID(13));
     DrawStdFrameWithCustomTileAndPalette(sElevatorCurrentFloorWindowId, FALSE, 0x21D, 13);
@@ -1164,6 +1167,9 @@ void ListMenu(void)
 {
     u8 taskId;
     struct Task *task;
+
+    if (QL_AvoidDisplay(QL_DestroyAbortedDisplay) == TRUE)
+        return;
         
     taskId = CreateTask(Task_CreateScriptListMenu, 8);
     task = &gTasks[taskId];
@@ -2590,11 +2596,14 @@ void BrailleCursorToggle(void)
     // 8005 = y
     // 8006 = action (0 = create, 1 = delete)
     u16 x;
-    x = gSpecialVar_0x8004 + 27;
-    if (gSpecialVar_0x8006 == 0)
-        sBrailleTextCursorSpriteID = CreateTextCursorSprite(0, x, gSpecialVar_0x8005, 0, 0);
-    else
-        DestroyTextCursorSprite(sBrailleTextCursorSpriteID);
+    if (gQuestLogState != QL_STATE_PLAYBACK)
+    {
+        x = gSpecialVar_0x8004 + 27;
+        if (gSpecialVar_0x8006 == 0)
+            sBrailleTextCursorSpriteID = CreateTextCursorSprite(0, x, gSpecialVar_0x8005, 0, 0);
+        else
+            DestroyTextCursorSprite(sBrailleTextCursorSpriteID);
+    }
 }
 
 bool8 PlayerPartyContainsSpeciesWithPlayerID(void)
