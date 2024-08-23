@@ -245,6 +245,7 @@
 #define MAP_NEW_MAP1                                  (99 | (2 << 8))
 #define MAP_MARINE_CAVE                               (100 | (2 << 8))
 #define MAP_TERRA_CAVE                                (101 | (2 << 8))
+#define MAP_CINNABAR_CAVERN                           (102 | (2 << 8))
 
 // gMapGroup_TownsAndRoutes
 #define MAP_PALLET_TOWN                          (0 | (3 << 8))

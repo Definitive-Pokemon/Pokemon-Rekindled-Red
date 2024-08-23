@@ -981,8 +981,11 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_ANABEL_FOURTH
 	setflag FLAG_HIDE_CLEFAIRY
 	setflag FLAG_HIDE_ENTEI_TANOBY
+	setflag FLAG_HIDE_ENTEI_ROAM
 	setflag FLAG_HIDE_SUICUNE_TANOBY
+	setflag FLAG_HIDE_SUICUNE_ROAM
 	setflag FLAG_HIDE_RAIKOU_TANOBY
+	setflag FLAG_HIDE_RAIKOU_ROAM
 	setflag FLAG_HIDE_DUO1
 	setflag FLAG_HIDE_DUO2
 	setflag FLAG_HIDE_DUO3
@@ -1464,3 +1467,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/TerraCave/scripts.inc"
 	.include "data/maps/TerraCave/text.inc"
+
+	.include "data/maps/CinnabarCavern/scripts.inc"
+	.include "data/maps/CinnabarCavern/text.inc"

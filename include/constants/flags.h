@@ -1002,14 +1002,14 @@
 #define FLAG_UNPLACED_SAPPHIRE         0x3C5
 #define FLAG_UNPLACED_RUBY             0x3C6
 #define FLAG_UNPLACED_EMERALD          0x3C7
+#define FLAG_HIDE_SUICUNE_ROAM         0x3C8
+#define FLAG_HIDE_RAIKOU_ROAM          0x3C9
+#define FLAG_HIDE_ENTEI_ROAM           0x3CA
 
 // Unused?
-#define FLAG_0x3C8               0x3C8
-#define FLAG_0x3C9               0x3C9
-#define FLAG_0x3CA               0x3CA
-#define FLAG_0x3CB               0x3CB
-#define FLAG_0x3CC               0x3CC
-#define FLAG_0x3CD               0x3CD
+#define FLAG_SUICUNE_FLED              0x3CB
+#define FLAG_RAIKOU_FLED               0x3CC
+#define FLAG_ENTEI_FLED                0x3CD
 #define FLAG_0x3CE               0x3CE
 #define FLAG_0x3CF               0x3CF
 //New move tutors

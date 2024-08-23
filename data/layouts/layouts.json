@@ -1144,8 +1144,8 @@
     {
       "id": "LAYOUT_ROUTE25",
       "name": "Route25_Layout",
-      "width": 72,
-      "height": 20,
+      "width": 82,
+      "height": 30,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -5232,6 +5232,18 @@
       "secondary_tileset": "gTileset_MtEmber",
       "border_filepath": "data/layouts/TerraCave/border.bin",
       "blockdata_filepath": "data/layouts/TerraCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABAR_CAVERN",
+      "name": "CinnabarCavern_Layout",
+      "width": 9,
+      "height": 7,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/CinnabarCavern/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarCavern/map.bin"
     }
   ]
 }

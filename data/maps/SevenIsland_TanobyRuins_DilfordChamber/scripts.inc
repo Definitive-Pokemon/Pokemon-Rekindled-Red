@@ -24,6 +24,7 @@ SevenIsland_TanobyRuins_DilfordChamber_EventScript_Suicune::
     fadescreenswapbuffers FADE_FROM_BLACK
     msgbox SevenIsland_TanobyRuins_DilfordChamber_Text_SuicuneFled
 	closemessage
+	removeflag FLAG_HIDE_SUICUNE_ROAM
 	releaseall
 	end
 	
