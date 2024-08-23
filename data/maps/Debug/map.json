@@ -296,6 +296,13 @@
       "elevation": 0,
       "dest_map": "MAP_ONE_ISLAND_TREASURE_BEACH",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 20,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

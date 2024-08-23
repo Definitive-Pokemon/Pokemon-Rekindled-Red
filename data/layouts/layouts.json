@@ -5220,6 +5220,18 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/MarineCave/border.bin",
       "blockdata_filepath": "data/layouts/MarineCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_TERRA_CAVE",
+      "name": "TerraCave_Layout",
+      "width": 27,
+      "height": 30,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MtEmber",
+      "border_filepath": "data/layouts/TerraCave/border.bin",
+      "blockdata_filepath": "data/layouts/TerraCave/map.bin"
     }
   ]
 }

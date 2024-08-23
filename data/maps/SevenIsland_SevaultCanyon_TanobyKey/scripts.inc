@@ -134,8 +134,8 @@ SevenIsland_SevaultCanyon_TanobyKey_EventScript_PuzzleSolved::
 	call SevenIsland_SevaultCanyon_TanobyKey_EventScript_PuzzleSolvedShakeScreen
 	msgbox SevenIsland_SevaultCanyon_TanobyKey_Text_MysteriousRumbleFarAway
 	setflag FLAG_SYS_UNLOCKED_TANOBY_RUINS
-	clearflag FLAG_HIDE_ENTEI
-	clearflag FLAG_HIDE_SUICUNE
-	clearflag FLAG_HIDE_RAIKOU
+	clearflag FLAG_HIDE_ENTEI_TANOBY
+	clearflag FLAG_HIDE_SUICUNE_TANOBY
+	clearflag FLAG_HIDE_RAIKOU_TANOBY
 	releaseall
 	end

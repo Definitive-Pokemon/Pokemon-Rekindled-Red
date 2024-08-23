@@ -980,9 +980,9 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_LATIAS_FOURTH
 	setflag FLAG_HIDE_ANABEL_FOURTH
 	setflag FLAG_HIDE_CLEFAIRY
-	setflag FLAG_HIDE_ENTEI
-	setflag FLAG_HIDE_SUICUNE
-	setflag FLAG_HIDE_RAIKOU
+	setflag FLAG_HIDE_ENTEI_TANOBY
+	setflag FLAG_HIDE_SUICUNE_TANOBY
+	setflag FLAG_HIDE_RAIKOU_TANOBY
 	setflag FLAG_HIDE_DUO1
 	setflag FLAG_HIDE_DUO2
 	setflag FLAG_HIDE_DUO3
@@ -1461,3 +1461,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/MarineCave/scripts.inc"
 	.include "data/maps/MarineCave/text.inc"
+
+	.include "data/maps/TerraCave/scripts.inc"
+	.include "data/maps/TerraCave/text.inc"

@@ -987,9 +987,9 @@
 #define FLAG_HIDE_LATIAS_FOURTH        0x3B6
 #define FLAG_FOUGHT_LATIAS             0x3B7
 #define FLAG_LATIAS_FLED               0x3B8
-#define FLAG_HIDE_ENTEI                0x3B9
-#define FLAG_HIDE_SUICUNE              0x3BA
-#define FLAG_HIDE_RAIKOU               0x3BB
+#define FLAG_HIDE_ENTEI_TANOBY         0x3B9
+#define FLAG_HIDE_SUICUNE_TANOBY       0x3BA
+#define FLAG_HIDE_RAIKOU_TANOBY        0x3BB
 #define FLAG_HIDE_DUO1                 0x3BC
 #define FLAG_HIDE_DUO2                 0x3BD
 #define FLAG_HIDE_DUO3                 0x3BE

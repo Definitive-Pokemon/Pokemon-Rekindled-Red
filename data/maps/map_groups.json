@@ -283,7 +283,8 @@
     "FakePallet1",
     "FakePallet2",
     "NewMap1",
-    "MarineCave"
+    "MarineCave",
+    "TerraCave"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
