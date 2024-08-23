@@ -62,7 +62,7 @@
       "x": 6,
       "y": 4,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_SOUTH",
       "script": "CinnabarCavern_EventScript_Computer"
     },
     {
@@ -70,7 +70,7 @@
       "x": 7,
       "y": 4,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_SOUTH",
       "script": "CinnabarCavern_EventScript_Computer"
     }
   ],
