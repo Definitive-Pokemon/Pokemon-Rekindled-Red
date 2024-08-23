@@ -34,9 +34,6 @@ OneIsland_PokemonCenter_1F_OnTransition::
 	call_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 0, OneIsland_PokemonCenter_1F_EventScript_SetBillCelioFirstMeetingPos
 	call_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 2, OneIsland_PokemonCenter_1F_EventScript_SetBillCelioReadyToLeavePos
 	end
-	
-OneIsland_PokemonCenter_1F_EventScript_CelioBattle
-	call_if_set FLAG_CELIO_BEAT, OneIsland_PokemonCenter_1F_EventScript_CelioGiveStones
 
 OneIsland_PokemonCenter_1F_EventScript_SetCelioQuestDone::
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 7
@@ -205,6 +202,9 @@ OneIsland_PokemonCenter_1F_EventScript_BillGoTakeStroll::
 OneIsland_PokemonCenter_1F_EventScript_Celio::
 	lock
 	faceplayer
+	checkitem ITEM_EMERALD, 1
+	compare VAR_RESULT, TRUE
+	call_if_eq OneIsland_PokemonCenter_1F_EventScript_CelioCheckBattle
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 7, OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 6, OneIsland_PokemonCenter_1F_EventScript_CelioJustGivenSapphire
 	goto_if_set FLAG_RECOVERED_SAPPHIRE, OneIsland_PokemonCenter_1F_EventScript_GiveCelioSapphire
@@ -219,6 +219,14 @@ OneIsland_PokemonCenter_1F_EventScript_Celio::
 	waitmovement 0
 	release
 	end
+	
+OneIsland_PokemonCenter_1F_EventScript_CelioCheckBattle::
+	msgbox OneIsland_PokemonCenter_1F_Text_HeyEmeraldBattle
+	closemessage
+	end
+	
+OneIsland_PokemonCenter_1F_Text_HeyEmeraldBattle::
+	.string "Poop.$"
 
 OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact::
 	msgbox OneIsland_PokemonCenter_1F_Text_CelioHearingRumorsAboutYou

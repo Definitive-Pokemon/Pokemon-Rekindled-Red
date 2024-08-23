@@ -1005,13 +1005,13 @@
 #define FLAG_HIDE_SUICUNE_ROAM         0x3C8
 #define FLAG_HIDE_RAIKOU_ROAM          0x3C9
 #define FLAG_HIDE_ENTEI_ROAM           0x3CA
-
-// Unused?
 #define FLAG_SUICUNE_FLED              0x3CB
 #define FLAG_RAIKOU_FLED               0x3CC
 #define FLAG_ENTEI_FLED                0x3CD
 #define FLAG_FOUGHT_ENTEI              0x3CE
 #define FLAG_FOUGHT_RAIKOU             0x3CF
+
+// Unused?
 //New move tutors
 #define FLAG_MOVE_TUTOR_TAUGHT_FURY_CUTTER  0x3D0
 #define FLAG_MOVE_TUTOR_TAUGHT_ROLLOUT      0x3D1
@@ -1261,7 +1261,7 @@
 #define FLAG_HIDDEN_ITEM_CINNABAR_BERRY               214
 #define FLAG_0xHIDDEN_ITEM_CINNABAR_FIRE_STONE               215
 #define FLAG_FOUGHT_SUICUNE      0x4C0
-#define FLAG_0x4C1               0x4C1
+#define FLAG_BEAT_CELIO          0x4C1
 #define FLAG_0x4C2               0x4C2
 #define FLAG_0x4C3               0x4C3
 #define FLAG_0x4C4               0x4C4
