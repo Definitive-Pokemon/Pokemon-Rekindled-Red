@@ -24,7 +24,7 @@ SevenIsland_TanobyRuins_WeepthChamber_EventScript_Entei::
     fadescreenswapbuffers FADE_FROM_BLACK
     msgbox SevenIsland_TanobyRuins_WeepthChamber_Text_EnteiFled
 	closemessage
-	removeflag FLAG_HIDE_ENTEI_ROAM
+	clearflag FLAG_HIDE_ENTEI_ROAM
 	releaseall
 	end
 	
