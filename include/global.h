@@ -344,7 +344,7 @@ struct SaveBlock2
               u16 optionsBattleIntroAnim:1; // whether battle intro slide is disabled
               u16 optionsExpBarAnimSpeed:1;  // whether exp bar animates instantly
     /*0x018*/ struct Pokedex pokedex;
-    /*0x09?*/ u8 filler_90[0x8 - (NUM_ORIGINAL_SPECIES_WITH_FORMS + NUM_FORMS * 2)];
+    /*0x09?*/ u8 filler_90[0x8];
     /*0x098*/ struct Time localTimeOffset;
     /*0x0A0*/ struct Time lastBerryTreeUpdate;
     /*0x0A8*/ u32 gcnLinkFlags; // Read by Pokemon Colosseum/XD
