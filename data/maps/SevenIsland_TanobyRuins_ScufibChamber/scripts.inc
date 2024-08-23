@@ -24,7 +24,7 @@ SevenIsland_TanobyRuins_ScufibChamber_EventScript_Raikou::
     fadescreenswapbuffers FADE_FROM_BLACK
     msgbox SevenIsland_TanobyRuins_ScufibChamber_Text_RaikouFled
 	closemessage
-	removeflag FLAG_HIDE_RAIKOU_ROAM
+	clearflag FLAG_HIDE_RAIKOU_ROAM
 	releaseall
 	end
 	
