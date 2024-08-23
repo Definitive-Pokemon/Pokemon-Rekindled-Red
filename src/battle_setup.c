@@ -7,7 +7,6 @@
 #include "pokemon.h"
 #include "load_save.h"
 #include "safari_zone.h"
-#include "quest_log.h"
 #include "script.h"
 #include "script_pokemon_util.h"
 #include "strings.h"
