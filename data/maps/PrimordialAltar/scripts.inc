@@ -9,6 +9,9 @@ PrimordialAltar_EventScript_Altar::
 	lockall
 	message PrimordialAltar_Text_Altar
 	waitmessage
+	goto_if_unset FLAG_UNPLACED_SAPPHIRE, PrimordialAltar_EventScript_RemoveSapphire
+	goto_if_unset FLAG_UNPLACED_RUBY, PrimordialAltar_EventScript_RemoveRuby
+	goto_if_unset FLAG_UNPLACED_EMERALD, PrimordialAltar_EventScript_RemoveEmerald
 	checkitem ITEM_SAPPHIRE, 1
 	compare VAR_RESULT, TRUE
 	goto_if_eq PrimordialAltar_EventScript_Altar_SapphireOnly
@@ -21,6 +24,66 @@ PrimordialAltar_EventScript_Altar::
 	multichoice 19, 5, MULTICHOICE_NO_STONES, FALSE
 	switch VAR_RESULT
 	case 127, EventScript_PlaceNothing
+	end
+	
+PrimordialAltar_EventScript_RemoveSapphire::
+	PrimordialAltar_Text_RemoveSapphire, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PrimordialAltar_EventScript_DontRemoveSapphire
+	removeobject LOCALID_SAPPHIRE
+	setflag FLAG_UNPLACED_SAPPHIRE
+	giveitem ITEM_SAPPHIRE, 1
+	playse SE_EXP_MAX
+	waitse
+	message PrimordialAltar_Text_SapphireRemoved
+	waitmessage
+	
+	releaseall
+	end
+	
+PrimordialAltar_EventScript_DontRemoveSapphire::
+	msgbox PrimordialAltar_Text_DontRemoveSapphire
+	closemessage
+	releaseall
+	end
+	
+PrimordialAltar_EventScript_RemoveRuby::
+	PrimordialAltar_Text_RemoveRuby, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PrimordialAltar_EventScript_DontRemoveRuby
+	removeobject LOCALID_RUBY
+	setflag FLAG_UNPLACED_RUBY
+	giveitem ITEM_RUBY, 1
+	playse SE_EXP_MAX
+	waitse
+	message PrimordialAltar_Text_RubyRemoved
+	waitmessage
+	
+	releaseall
+	end
+	
+PrimordialAltar_EventScript_DontRemoveRuby::
+	msgbox PrimordialAltar_Text_DontRemoveRuby
+	closemessage
+	releaseall
+	end
+	
+PrimordialAltar_EventScript_RemoveEmerald::
+	PrimordialAltar_Text_RemoveEmerald, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PrimordialAltar_EventScript_DontRemoveEmerald
+	removeobject LOCALID_EMERALD
+	setflag FLAG_UNPLACED_EMERALD
+	giveitem ITEM_RUBY, 1
+	playse SE_EXP_MAX
+	waitse
+	message PrimordialAltar_Text_EmeraldRemoved
+	waitmessage
+	
+	releaseall
+	end
+	
+PrimordialAltar_EventScript_DontRemoveEmerald::
+	msgbox PrimordialAltar_Text_DontRemoveEmerald
+	closemessage
+	releaseall
 	end
 
 PrimordialAltar_EventScript_Altar_SapphireOnly::
@@ -87,8 +150,7 @@ EventScript_PlaceSapphire::
 	waitse
 	message PrimordialAltar_Text_PlacedSapphire
 	waitmessage
-	warp MAP_MARINE_CAVE, 255, 0, 0
-	waitstate
+	
 	releaseall
 	end
 
@@ -100,8 +162,7 @@ EventScript_PlaceRuby::
 	waitse
 	message PrimordialAltar_Text_PlacedRuby
 	waitmessage
-	warp MAP_MARINE_CAVE, 255, 0, 0
-	waitstate
+	
 	releaseall
 	end
 	
@@ -113,8 +174,7 @@ EventScript_PlaceEmerald::
 	waitse
 	message PrimordialAltar_Text_PlacedEmerald
 	waitmessage
-	warp MAP_MARINE_CAVE, 255, 0, 0
-	waitstate
+	
 	releaseall
 	end
 	
@@ -133,3 +193,21 @@ PrimordialAltar_Text_PlacedRuby::
 	
 PrimordialAltar_Text_PlacedEmerald::
 	.string "PLACED EMERALD.$"
+	
+PrimordialAltar_Text_SapphireRemoved::
+	.string "SAPPHIRE REMOVED.$"
+
+PrimordialAltar_Text_RubyRemoved::
+	.string "RUBY REMOVED.$"
+
+PrimordialAltar_Text_EmeraldRemoved::
+	.string "EMERALD REMOVED.$"
+	
+PrimordialAltar_Text_DontRemoveSapphire::
+	.string "SAPPHIRE NOT REMOVED.$"
+	
+PrimordialAltar_Text_DontRemoveRuby::
+	.string "RUBY NOT REMOVED.$"
+	
+PrimordialAltar_Text_DontRemoveEmerald::
+	.string "EMERALD NOT REMOVED.$"

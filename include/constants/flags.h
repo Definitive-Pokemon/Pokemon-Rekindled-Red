@@ -999,9 +999,9 @@
 #define FLAG_HIDE_STORY_CELEBI         0x3C2
 #define FLAG_FOUGHT_CELEBI             0x3C3
 #define FLAG_CELEBI_FLED               0x3C4
-#define FLAG_UNPLACED_SAPPHIRE         0x3C5
-#define FLAG_UNPLACED_RUBY             0x3C6
-#define FLAG_UNPLACED_EMERALD          0x3C7
+#define FLAG_UNPLACED_SAPPHIRE           0x3C5
+#define FLAG_UNPLACED_RUBY               0x3C6
+#define FLAG_UNPLACED_EMERALD            0x3C7
 #define FLAG_HIDE_SUICUNE_ROAM         0x3C8
 #define FLAG_HIDE_RAIKOU_ROAM          0x3C9
 #define FLAG_HIDE_ENTEI_ROAM           0x3CA
@@ -1262,7 +1262,7 @@
 #define FLAG_0xHIDDEN_ITEM_CINNABAR_FIRE_STONE               215
 #define FLAG_FOUGHT_SUICUNE      0x4C0
 #define FLAG_BEAT_CELIO          0x4C1
-#define FLAG_0x4C2               0x4C2
+#define FLAG_CHECKED_ALTAR       0x4C2
 #define FLAG_0x4C3               0x4C3
 #define FLAG_0x4C4               0x4C4
 #define FLAG_0x4C5               0x4C5

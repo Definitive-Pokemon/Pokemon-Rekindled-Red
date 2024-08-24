@@ -148,3 +148,20 @@ GiveLetter::
 	release
 	end
 	
+Debug_Sapphire::
+	lock
+	giveitem ITEM_SAPPHIRE
+	release
+	end
+	
+Debug_Ruby::
+	lock
+	giveitem ITEM_RUBY
+	release
+	end
+	
+Debug_Emerald::
+	lock
+	giveitem ITEM_EMERALD
+	release
+	end
