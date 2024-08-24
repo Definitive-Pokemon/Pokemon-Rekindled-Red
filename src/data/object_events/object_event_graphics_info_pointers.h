@@ -100,6 +100,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_StrengthBoulder;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fossil;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ruby;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sapphire;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Emerald;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldAmber;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GymSign;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlueDoor;
@@ -330,6 +331,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_FOSSIL]                   = &gObjectEventGraphicsInfo_Fossil,
     [OBJ_EVENT_GFX_RUBY]                     = &gObjectEventGraphicsInfo_Ruby,
     [OBJ_EVENT_GFX_SAPPHIRE]                 = &gObjectEventGraphicsInfo_Sapphire,
+    [OBJ_EVENT_GFX_EMERALD]                  = &gObjectEventGraphicsInfo_Emerald,
     [OBJ_EVENT_GFX_OLD_AMBER]                = &gObjectEventGraphicsInfo_OldAmber,
     [OBJ_EVENT_GFX_GYM_SIGN]                 = &gObjectEventGraphicsInfo_GymSign,
     [OBJ_EVENT_GFX_SIGN]                     = &gObjectEventGraphicsInfo_Sign,

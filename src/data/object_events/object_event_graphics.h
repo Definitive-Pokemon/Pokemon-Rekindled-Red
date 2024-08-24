@@ -182,6 +182,7 @@ const u16 gObjectEventPic_StrengthBoulder[] = INCBIN_U16("graphics/object_events
 const u16 gObjectEventPic_Fossil[] = INCBIN_U16("graphics/object_events/pics/misc/fossil.4bpp");
 const u16 gObjectEventPic_Ruby[] = INCBIN_U16("graphics/object_events/pics/misc/ruby.4bpp");
 const u16 gObjectEventPic_Sapphire[] = INCBIN_U16("graphics/object_events/pics/misc/sapphire.4bpp");
+const u16 gObjectEventPic_Emerald[] = INCBIN_U16("graphics/object_events/pics/misc/emerald.4bpp");
 const u16 gObjectEventPic_OldAmber[] = INCBIN_U16("graphics/object_events/pics/misc/old_amber.4bpp");
 const u16 gObjectEventPic_GymSign[] = INCBIN_U16("graphics/object_events/pics/misc/gym_sign.4bpp");
 const u16 gObjectEventPic_BlueDoor[] = INCBIN_U16("graphics/object_events/pics/misc/blue_door.4bpp");
