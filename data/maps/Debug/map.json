@@ -73,7 +73,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_PIDGEY",
+      "graphics_id": "OBJ_EVENT_GFX_PIDGEOT",
       "x": 2,
       "y": 16,
       "elevation": 0,
@@ -115,7 +115,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_OMANYTE",
+      "graphics_id": "OBJ_EVENT_GFX_KYOGRE",
       "x": 0,
       "y": 18,
       "elevation": 0,
@@ -129,7 +129,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CUBONE",
+      "graphics_id": "OBJ_EVENT_GFX_GROUDON",
       "x": 2,
       "y": 18,
       "elevation": 0,
@@ -213,7 +213,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
+      "graphics_id": "OBJ_EVENT_GFX_EMERALD",
       "x": 15,
       "y": 9,
       "elevation": 0,
