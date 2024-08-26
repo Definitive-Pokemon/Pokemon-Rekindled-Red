@@ -214,7 +214,8 @@ PrimordialAltar_Text_DontRemoveEmerald::
 	
 PrimordialAltar_Text_RemoveSapphire::
 	.string "REMOVE SAPPHIRE?$"
-	RemoveRuby::
+	
+PrimordialAltar_Text_RemoveRuby::
 	.string "REMOVE RUBY?$"
 	
 PrimordialAltar_Text_RemoveEmerald::
