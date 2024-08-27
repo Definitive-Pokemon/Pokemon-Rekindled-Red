@@ -7,7 +7,7 @@ PrimordialAltar_MapScripts::
 
 PrimordialAltar_EventScript_Altar::
 	lockall
-	message PrimordialAltar_Text_Altar
+	msgbox PrimordialAltar_Text_Altar
 	waitmessage
 	goto_if_unset FLAG_UNPLACED_SAPPHIRE, PrimordialAltar_EventScript_RemoveSapphire
 	goto_if_unset FLAG_UNPLACED_RUBY, PrimordialAltar_EventScript_RemoveRuby
@@ -34,7 +34,7 @@ PrimordialAltar_EventScript_RemoveSapphire::
 	giveitem ITEM_SAPPHIRE, 1
 	playse SE_EXP_MAX
 	waitse
-	message PrimordialAltar_Text_SapphireRemoved
+	msgbox PrimordialAltar_Text_SapphireRemoved
 	waitmessage
 	
 	releaseall
@@ -54,7 +54,7 @@ PrimordialAltar_EventScript_RemoveRuby::
 	giveitem ITEM_RUBY, 1
 	playse SE_EXP_MAX
 	waitse
-	message PrimordialAltar_Text_RubyRemoved
+	msgbox PrimordialAltar_Text_RubyRemoved
 	waitmessage
 	
 	releaseall
@@ -74,7 +74,7 @@ PrimordialAltar_EventScript_RemoveEmerald::
 	giveitem ITEM_EMERALD, 1
 	playse SE_EXP_MAX
 	waitse
-	message PrimordialAltar_Text_EmeraldRemoved
+	msgbox PrimordialAltar_Text_EmeraldRemoved
 	waitmessage
 	
 	releaseall
@@ -154,7 +154,7 @@ EventScript_PlaceSapphire::
 	playse SE_EXP_MAX
 	waitse
 	message PrimordialAltar_Text_PlacedSapphire
-	closemessage
+	waitmessage
 	
 	releaseall
 	end
@@ -166,7 +166,7 @@ EventScript_PlaceRuby::
 	playse SE_EXP_MAX
 	waitse
 	message PrimordialAltar_Text_PlacedRuby
-	closemessage
+	waitmessage
 	
 	releaseall
 	end
@@ -178,7 +178,7 @@ EventScript_PlaceEmerald::
 	playse SE_EXP_MAX
 	waitse
 	message PrimordialAltar_Text_PlacedEmerald
-	closemessage
+	waitmessage
 	
 	releaseall
 	end
