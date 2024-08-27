@@ -31,7 +31,7 @@ PrimordialAltar_EventScript_RemoveSapphire::
 	removeobject LOCALID_SAPPHIRE
 	setflag FLAG_UNPLACED_SAPPHIRE
 	giveitem ITEM_SAPPHIRE, 1
-	
+	setdynamicwarp MAP_ONE_ISLAND_TREASURE_BEACH, 255, 30, 29
 	releaseall
 	end
 	
@@ -46,7 +46,7 @@ PrimordialAltar_EventScript_RemoveRuby::
 	removeobject LOCALID_RUBY
 	setflag FLAG_UNPLACED_RUBY
 	giveitem ITEM_RUBY, 1
-	
+	setdynamicwarp MAP_ONE_ISLAND_TREASURE_BEACH, 255, 30, 29
 	releaseall
 	end
 	
@@ -61,7 +61,7 @@ PrimordialAltar_EventScript_RemoveEmerald::
 	removeobject LOCALID_EMERALD
 	setflag FLAG_UNPLACED_EMERALD
 	giveitem ITEM_EMERALD, 1
-	
+	setdynamicwarp MAP_ONE_ISLAND_TREASURE_BEACH, 255, 30, 29
 	releaseall
 	end
 	
@@ -151,7 +151,7 @@ EventScript_PlaceSapphire::
 	playse SE_EXP_MAX
 	waitse
 	msgbox PrimordialAltar_Text_PlacedSapphire
-	
+	setdynamicwarp MAP_MARINE_CAVE, 255, 20, 4
 	releaseall
 	end
 
@@ -162,7 +162,7 @@ EventScript_PlaceRuby::
 	playse SE_EXP_MAX
 	waitse
 	msgbox PrimordialAltar_Text_PlacedRuby
-	
+	setdynamicwarp MAP_TERRA_CAVE, 255, 5, 4
 	releaseall
 	end
 	
@@ -173,7 +173,7 @@ EventScript_PlaceEmerald::
 	playse SE_EXP_MAX
 	waitse
 	msgbox PrimordialAltar_Text_PlacedEmerald
-	
+	setdynamicwarp MAP_TRAINER_TOWER_LOBBY, 255, 17, 8
 	releaseall
 	end
 	
