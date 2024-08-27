@@ -49,6 +49,11 @@ static const struct MenuAction sMultichoiceList_Ruby[] = {
     { gOtherText_Exit }
 };
 
+static const struct MenuAction sMultichoiceList_Emerald[] = {
+    { gText_Emerald },
+    { gOtherText_Exit }
+};
+
 static const struct MenuAction sMultichoiceList_RubySapphire[] = {
     { gText_Ruby },
     { gText_Sapphire },
@@ -61,7 +66,8 @@ static const struct MenuAction sMultichoiceList_RubyEmerald[] = {
     { gOtherText_Exit }
 };
 
-static const struct MenuAction sMultichoiceList_Emerald[] = {
+static const struct MenuAction sMultichoiceList_SapphireEmerald[] = {
+    { gText_Sapphire },
     { gText_Emerald },
     { gOtherText_Exit }
 };

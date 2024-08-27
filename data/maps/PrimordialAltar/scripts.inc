@@ -71,7 +71,7 @@ PrimordialAltar_EventScript_RemoveEmerald::
 	goto_if_eq VAR_RESULT, NO, PrimordialAltar_EventScript_DontRemoveEmerald
 	removeobject LOCALID_EMERALD
 	setflag FLAG_UNPLACED_EMERALD
-	giveitem ITEM_RUBY, 1
+	giveitem ITEM_EMERALD, 1
 	playse SE_EXP_MAX
 	waitse
 	message PrimordialAltar_Text_EmeraldRemoved
@@ -94,6 +94,7 @@ PrimordialAltar_EventScript_Altar_SapphireOnly::
 	compare VAR_RESULT, TRUE
 	goto_if_eq PrimordialAltar_EventScript_Altar_SapphireEmerald
 	multichoice 19, 5, MULTICHOICE_SAPPHIRE, FALSE
+	switch VAR_RESULT
 	case 0, EventScript_PlaceSapphire
 	case 127, EventScript_PlaceNothing
 	end
@@ -103,6 +104,7 @@ PrimordialAltar_EventScript_Altar_SapphireRuby::
 	compare VAR_RESULT, TRUE
 	goto_if_eq PrimordialAltar_EventScript_Altar_All
 	multichoice 19, 5, MULTICHOICE_RUBYSAPPHIRE, FALSE
+	switch VAR_RESULT
 	case 0, EventScript_PlaceSapphire
 	case 1, EventScript_PlaceRuby
 	case 127, EventScript_PlaceNothing
@@ -113,12 +115,14 @@ PrimordialAltar_EventScript_Altar_RubyOnly::
 	compare VAR_RESULT, TRUE
 	goto_if_eq PrimordialAltar_EventScript_Altar_RubyEmerald
 	multichoice 19, 5, MULTICHOICE_RUBY, FALSE
+	switch VAR_RESULT
 	case 0, EventScript_PlaceRuby
 	case 127, EventScript_PlaceNothing
 	end
 	
 PrimordialAltar_EventScript_Altar_RubyEmerald::
 	multichoice 19, 5, MULTICHOICE_RUBYEMERALD, FALSE
+	switch VAR_RESULT
 	case 0, EventScript_PlaceRuby
 	case 1, EventScript_PlaceEmerald
 	case 127, EventScript_PlaceNothing
@@ -129,6 +133,7 @@ PrimordialAltar_EventScript_Altar_SapphireEmerald::
 
 PrimordialAltar_EventScript_Altar_EmeraldOnly::
 	multichoice 19, 5, MULTICHOICE_EMERALD, FALSE
+	switch VAR_RESULT
 	case 0, EventScript_PlaceEmerald
 	case 127, EventScript_PlaceNothing
 	end
@@ -136,8 +141,8 @@ PrimordialAltar_EventScript_Altar_EmeraldOnly::
 PrimordialAltar_EventScript_Altar_All::
 	multichoice 19, 5, MULTICHOICE_ALLSTONES, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_PlaceSapphire
-	case 1, EventScript_PlaceRuby
+	case 0, EventScript_PlaceRuby
+	case 1, EventScript_PlaceSapphire
 	case 2, EventScript_PlaceEmerald
 	case 127, EventScript_PlaceNothing
 	end
@@ -149,7 +154,7 @@ EventScript_PlaceSapphire::
 	playse SE_EXP_MAX
 	waitse
 	message PrimordialAltar_Text_PlacedSapphire
-	waitmessage
+	closemessage
 	
 	releaseall
 	end
@@ -161,7 +166,7 @@ EventScript_PlaceRuby::
 	playse SE_EXP_MAX
 	waitse
 	message PrimordialAltar_Text_PlacedRuby
-	waitmessage
+	closemessage
 	
 	releaseall
 	end
@@ -173,12 +178,13 @@ EventScript_PlaceEmerald::
 	playse SE_EXP_MAX
 	waitse
 	message PrimordialAltar_Text_PlacedEmerald
-	waitmessage
+	closemessage
 	
 	releaseall
 	end
 	
 EventScript_PlaceNothing::
+	closemessage
 	releaseall
 	end
 
