@@ -27,7 +27,7 @@ PrimordialAltar_EventScript_Altar::
 	end
 	
 PrimordialAltar_EventScript_RemoveSapphire::
-	msgbox PrimordialAltar_Text_RemoveSapphire, message_YESNO
+	msgbox PrimordialAltar_Text_RemoveSapphire, msgbox_YESNO
 	goto_if_eq VAR_RESULT, NO, PrimordialAltar_EventScript_DontRemoveSapphire
 	removeobject LOCALID_SAPPHIRE
 	setflag FLAG_UNPLACED_SAPPHIRE
@@ -43,7 +43,7 @@ PrimordialAltar_EventScript_DontRemoveSapphire::
 	end
 	
 PrimordialAltar_EventScript_RemoveRuby::
-	msgbox PrimordialAltar_Text_RemoveRuby, message_YESNO
+	msgbox PrimordialAltar_Text_RemoveRuby, msgbox_YESNO
 	goto_if_eq VAR_RESULT, NO, PrimordialAltar_EventScript_DontRemoveRuby
 	removeobject LOCALID_RUBY
 	setflag FLAG_UNPLACED_RUBY
@@ -59,7 +59,7 @@ PrimordialAltar_EventScript_DontRemoveRuby::
 	end
 	
 PrimordialAltar_EventScript_RemoveEmerald::
-	msgbox PrimordialAltar_Text_RemoveEmerald, message_YESNO
+	msgbox PrimordialAltar_Text_RemoveEmerald, msgbox_YESNO
 	goto_if_eq VAR_RESULT, NO, PrimordialAltar_EventScript_DontRemoveEmerald
 	removeobject LOCALID_EMERALD
 	setflag FLAG_UNPLACED_EMERALD
