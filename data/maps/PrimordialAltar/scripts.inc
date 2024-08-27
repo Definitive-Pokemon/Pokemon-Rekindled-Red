@@ -174,7 +174,6 @@ EventScript_PlaceEmerald::
 EventScript_PlaceNothing::
 	message PrimordialAltar_Text_PlacedNothing
 	waitmessage
-	waitmessage
 	releaseall
 	end
 
