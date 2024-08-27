@@ -7,7 +7,7 @@ PrimordialAltar_MapScripts::
 
 PrimordialAltar_EventScript_Altar::
 	lockall
-	msgbox PrimordialAltar_Text_Altar
+	msgbox PrimordialAltar_Text_Altar1
 	goto_if_unset FLAG_UNPLACED_SAPPHIRE, PrimordialAltar_EventScript_RemoveSapphire
 	goto_if_unset FLAG_UNPLACED_RUBY, PrimordialAltar_EventScript_RemoveRuby
 	goto_if_unset FLAG_UNPLACED_EMERALD, PrimordialAltar_EventScript_RemoveEmerald
@@ -77,6 +77,7 @@ PrimordialAltar_EventScript_Altar_SapphireOnly::
 	checkitem ITEM_EMERALD, 1
 	compare VAR_RESULT, TRUE
 	goto_if_eq PrimordialAltar_EventScript_Altar_SapphireEmerald
+	msgbox PrimordialAltar_Text_Altar2
 	multichoice 19, 5, MULTICHOICE_SAPPHIRE, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_PlaceSapphire
@@ -87,6 +88,7 @@ PrimordialAltar_EventScript_Altar_SapphireRuby::
 	checkitem ITEM_EMERALD, 1
 	compare VAR_RESULT, TRUE
 	goto_if_eq PrimordialAltar_EventScript_Altar_All
+	msgbox PrimordialAltar_Text_Altar2
 	multichoice 19, 5, MULTICHOICE_RUBYSAPPHIRE, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_PlaceSapphire
@@ -98,6 +100,7 @@ PrimordialAltar_EventScript_Altar_RubyOnly::
 	checkitem ITEM_EMERALD, 1
 	compare VAR_RESULT, TRUE
 	goto_if_eq PrimordialAltar_EventScript_Altar_RubyEmerald
+	msgbox PrimordialAltar_Text_Altar2
 	multichoice 19, 5, MULTICHOICE_RUBY, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_PlaceRuby
@@ -105,6 +108,7 @@ PrimordialAltar_EventScript_Altar_RubyOnly::
 	end
 	
 PrimordialAltar_EventScript_Altar_RubyEmerald::
+	msgbox PrimordialAltar_Text_Altar2
 	multichoice 19, 5, MULTICHOICE_RUBYEMERALD, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_PlaceRuby
@@ -113,6 +117,7 @@ PrimordialAltar_EventScript_Altar_RubyEmerald::
 	end
 	
 PrimordialAltar_EventScript_Altar_SapphireEmerald::
+	msgbox PrimordialAltar_Text_Altar2
 	multichoice 19, 5, MULTICHOICE_SAPPHIREEMERALD, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_PlaceRuby
@@ -122,6 +127,7 @@ PrimordialAltar_EventScript_Altar_SapphireEmerald::
 	end
 
 PrimordialAltar_EventScript_Altar_EmeraldOnly::
+	msgbox PrimordialAltar_Text_Altar2
 	multichoice 19, 5, MULTICHOICE_EMERALD, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_PlaceEmerald
@@ -129,6 +135,7 @@ PrimordialAltar_EventScript_Altar_EmeraldOnly::
 	end
 	
 PrimordialAltar_EventScript_Altar_All::
+	msgbox PrimordialAltar_Text_Altar2
 	multichoice 19, 5, MULTICHOICE_ALLSTONES, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_PlaceRuby
@@ -175,8 +182,10 @@ EventScript_PlaceNothing::
 	releaseall
 	end
 
-PrimordialAltar_Text_Altar::
-	.string "This altar looks peculiar…\p"
+PrimordialAltar_Text_Altar1::
+	.string "This altar looks peculiar…$"
+	
+PrimordialAltar_Text_Altar2::
 	.string "Place a gemstone upon it?$"
 
 PrimordialAltar_Text_PlacedSapphire::
