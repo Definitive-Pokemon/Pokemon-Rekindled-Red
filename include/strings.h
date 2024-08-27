@@ -726,6 +726,7 @@ extern const u8 gText_MakeAChallenge[];
 extern const u8 gText_Ruby[];
 extern const u8 gText_Sapphire[];
 extern const u8 gText_Emerald[];
+extern const u8 gText_NoPlace[];
 extern const u8 gText_Lv50[];
 extern const u8 gText_Lv100[];
 extern const u8 gText_OpenLv[];
