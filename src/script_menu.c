@@ -41,42 +41,42 @@ static u8 CreateWindowFromRect(u8 left, u8 top, u8 width, u8 height);
 
 static const struct MenuAction sMultichoiceList_Sapphire[] = {
     { gText_Sapphire },
-    { gOtherText_Exit }
+    { gOtherText_NoPlace }
 };
 
 static const struct MenuAction sMultichoiceList_Ruby[] = {
     { gText_Ruby },
-    { gOtherText_Exit }
+    { gOtherText_NoPlace }
 };
 
 static const struct MenuAction sMultichoiceList_Emerald[] = {
     { gText_Emerald },
-    { gOtherText_Exit }
+    { gOtherText_NoPlace }
 };
 
 static const struct MenuAction sMultichoiceList_RubySapphire[] = {
     { gText_Ruby },
     { gText_Sapphire },
-    { gOtherText_Exit }
+    { gOtherText_NoPlace }
 };
 
 static const struct MenuAction sMultichoiceList_RubyEmerald[] = {
     { gText_Ruby },
     { gText_Emerald },
-    { gOtherText_Exit }
+    { gOtherText_NoPlace }
 };
 
 static const struct MenuAction sMultichoiceList_SapphireEmerald[] = {
     { gText_Sapphire },
     { gText_Emerald },
-    { gOtherText_Exit }
+    { gOtherText_NoPlace }
 };
 
 static const struct MenuAction sMultichoiceList_AllStones[] = {
     { gText_Ruby },
     { gText_Sapphire },
     { gText_Emerald },
-    { gOtherText_Exit }
+    { gOtherText_NoPlace }
 };
 
 static const struct MenuAction sMultichoiceList_YesNo[] = {
