@@ -20,9 +20,7 @@ PrimordialAltar_EventScript_Altar::
 	checkitem ITEM_EMERALD, 1
 	compare VAR_RESULT, TRUE
 	goto_if_eq PrimordialAltar_EventScript_Altar_EmeraldOnly
-	multichoice 19, 5, MULTICHOICE_NO_STONES, FALSE
-	switch VAR_RESULT
-	case 127, EventScript_PlaceNothing
+	setflag FLAG_CHECKED_ALTAR
 	end
 	
 PrimordialAltar_EventScript_RemoveSapphire::
@@ -91,8 +89,8 @@ PrimordialAltar_EventScript_Altar_SapphireRuby::
 	msgbox PrimordialAltar_Text_Altar2
 	multichoice 19, 5, MULTICHOICE_RUBYSAPPHIRE, FALSE
 	switch VAR_RESULT
-	case 0, EventScript_PlaceSapphire
-	case 1, EventScript_PlaceRuby
+	case 0, EventScript_PlaceRuby
+	case 1, EventScript_PlaceSapphire
 	case 2, EventScript_PlaceNothing
 	end
 	
