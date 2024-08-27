@@ -41,7 +41,7 @@ static u8 CreateWindowFromRect(u8 left, u8 top, u8 width, u8 height);
 
 static const struct MenuAction sMultichoiceList_Sapphire[] = {
     { gText_Sapphire },
-    { gOtherText_Exit }
+    { gOtherText_Nothing }
 };
 
 static const struct MenuAction sMultichoiceList_Ruby[] = {

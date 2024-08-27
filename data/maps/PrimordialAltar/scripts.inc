@@ -170,34 +170,35 @@ EventScript_PlaceNothing::
 	end
 
 PrimordialAltar_Text_Altar::
-	.string "PLACE ALTAR.$"
+	.string "This altar looks peculiar…\p"
+	.string "Place a gemstone upon it?$"
 
 PrimordialAltar_Text_PlacedSapphire::
-	.string "PLACED SAPPHIRE.$"
+	.string "You placed the SAPPHIRE.$"
 	
 PrimordialAltar_Text_PlacedRuby::
-	.string "PLACED RUBY.$"
+	.string "You placed the RUBY.$"
 	
 PrimordialAltar_Text_PlacedEmerald::
-	.string "PLACED EMERALD.$"
+	.string "You placed the EMERALD.$"
 	
 PrimordialAltar_Text_DontRemoveSapphire::
-	.string "SAPPHIRE NOT REMOVED.$"
+	.string "You left the SAPPHIRE alone.$"
 	
 PrimordialAltar_Text_DontRemoveRuby::
-	.string "RUBY NOT REMOVED.$"
+	.string "You left the RUBY alone.$"
 	
 PrimordialAltar_Text_DontRemoveEmerald::
-	.string "EMERALD NOT REMOVED.$"
+	.string "You left the EMERALD alone.$"
 	
 PrimordialAltar_Text_RemoveSapphire::
-	.string "REMOVE SAPPHIRE?$"
+	.string "Remove the SAPPHIRE?$"
 	
 PrimordialAltar_Text_RemoveRuby::
-	.string "REMOVE RUBY?$"
+	.string "Remove the RUBY?$"
 	
 PrimordialAltar_Text_RemoveEmerald::
-	.string "REMOVE EMERALD?$"
+	.string "Remove the EMERALD?$"
 	
 PrimordialAltar_Text_PlacedNothing::
-	.string "PLACED NOTHING.$"
+	.string "You placed nothing.$"
