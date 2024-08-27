@@ -79,6 +79,10 @@ static const struct MenuAction sMultichoiceList_AllStones[] = {
     { gText_NoPlace }
 };
 
+static const struct MenuAction sMultichoiceList_NoStones[] = {
+    { gText_NoPlace }
+};
+
 static const struct MenuAction sMultichoiceList_YesNo[] = {
     { gText_Yes },
     { gText_No }
@@ -745,11 +749,12 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
 	[MULTICHOICE_SOUTHERN_BIRTH_NAVEL]                       = MULTICHOICE(sMultichoiceList_SouthernBirthNavel),
 	[MULTICHOICE_SOUTHERN_BIRTH_NAVEL_FARAWAY]               = MULTICHOICE(sMultichoiceList_SouthernBirthNavelFaraway),
 	[MULTICHOICE_MASTER_YOUNGSTER]                           = MULTICHOICE(sMultichoiceList_MasterYoungster),
-    [MULTICHOICE_NO_STONES]                                       = MULTICHOICE(sMultichoiceList_Exit),
+    [MULTICHOICE_NO_STONES]                                       = MULTICHOICE(sMultichoiceList_NoStones),
     [MULTICHOICE_SAPPHIRE]                                       = MULTICHOICE(sMultichoiceList_Sapphire),
     [MULTICHOICE_RUBYSAPPHIRE]                                       = MULTICHOICE(sMultichoiceList_RubySapphire),
     [MULTICHOICE_RUBY]                                       = MULTICHOICE(sMultichoiceList_Ruby),
     [MULTICHOICE_RUBYEMERALD]                                       = MULTICHOICE(sMultichoiceList_RubyEmerald),
+	[MULTICHOICE_SAPPHIREEMERALD]                                       = MULTICHOICE(sMultichoiceList_SapphireEmerald),
     [MULTICHOICE_EMERALD]                                       = MULTICHOICE(sMultichoiceList_Emerald),
     [MULTICHOICE_ALLSTONES]                                       = MULTICHOICE(sMultichoiceList_AllStones),
 };

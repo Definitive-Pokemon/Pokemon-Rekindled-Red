@@ -113,6 +113,12 @@ PrimordialAltar_EventScript_Altar_RubyEmerald::
 	end
 	
 PrimordialAltar_EventScript_Altar_SapphireEmerald::
+	multichoice 19, 5, MULTICHOICE_SAPPHIREEMERALD, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_PlaceRuby
+	case 1, EventScript_PlaceEmerald
+	case 127, EventScript_PlaceNothing
+	end
 	end
 
 PrimordialAltar_EventScript_Altar_EmeraldOnly::
