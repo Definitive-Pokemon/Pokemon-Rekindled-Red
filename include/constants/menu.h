@@ -95,6 +95,7 @@
 #define MULTICHOICE_RUBYEMERALD                                88
 #define MULTICHOICE_EMERALD                                    89
 #define MULTICHOICE_ALLSTONES                                  90
+#define MULTICHOICE_SAPPHIREEMERALD                                91
 
 
 #define MULTICHOICE_NONE                                      255
