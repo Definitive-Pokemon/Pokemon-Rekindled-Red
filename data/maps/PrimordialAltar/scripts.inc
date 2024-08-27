@@ -8,7 +8,7 @@ PrimordialAltar_MapScripts::
 PrimordialAltar_EventScript_Altar::
 	lockall
 	msgbox PrimordialAltar_Text_Altar
-	waitmessage
+	waitbuttonpress
 	goto_if_unset FLAG_UNPLACED_SAPPHIRE, PrimordialAltar_EventScript_RemoveSapphire
 	goto_if_unset FLAG_UNPLACED_RUBY, PrimordialAltar_EventScript_RemoveRuby
 	goto_if_unset FLAG_UNPLACED_EMERALD, PrimordialAltar_EventScript_RemoveEmerald
@@ -35,14 +35,14 @@ PrimordialAltar_EventScript_RemoveSapphire::
 	playse SE_EXP_MAX
 	waitse
 	msgbox PrimordialAltar_Text_SapphireRemoved
-	waitmessage
+	waitbuttonpress
 	
 	releaseall
 	end
 	
 PrimordialAltar_EventScript_DontRemoveSapphire::
 	msgbox PrimordialAltar_Text_DontRemoveSapphire
-	closemessage
+	waitbuttonpress
 	releaseall
 	end
 	
@@ -55,14 +55,14 @@ PrimordialAltar_EventScript_RemoveRuby::
 	playse SE_EXP_MAX
 	waitse
 	msgbox PrimordialAltar_Text_RubyRemoved
-	waitmessage
+	waitbuttonpress
 	
 	releaseall
 	end
 	
 PrimordialAltar_EventScript_DontRemoveRuby::
 	msgbox PrimordialAltar_Text_DontRemoveRuby
-	closemessage
+	waitbuttonpress
 	releaseall
 	end
 	
@@ -75,14 +75,14 @@ PrimordialAltar_EventScript_RemoveEmerald::
 	playse SE_EXP_MAX
 	waitse
 	msgbox PrimordialAltar_Text_EmeraldRemoved
-	waitmessage
+	waitbuttonpress
 	
 	releaseall
 	end
 	
 PrimordialAltar_EventScript_DontRemoveEmerald::
 	msgbox PrimordialAltar_Text_DontRemoveEmerald
-	closemessage
+	waitbuttonpress
 	releaseall
 	end
 
@@ -153,8 +153,8 @@ EventScript_PlaceSapphire::
 	removeitem ITEM_SAPPHIRE, 1
 	playse SE_EXP_MAX
 	waitse
-	message PrimordialAltar_Text_PlacedSapphire
-	waitmessage
+	msgbox PrimordialAltar_Text_PlacedSapphire
+	waitbuttonpress
 	
 	releaseall
 	end
@@ -165,8 +165,8 @@ EventScript_PlaceRuby::
 	removeitem ITEM_RUBY, 1
 	playse SE_EXP_MAX
 	waitse
-	message PrimordialAltar_Text_PlacedRuby
-	waitmessage
+	msgbox PrimordialAltar_Text_PlacedRuby
+	waitbuttonpress
 	
 	releaseall
 	end
@@ -177,14 +177,14 @@ EventScript_PlaceEmerald::
 	removeitem ITEM_EMERALD, 1
 	playse SE_EXP_MAX
 	waitse
-	message PrimordialAltar_Text_PlacedEmerald
-	waitmessage
+	msgbox PrimordialAltar_Text_PlacedEmerald
+	waitbuttonpress
 	
 	releaseall
 	end
 	
 EventScript_PlaceNothing::
-	closemessage
+	waitbuttonpress
 	releaseall
 	end
 
