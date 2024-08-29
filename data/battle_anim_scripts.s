@@ -10136,7 +10136,6 @@ WeatherBallIce:
 	end
 
 Move_CRUSH_GRIP:
-	jumpnbspanim CrushGripTargetPlayer
 	loadspritegfx ANIM_TAG_GRAB_TOWARDS
 	monbg ANIM_TARGET
 	setalpha 12, 8
