@@ -155,24 +155,19 @@ OneIsland_PokemonCenter_1F_Text_CelioImModifyingMyNetworkMachine::
     .string "How am I doing?\p"
     .string "Well, I'm modifying my Network\n"
     .string "Machine.\p"
-    .string "When I get done with the machine,\n"
-    .string "I hope you'll be first to use it,\l"
-    .string "{PLAYER}.$"
 
 OneIsland_PokemonCenter_1F_Text_CelioCaughtMoreMonMaybeICanBeUseful::
     .string "CELIO: {PLAYER}, how have things\n"
     .string "been for you?\p"
     .string "Oh, is that right?\n"
-    .string "You've caught more POKéMON.\p"
-    .string "Do you know what?\n"
-    .string "Maybe I can be useful to you.$"
+    .string "You've caught more POKéMON.$"
 
 OneIsland_PokemonCenter_1F_Text_YoullBeTradingFromTrainersFarAway::
     .string "I'm modifying the Network Machine\n"
     .string "right now.\p"
     .string "I'm changing it so it can handle\n"
     .string "trades over long distances.\p"
-    .string "When I get finished, you'll be\n"
+    .string "When I get finished, I'll be\n"
     .string "trading for exotic POKéMON from\l"
     .string "TRAINERS far away.$"
 
@@ -263,7 +258,7 @@ OneIsland_PokemonCenter_1F_Text_ThankYouGiveMeTime::
     .string "You don't have to tell me. I know\n"
     .string "it wasn't easy.\p"
     .string "Thank you so much!\p"
-    .string "Now it's my turn to work for you!\n"
+    .string "Now it's my turn to work this out!\n"
     .string "Please give me a little time.$"
 
 OneIsland_PokemonCenter_1F_Text_OkayThisIsGood::
