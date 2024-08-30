@@ -83,6 +83,7 @@ PrimordialAltar_EventScript_Altar_SapphireOnly::
 	multichoice 19, 5, MULTICHOICE_SAPPHIRE, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_PlaceSapphire
+	case 1, EventScript_PlaceNothing
 	case 127, EventScript_PlaceNothing
 	end
 	
@@ -95,6 +96,7 @@ PrimordialAltar_EventScript_Altar_SapphireRuby::
 	switch VAR_RESULT
 	case 0, EventScript_PlaceRuby
 	case 1, EventScript_PlaceSapphire
+	case 2, EventScript_PlaceNothing
 	case 127, EventScript_PlaceNothing
 	end
 	
@@ -106,6 +108,7 @@ PrimordialAltar_EventScript_Altar_RubyOnly::
 	multichoice 19, 5, MULTICHOICE_RUBY, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_PlaceRuby
+	case 1, EventScript_PlaceNothing
 	case 127, EventScript_PlaceNothing
 	end
 	
@@ -115,6 +118,7 @@ PrimordialAltar_EventScript_Altar_RubyEmerald::
 	switch VAR_RESULT
 	case 0, EventScript_PlaceRuby
 	case 1, EventScript_PlaceEmerald
+	case 2, EventScript_PlaceNothing
 	case 127, EventScript_PlaceNothing
 	end
 	
@@ -124,6 +128,7 @@ PrimordialAltar_EventScript_Altar_SapphireEmerald::
 	switch VAR_RESULT
 	case 0, EventScript_PlaceRuby
 	case 1, EventScript_PlaceEmerald
+	case 2, EventScript_PlaceNothing
 	case 127, EventScript_PlaceNothing
 	end
 	end
@@ -133,6 +138,7 @@ PrimordialAltar_EventScript_Altar_EmeraldOnly::
 	multichoice 19, 5, MULTICHOICE_EMERALD, FALSE
 	switch VAR_RESULT
 	case 0, EventScript_PlaceEmerald
+	case 1, EventScript_PlaceNothing
 	case 127, EventScript_PlaceNothing
 	end
 	
@@ -143,6 +149,7 @@ PrimordialAltar_EventScript_Altar_All::
 	case 0, EventScript_PlaceRuby
 	case 1, EventScript_PlaceSapphire
 	case 2, EventScript_PlaceEmerald
+	case 3, EventScript_PlaceNothing
 	case 127, EventScript_PlaceNothing
 	end
 	
