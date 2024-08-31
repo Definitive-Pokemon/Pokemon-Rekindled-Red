@@ -1256,7 +1256,10 @@ const struct SpriteTemplate gGuardRingSpriteTemplate =
 
 static const union AnimCmd sCrushGripAnimCmds[] =
 {
-    ANIMCMD_FRAME(0, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_FRAME(4096, 5),
+    ANIMCMD_FRAME(4096 * 2, 5),
+    ANIMCMD_FRAME(4096 * 3, 20),
     ANIMCMD_END,
 };
 
@@ -3916,7 +3919,7 @@ static void AnimCrushGrip(struct Sprite *sprite)
     sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
     sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
     sprite->callback = StartAnimLinearTranslation;
-    StoreSpriteCallbackInData6(sprite, CrushGripFinal);
+    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
 }
 
 static void CrushGripFinal(struct Sprite *sprite)
