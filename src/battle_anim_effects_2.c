@@ -3916,8 +3916,7 @@ static void AnimCrushGrip(struct Sprite *sprite)
     sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
     sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
     sprite->callback = StartAnimLinearTranslation;
-    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
-    //StoreSpriteCallbackInData6(sprite, CrushGripFinal);
+    StoreSpriteCallbackInData6(sprite, CrushGripFinal);
 }
 
 static void CrushGripFinal(struct Sprite *sprite)
