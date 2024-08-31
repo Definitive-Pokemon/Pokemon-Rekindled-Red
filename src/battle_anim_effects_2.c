@@ -3923,7 +3923,7 @@ static void CrushGripFinal(struct Sprite *sprite)
 {
     StartSpriteAnim(sprite, 1);
     sprite->callback = StartAnimLinearTranslation;
-    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
+    StoreSpriteCallbackInData6(sprite, AnimCrushGrip_Step);
 }
 
 static void AnimCrushGrip_Step(struct Sprite *sprite)
