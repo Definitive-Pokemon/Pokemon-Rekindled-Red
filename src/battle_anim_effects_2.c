@@ -3911,7 +3911,7 @@ void AnimTask_GetFuryCutterHitCount(u8 taskId)
 static void AnimCrushGrip(struct Sprite *sprite)
 {
     InitSpritePosToAnimAttacker(sprite, TRUE);
-    sprite->data[0] = 5;
+    sprite->data[0] = 1;
     sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
     sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
     sprite->callback = StartAnimLinearTranslation;
@@ -3922,5 +3922,12 @@ static void AnimCrushGrip(struct Sprite *sprite)
 static void CrushGripFinal(struct Sprite *sprite)
 {
     StartSpriteAnim(sprite, 1);
-    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
+    sprite->callback = StartAnimLinearTranslation;
+    StoreSpriteCallbackInData6(sprite, AnimCrushGrip_Step);
+}
+
+static void AnimCrushGrip_Step(struct Sprite *sprite)
+{
+    if (sprite->animEnded)
+        DestroyAnimSprite(sprite);
 }
