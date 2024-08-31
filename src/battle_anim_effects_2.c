@@ -3921,4 +3921,5 @@ static void AnimCrushGrip(struct Sprite *sprite)
 static void CrushGripFinal(struct Sprite *sprite)
 {
     StartSpriteAnim(sprite, 1);
+    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
 }
