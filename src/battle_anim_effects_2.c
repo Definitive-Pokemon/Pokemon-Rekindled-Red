@@ -100,6 +100,7 @@ static void AnimFurySwipes(struct Sprite *);
 static void AnimGuardRing(struct Sprite *);
 static void AnimCrushGrip(struct Sprite *);
 static void CrushGripFinal(struct Sprite *);
+static void AnimCrushGrip_Step(struct Sprite *);
 
 // Unused
 static const struct SpriteTemplate sCirclingFingerSpriteTemplate =
