@@ -1256,7 +1256,7 @@ const struct SpriteTemplate gGuardRingSpriteTemplate =
 
 static const union AnimCmd sCrushGripAnimCmds[] =
 {
-    ANIMCMD_FRAME(0, 0),
+    ANIMCMD_FRAME(0, 30),
     ANIMCMD_END,
 };
 
@@ -1264,7 +1264,7 @@ static const union AnimCmd sCrushGripClosingAnimCmds[] =
 {
     ANIMCMD_FRAME(4096, 5),
     ANIMCMD_FRAME(4096 * 2, 5),
-    ANIMCMD_FRAME(4096 * 3, 32),
+    ANIMCMD_FRAME(4096 * 3, 30),
     ANIMCMD_END,
 };
 
@@ -3923,7 +3923,7 @@ static void CrushGripFinal(struct Sprite *sprite)
 {
     StartSpriteAnim(sprite, 1);
     sprite->callback = StartAnimLinearTranslation;
-    StoreSpriteCallbackInData6(sprite, AnimCrushGrip_Step);
+    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
 }
 
 static void AnimCrushGrip_Step(struct Sprite *sprite)
