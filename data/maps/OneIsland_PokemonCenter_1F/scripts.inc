@@ -219,7 +219,7 @@ OneIsland_PokemonCenter_1F_EventScript_Celio::
 	end
 	
 OneIsland_PokemonCenter_1F_EventScript_CelioCheckAltar::
-	goto_if_unset FLAG_FOUGHT_CELIO, OneIsland_PokemonCenter_1F_EventScript_CelioBattle
+	goto_if_unset FLAG_BEAT_CELIO, OneIsland_PokemonCenter_1F_EventScript_CelioBattle
 	return
 	end
 	

@@ -27,7 +27,7 @@ MarineCave_EventScript_ShowKyogre::
 
 MarineCave_EventScript_Kyogre::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_walk_in_place_up
 	waitmovement 0
 	applymovement LOCALID_KYOGRE, MarineCave_Movement_KyogreApproach
 	waitmovement 0
