@@ -160,6 +160,20 @@ EventScript_PlaceSapphire::
 	playse SE_EXP_MAX
 	waitse
 	msgbox PrimordialAltar_Text_PlacedSapphire
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 10
+	setvar VAR_0x8007, 3
+	special ShakeScreen
+	delay 60
+	setvar VAR_0x8004, 3
+	setvar VAR_0x8005, 3
+	setvar VAR_0x8006, 12
+	setvar VAR_0x8007, 2
+	special ShakeScreen
+	delay 60
+	playse SE_LAVARIDGE_FALL_WARP
+	waitse
 	setvar VAR_0x8006, 1
 	setdynamicwarp MAP_MARINE_CAVE, 255, 20, 4
 	releaseall
@@ -172,6 +186,20 @@ EventScript_PlaceRuby::
 	playse SE_EXP_MAX
 	waitse
 	msgbox PrimordialAltar_Text_PlacedRuby
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 10
+	setvar VAR_0x8007, 3
+	special ShakeScreen
+	delay 60
+	setvar VAR_0x8004, 3
+	setvar VAR_0x8005, 3
+	setvar VAR_0x8006, 12
+	setvar VAR_0x8007, 2
+	special ShakeScreen
+	delay 60
+	playse SE_LAVARIDGE_FALL_WARP
+	waitse
 	setvar VAR_0x8006, 2
 	setdynamicwarp MAP_TERRA_CAVE, 255, 5, 4
 	releaseall
@@ -184,8 +212,22 @@ EventScript_PlaceEmerald::
 	playse SE_EXP_MAX
 	waitse
 	msgbox PrimordialAltar_Text_PlacedEmerald
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 10
+	setvar VAR_0x8007, 3
+	special ShakeScreen
+	delay 60
+	setvar VAR_0x8004, 3
+	setvar VAR_0x8005, 3
+	setvar VAR_0x8006, 12
+	setvar VAR_0x8007, 2
+	special ShakeScreen
+	delay 60
+	playse SE_LAVARIDGE_FALL_WARP
+	waitse
 	setvar VAR_0x8006, 3
-	setdynamicwarp MAP_TRAINER_TOWER_LOBBY, 255, 17, 8
+	setdynamicwarp MAP_AERO_CAVE, 255, 13, 23
 	releaseall
 	end
 	
