@@ -78,13 +78,12 @@ MarineCave_Movement_PlayerUp::
 	step_end
 
 MarineCave_Movement_KyogreApproach:
-	init_affine_anim
-	walk_down_start_affine
+	walk_down
 	delay_16
 	delay_16
-	walk_down_affine
+	walk_down
 	delay_16
 	delay_16
-	walk_down_affine
+	walk_down
 	step_end
 
