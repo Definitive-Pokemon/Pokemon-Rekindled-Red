@@ -47,7 +47,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "1",
-      "script": "NULL"
+      "script": "MarineCave_EventScript_Kyogre"
     }
   ],
   "bg_events": [
