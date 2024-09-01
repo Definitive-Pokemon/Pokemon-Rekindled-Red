@@ -2,7 +2,7 @@
   "id": "MAP_SIX_ISLAND_POKEMON_CENTER_2F",
   "name": "SixIsland_PokemonCenter_2F",
   "layout": "LAYOUT_POKEMON_CENTER_2F",
-  "music": "MUS_POKE_CENTER",
+  "music": "MUS_C_COMM_CENTER",
   "region_map_section": "MAPSEC_SIX_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -18,7 +18,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CABLE_CLUB_RECEPTIONIST",
-      "in_connection": false,
       "x": 6,
       "y": 2,
       "elevation": 3,
@@ -28,12 +27,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Common_EventScript_UnionRoomAttendant",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CABLE_CLUB_RECEPTIONIST",
-      "in_connection": false,
       "x": 2,
       "y": 2,
       "elevation": 3,
@@ -43,12 +42,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Common_EventScript_WirelessClubAttendant",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CABLE_CLUB_RECEPTIONIST",
-      "in_connection": false,
       "x": 10,
       "y": 2,
       "elevation": 3,
@@ -58,12 +57,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Common_EventScript_DirectCornerAttendant",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MG_DELIVERYMAN",
-      "in_connection": false,
       "x": 1,
       "y": 2,
       "elevation": 3,
@@ -73,7 +72,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "CableClub_EventScript_MysteryGiftMan",
-      "flag": "FLAG_HIDE_MG_DELIVERYMEN"
+      "flag": "FLAG_HIDE_MG_DELIVERYMEN",
+      "in_connection": false
     }
   ],
   "warp_events": [

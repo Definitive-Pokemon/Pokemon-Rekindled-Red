@@ -18,7 +18,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_RUBY",
-      "in_connection": false,
       "x": 7,
       "y": 7,
       "elevation": 0,
@@ -28,7 +27,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtEmber_RubyPath_B5F_EventScript_Ruby",
-      "flag": "FLAG_HIDE_RUBY"
+      "flag": "FLAG_HIDE_RUBY",
+      "in_connection": false
     }
   ],
   "warp_events": [
