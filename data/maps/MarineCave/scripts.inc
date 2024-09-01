@@ -11,7 +11,8 @@ MarineCave_OnResume:
 
 MarineCave_EventScript_TryRemoveKyogre::
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_ne EventScript_Return
 	removeobject LOCALID_KYOGRE
 	return
 
@@ -26,7 +27,7 @@ MarineCave_EventScript_ShowKyogre::
 
 MarineCave_EventScript_Kyogre::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_FaceUp
 	waitmovement 0
 	applymovement LOCALID_KYOGRE, MarineCave_Movement_KyogreApproach
 	waitmovement 0
@@ -37,7 +38,7 @@ MarineCave_EventScript_Kyogre::
 	setvar VAR_LAST_TALKED, LOCALID_KYOGRE
 	setwildbattle SPECIES_KYOGRE, 90
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	special BattleSetup_StartLegendaryBattle
+	special StartLegendaryBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	setvar VAR_TEMP_1, 0
@@ -51,7 +52,8 @@ MarineCave_EventScript_Kyogre::
 
 MarineCave_EventScript_DefeatedKyogre::
 	setflag FLAG_DEFEATED_KYOGRE
-	goto Common_EventScript_RemoveStaticPokemon
+	setvar VAR_0x8004, SPECIES_KYOGRE
+	goto MarineCave_EventScript_KyogreFled
 	end
 
 MarineCave_EventScript_RanFromKyogre::

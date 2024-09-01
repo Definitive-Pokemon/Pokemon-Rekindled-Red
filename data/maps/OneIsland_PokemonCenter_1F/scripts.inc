@@ -202,9 +202,7 @@ OneIsland_PokemonCenter_1F_EventScript_BillGoTakeStroll::
 OneIsland_PokemonCenter_1F_EventScript_Celio::
 	lock
 	faceplayer
-	checkitem ITEM_EMERALD, 1
-	compare VAR_RESULT, TRUE
-	call_if_eq OneIsland_PokemonCenter_1F_EventScript_CelioCheckBattle
+	call_if_set FLAG_CHECKED_ALTAR, OneIsland_PokemonCenter_1F_EventScript_CelioCheckAltar
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 7, OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 6, OneIsland_PokemonCenter_1F_EventScript_CelioJustGivenSapphire
 	goto_if_set FLAG_RECOVERED_SAPPHIRE, OneIsland_PokemonCenter_1F_EventScript_GiveCelioSapphire
@@ -220,13 +218,30 @@ OneIsland_PokemonCenter_1F_EventScript_Celio::
 	release
 	end
 	
-OneIsland_PokemonCenter_1F_EventScript_CelioCheckBattle::
-	msgbox OneIsland_PokemonCenter_1F_Text_HeyEmeraldBattle
-	closemessage
+OneIsland_PokemonCenter_1F_EventScript_CelioCheckAltar::
+	goto_if_unset FLAG_FOUGHT_CELIO, OneIsland_PokemonCenter_1F_EventScript_CelioBattle
+	return
 	end
 	
-OneIsland_PokemonCenter_1F_Text_HeyEmeraldBattle::
-	.string "Poop.$"
+OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
+	msgbox OneIsland_PokemonCenter_1F_Text_Altar, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle
+	msgbox OneIsland_PokemonCenter_1F_Text_LetsBattle
+	end
+	
+OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle::
+	msgbox OneIsland_PokemonCenter_1F_Text_NoBattle
+	release
+	end
+	
+OneIsland_PokemonCenter_1F_Text_Altar::
+	.string "Altar. Interesting.$"
+	
+OneIsland_PokemonCenter_1F_Text_LetsBattle::
+	.string "Let's battle, little bitch.$"
+	
+OneIsland_PokemonCenter_1F_Text_NoBattle::
+	.string "No Battle.$"
 
 OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact::
 	msgbox OneIsland_PokemonCenter_1F_Text_CelioHearingRumorsAboutYou
