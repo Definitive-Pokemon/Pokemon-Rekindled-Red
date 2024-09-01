@@ -27,7 +27,7 @@ MarineCave_EventScript_ShowKyogre::
 
 MarineCave_EventScript_Kyogre::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_walk_in_place_up
+	applymovement OBJ_EVENT_ID_PLAYER, MarineCave_Movement_PlayerUp
 	waitmovement 0
 	applymovement LOCALID_KYOGRE, MarineCave_Movement_KyogreApproach
 	waitmovement 0
@@ -36,7 +36,7 @@ MarineCave_EventScript_Kyogre::
 	delay 40
 	waitmoncry
 	setvar VAR_LAST_TALKED, LOCALID_KYOGRE
-	setwildbattle SPECIES_KYOGRE, 90
+	setwildbattle SPECIES_KYOGRE, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartLegendaryBattle
 	waitstate
@@ -72,6 +72,10 @@ MarineCave_EventScript_KyogreFled::
 
 MarineCave_Text_KyogreFled::
 	.string "KYOGRE returned to the ocean.$"
+
+MarineCave_Movement_PlayerUp::
+	face_up
+	step_end
 
 MarineCave_Movement_KyogreApproach:
 	init_affine_anim
