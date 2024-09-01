@@ -5244,6 +5244,18 @@
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/CinnabarCavern/border.bin",
       "blockdata_filepath": "data/layouts/CinnabarCavern/map.bin"
+    },
+    {
+      "id": "LAYOUT_AERO_CAVE",
+      "name": "AeroCave_Layout",
+      "width": 27,
+      "height": 30,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/AeroCave/border.bin",
+      "blockdata_filepath": "data/layouts/AeroCave/map.bin"
     }
   ]
 }

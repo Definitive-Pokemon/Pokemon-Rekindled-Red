@@ -1470,3 +1470,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/CinnabarCavern/scripts.inc"
 	.include "data/maps/CinnabarCavern/text.inc"
+
+	.include "data/maps/AeroCave/scripts.inc"
+	.include "data/maps/AeroCave/text.inc"

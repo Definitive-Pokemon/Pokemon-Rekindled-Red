@@ -285,7 +285,8 @@
     "NewMap1",
     "MarineCave",
     "TerraCave",
-    "CinnabarCavern"
+    "CinnabarCavern",
+    "AeroCave"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",

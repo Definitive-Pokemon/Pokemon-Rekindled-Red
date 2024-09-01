@@ -86,7 +86,7 @@ FiveIsland_LostCave_Room10_EventScript_CelebiFled::
 	end
 	
 FiveIsland_LostCave_Room10_Text_CelebiFled::
-	.string "The CELEBI suddenly disappeared.$"
+	.string "CELEBI suddenly disappeared.$"
 	
 FiveIsland_LostCave_Entrance_EventScript_CelebiEvent6::
 	lockall
