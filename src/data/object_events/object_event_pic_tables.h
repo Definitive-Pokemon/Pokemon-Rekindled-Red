@@ -2397,15 +2397,15 @@ static const struct SpriteFrameImage sPicTable_Kyogre[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_Rayquaza[] = {
-    overworld_frame(gObjectEventPic_Kyogre, 8, 8, 0),
-    overworld_frame(gObjectEventPic_Kyogre, 8, 8, 0),
-    overworld_frame(gObjectEventPic_Kyogre, 8, 8, 0),
-    overworld_frame(gObjectEventPic_Kyogre, 8, 8, 0),
-    overworld_frame(gObjectEventPic_Kyogre, 8, 8, 0),
-    overworld_frame(gObjectEventPic_Kyogre, 8, 8, 0),
-    overworld_frame(gObjectEventPic_Kyogre, 8, 8, 0),
-    overworld_frame(gObjectEventPic_Kyogre, 8, 8, 0),
-    overworld_frame(gObjectEventPic_Kyogre, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 0),
 };
 
 static const struct SpriteFrameImage sPicTable_Abra[] = {
