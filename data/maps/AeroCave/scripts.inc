@@ -29,8 +29,10 @@ AeroCave_EventScript_Rayquaza::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, AeroCave_Movement_PlayerUp
 	waitmovement 0
+	fadescreenswapbuffers FADE_TO_WHITE
 	applymovement LOCALID_RAYQUAZA, AeroCave_Movement_RayquazaApproach
 	waitmovement 0
+	fadescreenswapbuffers FADE_FROM_WHITE
 	waitse
 	playmoncry SPECIES_RAYQUAZA, CRY_MODE_ENCOUNTER
 	delay 40
@@ -79,12 +81,8 @@ AeroCave_Movement_PlayerUp::
 
 AeroCave_Movement_RayquazaApproach:
 	init_affine_anim
-	walk_down_start_affine
-	delay_16
-	delay_16
-	walk_down_affine
-	delay_16
-	delay_16
-	walk_down_affine
+	walk_down_faster
+	walk_down_faster
+	walk_down_faster
 	step_end
 
