@@ -202,7 +202,9 @@ OneIsland_PokemonCenter_1F_EventScript_BillGoTakeStroll::
 OneIsland_PokemonCenter_1F_EventScript_Celio::
 	lock
 	faceplayer
-	call_if_set FLAG_CHECKED_ALTAR, OneIsland_PokemonCenter_1F_EventScript_CelioCheckAltar
+	goto_if_unset FLAG_CHECKED_ALTAR, OneIsland_PokemonCenter_1F_EventScript_Celio_Skip_Battle
+	goto_if_unset FLAG_BEAT_CELIO, OneIsland_PokemonCenter_1F_EventScript_CelioBattle
+OneIsland_PokemonCenter_1F_EventScript_Celio_Skip_Battle::
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 7, OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 6, OneIsland_PokemonCenter_1F_EventScript_CelioJustGivenSapphire
 	goto_if_set FLAG_RECOVERED_SAPPHIRE, OneIsland_PokemonCenter_1F_EventScript_GiveCelioSapphire
@@ -216,11 +218,6 @@ OneIsland_PokemonCenter_1F_EventScript_Celio::
 	applymovement LOCALID_CELIO, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	release
-	end
-	
-OneIsland_PokemonCenter_1F_EventScript_CelioCheckAltar::
-	goto_if_unset FLAG_BEAT_CELIO, OneIsland_PokemonCenter_1F_EventScript_CelioBattle
-	return
 	end
 	
 OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
@@ -240,7 +237,6 @@ OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
 	end
 	
 	
-
 OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle::
 	msgbox OneIsland_PokemonCenter_1F_Text_NoBattle
 	release
