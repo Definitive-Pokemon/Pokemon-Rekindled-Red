@@ -373,7 +373,7 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_RSYoungster),
     },
     [TRAINER_CELIO] = {
-        .trainerClass = TRAINER_CLASS_CELIO,
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_RS_YOUNGSTER,
         .trainerName = _("CELIO"),
