@@ -228,7 +228,7 @@ OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
 	waitmovement 0
 	msgbox OneIsland_PokemonCenter_1F_Text_Altar2, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle
-	trainerbattle_no_intro TRAINER_CELIO, PokemonCenter_1F_Text_CelioDefeat
+	trainerbattle_single TRAINER_CELIO, OneIsland_PokemonCenter_1F_Text_LetsBattleo, OneIsland_PokemonCenter_1F_Text_CelioDefeat
 	msgbox OneIsland_PokemonCenter_1F_Text_GiveStones
 	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioPutGemInMachine
 	waitmovement 0
@@ -300,7 +300,7 @@ OneIsland_PokemonCenter_1F_Text_LetsBattle::
 	.string "Let's do this, then.\p"
 	.string "May the best TRAINER win.$"
 	
-PokemonCenter_1F_Text_CelioDefeat::
+OneIsland_PokemonCenter_1F_Text_CelioDefeat::
     .string "Woah!\n"
     .string "You did it, {PLAYER}!\p"
     .string "I will give you the stones\n"
