@@ -255,6 +255,7 @@ OneIsland_PokemonCenter_1F_EventScript_CelioDefeated::
 	waitse
 	setflag FLAG_HIDE_ONE_ISLAND_POKECENTER_CELIO
 	release
+	removeflag FLAG_SYS_CAN_LINK_WITH_RS
 	end
 	
 OneIsland_PokemonCenter_1F_Movement_CelioGo::
@@ -320,9 +321,9 @@ OneIsland_PokemonCenter_1F_Text_GiveStones::
 	.string "You've earned these, {PLAYER}.$"
 	
 OneIsland_PokemonCenter_1F_Text_Phew::
-	.string "That was a great fight!\n"
-	.string "It's been a while since I had\p"
-	.string "a POKéMON battle to begin with!\p"
+	.string "That was a great fight!\p"
+	.string "It's been a while since I had a\n"
+	.string "POKéMON battle to begin with!\p"
 	.string "I can no longer pursue my original\n"
 	.string "dream now, but don't worry.\p"
 	.string "In this world, there will always be\n"
@@ -332,16 +333,16 @@ OneIsland_PokemonCenter_1F_Text_Phew::
 	.string "To be frank, I needed this fight.\p"
 	.string "Sitting inside, tampering with\n"
 	.string "machinery is great fun.\p"
-	.string "But it sure isn't everything.\n"
-	.string "There is a world waiting\p"
-	.string "for me outside. A world I had\n"
+	.string "But it sure isn't everything.\p"
+	.string "There is a world waiting for me\n"
+	.string "for me outside. A world I had\p"
 	.string "long abandoned…\p"
 	.string "I'll be seeing you, {PLAYER}.\n"
 	.string "I think I'm going to pick up\p"
 	.string "POKéMON battling again,\n"
 	.string "thanks to you.\p"
-	.string "I'm going to train some at\n"
-	.string "the TRAINER TOWER.\p"
+	.string "I'm going to train some at the\n"
+	.string "TRAINER TOWER.\p"
 	.string "I'll be seeing you, {PLAYER}.$"
 	
 OneIsland_PokemonCenter_1F_Text_NoBattle::
