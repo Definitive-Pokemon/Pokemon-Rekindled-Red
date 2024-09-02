@@ -2763,6 +2763,7 @@ extern const u32 gTrainerPalette_SisAndBro[];
 extern const u32 gTrainerPalette_ProfessorOak[];
 extern const u32 gTrainerPalette_Daisy[];
 extern const u32 gTrainerPalette_Anabel[];
+extern const u32 gTrainerPalette_Celio[];
 extern const u32 gTrainerPalette_RSBrendan2[];
 extern const u32 gTrainerPalette_RSMay2[];
 extern const u32 gTrainerPalette_Red[];
