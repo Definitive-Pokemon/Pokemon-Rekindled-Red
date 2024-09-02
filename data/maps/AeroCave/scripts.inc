@@ -30,6 +30,7 @@ AeroCave_EventScript_Rayquaza::
 	applymovement OBJ_EVENT_ID_PLAYER, AeroCave_Movement_PlayerUp
 	waitmovement 0
 	fadescreenswapbuffers FADE_TO_WHITE
+	playse SE_M_FLY
 	applymovement LOCALID_RAYQUAZA, AeroCave_Movement_RayquazaApproach
 	waitmovement 0
 	fadescreenswapbuffers FADE_FROM_WHITE

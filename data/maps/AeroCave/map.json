@@ -18,7 +18,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_RAYQUAZA",
-      "x": 13,
+      "x": 18,
       "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -32,7 +32,7 @@
   ],
   "warp_events": [
     {
-      "x": 13,
+      "x": 18,
       "y": 23,
       "elevation": 0,
       "dest_map": "MAP_PRIMORDIAL_ALTAR",
@@ -42,7 +42,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 13,
+      "x": 18,
       "y": 9,
       "elevation": 0,
       "var": "VAR_TEMP_1",
