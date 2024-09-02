@@ -81,8 +81,8 @@ AeroCave_Movement_PlayerUp::
 
 AeroCave_Movement_RayquazaApproach:
 	init_affine_anim
-	walk_down_fast
-	walk_down_fast
-	walk_down_fast
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
