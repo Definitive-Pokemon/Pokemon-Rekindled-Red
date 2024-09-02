@@ -238,7 +238,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(OLD_COUPLE, gTrainerFrontPic_OldCouple, 0x800),
     TRAINER_SPRITE(RS_SIS_AND_BRO, gTrainerFrontPic_RSSisAndBro, 0x800),
     TRAINER_SPRITE(AQUA_ADMIN_M, gTrainerFrontPic_AquaAdminM, 0x800),
-    TRAINER_SPRITE(CELIO, gTrainerFrontPic_Celio, 0x800)
+    TRAINER_SPRITE(CELIO, gTrainerFrontPic_Celio, 0x800),
     TRAINER_SPRITE(MAGMA_ADMIN_M, gTrainerFrontPic_MagmaAdminM, 0x800),
     TRAINER_SPRITE(MAGMA_ADMIN_F, gTrainerFrontPic_MagmaAdminF, 0x800),
     TRAINER_SPRITE(LEADER_WATTSON, gTrainerFrontPic_LeaderWattson, 0x800),
