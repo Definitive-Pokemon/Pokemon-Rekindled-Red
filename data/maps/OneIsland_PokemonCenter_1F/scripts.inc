@@ -226,15 +226,15 @@ OneIsland_PokemonCenter_1F_EventScript_CelioCheckAltar::
 OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
 	msgbox OneIsland_PokemonCenter_1F_Text_Altar, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle
-	trainerbattle_single TRAINER_CELIO, OneIsland_PokemonCenter_1F_Text_LetsBattle, PokemonCenter_1F_Text_CelioDefeat, PokemonCenter_1F_EventScript_DefeatedCelio
-	end
-	
-PokemonCenter_1F_EventScript_DefeatedCelio::
+	trainerbattle_no_intro TRAINER_CELIO, PokemonCenter_1F_Text_CelioDefeat
 	msgbox OneIsland_PokemonCenter_1F_Text_GiveStones
 	giveitem ITEM_RUBY, 1
 	giveitem ITEM_SAPPHIRE, 1
 	setflag FLAG_BEAT_CELIO
 	msgbox OneIsland_PokemonCenter_1F_Text_Phew
+	release
+	end
+	
 	
 
 OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle::
