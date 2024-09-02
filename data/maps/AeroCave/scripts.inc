@@ -21,7 +21,7 @@ AeroCave_OnTransition:
 	end
 
 AeroCave_EventScript_ShowRayquaza::
-	clearflag FLAG_HIDE_MARINE_CAVE_RAYQUAZA
+	clearflag FLAG_HIDE_AERO_CAVE_RAYQUAZA
 	setvar VAR_TEMP_1, 1
 	return
 
