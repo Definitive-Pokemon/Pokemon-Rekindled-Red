@@ -203,7 +203,6 @@ OneIsland_PokemonCenter_1F_EventScript_Celio::
 	lock
 	faceplayer
 	goto_if_unset FLAG_CHECKED_ALTAR, OneIsland_PokemonCenter_1F_EventScript_Celio_Skip_Battle
-	goto_if_unset FLAG_BEAT_CELIO, OneIsland_PokemonCenter_1F_EventScript_CelioBattle
 OneIsland_PokemonCenter_1F_EventScript_Celio_Skip_Battle::
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 7, OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 6, OneIsland_PokemonCenter_1F_EventScript_CelioJustGivenSapphire
@@ -343,6 +342,16 @@ OneIsland_PokemonCenter_1F_Text_NoBattle::
 
 OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact::
 	msgbox OneIsland_PokemonCenter_1F_Text_CelioHearingRumorsAboutYou
+	random 3
+	goto_if_eq VAR_RESULT, 0, OneIsland_PokemonCenter_1F_EventScript_BillFact1
+	goto_if_eq VAR_RESULT, 1, OneIsland_PokemonCenter_1F_EventScript_BillFact2
+	famechecker FAMECHECKER_BILL, 5
+	msgbox OneIsland_PokemonCenter_1F_Text_BillCantStomachMilk
+	release
+	end
+	
+OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact2::
+	msgbox OneIsland_PokemonCenter_1F_Text_CelioHearingRumorsAboutYou2
 	random 3
 	goto_if_eq VAR_RESULT, 0, OneIsland_PokemonCenter_1F_EventScript_BillFact1
 	goto_if_eq VAR_RESULT, 1, OneIsland_PokemonCenter_1F_EventScript_BillFact2

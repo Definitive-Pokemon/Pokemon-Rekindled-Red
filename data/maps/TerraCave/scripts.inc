@@ -38,7 +38,7 @@ TerraCave_EventScript_Groudon::
 	setvar VAR_LAST_TALKED, LOCALID_GROUDON
 	setwildbattle SPECIES_GROUDON, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	special StartGroudonGroudonBattle
+	special StartGroudonKyogreBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	setvar VAR_TEMP_1, 0
