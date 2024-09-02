@@ -1,54 +1,3 @@
-static const struct TrainerMonItemCustomMoves sParty_TrainerCelio[] = {
-    {
-        .iv = 255,
-        .lvl = 80,
-        .species = SPECIES_SHEDINJA,
-        .heldItem = ITEM_SCOPE_LENS,
-        .abilityNum = 0,
-        .moves = {MOVE_SHADOW_BALL, MOVE_SILVER_WIND, MOVE_PROTECT, MOVE_SWORDS_DANCE},
-    },
-    {
-        .iv = 255,
-        .lvl = 81,
-        .species = SPECIES_CLAYDOL,
-        .heldItem = ITEM_LEFTOVERS,
-        .abilityNum = 0,
-        .moves = {MOVE_RAPID_SPIN, MOVE_EARTHQUAKE, MOVE_PSYCHIC, MOVE_EXPLOSION},
-    },
-    {
-        .iv = 255,
-        .lvl = 81,
-        .species = SPECIES_PORYGON2,
-        .heldItem = ITEM_LEFTOVERS,
-        .abilityNum = 0,
-        .moves = {MOVE_RECOVER, MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE},
-    },
-    {
-        .iv = 255,
-        .lvl = 80,
-        .species = SPECIES_ELECTRODE,
-        .heldItem = ITEM_LEFTOVERS,
-        .abilityNum = 0,
-        .moves = {MOVE_THUNDERBOLT, MOVE_EXPLOSION, MOVE_SUBSTITUTE, MOVE_THUNDER_WAVE},
-    },
-    {
-        .iv = 255,
-        .lvl = 83,
-        .species = SPECIES_GOLEM,
-        .heldItem = ITEM_CHOICE_BAND,
-        .abilityNum = 0,
-        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_DOUBLE_EDGE, MOVE_EXPLOSION},
-    },
-    {
-        .iv = 255,
-        .lvl = 83,
-        .species = SPECIES_METAGROSS,
-        .heldItem = ITEM_LEFTOVERS,
-        .abilityNum = 0,
-        .moves = {MOVE_METEOR_MASH, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_EXPLOSION},
-    },
-};
-
 static const struct TrainerMonItemCustomMoves sParty_LeaderLtSurgeRematch[] = {
     {
         .iv = 255,
@@ -1243,11 +1192,54 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RSYoungster[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Celio[] = {
+static const struct TrainerMonItemCustomMoves sParty_Celio[] = {
     {
-        .iv = 0,
-        .lvl = 5,
-        .species = SPECIES_EKANS,
+        .iv = 255,
+        .lvl = 80,
+        .species = SPECIES_SHEDINJA,
+        .heldItem = ITEM_SCOPE_LENS,
+        .abilityNum = 0,
+        .moves = {MOVE_SHADOW_BALL, MOVE_SILVER_WIND, MOVE_PROTECT, MOVE_SWORDS_DANCE},
+    },
+    {
+        .iv = 255,
+        .lvl = 81,
+        .species = SPECIES_CLAYDOL,
+        .heldItem = ITEM_LEFTOVERS,
+        .abilityNum = 0,
+        .moves = {MOVE_RAPID_SPIN, MOVE_EARTHQUAKE, MOVE_PSYCHIC, MOVE_EXPLOSION},
+    },
+    {
+        .iv = 255,
+        .lvl = 81,
+        .species = SPECIES_PORYGON2,
+        .heldItem = ITEM_LEFTOVERS,
+        .abilityNum = 0,
+        .moves = {MOVE_RECOVER, MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE},
+    },
+    {
+        .iv = 255,
+        .lvl = 80,
+        .species = SPECIES_ELECTRODE,
+        .heldItem = ITEM_LEFTOVERS,
+        .abilityNum = 0,
+        .moves = {MOVE_THUNDERBOLT, MOVE_EXPLOSION, MOVE_SUBSTITUTE, MOVE_THUNDER_WAVE},
+    },
+    {
+        .iv = 255,
+        .lvl = 83,
+        .species = SPECIES_GOLEM,
+        .heldItem = ITEM_CHOICE_BAND,
+        .abilityNum = 0,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_DOUBLE_EDGE, MOVE_EXPLOSION},
+    },
+    {
+        .iv = 255,
+        .lvl = 83,
+        .species = SPECIES_METAGROSS,
+        .heldItem = ITEM_LEFTOVERS,
+        .abilityNum = 0,
+        .moves = {MOVE_METEOR_MASH, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_EXPLOSION},
     },
 };
 
