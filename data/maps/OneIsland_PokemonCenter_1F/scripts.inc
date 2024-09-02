@@ -224,14 +224,14 @@ OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
 	msgbox OneIsland_PokemonCenter_1F_Text_Altar
 	closemessage
 	playse SE_PIN
-	applymovement OneIsland_PokemonCenter_1F_Movement_CelioExclaim
-	waitmovement
+	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioExclaim
+	waitmovement 0
 	msgbox OneIsland_PokemonCenter_1F_Text_Altar2, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle
 	trainerbattle_no_intro TRAINER_CELIO, PokemonCenter_1F_Text_CelioDefeat
 	msgbox OneIsland_PokemonCenter_1F_Text_GiveStones
-	applymovement OneIsland_PokemonCenter_1F_Movement_CelioPutGemInMachine
-	waitmovement
+	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioPutGemInMachine
+	waitmovement 0
 	playse SE_CLICK
 	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Ruby, 0
 	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Sapphire, 0
@@ -241,7 +241,7 @@ OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
 	giveitem ITEM_SAPPHIRE, 1
 	msgbox OneIsland_PokemonCenter_1F_Text_Phew
 	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioGo
-	waitmovement
+	waitmovement 0
 	removeobject LOCALID_CELIO
 	playse SE_EXIT
 	waitse
@@ -277,7 +277,7 @@ OneIsland_PokemonCenter_1F_Text_Altar::
 	.string "Did you find anything using that\n"
 	.string "HM I gave you?$"
 	
-OneIsland_PokemonCenter_1F_Text_Altar::
+OneIsland_PokemonCenter_1F_Text_Altar2::
 	.string "Interesting…\n"
 	.string "So you found an altar containing\p"
 	.string "a hole that perfectly matches\n"
