@@ -227,8 +227,12 @@ OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
 	msgbox OneIsland_PokemonCenter_1F_Text_Altar, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle
 	msgbox OneIsland_PokemonCenter_1F_Text_LetsBattle
+	trainerbattle_single TRAINER_CELIO, Dummy1, Dummy1, NO_MUSIC
 	end
-	
+
+Dummy1::
+    .string "dummy.$"
+
 OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle::
 	msgbox OneIsland_PokemonCenter_1F_Text_NoBattle
 	release

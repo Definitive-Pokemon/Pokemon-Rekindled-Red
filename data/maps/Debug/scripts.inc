@@ -7,11 +7,15 @@ Debug_GiveFormMon::
 	release
 	end
 
+Debug_Text::
+    .string "I AM NO ERROR$"
+
 Debug_Battle::
 	lock
-	setwildbattle SPECIES_REGIGIGAS, 3, ITEM_NONE
-	delay 40
-	dowildbattle
+	trainerbattle_single TRAINER_CELIO, Debug_Text, Debug_Text, NO_MUSIC
+	@setwildbattle SPECIES_REGIGIGAS, 3, ITEM_NONE
+	@delay 40
+	@dowildbattle
 	release
 	end
 

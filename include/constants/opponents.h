@@ -39,7 +39,7 @@
 #define TRAINER_EXPERT_M                          35
 #define TRAINER_EXPERT_F                          36
 #define TRAINER_RS_YOUNGSTER                      37
-#define TRAINER_RS_CHAMPION                       38
+#define TRAINER_CELIO                             38
 #define TRAINER_RS_FISHERMAN                      39
 #define TRAINER_CYCLING_TRIATHLETE_M              40
 #define TRAINER_CYCLING_TRIATHLETE_F              41

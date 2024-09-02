@@ -372,15 +372,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_RSYoungster),
     },
-    [TRAINER_RS_CHAMPION] = {
-        .trainerClass = TRAINER_CLASS_RS_CHAMPION,
+    [TRAINER_CELIO] = {
+        .trainerClass = TRAINER_CLASS_CELIO,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_CHAMPION_STEVEN,
-        .trainerName = _(""),
+        .trainerPic = TRAINER_PIC_CELIO,
+        .trainerName = _("CELIO"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_RSChampion),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Celio),
     },
     [TRAINER_RS_FISHERMAN] = {
         .trainerClass = TRAINER_CLASS_RS_FISHERMAN,
