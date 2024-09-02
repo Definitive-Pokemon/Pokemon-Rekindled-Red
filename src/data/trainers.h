@@ -380,7 +380,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Celio),
+        .party = ITEN_CUSTOM_MOVES(sParty_Celio),
     },
     [TRAINER_RS_FISHERMAN] = {
         .trainerClass = TRAINER_CLASS_RS_FISHERMAN,
