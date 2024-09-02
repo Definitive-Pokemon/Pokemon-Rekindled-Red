@@ -237,7 +237,7 @@ OneIsland_PokemonCenter_1F_EventScript_CelioDefeated::
 	waitmovement 0
 	playse SE_CLICK
 	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Ruby, 0
-	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Sapphire, 0
+	setmetatile 16, 4, METATILE_PokemonCenter_NetworkMachine_Sapphire, 0
 	setmetatile 14, 4, METATILE_PokemonCenter_NetworkMachine_ScreenLeft_On, 0
 	setmetatile 15, 4, METATILE_PokemonCenter_NetworkMachine_ScreenRight_On, 0
 	special DrawWholeMapView
