@@ -229,7 +229,11 @@ OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
 	trainerbattle_no_intro TRAINER_CELIO, PokemonCenter_1F_Text_CelioDefeat
 	msgbox OneIsland_PokemonCenter_1F_Text_GiveStones
 	giveitem ITEM_RUBY, 1
+	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Ruby, 0
 	giveitem ITEM_SAPPHIRE, 1
+	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Sapphire, 0
+	setmetatile 14, 4, METATILE_PokemonCenter_NetworkMachine_ScreenLeft_On, 0
+	setmetatile 15, 4, METATILE_PokemonCenter_NetworkMachine_ScreenRight_On, 0
 	setflag FLAG_BEAT_CELIO
 	msgbox OneIsland_PokemonCenter_1F_Text_Phew
 	release
@@ -243,7 +247,7 @@ OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle::
 	end
 	
 OneIsland_PokemonCenter_1F_Text_Altar::
-	.string "Altar. Interesting.$"
+	.string "Altar. Interesting. Battle?$"
 	
 OneIsland_PokemonCenter_1F_Text_LetsBattle::
 	.string "Let's battle, little bitch.$"

@@ -18,19 +18,6 @@ Debug_Gigas_Battle::
 	release
 	end
 
-OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
-	lock
-	msgbox OneIsland_PokemonCenter_1F_Text_Altar, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle
-	trainerbattle_no_intro TRAINER_CELIO, PokemonCenter_1F_Text_CelioDefeat
-	msgbox OneIsland_PokemonCenter_1F_Text_GiveStones
-	giveitem ITEM_RUBY, 1
-	giveitem ITEM_SAPPHIRE, 1
-	setflag FLAG_BEAT_CELIO
-	msgbox OneIsland_PokemonCenter_1F_Text_Phew
-	release
-	end
-
 Debug_GiveNormalMon::
 	lock
 	givemon SPECIES_REGIGIGAS, 5, ITEM_NONE
