@@ -7364,10 +7364,11 @@ const struct WildPokemonInfo sRoute20_Underwater_LeafGreen_LandMonsInfo = { 7, s
 const struct WildPokemon sSafariZone_NorthWest_LandMons[] =
 {
     { 53, 53, SPECIES_TAUROS },
-    { 54, 54, SPECIES_XATU },
+    { 54, 54, SPECIES_CASTFORM },
     { 55, 55, SPECIES_RHYHORN },
     { 56, 56, SPECIES_TROPIUS },
     { 54, 54, SPECIES_VILEPLUME },
+    { 57, 57, SPECIES_DODRIO },
     { 57, 57, SPECIES_DODRIO },
     { 55, 55, SPECIES_VICTREEBEL },
     { 54, 54, SPECIES_PINSIR },
@@ -7447,7 +7448,7 @@ const struct WildPokemonInfo sSafariZone_NorthWest_RockSmashMonsInfo = { 25, sSa
 const struct WildPokemon sSafariZone_NorthEast_LandMons[] =
 {
     { 53, 53, SPECIES_TAUROS },
-    { 54, 54, SPECIES_XATU },
+    { 54, 54, SPECIES_CASTFORM },
     { 55, 55, SPECIES_RHYHORN },
     { 56, 56, SPECIES_TROPIUS },
     { 54, 54, SPECIES_VILEPLUME },

@@ -55,7 +55,7 @@ Route25_EventScript_Suicune::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_SUICUNE, 50, ITEM_NONE
+	setwildbattle SPECIES_SUICUNE, 60, ITEM_NONE
 	waitse
 	playmoncry SPECIES_SUICUNE, 2
 	fadescreen FADE_TO_WHITE

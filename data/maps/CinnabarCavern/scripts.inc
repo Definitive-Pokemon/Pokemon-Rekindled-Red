@@ -34,7 +34,7 @@ CinnabarCavern_EventScript_Raikou::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_RAIKOU, 50, ITEM_NONE
+	setwildbattle SPECIES_RAIKOU, 60, ITEM_NONE
 	waitse
 	playmoncry SPECIES_RAIKOU, 2
 	fadescreen FADE_TO_WHITE

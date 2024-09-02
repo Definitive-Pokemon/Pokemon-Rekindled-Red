@@ -155,7 +155,7 @@ FarawayIsland_Interior_EventScript_Mew::
 	delay 40
 	waitmoncry
 	setvar VAR_0x8004, SPECIES_MEW
-	setvar VAR_0x8005, 30 @ level
+	setvar VAR_0x8005, 50 @ level
 	setvar VAR_0x8006, ITEM_NONE
 	special CreateEnemyEventMon
 	setflag FLAG_SYS_CTRL_OBJ_DELETE

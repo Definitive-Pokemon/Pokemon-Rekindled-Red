@@ -226,12 +226,16 @@ OneIsland_PokemonCenter_1F_EventScript_CelioCheckAltar::
 OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
 	msgbox OneIsland_PokemonCenter_1F_Text_Altar, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle
-	msgbox OneIsland_PokemonCenter_1F_Text_LetsBattle
-	trainerbattle_single TRAINER_CELIO, Dummy1, Dummy1, NO_MUSIC
+	trainerbattle_single TRAINER_PKMN_TRAINER_CELIO, OneIsland_PokemonCenter_1F_Text_LetsBattle, PokemonCenter_1F_Text_CelioDefeat, PokemonCenter_1F_EventScript_DefeatedCelio
 	end
-
-Dummy1::
-    .string "dummy.$"
+	
+PokemonCenter_1F_EventScript_DefeatedCelio::
+	msgbox OneIsland_PokemonCenter_1F_Text_GiveStones
+	giveitem ITEM_RUBY, 1
+	giveitem ITEM_SAPPHIRE, 1
+	setflag FLAG_BEAT_CELIO
+	msgbox OneIsland_PokemonCenter_1F_Text_Phew
+	
 
 OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle::
 	msgbox OneIsland_PokemonCenter_1F_Text_NoBattle
@@ -243,6 +247,15 @@ OneIsland_PokemonCenter_1F_Text_Altar::
 	
 OneIsland_PokemonCenter_1F_Text_LetsBattle::
 	.string "Let's battle, little bitch.$"
+	
+PokemonCenter_1F_Text_CelioDefeat::
+    .string "Ouch, motherfucker.$"
+	
+OneIsland_PokemonCenter_1F_Text_GiveStones::
+	.string "Here's your dumb stones.$"
+	
+OneIsland_PokemonCenter_1F_Text_Phew::
+	.string "Also, eff off!$"
 	
 OneIsland_PokemonCenter_1F_Text_NoBattle::
 	.string "No Battle.$"

@@ -56,7 +56,7 @@ VictoryRoad_2F_EventScript_Entei::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_ENTEI, 50, ITEM_NONE
+	setwildbattle SPECIES_ENTEI, 60, ITEM_NONE
 	waitse
 	playmoncry SPECIES_ENTEI, 2
 	fadescreen FADE_TO_WHITE

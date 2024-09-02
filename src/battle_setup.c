@@ -467,6 +467,7 @@ void StartLegendaryBattle(void)
 	case SPECIES_CELEBI:
         CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
         break;
+	case SPECIES_JIRACHI:
     case SPECIES_DEOXYS:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_DEOXYS);
         break;
@@ -493,6 +494,7 @@ void StartLegendaryBattle(void)
         break;
     case SPECIES_LATIAS:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RS_VS_WILD);
+        break;
         break;
     default:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RS_VS_TRAINER);
