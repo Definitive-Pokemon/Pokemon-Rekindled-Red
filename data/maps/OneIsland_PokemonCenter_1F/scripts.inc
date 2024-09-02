@@ -237,9 +237,14 @@ OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
 	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Sapphire, 0
 	setmetatile 14, 4, METATILE_PokemonCenter_NetworkMachine_ScreenLeft_On, 0
 	setmetatile 15, 4, METATILE_PokemonCenter_NetworkMachine_ScreenRight_On, 0
+	special DrawWholeMapView
+	delay 30
+	applymovement LOCALID_CELIO, Common_Movement_FacePlayer
+	waitmovement 0
 	giveitem ITEM_RUBY, 1
 	giveitem ITEM_SAPPHIRE, 1
 	msgbox OneIsland_PokemonCenter_1F_Text_Phew
+	closemessage
 	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioGo
 	waitmovement 0
 	removeobject LOCALID_CELIO

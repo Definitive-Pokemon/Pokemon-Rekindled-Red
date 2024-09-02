@@ -73,6 +73,7 @@ PrimordialAltar_EventScript_DontRemoveEmerald::
 	end
 
 PrimordialAltar_EventScript_Altar_SapphireOnly::
+	setflag FLAG_CHECKED_ALTAR
 	checkitem ITEM_RUBY, 1
 	compare VAR_RESULT, TRUE
 	goto_if_eq PrimordialAltar_EventScript_Altar_SapphireRuby
@@ -88,6 +89,7 @@ PrimordialAltar_EventScript_Altar_SapphireOnly::
 	end
 	
 PrimordialAltar_EventScript_Altar_SapphireRuby::
+	setflag FLAG_CHECKED_ALTAR
 	checkitem ITEM_EMERALD, 1
 	compare VAR_RESULT, TRUE
 	goto_if_eq PrimordialAltar_EventScript_Altar_All
@@ -101,6 +103,7 @@ PrimordialAltar_EventScript_Altar_SapphireRuby::
 	end
 	
 PrimordialAltar_EventScript_Altar_RubyOnly::
+	setflag FLAG_CHECKED_ALTAR
 	checkitem ITEM_EMERALD, 1
 	compare VAR_RESULT, TRUE
 	goto_if_eq PrimordialAltar_EventScript_Altar_RubyEmerald
@@ -113,6 +116,7 @@ PrimordialAltar_EventScript_Altar_RubyOnly::
 	end
 	
 PrimordialAltar_EventScript_Altar_RubyEmerald::
+	setflag FLAG_CHECKED_ALTAR
 	msgbox PrimordialAltar_Text_Altar2
 	multichoice 19, 5, MULTICHOICE_RUBYEMERALD, FALSE
 	switch VAR_RESULT
@@ -123,6 +127,7 @@ PrimordialAltar_EventScript_Altar_RubyEmerald::
 	end
 	
 PrimordialAltar_EventScript_Altar_SapphireEmerald::
+	setflag FLAG_CHECKED_ALTAR
 	msgbox PrimordialAltar_Text_Altar2
 	multichoice 19, 5, MULTICHOICE_SAPPHIREEMERALD, FALSE
 	switch VAR_RESULT
@@ -134,6 +139,7 @@ PrimordialAltar_EventScript_Altar_SapphireEmerald::
 	end
 
 PrimordialAltar_EventScript_Altar_EmeraldOnly::
+	setflag FLAG_CHECKED_ALTAR
 	msgbox PrimordialAltar_Text_Altar2
 	multichoice 19, 5, MULTICHOICE_EMERALD, FALSE
 	switch VAR_RESULT
@@ -143,6 +149,7 @@ PrimordialAltar_EventScript_Altar_EmeraldOnly::
 	end
 	
 PrimordialAltar_EventScript_Altar_All::
+	setflag FLAG_CHECKED_ALTAR
 	msgbox PrimordialAltar_Text_Altar2
 	multichoice 19, 5, MULTICHOICE_ALLSTONES, FALSE
 	switch VAR_RESULT
