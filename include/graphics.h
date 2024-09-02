@@ -2594,6 +2594,7 @@ extern const u32 gTrainerFrontPic_SisAndBro[];
 extern const u32 gTrainerFrontPic_ProfessorOak[];
 extern const u32 gTrainerFrontPic_Daisy[];
 extern const u32 gTrainerFrontPic_Anabel[];
+extern const u32 gTrainerFrontPic_Celio[];
 extern const u32 gTrainerFrontPic_RSBrendan2[];
 extern const u32 gTrainerFrontPic_RSMay2[];
 extern const u32 gTrainerFrontPic_Red[];
