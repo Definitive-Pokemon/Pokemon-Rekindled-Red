@@ -812,7 +812,6 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_OLD_COUPLE]            = sAnims_OldCouple,
     [TRAINER_PIC_RS_SIS_AND_BRO]        = sAnims_RSSisAndBro,
     [TRAINER_PIC_AQUA_ADMIN_M]          = sAnims_AquaAdminM,
-    [TRAINER_PIC_AQUA_ADMIN_F]          = sAnims_AquaAdminF,
     [TRAINER_PIC_MAGMA_ADMIN_M]         = sAnims_MagmaAdminM,
     [TRAINER_PIC_MAGMA_ADMIN_F]         = sAnims_MagmaAdminF,
     [TRAINER_PIC_LEADER_WATTSON]        = sAnims_LeaderWattson,

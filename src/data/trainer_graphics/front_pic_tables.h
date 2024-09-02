@@ -238,7 +238,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(OLD_COUPLE, gTrainerFrontPic_OldCouple, 0x800),
     TRAINER_SPRITE(RS_SIS_AND_BRO, gTrainerFrontPic_RSSisAndBro, 0x800),
     TRAINER_SPRITE(AQUA_ADMIN_M, gTrainerFrontPic_AquaAdminM, 0x800),
-    TRAINER_SPRITE(AQUA_ADMIN_F, gTrainerFrontPic_AquaAdminF, 0x800),
+    TRAINER_SPRITE(CELIO, gTrainerFrontPic_Celio, 0x800)
     TRAINER_SPRITE(MAGMA_ADMIN_M, gTrainerFrontPic_MagmaAdminM, 0x800),
     TRAINER_SPRITE(MAGMA_ADMIN_F, gTrainerFrontPic_MagmaAdminF, 0x800),
     TRAINER_SPRITE(LEADER_WATTSON, gTrainerFrontPic_LeaderWattson, 0x800),
@@ -328,8 +328,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(MASTER_PSYCHIC_M, gTrainerFrontPic_MasterPsychicM, 0x800),
     TRAINER_SPRITE(MASTER_SCIENTIST, gTrainerFrontPic_MasterScientist, 0x800),
     TRAINER_SPRITE(MASTER_YOUNGSTER, gTrainerFrontPic_MasterYoungster, 0x800),
-    TRAINER_SPRITE(MASTER_SWIMMER, gTrainerFrontPic_MasterSwimmer, 0x800),
-    TRAINER_SPRITE(CELIO, gTrainerFrontPic_Celio, 0x800)
+    TRAINER_SPRITE(MASTER_SWIMMER, gTrainerFrontPic_MasterSwimmer, 0x800)
 };
 
 const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
@@ -406,7 +405,7 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(OLD_COUPLE, gTrainerPalette_OldCouple),
     TRAINER_PAL(RS_SIS_AND_BRO, gTrainerPalette_RSSisAndBro),
     TRAINER_PAL(AQUA_ADMIN_M, gTrainerPalette_AquaAdminM),
-    TRAINER_PAL(AQUA_ADMIN_F, gTrainerPalette_AquaAdminF),
+    TRAINER_PAL(CELIO, gTrainerPalette_Celio),
     TRAINER_PAL(MAGMA_ADMIN_M, gTrainerPalette_MagmaAdminM),
     TRAINER_PAL(MAGMA_ADMIN_F, gTrainerPalette_MagmaAdminF),
     TRAINER_PAL(LEADER_WATTSON, gTrainerPalette_LeaderWattson),
@@ -497,5 +496,4 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(MASTER_SCIENTIST, gTrainerPalette_MasterScientist),
     TRAINER_PAL(MASTER_YOUNGSTER, gTrainerPalette_MasterYoungster),
     TRAINER_PAL(MASTER_SWIMMER, gTrainerPalette_MasterSwimmer),
-    TRAINER_PAL(CELIO, gTrainerPalette_Celio),
 };
