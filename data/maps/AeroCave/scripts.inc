@@ -38,7 +38,7 @@ AeroCave_EventScript_Rayquaza::
 	setvar VAR_LAST_TALKED, LOCALID_RAYQUAZA
 	setwildbattle SPECIES_RAYQUAZA, 80
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	special StartRayquazaBattle
+	special StartGroudonKyogreBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	setvar VAR_TEMP_1, 0
