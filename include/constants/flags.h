@@ -1261,7 +1261,7 @@
 #define FLAG_HIDDEN_ITEM_CINNABAR_BERRY               214
 #define FLAG_0xHIDDEN_ITEM_CINNABAR_FIRE_STONE               215
 #define FLAG_FOUGHT_SUICUNE      0x4C0
-#define FLAG_BEAT_CELIO          0x4C1
+#define FLAG_HIDE_TOWER_CELIO    0x4C1
 #define FLAG_CHECKED_ALTAR       0x4C2
 #define FLAG_0x4C3               0x4C3
 #define FLAG_0x4C4               0x4C4

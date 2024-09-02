@@ -221,44 +221,125 @@ OneIsland_PokemonCenter_1F_EventScript_Celio_Skip_Battle::
 	end
 	
 OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
-	msgbox OneIsland_PokemonCenter_1F_Text_Altar, MSGBOX_YESNO
+	msgbox OneIsland_PokemonCenter_1F_Text_Altar
+	closemessage
+	playse SE_PIN
+	applymovement OneIsland_PokemonCenter_1F_Movement_CelioExclaim
+	waitmovement
+	msgbox OneIsland_PokemonCenter_1F_Text_Altar2, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle
 	trainerbattle_no_intro TRAINER_CELIO, PokemonCenter_1F_Text_CelioDefeat
 	msgbox OneIsland_PokemonCenter_1F_Text_GiveStones
-	giveitem ITEM_RUBY, 1
+	applymovement OneIsland_PokemonCenter_1F_Movement_CelioPutGemInMachine
+	waitmovement
+	playse SE_CLICK
 	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Ruby, 0
-	giveitem ITEM_SAPPHIRE, 1
 	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Sapphire, 0
 	setmetatile 14, 4, METATILE_PokemonCenter_NetworkMachine_ScreenLeft_On, 0
 	setmetatile 15, 4, METATILE_PokemonCenter_NetworkMachine_ScreenRight_On, 0
-	setflag FLAG_BEAT_CELIO
+	giveitem ITEM_RUBY, 1
+	giveitem ITEM_SAPPHIRE, 1
 	msgbox OneIsland_PokemonCenter_1F_Text_Phew
+	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioGo
+	waitmovement
+	removeobject LOCALID_CELIO
+	playse SE_EXIT
+	waitse
+	setflag FLAG_HIDE_ONE_ISLAND_POKECENTER_CELIO
 	release
 	end
 	
+OneIsland_PokemonCenter_1F_Movement_CelioGo::
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_in_place_down
+	step_end
 	
+OneIsland_PokemonCenter_1F_Movement_CelioExclaim::
+	emote_exclamation_mark
+	step_end
+
 OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle::
 	msgbox OneIsland_PokemonCenter_1F_Text_NoBattle
 	release
 	end
 	
 OneIsland_PokemonCenter_1F_Text_Altar::
-	.string "Altar. Interesting. Battle?$"
+	.string "Hello, {PLAYER}!\n"
+	.string "How is the exploring going?\p"
+	.string "Did you find anything using that\n"
+	.string "HM I gave you?$"
+	
+OneIsland_PokemonCenter_1F_Text_Altar::
+	.string "Interesting…\n"
+	.string "So you found an altar containing\p"
+	.string "a hole that perfectly matches\n"
+	.string "the shape of the two stones\p"
+	.string "you collected for me?\p"
+	.string "That can only mean one thing…\p"
+	.string "Those stones are made to fit\n"
+	.string "into that hole you found!\p"
+	.string "{PLAYER}, it scares me to even\n"
+	.string "think about this, but…\p"
+	.string "We have no choice but to battle.\n"
+	.string "The winner will own the stones.\p"
+	.string "I can't give these away for free.\n"
+	.string "They've made my dream come true.\p"
+	.string "So…\p"
+	.string "Will you challenge me to a\n"
+	.string "POKéMON battle?$"
 	
 OneIsland_PokemonCenter_1F_Text_LetsBattle::
-	.string "Let's battle, little bitch.$"
+	.string "Let's do this, then.\p"
+	.string "May the best TRAINER win.$"
 	
 PokemonCenter_1F_Text_CelioDefeat::
-    .string "Ouch, motherfucker.$"
+    .string "Woah!\n"
+    .string "You did it, {PLAYER}!\p"
+    .string "I will give you the stones\n"
+    .string "as promised.$"
 	
 OneIsland_PokemonCenter_1F_Text_GiveStones::
-	.string "Here's your dumb stones.$"
+	.string "I gave it my all, but against you\n"
+	.string "that simply isn't enough.\p"
+	.string "You've earned these, {PLAYER}.$"
 	
 OneIsland_PokemonCenter_1F_Text_Phew::
-	.string "Also, eff off!$"
+	.string "That was a great fight!\n"
+	.string "It's been a while since I had\p"
+	.string "a POKéMON battle to begin with!\p"
+	.string "I can no longer pursue my original\n"
+	.string "dream now, but don't worry.\p"
+	.string "In this world, there will always be\n"
+	.string "dreams to chase.\p"
+	.string "Never forget that, {PLAYER}!\p"
+	.string "I will find a new path for myself.\p"
+	.string "To be frank, I needed this fight.\p"
+	.string "Sitting inside, tampering with\n"
+	.string "machinery is great fun.\p"
+	.string "But it sure isn't everything.\n"
+	.string "There is a world waiting\p"
+	.string "for me outside. A world I had\n"
+	.string "long abandoned…\p"
+	.string "I'll be seeing you, {PLAYER}.\n"
+	.string "I think I'm going to pick up\p"
+	.string "POKéMON battling again,\n"
+	.string "thanks to you.\p"
+	.string "I'm going to train some at\n"
+	.string "the TRAINER TOWER.\p"
+	.string "I'll be seeing you, {PLAYER}.$"
 	
 OneIsland_PokemonCenter_1F_Text_NoBattle::
-	.string "No Battle.$"
+	.string "I will be waiting, {PLAYER}.\p"
+	.string "I cannot keep doing things\n"
+	.string "my way forever…$"
 
 OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact::
 	msgbox OneIsland_PokemonCenter_1F_Text_CelioHearingRumorsAboutYou
