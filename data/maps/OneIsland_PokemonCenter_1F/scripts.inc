@@ -253,7 +253,20 @@ OneIsland_PokemonCenter_1F_EventScript_CelioDefeated::
 	giveitem ITEM_SAPPHIRE, 1
 	msgbox OneIsland_PokemonCenter_1F_Text_Phew
 	closemessage
+	goto_if_var VAR_FACING, DIR_EAST, OneIsland_PokemonCenter_1F_EventScript_CelioGoLeft
 	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioGo
+	waitmovement 0
+	removeobject LOCALID_CELIO
+	playse SE_EXIT
+	waitse
+	setflag FLAG_HIDE_ONE_ISLAND_POKECENTER_CELIO
+	release
+	clearflag FLAG_SYS_CAN_LINK_WITH_RS
+	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 8
+	end
+	
+OneIsland_PokemonCenter_1F_EventScript_CelioGoLeft::
+	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioGoLeft
 	waitmovement 0
 	removeobject LOCALID_CELIO
 	playse SE_EXIT
@@ -272,6 +285,19 @@ OneIsland_PokemonCenter_1F_Movement_CelioGo::
 	walk_left
 	walk_left
 	walk_down
+	walk_down
+	walk_down
+	walk_in_place_down
+	step_end
+	
+OneIsland_PokemonCenter_1F_Movement_CelioGoLeft::
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	walk_down
 	walk_down
 	walk_in_place_down
