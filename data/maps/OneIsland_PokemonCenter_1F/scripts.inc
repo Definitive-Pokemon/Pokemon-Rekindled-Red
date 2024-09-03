@@ -20,7 +20,7 @@ OneIsland_PokemonCenter_1F_EventScript_SetRubyMetatile::
 	return
 	
 OneIsland_PokemonCenter_1F_EventScript_SetRubyMetatileOff::
-	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Ruby, 0
+	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_RubyGone, 1
 	return
 	
 OneIsland_PokemonCenter_1F_EventScript_SetSapphireMetatile::
@@ -241,10 +241,10 @@ OneIsland_PokemonCenter_1F_EventScript_CelioDefeated::
 	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioPutGemInMachine
 	waitmovement 0
 	playse SE_CLICK
-	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Ruby, 0
-	setmetatile 16, 4, METATILE_PokemonCenter_NetworkMachine_Sapphire, 0
-	setmetatile 14, 4, METATILE_PokemonCenter_NetworkMachine_ScreenLeft_On, 0
-	setmetatile 15, 4, METATILE_PokemonCenter_NetworkMachine_ScreenRight_On, 0
+	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_RubyGone, 1
+	setmetatile 16, 4, METATILE_PokemonCenter_NetworkMachine_SapphireGone, 1
+	setmetatile 14, 4, METATILE_PokemonCenter_NetworkMachine_ScreenLeft_Off, 1
+	setmetatile 15, 4, METATILE_PokemonCenter_NetworkMachine_ScreenRight_Off, 1
 	special DrawWholeMapView
 	delay 30
 	applymovement LOCALID_CELIO, Common_Movement_FacePlayer

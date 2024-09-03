@@ -3,8 +3,8 @@
     {
       "map_section": "MAPSEC_LITTLEROOT_TOWN",
       "name": "LITTLEROOT TOWN",
-      "x": 9,
-      "y": 12,
+      "x": 4,
+      "y": 11,
       "width": 1,
       "height": 1
     },
@@ -1691,32 +1691,40 @@
     {
       "map_section": "MAPSEC_PRIMORDIAL_ALTAR",
       "name": "PRIMORDIAL ALTAR",
-      "x": 2,
+      "x": 1,
       "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_STONE_TOMB",
+      "name": "STONE TOMB",
+      "x": 0,
+      "y": 0,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_TERRA_CAVE",
       "name": "TERRA CAVE",
-      "x": 25,
-      "y": 15,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "map_section": "MAPSEC_MARINE_CAVE",
-      "name": "MARINE CAVE",
-      "x": 25,
-      "y": 15,
+      "x": 0,
+      "y": 0,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_AERO_CAVE",
       "name": "AERO CAVE",
-      "x": 25,
-      "y": 15,
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_MARINE_CAVE",
+      "name": "MARINE CAVE",
+      "x": 0,
+      "y": 0,
       "width": 1,
       "height": 1
     }
