@@ -255,7 +255,7 @@ OneIsland_PokemonCenter_1F_EventScript_CelioDefeated::
 	waitse
 	setflag FLAG_HIDE_ONE_ISLAND_POKECENTER_CELIO
 	release
-	removeflag FLAG_SYS_CAN_LINK_WITH_RS
+	clearflag FLAG_SYS_CAN_LINK_WITH_RS
 	end
 	
 OneIsland_PokemonCenter_1F_Movement_CelioGo::
