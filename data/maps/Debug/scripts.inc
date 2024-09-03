@@ -26,6 +26,7 @@ Debug_GiveNormalMon::
 	
 Debug_FinishCelioQuestVanilla::
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 7
+	setflag FLAG_SEVII_DETOUR_FINISHED
 	setflag FLAG_SYS_CAN_LINK_WITH_RS
 	end
 
@@ -89,6 +90,7 @@ Debug_UnlockGame::
 	@give master balls
 	giveitem ITEM_MASTER_BALL, 50
 	@badges
+	giveitem ITEM_TOWN_MAP, 01
 	setflag FLAG_BADGE01_GET
 	setflag FLAG_BADGE02_GET
 	setflag FLAG_BADGE03_GET

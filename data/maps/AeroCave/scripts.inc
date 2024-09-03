@@ -74,7 +74,8 @@ AeroCave_EventScript_RayquazaFled::
 	end	
 
 AeroCave_Text_RayquazaFled::
-	.string "RAYQUAZA disappeared into the clouds.$"
+	.string "RAYQUAZA disappeared into\n"
+	.string "the clouds.$"
 
 AeroCave_Movement_PlayerUp::
 	face_up
