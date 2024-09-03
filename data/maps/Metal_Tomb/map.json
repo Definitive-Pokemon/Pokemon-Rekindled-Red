@@ -8,16 +8,16 @@
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
   "allow_cycling": true,
-  "allow_escaping": true,
+  "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": false,
+  "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_REGISTEEL",
-      "in_connection": false,
       "x": 8,
       "y": 7,
       "elevation": 3,
@@ -27,7 +27,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Metal_Tomb_EventScript_Registeel",
-      "flag": "FLAG_HIDE_REGISTEEL"
+      "flag": "FLAG_HIDE_REGISTEEL",
+      "in_connection": false
     }
   ],
   "warp_events": [

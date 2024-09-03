@@ -15,16 +15,15 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "left",
+      "map": "MAP_FIVE_ISLAND_MEADOW",
       "offset": -20,
-      "map": "MAP_FIVE_ISLAND_MEADOW"
+      "direction": "left"
     }
   ],
   "object_events": [
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MAN",
-      "in_connection": false,
       "x": 8,
       "y": 44,
       "elevation": 4,
@@ -34,7 +33,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FiveIsland_MemorialPillar_EventScript_MemorialMan",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
@@ -81,7 +81,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 4,
       "y": 47,
       "elevation": 3,
@@ -91,7 +90,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FiveIsland_MemorialPillar_EventScript_ItemMetalCoat",
-      "flag": "FLAG_HIDE_FIVE_ISLAND_MEMORIAL_PILLAR_METAL_COAT"
+      "flag": "FLAG_HIDE_FIVE_ISLAND_MEMORIAL_PILLAR_METAL_COAT",
+      "in_connection": false
     }
   ],
   "warp_events": [
