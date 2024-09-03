@@ -234,7 +234,7 @@ EventScript_PlaceEmerald::
 	playse SE_LAVARIDGE_FALL_WARP
 	waitse
 	setvar VAR_0x8006, 3
-	setdynamicwarp MAP_AERO_CAVE, 255, 13, 23
+	setdynamicwarp MAP_AERO_CAVE, 255, 18, 23
 	releaseall
 	end
 	

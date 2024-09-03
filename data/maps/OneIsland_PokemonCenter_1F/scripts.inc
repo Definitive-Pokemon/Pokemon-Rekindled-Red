@@ -10,6 +10,7 @@ OneIsland_PokemonCenter_1F_MapScripts::
 
 OneIsland_PokemonCenter_1F_OnLoad::
 	call_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, OneIsland_PokemonCenter_1F_EventScript_SetRubyMetatile
+	call_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 8, OneIsland_PokemonCenter_1F_EventScript_SetRubyMetatileOff
 	call_if_set FLAG_SYS_CAN_LINK_WITH_RS, OneIsland_PokemonCenter_1F_EventScript_SetNetworkMachineOn
 	goto PokemonCenter_1F_OnLoad
 	end
@@ -17,7 +18,11 @@ OneIsland_PokemonCenter_1F_OnLoad::
 OneIsland_PokemonCenter_1F_EventScript_SetRubyMetatile::
 	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Ruby, 1
 	return
-
+	
+OneIsland_PokemonCenter_1F_EventScript_SetRubyMetatileOff::
+	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Ruby, 0
+	return
+	
 OneIsland_PokemonCenter_1F_EventScript_SetSapphireMetatile::
 	setmetatile 16, 4, METATILE_PokemonCenter_NetworkMachine_Sapphire, 1
 	return
@@ -256,6 +261,7 @@ OneIsland_PokemonCenter_1F_EventScript_CelioDefeated::
 	setflag FLAG_HIDE_ONE_ISLAND_POKECENTER_CELIO
 	release
 	clearflag FLAG_SYS_CAN_LINK_WITH_RS
+	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 8
 	end
 	
 OneIsland_PokemonCenter_1F_Movement_CelioGo::
