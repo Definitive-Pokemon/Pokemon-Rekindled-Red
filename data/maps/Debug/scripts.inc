@@ -23,6 +23,11 @@ Debug_GiveNormalMon::
 	givemon SPECIES_REGIGIGAS, 5, ITEM_NONE
 	release
 	end
+	
+Debug_FinishCelioQuestVanilla::
+	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 7
+	setflag FLAG_SYS_CAN_LINK_WITH_RS
+	end
 
 Debug_UnlockGame::
 	@unlock all fly locations
