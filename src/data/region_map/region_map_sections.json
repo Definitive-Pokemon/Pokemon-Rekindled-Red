@@ -1740,6 +1740,38 @@
       "y": 0,
       "width": 1,
       "height": 1
+    },
+    {
+      "map_section": "MAPSEC_PRIMORDIAL_ALTAR",
+      "name": "PRIMORDIAL ALTAR",
+      "x": 1,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_TERRA_CAVE",
+      "name": "TERRA CAVE",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_MARINE_CAVE",
+      "name": "MARINE CAVE",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_AERO_CAVE",
+      "name": "AERO CAVE",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
     }
   ]
 }

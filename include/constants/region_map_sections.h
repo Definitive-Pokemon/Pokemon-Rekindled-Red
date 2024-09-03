@@ -224,8 +224,12 @@
 #define MAPSEC_ICY_TOMB                     0xD6
 #define MAPSEC_METAL_TOMB                   0xD7
 #define MAPSEC_MONITORING_STATION           0xD8
-#define MAPSEC_NONE                         0xD9
-#define MAPSEC_COUNT                        0xDA
+#define MAPSEC_PRIMORDIAL_ALTAR             0xD9
+#define MAPSEC_TERRA_CAVE                   0xDA
+#define MAPSEC_MARINE_CAVE                  0xDB
+#define MAPSEC_AERO_CAVE                    0xDC
+#define MAPSEC_NONE                         0xDD
+#define MAPSEC_COUNT                        0xDE
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

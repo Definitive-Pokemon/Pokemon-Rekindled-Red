@@ -3,7 +3,7 @@
   "name": "PrimordialAltar",
   "layout": "LAYOUT_PRIMORDIAL_ALTAR",
   "music": "MUS_CAVE_OF_ORIGIN",
-  "region_map_section": "MAPSEC_TREASURE_BEACH",
+  "region_map_section": "MAPSEC_PRIMORDIAL_ALTAR",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_UNDERGROUND",
