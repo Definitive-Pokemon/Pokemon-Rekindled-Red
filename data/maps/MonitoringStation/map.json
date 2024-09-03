@@ -3,7 +3,7 @@
   "name": "MonitoringStation",
   "layout": "LAYOUT_MONITORING_STATION",
   "music": "MUS_ROCKET_HIDEOUT",
-  "region_map_section": "MAPSEC_MONITORING_STATION",
+  "region_map_section": "MAPSEC_TRAINER_TOWER",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -16,8 +16,8 @@
   "connections": 0,
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
-      "in_connection": false,
       "x": 5,
       "y": 8,
       "elevation": 3,
@@ -27,11 +27,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_EventScript_RocketMiddle",
-      "flag": "FLAG_HORROR_ROCKET_MOVED"
+      "flag": "FLAG_HORROR_ROCKET_MOVED",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_RED_DOOR",
-      "in_connection": false,
       "x": 9,
       "y": 9,
       "elevation": 3,
@@ -41,11 +42,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_EventScript_RedDoor",
-      "flag": "FLAG_RED_DOOR_SHORTCUT"
+      "flag": "FLAG_RED_DOOR_SHORTCUT",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_RED_DOOR",
-      "in_connection": false,
       "x": 10,
       "y": 9,
       "elevation": 3,
@@ -55,11 +57,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_EventScript_RedDoor",
-      "flag": "FLAG_RED_DOOR_SHORTCUT"
+      "flag": "FLAG_RED_DOOR_SHORTCUT",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_F",
-      "in_connection": false,
       "x": 10,
       "y": 10,
       "elevation": 3,
@@ -69,11 +72,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_EventScript_Admin",
-      "flag": "FLAG_HIDE_ENTRANCE_PEOPLE"
+      "flag": "FLAG_HIDE_ENTRANCE_PEOPLE",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
-      "in_connection": false,
       "x": 9,
       "y": 10,
       "elevation": 3,
@@ -83,11 +87,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_EventScript_StorageGrunt",
-      "flag": "FLAG_HIDE_ENTRANCE_PEOPLE"
+      "flag": "FLAG_HIDE_ENTRANCE_PEOPLE",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
-      "in_connection": false,
       "x": 6,
       "y": 11,
       "elevation": 3,
@@ -97,11 +102,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_EventScript_Executive",
-      "flag": "FLAG_HIDE_ENTRANCE_PEOPLE"
+      "flag": "FLAG_HIDE_ENTRANCE_PEOPLE",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_F",
-      "in_connection": false,
       "x": 1,
       "y": 4,
       "elevation": 3,
@@ -111,11 +117,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_EventScript_Admin",
-      "flag": "FLAG_ENDGAME"
+      "flag": "FLAG_ENDGAME",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
-      "in_connection": false,
       "x": 1,
       "y": 5,
       "elevation": 3,
@@ -125,11 +132,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_EventScript_StorageGrunt",
-      "flag": "FLAG_ENDGAME"
+      "flag": "FLAG_ENDGAME",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PETREL",
-      "in_connection": false,
       "x": 3,
       "y": 5,
       "elevation": 3,
@@ -139,11 +147,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_EventScript_ExecutiveReal",
-      "flag": "FLAG_ENDGAME"
+      "flag": "FLAG_ENDGAME",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_F",
-      "in_connection": false,
       "x": 3,
       "y": 11,
       "elevation": 3,
@@ -153,11 +162,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_EventScript_AdminFinal",
-      "flag": "FLAG_HIDE_FINAL_ADMIN"
+      "flag": "FLAG_HIDE_FINAL_ADMIN",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PETREL",
-      "in_connection": false,
       "x": 10,
       "y": 10,
       "elevation": 3,
@@ -167,11 +177,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_EventScript_ExecutiveReal",
-      "flag": "FLAG_FINAL_NPCS"
+      "flag": "FLAG_FINAL_NPCS",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
-      "in_connection": false,
       "x": 5,
       "y": 9,
       "elevation": 3,
@@ -181,7 +192,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_EventScript_StorageFinal",
-      "flag": "FLAG_FINAL_NPCS"
+      "flag": "FLAG_FINAL_NPCS",
+      "in_connection": false
     }
   ],
   "warp_events": [
@@ -253,9 +265,6 @@
       "var_value": "1",
       "script": "MonitoringStation_EventScript_AdminConvo"
     }
-  ],
-  "coord_events": [
-
   ],
   "bg_events": [
 

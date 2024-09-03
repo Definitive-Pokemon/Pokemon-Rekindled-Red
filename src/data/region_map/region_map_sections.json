@@ -1743,14 +1743,6 @@
       "y": 14,
       "width": 1,
       "height": 1
-    },
-    {
-      "map_section": "MAPSEC_MONITORING_STATION",
-      "name": "MONITORING STATION",
-      "x": 5,
-      "y": 6,
-      "width": 1,
-      "height": 1
     }
   ]
 }

@@ -3,7 +3,7 @@
   "name": "MonitoringStation_Central",
   "layout": "LAYOUT_MONITORING_STATION_CENTRAL",
   "music": "MUS_ROCKET_HIDEOUT",
-  "region_map_section": "MAPSEC_MONITORING_STATION",
+  "region_map_section": "MAPSEC_TRAINER_TOWER",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -16,8 +16,8 @@
   "connections": 0,
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KABUTOPS_SHADOW",
-      "in_connection": false,
       "x": 20,
       "y": 17,
       "elevation": 3,
@@ -27,11 +27,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_KABUTOPS_FIRST_APPEAR"
+      "flag": "FLAG_KABUTOPS_FIRST_APPEAR",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
-      "in_connection": false,
       "x": 13,
       "y": 17,
       "elevation": 3,
@@ -41,11 +42,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_KABUTOPS_FIRST_APPEAR"
+      "flag": "FLAG_KABUTOPS_FIRST_APPEAR",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MACHOKE",
-      "in_connection": false,
       "x": 16,
       "y": 17,
       "elevation": 3,
@@ -55,11 +57,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_KABUTOPS_FIRST_APPEAR"
+      "flag": "FLAG_KABUTOPS_FIRST_APPEAR",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GREY_DOOR",
-      "in_connection": false,
       "x": 2,
       "y": 22,
       "elevation": 3,
@@ -69,11 +72,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_Central_EventScript_GreyDoors",
-      "flag": "FLAG_HORROR_POWER_RESTORED"
+      "flag": "FLAG_HORROR_POWER_RESTORED",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GREY_DOOR",
-      "in_connection": false,
       "x": 3,
       "y": 22,
       "elevation": 3,
@@ -83,11 +87,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_Central_EventScript_GreyDoors",
-      "flag": "FLAG_HORROR_POWER_RESTORED"
+      "flag": "FLAG_HORROR_POWER_RESTORED",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_F",
-      "in_connection": false,
       "x": 4,
       "y": 26,
       "elevation": 3,
@@ -97,11 +102,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HORROR_POWER_RESTORED"
+      "flag": "FLAG_HORROR_POWER_RESTORED",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "in_connection": false,
       "x": 19,
       "y": 16,
       "elevation": 3,
@@ -111,11 +117,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_Central_Eventscript_Boulder",
-      "flag": "FLAG_HORROR_HIDE_BOULDER"
+      "flag": "FLAG_HORROR_HIDE_BOULDER",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_F",
-      "in_connection": false,
       "x": 3,
       "y": 27,
       "elevation": 3,
@@ -125,11 +132,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_Central_Eventscript_Admin",
-      "flag": "FLAG_HIDE_ADMIN2"
+      "flag": "FLAG_HIDE_ADMIN2",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "in_connection": false,
       "x": 15,
       "y": 3,
       "elevation": 3,
@@ -139,11 +147,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_Central_Eventscript_BoulderPostScare",
-      "flag": "FLAG_HIDE_BOULDER3"
+      "flag": "FLAG_HIDE_BOULDER3",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "in_connection": false,
       "x": 14,
       "y": 17,
       "elevation": 3,
@@ -153,11 +162,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_Central_Eventscript_Boulder",
-      "flag": "FLAG_HIDE_BOULDER2"
+      "flag": "FLAG_HIDE_BOULDER2",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
-      "in_connection": false,
       "x": 15,
       "y": 4,
       "elevation": 3,
@@ -167,11 +177,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_Central_EventScript_QuartetKanga",
-      "flag": "FLAG_HIDE_CHONKDUO"
+      "flag": "FLAG_HIDE_CHONKDUO",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KANGASKHAN",
-      "in_connection": false,
       "x": 14,
       "y": 4,
       "elevation": 3,
@@ -181,11 +192,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_Central_EventScript_Kanga",
-      "flag": "FLAG_HIDE_KANGA"
+      "flag": "FLAG_HIDE_KANGA",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "in_connection": false,
       "x": 16,
       "y": 3,
       "elevation": 3,
@@ -195,7 +207,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MonitoringStation_Central_Eventscript_Boulder",
-      "flag": "FLAG_HIDE_BOULDER4"
+      "flag": "FLAG_HIDE_BOULDER4",
+      "in_connection": false
     }
   ],
   "warp_events": [
