@@ -3,8 +3,8 @@
     {
       "map_section": "MAPSEC_LITTLEROOT_TOWN",
       "name": "LITTLEROOT TOWN",
-      "x": 4,
-      "y": 11,
+      "x": 9,
+      "y": 12,
       "width": 1,
       "height": 1
     },
@@ -531,7 +531,6 @@
     {
       "map_section": "MAPSEC_AQUA_HIDEOUT_OLD",
       "name": "HIDEOUT",
-      "name_clone": true,
       "x": 19,
       "y": 3,
       "width": 1,
@@ -796,7 +795,6 @@
     {
       "map_section": "MAPSEC_ROUTE_4_POKECENTER",
       "name": "ROUTE 4",
-      "name_clone": true,
       "x": 8,
       "y": 3,
       "width": 1,
@@ -805,7 +803,6 @@
     {
       "map_section": "MAPSEC_ROUTE_10_POKECENTER",
       "name": "ROUTE 10",
-      "name_clone": true,
       "x": 18,
       "y": 3,
       "width": 1,
@@ -1046,7 +1043,6 @@
     {
       "map_section": "MAPSEC_UNDERGROUND_PATH_2",
       "name": "UNDERGROUND PATH",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1439,7 +1435,6 @@
     {
       "map_section": "MAPSEC_TRAINER_TOWER_2",
       "name": "TRAINER TOWER",
-      "name_clone": true,
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1696,39 +1691,39 @@
     {
       "map_section": "MAPSEC_STONE_TOMB",
       "name": "STONE TOMB",
-      "x": 0,
-      "y": 0,
+      "x": 19,
+      "y": 13,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_ICY_TOMB",
       "name": "ICY TOMB",
-      "x": 0,
-      "y": 0,
+      "x": 3,
+      "y": 4,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_METAL_TOMB",
       "name": "METAL TOMB",
-      "x": 0,
-      "y": 0,
+      "x": 18,
+      "y": 14,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_MONITORING_STATION",
       "name": "MONITORING STATION",
-      "x": 0,
-      "y": 0,
+      "x": 5,
+      "y": 6,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_PRIMORDIAL_ALTAR",
       "name": "PRIMORDIAL ALTAR",
-      "x": 1,
+      "x": 2,
       "y": 10,
       "width": 1,
       "height": 1
@@ -1736,24 +1731,24 @@
     {
       "map_section": "MAPSEC_TERRA_CAVE",
       "name": "TERRA CAVE",
-      "x": 0,
-      "y": 0,
+      "x": 25,
+      "y": 15,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_MARINE_CAVE",
       "name": "MARINE CAVE",
-      "x": 0,
-      "y": 0,
+      "x": 25,
+      "y": 15,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_AERO_CAVE",
       "name": "AERO CAVE",
-      "x": 0,
-      "y": 0,
+      "x": 25,
+      "y": 15,
       "width": 1,
       "height": 1
     }

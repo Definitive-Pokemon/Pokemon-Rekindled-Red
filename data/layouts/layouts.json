@@ -5140,8 +5140,8 @@
     {
       "id": "LAYOUT_KYOGRE_DEN",
       "name": "KyogreDen_Layout",
-      "width": 11,
-      "height": 11,
+      "width": 120,
+      "height": 20,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
