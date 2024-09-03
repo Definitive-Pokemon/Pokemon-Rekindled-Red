@@ -253,7 +253,7 @@ OneIsland_PokemonCenter_1F_EventScript_CelioDefeated::
 	giveitem ITEM_SAPPHIRE, 1
 	msgbox OneIsland_PokemonCenter_1F_Text_Phew
 	closemessage
-	goto_if_var VAR_FACING, DIR_EAST, OneIsland_PokemonCenter_1F_EventScript_CelioGoLeft
+	goto_if_eq VAR_FACING, DIR_EAST, OneIsland_PokemonCenter_1F_EventScript_CelioGoLeft
 	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioGo
 	waitmovement 0
 	removeobject LOCALID_CELIO
