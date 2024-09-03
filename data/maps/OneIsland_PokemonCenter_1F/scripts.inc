@@ -203,7 +203,7 @@ OneIsland_PokemonCenter_1F_EventScript_Celio::
 	lock
 	faceplayer
 	goto_if_unset FLAG_CHECKED_ALTAR, OneIsland_PokemonCenter_1F_EventScript_Celio_Skip_Battle
-	goto_if_unset FLAG_BEAT_CELIO, OneIsland_PokemonCenter_1F_EventScript_CelioBattle
+	goto_if_unset FLAG_HIDE_ONE_ISLAND_POKECENTER_CELIO, OneIsland_PokemonCenter_1F_EventScript_CelioBattle
 OneIsland_PokemonCenter_1F_EventScript_Celio_Skip_Battle::
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 7, OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 6, OneIsland_PokemonCenter_1F_EventScript_CelioJustGivenSapphire
@@ -224,29 +224,38 @@ OneIsland_PokemonCenter_1F_EventScript_CelioBattle::
 	msgbox OneIsland_PokemonCenter_1F_Text_Altar
 	closemessage
 	playse SE_PIN
-	applymovement OneIsland_PokemonCenter_1F_Movement_CelioExclaim
-	waitmovement
+	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioExclaim
+	waitmovement 0
 	msgbox OneIsland_PokemonCenter_1F_Text_Altar2, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_CelioNoBattle
-	trainerbattle_no_intro TRAINER_CELIO, PokemonCenter_1F_Text_CelioDefeat
+	trainerbattle_single TRAINER_CELIO, OneIsland_PokemonCenter_1F_Text_LetsBattle, OneIsland_PokemonCenter_1F_Text_CelioDefeat, OneIsland_PokemonCenter_1F_EventScript_CelioDefeated, NO_MUSIC
+	end
+	
+OneIsland_PokemonCenter_1F_EventScript_CelioDefeated::
 	msgbox OneIsland_PokemonCenter_1F_Text_GiveStones
-	applymovement OneIsland_PokemonCenter_1F_Movement_CelioPutGemInMachine
-	waitmovement
+	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioPutGemInMachine
+	waitmovement 0
 	playse SE_CLICK
 	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Ruby, 0
-	setmetatile 13, 4, METATILE_PokemonCenter_NetworkMachine_Sapphire, 0
+	setmetatile 16, 4, METATILE_PokemonCenter_NetworkMachine_Sapphire, 0
 	setmetatile 14, 4, METATILE_PokemonCenter_NetworkMachine_ScreenLeft_On, 0
 	setmetatile 15, 4, METATILE_PokemonCenter_NetworkMachine_ScreenRight_On, 0
+	special DrawWholeMapView
+	delay 30
+	applymovement LOCALID_CELIO, Common_Movement_FacePlayer
+	waitmovement 0
 	giveitem ITEM_RUBY, 1
 	giveitem ITEM_SAPPHIRE, 1
 	msgbox OneIsland_PokemonCenter_1F_Text_Phew
+	closemessage
 	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioGo
-	waitmovement
+	waitmovement 0
 	removeobject LOCALID_CELIO
 	playse SE_EXIT
 	waitse
 	setflag FLAG_HIDE_ONE_ISLAND_POKECENTER_CELIO
 	release
+	removeflag FLAG_SYS_CAN_LINK_WITH_RS
 	end
 	
 OneIsland_PokemonCenter_1F_Movement_CelioGo::
@@ -277,7 +286,7 @@ OneIsland_PokemonCenter_1F_Text_Altar::
 	.string "Did you find anything using that\n"
 	.string "HM I gave you?$"
 	
-OneIsland_PokemonCenter_1F_Text_Altar::
+OneIsland_PokemonCenter_1F_Text_Altar2::
 	.string "Interesting…\n"
 	.string "So you found an altar containing\p"
 	.string "a hole that perfectly matches\n"
@@ -300,7 +309,7 @@ OneIsland_PokemonCenter_1F_Text_LetsBattle::
 	.string "Let's do this, then.\p"
 	.string "May the best TRAINER win.$"
 	
-PokemonCenter_1F_Text_CelioDefeat::
+OneIsland_PokemonCenter_1F_Text_CelioDefeat::
     .string "Woah!\n"
     .string "You did it, {PLAYER}!\p"
     .string "I will give you the stones\n"
@@ -312,9 +321,9 @@ OneIsland_PokemonCenter_1F_Text_GiveStones::
 	.string "You've earned these, {PLAYER}.$"
 	
 OneIsland_PokemonCenter_1F_Text_Phew::
-	.string "That was a great fight!\n"
-	.string "It's been a while since I had\p"
-	.string "a POKéMON battle to begin with!\p"
+	.string "That was a great fight!\p"
+	.string "It's been a while since I had a\n"
+	.string "POKéMON battle to begin with!\p"
 	.string "I can no longer pursue my original\n"
 	.string "dream now, but don't worry.\p"
 	.string "In this world, there will always be\n"
@@ -324,16 +333,16 @@ OneIsland_PokemonCenter_1F_Text_Phew::
 	.string "To be frank, I needed this fight.\p"
 	.string "Sitting inside, tampering with\n"
 	.string "machinery is great fun.\p"
-	.string "But it sure isn't everything.\n"
-	.string "There is a world waiting\p"
-	.string "for me outside. A world I had\n"
+	.string "But it sure isn't everything.\p"
+	.string "There is a world waiting for me\n"
+	.string "for me outside. A world I had\p"
 	.string "long abandoned…\p"
 	.string "I'll be seeing you, {PLAYER}.\n"
 	.string "I think I'm going to pick up\p"
 	.string "POKéMON battling again,\n"
 	.string "thanks to you.\p"
-	.string "I'm going to train some at\n"
-	.string "the TRAINER TOWER.\p"
+	.string "I'm going to train some at the\n"
+	.string "TRAINER TOWER.\p"
 	.string "I'll be seeing you, {PLAYER}.$"
 	
 OneIsland_PokemonCenter_1F_Text_NoBattle::
@@ -343,6 +352,16 @@ OneIsland_PokemonCenter_1F_Text_NoBattle::
 
 OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact::
 	msgbox OneIsland_PokemonCenter_1F_Text_CelioHearingRumorsAboutYou
+	random 3
+	goto_if_eq VAR_RESULT, 0, OneIsland_PokemonCenter_1F_EventScript_BillFact1
+	goto_if_eq VAR_RESULT, 1, OneIsland_PokemonCenter_1F_EventScript_BillFact2
+	famechecker FAMECHECKER_BILL, 5
+	msgbox OneIsland_PokemonCenter_1F_Text_BillCantStomachMilk
+	release
+	end
+	
+OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact2::
+	msgbox OneIsland_PokemonCenter_1F_Text_CelioHearingRumorsAboutYou2
 	random 3
 	goto_if_eq VAR_RESULT, 0, OneIsland_PokemonCenter_1F_EventScript_BillFact1
 	goto_if_eq VAR_RESULT, 1, OneIsland_PokemonCenter_1F_EventScript_BillFact2
