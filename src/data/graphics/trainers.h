@@ -501,3 +501,6 @@ const u32 gTrainerPalette_OldManBackPic[] = INCBIN_U32("graphics/trainers/palett
 
 const u32 gTrainerFrontPic_Anabel[] = INCBIN_U32("graphics/trainers/front_pics/anabel_front_pic.4bpp.lz");
 const u32 gTrainerPalette_Anabel[] = INCBIN_U32("graphics/trainers/palettes/anabel.gbapal.lz");
+
+const u32 gTrainerFrontPic_Celio[] = INCBIN_U32("graphics/trainers/front_pics/celio_front_pic.4bpp.lz");
+const u32 gTrainerPalette_Celio[] = INCBIN_U32("graphics/trainers/palettes/celio.gbapal.lz");
