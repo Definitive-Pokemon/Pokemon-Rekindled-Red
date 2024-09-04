@@ -214,8 +214,8 @@ const u32 gTrainerPalette_RSSisAndBro[] = INCBIN_U32("graphics/trainers/palettes
 const u32 gTrainerFrontPic_AquaAdminM[] = INCBIN_U32("graphics/trainers/front_pics/aqua_admin_m_front_pic.4bpp.lz");
 const u32 gTrainerPalette_AquaAdminM[] = INCBIN_U32("graphics/trainers/palettes/aqua_admin_m.gbapal.lz");
 
-const u32 gTrainerFrontPic_Celio[] = INCBIN_U32("graphics/trainers/front_pics/celio_front_pic.4bpp.lz");
-const u32 gTrainerPalette_Celio[] = INCBIN_U32("graphics/trainers/palettes/celio.gbapal.lz");
+const u32 gTrainerFrontPic_AquaAdminF[] = INCBIN_U32("graphics/trainers/front_pics/celio_front_pic.4bpp.lz");
+const u32 gTrainerPalette_AquaAdminF[] = INCBIN_U32("graphics/trainers/palettes/celio.gbapal.lz");
 
 const u32 gTrainerFrontPic_MagmaAdminM[] = INCBIN_U32("graphics/trainers/front_pics/magma_admin_m_front_pic.4bpp.lz");
 const u32 gTrainerPalette_MagmaAdminM[] = INCBIN_U32("graphics/trainers/palettes/magma_admin_m.gbapal.lz");
