@@ -161,7 +161,6 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     {.size = 8, .y_offset = 1},
     {.size = 8, .y_offset = 1},
     {.size = 8, .y_offset = 1},
-    {.size = 8, .y_offset = 1},
 };
 
 const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
@@ -238,7 +237,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(OLD_COUPLE, gTrainerFrontPic_OldCouple, 0x800),
     TRAINER_SPRITE(RS_SIS_AND_BRO, gTrainerFrontPic_RSSisAndBro, 0x800),
     TRAINER_SPRITE(AQUA_ADMIN_M, gTrainerFrontPic_AquaAdminM, 0x800),
-    TRAINER_SPRITE(AQUA_ADMIN_F, gTrainerFrontPic_AquaAdminF, 0x800),
+    TRAINER_SPRITE(CELIO, gTrainerFrontPic_Celio, 0x800),
     TRAINER_SPRITE(MAGMA_ADMIN_M, gTrainerFrontPic_MagmaAdminM, 0x800),
     TRAINER_SPRITE(MAGMA_ADMIN_F, gTrainerFrontPic_MagmaAdminF, 0x800),
     TRAINER_SPRITE(LEADER_WATTSON, gTrainerFrontPic_LeaderWattson, 0x800),
@@ -301,7 +300,6 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(PROFESSOR_OAK, gTrainerFrontPic_ProfessorOak, 0x800),
     TRAINER_SPRITE(DAISY, gTrainerFrontPic_Daisy, 0x800),
     TRAINER_SPRITE(ANABEL, gTrainerFrontPic_Anabel, 0x800),
-    TRAINER_SPRITE(CELIO, gTrainerFrontPic_Celio, 0x800),	
     TRAINER_SPRITE(RS_BRENDAN_2, gTrainerFrontPic_RSBrendan2, 0x800),
     TRAINER_SPRITE(RS_MAY_2, gTrainerFrontPic_RSMay2, 0x800),
     TRAINER_SPRITE(RED, gTrainerFrontPic_Red, 0x800),
@@ -329,7 +327,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(MASTER_PSYCHIC_M, gTrainerFrontPic_MasterPsychicM, 0x800),
     TRAINER_SPRITE(MASTER_SCIENTIST, gTrainerFrontPic_MasterScientist, 0x800),
     TRAINER_SPRITE(MASTER_YOUNGSTER, gTrainerFrontPic_MasterYoungster, 0x800),
-    TRAINER_SPRITE(MASTER_SWIMMER, gTrainerFrontPic_MasterSwimmer, 0x800)
+    TRAINER_SPRITE(MASTER_SWIMMER, gTrainerFrontPic_MasterSwimmer, 0x800),
 };
 
 const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
@@ -406,7 +404,7 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(OLD_COUPLE, gTrainerPalette_OldCouple),
     TRAINER_PAL(RS_SIS_AND_BRO, gTrainerPalette_RSSisAndBro),
     TRAINER_PAL(AQUA_ADMIN_M, gTrainerPalette_AquaAdminM),
-    TRAINER_PAL(AQUA_ADMIN_F, gTrainerPalette_AquaAdminF),
+    TRAINER_PAL(CELIO, gTrainerPalette_Celio),
     TRAINER_PAL(MAGMA_ADMIN_M, gTrainerPalette_MagmaAdminM),
     TRAINER_PAL(MAGMA_ADMIN_F, gTrainerPalette_MagmaAdminF),
     TRAINER_PAL(LEADER_WATTSON, gTrainerPalette_LeaderWattson),
@@ -469,7 +467,6 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(PROFESSOR_OAK, gTrainerPalette_ProfessorOak),
     TRAINER_PAL(DAISY, gTrainerPalette_Daisy),
     TRAINER_PAL(ANABEL, gTrainerPalette_Anabel),
-    TRAINER_PAL(CELIO, gTrainerPalette_Celio),
     TRAINER_PAL(RS_BRENDAN_2, gTrainerPalette_RSBrendan2),
     TRAINER_PAL(RS_MAY_2, gTrainerPalette_RSMay2),
     TRAINER_PAL(RED, gTrainerPalette_Red),
