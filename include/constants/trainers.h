@@ -91,7 +91,7 @@
 #define TRAINER_PIC_OLD_COUPLE             69
 #define TRAINER_PIC_RS_SIS_AND_BRO         70
 #define TRAINER_PIC_AQUA_ADMIN_M           71
-#define TRAINER_PIC_CELIO           72
+#define TRAINER_PIC_AQUA_ADMIN_F           72
 #define TRAINER_PIC_MAGMA_ADMIN_M          73
 #define TRAINER_PIC_MAGMA_ADMIN_F          74
 #define TRAINER_PIC_LEADER_WATTSON         75
