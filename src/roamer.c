@@ -307,16 +307,39 @@ u16 GetRoamerLocationMapSectionId(void)
 
 void StartRoaming(u8 mon)
 {
-    u32 i;
-    struct Roamer * current;
-    for (i = 0; i < MAX_ROAMERS; i++)
+    if (!ROAMER->active)
     {
-        current = &gSaveBlock1Ptr->roamers[i];
-        if (!current->active)
+        u16 species;
+        struct Pokemon * mon = &gEnemyParty[0];
+        switch(mon)
         {
-            InsertRoamerMon(current, mon);
-            AssignNewLocationToRoamer(i);
-            break; // return would be allowed, but is poor coding
+            case ROAMER_ENTEI:
+                species = SPECIES_ENTEI;
+                break;
+            case ROAMER_SUICUNE:
+                species = SPECIES_SUICUNE;
+                break;
+            case ROAMER_RAIKOU:
+                species = SPECIES_RAIKOU;
+                break;
+            case ROAMER_SEVIIAN_AERODACTYL:
+                species = SPECIES_SEVIIAN_AERODACTYL;
+                break;
         }
+        CreateMon(mon, species, 65, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+        ROAMER->species = species;
+        ROAMER->level = 65;
+        ROAMER->status = 0;
+        ROAMER->active = TRUE;
+        ROAMER->ivs = GetMonData(mon, MON_DATA_IVS);
+        ROAMER->personality = GetMonData(mon, MON_DATA_PERSONALITY);
+        ROAMER->hp = GetMonData(mon, MON_DATA_MAX_HP);
+        ROAMER->cool = GetMonData(mon, MON_DATA_COOL);
+        ROAMER->beauty = GetMonData(mon, MON_DATA_BEAUTY);
+        ROAMER->cute = GetMonData(mon, MON_DATA_CUTE);
+        ROAMER->smart = GetMonData(mon, MON_DATA_SMART);
+        ROAMER->tough = GetMonData(mon, MON_DATA_TOUGH);
+        sRoamerLocation[MAP_GRP] = ROAMER_MAP_GROUP;
+        sRoamerLocation[MAP_NUM] = sRoamerLocations[Random() % NUM_LOCATION_SETS][0];
     }
 }
