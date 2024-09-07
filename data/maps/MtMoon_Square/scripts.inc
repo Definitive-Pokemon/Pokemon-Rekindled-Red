@@ -69,7 +69,7 @@ MtMoon_Square_EventScript_LatiasFinal::
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
 	goto_if_eq MtMoon_Square_EventScript_RanFromLatias
 	setflag FLAG_FOUGHT_LATIAS
-	startroaming ROAMER_[SEVIIAN_AERODACTYL]
+	startroaming ROAMER_SEVIIAN_AERODACTYL
 	call MtMoon_Square_EventScript_AnabelEnd
 	release
 	end
