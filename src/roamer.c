@@ -305,13 +305,13 @@ u16 GetRoamerLocationMapSectionId(void)
     return Overworld_GetMapHeaderByGroupAndId(sRoamerLocation[MAP_GRP], sRoamerLocation[MAP_NUM])->regionMapSectionId;
 }
 
-void StartRoaming(u8 mon)
+void StartRoaming(u8 roamerIndex)
 {
     if (!ROAMER->active)
     {
         u16 species;
         struct Pokemon * mon = &gEnemyParty[0];
-        switch(mon)
+        switch(roamerIndex)
         {
             case ROAMER_ENTEI:
                 species = SPECIES_ENTEI;
