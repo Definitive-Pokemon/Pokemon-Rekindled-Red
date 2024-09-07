@@ -3,6 +3,7 @@
 
 #include "global.h"
 
+void StartRoaming(u8 mon);
 void ClearRoamerData(void);
 u16 GetRoamerSpecies(void);
 void ClearRoamerLocationData(void);

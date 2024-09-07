@@ -304,3 +304,19 @@ u16 GetRoamerLocationMapSectionId(void)
         return MAPSEC_NONE;
     return Overworld_GetMapHeaderByGroupAndId(sRoamerLocation[MAP_GRP], sRoamerLocation[MAP_NUM])->regionMapSectionId;
 }
+
+void StartRoaming(u8 mon)
+{
+    u32 i;
+    struct Roamer * current;
+    for (i = 0; i < MAX_ROAMERS; i++)
+    {
+        current = &gSaveBlock1Ptr->roamers[i];
+        if (!current->active)
+        {
+            InsertRoamerMon(current, mon);
+            AssignNewLocationToRoamer(i);
+            break; // return would be allowed, but is poor coding
+        }
+    }
+}
