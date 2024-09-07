@@ -3,7 +3,7 @@
   "name": "KyogreDen",
   "layout": "LAYOUT_KYOGRE_DEN",
   "music": "MUS_UNDERWATER",
-  "region_map_section": "MAPSEC_ROUTE_20",
+  "region_map_section": "MAPSEC_UNDERWATER_TREASURE_BEACH",
   "requires_flash": false,
   "weather": "WEATHER_UNDERWATER_BUBBLES",
   "map_type": "MAP_TYPE_UNDERWATER",

@@ -409,14 +409,6 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_UNDERWATER_126",
-      "name": "UNDERWATER",
-      "x": 20,
-      "y": 6,
-      "width": 3,
-      "height": 3
-    },
-    {
       "map_section": "MAPSEC_UNDERWATER_127",
       "name": "UNDERWATER",
       "x": 23,
@@ -1742,6 +1734,22 @@
       "x": 18,
       "y": 14,
       "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_UNDERWATER_TREASURE_BEACH",
+      "name": "UNDERWATER",
+      "x": 1,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_UNDERWATER_126",
+      "name": "UNDERWATER",
+      "x": 7,
+      "y": 14,
+      "width": 3,
       "height": 1
     }
   ]

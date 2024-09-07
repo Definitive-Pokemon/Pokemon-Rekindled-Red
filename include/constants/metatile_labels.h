@@ -176,13 +176,13 @@
 #define METATILE_PokemonCenter_Escalator_Top_Transition2             0x315
 #define METATILE_PokemonCenter_Floor_ShadeLeft                       0x2C5
 #define METATILE_PokemonCenter_NetworkMachine_Ruby                   0x35D
-#define METATILE_PokemonCenter_NetworkMachine_Sapphire               0x35F
-#define METATILE_PokemonCenter_NetworkMachine_ScreenLeft_On          0x35A
-#define METATILE_PokemonCenter_NetworkMachine_ScreenRight_On         0x35B
 #define METATILE_PokemonCenter_NetworkMachine_RubyGone               0x35C
+#define METATILE_PokemonCenter_NetworkMachine_Sapphire               0x35F
 #define METATILE_PokemonCenter_NetworkMachine_SapphireGone           0x35E
 #define METATILE_PokemonCenter_NetworkMachine_ScreenLeft_Off         0x358
+#define METATILE_PokemonCenter_NetworkMachine_ScreenLeft_On          0x35A
 #define METATILE_PokemonCenter_NetworkMachine_ScreenRight_Off        0x359
+#define METATILE_PokemonCenter_NetworkMachine_ScreenRight_On         0x35B
 
 // gTileset_PokemonLeague
 #define METATILE_PokemonLeague_Door_Mid_Open             0x296
