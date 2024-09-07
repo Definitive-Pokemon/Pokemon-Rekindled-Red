@@ -9,7 +9,7 @@ TwoIsland_OnTransition::
 	end
 
 TwoIsland_EventScript_SetShopState::
-	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, TwoIsland_EventScript_SetShopStateAfterHoennLink
+	goto_if_set FLAG_HIDE_CERULEAN_CAVE_GUARD, TwoIsland_EventScript_SetShopStateAfterHoennLink
 	goto_if_set FLAG_SYS_GAME_CLEAR, TwoIsland_EventScript_SetShopStateAfterChampion
 	goto_if_set FLAG_RESCUED_LOSTELLE, TwoIsland_EventScript_SetShopStateAfterLostelleRescue
 	goto TwoIsland_EventScript_SetShopStateDefault

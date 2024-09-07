@@ -613,7 +613,7 @@ static bool8 ShouldRegisterEvent_HandlePartyActions(u16 eventId, const u16 * dat
             return TRUE;
     }
 
-    if (!FlagGet(FLAG_SYS_CAN_LINK_WITH_RS))
+    if (!FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
     {
         if (eventId == QL_EVENT_USED_ITEM
          || eventId == QL_EVENT_GAVE_HELD_ITEM

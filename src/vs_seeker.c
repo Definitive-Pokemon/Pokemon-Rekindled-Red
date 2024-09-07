@@ -1019,7 +1019,7 @@ static void TryGetRematchTrainerIdGivenGameState(const u16 * trainerIdxs, u8 * r
              *rematchIdx_p = GetRematchTrainerIdGivenGameState(trainerIdxs, *rematchIdx_p);
          break;
      case 5:
-         if (!FlagGet(FLAG_SYS_CAN_LINK_WITH_RS))
+         if (!FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
              *rematchIdx_p = GetRematchTrainerIdGivenGameState(trainerIdxs, *rematchIdx_p);
          break;
     }

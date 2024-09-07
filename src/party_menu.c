@@ -3977,7 +3977,7 @@ static void CursorCB_FieldMove(u8 taskId)
     }
     else
     {
-        if(fieldMove == FIELD_MOVE_DIVE && !FlagGet(FLAG_SYS_CAN_LINK_WITH_RS))
+        if(fieldMove == FIELD_MOVE_DIVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
         {
             DisplayPartyMenuMessage(gText_CantUseUntilNewHM, TRUE);
             gTasks[taskId].func = Task_ReturnToChooseMonAfterText;

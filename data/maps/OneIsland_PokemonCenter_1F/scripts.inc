@@ -263,7 +263,6 @@ OneIsland_PokemonCenter_1F_EventScript_CelioDefeated::
 	release
 	clearflag FLAG_SYS_CAN_LINK_WITH_RS
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 8
-	setflag FLAG_HIDE_CERULEAN_CAVE_GUARD
 	end
 	
 OneIsland_PokemonCenter_1F_EventScript_CelioGoLeft::
@@ -456,6 +455,7 @@ OneIsland_PokemonCenter_1F_EventScript_GiveCelioSapphire::
 	special SetPostgameFlags
 	setflag FLAG_SYS_CAN_LINK_WITH_RS
 	setflag FLAG_HIDE_LORELEI_IN_HER_HOUSE
+	setflag FLAG_HIDE_CERULEAN_CAVE_GUARD
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 6
 	release
 	end

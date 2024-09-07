@@ -20,7 +20,7 @@ PalletTown_RivalsHouse_OnTransition::
 	end
 
 PalletTown_RivalsHouse_EventScript_CheckRemoveStarter::
-	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, PalletTown_RivalsHouse_EventScript_PositionForStarterGiveaway
+	goto_if_set FLAG_HIDE_CERULEAN_CAVE_GUARD, PalletTown_RivalsHouse_EventScript_PositionForStarterGiveaway
 	goto_if_set FLAG_BADGE01_GET, EventScript_ReleaseEnd
 	setflag FLAG_TEMP_1
 	end
@@ -110,7 +110,7 @@ PalletTown_RivalsHouse_EventScript_Daisy::
 	lock
 	faceplayer
 	famechecker FAMECHECKER_DAISY, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
-	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, PalletTown_RivalsHouse_EventScript_GiveFinalStarter
+	goto_if_set FLAG_HIDE_CERULEAN_CAVE_GUARD, PalletTown_RivalsHouse_EventScript_GiveFinalStarter
 PalletTown_RivalsHouse_EventScript_DaisyRegular::
 	goto_if_set FLAG_SYS_GAME_CLEAR, PalletTown_RivalsHouse_EventScript_GroomMon
 	compare RECEIVED_TOWN_MAP, TRUE

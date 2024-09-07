@@ -96,7 +96,7 @@ FourIsland_EventScript_CheckOnTwoMons::
 FourIsland_EventScript_OldWoman::
 	lock
 	faceplayer
-	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, FourIsland_EventScript_OldWomanLoreleiLeft
+	goto_if_set FLAG_HIDE_CERULEAN_CAVE_GUARD, FourIsland_EventScript_OldWomanLoreleiLeft
 	msgbox FourIsland_Text_LoreleiHasReturned
 	release
 	end

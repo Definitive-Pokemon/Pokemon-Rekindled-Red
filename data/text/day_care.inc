@@ -121,6 +121,3 @@ DayCare_Text_WhatWillYouBattleWith::
 
 DayCare_Text_Huh::
 	.string "Huh?$"
-
-RoamerPresence_Text::
-    .string "DEBUG: Roamer in this map!$"

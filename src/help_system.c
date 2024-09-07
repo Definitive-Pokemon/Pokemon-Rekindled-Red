@@ -2363,7 +2363,7 @@ static bool8 HasGottenAtLeastOneHM(void)
         return TRUE;
     if (FlagGet(FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_HM07) == TRUE)
         return TRUE;
-    if (FlagGet(FLAG_SYS_CAN_LINK_WITH_RS) == TRUE)
+    if (FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD) == TRUE)
         return FALSE;
     return FALSE;
 }
