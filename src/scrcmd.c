@@ -36,6 +36,7 @@
 #include "field_effect.h"
 #include "fieldmap.h"
 #include "field_door.h"
+#include "roamer.h"
 #include "constants/event_objects.h"
 #include "constants/maps.h"
 #include "constants/sound.h"
@@ -2289,5 +2290,12 @@ bool8 ScrCmd_resetobjectmovementtype(struct ScriptContext * ctx)
     u16 localId = VarGet(ScriptReadHalfword(ctx));
 
     ResetObjEventTemplateMovementType(localId);
+    return FALSE;
+}
+
+bool8 ScrCmd_startroaming(struct ScriptContext * ctx)
+{
+    u8 roamerId = ScriptReadByte(ctx);
+    StartRoaming(roamerId);
     return FALSE;
 }
