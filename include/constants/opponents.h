@@ -31,7 +31,7 @@
 #define TRAINER_TEAM_ROCKET_JUNGLE                27
 #define TRAINER_BLACK_BELT_KOICHI2                28
 #define TRAINER_MYSTERY_GIRL_ANABEL               29
-#define TRAINER_SCHOOL_KID_M                      30
+#define TRAINER_CELIO                             30
 #define TRAINER_SCHOOL_KID_F                      31
 #define TRAINER_SR_AND_JR                         32
 #define TRAINER_POKEFAN_M                         33
@@ -39,7 +39,7 @@
 #define TRAINER_EXPERT_M                          35
 #define TRAINER_EXPERT_F                          36
 #define TRAINER_RS_YOUNGSTER                      37
-#define TRAINER_CELIO                             38
+#define TRAINER_RS_CHAMPION                       38
 #define TRAINER_RS_FISHERMAN                      39
 #define TRAINER_CYCLING_TRIATHLETE_M              40
 #define TRAINER_CYCLING_TRIATHLETE_F              41
