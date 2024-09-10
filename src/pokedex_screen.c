@@ -2441,7 +2441,6 @@ static void DexScreen_LoadMonPicInWindow(u8 windowId, u16 species, u16 paletteOf
 static void DexScreen_PrintMonDexNo(u8 windowId, u8 fontId, u16 species, u8 x, u8 y)
 {
     u8 state;
-    u8 numToPrint;
     const u8 *symbol = gText_PokedexNo;
     if(IsNationalPokedexEnabled())
         state = 3;
@@ -2449,12 +2448,13 @@ static void DexScreen_PrintMonDexNo(u8 windowId, u8 fontId, u16 species, u8 x, u
         state = 2;
     else    //Kanto only
         state = 1;
-
+    /*
     switch(state) //setting up which numbers to print
     {
         case 1: //only Kanto, always national ordering
             numToPrint = 0;
             break;
+
         case 2: //extended but not national, conditional
             if(sPokedexScreenData->dexOrderId == 0)
                 numToPrint = 0;
@@ -2467,48 +2467,25 @@ static void DexScreen_PrintMonDexNo(u8 windowId, u8 fontId, u16 species, u8 x, u
             numToPrint = 0;
             break;
     }
+    */
 
     if (species > NUM_SPECIES)
     {
         symbol = GetFormSymbolBySpecies(species);
     }
-    if(!numToPrint)
-    {   // use national numbering
-        u16 dexNum = SpeciesToNationalPokedexNum(StripFormToSpecies(species));
-        DexScreen_AddTextPrinterParameterized(windowId, fontId, symbol, x, y, 0);
-        DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
-        return;
-    }
-    else
-    {   // use extended numbering
-        u16 dexNum = SpeciesToExtendedPokedexNum(StripFormToSpecies(species));
-        DexScreen_AddTextPrinterParameterized(windowId, fontId, symbol, x, y, 0);
-        DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
-        return;
-    }
+    // use national numbering
+    u16 dexNum = SpeciesToNationalPokedexNum(StripFormToSpecies(species));
+    DexScreen_AddTextPrinterParameterized(windowId, fontId, symbol, x, y, 0);
+    DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
+    return;
 }
 
 static void HabitatNameTagNumPrinter(u8 windowId, u8 fontId, u16 species, u8 x, u8 y)
 {
-    bool8 numToPrint = 0;
-
-    if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && !IsNationalPokedexEnabled())
-        numToPrint = 1;
-
-    if(!numToPrint)
-    {   // use national numbering
-        u16 dexNum = SpeciesToNationalPokedexNum(species);
-        DexScreen_AddTextPrinterParameterized(windowId, fontId, gText_PokedexNo, x, y, 0);
-        DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
-        return;
-    }
-    else
-    {   // use extended numbering
-        u16 dexNum = SpeciesToExtendedPokedexNum(species);
-        DexScreen_AddTextPrinterParameterized(windowId, fontId, gText_PokedexNo, x, y, 0);
-        DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
-        return;
-    }
+    u16 dexNum = SpeciesToNationalPokedexNum(species);
+    DexScreen_AddTextPrinterParameterized(windowId, fontId, gText_PokedexNo, x, y, 0);
+    DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
+    return;
 }
 
 static s8 GetPokedexAnyFormFlag(u16 *forms, u8 caseId)
