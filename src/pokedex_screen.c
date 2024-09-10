@@ -439,94 +439,6 @@ static const struct ListMenuTemplate sListMenuTemplate_NatDexModeSelect = {
     .cursorKind = 0,
 };
 
-static const struct ListMenuItem sListMenuItems_KantoExtended[] = {
-    {gText_PokemonList, -3},
-    {gText_NumericalModeKanto, 9},
-    {gText_NumericalModeExtended, 14},
-    {gText_PokemonHabitats, -3},
-    {gText_DexCategory_GrasslandPkmn, 0},
-    {gText_DexCategory_ForestPkmn, 1},
-    {gText_DexCategory_WatersEdgePkmn, 2},
-    {gText_DexCategory_SeaPkmn, 3},
-    {gText_DexCategory_CavePkmn, 4},
-    {gText_DexCategory_MountainPkmn, 5},
-    {gText_DexCategory_RoughTerrainPkmn, 6},
-    {gText_DexCategory_UrbanPkmn, 7},
-    {gText_DexCategory_RarePkmn, 8},
-    {gText_Search, -3},
-    {gText_AToZMode, 10},
-    {gText_TypeMode, 11},
-    {gText_LightestMode, 12},
-    {gText_SmallestMode, 13},
-    {gText_PokedexOther, -3},
-    {gText_ClosePokedex, -2},
-};
-
-static const struct ListMenuTemplate sListMenuTemplate_KantoExtended = {
-    .items = sListMenuItems_KantoExtended,
-    .moveCursorFunc = MoveCursorFunc_DexModeSelect,
-    .itemPrintFunc = ItemPrintFunc_DexModeSelect,
-    .totalItems = NELEMS(sListMenuItems_KantoExtended),
-    .maxShowed = 9,
-    .windowId = 0, 
-    .header_X = 0, 
-    .item_X = 12, 
-    .cursor_X = 4,
-    .upText_Y = 2,
-    .cursorPal = 1,
-    .fillValue = 0,
-    .cursorShadowPal = 3,
-    .lettersSpacing = 1,
-    .itemVerticalPadding = 0,
-    .scrollMultiple = 0,
-    .fontId = 2,
-    .cursorKind = 0,
-};
-
-static const struct ListMenuItem sListMenuItems_ExtendedNational[] = {
-    {gText_PokemonList, -3},
-    {gText_NumericalModeExtended, 9},
-    {gText_NumericalModeNational, 14},
-    {gText_PokemonHabitats, -3},
-    {gText_DexCategory_GrasslandPkmn, 0},
-    {gText_DexCategory_ForestPkmn, 1},
-    {gText_DexCategory_WatersEdgePkmn, 2},
-    {gText_DexCategory_SeaPkmn, 3},
-    {gText_DexCategory_CavePkmn, 4},
-    {gText_DexCategory_MountainPkmn, 5},
-    {gText_DexCategory_RoughTerrainPkmn, 6},
-    {gText_DexCategory_UrbanPkmn, 7},
-    {gText_DexCategory_RarePkmn, 8},
-    {gText_Search, -3},
-    {gText_AToZMode, 10},
-    {gText_TypeMode, 11},
-    {gText_LightestMode, 12},
-    {gText_SmallestMode, 13},
-    {gText_PokedexOther, -3},
-    {gText_ClosePokedex, -2},
-};
-
-static const struct ListMenuTemplate sListMenuTemplate_ExtendedNational = {
-    .items = sListMenuItems_ExtendedNational,
-    .moveCursorFunc = MoveCursorFunc_DexModeSelect,
-    .itemPrintFunc = ItemPrintFunc_DexModeSelect,
-    .totalItems = NELEMS(sListMenuItems_ExtendedNational),
-    .maxShowed = 9,
-    .windowId = 0, 
-    .header_X = 0, 
-    .item_X = 12, 
-    .cursor_X = 4,
-    .upText_Y = 2,
-    .cursorPal = 1,
-    .fillValue = 0,
-    .cursorShadowPal = 3,
-    .lettersSpacing = 1,
-    .itemVerticalPadding = 0,
-    .scrollMultiple = 0,
-    .fontId = 2,
-    .cursorKind = 0,
-};
-
 static const struct ScrollArrowsTemplate sScrollArrowsTemplate_KantoDex = {
     .firstArrowType = 2,
     .firstX = 200,
@@ -1155,8 +1067,6 @@ static void Task_PokedexScreen(u8 taskId)
         ListMenuGetScrollAndRow(sPokedexScreenData->modeSelectListMenuId, &sPokedexScreenData->modeSelectCursorPosBak, NULL);
         if (IsNationalPokedexEnabled())
             sPokedexScreenData->scrollArrowsTaskId = AddScrollIndicatorArrowPair(&sScrollArrowsTemplate_NatDex, &sPokedexScreenData->modeSelectCursorPosBak);
-        else if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && !(IsNationalPokedexEnabled()))
-            sPokedexScreenData->scrollArrowsTaskId = AddScrollIndicatorArrowPair(&sScrollArrowsTemplate_NatDex, &sPokedexScreenData->modeSelectCursorPosBak);
         else
             sPokedexScreenData->scrollArrowsTaskId = AddScrollIndicatorArrowPair(&sScrollArrowsTemplate_KantoDex, &sPokedexScreenData->modeSelectCursorPosBak);
         sPokedexScreenData->state = 6;
@@ -1229,35 +1139,12 @@ static void Task_PokedexScreen(u8 taskId)
             sub_8104664(0); //fixing cursor position at endpoints? Kanto?
             sPokedexScreenData->kantoOrderMenuItemsAbove -= 1; //is items above cursor position, automatically adjusted by above call; Kanto?
             */
-            sPokedexScreenData->kantoOrderMenuCursorPos = 0; //cursor pos reset Kanto/Extended
-            sPokedexScreenData->kantoOrderMenuItemsAbove = 0; //items above reset Kanto/Extended
-            sPokedexScreenData->nationalOrderMenuCursorPos = 0; //cursor pos reset Extended/National
-            sPokedexScreenData->nationalOrderMenuItemsAbove = 0; //items above reset Extended/National
+            sPokedexScreenData->kantoOrderMenuCursorPos = 0; //cursor pos reset Kanto
+            sPokedexScreenData->kantoOrderMenuItemsAbove = 0; //items above reset Kanto
+            sPokedexScreenData->nationalOrderMenuCursorPos = 0; //cursor pos reset National
+            sPokedexScreenData->nationalOrderMenuItemsAbove = 0; //items above reset National
             sPokedexScreenData->state = 10;
         }
-        /* //debugging to test new dex mode and combos
-        if ((JOY_NEW(START_BUTTON)))
-        {
-            PlaySE(SE_SELECT);
-            if(FlagGet(FLAG_SYS_NATIONAL_DEX))
-                FlagClear(FLAG_SYS_NATIONAL_DEX);
-            else
-                FlagSet(FLAG_SYS_NATIONAL_DEX);
-        }
-        if ((JOY_NEW(R_BUTTON)))
-        {
-            PlaySE(SE_SELECT);
-            if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX))
-            {
-                FlagClear(FLAG_SYS_RECEIVED_EXTENDED_DEX);
-                FlagClear(FLAG_SYS_EXTENDED_DEX_TOGGLE);
-            }
-            else
-            {
-                FlagSet(FLAG_SYS_RECEIVED_EXTENDED_DEX);
-                FlagSet(FLAG_SYS_EXTENDED_DEX_TOGGLE);
-            }
-        }*/
         break;
     case 7:
         DestroyListMenuTask(sPokedexScreenData->modeSelectListMenuId, &sPokedexScreenData->modeSelectCursorPos, &sPokedexScreenData->modeSelectItemsAbove);
@@ -1314,62 +1201,21 @@ static void DexScreen_InitGfxForTopMenu(void)
     sPokedexScreenData->dexCountsWindowId = AddWindow(&sWindowTemplate_DexCounts);
     if (IsNationalPokedexEnabled())
     {
-        if(FlagGet(FLAG_SYS_EXTENDED_DEX_TOGGLE))
-            listMenuTemplate = sListMenuTemplate_ExtendedNational;
-        else
-            listMenuTemplate = sListMenuTemplate_NatDexModeSelect;
+        listMenuTemplate = sListMenuTemplate_NatDexModeSelect;
         listMenuTemplate.windowId = sPokedexScreenData->modeSelectWindowId;
         sPokedexScreenData->modeSelectListMenuId = ListMenuInit(&listMenuTemplate, sPokedexScreenData->modeSelectCursorPos, sPokedexScreenData->modeSelectItemsAbove);
         FillWindowPixelBuffer(sPokedexScreenData->dexCountsWindowId, PIXEL_FILL(0));
         DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_Seen, 0, 2, 0);
-        if(!FlagGet(FLAG_SYS_EXTENDED_DEX_TOGGLE))
-        {
-            sPokedexScreenData->numSeenKanto = DexScreen_GetDexCount(FLAG_GET_SEEN_ANY_FORM, 0);
-            sPokedexScreenData->numOwnedKanto = DexScreen_GetDexCount(FLAG_GET_CAUGHT_ANY_FORM, 0);
-            DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_Kanto, 8, 13, 0);
-            DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numSeenKanto, 52, 13, 2);
-            DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_National, 8, 24, 0);
-            DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numSeenNational, 52, 24, 2);
-            DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_Owned, 0, 37, 0);
-            DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_Kanto, 8, 48, 0);
-            DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numOwnedKanto, 52, 48, 2);
-            DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_National, 8, 59, 0);
-            DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numOwnedNational, 52, 59, 2);
-        }
-        else
-        {
-            sPokedexScreenData->numSeenKanto = DexScreen_GetDexCount(FLAG_GET_SEEN_ANY_FORM, 2);
-            sPokedexScreenData->numOwnedKanto = DexScreen_GetDexCount(FLAG_GET_CAUGHT_ANY_FORM, 2);
-            DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_Extended, 8, 13, 0);
-            DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numSeenKanto, 52, 13, 2);
-            DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_National, 8, 24, 0);
-            DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numSeenNational, 52, 24, 2);
-            DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_Owned, 0, 37, 0);
-            DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_Extended, 8, 48, 0);
-            DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numOwnedKanto, 52, 48, 2);
-            DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_National, 8, 59, 0);
-            DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numOwnedNational, 52, 59, 2);
-        }
-    }
-    else if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX))
-    {
-        listMenuTemplate = sListMenuTemplate_KantoExtended;
-        listMenuTemplate.windowId = sPokedexScreenData->modeSelectWindowId;
-        sPokedexScreenData->modeSelectListMenuId = ListMenuInit(&listMenuTemplate, sPokedexScreenData->modeSelectCursorPos, sPokedexScreenData->modeSelectItemsAbove);
-        FillWindowPixelBuffer(sPokedexScreenData->dexCountsWindowId, PIXEL_FILL(0));
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Seen, 0, 2, 0);
         sPokedexScreenData->numSeenKanto = DexScreen_GetDexCount(FLAG_GET_SEEN_ANY_FORM, 0);
         sPokedexScreenData->numOwnedKanto = DexScreen_GetDexCount(FLAG_GET_CAUGHT_ANY_FORM, 0);
-        sPokedexScreenData->numSeenNational = DexScreen_GetDexCount(FLAG_GET_SEEN_ANY_FORM, 2);
-        sPokedexScreenData->numOwnedNational = DexScreen_GetDexCount(FLAG_GET_CAUGHT_ANY_FORM, 2);
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Kanto, 8, 13, 0);
+        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_Kanto, 8, 13, 0);
         DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numSeenKanto, 52, 13, 2);
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Extended, 8, 24, 0);
+        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_National, 8, 24, 0);
         DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numSeenNational, 52, 24, 2);
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Owned, 0, 37, 0);
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Kanto, 8, 48, 0);
+        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_Owned, 0, 37, 0);
+        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_Kanto, 8, 48, 0);
         DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numOwnedKanto, 52, 48, 2);
-        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Extended, 8, 59, 0);
+        DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, 0, gText_National, 8, 59, 0);
         DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numOwnedNational, 52, 59, 2);
     }
     else
@@ -1423,10 +1269,6 @@ static void ItemPrintFunc_DexModeSelect(u8 windowId, u32 itemId, u8 y)
 
 static void Task_DexScreen_NumericalOrder(u8 taskId)
 {
-    if(sPokedexScreenData->dexOrderId == DEX_ORDER_NUMERICAL_NATIONAL && !IsNationalPokedexEnabled())
-    {
-        //FlagSet(FLAG_SYS_EXTENDED_DEX_TOGGLE);
-    }
     switch (sPokedexScreenData->state)
     {
     case 0:
@@ -1480,18 +1322,12 @@ static void Task_DexScreen_NumericalOrder(u8 taskId)
         {
             RemoveScrollIndicatorArrowPair(sPokedexScreenData->scrollArrowsTaskId);
             BeginNormalPaletteFade(~0x8000, 0, 0, 16, RGB_WHITEALPHA);
-            if(!IsNationalPokedexEnabled() && FlagGet(FLAG_SYS_EXTENDED_DEX_TOGGLE))
-                FlagClear(FLAG_SYS_EXTENDED_DEX_TOGGLE);
             sPokedexScreenData->state = 1;
         }
         else if (JOY_NEW(START_BUTTON) && FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && sPokedexScreenData->dexOrderId == 0 && IsNationalPokedexEnabled())
         {
             PlaySE(SE_SELECT);
             RemoveScrollIndicatorArrowPair(sPokedexScreenData->scrollArrowsTaskId);
-            if(FlagGet(FLAG_SYS_EXTENDED_DEX_TOGGLE))
-                FlagClear(FLAG_SYS_EXTENDED_DEX_TOGGLE);
-            else
-                FlagSet(FLAG_SYS_EXTENDED_DEX_TOGGLE);
             sPokedexScreenData->dexOrderId = 0;
             DexScreen_DestroyDexOrderListMenu(sPokedexScreenData->dexOrderId);
             //BeginNormalPaletteFade(0xFFFF7FFF, 0, 0, 16, RGB_WHITEALPHA);
@@ -1535,13 +1371,6 @@ static void DexScreen_InitGfxForNumericalOrderList(void)
     FillWindowPixelBuffer(0, PIXEL_FILL(15));
     DexScreen_PrintStringWithAlignment(gText_PokemonListNoColor, TEXT_CENTER);
     FillWindowPixelBuffer(1, PIXEL_FILL(15));
-    if(sPokedexScreenData->dexOrderId == DEX_ORDER_NUMERICAL_KANTO && IsNationalPokedexEnabled()) //viewing Kanto Dex
-    {
-        if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && FlagGet(FLAG_SYS_EXTENDED_DEX_TOGGLE))
-            DexScreen_AddTextPrinterParameterized(1, 0, gText_SwapToKanto, 8, 2, 4);  //print switch to Kanto
-        if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && !FlagGet(FLAG_SYS_EXTENDED_DEX_TOGGLE))
-            DexScreen_AddTextPrinterParameterized(1, 0, gText_SwapToExtended, 8, 2, 4);  //print switch to Extended
-    }
     DexScreen_PrintControlInfo(gText_PickOKExit);
     CopyWindowToVram(0, COPYWIN_GFX);
     CopyWindowToVram(1, COPYWIN_GFX);
@@ -1666,7 +1495,7 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
     {
     default:
     case DEX_ORDER_NUMERICAL_KANTO: //regular kanto dex list populator
-        if(!IsNationalPokedexEnabled() || !FlagGet(FLAG_SYS_EXTENDED_DEX_TOGGLE))
+        if(!IsNationalPokedexEnabled())
         {
             u16 regularSpeciesNumber;
             for (i = 0; i < KANTO_DEX_COUNT; i++)
@@ -1676,7 +1505,7 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
             }
             break;
         }
-        if(FlagGet(FLAG_SYS_EXTENDED_DEX_TOGGLE) && IsNationalPokedexEnabled())
+        if(IsNationalPokedexEnabled())
         {
             u16 regularSpeciesNumber;
             for (i = 0; i < EXTENDED_DEX_COUNT; i++)
@@ -2679,15 +2508,7 @@ static void DexScreen_PrintMonDexNo(u8 windowId, u8 fontId, u16 species, u8 x, u
                 numToPrint = 1;
             break;
         case 3: //national
-            if(sPokedexScreenData->dexOrderId == 0)
-            {
-                if(FlagGet(FLAG_SYS_EXTENDED_DEX_TOGGLE))
-                    numToPrint = 1;
-                else
-                    numToPrint = 0;
-            }
-            else
-                numToPrint = 0;
+            numToPrint = 0;
             break;
     }
 
@@ -2709,58 +2530,6 @@ static void DexScreen_PrintMonDexNo(u8 windowId, u8 fontId, u16 species, u8 x, u
         DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
         return;
     }
-    /*
-    if(sPokedexScreenData->dexOrderId == 0)
-    {
-        if(FlagGet(FLAG_SYS_EXTENDED_DEX_TOGGLE) && IsNationalPokedexEnabled())
-        {   // use extended numbering
-            u16 dexNum = SpeciesToExtendedPokedexNum(species);
-            DexScreen_AddTextPrinterParameterized(windowId, fontId, gText_PokedexNo, x, y, 0);
-            DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
-            return;
-        }
-        else
-        {   // use national numbering
-            u16 dexNum = SpeciesToNationalPokedexNum(species);
-            DexScreen_AddTextPrinterParameterized(windowId, fontId, gText_PokedexNo, x, y, 0);
-            DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
-            return;
-        }
-    }
-    if(sPokedexScreenData->dexOrderId == 5)
-    {   
-        if(!IsNationalPokedexEnabled())
-        {   // use extended numbering, on natdex page but no natdex
-            u16 dexNum = SpeciesToExtendedPokedexNum(species);
-            DexScreen_AddTextPrinterParameterized(windowId, fontId, gText_PokedexNo, x, y, 0);
-            DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
-            return;
-        }
-        else
-        {   //with natdex, always use national numbering on natdex page
-            u16 dexNum = SpeciesToNationalPokedexNum(species);
-            DexScreen_AddTextPrinterParameterized(windowId, fontId, gText_PokedexNo, x, y, 0);
-            DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
-            return;
-        }
-    }
-    if(sPokedexScreenData->dexOrderId != 0 && sPokedexScreenData->dexOrderId != 5)
-    {   //for ABC, Weight, Height, etc. modes
-        if(IsNationalPokedexEnabled() || (!IsNationalPokedexEnabled() && !FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX)))
-        {   //just Kanto Dex, or have National dex
-            u16 dexNum = SpeciesToNationalPokedexNum(species);
-            DexScreen_AddTextPrinterParameterized(windowId, fontId, gText_PokedexNo, x, y, 0);
-            DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
-            return;
-        }
-        if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && !IsNationalPokedexEnabled())
-        {   //just Extended but not national
-            u16 dexNum = SpeciesToExtendedPokedexNum(species);
-            DexScreen_AddTextPrinterParameterized(windowId, fontId, gText_PokedexNo, x, y, 0);
-            DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
-            return;
-        }
-    }*/
 }
 
 static void HabitatNameTagNumPrinter(u8 windowId, u8 fontId, u16 species, u8 x, u8 y)
