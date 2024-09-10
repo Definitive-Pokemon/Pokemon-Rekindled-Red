@@ -6787,14 +6787,6 @@ u16 SpeciesToPokedexNum(u16 species)
 {
     species = SpeciesToNationalPokedexNum(species);
 
-    if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && !IsNationalPokedexEnabled())
-    {
-        species = SpeciesToExtendedPokedexNum(species);
-        if(species > EXTENDED_DEX_COUNT)
-            return 0xFFFF;
-        return species;
-    }
-
     if (!IsNationalPokedexEnabled() && species > KANTO_SPECIES_END)
         return 0xFFFF;
     return species;

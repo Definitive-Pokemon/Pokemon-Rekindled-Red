@@ -1467,8 +1467,6 @@ static int DexScreen_CanShowMonInDex(u16 species)
 {
     if (IsNationalPokedexEnabled() == TRUE)
         return TRUE;
-    if (FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && SpeciesToExtendedPokedexNum(species) <= EXTENDED_DEX_COUNT)
-        return TRUE;
     if (SpeciesToNationalPokedexNum(species) <= KANTO_DEX_COUNT)
         return TRUE;
     return FALSE;
@@ -1486,8 +1484,6 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
 
     if(IsNationalPokedexEnabled())
         max_n = NATIONAL_DEX_COUNT;
-    else if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && !IsNationalPokedexEnabled())
-        max_n = EXTENDED_DEX_COUNT;
     else    //Kanto only
         max_n = KANTO_DEX_COUNT;
 
@@ -1508,11 +1504,7 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
         if(IsNationalPokedexEnabled())
         {
             u16 regularSpeciesNumber;
-            for (i = 0; i < EXTENDED_DEX_COUNT; i++)
-            {
-                regularSpeciesNumber = ExtendedPokedexNumToSpecies((u16)i + 1);
-                NumericalOrderPokemonAddition(regularSpeciesNumber, i, &ret);
-            }
+            //TODO_DEX: return to OG pret
             break;
         }
     case DEX_ORDER_ATOZ:
@@ -1634,11 +1626,7 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
         else
         {
             u16 regularSpeciesNumber;
-            for (i = 0; i < EXTENDED_DEX_COUNT; i++)
-            {
-                regularSpeciesNumber = ExtendedPokedexNumToSpecies((u16)i + 1);
-                NumericalOrderPokemonAddition(regularSpeciesNumber, i, &ret);
-            }
+            //TODO_DEX same
             break;
         }
     }
@@ -3751,10 +3739,6 @@ u8 DexScreen_RegisterMonToPokedex(u16 species)
 {
     DexScreen_GetSetPokedexFlag(species, FLAG_SET_SEEN, TRUE);
     DexScreen_GetSetPokedexFlag(species, FLAG_SET_CAUGHT, TRUE);
-
-    if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && !IsNationalPokedexEnabled())
-        if(SpeciesToExtendedPokedexNum(species) > EXTENDED_DEX_COUNT)
-            return CreateTask(Task_DexScreen_RegisterNonKantoMonBeforeNationalDex, 0);
 
     if (!FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && !IsNationalPokedexEnabled() && SpeciesToNationalPokedexNum(species) > KANTO_DEX_COUNT)
         return CreateTask(Task_DexScreen_RegisterNonKantoMonBeforeNationalDex, 0);
