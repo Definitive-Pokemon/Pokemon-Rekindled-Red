@@ -1511,13 +1511,6 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
         for (i = 0; i < NUM_SPECIES - 1; i++)
         {
             highest_dex_num = gPokedexOrder_Alphabetical[i];
-            if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && !IsNationalPokedexEnabled())
-            {
-                ndex_num = NationalToExtendedOrder(gPokedexOrder_Alphabetical[i]);
-                highest_dex_num = ndex_num;
-                if(DexScreen_CanShowMonInDex(ndex_num) == FALSE) //not in highest dex mode
-                    continue;
-            }
             ndex_num = gPokedexOrder_Alphabetical[i];
             if (highest_dex_num <= max_n)
             {
@@ -1535,10 +1528,7 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
     case DEX_ORDER_TYPE:
         for (i = 0; i < NUM_SPECIES - 1; i++)
         {
-            if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && !IsNationalPokedexEnabled())
-                ndex_num = SpeciesToExtendedPokedexNum(gPokedexOrder_TypeExtended[i]);
-            else    
-                ndex_num = SpeciesToNationalPokedexNum(gPokedexOrder_Type[i]);
+            ndex_num = SpeciesToNationalPokedexNum(gPokedexOrder_Type[i]);
             if(DexScreen_CanShowMonInDex(ndex_num) == FALSE) //not in highest dex mode
                 continue;
             if (ndex_num <= max_n)
@@ -1547,16 +1537,8 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
                 caught = DexScreen_GetSetPokedexFlag(ndex_num, FLAG_GET_CAUGHT, FALSE);
                 if (caught)
                 {
-                    if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && !IsNationalPokedexEnabled())
-                    {
-                        sPokedexScreenData->listItems[ret].label = gSpeciesNames[ExtendedPokedexNumToSpecies(ndex_num)];
-                        sPokedexScreenData->listItems[ret].index = (caught << 17) + (seen << 16) + ExtendedPokedexNumToSpecies(ndex_num);
-                    }
-                    else
-                    {
-                        sPokedexScreenData->listItems[ret].label = gSpeciesNames[NationalPokedexNumToSpecies(ndex_num)];
-                        sPokedexScreenData->listItems[ret].index = (caught << 17) + (seen << 16) + NationalPokedexNumToSpecies(ndex_num);
-                    }
+                    sPokedexScreenData->listItems[ret].label = gSpeciesNames[NationalPokedexNumToSpecies(ndex_num)];
+                    sPokedexScreenData->listItems[ret].index = (caught << 17) + (seen << 16) + NationalPokedexNumToSpecies(ndex_num);
                     ret++;
                 }
             }
@@ -1566,13 +1548,6 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
         for (i = 0; i < NATIONAL_DEX_COUNT; i++)
         {
             highest_dex_num = gPokedexOrder_Weight[i];
-            if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && !IsNationalPokedexEnabled())
-            {
-                ndex_num = NationalToExtendedOrder(gPokedexOrder_Weight[i]);
-                highest_dex_num = ndex_num;
-                if(DexScreen_CanShowMonInDex(ndex_num) == FALSE) //not in highest dex mode
-                    continue;
-            }
             ndex_num = gPokedexOrder_Weight[i];
             if (highest_dex_num <= max_n)
             {
@@ -1591,13 +1566,6 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
         for (i = 0; i < NATIONAL_DEX_COUNT; i++)
         {
             highest_dex_num = gPokedexOrder_Height[i];
-            if(FlagGet(FLAG_SYS_RECEIVED_EXTENDED_DEX) && !IsNationalPokedexEnabled())
-            {
-                ndex_num = NationalToExtendedOrder(gPokedexOrder_Height[i]);
-                highest_dex_num = ndex_num;
-                if(DexScreen_CanShowMonInDex(ndex_num) == FALSE) //not in highest dex mode
-                    continue;
-            }
             ndex_num = gPokedexOrder_Height[i];
             if (highest_dex_num <= max_n)
             {
@@ -2725,6 +2693,7 @@ static u16 DexScreen_GetDexCount(u8 caseId, u8 whichDex)
         }
         break;
     return count;
+    }
 }
 
 static void DexScreen_PrintControlInfo(const u8 *src)
