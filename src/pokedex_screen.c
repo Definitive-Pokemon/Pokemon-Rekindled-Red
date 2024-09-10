@@ -2736,15 +2736,6 @@ static u16 DexScreen_GetDexCount(u8 caseId, u8 whichDex)
 
         }
         break;
-    case 2: // Extended
-        for (i = 0; i < EXTENDED_DEX_COUNT; i++)
-        {
-            if (DexScreen_GetSetPokedexFlag(ExtendedToNationalOrder(i + 1), caseId, FALSE))
-                count++;
-
-        }
-        break;
-    }
     return count;
 }
 

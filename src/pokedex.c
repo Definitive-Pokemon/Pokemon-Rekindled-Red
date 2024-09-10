@@ -106,17 +106,6 @@ bool16 HasAllHoennMons(void)
     return TRUE;
 }
 
-bool16 HasAllExtendedMons(void)
-{
-    u32 i;
-
-    for (i = 0; i < EXTENDED_DEX_COUNT - 2; i++)
-    {
-        if (!GetSetPokedexFlag(ExtendedToNationalOrder(i + 1), FLAG_GET_CAUGHT_ANY_FORM))
-            return FALSE;
-    }
-    return TRUE;
-}
 
 bool16 HasAllKantoMons(void)
 {
@@ -157,15 +146,8 @@ bool16 HasAllMons(void)
 }
 
 bool16 HasNationalMon(void)
-{   // checks if the player has a mon not in the Extended Dex
-    u32 i;
-
-    for (i = EXTENDED_DEX_COUNT + 1; i < NATIONAL_DEX_COUNT; i++)
-    {
-        if (GetSetPokedexFlag(ExtendedToNationalOrder(i + 1), FLAG_GET_CAUGHT_ANY_FORM))
-            return TRUE;
-    }
-    return FALSE;
+{   // TODO_DEX: stubbed for now
+    return TRUE;
 }
 
 bool16 HasAllKantoMonsNew(void)
