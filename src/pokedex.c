@@ -94,28 +94,6 @@ u16 GetKantoPokedexCount(u8 caseID)
     return count;
 }
 
-u16 GetExtendedPokedexCount(u8 caseID)
-{
-    u16 count = 0;
-    u32 i;
-
-    for (i = 0; i < EXTENDED_DEX_COUNT; i++)
-    {
-        switch (caseID)
-        {
-        case FLAG_GET_SEEN:
-            if (GetSetPokedexFlag(ExtendedToNationalOrder(i + 1), FLAG_GET_SEEN_ANY_FORM))
-                count++;
-            break;
-        case FLAG_GET_CAUGHT:
-            if (GetSetPokedexFlag(ExtendedToNationalOrder(i + 1), FLAG_GET_CAUGHT_ANY_FORM))
-                count++;
-            break;
-        }
-    }
-    return count;
-}
-
 bool16 HasAllHoennMons(void)
 {
     u32 i;
