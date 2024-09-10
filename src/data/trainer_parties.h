@@ -1184,6 +1184,14 @@ static const struct TrainerMonNoItemDefaultMoves sParty_ExpertF[] = {
     },
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_RSChampion[] = {
+    {
+        .iv = 0,
+        .lvl = 5,
+        .species = SPECIES_EKANS,
+    },
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_RSYoungster[] = {
     {
         .iv = 0,
