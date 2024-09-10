@@ -1125,6 +1125,9 @@ static void OpponentHandleDrawTrainerPic(void)
 {
     u32 trainerPicId;
     struct Trainer* sTrainers;
+    
+    //TODO_CELIO:
+    PlaySE(SE_FAINT);
 
     if(FlagGet(FLAG_MASTER_TRAINER_BATTLE))
         sTrainers = (struct Trainer*)gMasterTrainers;
@@ -1163,6 +1166,9 @@ static void OpponentHandleTrainerSlide(void)
 {
     u32 trainerPicId;
     struct Trainer* sTrainers;
+
+    //TODO_CELIO:
+    PlaySE(SE_SELECT);
 
     if(FlagGet(FLAG_MASTER_TRAINER_BATTLE))
         sTrainers = (struct Trainer*)gMasterTrainers;
