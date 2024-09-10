@@ -2441,6 +2441,7 @@ static void DexScreen_LoadMonPicInWindow(u8 windowId, u16 species, u16 paletteOf
 static void DexScreen_PrintMonDexNo(u8 windowId, u8 fontId, u16 species, u8 x, u8 y)
 {
     u8 state;
+    u16 dexNum;
     const u8 *symbol = gText_PokedexNo;
     if(IsNationalPokedexEnabled())
         state = 3;
@@ -2474,7 +2475,7 @@ static void DexScreen_PrintMonDexNo(u8 windowId, u8 fontId, u16 species, u8 x, u
         symbol = GetFormSymbolBySpecies(species);
     }
     // use national numbering
-    u16 dexNum = SpeciesToNationalPokedexNum(StripFormToSpecies(species));
+    dexNum = SpeciesToNationalPokedexNum(StripFormToSpecies(species));
     DexScreen_AddTextPrinterParameterized(windowId, fontId, symbol, x, y, 0);
     DexScreen_PrintNum3LeadingZeroes(windowId, fontId, dexNum, x + 9, y, 0);
     return;
