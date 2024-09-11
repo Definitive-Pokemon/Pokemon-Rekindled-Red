@@ -1168,7 +1168,7 @@ static void OpponentHandleTrainerSlide(void)
     struct Trainer* sTrainers;
 
     //TODO_CELIO:
-    PlaySE(SE_SELECT);
+    PlaySE(SE_FLEE);
 
     if(FlagGet(FLAG_MASTER_TRAINER_BATTLE))
         sTrainers = (struct Trainer*)gMasterTrainers;
