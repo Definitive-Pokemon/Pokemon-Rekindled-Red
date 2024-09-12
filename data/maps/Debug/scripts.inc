@@ -18,6 +18,10 @@ Debug_Gigas_Battle::
 	release
 	end
 
+Debug_BugmeBattle::
+	trainerbattle_single TRAINER_CELIO, Debug_Text, Debug_Text, Debug_Ruby, NO_MUSIC
+	end
+
 Debug_GiveNormalMon::
 	lock
 	givemon SPECIES_REGIGIGAS, 5, ITEM_NONE
