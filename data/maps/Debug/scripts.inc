@@ -19,7 +19,7 @@ Debug_Gigas_Battle::
 	end
 
 Debug_BugmeBattle::
-	trainerbattle_single TRAINER_CELIO, Debug_Text, Debug_Text, Debug_Ruby, NO_MUSIC
+	trainerbattle_single_nowhiteout TRAINER_CELIO, Debug_Text, Debug_Text, Debug_Ruby, NO_MUSIC
 	end
 
 Debug_GiveNormalMon::
