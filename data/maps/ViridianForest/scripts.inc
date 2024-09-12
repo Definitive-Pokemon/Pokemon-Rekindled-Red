@@ -63,7 +63,7 @@ ViridianForest_EventScript_ExitSign::
 	end
 
 ViridianForest_EventScript_Rick::
-	trainerbattle_single TRAINER_CELIO, ViridianForest_Text_RickIntro, ViridianForest_Text_RickDefeat
+	trainerbattle_single TRAINER_BUG_CATCHER_RICK, ViridianForest_Text_RickIntro, ViridianForest_Text_RickDefeat
 	msgbox ViridianForest_Text_RickPostBattle, MSGBOX_AUTOCLOSE
 	end
 
