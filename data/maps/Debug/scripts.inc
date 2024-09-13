@@ -19,7 +19,7 @@ Debug_Gigas_Battle::
 	end
 
 Debug_BugmeBattle::
-	trainerbattle_earlyrival TRAINER_CELIO, 0, Debug_Text, Debug_Text, NO_MUSIC
+	trainerbattle_earlyrival TRAINER_CELIO, 0, Debug_Text, Debug_Text
 	end
 
 Debug_GiveNormalMon::
