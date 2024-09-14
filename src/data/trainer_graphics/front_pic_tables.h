@@ -161,6 +161,7 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     {.size = 8, .y_offset = 1},
     {.size = 8, .y_offset = 1},
     {.size = 8, .y_offset = 1},
+    {.size = 8, .y_offset = 1},
 };
 
 const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
@@ -299,7 +300,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(SIS_AND_BRO, gTrainerFrontPic_SisAndBro, 0x800),
     TRAINER_SPRITE(PROFESSOR_OAK, gTrainerFrontPic_ProfessorOak, 0x800),
     TRAINER_SPRITE(DAISY, gTrainerFrontPic_Daisy, 0x800),
-    TRAINER_SPRITE(ANABEL, gTrainerFrontPic_Anabel, 0x800),
+    TRAINER_SPRITE(CELIO, gTrainerFrontPic_Celio, 0x800),
     TRAINER_SPRITE(RS_BRENDAN_2, gTrainerFrontPic_RSBrendan2, 0x800),
     TRAINER_SPRITE(RS_MAY_2, gTrainerFrontPic_RSMay2, 0x800),
     TRAINER_SPRITE(RED, gTrainerFrontPic_Red, 0x800),
@@ -466,7 +467,7 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(SIS_AND_BRO, gTrainerPalette_SisAndBro),
     TRAINER_PAL(PROFESSOR_OAK, gTrainerPalette_ProfessorOak),
     TRAINER_PAL(DAISY, gTrainerPalette_Daisy),
-    TRAINER_PAL(ANABEL, gTrainerPalette_Anabel),
+    TRAINER_PAL(CELIO, gTrainerPalette_Celio),
     TRAINER_PAL(RS_BRENDAN_2, gTrainerPalette_RSBrendan2),
     TRAINER_PAL(RS_MAY_2, gTrainerPalette_RSMay2),
     TRAINER_PAL(RED, gTrainerPalette_Red),
