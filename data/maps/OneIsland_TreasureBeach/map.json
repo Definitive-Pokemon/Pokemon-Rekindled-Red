@@ -19,10 +19,10 @@
       "offset": 0,
       "direction": "up"
     },
-	{
-      "direction": "dive",
+    {
+      "map": "MAP_KYOGRE_DEN",
       "offset": 0,
-      "map": "MAP_KYOGRE_DEN"
+      "direction": "dive"
     }
   ],
   "object_events": [

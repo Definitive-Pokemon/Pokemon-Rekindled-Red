@@ -5140,8 +5140,8 @@
     {
       "id": "LAYOUT_KYOGRE_DEN",
       "name": "KyogreDen_Layout",
-      "width": 120,
-      "height": 20,
+      "width": 48,
+      "height": 40,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -5256,6 +5256,18 @@
       "secondary_tileset": "gTileset_NavelRock",
       "border_filepath": "data/layouts/AeroCave/border.bin",
       "blockdata_filepath": "data/layouts/AeroCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALTERING_CAVE2",
+      "name": "AlteringCave2_Layout",
+      "width": 34,
+      "height": 26,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RockTunnel",
+      "border_filepath": "data/layouts/AlteringCave2/border.bin",
+      "blockdata_filepath": "data/layouts/AlteringCave2/map.bin"
     }
   ]
 }

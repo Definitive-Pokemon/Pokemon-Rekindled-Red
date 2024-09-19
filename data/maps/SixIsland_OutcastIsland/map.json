@@ -15,16 +15,15 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "down",
+      "map": "MAP_SIX_ISLAND_GREEN_PATH",
       "offset": 0,
-      "map": "MAP_SIX_ISLAND_GREEN_PATH"
+      "direction": "down"
     }
   ],
   "object_events": [
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
-      "in_connection": false,
       "x": 9,
       "y": 24,
       "elevation": 3,
@@ -34,12 +33,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "SixIsland_OutcastIsland_EventScript_Rocket",
-      "flag": "FLAG_HIDE_FIVE_ISLAND_ROCKETS"
+      "flag": "FLAG_HIDE_FIVE_ISLAND_ROCKETS",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
-      "in_connection": false,
       "x": 12,
       "y": 15,
       "elevation": 3,
@@ -49,12 +48,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "SixIsland_OutcastIsland_EventScript_Tylor",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-      "in_connection": false,
       "x": 13,
       "y": 34,
       "elevation": 1,
@@ -64,7 +63,8 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "SixIsland_OutcastIsland_EventScript_Mymo",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
@@ -97,7 +97,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TUBER_M_WATER",
-      "in_connection": false,
       "x": 11,
       "y": 44,
       "elevation": 1,
@@ -107,12 +106,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "SixIsland_OutcastIsland_EventScript_Geb",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 11,
       "y": 16,
       "elevation": 3,
@@ -122,7 +121,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SixIsland_OutcastIsland_EventScript_ItemPPUp",
-      "flag": "FLAG_HIDE_SIX_ISLAND_OUTCAST_ISLAND_PP_UP"
+      "flag": "FLAG_HIDE_SIX_ISLAND_OUTCAST_ISLAND_PP_UP",
+      "in_connection": false
     }
   ],
   "warp_events": [

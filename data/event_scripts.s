@@ -1474,3 +1474,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/AeroCave/scripts.inc"
 	.include "data/maps/AeroCave/text.inc"
+
+	.include "data/maps/AlteringCave2/scripts.inc"
+	.include "data/maps/AlteringCave2/text.inc"
