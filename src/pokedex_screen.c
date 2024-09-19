@@ -1491,22 +1491,13 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
     {
     default:
     case DEX_ORDER_NUMERICAL_KANTO: //regular kanto dex list populator
-        if(!IsNationalPokedexEnabled())
+        u16 regularSpeciesNumber;
+        for (i = 0; i < KANTO_DEX_COUNT; i++)
         {
-            u16 regularSpeciesNumber;
-            for (i = 0; i < KANTO_DEX_COUNT; i++)
-            {
-                regularSpeciesNumber = NationalPokedexNumToSpecies((u16)i + 1);
-                NumericalOrderPokemonAddition(regularSpeciesNumber, i, &ret);
-            }
-            break;
+            regularSpeciesNumber = NationalPokedexNumToSpecies((u16)i + 1);
+            NumericalOrderPokemonAddition(regularSpeciesNumber, i, &ret);
         }
-        if(IsNationalPokedexEnabled())
-        {
-            u16 regularSpeciesNumber;
-            //TODO_DEX: return to OG pret
-            break;
-        }
+        break;
     case DEX_ORDER_ATOZ:
         for (i = 0; i < NUM_SPECIES - 1; i++)
         {
@@ -1581,22 +1572,13 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
         }
         break;
     case DEX_ORDER_NUMERICAL_NATIONAL: //national dex list populator
-        if(IsNationalPokedexEnabled())
+        u16 regularSpeciesNumber;
+        for (i = 0; i < NATIONAL_DEX_COUNT; i++)
         {
-            u16 regularSpeciesNumber;
-            for (i = 0; i < NATIONAL_DEX_COUNT; i++)
-            {
-                regularSpeciesNumber = NationalPokedexNumToSpecies((u16)i + 1);
-                NumericalOrderPokemonAddition(regularSpeciesNumber, i, &ret);
-            }
-            break;
+            regularSpeciesNumber = NationalPokedexNumToSpecies((u16)i + 1);
+            NumericalOrderPokemonAddition(regularSpeciesNumber, i, &ret);
         }
-        else
-        {
-            u16 regularSpeciesNumber;
-            //TODO_DEX same
-            break;
-        }
+        break;
     }
     return ret;
 }
@@ -1615,7 +1597,6 @@ static void NumericalOrderPokemonAddition(u16 species, s32 index, u16 *highestIn
     {
         sPokedexScreenData->listItems[index].label = gText_5Dashes;
     }
-    //TODO:forme add a form label?
 }
 
 static void DexScreen_InitListMenuForOrderedList(const struct ListMenuTemplate * template, u8 order)
