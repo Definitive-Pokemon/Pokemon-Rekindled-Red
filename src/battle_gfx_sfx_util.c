@@ -160,7 +160,6 @@ static void DoBattleSpriteAffineAnim(struct Sprite *sprite, bool8 arg1)
 
 void SpriteCB_TrainerSlideIn(struct Sprite *sprite)
 {
-    PlaySE(SE_PC_ON);
     if (!(gIntroSlideFlags & 1))
     {
         sprite->x2 += sprite->data[0];
