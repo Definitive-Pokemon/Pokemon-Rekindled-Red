@@ -1479,6 +1479,7 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
     u16 highest_dex_num;
     u16 ret = NATIONAL_DEX_NONE;
     s32 i;
+    u16 regularSpeciesNumber;
     bool8 caught;
     bool8 seen;
 
@@ -1491,7 +1492,6 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
     {
     default:
     case DEX_ORDER_NUMERICAL_KANTO: //regular kanto dex list populator
-        u16 regularSpeciesNumber;
         for (i = 0; i < KANTO_DEX_COUNT; i++)
         {
             regularSpeciesNumber = NationalPokedexNumToSpecies((u16)i + 1);
@@ -1572,7 +1572,6 @@ static u16 DexScreen_CountMonsInOrderedList(u8 orderIdx)
         }
         break;
     case DEX_ORDER_NUMERICAL_NATIONAL: //national dex list populator
-        u16 regularSpeciesNumber;
         for (i = 0; i < NATIONAL_DEX_COUNT; i++)
         {
             regularSpeciesNumber = NationalPokedexNumToSpecies((u16)i + 1);
