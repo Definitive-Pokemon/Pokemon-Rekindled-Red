@@ -165,13 +165,6 @@
       "elevation": 4,
       "dest_map": "MAP_ONE_ISLAND_POKEMON_CENTER_2F",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 14,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_DEBUG",
-      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

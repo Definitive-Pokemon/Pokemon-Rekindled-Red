@@ -378,8 +378,8 @@
       "x": 20,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_ONE_ISLAND_POKEMON_CENTER_1F",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_ONE_ISLAND",
+      "dest_warp_id": "4"
     },
     {
       "x": 20,

@@ -23,6 +23,16 @@
       "map": "MAP_KYOGRE_DEN",
       "offset": 0,
       "direction": "dive"
+    },
+    {
+      "map": "MAP_KYOGRE_DEN",
+      "offset": 0,
+      "direction": "dive"
+    },
+    {
+      "map": "MAP_KYOGRE_DEN",
+      "offset": 0,
+      "direction": "emerge"
     }
   ],
   "object_events": [
