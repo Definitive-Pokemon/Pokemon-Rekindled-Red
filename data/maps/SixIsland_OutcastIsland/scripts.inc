@@ -15,10 +15,10 @@ SixIsland_OutcastIsland_EventScript_MysteryManCheck::
 	
 SixIsland_OutcastIsland_EventScript_MysteryMan::
 	lockall
-	applymovement SixIsland_OutcastIsland_Movement_OldManUp
+	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManUp
 	waitmovement 0
 	msgbox SixIsland_OutcastIsland_Text_OldMan MSGBOX_NPC
-	applymovement SixIsland_OutcastIsland_Movement_OldManGo
+	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManGo
 	waitmovement 0
 	fadescreen FADE_TO_WHITE
 	playse SE_PIN
@@ -28,8 +28,8 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 	addobject LOCALID_LAPRAS
 	clearflag FLAG_HIDE_LAPRAS_OLD
 	fadescreen FADE_FROM_WHITE
-	applymovement SixIsland_OutcastIsland_Movement_OldManSurf
-	applymovement SixIsland_OutcastIsland_Movement_LaprasManSurf
+	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManSurf
+	applymovement LOCALID_LAPRAS SixIsland_OutcastIsland_Movement_LaprasManSurf
 	waitmovement 0
 	removeobject LOCALID_OLD_MAN
 	removeobject LOCALID_LAPRAS
