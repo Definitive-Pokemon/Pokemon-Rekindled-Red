@@ -18,8 +18,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_POKE_MANIAC",
-      "x": 7,
-      "y": 4,
+      "x": 8,
+      "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -32,8 +32,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACKBELT",
-      "x": 20,
-      "y": 11,
+      "x": 21,
+      "y": 12,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
       "movement_range_x": 1,
@@ -47,8 +47,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_JUGGLER",
-      "x": 31,
-      "y": 16,
+      "x": 32,
+      "y": 17,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
@@ -61,8 +61,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TAMER",
-      "x": 26,
-      "y": 6,
+      "x": 27,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_LEFT_UP",
       "movement_range_x": 4,
@@ -75,8 +75,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_JUGGLER",
-      "x": 36,
-      "y": 5,
+      "x": 37,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -89,8 +89,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 17,
-      "y": 6,
+      "x": 18,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -119,8 +119,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 25,
-      "y": 13,
+      "x": 26,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -149,8 +149,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 8,
-      "y": 7,
+      "x": 9,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -164,8 +164,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 6,
-      "y": 17,
+      "x": 7,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -179,8 +179,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 33,
-      "y": 19,
+      "x": 34,
+      "y": 20,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -194,8 +194,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
-      "x": 40,
-      "y": 9,
+      "x": 41,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -209,8 +209,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MASTER_SCIENTIST",
-      "x": 27,
-      "y": 17,
+      "x": 28,
+      "y": 18,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -220,33 +220,19 @@
       "script": "MasterTrainer_EventScript_Moltres",
       "flag": "FLAG_HIDE_MASTER_TRAINERS",
       "in_connection": false
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ENTEI",
-      "x": 18,
-      "y": 6,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "VictoryRoad_2F_EventScript_Entei",
-      "flag": "FLAG_HIDE_ENTEI_ROAM"
     }
   ],
   "warp_events": [
     {
-      "x": 1,
-      "y": 9,
+      "x": 2,
+      "y": 10,
       "elevation": 3,
       "dest_map": "MAP_VICTORY_ROAD_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 3,
-      "y": 3,
+      "x": 4,
+      "y": 4,
       "elevation": 3,
       "dest_map": "MAP_VICTORY_ROAD_3F",
       "dest_warp_id": "0"
@@ -266,46 +252,53 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 36,
-      "y": 17,
+      "x": 37,
+      "y": 18,
       "elevation": 4,
       "dest_map": "MAP_VICTORY_ROAD_3F",
       "dest_warp_id": "3"
     },
     {
+      "x": 50,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE23",
+      "dest_warp_id": "1"
+    },
+    {
       "x": 49,
       "y": 13,
-      "elevation": 0,
+      "elevation": 3,
       "dest_map": "MAP_ROUTE23",
       "dest_warp_id": "1"
     },
     {
       "x": 48,
-      "y": 12,
-      "elevation": 3,
-      "dest_map": "MAP_ROUTE23",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 47,
-      "y": 13,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_ROUTE23",
       "dest_warp_id": "1"
     },
     {
-      "x": 34,
-      "y": 19,
+      "x": 35,
+      "y": 20,
       "elevation": 3,
       "dest_map": "MAP_VICTORY_ROAD_3F",
       "dest_warp_id": "4"
+    },
+    {
+      "x": 17,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_ENTEI",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
     {
       "type": "trigger",
-      "x": 2,
-      "y": 19,
+      "x": 3,
+      "y": 20,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER1",
       "var_value": "99",
@@ -313,8 +306,8 @@
     },
     {
       "type": "trigger",
-      "x": 14,
-      "y": 19,
+      "x": 15,
+      "y": 20,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER2",
       "var_value": "99",

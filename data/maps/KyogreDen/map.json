@@ -36,7 +36,7 @@
       "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "KyogreDen_BrailleMessage"
     },
     {
       "type": "sign",
@@ -44,7 +44,7 @@
       "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "KyogreDen_BrailleMessage"
     }
   ],
   "level_scaling": "5"

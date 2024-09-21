@@ -1300,8 +1300,8 @@
     {
       "id": "LAYOUT_VICTORY_ROAD_2F",
       "name": "VictoryRoad_2F_Layout",
-      "width": 51,
-      "height": 22,
+      "width": 53,
+      "height": 24,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -5268,6 +5268,18 @@
       "secondary_tileset": "gTileset_RockTunnel",
       "border_filepath": "data/layouts/AlteringCave2/border.bin",
       "blockdata_filepath": "data/layouts/AlteringCave2/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_ENTEI",
+      "name": "VictoryRoad_Entei_Layout",
+      "width": 7,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/VictoryRoad_Entei/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_Entei/map.bin"
     }
   ]
 }

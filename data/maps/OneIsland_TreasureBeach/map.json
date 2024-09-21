@@ -63,13 +63,6 @@
       "elevation": 0,
       "dest_map": "MAP_PRIMORDIAL_ALTAR",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 25,
-      "y": 28,
-      "elevation": 0,
-      "dest_map": "MAP_DEBUG",
-      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

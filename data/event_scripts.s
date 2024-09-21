@@ -1477,3 +1477,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/AlteringCave2/scripts.inc"
 	.include "data/maps/AlteringCave2/text.inc"
+
+	.include "data/maps/VictoryRoad_Entei/scripts.inc"
+	.include "data/maps/VictoryRoad_Entei/text.inc"

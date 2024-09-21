@@ -285,3 +285,12 @@ Braille_Text_Pokemon2::
 	
 Braille_Text_Waits::
 	.braille "WAITS.$"
+
+Braille_Text_Primordial::
+	.braille "PRIMORDIAL$"
+	
+Braille_Text_Altar::
+	.braille "ALTAR$"
+	
+Braille_Text_Ahead::
+	.braille "AHEAD.$"
