@@ -3,7 +3,12 @@
 .set LOCALID_EMERALD, 3
 
 PrimordialAltar_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PrimordialAltar_OnTransition
 	.byte 0
+
+PrimordialAltar_OnTransition::
+	setworldmapflag FLAG_WORLD_MAP_PRIMORDIAL_CAVE
+	end
 
 PrimordialAltar_EventScript_Altar::
 	lockall

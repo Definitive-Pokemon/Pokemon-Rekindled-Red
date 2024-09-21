@@ -17,7 +17,8 @@ CeladonCity_Condominiums_3F_Text_ImGameDesignerShowMeFinishedPokedex::
     .string "I'm the game designer!\p"
     .string "Filling up your POKéDEX is tough,\n"
     .string "but don't quit!\p"
-    .string "When you finish, come tell me!$"
+    .string "When you finish the KANTO POKéDEX,\n"
+	.string "come tell me!$"
 
 CeladonCity_Condominiums_3F_Text_CompletedPokedexCongratulations::
     .string "Wow! Excellent!\n"

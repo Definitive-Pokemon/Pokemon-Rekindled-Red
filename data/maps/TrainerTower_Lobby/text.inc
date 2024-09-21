@@ -126,12 +126,11 @@ TrainerTower_Lobby_Text_StairsTougherThanAnyBattle::
 TrainerTower_Lobby_Text_Lore::
     .string "The legendary prize they offer\n"
     .string "here at the tower…\p"
-    .string "They say it was found in a cave\n"
+    .string "They say it was found in a shrine\n"
     .string "underneath the building site.\p"
     .string "I wonder if they were right in\n"
     .string "just taking it like that.$"
 	
 TrainerTower_Lobby_Text_Guard::
-	.string "I'm terribly sorry.\n"
-	.string "No trespassing!\p"
-	.string "Scram!$"
+	.string "I'm terribly sorry, but this part\n"
+	.string "of the tower is off-limits.$"
