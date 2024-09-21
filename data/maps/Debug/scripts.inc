@@ -103,6 +103,7 @@ Debug_UnlockGame::
 	setflag FLAG_BADGE06_GET
 	setflag FLAG_BADGE07_GET
 	setflag FLAG_BADGE08_GET
+	setflag FLAG_HIDE_CERULEAN_CAVE_GUARD
 	@HMs
 	giveitem ITEM_HM01
 	giveitem ITEM_HM02
