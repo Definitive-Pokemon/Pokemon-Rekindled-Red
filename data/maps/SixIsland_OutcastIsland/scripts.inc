@@ -29,7 +29,7 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 	clearflag FLAG_HIDE_LAPRAS_OLD
 	fadescreen FADE_FROM_WHITE
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManSurf
-	applymovement LOCALID_LAPRAS SixIsland_OutcastIsland_Movement_LaprasManSurf
+	applymovement LOCALID_LAPRAS SixIsland_OutcastIsland_Movement_LaprasSurf
 	waitmovement 0
 	removeobject LOCALID_OLD_MAN
 	removeobject LOCALID_LAPRAS
@@ -73,3 +73,6 @@ SixIsland_OutcastIsland_Movement_LaprasSurf::
 	walk_fast_down
 	walk_fast_down
 	step_end
+	
+SixIsland_OutcastIsland_Text_OldMan::
+	.string "I AM OLD MAN$"
