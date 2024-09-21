@@ -1683,56 +1683,56 @@
     {
       "map_section": "MAPSEC_PRIMORDIAL_ALTAR",
       "name": "PRIMORDIAL ALTAR",
-      "x": 2,
-      "y": 10,
+      "x": 0,
+      "y": 0,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_STONE_TOMB",
       "name": "STONE TOMB",
-      "x": 19,
-      "y": 13,
+      "x": 0,
+      "y": 0,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_TERRA_CAVE",
       "name": "TERRA CAVE",
-      "x": 24,
-      "y": 15,
+      "x": 0,
+      "y": 0,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_AERO_CAVE",
       "name": "AERO CAVE",
-      "x": 24,
-      "y": 15,
+      "x": 0,
+      "y": 0,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_MARINE_CAVE",
       "name": "MARINE CAVE",
-      "x": 24,
-      "y": 15,
+      "x": 0,
+      "y": 0,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_ICY_TOMB",
-      "name": "",
-      "x": 3,
-      "y": 4,
+      "name": "ICY TOMB",
+      "x": 0,
+      "y": 0,
       "width": 1,
       "height": 1
     },
     {
       "map_section": "MAPSEC_METAL_TOMB",
       "name": "METAL TOMB",
-      "x": 18,
-      "y": 14,
+      "x": 0,
+      "y": 0,
       "width": 1,
       "height": 1
     },
@@ -1750,6 +1750,14 @@
       "x": 7,
       "y": 14,
       "width": 3,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_MONITORING_STATION",
+      "name": "MONITORING STATION",
+      "x": 0,
+      "y": 0,
+      "width": 1,
       "height": 1
     }
   ]

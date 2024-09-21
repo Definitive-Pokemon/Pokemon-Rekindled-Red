@@ -3,7 +3,7 @@
   "name": "Metal_Tomb",
   "layout": "LAYOUT_METAL_TOMB",
   "music": "MUS_SEALED_CHAMBER",
-  "region_map_section": "MAPSEC_MEMORIAL_PILLAR",
+  "region_map_section": "MAPSEC_METAL_TOMB",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",

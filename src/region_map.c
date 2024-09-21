@@ -3433,8 +3433,31 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     case MAPSEC_ARTISAN_CAVE:
     case MAPSEC_BATTLE_FRONTIER:
     case MAPSEC_SOUTHERN_ISLAND:
+    case MAPSEC_MARINE_CAVE:
+    case MAPSEC_TERRA_CAVE:
+    case MAPSEC_AERO_CAVE:
         sMapCursor->x = 0;
         sMapCursor->y = 17;
+        break;
+    case MAPSEC_PRIMORDIAL_ALTAR:
+        sMapCursor->x = 1;
+        sMapCursor->y = 10;
+        break;
+    case MAPSEC_MONITORING_STATION:
+        sMapCursor->x = 5;
+        sMapCursor->y = 6;
+        break;
+    case MAPSEC_STONE_TOMB:
+        sMapCursor->x = 19;
+        sMapCursor->y = 13;
+        break;
+    case MAPSEC_ICY_TOMB:
+        sMapCursor->x = 3;
+        sMapCursor->y = 4;
+        break;
+    case MAPSEC_METAL_TOMB:
+        sMapCursor->x = 18;
+        sMapCursor->y = 14;
         break;
     default:
         GetPlayerPositionOnRegionMap();
