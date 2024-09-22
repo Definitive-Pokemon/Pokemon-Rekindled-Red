@@ -2,10 +2,10 @@
 .equ LOCALID_LAPRAS, 9
 
 SixIsland_OutcastIsland_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, SixIsland_OutcastIsland_OnLoad
+	map_script MAP_SCRIPT_ON_LOAD, SixIsland_OutcastIsland_OnFrame
 	.byte 0
 	
-SixIsland_OutcastIsland_OnLoad::
+SixIsland_OutcastIsland_OnFrame::
 	goto_if_set FLAG_WORLD_MAP_SIX_ISLAND_ALTERING_CAVE, SixIsland_OutcastIsland_EventScript_MysteryManCheck
 	end
 	
@@ -14,7 +14,7 @@ SixIsland_OutcastIsland_EventScript_MysteryManCheck::
 	end
 	
 SixIsland_OutcastIsland_EventScript_MysteryMan::
-	lock
+	lockall
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManUp
 	waitmovement 0
 	msgbox SixIsland_OutcastIsland_Text_OldMan MSGBOX_NPC
@@ -38,7 +38,7 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 	removeobject LOCALID_LAPRAS
 	setflag FLAG_MYSTERY_MAN_GONE
 	setflag FLAG_HIDE_LAPRAS_OLD
-	release
+	releaseall
 	end
 
 SixIsland_OutcastIsland_EventScript_Rocket::
