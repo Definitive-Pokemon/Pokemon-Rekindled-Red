@@ -1010,7 +1010,7 @@ TwoIsland_CapeBrink_House_Movement_UltimaExclaim::
 	emote_exclamation_mark
 	step_end
 
-TwoIsland_CapeBrink_Text_DeliveredFiles::
+TwoIsland_CapeBrink_House_Text_DeliveredFiles::
     .string "{PLAYER} delivered the SECRET FILES.$"
 
 @ Unused
