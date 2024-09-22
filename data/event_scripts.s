@@ -1000,6 +1000,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_MYSTERY_MAN_GONE
 	setflag FLAG_HIDE_LAPRAS_OLD
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
+	setvar VAR_ALTERING, 0
 	end
 
 	.include "data/scripts/hall_of_fame.inc"

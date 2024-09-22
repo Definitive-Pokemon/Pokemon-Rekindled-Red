@@ -915,6 +915,7 @@ TwoIsland_CapeBrink_House_EventScript_StarterTutor::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
+	goto_if_set FLAG_RECEIVED_SECRET_FILES, TwoIsland_CapeBrink_House_EventScript_Ultima
 	goto_if_set FLAG_LEARNED_ALL_MOVES_AT_CAPE_BRINK, CapeBrinkTutor_EventScript_TaughtAllMoves
 	goto_if_set FLAG_TEMP_2, CapeBrinkTutor_EventScript_MoveJustTaught
 	bufferleadmonspeciesname STR_VAR_1
@@ -932,6 +933,85 @@ TwoIsland_CapeBrink_House_EventScript_StarterTutor::
 	closemessage
 	fadescreen FADE_TO_BLACK
 	goto CapeBrinkTutor_EventScript_ChooseMon
+	
+TwoIsland_CapeBrink_House_EventScript_Ultima::
+	msgbox TwoIsland_CapeBrink_House_Text_Ultima MSGBOX_NPC
+	playse SE_PIN
+	applymovement VAR_LAST_TALKED, TwoIsland_CapeBrink_House_Movement_UltimaExclaim
+	waitmovement 0
+	msgbox TwoIsland_CapeBrink_House_Text_Ultima2 MSGBOX_NPC
+	playfanfare MUS_OBTAIN_TMHM
+	textcolor 3
+	message TwoIsland_CapeBrink_House_Text_DeliveredFiles
+	waitmessage
+	waitfanfare
+	call EventScript_RestorePrevTextColor
+	removeitem ITEM_SECRET_FILES, 1
+	msgbox TwoIsland_CapeBrink_House_Text_Ultima3 MSGBOX_NPC
+	textcolor 3
+	msgbox TwoIsland_CapeBrink_House_Text_Files MSGBOX_NPC
+	call EventScript_RestorePrevTextColor
+	msgbox TwoIsland_CapeBrink_House_Text_Ultima4 MSGBOX_NPC
+	setvar VAR_ALTERING, 1
+	releaseall
+	end
+
+TwoIsland_CapeBrink_House_Text_Ultima::
+    .string "I perfected the ultimate move of\n"
+    .string "its type…\p"
+    .string "But will no one take it for\n"
+    .string "future use?$"
+	
+TwoIsland_CapeBrink_House_Text_Ultima2::
+    .string "DOGA…?\n"
+    .string "You know DOGA?!\p"
+    .string "You met him in front of\n"
+    .string "ALTERING CAVE?\p"
+    .string "He even gave you the documents\n"
+    .string "he took from the WAREHOUSE?\p"
+    .string "Give them to me, quick!$"
+
+TwoIsland_CapeBrink_House_Text_Ultima3::
+    .string "…… …… ……\n"
+    .string "Very interesting…\p"
+    .string "DOGA gave you these files to\n"
+    .string "bring them to me safely,\p"
+    .string "but I have no idea why he took\n"
+    .string "them to OUTCAST ISLAND.\p"
+    .string "There is a section here, though…\n"
+    .string "DOGA outlined much text here.\p"
+	.string "It reads:$"
+
+TwoIsland_CapeBrink_House_Text_Files::
+	.string "THE ENVOY OF SPACE\n"
+	.string "In ALTERING CAVE sleeps the\n"
+	.string "ENVOY OF SPACE, capable of\p"
+	.string "granting the wishes of anyone\n"
+	.string "who commands its power.\p"
+	.string "At least, this is claimed in the\n"
+	.string "ancient legends of the DRACONIDS.\p"
+	.string "Though the cave located on\n"
+	.string "OUTCAST ISLAND looks like\p"
+	.string "nothing special, a hidden phrase\n"
+	.string "mentioned in the ancient myths\p"
+	.string "is said to reveal its many secrets.\p"
+	.string "The phrase is:\n"
+	.string "THE NEXT WORLD WAITS FOR YOU.\p"
+	.string "Soon, we will send out a squad\n"
+	.string "of GRUNTS to ALTERING CAVE\p"
+	.string "in order to verify these legends.\p"
+	.string "Ideally, we return with the mythical\n"
+	.string "JIRACHI!$"
+
+TwoIsland_CapeBrink_House_Text_Ultima4::
+	.string "Check out this shit!$"
+
+TwoIsland_CapeBrink_House_Movement_UltimaExclaim::
+	emote_exclamation_mark
+	step_end
+
+TwoIsland_CapeBrink_Text_DeliveredFiles::
+    .string "{PLAYER} delivered the SECRET FILES.$"
 
 @ Unused
 CapeBrinkTutor_EventScript_FadeTaughtMove::

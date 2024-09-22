@@ -163,7 +163,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_ALTERING",
+      "var_value": "1",
+      "script": "SixIsland_OutcastIsland_EventScript_Altering"
+    }
   ],
   "bg_events": [
     {

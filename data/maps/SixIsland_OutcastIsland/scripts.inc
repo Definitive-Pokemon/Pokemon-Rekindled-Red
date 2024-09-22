@@ -19,6 +19,7 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 	waitmovement 0
 	msgbox SixIsland_OutcastIsland_Text_OldMan MSGBOX_NPC
 	giveitem_msg OutcastIsland_Text_ObtainedSecretFiles, ITEM_SECRET_FILES
+	setflag FLAG_RECEIVED_SECRET_FILES
 	msgbox SixIsland_OutcastIsland_Text_OldMan2 MSGBOX_NPC
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManGo
 	waitmovement 0
@@ -43,6 +44,12 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 SixIsland_OutcastIsland_EventScript_Rocket::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_46, SixIsland_OutcastIsland_Text_RocketIntro, SixIsland_OutcastIsland_Text_RocketDefeat
 	msgbox SixIsland_OutcastIsland_Text_RocketPostBattle, MSGBOX_AUTOCLOSE
+	end
+	
+SixIsland_OutcastIsland_EventScript_Altering::
+	lockall
+	msgbox SixIsland_OutcastIsland_Text_Altering MSGBOX_SIGN
+	releaseall
 	end
 
 SixIsland_OutcastIsland_Movement_OldManUp::
@@ -95,9 +102,13 @@ SixIsland_OutcastIsland_Text_OldMan2::
 	.string "but it was worth it!\p"
 	.string "Many POKéMON are now spared a\n"
 	.string "life in captivity…\p"
-	.string "Please bring these files to ULTIMA.\n"
+	.string "Please bring these files to ULTIMA\n"
+	.string "and mention my name: DOGA.\p"
 	.string "You are my only hope!$"
 
 OutcastIsland_Text_ObtainedSecretFiles::
 	.string "{PLAYER} received SECRET FILES\n"
 	.string "from the mysterious old man!$"
+	
+SixIsland_OutcastIsland_Text_Altering::
+	.string "Cave altered.$"

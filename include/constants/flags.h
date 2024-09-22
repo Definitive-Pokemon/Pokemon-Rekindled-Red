@@ -708,7 +708,7 @@
 #define FLAG_RECEIVED_AURORA_TICKET                      0x2A7
 #define FLAG_RECEIVED_MYSTIC_TICKET                      0x2A8
 #define FLAG_RECEIVED_OLD_SEA_MAP                        0x2A9
-#define FLAG_WONDER_CARD_UNUSED_1                        0x2AA
+#define FLAG_RECEIVED_SECRET_FILES                       0x2AA
 #define FLAG_WONDER_CARD_UNUSED_2                        0x2AB
 #define FLAG_WONDER_CARD_UNUSED_3                        0x2AC
 #define FLAG_WONDER_CARD_UNUSED_4                        0x2AD
