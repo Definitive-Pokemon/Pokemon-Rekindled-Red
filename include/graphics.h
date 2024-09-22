@@ -3336,6 +3336,8 @@ extern const u32 gItemIcon_OldSeaMap[];
 extern const u32 gItemIconPalette_OldSeaMap[];
 extern const u32 gItemIcon_LinkBracelet[];
 extern const u32 gItemIconPalette_LinkBracelet[];
+extern const u32 gItemIcon_SecretFiles[];
+extern const u32 gItemIconPalette_SecretFiles[];
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u32 gItemIconPalette_ReturnToFieldArrow[];
 
