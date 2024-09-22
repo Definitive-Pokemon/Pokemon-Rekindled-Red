@@ -244,7 +244,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_THICK_CLUB]     = {gItemIcon_ThickClub, gItemIconPalette_ThickClub},
     [ITEM_STICK]          = {gItemIcon_Stick, gItemIconPalette_Stick},
     // ????????
-    [ITEM_0E2]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_SECRET_FILES]   = {gItemIcon_SecretFiles, gItemIconPalette_SecretFiles},
     [ITEM_0E3]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0E4]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0E5]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},

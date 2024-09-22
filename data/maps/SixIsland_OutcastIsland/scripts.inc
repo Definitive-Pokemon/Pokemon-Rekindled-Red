@@ -18,6 +18,8 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManUp
 	waitmovement 0
 	msgbox SixIsland_OutcastIsland_Text_OldMan MSGBOX_NPC
+	giveitem_msg OutcastIsland_Text_ObtainedSecretFiles, ITEM_SECRET_FILES
+	msgbox SixIsland_OutcastIsland_Text_OldMan2 MSGBOX_NPC
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManGo
 	waitmovement 0
 	fadescreen FADE_TO_WHITE
@@ -75,4 +77,27 @@ SixIsland_OutcastIsland_Movement_LaprasSurf::
 	step_end
 	
 SixIsland_OutcastIsland_Text_OldMan::
-	.string "I AM OLD MAN$"
+	.string "You…\p"
+	.string "You seem like a well-travelled\n"
+	.string "young man.\p"
+	.string "You must help me.\p"
+	.string "Could you deliver these files to the\n"
+	.string "old woman living on TWO ISLAND?$"
+
+SixIsland_OutcastIsland_Text_OldMan2::
+	.string "I retrieved these files from the\n"
+	.string "ROCKET WAREHOUSE on FIVE ISLAND.\p"
+	.string "These documents contain all sorts\n"
+	.string "of information regarding the\p"
+	.string "whereabouts of both common and\n"
+	.string "rare POKéMON.\p"
+	.string "The ROCKETS are after me now,\n"
+	.string "but it was worth it!\p"
+	.string "Many POKéMON are now spared a\n"
+	.string "life in captivity…\p"
+	.string "Please bring these files to ULTIMA.\n"
+	.string "You are my only hope!$"
+
+OutcastIsland_Text_ObtainedSecretFiles::
+	.string "{PLAYER} received SECRET FILES\n"
+	.string "from the mysterious old man!$"

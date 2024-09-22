@@ -720,3 +720,6 @@ const u32 gItemIconPalette_OldSeaMap[] = INCBIN_U32("graphics/items/icon_palette
 
 const u32 gItemIcon_LinkBracelet[] = INCBIN_U32("graphics/items/icons/link_bracelet.4bpp.lz");
 const u32 gItemIconPalette_LinkBracelet[] = INCBIN_U32("graphics/items/icon_palettes/link_bracelet.gbapal.lz");
+
+const u32 gItemIcon_SecretFiles[] = INCBIN_U32("graphics/items/icons/secret_files.4bpp.lz");
+const u32 gItemIconPalette_SecretFiles[] = INCBIN_U32("graphics/items/icon_palettes/secret_files.gbapal.lz");
