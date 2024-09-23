@@ -1201,6 +1201,7 @@ static void DexScreen_InitGfxForTopMenu(void)
     sPokedexScreenData->dexCountsWindowId = AddWindow(&sWindowTemplate_DexCounts);
     if (IsNationalPokedexEnabled())
     {
+        PlaySE(SE_M_HYPER_BEAM2);
         listMenuTemplate = sListMenuTemplate_NatDexModeSelect;
         listMenuTemplate.windowId = sPokedexScreenData->modeSelectWindowId;
         sPokedexScreenData->modeSelectListMenuId = ListMenuInit(&listMenuTemplate, sPokedexScreenData->modeSelectCursorPos, sPokedexScreenData->modeSelectItemsAbove);
