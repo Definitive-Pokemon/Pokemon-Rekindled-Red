@@ -1113,6 +1113,10 @@ static void InitRegionMapType(void)
     switch (gMapHeader.regionMapSectionId)
     {
         case MAPSEC_UNDERWATER_124:
+        case MAPSEC_PRIMORDIAL_ALTAR:
+        case MAPSEC_AERO_CAVE:
+        case MAPSEC_TERRA_CAVE:
+        case MAPSEC_MARINE_CAVEL:
         region = REGIONMAP_SEVII123;
         break;
         case MAPSEC_MONITORING_STATION: 
