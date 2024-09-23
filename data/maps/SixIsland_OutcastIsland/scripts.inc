@@ -2,7 +2,7 @@
 .equ LOCALID_LAPRAS, 9
 
 SixIsland_OutcastIsland_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME, SixIsland_OutcastIsland_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SixIsland_OutcastIsland_OnFrame
 	.byte 0
 	
 SixIsland_OutcastIsland_OnFrame::
