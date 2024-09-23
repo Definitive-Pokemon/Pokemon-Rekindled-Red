@@ -1110,6 +1110,15 @@ static void InitRegionMapType(void)
     {
         region = REGIONMAP_KANTO;
     }
+    switch (gMapHeader.regionMapSectionId)
+    {
+        case MAPSEC_UNDERWATER_124:
+        region = REGIONMAP_SEVII123;
+        break;
+        case MAPSEC_MONITORING_STATION: 
+        region = REGIONMAP_SEVII67;
+        break;
+    }
     sRegionMap->selectedRegion = region;
     sRegionMap->playersRegion = region;
 }

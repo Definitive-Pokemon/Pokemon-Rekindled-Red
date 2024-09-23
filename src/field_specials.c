@@ -2620,6 +2620,18 @@ bool8 PlayerPartyContainsSpeciesWithPlayerID(void)
     return FALSE;
 }
 
+bool8 MystermanLocationsRequirement(void)
+{
+    if(!FlagGet(FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR))
+        return FALSE;
+    return TRUE;
+}
+
+void MysterManAppearanceCheck(void)
+{
+    gSpecialVar_Result = MystermanLocationsRequirement();
+}
+
 /*
  * Determines which of Lorelei's doll collection to show
  * based on how many times you've entered the Hall of Fame.
