@@ -14,7 +14,7 @@ SixIsland_OutcastIsland_EventScript_MysteryManCheck::
 	end
 	
 SixIsland_OutcastIsland_EventScript_MysteryMan::
-	lockall
+	lock
 	setvar VAR_TEMP_0, 1
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManUp
 	waitmovement 0
@@ -42,7 +42,7 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 	removeobject LOCALID_LAPRAS
 	setflag FLAG_HIDE_LAPRAS_OLD
 	setflag FLAG_MYSTERY_MAN_GONE
-	releaseall
+	release
 	end
 
 SixIsland_OutcastIsland_EventScript_Rocket::
