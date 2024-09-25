@@ -6,16 +6,16 @@ SixIsland_OutcastIsland_MapScripts::
 	.byte 0
 	
 SixIsland_OutcastIsland_OnFrame::
-	goto_if_set FLAG_WORLD_MAP_SIX_ISLAND_ALTERING_CAVE, SixIsland_OutcastIsland_EventScript_MysteryManCheck
+	map_script_2 VAR_TEMP_0, 0, SixIsland_OutcastIsland_EventScript_MysteryManCheck
 	end
-	
+
 SixIsland_OutcastIsland_EventScript_MysteryManCheck::
 	goto_if_unset FLAG_MYSTERY_MAN_GONE, SixIsland_OutcastIsland_EventScript_MysteryMan
 	end
 	
 SixIsland_OutcastIsland_EventScript_MysteryMan::
 	lockall
-	setflag FLAG_MYSTERY_MAN_GONE
+	setvar VAR_TEMP_0, 1
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManUp
 	waitmovement 0
 	msgbox SixIsland_OutcastIsland_Text_OldMan MSGBOX_NPC
@@ -38,6 +38,7 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 	removeobject LOCALID_OLD_MAN
 	removeobject LOCALID_LAPRAS
 	setflag FLAG_HIDE_LAPRAS_OLD
+	setflag FLAG_MYSTERY_MAN_GONE
 	releaseall
 	end
 
