@@ -28,7 +28,7 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManGo
 	waitmovement 0
 	fadescreen FADE_TO_WHITE
-	playse SE_PIN
+	playse SE_BALL_OPEN
 	waitse
 	playmoncry SPECIES_LAPRAS, CRY_MODE_ENCOUNTER
 	waitse
