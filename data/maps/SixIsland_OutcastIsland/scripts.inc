@@ -18,9 +18,12 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 	setvar VAR_TEMP_0, 1
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManUp
 	waitmovement 0
+	textcolor 0
 	msgbox SixIsland_OutcastIsland_Text_OldMan MSGBOX_NPC
+	textcolor 3
 	giveitem_msg OutcastIsland_Text_ObtainedSecretFiles, ITEM_SECRET_FILES
 	setflag FLAG_RECEIVED_SECRET_FILES
+	call EventScript_RestorePrevTextColor
 	msgbox SixIsland_OutcastIsland_Text_OldMan2 MSGBOX_NPC
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManGo
 	waitmovement 0
@@ -86,7 +89,7 @@ SixIsland_OutcastIsland_Movement_LaprasSurf::
 	
 SixIsland_OutcastIsland_Text_OldMan::
 	.string "You…\p"
-	.string "You seem like a well-travelled\n"
+	.string "You seem like a well-traveled\n"
 	.string "young man.\p"
 	.string "You must help me.\p"
 	.string "Could you deliver these files to the\n"
