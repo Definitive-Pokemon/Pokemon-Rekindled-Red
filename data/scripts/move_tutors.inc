@@ -945,7 +945,7 @@ TwoIsland_CapeBrink_House_EventScript_Ultima::
 	message TwoIsland_CapeBrink_House_Text_DeliveredFiles
 	waitmessage
 	waitfanfare
-	call EventScript_RestorePrevTextColor
+	textcolor 1
 	removeitem ITEM_SECRET_FILES, 1
 	msgbox TwoIsland_CapeBrink_House_Text_Ultima3 MSGBOX_NPC
 	textcolor 3

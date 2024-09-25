@@ -14,7 +14,7 @@ SixIsland_OutcastIsland_EventScript_MysteryManCheck::
 	end
 	
 SixIsland_OutcastIsland_EventScript_MysteryMan::
-	lock
+	lockall
 	setvar VAR_TEMP_0, 1
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManUp
 	waitmovement 0
@@ -23,7 +23,7 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 	textcolor 3
 	giveitem_msg OutcastIsland_Text_ObtainedSecretFiles, ITEM_SECRET_FILES
 	setflag FLAG_RECEIVED_SECRET_FILES
-	call EventScript_RestorePrevTextColor
+	textcolor 0
 	msgbox SixIsland_OutcastIsland_Text_OldMan2 MSGBOX_NPC
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManGo
 	waitmovement 0
@@ -42,7 +42,7 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 	removeobject LOCALID_LAPRAS
 	setflag FLAG_HIDE_LAPRAS_OLD
 	setflag FLAG_MYSTERY_MAN_GONE
-	release
+	releaseall
 	end
 
 SixIsland_OutcastIsland_EventScript_Rocket::
