@@ -7,7 +7,7 @@ SixIsland_OutcastIsland_MapScripts::
 	
 SixIsland_OutcastIsland_OnFrame::
 	map_script_2 VAR_TEMP_0, 0, SixIsland_OutcastIsland_EventScript_MysteryManCheck
-	end
+	.2byte 0
 
 SixIsland_OutcastIsland_EventScript_MysteryManCheck::
 	goto_if_unset FLAG_MYSTERY_MAN_GONE, SixIsland_OutcastIsland_EventScript_MysteryMan
