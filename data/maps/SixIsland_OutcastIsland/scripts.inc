@@ -33,7 +33,9 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 	waitse
 	addobject LOCALID_LAPRAS
 	clearflag FLAG_HIDE_LAPRAS_OLD
+	delay 20
 	fadescreen FADE_FROM_WHITE
+	delay 20
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManSurf
 	applymovement LOCALID_LAPRAS SixIsland_OutcastIsland_Movement_LaprasSurf
 	waitmovement 0
