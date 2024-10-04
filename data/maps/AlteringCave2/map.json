@@ -18,7 +18,27 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 6,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ALTERING_CAVE_GROUND",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 28,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_ALTERING_CAVE_FLYING",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ALTERING_CAVE_WAVE",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

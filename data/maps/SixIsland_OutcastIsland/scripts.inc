@@ -20,11 +20,6 @@ SixIsland_OutcastIsland_EventScript_MysteryMan::
 	waitmovement 0
 	textcolor 0
 	msgbox SixIsland_OutcastIsland_Text_OldMan MSGBOX_NPC
-	textcolor 3
-	giveitem_msg OutcastIsland_Text_ObtainedSecretFiles, ITEM_SECRET_FILES
-	setflag FLAG_RECEIVED_SECRET_FILES
-	textcolor 0
-	msgbox SixIsland_OutcastIsland_Text_OldMan2 MSGBOX_NPC
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManGo
 	waitmovement 0
 	fadescreen FADE_TO_WHITE

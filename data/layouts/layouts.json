@@ -5280,6 +5280,54 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/VictoryRoad_Entei/border.bin",
       "blockdata_filepath": "data/layouts/VictoryRoad_Entei/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALTERING_CAVE_WAVE",
+      "name": "AlteringCaveWave_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RockTunnel",
+      "border_filepath": "data/layouts/AlteringCaveWave/border.bin",
+      "blockdata_filepath": "data/layouts/AlteringCaveWave/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALTERING_CAVE_GROUND",
+      "name": "AlteringCaveGround_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RockTunnel",
+      "border_filepath": "data/layouts/AlteringCaveGround/border.bin",
+      "blockdata_filepath": "data/layouts/AlteringCaveGround/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALTERING_CAVE_FLYING",
+      "name": "AlteringCaveFlying_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RockTunnel",
+      "border_filepath": "data/layouts/AlteringCaveFlying/border.bin",
+      "blockdata_filepath": "data/layouts/AlteringCaveFlying/map.bin"
+    },
+    {
+      "id": "LAYOUT_ALTERING_CAVE_JIRACHI",
+      "name": "AlteringCaveJirachi_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RockTunnel",
+      "border_filepath": "data/layouts/AlteringCaveJirachi/border.bin",
+      "blockdata_filepath": "data/layouts/AlteringCaveJirachi/map.bin"
     }
   ]
 }
