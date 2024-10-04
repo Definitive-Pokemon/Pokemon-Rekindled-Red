@@ -3,7 +3,7 @@ EventScript_Questionnaire::
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox Text_FillOutQuestionnaire, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_DeclineQuestionnaire
-	setvar VAR_0x8004, EASY_CHAT_TYPE_QUESTIONNAIRE
+	setvar VAR_0x8004, EASY_CHAT_TYPE_ALTERING_CAVE
 	call Common_ShowEasyChatScreen
 	lock
 	faceplayer

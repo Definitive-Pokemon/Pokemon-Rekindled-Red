@@ -187,7 +187,7 @@ static void Task_RunEasyChat(u8 taskId)
     case 3:
         if (!gPaletteFade.active)
         {
-            if (data[EZCHAT_TASK_TYPE] == EASY_CHAT_TYPE_QUESTIONNAIRE)
+            if (data[EZCHAT_TASK_TYPE] == EASY_CHAT_TYPE_ALTERING_CAVE)
                 CompareQuestionnaireResponseWithPassphrase();
             if (data[EZCHAT_TASK_TYPE] == EASY_CHAT_TYPE_PROFILE)
             {
@@ -270,7 +270,7 @@ void ShowEasyChatScreen(void)
     case EASY_CHAT_TYPE_BATTLE_LOST:
         words = gSaveBlock1Ptr->easyChatBattleLost;
         break;
-    case EASY_CHAT_TYPE_QUESTIONNAIRE:
+    case EASY_CHAT_TYPE_ALTERING_CAVE:
         words = GetQuestionnaireWordsPtr();
         break;
     case EASY_CHAT_TYPE_MAIL:
@@ -294,7 +294,7 @@ static void CompareProfileResponseWithPassphrase(void)
     gSpecialVar_0x8004 = IsPhraseDifferentThanPlayerInput(sECPhrase_MysteryEventIsExciting, NELEMS(sECPhrase_MysteryEventIsExciting));
 }
 
-static const u16 sECPhrase_LinkTogetherWithAll[] = {
+static const u16 sECPhrase_AlteringCavePassword[] = {
     EC_WORD_LINK,
     EC_WORD_TOGETHER,
     EC_WORD_WITH,
@@ -303,7 +303,7 @@ static const u16 sECPhrase_LinkTogetherWithAll[] = {
 
 static void CompareQuestionnaireResponseWithPassphrase(void)
 {
-    gSpecialVar_0x8004 = IsPhraseDifferentThanPlayerInput(sECPhrase_LinkTogetherWithAll, NELEMS(sECPhrase_LinkTogetherWithAll));
+    gSpecialVar_0x8004 = IsPhraseDifferentThanPlayerInput(sECPhrase_AlteringCavePassword, NELEMS(sECPhrase_AlteringCavePassword));
 }
 
 static const struct EasyChatScreenTemplate sEasyChatScreenTemplates[] = {
@@ -395,7 +395,7 @@ static const struct EasyChatScreenTemplate sEasyChatScreenTemplates[] = {
         .confirmText1 = gText_TheTrendySaying,
         .confirmText2 = gText_IsAsShownOkay
     }, {
-        .type = EASY_CHAT_TYPE_QUESTIONNAIRE,
+        .type = EASY_CHAT_TYPE_ALTERING_CAVE,
         .numColumns = 2,
         .numRows = 2,
         .frameId = 0,
