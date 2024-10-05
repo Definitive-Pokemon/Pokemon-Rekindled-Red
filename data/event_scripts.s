@@ -1507,3 +1507,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/AlteringCaveJirachi/scripts.inc"
 	.include "data/maps/AlteringCaveJirachi/text.inc"
+
+	.include "data/maps/Route103/scripts.inc"
+	.include "data/maps/Route103/text.inc"

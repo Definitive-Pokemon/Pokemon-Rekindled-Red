@@ -5328,6 +5328,18 @@
       "secondary_tileset": "gTileset_RockTunnel",
       "border_filepath": "data/layouts/AlteringCaveJirachi/border.bin",
       "blockdata_filepath": "data/layouts/AlteringCaveJirachi/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE103",
+      "name": "Route103_Layout",
+      "width": 80,
+      "height": 22,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SeviiIslands6",
+      "border_filepath": "data/layouts/Route103/border.bin",
+      "blockdata_filepath": "data/layouts/Route103/map.bin"
     }
   ]
 }
