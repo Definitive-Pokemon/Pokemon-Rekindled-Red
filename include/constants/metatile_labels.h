@@ -1,11 +1,11 @@
 #ifndef GUARD_METATILE_LABELS_H
 #define GUARD_METATILE_LABELS_H
 
-// gTileset_BattleFrontierOutsideEast
-#define METATILE_BattleFrontierOutsideEast_BattleTower  0x330
-
 // gTileset_BattleFrontier
 #define METATILE_BattleFrontier_BattleTowerElevator  0x28E
+
+// gTileset_BattleFrontierOutsideEast
+#define METATILE_BattleFrontierOutsideEast_BattleTower  0x330
 
 // gTileset_BerryForest
 #define METATILE_BerryForest_Door               0x2BB
@@ -44,10 +44,6 @@
 
 // gTileset_DepartmentStore
 #define METATILE_DepartmentStore_ElevatorDoor  0x28D
-
-// gTileset_Fallarbor
-#define METATILE_Fallarbor_AshGrass     0x20A
-#define METATILE_Fallarbor_NormalGrass  0x212
 
 // gTileset_FuchsiaCity
 #define METATILE_FuchsiaCity_Door                           0x2BF
@@ -107,9 +103,6 @@
 #define METATILE_GenericBuilding1_PlayersPCOff  0x28F
 #define METATILE_GenericBuilding1_PlayersPCOn   0x28A
 
-// gTileset_Lavaridge
-#define METATILE_Lavaridge_NormalGrass  0x206
-
 // gTileset_LavenderTown
 #define METATILE_LavenderTown_Door  0x2A2
 
@@ -139,9 +132,6 @@
 #define METATILE_NavelRock_CaveDoor6   0x295
 #define METATILE_NavelRock_Lower_Wall  0x299
 #define METATILE_NavelRock_Upper_Wall  0x2C4
-
-// gTileset_Pacifidlog
-#define METATILE_Pacifidlog_SkyPillar_CrackedFloor_Hole  0x237
 
 // gTileset_PalletTown
 #define METATILE_PalletTown_Door         0x2A3
@@ -228,10 +218,6 @@
 #define METATILE_PokemonMansion_Wall_EndPost_Bottom                      0x2AD
 #define METATILE_PokemonMansion_Wall_EndPost_Mid                         0x2A5
 
-// gTileset_RSCave
-#define METATILE_RSCave_CrackedFloor       0x22F
-#define METATILE_RSCave_CrackedFloor_Hole  0x206
-
 // gTileset_SSAnne
 #define METATILE_SSAnne_Door  0x281
 
@@ -282,6 +268,15 @@
 #define METATILE_SeviiIslands5_Micro_Grass                  0x28C
 #define METATILE_SeviiIslands5_Micro_Mowed                  0x28B
 
+// gTileset_SeviiIslands6
+#define METATILE_SeviiIslands6_DO_NOT_DELETE                 0x287
+#define METATILE_SeviiIslands6_ForestTreeCorner_Left         0x2B3
+#define METATILE_SeviiIslands6_ForestTreeCorner_Left_Mowed   0x2A0
+#define METATILE_SeviiIslands6_ForestTreeCorner_Right        0x2B4
+#define METATILE_SeviiIslands6_ForestTreeCorner_Right_Mowed  0x2A2
+#define METATILE_SeviiIslands6_ForestTreeTop                 0x2B5
+#define METATILE_SeviiIslands6_ForestTreeTop_Mowed           0x28F
+
 // gTileset_SeviiIslands67
 #define METATILE_SeviiIslands67_BottomLeftCorner                      0x30E
 #define METATILE_SeviiIslands67_BottomRightCorner                     0x30F
@@ -319,15 +314,6 @@
 #define METATILE_SeviiIslands67_TopLeftCorner                         0x300
 #define METATILE_SeviiIslands67_TopRightCorner                        0x301
 #define METATILE_SeviiIslands67_Up                                    0x332
-
-// gTileset_SeviiIslands6
-#define METATILE_SeviiIslands6_DO_NOT_DELETE                 0x287
-#define METATILE_SeviiIslands6_ForestTreeCorner_Left         0x2B3
-#define METATILE_SeviiIslands6_ForestTreeCorner_Left_Mowed   0x2A0
-#define METATILE_SeviiIslands6_ForestTreeCorner_Right        0x2B4
-#define METATILE_SeviiIslands6_ForestTreeCorner_Right_Mowed  0x2A2
-#define METATILE_SeviiIslands6_ForestTreeTop                 0x2B5
-#define METATILE_SeviiIslands6_ForestTreeTop_Mowed           0x28F
 
 // gTileset_SilphCo
 #define METATILE_SilphCo_Arrow_Down                     0x2A8
@@ -426,5 +412,13 @@
 // gTileset_ViridianForest
 #define METATILE_ViridianForest_HugeTreeTopMiddle_Grass  0x284
 #define METATILE_ViridianForest_HugeTreeTopMiddle_Mowed  0x281
+
+// Other
+#define METATILE_Fallarbor_AshGrass                      0x20A
+#define METATILE_Fallarbor_NormalGrass                   0x212
+#define METATILE_Lavaridge_NormalGrass                   0x206
+#define METATILE_Pacifidlog_SkyPillar_CrackedFloor_Hole  0x237
+#define METATILE_RSCave_CrackedFloor                     0x22F
+#define METATILE_RSCave_CrackedFloor_Hole                0x206
 
 #endif // GUARD_METATILE_LABELS_H

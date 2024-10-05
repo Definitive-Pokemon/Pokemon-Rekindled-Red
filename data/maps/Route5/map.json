@@ -15,20 +15,20 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "up",
+      "map": "MAP_CERULEAN_CITY",
       "offset": 0,
-      "map": "MAP_CERULEAN_CITY"
+      "direction": "up"
     },
     {
-      "direction": "down",
+      "map": "MAP_SAFFRON_CITY_CONNECTION",
       "offset": 0,
-      "map": "MAP_SAFFRON_CITY_CONNECTION"
+      "direction": "down"
     }
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MASTER_BLACK_BELT",
-      "in_connection": false,
       "x": 23,
       "y": 12,
       "elevation": 3,
@@ -38,11 +38,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MasterTrainer_EventScript_Mankey",
-      "flag": "FLAG_HIDE_MASTER_TRAINERS"
+      "flag": "FLAG_HIDE_MASTER_TRAINERS",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BURGLAR",
-      "in_connection": false,
       "x": 26,
       "y": 24,
       "elevation": 3,
@@ -52,7 +53,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route5_EventScript_Burglar",
-      "flag": "FLAG_GOT_CHIKORITA"
+      "flag": "FLAG_GOT_CHIKORITA",
+      "in_connection": false
     }
   ],
   "warp_events": [
