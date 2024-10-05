@@ -1000,7 +1000,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_MYSTERY_MAN_GONE
 	setflag FLAG_HIDE_LAPRAS_OLD
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
-	setvar VAR_ALTERING, 0
+	setvar VAR_JIRACHI, 1
 	end
 
 	.include "data/scripts/hall_of_fame.inc"
@@ -1489,3 +1489,9 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/Route103_AlteringCave/scripts.inc"
 	.include "data/maps/Route103_AlteringCave/text.inc"
+
+	.include "data/maps/SinnohAlteringCave/scripts.inc"
+	.include "data/maps/SinnohAlteringCave/text.inc"
+
+	.include "data/maps/JohtoAlteringCave/scripts.inc"
+	.include "data/maps/JohtoAlteringCave/text.inc"

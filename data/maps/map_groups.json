@@ -289,7 +289,9 @@
     "AeroCave",
     "VictoryRoad_Entei",
     "AlteringCaveJirachi",
-    "Route103_AlteringCave"
+    "Route103_AlteringCave",
+    "SinnohAlteringCave",
+    "JohtoAlteringCave"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",

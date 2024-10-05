@@ -250,6 +250,8 @@
 #define MAP_VICTORY_ROAD_ENTEI                        (104 | (2 << 8))
 #define MAP_ALTERING_CAVE_JIRACHI                     (105 | (2 << 8))
 #define MAP_ROUTE103_ALTERING_CAVE                    (106 | (2 << 8))
+#define MAP_SINNOH_ALTERING_CAVE                      (107 | (2 << 8))
+#define MAP_JOHTO_ALTERING_CAVE                       (108 | (2 << 8))
 
 // gMapGroup_TownsAndRoutes
 #define MAP_PALLET_TOWN                          (0 | (3 << 8))
