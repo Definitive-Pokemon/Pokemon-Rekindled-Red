@@ -88,28 +88,12 @@ SixIsland_OutcastIsland_Text_OldMan::
 	.string "You…\p"
 	.string "You seem like a well-traveled\n"
 	.string "young man.\p"
-	.string "You must help me.\p"
-	.string "Could you deliver these files to the\n"
-	.string "old woman living on TWO ISLAND?$"
-
-SixIsland_OutcastIsland_Text_OldMan2::
-	.string "I retrieved these files from the\n"
-	.string "ROCKET WAREHOUSE on FIVE ISLAND.\p"
-	.string "These documents contain all sorts\n"
-	.string "of information regarding the\p"
-	.string "whereabouts of both common and\n"
-	.string "rare POKéMON.\p"
-	.string "The ROCKETS are after me now,\n"
-	.string "but it was worth it!\p"
-	.string "Many POKéMON are now spared a\n"
-	.string "life in captivity…\p"
-	.string "Please bring these files to ULTIMA\n"
-	.string "and mention my name: DOGA.\p"
-	.string "You are my only hope!$"
-
-OutcastIsland_Text_ObtainedSecretFiles::
-	.string "{PLAYER} received SECRET FILES\n"
-	.string "from the mysterious old man!$"
-	
-SixIsland_OutcastIsland_Text_Altering::
-	.string "Cave altered.$"
+	.string "This cave…\p"
+	.string "It has absolutely nothing\n"
+	.string "special in it.\p"
+	.string "And yet…\p"
+	.string "It seems as if it is hiding\n"
+	.string "things beyond comprehension.\p"
+	.string "I am too old to discover the secret\n"
+	.string "of ALTERING CAVE.\p"
+	.string "Oh well. I should be going…$"
