@@ -11,17 +11,30 @@ AlteringCaveJirachi_EventScript_TryRemoveJirachi::
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne EventScript_Return
 	setvar VAR_JIRACHI, 2
+	warp MAP_ALTERING_CAVE_JIRACHI, 30, 31
+	releaseall
 	return
+	
+Eventscript_AfterJirachi::
+	warp MAP_ALTERING_CAVE_JIRACHI, 30, 31
+	releaseall
+	end
 
 AlteringCaveJirachi_EventScript_Jirachi::
 	lockall
+	goto_if_eq VAR_RESORT_GORGEOUS_REQUESTED_MON, 2, Eventscript_AfterJirachi
 	setwildbattle SPECIES_JIRACHI, 50, ITEM_NONE
 	waitse
 	playmoncry SPECIES_JIRACHI, 2
 	fadescreen FADE_TO_WHITE
 	fadescreen FADE_FROM_WHITE
 	waitmoncry
-	delay 10
+	delay 50
+	waitse
+	playse SE_SHINY
+	fadescreen FADE_TO_WHITE
+	fadescreen FADE_FROM_WHITE
+	waitse
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartLegendaryBattle
 	waitstate
@@ -52,6 +65,7 @@ EventScript_JirachiFled::
     fadescreenswapbuffers FADE_FROM_BLACK
     bufferspeciesname STR_VAR_1, VAR_0x8004
     msgbox Text_JirachiFled
+	warp MAP_ALTERING_CAVE_JIRACHI, 30, 31
     release
     end
 	

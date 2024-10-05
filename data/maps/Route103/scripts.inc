@@ -5,10 +5,8 @@ Route103_EventScript_Groudon::
 	lockall
 	waitse
 	playmoncry SPECIES_GROUDON, 2
-	fadescreen FADE_TO_WHITE
-	fadescreen FADE_FROM_WHITE
 	waitmoncry
-	delay 10
+	delay 20
 	applymovement OBJ_EVENT_ID_PLAYER, Route103_Movement_GoLeft
 	waitmovement 0
 	msgbox Route103_Text
@@ -20,14 +18,11 @@ Route103_EventScript_Kyogre::
 	lockall
 	waitse
 	playmoncry SPECIES_KYOGRE, 2
-	fadescreen FADE_TO_WHITE
-	fadescreen FADE_FROM_WHITE
 	waitmoncry
-	delay 10
+	delay 20
+	msgbox Route103_Text
 	applymovement OBJ_EVENT_ID_PLAYER, Route103_Movement_GoRight
 	waitmovement 0
-	msgbox Route103_Text
-	waitmessage
 	releaseall
 	end
 	
