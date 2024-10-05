@@ -77,5 +77,5 @@ Text_JirachiFled::
 	.string "JIRACHI disappeared into the void…$"
 	
 Text_JirachiCaught::
-	.string "[PLAYER] caught the mythical\n"
+	.string "{PLAYER} caught the mythical\n"
 	.string "POKéMON JIRACHI.$"
