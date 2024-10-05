@@ -36,21 +36,111 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 44,
-      "y": 14,
+      "x": 42,
+      "y": 13,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route103_EventScript_Kyogre"
     },
     {
       "type": "trigger",
       "x": 73,
       "y": 11,
       "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route103_EventScript_Groudon"
+    },
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 12,
+      "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route103_EventScript_Kyogre"
+    },
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route103_EventScript_Kyogre"
+    },
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route103_EventScript_Kyogre"
+    },
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route103_EventScript_Kyogre"
+    },
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route103_EventScript_Kyogre"
+    },
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Route103_EventScript_Kyogre"
+    },
+    {
+      "type": "trigger",
+      "x": 73,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route103_EventScript_Groudon"
+    },
+    {
+      "type": "trigger",
+      "x": 73,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route103_EventScript_Groudon"
+    },
+    {
+      "type": "trigger",
+      "x": 73,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route103_EventScript_Groudon"
+    },
+    {
+      "type": "trigger",
+      "x": 73,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route103_EventScript_Groudon"
     }
   ],
   "bg_events": [
