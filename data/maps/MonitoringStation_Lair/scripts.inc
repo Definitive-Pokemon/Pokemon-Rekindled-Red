@@ -163,7 +163,7 @@ EventScript_World::
 EventScript_Is_Not::
 	lockall
 	setvar VAR_0x8005, 130
-	braillemessage_wait Braille_Text_Isn't
+	braillemessage_wait Braille_Text_Is_Not
 	waitbuttonpress
 	releaseall
 

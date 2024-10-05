@@ -301,7 +301,7 @@ Braille_Text_This::
 Braille_Text_World::
 	.braille "WORLD$"
 	
-Braille_Text_Isn't::
+Braille_Text_Is_Not::
 	.braille "ISN'T$"
 	
 Braille_Text_Alone::
