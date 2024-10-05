@@ -8,6 +8,7 @@ Route103_EventScript_Groudon::
 	waitmoncry
 	delay 20
 	msgbox Route103_Text
+	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Route103_Movement_GoLeft
 	waitmovement 0
 	releaseall
@@ -20,6 +21,7 @@ Route103_EventScript_Kyogre::
 	waitmoncry
 	delay 20
 	msgbox Route103_Text
+	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Route103_Movement_GoRight
 	waitmovement 0
 	releaseall

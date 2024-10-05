@@ -15,11 +15,15 @@ EventScript_Questionnaire::
 	end
 
 EventScript_AlterCave::
+	lockall
 	fadescreen FADE_TO_WHITE
-	playse SE_THUNDER
 	fadescreen FADE_FROM_WHITE
-	special ShakeScreen
+	fadescreen FADE_TO_WHITE
+	fadescreen FADE_FROM_WHITE
+	fadescreen FADE_TO_WHITE
+	playse SE_THUNDERSTORM
 	waitse
+	fadescreen FADE_FROM_WHITE
 	delay 60
 	textcolor 3
 	msgbox Text_YouKnowThoseWords
