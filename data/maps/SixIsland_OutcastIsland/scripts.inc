@@ -46,12 +46,6 @@ SixIsland_OutcastIsland_EventScript_Rocket::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_46, SixIsland_OutcastIsland_Text_RocketIntro, SixIsland_OutcastIsland_Text_RocketDefeat
 	msgbox SixIsland_OutcastIsland_Text_RocketPostBattle, MSGBOX_AUTOCLOSE
 	end
-	
-SixIsland_OutcastIsland_EventScript_Altering::
-	lockall
-	msgbox SixIsland_OutcastIsland_Text_Altering MSGBOX_SIGN
-	releaseall
-	end
 
 SixIsland_OutcastIsland_Movement_OldManUp::
 	walk_up

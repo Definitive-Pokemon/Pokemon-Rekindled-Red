@@ -17,11 +17,6 @@ CableClub_EventScript_MysteryGiftMan::
 	special QuestLog_CutRecording
 	trywondercardscript
 
-@ Unused
-EventScript_MysteryGiftThankYou::
-	msgbox Text_ThankYouForAccessingMysteryGift, MSGBOX_NPC
-	end
-
 CableClub_OnWarp::
 	map_script_2 VAR_CABLE_CLUB_STATE, USING_SINGLE_BATTLE, EventScript_CheckTurnAttendant
 	map_script_2 VAR_CABLE_CLUB_STATE, USING_DOUBLE_BATTLE, EventScript_CheckTurnAttendant
