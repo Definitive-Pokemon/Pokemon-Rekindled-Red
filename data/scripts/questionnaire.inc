@@ -15,6 +15,7 @@ EventScript_Questionnaire::
 	end
 
 EventScript_AlterCave::
+	textcolor 3
 	msgbox Text_YouKnowThoseWords
 	warp MAP_ROUTE103_ALTERING_CAVE, 26, 12
 	releaseall
@@ -27,6 +28,7 @@ EventScript_DeclineQuestionnaire::
 EventScript_TookQuestionnaire::
 	applymovement VAR_0x8008, Common_Movement_FaceDown
 	waitmovement 0
+	textcolor 3
 	msgbox Text_QuestionnaireThankYou
 	releaseall
 	end
