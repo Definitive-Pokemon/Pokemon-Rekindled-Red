@@ -300,7 +300,7 @@
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EventScript_This"
+      "script": "EventScript_To"
     }
   ],
   "level_scaling": "5"
