@@ -297,7 +297,7 @@ static void CompareProfileResponseWithPassphrase(void)
 static const u16 sECPhrase_AlteringCavePassword[] = {
     EC_WORD_THIS,
     EC_WORD_WORLD,
-    EC_WORD_ISN'T,
+    EC_WORD_ISNT,
     EC_WORD_ALONE
 };
 
