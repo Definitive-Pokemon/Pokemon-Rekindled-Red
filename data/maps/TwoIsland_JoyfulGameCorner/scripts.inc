@@ -10,7 +10,7 @@ TwoIsland_JoyfulGameCorner_MapScripts::
 	.byte 0
 
 TwoIsland_JoyfulGameCorner_OnTransition::
-	call_if_set FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER, TwoIsland_JoyfulGameCorner_EventScript_SetLostelleReturnedPos
+	call_if_set FLAG_GOT_HM06, TwoIsland_JoyfulGameCorner_EventScript_SetLostelleReturnedPos
 	end
 
 TwoIsland_JoyfulGameCorner_EventScript_SetLostelleReturnedPos::
@@ -144,7 +144,7 @@ TwoIsland_JoyfulGameCorner_EventScript_LostellesDaddy::
 	lock
 	faceplayer
 	goto_if_eq VAR_MAP_SCENE_TWO_ISLAND_JOYFUL_GAME_CORNER, 4, JoyfulGameCorner_EventScript_MinigameAttendant
-	goto_if_set FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER, TwoIsland_JoyfulGameCorner_EventScript_GetGameCornerRunning
+	goto_if_set FLAG_GOT_HM06, TwoIsland_JoyfulGameCorner_EventScript_GetGameCornerRunning
 	goto_if_eq VAR_MAP_SCENE_TWO_ISLAND_JOYFUL_GAME_CORNER, 3, TwoIsland_JoyfulGameCorner_EventScript_GiveDaddyMeteorite
 	msgbox TwoIsland_JoyfulGameCorner_Text_PleaseGoToThreeIsland
 	release

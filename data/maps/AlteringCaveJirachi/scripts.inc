@@ -3,7 +3,7 @@ AlteringCaveJirachi_MapScripts::
 	.byte 0
 
 AlteringCaveJirachi_OnResume::
-	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, AlteringCaveJirachi_Jirachi_EventScript_TryRemoveJirachi
+	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, AlteringCaveJirachi_EventScript_TryRemoveJirachi
 	end
 	
 AlteringCaveJirachi_EventScript_TryRemoveJirachi::
