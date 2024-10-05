@@ -15,6 +15,12 @@ EventScript_Questionnaire::
 	end
 
 EventScript_AlterCave::
+	fadescreen FADE_TO_WHITE
+	playse SE_THUNDER
+	fadescreen FADE_FROM_WHITE
+	special ShakeScreen
+	waitse
+	delay 60
 	textcolor 3
 	msgbox Text_YouKnowThoseWords
 	warp MAP_ROUTE103_ALTERING_CAVE, 26, 12
