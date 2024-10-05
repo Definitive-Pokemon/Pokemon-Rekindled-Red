@@ -153,7 +153,6 @@ TwoIsland_JoyfulGameCorner_EventScript_LostellesDaddy::
 TwoIsland_JoyfulGameCorner_EventScript_GiveDaddyMeteorite::
 	goto_if_set FLAG_NO_ROOM_FOR_JOYFUL_GAME_CORNER_MOON_STONE, TwoIsland_JoyfulGameCorner_EventScript_ReceiveMoonStone
 	msgbox TwoIsland_JoyfulGameCorner_Text_ThisIsForMe
-	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 2
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	playfanfare MUS_OBTAIN_TMHM
 	message TwoIsland_JoyfulGameCorner_Text_HandedMeteoriteToLostellesDaddy
@@ -166,11 +165,9 @@ TwoIsland_JoyfulGameCorner_EventScript_GiveDaddyMeteorite::
 	end
 
 TwoIsland_JoyfulGameCorner_EventScript_ReceiveMoonStone::
-	checkitemspace ITEM_MOON_STONE
-	goto_if_eq VAR_RESULT, FALSE, TwoIsland_JoyfulGameCorner_EventScript_NoRoomForMoonStone
-	additem ITEM_MOON_STONE
-	setflag FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER
-	msgreceiveditem TwoIsland_JoyfulGameCorner_Text_ReceivedMoonStoneFromLostellesDaddy, ITEM_MOON_STONE
+	giveitem ITEM_HM06
+	setflag FLAG_GOT_HM06
+	msgbox OneIsland_KindleRoad_EmberSpa_Text_ExplainHM06
 	release
 	end
 

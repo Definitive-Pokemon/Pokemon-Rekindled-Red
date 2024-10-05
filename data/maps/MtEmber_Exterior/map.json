@@ -327,6 +327,21 @@
       "script": "MtEmber_Exterior_EventScript_SkyAttackTutor",
       "flag": "0",
       "in_connection": false
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCK_SMASH_ROCK",
+      "x": 15,
+      "y": 36,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_18",
+      "in_connection": false
     }
   ],
   "warp_events": [

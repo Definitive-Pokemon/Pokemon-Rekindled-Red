@@ -27,7 +27,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "OneIsland_KindleRoad_EmberSpa_EventScript_OldMan",
-      "flag": "0",
+      "flag": "FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER",
       "in_connection": false
     },
     {
@@ -77,21 +77,6 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
-      "x": 10,
-      "y": 5,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "OneIsland_KindleRoad_EmberSpa_EventScript_RockSmashMan",
-      "flag": "0",
-      "in_connection": false
-    },
-    {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
       "x": 11,
       "y": 20,
@@ -104,6 +89,20 @@
       "script": "OneIsland_KindleRoad_EmberSpa_EventScript_BaldingMan2",
       "flag": "0",
       "in_connection": false
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "OneIsland_KindleRoad_EmberSpa_EventScript_ItemMoonStone",
+      "flag": "FLAG_GOT_MOON_STONE"
     }
   ],
   "warp_events": [

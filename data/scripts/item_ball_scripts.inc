@@ -734,3 +734,7 @@ ArtisanCave_B1F_EventScript_ItemHPUp::
 ArtisanCave_1F_EventScript_ItemCarbos::
 	finditem ITEM_CARBOS
 	end
+
+OneIsland_KindleRoad_EmberSpa_EventScript_ItemMoonStone::
+	finditem ITEM_MOON_STONE
+	end
