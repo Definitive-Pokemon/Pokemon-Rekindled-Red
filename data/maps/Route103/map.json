@@ -20,14 +20,14 @@
   "warp_events": [
     {
       "x": 45,
-      "y": 6,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_ROUTE103_ALTERING_CAVE",
       "dest_warp_id": "0"
     },
     {
       "x": 59,
-      "y": 4,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_ALTERING_CAVE_JIRACHI",
       "dest_warp_id": "0"
@@ -36,8 +36,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 43,
-      "y": 13,
+      "x": 44,
+      "y": 14,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -45,8 +45,8 @@
     },
     {
       "type": "trigger",
-      "x": 72,
-      "y": 10,
+      "x": 73,
+      "y": 11,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
