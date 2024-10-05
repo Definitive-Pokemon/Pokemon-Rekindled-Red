@@ -3,6 +3,6 @@ Route103_AlteringCave_MapScripts::
 
 Eventscript_AlterBack::
 	lockall
-	warp MAP_POKEMON_LEAGUE_HALL_OF_FAME, 5, 12
+	warp MAP_SIX_ISLAND_ALTERING_CAVE, 26, 12
 	releaseall
 	end
