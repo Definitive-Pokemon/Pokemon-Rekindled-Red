@@ -1478,32 +1478,8 @@ EventScript_NoMoreRoomForPokemon::
 	.include "data/maps/AeroCave/scripts.inc"
 	.include "data/maps/AeroCave/text.inc"
 
-	.include "data/maps/AlteringCave2/scripts.inc"
-	.include "data/maps/AlteringCave2/text.inc"
-
 	.include "data/maps/VictoryRoad_Entei/scripts.inc"
 	.include "data/maps/VictoryRoad_Entei/text.inc"
-
-	.include "data/maps/AlteringCaveWater/scripts.inc"
-	.include "data/maps/AlteringCaveWater/text.inc"
-
-	.include "data/maps/AlteringCaveGround/scripts.inc"
-	.include "data/maps/AlteringCaveGround/text.inc"
-
-	.include "data/maps/AlteringCaveFlying/scripts.inc"
-	.include "data/maps/AlteringCaveFlying/text.inc"
-
-	.include "data/maps/AlteringCaveJirachi/scripts.inc"
-	.include "data/maps/AlteringCaveJirachi/text.inc"
-
-	.include "data/maps/AlteringCaveWave/scripts.inc"
-	.include "data/maps/AlteringCaveWave/text.inc"
-
-	.include "data/maps/AlteringCaveGround/scripts.inc"
-	.include "data/maps/AlteringCaveGround/text.inc"
-
-	.include "data/maps/AlteringCaveFlying/scripts.inc"
-	.include "data/maps/AlteringCaveFlying/text.inc"
 
 	.include "data/maps/AlteringCaveJirachi/scripts.inc"
 	.include "data/maps/AlteringCaveJirachi/text.inc"
