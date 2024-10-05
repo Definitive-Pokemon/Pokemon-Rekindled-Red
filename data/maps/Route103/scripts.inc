@@ -7,10 +7,9 @@ Route103_EventScript_Groudon::
 	playmoncry SPECIES_GROUDON, 2
 	waitmoncry
 	delay 20
+	msgbox Route103_Text
 	applymovement OBJ_EVENT_ID_PLAYER, Route103_Movement_GoLeft
 	waitmovement 0
-	msgbox Route103_Text
-	waitmessage
 	releaseall
 	end
 

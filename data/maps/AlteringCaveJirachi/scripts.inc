@@ -11,18 +11,21 @@ AlteringCaveJirachi_EventScript_TryRemoveJirachi::
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne EventScript_Return
 	setvar VAR_JIRACHI, 2
+	msgbox Text_JirachiCaught
+	delay 75
 	warp MAP_ALTERING_CAVE_JIRACHI, 30, 31
 	releaseall
 	return
 	
 Eventscript_AfterJirachi::
+	delay 30
 	warp MAP_ALTERING_CAVE_JIRACHI, 30, 31
 	releaseall
 	end
 
 AlteringCaveJirachi_EventScript_Jirachi::
 	lockall
-	goto_if_eq VAR_RESORT_GORGEOUS_REQUESTED_MON, 2, Eventscript_AfterJirachi
+	goto_if_eq VAR_JIRACHI, 2, Eventscript_AfterJirachi
 	setwildbattle SPECIES_JIRACHI, 50, ITEM_NONE
 	waitse
 	playmoncry SPECIES_JIRACHI, 2
@@ -35,6 +38,7 @@ AlteringCaveJirachi_EventScript_Jirachi::
 	fadescreen FADE_TO_WHITE
 	fadescreen FADE_FROM_WHITE
 	waitse
+	delay 20
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartLegendaryBattle
 	waitstate
@@ -71,3 +75,7 @@ EventScript_JirachiFled::
 	
 Text_JirachiFled::
 	.string "JIRACHI disappeared into the void…$"
+	
+Text_JirachiCaught::
+	.string "[PLAYER] caught the mythical\n"
+	.string "POKéMON JIRACHI.$"
