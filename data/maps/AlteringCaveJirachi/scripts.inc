@@ -11,7 +11,6 @@ AlteringCaveJirachi_EventScript_TryRemoveJirachi::
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne EventScript_Return
 	setvar VAR_JIRACHI, 2
-	msgbox Text_JirachiCaught
 	delay 75
 	warp MAP_ALTERING_CAVE_JIRACHI, 30, 31
 	releaseall
