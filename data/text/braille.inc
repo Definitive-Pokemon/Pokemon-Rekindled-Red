@@ -301,8 +301,8 @@ Braille_Text_To::
 Braille_Text_The::
 	.braille "THE$"
 	
-Braille_Text_Other::
-	.braille "OTHER$"
+Braille_Text_Next::
+	.braille "NEXT$"
 	
 Braille_Text_World::
 	.braille "WORLD$"

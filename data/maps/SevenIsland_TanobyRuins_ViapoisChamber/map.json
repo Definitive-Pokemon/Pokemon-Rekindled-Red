@@ -36,7 +36,7 @@
       "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "EventScript_Other"
+      "script": "EventScript_Next"
     }
   ],
   "level_scaling": "0"

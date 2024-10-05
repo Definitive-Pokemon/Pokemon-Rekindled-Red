@@ -160,10 +160,10 @@ EventScript_The::
 	waitbuttonpress
 	releaseall
 
-EventScript_Other::
+EventScript_Next::
 	lockall
 	setvar VAR_0x8005, 130
-	braillemessage_wait Braille_Text_Other
+	braillemessage_wait Braille_Text_Next
 	waitbuttonpress
 	releaseall
 
