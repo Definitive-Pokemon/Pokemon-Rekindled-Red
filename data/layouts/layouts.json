@@ -5292,6 +5292,18 @@
       "secondary_tileset": "gTileset_SeviiIslands6",
       "border_filepath": "data/layouts/Route103/border.bin",
       "blockdata_filepath": "data/layouts/Route103/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE103_ALTERING_CAVE",
+      "name": "Route103_AlteringCave_Layout",
+      "width": 32,
+      "height": 24,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Route103_AlteringCave/border.bin",
+      "blockdata_filepath": "data/layouts/Route103_AlteringCave/map.bin"
     }
   ]
 }

@@ -15,8 +15,8 @@ EventScript_Questionnaire::
 	end
 
 EventScript_AlterCave::
-	
 	msgbox Text_YouKnowThoseWords
+	warp MAP_ROUTE103_ALTERINGCAVE, 26, 12
 	releaseall
 	end
 

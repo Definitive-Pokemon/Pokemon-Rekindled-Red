@@ -294,3 +294,15 @@ Braille_Text_Altar::
 	
 Braille_Text_Ahead::
 	.braille "AHEAD.$"
+	
+Braille_Text_This::
+	.braille "THIS$"
+	
+Braille_Text_World::
+	.braille "WORLD$"
+	
+Braille_Text_Isn't::
+	.braille "ISN'T$"
+	
+Braille_Text_Alone::
+	.braille "ALONE$"

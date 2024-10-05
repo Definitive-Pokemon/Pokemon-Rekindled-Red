@@ -1,14 +1,14 @@
 {
-  "id": "MAP_ALTERING_CAVE_JIRACHI",
-  "name": "AlteringCaveJirachi",
-  "layout": "LAYOUT_ALTERING_CAVE_JIRACHI",
-  "music": "MUS_GAME_FREAK",
+  "id": "MAP_ROUTE103_ALTERING_CAVE",
+  "name": "Route103_AlteringCave",
+  "layout": "LAYOUT_ROUTE103_ALTERING_CAVE",
+  "music": "MUS_ENCOUNTER_DEOXYS",
   "region_map_section": "MAPSEC_ALTERING_CAVE_E",
   "requires_flash": false,
-  "weather": "WEATHER_SUNNY_CLOUDS",
+  "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
   "allow_cycling": true,
-  "allow_escaping": true,
+  "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
   "floor_number": 0,
@@ -19,26 +19,24 @@
   ],
   "warp_events": [
     {
-      "x": 14,
-      "y": 14,
+      "x": 18,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_ROUTE103",
-      "dest_warp_id": "1"
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 13,
-      "y": 0,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
-    }
-  ],
-  "bg_events": [
 
   ],
-  "level_scaling": "5"
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 26,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Eventscript_AlterBack"
+    }
+  ]
 }

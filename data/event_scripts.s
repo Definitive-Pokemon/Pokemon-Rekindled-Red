@@ -1510,3 +1510,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/Route103/scripts.inc"
 	.include "data/maps/Route103/text.inc"
+
+	.include "data/maps/Route103_AlteringCave/scripts.inc"
+	.include "data/maps/Route103_AlteringCave/text.inc"
