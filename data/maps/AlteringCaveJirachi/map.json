@@ -111,11 +111,8 @@
     {
       "type": "trigger",
       "x": 7,
-<<<<<<< HEAD
       "y": 62,
-=======
       "y": 1,
->>>>>>> parent of 158a5843f (MORE UPDATES)
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
