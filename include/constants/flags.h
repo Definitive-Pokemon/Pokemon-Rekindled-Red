@@ -708,7 +708,7 @@
 #define FLAG_RECEIVED_AURORA_TICKET                      0x2A7
 #define FLAG_RECEIVED_MYSTIC_TICKET                      0x2A8
 #define FLAG_RECEIVED_OLD_SEA_MAP                        0x2A9
-#define FLAG_RECEIVED_SECRET_FILES                       0x2AA
+#define FLAG_WONDER_CARD_UNUSED_1                        0x2AA
 #define FLAG_CAUGHT_JIRACHI                              0x2AB
 #define FLAG_WONDER_CARD_UNUSED_3                        0x2AC
 #define FLAG_WONDER_CARD_UNUSED_4                        0x2AD
@@ -1263,7 +1263,7 @@
 #define FLAG_FOUGHT_SUICUNE      0x4C0
 #define FLAG_HIDE_TOWER_CELIO    0x4C1
 #define FLAG_CHECKED_ALTAR       0x4C2
-#define FLAG_0x4C3               0x4C3
+#define FLAG_HIDE_MURAL          0x4C3
 #define FLAG_0x4C4               0x4C4
 #define FLAG_0x4C5               0x4C5
 #define FLAG_0x4C6               0x4C6

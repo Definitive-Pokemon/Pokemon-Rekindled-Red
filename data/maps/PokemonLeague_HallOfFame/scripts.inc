@@ -41,7 +41,7 @@ PokemonLeague_HallOfFame_EventScript_EnterRoom::
 	fadescreenspeed FADE_TO_BLACK, 24
 	checkitem ITEM_OLD_SEA_MAP, 1
 	call_if_ne VAR_RESULT, TRUE, PokemonLeague_HallOfFame_EventScript_ActivateOldSeaMapEvent
-	call_if_set FLAG_RECOVERED_SAPPHIRE, PokemonLeague_HallOfFame_EventScript_ActivateOaksLetterEvent
+	call_if_set FLAG_RECOVERED_SAPPHIRE, PokemonLeague_HallOfFame_EventScript_ActivateMythicalEvents
 	special EnterHallOfFame
 	waitstate
 	releaseall
@@ -52,8 +52,9 @@ PokemonLeague_HallOfFame_EventScript_ActivateOldSeaMapEvent::
 	setflag FLAG_HIDE_POKEHOUSE_FUJI
 	return
 	
-PokemonLeague_HallOfFame_EventScript_ActivateOaksLetterEvent::
+PokemonLeague_HallOfFame_EventScript_ActivateMythicalEvents::
 	setflag FLAG_OAK_HAS_LETTER
+	clearflag FLAG_HIDE_MURAL
 	return
 
 PokemonLeague_HallOfFame_Movement_EnterRoom::
