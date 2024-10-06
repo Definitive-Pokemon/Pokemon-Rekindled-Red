@@ -1499,6 +1499,10 @@ static const struct SpriteFrameImage sPicTable_YellowDoor[] = {
     overworld_frame(gObjectEventPic_YellowDoor, 2, 4, 0),
 };
 
+static const struct SpriteFrameImage sPicTable_Mural[] = {
+    overworld_frame(gObjectEventPic_Mural, 2, 2, 0),
+};
+
 static const struct SpriteFrameImage sPicTable_WoodenSign[] = {
     overworld_frame(gObjectEventPic_WoodenSign, 2, 2, 0),
 };

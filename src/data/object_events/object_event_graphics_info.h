@@ -2107,6 +2107,25 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sign = {
 	.affineAnims = gDummySpriteAffineAnimTable,
 };
 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mural = {
+	.tileTag = TAG_NONE,
+	.paletteTag = OBJ_EVENT_PAL_TAG_MURAL,
+	.reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+	.size = 128,
+	.width = 16,
+	.height = 16,
+	.paletteSlot = PALSLOT_NPC_SPECIAL,
+	.shadowSize = SHADOW_SIZE_S,
+	.inanimate = TRUE,
+	.disableReflectionPaletteLoad = FALSE,
+	.tracks = TRACKS_NONE,
+	.oam = &gObjectEventBaseOam_16x16,
+	.subspriteTables = gObjectEventSpriteOamTables_16x16,
+	.anims = sAnimTable_Inanimate,
+	.images = sPicTable_Mural,
+	.affineAnims = gDummySpriteAffineAnimTable,
+};
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrainerTips = {
 	.tileTag = TAG_NONE,
 	.paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,

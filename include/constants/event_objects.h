@@ -232,7 +232,8 @@
 #define OBJ_EVENT_GFX_KYOGRE 227
 #define OBJ_EVENT_GFX_EMERALD 228
 #define OBJ_EVENT_GFX_RAYQUAZA 229
-#define NUM_OBJ_EVENT_GFX     230
+#define OBJ_EVENT_GFX_MURAL 230
+#define NUM_OBJ_EVENT_GFX     231
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.
