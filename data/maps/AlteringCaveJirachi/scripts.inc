@@ -11,7 +11,6 @@ AlteringCaveJirachi_EventScript_TryRemoveJirachi::
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne EventScript_Return
 	setflag FLAG_CAUGHT_JIRACHI
-	removeflag FLAG_MURAL_ACTIVATED
 	delay 80
 	warpteleport MAP_SIX_ISLAND_ALTERING_CAVE, 26, 12
 	releaseall
