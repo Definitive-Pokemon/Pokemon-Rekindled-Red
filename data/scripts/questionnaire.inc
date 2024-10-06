@@ -44,10 +44,10 @@ EventScript_AlterCave::
 	release
 	end
 
-SixIsland_AlteringCave_EventScript_DeclineQuestionnaire::
+EventScript_DeclineQuestionnaire::
 	release
 	end
 
-SixIsland_AlteringCave_EventScript_TookQuestionnaire::
+EventScript_TookQuestionnaire::
 	release
 	end
