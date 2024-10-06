@@ -148,31 +148,31 @@ MonitoringStation_Lair_EventScript_FinalBraille::
 	
 EventScript_To::
 	lockall
-	setvar VAR_0x8005, 130
-	braillemessage_wait Braille_Text_To
+	braillemessage Braille_Text_To
 	waitbuttonpress
 	releaseall
+	end
 
 EventScript_The::
 	lockall
-	setvar VAR_0x8005, 130
-	braillemessage_wait Braille_Text_The
+	braillemessage Braille_Text_The
 	waitbuttonpress
 	releaseall
+	end
 
 EventScript_Next::
 	lockall
-	setvar VAR_0x8005, 130
-	braillemessage_wait Braille_Text_Next
+	braillemessage Braille_Text_Next
 	waitbuttonpress
 	releaseall
+	end
 
 EventScript_World::
 	lockall
-	setvar VAR_0x8005, 130
-	braillemessage_wait Braille_Text_World
+	braillemessage Braille_Text_World
 	waitbuttonpress
 	releaseall
+	end
 	
 MonitoringStation_Lair_EventScript_Registeel_Open::
 	fadeoutbgm 0

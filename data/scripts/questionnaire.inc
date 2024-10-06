@@ -16,6 +16,7 @@ EventScript_Questionnaire::
 
 EventScript_AlterCave::
 	lock
+	delay 20
 	playse SE_ORB
 	fadescreen FADE_TO_WHITE
 	waitse

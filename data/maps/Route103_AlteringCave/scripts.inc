@@ -3,6 +3,7 @@ Route103_AlteringCave_MapScripts::
 
 Eventscript_AlterBack::
 	lock
+	delay 20
 	playse SE_ORB
 	fadescreen FADE_TO_WHITE
 	waitse
