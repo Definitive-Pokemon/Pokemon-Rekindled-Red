@@ -10,13 +10,10 @@ AlteringCaveJirachi_EventScript_TryRemoveJirachi::
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne EventScript_Return
-<<<<<<< HEAD
 	setvar VAR_JIRACHI, 2
-=======
 	setflag FLAG_CAUGHT_JIRACHI
 	delay 80
 	warpteleport MAP_SIX_ISLAND_ALTERING_CAVE, 26, 12
->>>>>>> parent of 158a5843f (MORE UPDATES)
 	releaseall
 	return
 
