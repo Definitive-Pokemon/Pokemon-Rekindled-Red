@@ -21,9 +21,7 @@ EventScript_AlterCave::
 	waitse
 	fadescreen FADE_FROM_WHITE
 	delay 80
-	fadescreen FADE_TO_BLACK
-	delay 20
-	warp MAP_ROUTE103_ALTERING_CAVE, 26, 12
+	warpteleport MAP_ROUTE103_ALTERING_CAVE, 26, 12
 	release
 	end
 

@@ -12,13 +12,13 @@ AlteringCaveJirachi_EventScript_TryRemoveJirachi::
 	goto_if_ne EventScript_Return
 	setvar VAR_JIRACHI, 2
 	delay 75
-	warp MAP_ALTERING_CAVE_JIRACHI, 30, 31
+	warpteleport MAP_ALTERING_CAVE_JIRACHI, 30, 31
 	releaseall
 	return
 	
 Eventscript_AfterJirachi::
 	delay 30
-	warp MAP_ALTERING_CAVE_JIRACHI, 30, 31
+	warpteleport MAP_ALTERING_CAVE_JIRACHI, 30, 31
 	releaseall
 	end
 
@@ -66,7 +66,7 @@ EventScript_JirachiFled::
     fadescreenswapbuffers FADE_FROM_BLACK
     bufferspeciesname STR_VAR_1, VAR_0x8004
     msgbox Text_JirachiFled
-	warp MAP_ALTERING_CAVE_JIRACHI, 30, 31
+	warpteleport MAP_ALTERING_CAVE_JIRACHI, 30, 31
     release
     end
 	
