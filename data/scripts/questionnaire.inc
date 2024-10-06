@@ -17,11 +17,7 @@ EventScript_Questionnaire::
 EventScript_AlterCave::
 	lock
 	fadescreen FADE_TO_WHITE
-	fadescreen FADE_FROM_WHITE
-	fadescreen FADE_TO_WHITE
-	fadescreen FADE_FROM_WHITE
-	fadescreen FADE_TO_WHITE
-	playse SE_THUNDERSTORM
+	playse SE_ORB
 	waitse
 	fadescreen FADE_FROM_WHITE
 	delay 60
