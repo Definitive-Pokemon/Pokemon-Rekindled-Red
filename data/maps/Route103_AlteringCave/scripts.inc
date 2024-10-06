@@ -3,8 +3,8 @@ Route103_AlteringCave_MapScripts::
 
 Eventscript_AlterBack::
 	lock
-	fadescreen FADE_TO_WHITE
 	playse SE_ORB
+	fadescreen FADE_TO_WHITE
 	waitse
 	fadescreen FADE_FROM_WHITE
 	delay 80

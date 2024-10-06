@@ -16,13 +16,10 @@ EventScript_Questionnaire::
 
 EventScript_AlterCave::
 	lock
-	fadescreen FADE_TO_WHITE
 	playse SE_ORB
+	fadescreen FADE_TO_WHITE
 	waitse
 	fadescreen FADE_FROM_WHITE
-	delay 60
-	textcolor 3
-	msgbox Text_YouKnowThoseWords
 	delay 80
 	fadescreen FADE_TO_BLACK
 	delay 20

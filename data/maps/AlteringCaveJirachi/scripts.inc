@@ -28,8 +28,6 @@ AlteringCaveJirachi_EventScript_Jirachi::
 	setwildbattle SPECIES_JIRACHI, 50, ITEM_NONE
 	waitse
 	playmoncry SPECIES_JIRACHI, 2
-	fadescreen FADE_TO_WHITE
-	fadescreen FADE_FROM_WHITE
 	waitmoncry
 	delay 50
 	waitse
