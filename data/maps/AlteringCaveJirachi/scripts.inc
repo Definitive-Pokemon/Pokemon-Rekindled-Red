@@ -57,7 +57,7 @@ EventScript_JirachiFled::
     fadescreenswapbuffers FADE_FROM_BLACK
     bufferspeciesname STR_VAR_1, VAR_0x8004
     msgbox Text_JirachiFled
-	warpteleport MAP_ALTERING_CAVE_JIRACHI, 30, 31
+	warpteleport MAP_ALTERING_CAVE_JIRACHI, 33, 33
     release
     end
 	
