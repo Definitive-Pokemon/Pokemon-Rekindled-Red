@@ -18,6 +18,7 @@ EventScript_AlterCave::
 	lock
 	delay 20
 	playse SE_ICE_BREAK
+	fadeoutbgm 1
 	fadescreen FADE_TO_WHITE
 	waitse
 	removeobject VAR_LAST_TALKED
@@ -43,6 +44,7 @@ EventScript_AlterCave::
 	special DrawWholeMapView
 	setflag FLAG_MURAL_ACTIVATED
 	setflag FLAG_HIDE_MURAL
+	fadeinbgm 1
 	release
 	end
 
