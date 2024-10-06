@@ -3697,7 +3697,7 @@ const struct WildPokemon sSixIslandAlteringCave_9_FireRed_LandMons[] =
 
 const struct WildPokemonInfo sSixIslandAlteringCave_9_FireRed_LandMonsInfo = { 5, sSixIslandAlteringCave_9_FireRed_LandMons };
 
-const struct WildPokemon sRoute103AlteringCave_FireRed_LandMons[] =
+const struct WildPokemon sRoute103AlteringCave_LandMons[] =
 {
     { 10, 10, SPECIES_SHROOMISH },
     { 12, 12, SPECIES_SHROOMISH },
@@ -3713,9 +3713,9 @@ const struct WildPokemon sRoute103AlteringCave_FireRed_LandMons[] =
     { 14, 14, SPECIES_SHROOMISH },
 };
 
-const struct WildPokemonInfo sRoute103AlteringCave_FireRed_LandMonsInfo = { 5, sRoute103AlteringCave_FireRed_LandMons };
+const struct WildPokemonInfo sRoute103AlteringCave_LandMonsInfo = { 5, sRoute103AlteringCave_LandMons };
 
-const struct WildPokemon sSinnohAlteringCave_FireRed_LandMons[] =
+const struct WildPokemon sSinnohAlteringCave_LandMons[] =
 {
     { 10, 10, SPECIES_SNORUNT },
     { 12, 12, SPECIES_SNORUNT },
@@ -3731,9 +3731,9 @@ const struct WildPokemon sSinnohAlteringCave_FireRed_LandMons[] =
     { 14, 14, SPECIES_SNORUNT },
 };
 
-const struct WildPokemonInfo sSinnohAlteringCave_FireRed_LandMonsInfo = { 5, sSinnohAlteringCave_FireRed_LandMons };
+const struct WildPokemonInfo sSinnohAlteringCave_LandMonsInfo = { 5, sSinnohAlteringCave_LandMons };
 
-const struct WildPokemon sJohtoAlteringCave_FireRed_LandMons[] =
+const struct WildPokemon sJohtoAlteringCave_LandMons[] =
 {
     { 10, 10, SPECIES_SLUGMA },
     { 12, 12, SPECIES_SLUGMA },
@@ -3749,7 +3749,7 @@ const struct WildPokemon sJohtoAlteringCave_FireRed_LandMons[] =
     { 14, 14, SPECIES_SLUGMA },
 };
 
-const struct WildPokemonInfo sJohtoAlteringCave_FireRed_LandMonsInfo = { 5, sJohtoAlteringCave_FireRed_LandMons };
+const struct WildPokemonInfo sJohtoAlteringCave_LandMonsInfo = { 5, sJohtoAlteringCave_LandMons };
 
 const struct WildPokemon sSevenIslandTanobyRuinsMoneanChamber_LeafGreen_LandMons[] =
 {
