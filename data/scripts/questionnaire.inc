@@ -17,9 +17,9 @@ EventScript_Questionnaire::
 EventScript_AlterCave::
 	lock
 	delay 20
-	playse SE_ICE_BREAK
 	fadeoutbgm 1
 	fadescreen FADE_TO_WHITE
+	playse SE_ICE_BREAK
 	waitse
 	removeobject VAR_LAST_TALKED
 	fadescreen FADE_FROM_WHITE
