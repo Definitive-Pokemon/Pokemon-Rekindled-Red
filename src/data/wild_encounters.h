@@ -9388,8 +9388,8 @@ const struct WildPokemonHeader gWildMonHeaders[] =
 	{
         .mapGroup = MAP_GROUP(ROUTE103_ALTERING_CAVE),
         .mapNum = MAP_NUM(ROUTE103_ALTERING_CAVE),
-        .landMonsInfo_FR = &sRoute103_AlteringCave_LandMonsInfo,
-        .landMonsInfo_LG = &sRoute103_AlteringCave_LandMonsInfo,
+        .landMonsInfo_FR = &sRoute103AlteringCave_LandMonsInfo,
+        .landMonsInfo_LG = &sRoute103AlteringCave_LandMonsInfo,
         .waterMonsInfo_FR = NULL,
         .waterMonsInfo_LG = NULL,
         .rockSmashMonsInfo_FR = NULL,
@@ -9400,8 +9400,8 @@ const struct WildPokemonHeader gWildMonHeaders[] =
 	{
         .mapGroup = MAP_GROUP(SINNOH_ALTERING_CAVE),
         .mapNum = MAP_NUM(SINNOH_ALTERING_CAVE),
-        .landMonsInfo_FR = &sSinnoh_AlteringCave_LandMonsInfo,
-        .landMonsInfo_LG = &sSinnoh_AlteringCave_LandMonsInfo,
+        .landMonsInfo_FR = &sSinnohAlteringCave_LandMonsInfo,
+        .landMonsInfo_LG = &sSinnohAlteringCave_LandMonsInfo,
         .waterMonsInfo_FR = NULL,
         .waterMonsInfo_LG = NULL,
         .rockSmashMonsInfo_FR = NULL,
@@ -9412,8 +9412,8 @@ const struct WildPokemonHeader gWildMonHeaders[] =
 	{
         .mapGroup = MAP_GROUP(JOHTO_ALTERING_CAVE),
         .mapNum = MAP_NUM(JOHTO_ALTERING_CAVE),
-        .landMonsInfo_FR = &sJohto_AlteringCave_LandMonsInfo,
-        .landMonsInfo_LG = &sJohto_AlteringCave_LandMonsInfo,
+        .landMonsInfo_FR = &sJohtoAlteringCave_LandMonsInfo,
+        .landMonsInfo_LG = &sJohtoAlteringCave_LandMonsInfo,
         .waterMonsInfo_FR = NULL,
         .waterMonsInfo_LG = NULL,
         .rockSmashMonsInfo_FR = NULL,
