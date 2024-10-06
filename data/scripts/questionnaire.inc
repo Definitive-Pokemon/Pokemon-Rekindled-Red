@@ -1,5 +1,5 @@
 EventScript_Questionnaire::
-	lockall
+	lock
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	msgbox Text_FillOutQuestionnaire, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_DeclineQuestionnaire
@@ -15,7 +15,7 @@ EventScript_Questionnaire::
 	end
 
 EventScript_AlterCave::
-	lockall
+	lock
 	fadescreen FADE_TO_WHITE
 	fadescreen FADE_FROM_WHITE
 	fadescreen FADE_TO_WHITE
@@ -28,11 +28,11 @@ EventScript_AlterCave::
 	textcolor 3
 	msgbox Text_YouKnowThoseWords
 	warp MAP_ROUTE103_ALTERING_CAVE, 26, 12
-	releaseall
+	release
 	end
 
 EventScript_DeclineQuestionnaire::
-	releaseall
+	release
 	end
 
 EventScript_TookQuestionnaire::
@@ -40,5 +40,5 @@ EventScript_TookQuestionnaire::
 	waitmovement 0
 	textcolor 3
 	msgbox Text_QuestionnaireThankYou
-	releaseall
+	release
 	end

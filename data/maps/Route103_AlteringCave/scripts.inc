@@ -2,7 +2,7 @@ Route103_AlteringCave_MapScripts::
 	.byte 0
 
 Eventscript_AlterBack::
-	lockall
+	lock
 	fadescreen FADE_TO_WHITE
 	fadescreen FADE_FROM_WHITE
 	fadescreen FADE_TO_WHITE
@@ -13,5 +13,5 @@ Eventscript_AlterBack::
 	fadescreen FADE_FROM_WHITE
 	delay 60
 	warp MAP_SIX_ISLAND_ALTERING_CAVE, 26, 12
-	releaseall
+	release
 	end
