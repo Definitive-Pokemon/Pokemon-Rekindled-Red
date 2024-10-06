@@ -2755,7 +2755,7 @@
     {
       "type": "trigger",
       "x": 7,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2836,7 +2836,7 @@
     {
       "type": "trigger",
       "x": 5,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2845,7 +2845,7 @@
     {
       "type": "trigger",
       "x": 6,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2863,7 +2863,7 @@
     {
       "type": "trigger",
       "x": 8,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2872,7 +2872,7 @@
     {
       "type": "trigger",
       "x": 9,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2881,7 +2881,7 @@
     {
       "type": "trigger",
       "x": 10,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2890,7 +2890,7 @@
     {
       "type": "trigger",
       "x": 11,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2899,7 +2899,7 @@
     {
       "type": "trigger",
       "x": 12,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2908,7 +2908,7 @@
     {
       "type": "trigger",
       "x": 13,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2917,7 +2917,7 @@
     {
       "type": "trigger",
       "x": 14,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2926,7 +2926,7 @@
     {
       "type": "trigger",
       "x": 15,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2935,7 +2935,7 @@
     {
       "type": "trigger",
       "x": 16,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2944,7 +2944,7 @@
     {
       "type": "trigger",
       "x": 17,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2953,7 +2953,7 @@
     {
       "type": "trigger",
       "x": 18,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2962,7 +2962,7 @@
     {
       "type": "trigger",
       "x": 19,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2971,7 +2971,7 @@
     {
       "type": "trigger",
       "x": 20,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2980,7 +2980,7 @@
     {
       "type": "trigger",
       "x": 21,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2989,7 +2989,7 @@
     {
       "type": "trigger",
       "x": 22,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -2998,7 +2998,7 @@
     {
       "type": "trigger",
       "x": 23,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3007,7 +3007,7 @@
     {
       "type": "trigger",
       "x": 24,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3016,7 +3016,7 @@
     {
       "type": "trigger",
       "x": 25,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3025,7 +3025,7 @@
     {
       "type": "trigger",
       "x": 26,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3034,7 +3034,7 @@
     {
       "type": "trigger",
       "x": 27,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3043,7 +3043,7 @@
     {
       "type": "trigger",
       "x": 28,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3052,7 +3052,7 @@
     {
       "type": "trigger",
       "x": 29,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3061,7 +3061,7 @@
     {
       "type": "trigger",
       "x": 30,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3070,7 +3070,7 @@
     {
       "type": "trigger",
       "x": 31,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3079,7 +3079,7 @@
     {
       "type": "trigger",
       "x": 32,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3088,7 +3088,7 @@
     {
       "type": "trigger",
       "x": 33,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3097,7 +3097,7 @@
     {
       "type": "trigger",
       "x": 34,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3106,7 +3106,7 @@
     {
       "type": "trigger",
       "x": 35,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3115,7 +3115,7 @@
     {
       "type": "trigger",
       "x": 36,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3124,7 +3124,7 @@
     {
       "type": "trigger",
       "x": 37,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3133,7 +3133,7 @@
     {
       "type": "trigger",
       "x": 38,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3142,7 +3142,7 @@
     {
       "type": "trigger",
       "x": 39,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3151,7 +3151,7 @@
     {
       "type": "trigger",
       "x": 40,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3160,7 +3160,7 @@
     {
       "type": "trigger",
       "x": 41,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3169,7 +3169,7 @@
     {
       "type": "trigger",
       "x": 42,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3178,7 +3178,7 @@
     {
       "type": "trigger",
       "x": 43,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3187,7 +3187,7 @@
     {
       "type": "trigger",
       "x": 45,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3196,7 +3196,7 @@
     {
       "type": "trigger",
       "x": 46,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3205,7 +3205,7 @@
     {
       "type": "trigger",
       "x": 47,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3214,7 +3214,7 @@
     {
       "type": "trigger",
       "x": 48,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3223,7 +3223,7 @@
     {
       "type": "trigger",
       "x": 49,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3232,7 +3232,7 @@
     {
       "type": "trigger",
       "x": 50,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3241,7 +3241,7 @@
     {
       "type": "trigger",
       "x": 51,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3250,7 +3250,7 @@
     {
       "type": "trigger",
       "x": 52,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3259,7 +3259,7 @@
     {
       "type": "trigger",
       "x": 44,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3268,7 +3268,7 @@
     {
       "type": "trigger",
       "x": 53,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3277,7 +3277,7 @@
     {
       "type": "trigger",
       "x": 54,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3286,7 +3286,7 @@
     {
       "type": "trigger",
       "x": 55,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3295,7 +3295,7 @@
     {
       "type": "trigger",
       "x": 57,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3304,7 +3304,7 @@
     {
       "type": "trigger",
       "x": 58,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3313,7 +3313,7 @@
     {
       "type": "trigger",
       "x": 59,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3322,7 +3322,7 @@
     {
       "type": "trigger",
       "x": 60,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3331,7 +3331,7 @@
     {
       "type": "trigger",
       "x": 61,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3367,7 +3367,7 @@
     {
       "type": "trigger",
       "x": 56,
-      "y": 56,
+      "y": 62,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
@@ -3800,6 +3800,114 @@
       "type": "trigger",
       "x": 62,
       "y": 52,
+      "elevation": 0,
+      "var": "VAR_JIRACHI",
+      "var_value": "1",
+      "script": "AlteringCaveJirachi_EventScript_Jirachi"
+    },
+    {
+      "type": "trigger",
+      "x": 62,
+      "y": 60,
+      "elevation": 0,
+      "var": "VAR_JIRACHI",
+      "var_value": "1",
+      "script": "AlteringCaveJirachi_EventScript_Jirachi"
+    },
+    {
+      "type": "trigger",
+      "x": 62,
+      "y": 59,
+      "elevation": 0,
+      "var": "VAR_JIRACHI",
+      "var_value": "1",
+      "script": "AlteringCaveJirachi_EventScript_Jirachi"
+    },
+    {
+      "type": "trigger",
+      "x": 62,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_JIRACHI",
+      "var_value": "1",
+      "script": "AlteringCaveJirachi_EventScript_Jirachi"
+    },
+    {
+      "type": "trigger",
+      "x": 62,
+      "y": 57,
+      "elevation": 0,
+      "var": "VAR_JIRACHI",
+      "var_value": "1",
+      "script": "AlteringCaveJirachi_EventScript_Jirachi"
+    },
+    {
+      "type": "trigger",
+      "x": 62,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_JIRACHI",
+      "var_value": "1",
+      "script": "AlteringCaveJirachi_EventScript_Jirachi"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 60,
+      "elevation": 0,
+      "var": "VAR_JIRACHI",
+      "var_value": "1",
+      "script": "AlteringCaveJirachi_EventScript_Jirachi"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 59,
+      "elevation": 0,
+      "var": "VAR_JIRACHI",
+      "var_value": "1",
+      "script": "AlteringCaveJirachi_EventScript_Jirachi"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 58,
+      "elevation": 0,
+      "var": "VAR_JIRACHI",
+      "var_value": "1",
+      "script": "AlteringCaveJirachi_EventScript_Jirachi"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 57,
+      "elevation": 0,
+      "var": "VAR_JIRACHI",
+      "var_value": "1",
+      "script": "AlteringCaveJirachi_EventScript_Jirachi"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 56,
+      "elevation": 0,
+      "var": "VAR_JIRACHI",
+      "var_value": "1",
+      "script": "AlteringCaveJirachi_EventScript_Jirachi"
+    },
+    {
+      "type": "trigger",
+      "x": 62,
+      "y": 61,
+      "elevation": 0,
+      "var": "VAR_JIRACHI",
+      "var_value": "1",
+      "script": "AlteringCaveJirachi_EventScript_Jirachi"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 61,
       "elevation": 0,
       "var": "VAR_JIRACHI",
       "var_value": "1",
