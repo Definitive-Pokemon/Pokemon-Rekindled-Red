@@ -3697,6 +3697,24 @@ const struct WildPokemon sSixIslandAlteringCave_9_FireRed_LandMons[] =
 
 const struct WildPokemonInfo sSixIslandAlteringCave_9_FireRed_LandMonsInfo = { 5, sSixIslandAlteringCave_9_FireRed_LandMons };
 
+const struct WildPokemon sRoute103AlteringCave_FireRed_LandMons[] =
+{
+    { 10, 10, SPECIES_ZUBAT },
+    { 12, 12, SPECIES_ZUBAT },
+    { 8, 8, SPECIES_ZUBAT },
+    { 14, 14, SPECIES_ZUBAT },
+    { 10, 10, SPECIES_ZUBAT },
+    { 12, 12, SPECIES_ZUBAT },
+    { 16, 16, SPECIES_ZUBAT },
+    { 6, 6, SPECIES_ZUBAT },
+    { 8, 8, SPECIES_ZUBAT },
+    { 14, 14, SPECIES_ZUBAT },
+    { 8, 8, SPECIES_ZUBAT },
+    { 14, 14, SPECIES_ZUBAT },
+};
+
+const struct WildPokemonInfo sRoute103AlteringCave_FireRed_LandMonsInfo = { 5, sRoute103AlteringCave_FireRed_LandMons };
+
 const struct WildPokemon sSevenIslandTanobyRuinsMoneanChamber_LeafGreen_LandMons[] =
 {
     { 65, 65, SPECIES_UNOWN },
