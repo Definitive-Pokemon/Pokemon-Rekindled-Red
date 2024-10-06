@@ -10,11 +10,11 @@ SixIsland_OutcastIsland_OnFrame::
 	.2byte 0
 
 SixIsland_OutcastIsland_EventScript_MysteryManCheck::
+	setvar VAR_TEMP_0, 1
 	goto_if_unset FLAG_MYSTERY_MAN_GONE, SixIsland_OutcastIsland_EventScript_MysteryMan
 	end
 	
 SixIsland_OutcastIsland_EventScript_MysteryMan::
-    setvar VAR_TEMP_0, 1
 	lockall
 	applymovement LOCALID_OLD_MAN SixIsland_OutcastIsland_Movement_OldManUp
 	waitmovement 0
