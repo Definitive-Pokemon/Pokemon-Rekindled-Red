@@ -23,6 +23,9 @@ EventScript_AlterCave::
 	delay 60
 	textcolor 3
 	msgbox Text_YouKnowThoseWords
+	delay 80
+	fadescreen FADE_TO_BLACK
+	delay 20
 	warp MAP_ROUTE103_ALTERING_CAVE, 26, 12
 	release
 	end
