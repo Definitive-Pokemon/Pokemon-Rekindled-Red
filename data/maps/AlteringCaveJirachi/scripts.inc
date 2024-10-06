@@ -12,7 +12,7 @@ AlteringCaveJirachi_EventScript_TryRemoveJirachi::
 	goto_if_ne EventScript_Return
 	setflag FLAG_CAUGHT_JIRACHI
 	delay 80
-	warpteleport MAP_SIX_ISLAND_ALTERING_CAVE, 26, 12
+	warphole MAP_SIX_ISLAND_ALTERING_CAVE, 26, 12
 	releaseall
 	return
 

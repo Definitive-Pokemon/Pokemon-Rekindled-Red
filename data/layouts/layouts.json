@@ -5272,8 +5272,8 @@
     {
       "id": "LAYOUT_ALTERING_CAVE_JIRACHI",
       "name": "AlteringCaveJirachi_Layout",
-      "width": 61,
-      "height": 61,
+      "width": 67,
+      "height": 67,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
