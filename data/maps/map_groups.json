@@ -51,7 +51,16 @@
     "RecordCorner",
     "BattleColosseum_4P",
     "UnionRoom",
-    "Debug"
+    "Debug",
+    "ForsakenTombB1F",
+    "ForsakenTombB2F",
+    "ForsakenTombB3F",
+    "ForsakenTombB4F",
+    "ForsakenTombB5F",
+    "ForsakenTombB6F",
+    "ForsakenTombB7F",
+    "ForsakenTombB8F",
+    "ForsakenTombB9F"
   ],
   "gMapGroup_Dungeons": [
     "ViridianForest",

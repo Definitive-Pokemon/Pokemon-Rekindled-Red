@@ -1495,3 +1495,30 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/JohtoAlteringCave/scripts.inc"
 	.include "data/maps/JohtoAlteringCave/text.inc"
+
+	.include "data/maps/ForsakenTombB1F/scripts.inc"
+	.include "data/maps/ForsakenTombB1F/text.inc"
+
+	.include "data/maps/ForsakenTombB2F/scripts.inc"
+	.include "data/maps/ForsakenTombB2F/text.inc"
+
+	.include "data/maps/ForsakenTombB3F/scripts.inc"
+	.include "data/maps/ForsakenTombB3F/text.inc"
+
+	.include "data/maps/ForsakenTombB4F/scripts.inc"
+	.include "data/maps/ForsakenTombB4F/text.inc"
+
+	.include "data/maps/ForsakenTombB5F/scripts.inc"
+	.include "data/maps/ForsakenTombB5F/text.inc"
+
+	.include "data/maps/ForsakenTombB6F/scripts.inc"
+	.include "data/maps/ForsakenTombB6F/text.inc"
+
+	.include "data/maps/ForsakenTombB7F/scripts.inc"
+	.include "data/maps/ForsakenTombB7F/text.inc"
+
+	.include "data/maps/ForsakenTombB8F/scripts.inc"
+	.include "data/maps/ForsakenTombB8F/text.inc"
+
+	.include "data/maps/ForsakenTombB9F/scripts.inc"
+	.include "data/maps/ForsakenTombB9F/text.inc"

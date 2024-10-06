@@ -1,0 +1,29 @@
+{
+  "id": "MAP_FORSAKEN_TOMB_B9F",
+  "name": "ForsakenTombB9F",
+  "layout": "LAYOUT_FORSAKEN_TOMB_B9F",
+  "music": "MUS_SEALED_CHAMBER",
+  "region_map_section": "MAPSEC_TANOBY_CHAMBERS",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

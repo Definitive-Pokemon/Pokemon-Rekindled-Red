@@ -42,7 +42,6 @@ EventScript_AlterCave::
 	setmetatile 5, 13, METATILE_RockTunnel_Hole, 0
 	setmetatile 6, 4, METATILE_RockTunnel_Spot, 0
 	special DrawWholeMapView
-	setflag FLAG_MURAL_ACTIVATED
 	setflag FLAG_HIDE_MURAL
 	fadeinbgm 1
 	release

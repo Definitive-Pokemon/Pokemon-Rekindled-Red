@@ -5328,6 +5328,114 @@
       "secondary_tileset": "gTileset_MtEmber",
       "border_filepath": "data/layouts/JohtoAlteringCave/border.bin",
       "blockdata_filepath": "data/layouts/JohtoAlteringCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORSAKEN_TOMB_B1F",
+      "name": "ForsakenTombB1F_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/ForsakenTombB1F/border.bin",
+      "blockdata_filepath": "data/layouts/ForsakenTombB1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORSAKEN_TOMB_B2F",
+      "name": "ForsakenTombB2F_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/ForsakenTombB2F/border.bin",
+      "blockdata_filepath": "data/layouts/ForsakenTombB2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORSAKEN_TOMB_B3F",
+      "name": "ForsakenTombB3F_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/ForsakenTombB3F/border.bin",
+      "blockdata_filepath": "data/layouts/ForsakenTombB3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORSAKEN_TOMB_B4F",
+      "name": "ForsakenTombB4F_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/ForsakenTombB4F/border.bin",
+      "blockdata_filepath": "data/layouts/ForsakenTombB4F/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORSAKEN_TOMB_B5F",
+      "name": "ForsakenTombB5F_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_NavelRock",
+      "border_filepath": "data/layouts/ForsakenTombB5F/border.bin",
+      "blockdata_filepath": "data/layouts/ForsakenTombB5F/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORSAKEN_TOMB_B6F",
+      "name": "ForsakenTombB6F_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_CeruleanCave",
+      "border_filepath": "data/layouts/ForsakenTombB6F/border.bin",
+      "blockdata_filepath": "data/layouts/ForsakenTombB6F/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORSAKEN_TOMB_B7F",
+      "name": "ForsakenTombB7F_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_CeruleanCave",
+      "border_filepath": "data/layouts/ForsakenTombB7F/border.bin",
+      "blockdata_filepath": "data/layouts/ForsakenTombB7F/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORSAKEN_TOMB_B8F",
+      "name": "ForsakenTombB8F_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_CeruleanCave",
+      "border_filepath": "data/layouts/ForsakenTombB8F/border.bin",
+      "blockdata_filepath": "data/layouts/ForsakenTombB8F/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORSAKEN_TOMB_B9F",
+      "name": "ForsakenTombB9F_Layout",
+      "width": 60,
+      "height": 24,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_TanobyRuins",
+      "border_filepath": "data/layouts/ForsakenTombB9F/border.bin",
+      "blockdata_filepath": "data/layouts/ForsakenTombB9F/map.bin"
     }
   ]
 }

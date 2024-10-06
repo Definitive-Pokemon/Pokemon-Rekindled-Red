@@ -12,6 +12,15 @@
 #define MAP_BATTLE_COLOSSEUM_4P (3 | (0 << 8))
 #define MAP_UNION_ROOM          (4 | (0 << 8))
 #define MAP_DEBUG               (5 | (0 << 8))
+#define MAP_FORSAKEN_TOMB_B1F   (6 | (0 << 8))
+#define MAP_FORSAKEN_TOMB_B2F   (7 | (0 << 8))
+#define MAP_FORSAKEN_TOMB_B3F   (8 | (0 << 8))
+#define MAP_FORSAKEN_TOMB_B4F   (9 | (0 << 8))
+#define MAP_FORSAKEN_TOMB_B5F   (10 | (0 << 8))
+#define MAP_FORSAKEN_TOMB_B6F   (11 | (0 << 8))
+#define MAP_FORSAKEN_TOMB_B7F   (12 | (0 << 8))
+#define MAP_FORSAKEN_TOMB_B8F   (13 | (0 << 8))
+#define MAP_FORSAKEN_TOMB_B9F   (14 | (0 << 8))
 
 // gMapGroup_Dungeons
 #define MAP_VIRIDIAN_FOREST                      (0 | (1 << 8))

@@ -1,0 +1,42 @@
+{
+  "id": "MAP_FORSAKEN_TOMB_B4F",
+  "name": "ForsakenTombB4F",
+  "layout": "LAYOUT_FORSAKEN_TOMB_B4F",
+  "music": "MUS_SEALED_CHAMBER",
+  "region_map_section": "MAPSEC_TANOBY_CHAMBERS",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_FORSAKEN_TOMB_B3F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 36,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_FORSAKEN_TOMB_B5F",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}
