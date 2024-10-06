@@ -20,6 +20,12 @@
 #define METATILE_Cave_Floor_Ledge_Top     0x2D1
 #define METATILE_Cave_RockBarrier_Bottom  0x317
 #define METATILE_Cave_RockBarrier_Top     0x307
+#define METATILE_Cave_Door_Left           0x2C8
+#define METATILE_Cave_Door_Center         0x2C9
+#define METATILE_Cave_Door_Right          0x2CA
+#define METATILE_Cave_Wall                0x289
+#define METATILE_Cave_Arrow               0x287
+#define METATILE_Cave_Floor               0x281
 
 // gTileset_CeladonCity
 #define METATILE_CeladonCity_CyclingRoad_Grass  0x352
@@ -412,6 +418,20 @@
 // gTileset_ViridianForest
 #define METATILE_ViridianForest_HugeTreeTopMiddle_Grass  0x284
 #define METATILE_ViridianForest_HugeTreeTopMiddle_Mowed  0x281
+
+// gTileset_RockTunnel
+#define METATILE_RockTunnel_TopLeft  0x301
+#define METATILE_RockTunnel_Top  0x304
+#define METATILE_RockTunnel_TopRight  0x300
+#define METATILE_RockTunnel_Right  0x2FB
+#define METATILE_RockTunnel_BottomRight  0x2F8
+#define METATILE_RockTunnel_Bottom  0x2F4
+#define METATILE_RockTunnel_BottomLeft  0x2F9
+#define METATILE_RockTunnel_Left  0x2FD
+#define METATILE_RockTunnel_Hole  0x286
+#define METATILE_RockTunnel_Spot  0x2C0
+#define METATILE_RockTunnel_Soil  0x2FC
+#define METATILE_RockTunnel_Floor  0x281
 
 // Other
 #define METATILE_Fallarbor_AshGrass                      0x20A

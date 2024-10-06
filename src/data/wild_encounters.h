@@ -3699,21 +3699,57 @@ const struct WildPokemonInfo sSixIslandAlteringCave_9_FireRed_LandMonsInfo = { 5
 
 const struct WildPokemon sRoute103AlteringCave_FireRed_LandMons[] =
 {
-    { 10, 10, SPECIES_ZUBAT },
-    { 12, 12, SPECIES_ZUBAT },
-    { 8, 8, SPECIES_ZUBAT },
-    { 14, 14, SPECIES_ZUBAT },
-    { 10, 10, SPECIES_ZUBAT },
-    { 12, 12, SPECIES_ZUBAT },
-    { 16, 16, SPECIES_ZUBAT },
-    { 6, 6, SPECIES_ZUBAT },
-    { 8, 8, SPECIES_ZUBAT },
-    { 14, 14, SPECIES_ZUBAT },
-    { 8, 8, SPECIES_ZUBAT },
-    { 14, 14, SPECIES_ZUBAT },
+    { 10, 10, SPECIES_SHROOMISH },
+    { 12, 12, SPECIES_SHROOMISH },
+    { 8, 8, SPECIES_SHROOMISH },
+    { 14, 14, SPECIES_SHROOMISH },
+    { 10, 10, SPECIES_SHROOMISH },
+    { 12, 12, SPECIES_SHROOMISH },
+    { 16, 16, SPECIES_SHROOMISH },
+    { 6, 6, SPECIES_SHROOMISH },
+    { 8, 8, SPECIES_SHROOMISH },
+    { 14, 14, SPECIES_SHROOMISH },
+    { 8, 8, SPECIES_SHROOMISH },
+    { 14, 14, SPECIES_SHROOMISH },
 };
 
 const struct WildPokemonInfo sRoute103AlteringCave_FireRed_LandMonsInfo = { 5, sRoute103AlteringCave_FireRed_LandMons };
+
+const struct WildPokemon sSinnohAlteringCave_FireRed_LandMons[] =
+{
+    { 10, 10, SPECIES_SNORUNT },
+    { 12, 12, SPECIES_SNORUNT },
+    { 8, 8, SPECIES_SNORUNT },
+    { 14, 14, SPECIES_SNORUNT },
+    { 10, 10, SPECIES_SNORUNT },
+    { 12, 12, SPECIES_SNORUNT },
+    { 16, 16, SPECIES_SNORUNT },
+    { 6, 6, SPECIES_SNORUNT },
+    { 8, 8, SPECIES_SNORUNT },
+    { 14, 14, SPECIES_SNORUNT },
+    { 8, 8, SPECIES_SNORUNT },
+    { 14, 14, SPECIES_SNORUNT },
+};
+
+const struct WildPokemonInfo sSinnohAlteringCave_FireRed_LandMonsInfo = { 5, sSinnohAlteringCave_FireRed_LandMons };
+
+const struct WildPokemon sJohtoAlteringCave_FireRed_LandMons[] =
+{
+    { 10, 10, SPECIES_SLUGMA },
+    { 12, 12, SPECIES_SLUGMA },
+    { 8, 8, SPECIES_SLUGMA },
+    { 14, 14, SPECIES_SLUGMA },
+    { 10, 10, SPECIES_SLUGMA },
+    { 12, 12, SPECIES_SLUGMA },
+    { 16, 16, SPECIES_SLUGMA },
+    { 6, 6, SPECIES_SLUGMA },
+    { 8, 8, SPECIES_SLUGMA },
+    { 14, 14, SPECIES_SLUGMA },
+    { 8, 8, SPECIES_SLUGMA },
+    { 14, 14, SPECIES_SLUGMA },
+};
+
+const struct WildPokemonInfo sJohtoAlteringCave_FireRed_LandMonsInfo = { 5, sJohtoAlteringCave_FireRed_LandMons };
 
 const struct WildPokemon sSevenIslandTanobyRuinsMoneanChamber_LeafGreen_LandMons[] =
 {
@@ -9342,6 +9378,42 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .mapNum = MAP_NUM(MONITORING_STATION_POKEMON),
         .landMonsInfo_FR = &sMonitoringStation_Pokemon_LandMonsInfo,
         .landMonsInfo_LG = &sMonitoringStation_Pokemon_LandMonsInfo,
+        .waterMonsInfo_FR = NULL,
+        .waterMonsInfo_LG = NULL,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = NULL,
+        .fishingMonsInfo_LG = NULL,
+    },
+	{
+        .mapGroup = MAP_GROUP(ROUTE103_ALTERING_CAVE_POKEMON),
+        .mapNum = MAP_NUM(ROUTE103_ALTERING_CAVE_POKEMON),
+        .landMonsInfo_FR = &sRoute103_AlteringCave_Pokemon_LandMonsInfo,
+        .landMonsInfo_LG = &sRoute103_AlteringCave_Pokemon_LandMonsInfo,
+        .waterMonsInfo_FR = NULL,
+        .waterMonsInfo_LG = NULL,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = NULL,
+        .fishingMonsInfo_LG = NULL,
+    },
+	{
+        .mapGroup = MAP_GROUP(SINNOH_ALTERING_CAVE_POKEMON),
+        .mapNum = MAP_NUM(SINNOH_ALTERING_CAVE_POKEMON),
+        .landMonsInfo_FR = &sSinnoh_AlteringCave_Pokemon_LandMonsInfo,
+        .landMonsInfo_LG = &sSinnoh_AlteringCave_Pokemon_LandMonsInfo,
+        .waterMonsInfo_FR = NULL,
+        .waterMonsInfo_LG = NULL,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = NULL,
+        .fishingMonsInfo_LG = NULL,
+    },
+	{
+        .mapGroup = MAP_GROUP(JOHTO_ALTERING_CAVE_POKEMON),
+        .mapNum = MAP_NUM(JOHTO_ALTERING_CAVE_POKEMON),
+        .landMonsInfo_FR = &sJohto_AlteringCave_Pokemon_LandMonsInfo,
+        .landMonsInfo_LG = &sJohto_AlteringCave_Pokemon_LandMonsInfo,
         .waterMonsInfo_FR = NULL,
         .waterMonsInfo_LG = NULL,
         .rockSmashMonsInfo_FR = NULL,

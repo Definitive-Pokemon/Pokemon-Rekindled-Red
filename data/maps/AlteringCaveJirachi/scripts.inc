@@ -10,21 +10,14 @@ AlteringCaveJirachi_EventScript_TryRemoveJirachi::
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne EventScript_Return
-	setvar VAR_JIRACHI, 2
-	delay 75
-	warpteleport MAP_ALTERING_CAVE_JIRACHI, 30, 31
+	setflag FLAG_CAUGHT_JIRACHI
+	delay 80
+	warpteleport MAP_SIX_ISLAND_ALTERING_CAVE, 26, 12
 	releaseall
 	return
-	
-Eventscript_AfterJirachi::
-	delay 30
-	warpteleport MAP_ALTERING_CAVE_JIRACHI, 30, 31
-	releaseall
-	end
 
 AlteringCaveJirachi_EventScript_Jirachi::
 	lockall
-	goto_if_eq VAR_JIRACHI, 2, Eventscript_AfterJirachi
 	setwildbattle SPECIES_JIRACHI, 50, ITEM_NONE
 	waitse
 	playmoncry SPECIES_JIRACHI, 2
