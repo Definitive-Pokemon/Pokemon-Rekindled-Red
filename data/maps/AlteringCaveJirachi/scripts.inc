@@ -35,6 +35,7 @@ AlteringCaveJirachi_EventScript_CaughtJirachi::
 	setflag FLAG_CAUGHT_JIRACHI
 	delay 80
 	warpteleport MAP_SIX_ISLAND_ALTERING_CAVE, 26, 12
+	waitstate
 	releaseall
 	end
 
@@ -55,7 +56,8 @@ EventScript_JirachiFled::
     bufferspeciesname STR_VAR_1, VAR_0x8004
     msgbox Text_JirachiFled
 	warpteleport MAP_ALTERING_CAVE_JIRACHI, 33, 33
-    release
+	waitstate
+    releaseall
     end
 	
 Text_JirachiFled::
