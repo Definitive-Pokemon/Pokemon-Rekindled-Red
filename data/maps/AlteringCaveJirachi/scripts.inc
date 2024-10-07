@@ -51,6 +51,7 @@ AlteringCaveJirachi_EventScript_RanFromJirachi::
 	
 EventScript_JirachiFled::
     msgbox Text_JirachiFled
+	closemessage
 	warpteleport MAP_ALTERING_CAVE_JIRACHI, 33, 33
 	waitstate
     releaseall
