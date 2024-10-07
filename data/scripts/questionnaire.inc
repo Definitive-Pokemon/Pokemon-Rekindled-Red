@@ -25,7 +25,7 @@ EventScript_AlterCave::
 	fadescreen FADE_FROM_WHITE
 	delay 80
 	playse SE_ORB
-	fadescreen FADE_TO_WHITE
+	animateflash 8
 	waitse
 	fadescreen FADE_FROM_WHITE
 	delay 20
