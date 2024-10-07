@@ -41,7 +41,15 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_REGICHECK",
+      "var_value": "1",
+      "script": "SevenIsland_TanobyRuins_MoneanChamber_EventScript_RegirockCheck"
+    }
   ],
   "bg_events": [
 

@@ -23,6 +23,8 @@ EventScript_AlterCave::
 	fadescreen FADE_FROM_WHITE
 	delay 80
 	playse SE_ORB
+	playbgm MUS_AWAKEN_LEGEND, 0
+	fadeinbgm 0
 	fadescreen FADE_TO_WHITE
 	waitse
 	fadescreen FADE_FROM_WHITE
@@ -41,7 +43,7 @@ EventScript_AlterCave::
 	setmetatile 6, 4, METATILE_RockTunnel_Spot, 0
 	special DrawWholeMapView
 	setflag FLAG_HIDE_MURAL
-	fadeinbgm 1
+	playbgm MUS_MT_MOON, 1
 	release
 	end
 

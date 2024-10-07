@@ -238,6 +238,16 @@
 #define METATILE_RockTunnel_TopLeft      0x301
 #define METATILE_RockTunnel_TopRight     0x300
 
+// gTileset_TanobyRuins
+#define METATILE_TanobyRuins_WallBottom       0x287
+#define METATILE_TanobyRuins_WallTop          0x283
+#define METATILE_TanobyRuins_DoorTopLeft      0x244
+#define METATILE_TanobyRuins_DoorTopCenter    0x245
+#define METATILE_TanobyRuins_DoorTopRight     0x246
+#define METATILE_TanobyRuins_DoorBottomLeft   0x24C
+#define METATILE_TanobyRuins_DoorBottomCenter 0x24D
+#define METATILE_TanobyRuins_DoorBottomRight  0x24E
+
 // gTileset_SSAnne
 #define METATILE_SSAnne_Door  0x281
 

@@ -1002,6 +1002,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_MURAL
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
 	setvar VAR_JIRACHI, 1
+	setvar VAR_REGICHECK, 1
 	end
 
 	.include "data/scripts/hall_of_fame.inc"
