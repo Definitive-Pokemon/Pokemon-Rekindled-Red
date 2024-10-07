@@ -7,20 +7,20 @@ SevenIsland_TanobyRuins_MoneanChamber_OnTransition::
 	call EventScript_TryDarkenRuins
 	end
 
+SevenIsland_TanobyRuins_MoneanChamber_EventScript_StopChecking::
+	end
+
 SevenIsland_TanobyRuins_MoneanChamber_EventScript_RegirockCheck::
 	lockall
 	setvar VAR_0x8004, SPECIES_REGIROCK
 	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
-	goto_if_eq VAR_RESULT, TRUE, 
-SevenIsland_TanobyRuins_MoneanChamber_EventScript_RegiceCheck::
+	goto_if_ne VAR_RESULT, TRUE, SevenIsland_TanobyRuins_MoneanChamber_EventScript_StopChecking
 	setvar VAR_0x8004, SPECIES_REGICE
 	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
-	goto_if_eq VAR_RESULT, TRUE, 
-SevenIsland_TanobyRuins_MoneanChamber_EventScript_RegisteelCheck::
+	goto_if_ne VAR_RESULT, TRUE, SevenIsland_TanobyRuins_MoneanChamber_EventScript_StopChecking
 	setvar VAR_0x8004, SPECIES_REGISTEEL
 	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
-	goto_if_eq VAR_RESULT, TRUE, 
-SevenIsland_TanobyRuins_MoneanChamber_EventScript_OpenDoor::
+	goto_if_ne VAR_RESULT, TRUE, SevenIsland_TanobyRuins_MoneanChamber_EventScript_StopChecking
 	delay 20
 	playse SE_DOOR
 	setmetatile 7, 0, METATILE_TanobyRuins_DoorTopLeft, 1
