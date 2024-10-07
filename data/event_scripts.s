@@ -999,6 +999,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_TOWER_CELIO
 	setflag FLAG_MYSTERY_MAN_GONE
 	setflag FLAG_HIDE_LAPRAS_OLD
+	setflag FLAG_HIDE_MURAL
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
 	setvar VAR_JIRACHI, 1
 	end

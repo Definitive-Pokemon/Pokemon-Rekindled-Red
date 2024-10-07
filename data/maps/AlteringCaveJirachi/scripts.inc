@@ -50,10 +50,6 @@ AlteringCaveJirachi_EventScript_RanFromJirachi::
 	end
 	
 EventScript_JirachiFled::
-	fadescreenswapbuffers FADE_TO_BLACK
-    removeobject VAR_LAST_TALKED
-    fadescreenswapbuffers FADE_FROM_BLACK
-    bufferspeciesname STR_VAR_1, VAR_0x8004
     msgbox Text_JirachiFled
 	warpteleport MAP_ALTERING_CAVE_JIRACHI, 33, 33
 	waitstate

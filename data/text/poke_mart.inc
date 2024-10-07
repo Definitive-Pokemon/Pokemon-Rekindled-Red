@@ -3,7 +3,7 @@ Text_MayIHelpYou::
 	.string "May I help you?$"
 
 Text_FillOutQuestionnaire::
-	.string "It's a sign…\n"
+	.string "It's an old-looking mural…\n"
 	.string "Would you like to write on it?$"
 
 Text_QuestionnaireThankYou::
