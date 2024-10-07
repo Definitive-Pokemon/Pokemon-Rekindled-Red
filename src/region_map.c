@@ -622,6 +622,7 @@ static const u8 sSeviiMapsecs[3][30] = {
         MAPSEC_DOTTED_HOLE,
         MAPSEC_PATTERN_BUSH,
         MAPSEC_ALTERING_CAVE,
+        MAPSEC_ALTERING_CAVE_E,
         MAPSEC_TANOBY_CHAMBERS,
         MAPSEC_TANOBY_KEY,
         MAPSEC_BIRTH_ISLAND,
