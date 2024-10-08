@@ -37,6 +37,7 @@ ForsakenTombB9F_EventScript_Regigigas::
 	lock
 	faceplayer
 	msgbox ForsakenTombB9F_Text_Engraving
+	closemessage
 	setvar VAR_0x8004, SPECIES_REGIROCK
 	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
 	goto_if_ne VAR_RESULT, TRUE, ForsakenTombB9F_EventScript_StopChecking
@@ -60,6 +61,7 @@ ForsakenTombB9F_EventScript_Regigigas::
 	special ShakeScreen
 	delay 60
 	msgbox ForsakenTombB9F_Text_SomethingHappens
+	closemessage
 	setwildbattle SPECIES_REGIGIGAS, 80, ITEM_NONE
 	waitse
 	playmoncry SPECIES_REGIGIGAS, 2
