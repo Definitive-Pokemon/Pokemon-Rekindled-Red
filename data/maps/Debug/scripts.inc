@@ -150,6 +150,24 @@ GiveGroudon::
 	release
 	end
 	
+GiveRock::
+	lock
+	givemon SPECIES_REGIROCK, 100, ITEM_LEFTOVERS
+	release
+	end
+	
+GiveIce::
+	lock
+	givemon SPECIES_REGICE, 100, ITEM_LEFTOVERS
+	release
+	end
+	
+GiveSteel::
+	lock
+	givemon SPECIES_REGISTEEL, 100, ITEM_LEFTOVERS
+	release
+	end
+	
 GiveMasterBall::
 	lock
 	giveitem ITEM_MASTER_BALL, 99
