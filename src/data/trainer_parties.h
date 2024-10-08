@@ -3629,7 +3629,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_FishermanNed[] = {
     {
         .iv = 0,
         .lvl = 25,
-        .species = SPECIES_LUVDISC,
+        .species = SPECIES_GOLDEEN,
     },
     {
         .iv = 0,
@@ -4466,12 +4466,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PsychicCameron[] = {
     {
         .iv = 50,
         .lvl = 45,
-        .species = SPECIES_SLOWBRO,
+        .species = SPECIES_SLOWPOKE,
     },
     {
         .iv = 50,
         .lvl = 48,
-        .species = SPECIES_SLOWKING,
+        .species = SPECIES_SLOWBRO,
     },
 };
 
@@ -4504,7 +4504,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RockerRandall[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_RockerLuca[] = {
     {
         .iv = 0,
-        .lvl = 32,
+        .lvl = 31,
         .species = SPECIES_ELECTRIKE,
     },
     {
@@ -4531,21 +4531,21 @@ static const struct TrainerMonNoItemDefaultMoves sParty_JugglerNelson[] = {
     {
         .iv = 0,
         .lvl = 53,
-        .species = SPECIES_ELECTRODE,
+        .species = SPECIES_MR_MIME,
     },
     {
-        .iv = 0,
+        .iv = 40,
         .lvl = 54,
         .species = SPECIES_HYPNO,
     },
     {
         .iv = 0,
-        .lvl = 52,
-        .species = SPECIES_KIRLIA,
+        .lvl = 55,
+        .species = SPECIES_KADABRA,
     },
     {
         .iv = 0,
-        .lvl = 53,
+        .lvl = 54,
         .species = SPECIES_MAGCARGO,
     },
 };
@@ -4698,7 +4698,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TamerCole[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_TamerVincent[] = {
     {
         .iv = 40,
-        .lvl = 57,
+        .lvl = 56,
         .species = SPECIES_PERSIAN,
     },
     {
@@ -4937,11 +4937,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperCarter[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_BirdKeeperMitch[] = {
     {
         .iv = 0,
-        .lvl = 36,
-        .species = SPECIES_SWELLOW,
+        .lvl = 35,
+        .species = SPECIES_PIDGEY,
     },
     {
-        .iv = 0,
+        .iv = 255,
         .lvl = 36,
         .species = SPECIES_PIDGEOTTO,
     },
@@ -5818,30 +5818,30 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt13[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt14[] = {
     {
         .iv = 0,
-        .lvl = 25,
-        .species = SPECIES_CACNEA,
+        .lvl = 24,
+        .species = SPECIES_ABRA,
     },
     {
         .iv = 0,
         .lvl = 26,
-        .species = SPECIES_WEEPINBELL,
+        .species = SPECIES_DROWZEE,
     },
     {
         .iv = 0,
         .lvl = 28,
-        .species = SPECIES_CACTURNE,
+        .species = SPECIES_KADABRA,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt15[] = {
     {
         .iv = 0,
-        .lvl = 27,
-        .species = SPECIES_TYROGUE,
+        .lvl = 26,
+        .species = SPECIES_EKANS,
     },
     {
         .iv = 0,
-        .lvl = 28,
+        .lvl = 26,
         .species = SPECIES_MACHOKE,
     },
 };
@@ -5849,13 +5849,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt15[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt16[] = {
     {
         .iv = 0,
-        .lvl = 27,
-        .species = SPECIES_EKANS,
+        .lvl = 26,
+        .species = SPECIES_SANDSHREW,
     },
     {
-        .iv = 0,
+        .iv = 255,
         .lvl = 27,
-        .species = SPECIES_SEVIPER,
+        .species = SPECIES_MAWILE,
     },
     {
         .iv = 0,
@@ -5867,13 +5867,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt16[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt17[] = {
     {
         .iv = 0,
-        .lvl = 27,
-        .species = SPECIES_SANDSHREW,
+        .lvl = 26,
+        .species = SPECIES_EKANS,
     },
     {
-        .iv = 0,
+        .iv = 255,
         .lvl = 27,
-        .species = SPECIES_ZANGOOSE,
+        .species = SPECIES_SABLEYE,
     },
     {
         .iv = 0,
@@ -6092,27 +6092,27 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt31[] = {
 static const struct TrainerMonNoItemCustomMoves sParty_TeamRocketGrunt32[] = {
     {
         .iv = 0,
-        .lvl = 37,
-        .species = SPECIES_RATICATE,
-        .moves = {MOVE_SCARY_FACE, MOVE_HYPER_FANG, MOVE_QUICK_ATTACK, MOVE_TAIL_WHIP},
+        .lvl = 43,
+        .species = SPECIES_POOCHYENA,
+        .moves = {MOVE_CRUNCH, MOVE_NONE, MOVE_NONE, MOVE_NONE},
     },
     {
         .iv = 0,
-        .lvl = 37,
+        .lvl = 44,
         .species = SPECIES_ARBOK,
-        .moves = {MOVE_GLARE, MOVE_BITE, MOVE_POISON_STING, MOVE_LEER},
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_EARTHQUAKE, MOVE_NONE, MOVE_NONE},
     },
     {
         .iv = 0,
-        .lvl = 36,
-        .species = SPECIES_WEEZING,
-        .moves = {MOVE_SMOKESCREEN, MOVE_SLUDGE, MOVE_SMOG, MOVE_TACKLE},
+        .lvl = 43,
+        .species = SPECIES_MIGHTYENA,
+        .moves = {MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_NONE, MOVE_NONE},
     },
     {
         .iv = 0,
-        .lvl = 39,
+        .lvl = 44,
         .species = SPECIES_MAGNETON,
-        .moves = {MOVE_THUNDERBOLT, MOVE_METAL_SOUND, MOVE_SUPERSONIC, MOVE_HIDDEN_POWER},
+        .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_NONE, MOVE_NONE},
     },
 };
 
