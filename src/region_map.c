@@ -1107,6 +1107,7 @@ static void InitRegionMapType(void)
     if(gMapHeader.regionMapSectionId <= MAPSEC_SKY_PILLAR && gMapHeader.regionMapSectionId != MAPSEC_UNDERWATER_124 && gMapHeader.regionMapSectionId != MAPSEC_BATTLE_FRONTIER && gMapHeader.regionMapSectionId != MAPSEC_ARTISAN_CAVE && gMapHeader.regionMapSectionId != MAPSEC_SOUTHERN_ISLAND)
     {
         region = REGIONMAP_HOENN;
+        PlaySE(SE_M_SWIFT);
     }
     if(gMapHeader.regionMapSectionId == MAPSEC_BATTLE_FRONTIER || gMapHeader.regionMapSectionId == MAPSEC_ARTISAN_CAVE || gMapHeader.regionMapSectionId == MAPSEC_SOUTHERN_ISLAND)
     {
