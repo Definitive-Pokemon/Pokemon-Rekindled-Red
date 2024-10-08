@@ -60,11 +60,11 @@ ForsakenTombB9F_EventScript_Regigigas::
 	setvar VAR_0x8007, 2
 	special ShakeScreen
 	delay 60
-	msgbox ForsakenTombB9F_Text_SomethingHappens
-	closemessage
 	setwildbattle SPECIES_REGIGIGAS, 80, ITEM_NONE
 	waitse
 	playmoncry SPECIES_REGIGIGAS, 2
+	message ForsakenTombB9F_Text_SomethingHappens
+	waitmessage
 	waitmoncry
 	delay 10
 	waitbuttonpress
