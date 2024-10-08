@@ -36,6 +36,7 @@ ForsakenTombB9F_EventScript_StopChecking::
 ForsakenTombB9F_EventScript_Regigigas::
 	lock
 	faceplayer
+	msgbox ForsakenTombB9F_Text_Engraving
 	setvar VAR_0x8004, SPECIES_REGIROCK
 	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
 	goto_if_ne VAR_RESULT, TRUE, ForsakenTombB9F_EventScript_StopChecking
@@ -46,6 +47,19 @@ ForsakenTombB9F_EventScript_Regigigas::
 	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
 	goto_if_ne VAR_RESULT, TRUE, ForsakenTombB9F_EventScript_StopChecking
 	delay 20
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 10
+	setvar VAR_0x8007, 3
+	special ShakeScreen
+	delay 60
+	setvar VAR_0x8004, 3
+	setvar VAR_0x8005, 3
+	setvar VAR_0x8006, 12
+	setvar VAR_0x8007, 2
+	special ShakeScreen
+	delay 60
+	msgbox ForsakenTombB9F_Text_SomethingHappens
 	setwildbattle SPECIES_REGIGIGAS, 80, ITEM_NONE
 	waitse
 	playmoncry SPECIES_REGIGIGAS, 2
@@ -90,3 +104,17 @@ ForsakenTombB9F_EventScript_RegigigasGone::
 
 Text_RegigigasGone::
 	.string "REGIGIGAS ran away!"
+
+ForsakenTombB9F_Text_Engraving::
+	.string "It's a statue of a POKéMON.\n"
+	.string "It seems to exude power.\p"
+	.string "{PLAYER} read the engraved\n"
+	.string "writing…\p"
+	.string "A body of rock.\p"
+	.string "A body of ice.\p"
+	.string "A body of steel.\p"
+	.string "When gathers the three POKéMON,\n"
+	.string "the king shall appear.$"
+
+ForsakenTombB9F_Text_SomethingHappens::
+	.string "…Zut zutt!$"
