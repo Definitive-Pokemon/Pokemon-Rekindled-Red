@@ -38,6 +38,13 @@
       "elevation": 0,
       "dest_map": "MAP_SIX_ISLAND_ALTERING_CAVE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ALTERING_CAVE_JIRACHI",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

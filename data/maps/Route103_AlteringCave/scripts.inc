@@ -7,8 +7,5 @@ Route103_AlteringCave_EventScript_OnLoad::
 	end
 	
 Route103_AlteringCave_EventScript_AlteringDoorClosed::
-	setmetatile 17, 23, METATILE_Cave_Wall, 1
-	setmetatile 18, 23, METATILE_Cave_Wall, 1
-	setmetatile 19, 23, METATILE_Cave_Wall, 1
-	setmetatile 18, 22, METATILE_Cave_Floor, 0
+	setmetatile 26, 11, METATILE_Cave_Floor, 0
 	return

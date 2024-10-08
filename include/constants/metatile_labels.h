@@ -23,6 +23,7 @@
 #define METATILE_Cave_Floor               0x281
 #define METATILE_Cave_Floor_Ledge_Bottom  0x2E1
 #define METATILE_Cave_Floor_Ledge_Top     0x2D1
+#define METATILE_Cave_LadderDown          0x285
 #define METATILE_Cave_RockBarrier_Bottom  0x317
 #define METATILE_Cave_RockBarrier_Top     0x307
 #define METATILE_Cave_Wall                0x289
@@ -238,16 +239,6 @@
 #define METATILE_RockTunnel_TopLeft      0x301
 #define METATILE_RockTunnel_TopRight     0x300
 
-// gTileset_TanobyRuins
-#define METATILE_TanobyRuins_WallBottom       0x287
-#define METATILE_TanobyRuins_WallTop          0x283
-#define METATILE_TanobyRuins_DoorTopLeft      0x244
-#define METATILE_TanobyRuins_DoorTopCenter    0x245
-#define METATILE_TanobyRuins_DoorTopRight     0x246
-#define METATILE_TanobyRuins_DoorBottomLeft   0x24C
-#define METATILE_TanobyRuins_DoorBottomCenter 0x24D
-#define METATILE_TanobyRuins_DoorBottomRight  0x24E
-
 // gTileset_SSAnne
 #define METATILE_SSAnne_Door  0x281
 
@@ -394,6 +385,16 @@
 #define METATILE_SilphCo_Wall_Lower                     0x291
 #define METATILE_SilphCo_Wall_RightEdge                 0x346
 #define METATILE_SilphCo_Wall_Upper                     0x289
+
+// gTileset_TanobyRuins
+#define METATILE_TanobyRuins_DoorBottomCenter  0x24D
+#define METATILE_TanobyRuins_DoorBottomLeft    0x24C
+#define METATILE_TanobyRuins_DoorBottomRight   0x24E
+#define METATILE_TanobyRuins_DoorTopCenter     0x245
+#define METATILE_TanobyRuins_DoorTopLeft       0x244
+#define METATILE_TanobyRuins_DoorTopRight      0x246
+#define METATILE_TanobyRuins_WallBottom        0x287
+#define METATILE_TanobyRuins_WallTop           0x283
 
 // gTileset_TrainerTower
 #define METATILE_TrainerTower_CounterBarrier         0x2B4
