@@ -11,6 +11,8 @@ Route25_MapScript_SetMasterTrainerMovementTypes::
 	setvar TRAINER, MASTER_STARMIE
 	callnative ShouldChangeMasterTrainerMovementType
 	call_if_eq VAR_RESULT, FALSE, Route25_MapScript_StarmieMasterMovementType
+	call_if_set FLAG_FOUGHT_SUICUNE, Route25_EventScript_HideSuicune
+	call_if_unset FLAG_FOUGHT_SUICUNE, Route25_EventScript_TryShowSuicune
 	end
 
 Route25_MapScript_StarmieMasterMovementType::
@@ -35,11 +37,6 @@ Route25_EventScript_TryRemoveSuicune::
 	goto_if_ne EventScript_Return
 	removeobject VAR_LAST_TALKED
 	return
-
-Route25_OnTransition::
-	call_if_set FLAG_FOUGHT_SUICUNE, Route25_EventScript_HideSuicune
-	call_if_unset FLAG_FOUGHT_SUICUNE, Route25_EventScript_TryShowSuicune
-	end
 
 Route25_EventScript_TryShowSuicune::
 	goto_if_set FLAG_SUICUNE_FLED, EventScript_Return

@@ -1,6 +1,7 @@
 .set LOCALID_RAIKOU, 1
 
 CinnabarCavern_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MtEmber_Summit_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CinnabarCavern_OnResume
 	.byte 0
 

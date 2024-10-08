@@ -1264,9 +1264,9 @@
 #define FLAG_HIDE_TOWER_CELIO    0x4C1
 #define FLAG_CHECKED_ALTAR       0x4C2
 #define FLAG_HIDE_MURAL          0x4C3
-#define FLAG_0x4C4               0x4C4
-#define FLAG_0x4C5               0x4C5
-#define FLAG_0x4C6               0x4C6
+#define FLAG_FOUGHT_REGIGIGAS    0x4C4
+#define FLAG_REGIGIGAS_GONE      0x4C5
+#define FLAG_HIDE_REGIGIGAS      0x4C6
 #define FLAG_0x4C7               0x4C7
 #define FLAG_0x4C8               0x4C8
 #define FLAG_0x4C9               0x4C9
