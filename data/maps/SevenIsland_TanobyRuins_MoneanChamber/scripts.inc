@@ -1,4 +1,5 @@
 SevenIsland_TanobyRuins_MoneanChamber_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, SevenIsland_TanobyRuins_MoneanChamber_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, SevenIsland_TanobyRuins_MoneanChamber_OnTransition
 	.byte 0
 
@@ -7,22 +8,11 @@ SevenIsland_TanobyRuins_MoneanChamber_OnTransition::
 	call EventScript_TryDarkenRuins
 	end
 
-SevenIsland_TanobyRuins_MoneanChamber_EventScript_StopChecking::
+SevenIsland_TanobyRuins_MoneanChamber_OnLoad::
+	goto_if_set FLAG_SYS_UNLOCKED_TANOBY_RUINS, SevenIsland_TanobyRuins_MoneanChamber_EventScript_OpenDoors
 	end
 
-SevenIsland_TanobyRuins_MoneanChamber_EventScript_RegirockCheck::
-	lockall
-	setvar VAR_0x8004, SPECIES_REGIROCK
-	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
-	goto_if_ne VAR_RESULT, TRUE, SevenIsland_TanobyRuins_MoneanChamber_EventScript_StopChecking
-	setvar VAR_0x8004, SPECIES_REGICE
-	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
-	goto_if_ne VAR_RESULT, TRUE, SevenIsland_TanobyRuins_MoneanChamber_EventScript_StopChecking
-	setvar VAR_0x8004, SPECIES_REGISTEEL
-	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
-	goto_if_ne VAR_RESULT, TRUE, SevenIsland_TanobyRuins_MoneanChamber_EventScript_StopChecking
-	delay 20
-	playse SE_DOOR
+SevenIsland_TanobyRuins_MoneanChamber_EventScript_OpenDoors::
 	setmetatile 7, 0, METATILE_TanobyRuins_DoorTopLeft, 1
 	setmetatile 8, 0, METATILE_TanobyRuins_DoorTopCenter, 1
 	setmetatile 9, 0, METATILE_TanobyRuins_DoorTopRight, 1
@@ -35,9 +25,4 @@ SevenIsland_TanobyRuins_MoneanChamber_EventScript_RegirockCheck::
 	setmetatile 13, 1, METATILE_TanobyRuins_DoorBottomLeft, 1
 	setmetatile 14, 1, METATILE_TanobyRuins_DoorBottomCenter, 0
 	setmetatile 15, 1, METATILE_TanobyRuins_DoorBottomRight, 1
-	waitse
-	special DrawWholeMapView
-	setvar VAR_REGICHECK, 2
-	releaseall
 	end
-	
