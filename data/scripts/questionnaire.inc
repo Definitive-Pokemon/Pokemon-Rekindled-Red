@@ -21,7 +21,7 @@ EventScript_AlterCave::
 	playse SE_ICE_BREAK
 	removeobject VAR_LAST_TALKED
 	fadescreen FADE_FROM_WHITE
-	delay 80
+	delay 160
 	playse SE_THUNDER2
 	setweather WEATHER_FOG_DIAGONAL
 	doweather
