@@ -211,7 +211,8 @@ MonitoringStation_Central_EventScript_Kabutops::
 	closemessage
 	playmoncry SPECIES_KABUTOPS, CRY_MODE_ECHO_START
 	waitmoncry
-	setobjectsubpriority LOCALID_KABUTOPS_SHADOW, MAP_MONITORING_STATION_CENTRAL, 0
+	setobjectsubpriority LOCALID_PUSHABLE_BOULDER, MAP_MONITORING_STATION_CENTRAL, 0
+	setobjectsubpriority LOCALID_ROCKET_M, MAP_MONITORING_STATION_CENTRAL, 0
 	applymovement LOCALID_KABUTOPS_SHADOW, MonitoringStation_Central_Movement_KabutopsWalkThrough2
 	waitmovement 0
 	applymovement LOCALID_ROCKET_M, MonitoringStation_Central_Movement_RocketTalk2
