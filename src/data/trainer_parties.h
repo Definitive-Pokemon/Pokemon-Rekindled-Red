@@ -3715,11 +3715,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_FishermanClaude[] = {
         .iv = 0,
         .lvl = 44,
         .species = SPECIES_SHELLDER,
+        .heldItem = ITEM_NONE,
     },
     {
         .iv = 0,
         .lvl = 45,
         .species = SPECIES_CLAMPERL,
+        .heldItem = ITEM_DEEP_SEA_TOOTH,
     },
 };
 
