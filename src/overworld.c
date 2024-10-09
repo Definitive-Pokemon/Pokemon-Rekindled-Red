@@ -1101,7 +1101,7 @@ static bool8 IsWarpInsideSixIslandAlteringCave(struct WarpData * warp)
 {
     bool8 result = FALSE;
     u8 mapGroup = warp->mapGroup;
-    if (warp->mapGroup == 0x01) // there is no definition for any group!
+    if (warp->mapGroup == 0x01)
     {
         if (warp->mapNum == ((u8)MAP_SIX_ISLAND_ALTERING_CAVE))
         {
@@ -1135,14 +1135,16 @@ static u16 GetCurrLocationDefaultMusic(void)
         }
 	else if ((bool8)IsWarpInsideSixIslandAlteringCave(&gSaveBlock1Ptr->location))
 	{
-	if (FlagGet(FLAG_FOUGHT_JIRACHI))
+	    if (FlagGet(FLAG_FOUGHT_JIRACHI))
         {
-		return music;
+		    return music;
 		}
 		else if (FlagGet (FLAG_HIDE_MURAL))
         {
             music = MUS_ENCOUNTER_DEOXYS;
 		}
+    }
+    return music;
 }
 
 static u16 GetWarpDestinationMusic(void)
