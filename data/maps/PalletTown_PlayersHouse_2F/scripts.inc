@@ -22,6 +22,7 @@ PalletTown_PlayersHouse_2F_EventScript_DontDoMomEvent::
 	
 PalletTown_PlayersHouse_2F_EventScript_Mom:
 	lockall
+	delay 60
 	playse SE_EXIT
 	addobject LOCALID_MOM
 	clearflag FLAG_HIDE_MOM
@@ -100,9 +101,10 @@ PalletTown_PlayersHouse_2F_Text_Mom::
 	.string "He said he had something just\n"
 	.string "for you.\p"
 	.string "Pay him a visit when you can.\p"
-	.string "Well, I'm waiting for you downstairs.\p"
-	.string "Though you might want to take\n"
-	.string "it easy for now.$"
+	.string "My, you've really become a famous\n"
+	.string "POKéMON TRAINER…\p"
+	.string "Well, I'll be waiting for you\n"
+	.string "downstairs!$"
 	
 	
 PalletTown_PlayersHouse_2F_Movement_MomGo::
