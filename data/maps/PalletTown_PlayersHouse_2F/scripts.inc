@@ -23,18 +23,20 @@ PalletTown_PlayersHouse_2F_EventScript_DontDoMomEvent::
 PalletTown_PlayersHouse_2F_EventScript_Mom:
 	lockall
 	playse SE_EXIT
-	waitse
 	addobject LOCALID_MOM
 	clearflag FLAG_HIDE_MOM
+	applymovement LOCALID_MOM PalletTown_PlayersHouse_2F_Movement_MomGoUp
+	waitmovement 0
+	waitse
 	applymovement LOCALID_MOM PalletTown_PlayersHouse_2F_Movement_MomLookDown
 	waitmovement 0
 	textcolor 1
 	msgbox PalletTown_PlayersHouse_2F_Text_Mom MSGBOX_NPC
+	playse SE_EXIT
 	applymovement LOCALID_OLD_MAN PalletTown_PlayersHouse_2F_Movement_MomGo
 	waitmovement 0
-	removeobject LOCALID_MOM
 	waitse
-	playse SE_EXIT
+	removeobject LOCALID_MOM
 	setflag FLAG_HIDE_MOM
 	setflag FLAG_MOM_GONE_DOWN
 	releaseall
@@ -105,4 +107,8 @@ PalletTown_PlayersHouse_2F_Text_Mom::
 	
 PalletTown_PlayersHouse_2F_Movement_MomGo::
 	walk_in_place_left
+	step_end
+
+PalletTown_PlayersHouse_2F_Movement_MomGoUp::
+	walk_in_place_right
 	step_end
