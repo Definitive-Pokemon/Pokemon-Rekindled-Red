@@ -25,9 +25,9 @@ EventScript_AlterCave::
 	playse SE_ORB
 	playbgm MUS_AWAKEN_LEGEND, 0
 	fadeinbgm 0
-	fadescreen FADE_TO_WHITE
+	setweather WEATHER_FOG_DIAGONAL
+	doweather
 	waitse
-	fadescreen FADE_FROM_WHITE
 	delay 20
 	playse SE_DOOR
 	waitse
