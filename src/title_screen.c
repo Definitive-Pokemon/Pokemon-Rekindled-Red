@@ -91,16 +91,16 @@ static const struct OamData sOamData_FlameOrLeaf = {
 };
 
 static const union AnimCmd sSpriteAnim_Flame[] = {
-    ANIMCMD_FRAME(0, 3),
-    ANIMCMD_FRAME(4, 6),
-    ANIMCMD_FRAME(8, 6),
-    ANIMCMD_FRAME(12, 6),
-    ANIMCMD_FRAME(16, 6),
-    ANIMCMD_FRAME(20, 6),
-    ANIMCMD_FRAME(24, 6),
-    ANIMCMD_FRAME(28, 6),
-    ANIMCMD_FRAME(32, 6),
-    ANIMCMD_FRAME(36, 6),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(4, 7),
+    ANIMCMD_FRAME(8, 7),
+    ANIMCMD_FRAME(12, 7),
+    ANIMCMD_FRAME(16, 7),
+    ANIMCMD_FRAME(20, 7),
+    ANIMCMD_FRAME(24, 7),
+    ANIMCMD_FRAME(28, 7),
+    ANIMCMD_FRAME(32, 7),
+    ANIMCMD_FRAME(36, 7),
     ANIMCMD_END
 };
 
