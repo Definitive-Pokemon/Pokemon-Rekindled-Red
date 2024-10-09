@@ -91,16 +91,16 @@ static const struct OamData sOamData_FlameOrLeaf = {
 };
 
 static const union AnimCmd sSpriteAnim_Flame[] = {
-    ANIMCMD_FRAME(0, 4),
-    ANIMCMD_FRAME(4, 7),
-    ANIMCMD_FRAME(8, 7),
-    ANIMCMD_FRAME(12, 7),
-    ANIMCMD_FRAME(16, 7),
-    ANIMCMD_FRAME(20, 7),
-    ANIMCMD_FRAME(24, 7),
-    ANIMCMD_FRAME(28, 7),
-    ANIMCMD_FRAME(32, 7),
-    ANIMCMD_FRAME(36, 7),
+    ANIMCMD_FRAME(0, 3),
+    ANIMCMD_FRAME(4, 6),
+    ANIMCMD_FRAME(8, 6),
+    ANIMCMD_FRAME(12, 6),
+    ANIMCMD_FRAME(16, 6),
+    ANIMCMD_FRAME(20, 6),
+    ANIMCMD_FRAME(24, 6),
+    ANIMCMD_FRAME(28, 6),
+    ANIMCMD_FRAME(32, 6),
+    ANIMCMD_FRAME(36, 6),
     ANIMCMD_END
 };
 
@@ -1054,7 +1054,7 @@ static bool32 CreateFlameOrLeafSprite(s32 x, s32 y, s32 xspeed, s32 yspeed, bool
         {
             gSprites[spriteId].sPosX = x * 16;
             gSprites[spriteId].sSpeedX = xspeed;
-            gSprites[spriteId].sPosY = y * 16;
+            gSprites[spriteId].sPosY = y * 20;
             gSprites[spriteId].sSpeedY = yspeed;
             gSprites[spriteId].data[4] = 0;
             gSprites[spriteId].data[5] = (xspeed * yspeed) % 16;
