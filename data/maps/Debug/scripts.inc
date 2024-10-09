@@ -180,6 +180,7 @@ GiveLetter::
 	lock
 	giveitem ITEM_LETTER
 	clearflag FLAG_MOM_GONE_DOWN
+	setflag FLAG_OAK_HAS_LETTER
 	release
 	end
 	
