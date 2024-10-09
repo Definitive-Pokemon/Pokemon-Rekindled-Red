@@ -22,7 +22,7 @@ EventScript_AlterCave::
 	removeobject VAR_LAST_TALKED
 	fadescreen FADE_FROM_WHITE
 	delay 80
-	playse SE_M_THUNDERSTORM
+	playse SE_THUNDERSTORM
 	delay 60
 	setweather WEATHER_FOG_DIAGONAL
 	doweather
