@@ -1096,6 +1096,21 @@ static bool8 IsWarpInsideMonitoringStation(struct WarpData * warp)
     return result;
 }
 
+
+static bool8 IsWarpInsideSixIslandAlteringCave(struct WarpData * warp)
+{
+    bool8 result = FALSE;
+    u8 mapGroup = warp->mapGroup;
+    if (warp->mapGroup == 0x01) // there is no definition for any group!
+    {
+        if (warp->mapNum == ((u8)MAP_SIX_ISLAND_ALTERING_CAVE))
+        {
+            result = TRUE;
+        }
+    }
+    return result;
+}
+
 static u16 GetCurrLocationDefaultMusic(void)
 {
     u16 music;
