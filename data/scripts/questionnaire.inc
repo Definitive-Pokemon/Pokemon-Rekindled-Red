@@ -22,10 +22,11 @@ EventScript_AlterCave::
 	removeobject VAR_LAST_TALKED
 	fadescreen FADE_FROM_WHITE
 	delay 80
-	playse SE_M_ICY_WIND
-	playbgm MUS_ENCOUNTER_DEOXYS, 1
+	playse SE_M_THUNDERSTORM
+	delay 60
 	setweather WEATHER_FOG_DIAGONAL
 	doweather
+	playbgm MUS_ENCOUNTER_DEOXYS, 1
 	waitse
 	delay 20
 	playse SE_DOOR
