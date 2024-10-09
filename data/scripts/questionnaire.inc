@@ -22,13 +22,11 @@ EventScript_AlterCave::
 	removeobject VAR_LAST_TALKED
 	fadescreen FADE_FROM_WHITE
 	delay 80
-	playse SE_THUNDERSTORM
-	delay 60
+	playse SE_THUNDER2
 	setweather WEATHER_FOG_DIAGONAL
 	doweather
 	playbgm MUS_ENCOUNTER_DEOXYS, 1
-	waitse
-	delay 20
+	delay 200
 	playse SE_DOOR
 	waitse
 	setmetatile 4, 12, METATILE_RockTunnel_TopLeft, 0
