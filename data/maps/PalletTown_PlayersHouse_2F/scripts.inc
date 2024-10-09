@@ -90,7 +90,14 @@ PalletTown_PlayersHouse_2F_Movement_MomLookDown::
 	step_end
 
 PalletTown_PlayersHouse_2F_Text_Mom::
-	.string "Honey, OAK HAS FUCKING LETTER.$"
+	.string "Hey honey, PROFESSOR OAK\n"
+	.string "just dropped by.\p"
+	.string "He said he had something just\n"
+	.string "for you.\p"
+	.string "Pay him a visit when you can.\p"
+	.string "Well, I'm waiting for you downstairs.\p"
+	.string "Though you might want to take\n"
+	.string "it easy for now.$"
 	
 	
 PalletTown_PlayersHouse_2F_Movement_MomGo::
