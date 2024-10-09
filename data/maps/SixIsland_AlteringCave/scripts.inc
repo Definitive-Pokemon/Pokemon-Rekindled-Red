@@ -11,6 +11,7 @@ SixIsland_AlteringCave_OnLoad::
 	end
 	
 SixIsland_AlteringCave_EventScript_SetWarp::
+	playbgm MUS_ENCOUNTER_DEOXYS, 0
 	setmetatile 4, 12, METATILE_RockTunnel_TopLeft, 0
 	setmetatile 5, 12, METATILE_RockTunnel_Top, 0
 	setmetatile 6, 12, METATILE_RockTunnel_TopRight, 0
