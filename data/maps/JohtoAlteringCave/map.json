@@ -2,7 +2,7 @@
   "id": "MAP_JOHTO_ALTERING_CAVE",
   "name": "JohtoAlteringCave",
   "layout": "LAYOUT_JOHTO_ALTERING_CAVE",
-  "music": "MUS_MT_MOON",
+  "music": "MUS_ENCOUNTER_DEOXYS",
   "region_map_section": "MAPSEC_ALTERING_CAVE_E",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

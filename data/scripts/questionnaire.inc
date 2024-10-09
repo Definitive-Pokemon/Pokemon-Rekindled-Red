@@ -23,8 +23,7 @@ EventScript_AlterCave::
 	fadescreen FADE_FROM_WHITE
 	delay 80
 	playse SE_ORB
-	playbgm MUS_AWAKEN_LEGEND, 0
-	fadeinbgm 0
+	playbgm MUS_ENCOUNTER_DEOXYS, 0
 	setweather WEATHER_FOG_DIAGONAL
 	doweather
 	waitse

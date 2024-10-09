@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE103_ALTERING_CAVE",
   "name": "Route103_AlteringCave",
   "layout": "LAYOUT_ROUTE103_ALTERING_CAVE",
-  "music": "MUS_MT_MOON",
+  "music": "MUS_ENCOUNTER_DEOXYS",
   "region_map_section": "MAPSEC_ALTERING_CAVE_E",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
