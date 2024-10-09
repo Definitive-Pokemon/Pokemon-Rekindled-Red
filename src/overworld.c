@@ -1136,7 +1136,7 @@ static u16 GetCurrLocationDefaultMusic(void)
     }
 	else if ((bool8)IsWarpInsideSixIslandAlteringCave(&gSaveBlock1Ptr->location))
 	{
-	    if (FlagGet(FLAG_FOUGHT_JIRACHI))
+	    if (FlagGet(FLAG_CAUGHT_JIRACHI))
         {
 		    return music;
 		}
@@ -1172,7 +1172,7 @@ static u16 GetWarpDestinationMusic(void)
     }
 	else if ((bool8)IsWarpInsideSixIslandAlteringCave(&sWarpDestination))
 	{
-	    if (FlagGet(FLAG_FOUGHT_JIRACHI))
+	    if (FlagGet(FLAG_CAUGHT_JIRACHI))
         {
 		return music;
 		}
