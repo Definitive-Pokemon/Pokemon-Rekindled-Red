@@ -3947,6 +3947,7 @@ static const u8 sAerodactylTMHMLearnset[] =
 };
 
 static const u8 sSeviianAerodactylTMHMLearnset[] = 
+{
     TMHM(TM02_DRAGON_CLAW),
     TMHM(TM05_ROAR),
     TMHM(TM06_TOXIC),
