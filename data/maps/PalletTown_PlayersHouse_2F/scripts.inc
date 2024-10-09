@@ -20,7 +20,7 @@ PalletTown_PlayersHouse_2F_EventScript_MomCheck::
 PalletTown_PlayersHouse_2F_EventScript_MomCheckNo::
 	end
 	
-PalletTown_PlayersHouse_2F_Mom:
+PalletTown_PlayersHouse_2F_EventScript_Mom:
 	lockall
 	playse SE_EXIT
 	waitse
