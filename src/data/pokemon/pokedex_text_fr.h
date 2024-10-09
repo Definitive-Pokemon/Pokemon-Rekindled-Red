@@ -2718,6 +2718,8 @@ const u8 gFossilizedKabutopsPokedexText_FR[] = _(
     "guarding of dangerous secrets.");
 
 const u8 gSeviianAerodactylPokedexText_FR[] = _(
-    "Lorum Ipsy");
+    "This AERODACTYL fossil is being inhabited\n"
+    "by an ancient spirit, filled with an\n"
+    "unquenchable thirst for destruction.");
 
 const u8 gDeoxysPokedexTextUnused_FR[] = _("");

@@ -27,7 +27,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_MOM_GONE_DOWN"
+      "flag": "FLAG_HIDE_MOM_REAL"
     }
   ],
   "warp_events": [
@@ -37,6 +37,13 @@
       "elevation": 3,
       "dest_map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_1F",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_2F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

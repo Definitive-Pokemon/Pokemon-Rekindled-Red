@@ -24,6 +24,8 @@ PalletTown_PlayersHouse_2F_EventScript_Mom:
 	lockall
 	playse SE_EXIT
 	waitse
+	addobject LOCALID_MOM
+	clearflag FLAG_HIDE_MOM
 	applymovement LOCALID_MOM PalletTown_PlayersHouse_2F_Movement_MomLookDown
 	waitmovement 0
 	textcolor 1
@@ -33,6 +35,7 @@ PalletTown_PlayersHouse_2F_EventScript_Mom:
 	removeobject LOCALID_MOM
 	waitse
 	playse SE_EXIT
+	setflag FLAG_HIDE_MOM
 	setflag FLAG_MOM_GONE_DOWN
 	releaseall
 	end

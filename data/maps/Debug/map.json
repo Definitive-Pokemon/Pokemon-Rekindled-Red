@@ -228,8 +228,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CELIO",
-      "x": 0,
-      "y": 9,
+      "x": 1,
+      "y": 11,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -293,6 +293,20 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GiveSteel",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_KABUTOPS_SHADOW",
+      "x": 6,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "GiveMasterBall",
       "flag": "0"
     }
   ],
@@ -413,8 +427,8 @@
       "x": 20,
       "y": 17,
       "elevation": 0,
-      "dest_map": "MAP_PALLET_TOWN",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_2F",
+      "dest_warp_id": "1"
     },
     {
       "x": 20,
