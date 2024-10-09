@@ -1054,7 +1054,7 @@ static bool32 CreateFlameOrLeafSprite(s32 x, s32 y, s32 xspeed, s32 yspeed, bool
         {
             gSprites[spriteId].sPosX = x * 16;
             gSprites[spriteId].sSpeedX = xspeed;
-            gSprites[spriteId].sPosY = y * 20;
+            gSprites[spriteId].sPosY = y * 17;
             gSprites[spriteId].sSpeedY = yspeed;
             gSprites[spriteId].data[4] = 0;
             gSprites[spriteId].data[5] = (xspeed * yspeed) % 16;
