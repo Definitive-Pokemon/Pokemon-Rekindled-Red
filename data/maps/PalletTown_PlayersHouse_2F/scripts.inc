@@ -33,11 +33,11 @@ PalletTown_PlayersHouse_2F_EventScript_Mom:
 	waitmovement 0
 	textcolor 1
 	msgbox PalletTown_PlayersHouse_2F_Text_Mom MSGBOX_NPC
-	playse SE_EXIT
 	applymovement LOCALID_OLD_MAN PalletTown_PlayersHouse_2F_Movement_MomGo
 	waitmovement 0
-	waitse
+	playse SE_EXIT
 	removeobject LOCALID_MOM
+	waitse
 	setflag FLAG_HIDE_MOM
 	setflag FLAG_MOM_GONE_DOWN
 	releaseall
