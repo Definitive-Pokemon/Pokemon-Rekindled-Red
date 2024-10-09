@@ -154,6 +154,7 @@ GiveRock::
 	lock
 	givemon SPECIES_REGIROCK, 100, ITEM_LEFTOVERS
 	release
+	givemon SPECIES_MOLTRES, 100, ITEM_LEFTOVERS
 	end
 	
 GiveIce::
