@@ -106,14 +106,14 @@
 #define TYPE_BUG            6
 #define TYPE_DARK          7
 #define TYPE_STEEL          8
-#define TYPE_MYSTERY        9
-#define TYPE_FIRE           10
-#define TYPE_WATER          11
-#define TYPE_GRASS          12
-#define TYPE_ELECTRIC       13
-#define TYPE_PSYCHIC        14
-#define TYPE_ICE            15
-#define TYPE_DRAGON         16
+#define TYPE_DRAGON         9
+#define TYPE_MYSTERY        10
+#define TYPE_FIRE           11
+#define TYPE_WATER          12
+#define TYPE_GRASS          13
+#define TYPE_ELECTRIC       14
+#define TYPE_PSYCHIC        15
+#define TYPE_ICE            16
 #define TYPE_GHOST           17
 #define NUMBER_OF_MON_TYPES 18
 
