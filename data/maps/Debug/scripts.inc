@@ -179,7 +179,7 @@ GiveMasterBall::
 GiveLetter::
 	lock
 	giveitem ITEM_LETTER
-	setflag FLAG_OAK_HAS_LETTER
+	clearflag FLAG_MOM_GONE_DOWN
 	release
 	end
 	
