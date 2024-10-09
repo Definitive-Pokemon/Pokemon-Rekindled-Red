@@ -171,6 +171,8 @@ GiveSteel::
 GiveMasterBall::
 	lock
 	giveitem ITEM_MASTER_BALL, 99
+	givemon SPECIES_S_AERODACTYL, 100, ITEM_LEFTOVERS
+	givemon SPECIES_S_KABUTOPS, 100, ITEM_LEFTOVERS
 	release
 	end
 	
