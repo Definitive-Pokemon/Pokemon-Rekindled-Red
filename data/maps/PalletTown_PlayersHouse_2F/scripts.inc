@@ -36,8 +36,8 @@ PalletTown_PlayersHouse_2F_EventScript_Mom:
 	applymovement LOCALID_OLD_MAN PalletTown_PlayersHouse_2F_Movement_MomGo
 	waitmovement 0
 	playse SE_EXIT
-	removeobject LOCALID_MOM
 	waitse
+	removeobject LOCALID_MOM
 	setflag FLAG_HIDE_MOM
 	setflag FLAG_MOM_GONE_DOWN
 	releaseall
