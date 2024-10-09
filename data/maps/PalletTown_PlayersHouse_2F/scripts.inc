@@ -1,7 +1,41 @@
+.equ LOCALID_MOM, 1
+
 PalletTown_PlayersHouse_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_PlayersHouse_2F_OnTransition
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PalletTown_PlayersHouse_2F_OnWarp
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_PlayersHouse_2F_OnFrame
 	.byte 0
+
+PalletTown_PlayersHouse_2F_OnFrame::
+	map_script_2 VAR_TEMP_0, 0, PalletTown_PlayersHouse_2F_EventScript_MomCheck
+	.2byte 0
+
+
+PalletTown_PlayersHouse_2F_EventScript_MomCheck::
+	goto_if_unset FLAG_OAK_HAS_LETTER, PalletTown_PlayersHouse_2F_EventScript_MomCheckNo
+	setvar VAR_TEMP_0, 1
+	goto_if_unset FLAG_MOM_GONE_DOWN, PalletTown_PlayersHouse_2F_EventScript_Mom
+	end
+
+PalletTown_PlayersHouse_2F_EventScript_MomCheckNo::
+	end
+	
+PalletTown_PlayersHouse_2F_Mom:
+	lockall
+	playse SE_EXIT
+	waitse
+	applymovement LOCALID_MOM PalletTown_PlayersHouse_2F_Movement_MomLookDown
+	waitmovement 0
+	textcolor 1
+	msgbox PalletTown_PlayersHouse_2F_Text_Mom MSGBOX_NPC
+	applymovement LOCALID_OLD_MAN PalletTown_PlayersHouse_2F_Movement_MomGo
+	waitmovement 0
+	removeobject LOCALID_MOM
+	waitse
+	playse SE_EXIT
+	setflag FLAG_MOM_GONE_DOWN
+	releaseall
+	end
 
 PalletTown_PlayersHouse_2F_OnTransition::
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PLAYERS_HOUSE_2F, 0, PalletTown_PlayersHouse_2F_EventScript_SetRespawn
@@ -50,3 +84,15 @@ EventScript_PalletTown_PlayersHouse_2F_ShutDownPC::
 	special SetHelpContextForMap
 	releaseall
 	end
+
+PalletTown_PlayersHouse_2F_Movement_MomLookDown::
+	walk_in_place_down
+	step_end
+
+PalletTown_PlayersHouse_2F_Text_Mom::
+	.string "Honey, OAK HAS FUCKING LETTER.$"
+	
+	
+PalletTown_PlayersHouse_2F_Movement_MomGo::
+	walk_in_place_left
+	step_end

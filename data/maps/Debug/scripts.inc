@@ -177,6 +177,7 @@ GiveMasterBall::
 GiveLetter::
 	lock
 	giveitem ITEM_LETTER
+	setflag FLAG_OAK_HAS_LETTER
 	release
 	end
 	

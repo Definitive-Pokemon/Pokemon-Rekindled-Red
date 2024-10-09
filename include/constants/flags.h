@@ -260,7 +260,7 @@
 #define FLAG_HIDE_AERO_CAVE_RAYQUAZA          0x0F0
 #define FLAG_MYSTERY_MAN_GONE                 0x0F1
 #define FLAG_HIDE_LAPRAS_OLD                  0x0F2
-#define FLAG_0x0F3               0x0F3
+#define FLAG_MOM_GONE_DOWN                    0x0F3
 #define FLAG_0x0F4               0x0F4
 #define FLAG_0x0F5               0x0F5
 #define FLAG_0x0F6               0x0F6
