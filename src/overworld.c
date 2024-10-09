@@ -1166,6 +1166,16 @@ static u16 GetWarpDestinationMusic(void)
         {
             music = MUS_WEATHER_GROUDON;
         }
+	else if ((bool8)IsWarpInsideSixIslandAlteringCave(&gWarpDestination))
+	{
+	if (FlagGet(FLAG_FOUGHT_JIRACHI))
+        {
+		return music;
+		}
+		else if (FlagGet (FLAG_HIDE_MURAL))
+        {
+            music = MUS_ENCOUNTER_DEOXYS;
+		}
     }
     return music;
 }
