@@ -26,7 +26,7 @@ EventScript_AlterCave::
 	setweather WEATHER_FOG_DIAGONAL
 	doweather
 	playbgm MUS_ENCOUNTER_DEOXYS, 1
-	delay 200
+	delay 250
 	playse SE_DOOR
 	waitse
 	setmetatile 4, 12, METATILE_RockTunnel_TopLeft, 0

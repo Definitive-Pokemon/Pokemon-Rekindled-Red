@@ -1118,8 +1118,16 @@ static u16 GetCurrLocationDefaultMusic(void)
         {
             music = MUS_WEATHER_GROUDON;
         }
-    }
-    return music;
+	else if ((bool8)IsWarpInsideSixIslandAlteringCave(&gSaveBlock1Ptr->location))
+	{
+	if (FlagGet(FLAG_FOUGHT_JIRACHI))
+        {
+		return music;
+		}
+		else if (FlagGet (FLAG_HIDE_MURAL))
+        {
+            music = MUS_ENCOUNTER_DEOXYS;
+		}
 }
 
 static u16 GetWarpDestinationMusic(void)
