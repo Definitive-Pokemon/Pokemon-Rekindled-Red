@@ -42,6 +42,24 @@
 #define ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_9 ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_8 + 1
 #define ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_TOTAL (ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_SLOT_9)
 
+const struct WildPokemon sForsakenTombB9F_LandMons[] =
+{
+    { 65, 65, SPECIES_DUSCLOPS },
+    { 66, 66, SPECIES_WOBBUFFET },
+    { 64, 64, SPECIES_WYNAUT },
+    { 63, 63, SPECIES_GOLBAT },
+    { 66, 66, SPECIES_GOLBAT },
+    { 65, 65, SPECIES_MISDREAVUS },
+    { 64, 64, SPECIES_KADABRA },
+    { 65, 65, SPECIES_HYPNO },
+    { 64, 64, SPECIES_KADABRA },
+    { 63, 63, SPECIES_WOBBUFFET },
+    { 64, 64, SPECIES_DUSCLOPS },
+    { 66, 66, SPECIES_DUSCLOPS },
+};
+
+const struct WildPokemonInfo sForsakenTombB9F_LandMonsInfo = { 7, sForsakenTombB9F_LandMons };
+
 const struct WildPokemon sSevenIslandTanobyRuinsMoneanChamber_FireRed_LandMons[] =
 {
     { 65, 65, SPECIES_UNOWN },
@@ -7609,6 +7627,18 @@ const struct WildPokemonInfo sMonitoringStation_Pokemon_LandMonsInfo = { 5, sMon
 
 const struct WildPokemonHeader gWildMonHeaders[] =
 {
+	{
+        .mapGroup = MAP_GROUP(FORSAKEN_TOMB_B9F),
+        .mapNum = MAP_NUM(FORSAKEN_TOMB_B9F),
+        .landMonsInfo_FR = &sForsakenTombB9F_LandMonsInfo,
+        .landMonsInfo_LG = &sForsakenTombB9F_LandMonsInfo,
+        .waterMonsInfo_FR = NULL,
+        .waterMonsInfo_LG = NULL,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = NULL,
+        .fishingMonsInfo_LG = NULL,
+    },
     {
         .mapGroup = MAP_GROUP(SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER),
         .mapNum = MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER),
