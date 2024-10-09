@@ -22,8 +22,8 @@ EventScript_AlterCave::
 	removeobject VAR_LAST_TALKED
 	fadescreen FADE_FROM_WHITE
 	delay 80
-	playse SE_ORB
-	playbgm MUS_ENCOUNTER_DEOXYS, 0
+	playse SE_M_ICY_WIND
+	playbgm MUS_ENCOUNTER_DEOXYS, 1
 	setweather WEATHER_FOG_DIAGONAL
 	doweather
 	waitse
@@ -42,7 +42,6 @@ EventScript_AlterCave::
 	setmetatile 6, 4, METATILE_RockTunnel_Spot, 0
 	special DrawWholeMapView
 	setflag FLAG_HIDE_MURAL
-	playbgm MUS_MT_MOON, 1
 	release
 	end
 
