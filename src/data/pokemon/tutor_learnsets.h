@@ -5904,6 +5904,7 @@ static const u64 sTutorLearnsets[] =
                                 | TUTOR(MOVE_PSYCH_UP)
                                 | TUTOR(MOVE_THUNDER_WAVE)
                                 | TUTOR(MOVE_ROCK_SLIDE)
+                                | TUTOR(MOVE_MEGA_KICK)
                                 | TUTOR(MOVE_ENDURE)),
 
    [SPECIES_FOSSILIZED_KABUTOPS]        = (TUTOR(MOVE_SWORDS_DANCE)
@@ -5924,6 +5925,9 @@ static const u64 sTutorLearnsets[] =
                                 | TUTOR(MOVE_FURY_CUTTER)),
     [SPECIES_SEVIIAN_AERODACTYL]        = (TUTOR(MOVE_BODY_SLAM)
                                 | TUTOR(MOVE_ROCK_SLIDE)),
+                                | TUTOR(MOVE_DOUBLE_EDGE)),
+                                | TUTOR(MOVE_MIMIC)),
+                                | TUTOR(MOVE_SUBSTITUTE)),
 
 };
 
