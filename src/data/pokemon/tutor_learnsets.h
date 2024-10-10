@@ -5924,9 +5924,9 @@ static const u64 sTutorLearnsets[] =
                                 | TUTOR(MOVE_NIGHTMARE)
                                 | TUTOR(MOVE_FURY_CUTTER)),
     [SPECIES_SEVIIAN_AERODACTYL]        = (TUTOR(MOVE_BODY_SLAM)
-                                | TUTOR(MOVE_ROCK_SLIDE)),
-                                | TUTOR(MOVE_DOUBLE_EDGE)),
-                                | TUTOR(MOVE_MIMIC)),
+                                | TUTOR(MOVE_ROCK_SLIDE),
+                                | TUTOR(MOVE_DOUBLE_EDGE),
+                                | TUTOR(MOVE_MIMIC),
                                 | TUTOR(MOVE_SUBSTITUTE)),
 
 };
