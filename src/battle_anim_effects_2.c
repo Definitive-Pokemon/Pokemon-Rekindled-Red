@@ -1254,6 +1254,17 @@ const struct SpriteTemplate gGuardRingSpriteTemplate =
     .callback = AnimGuardRing,
 };
 
+const struct SpriteTemplate gCrushGripExplosionTemplate =
+{
+    .tileTag = ANIM_TAG_EXPLOSION,
+    .paletteTag = ANIM_TAG_EXPLOSION,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gExplosionAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimSpriteOnMonPos
+};
+
 #define sAmplitudeX  data[1]
 #define sCircleSpeed data[2]
 #define sMoveSteps   data[3]
