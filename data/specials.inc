@@ -337,7 +337,7 @@ gSpecials::
 	def_special NullFieldSpecial
 	def_special GetPartyMonSpecies
 	def_special IsSelectedMonEgg
-	def_special NullFieldSpecial
+	def_special DoPokemonEmeraldShakingEffect
 	def_special NullFieldSpecial
 	def_special LoadPlayerBag
 	def_special Script_FadeOutMapMusic

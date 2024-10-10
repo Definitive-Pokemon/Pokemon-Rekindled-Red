@@ -4121,3 +4121,48 @@ void FldEff_PhotoFlash(void)
     BeginNormalPaletteFade(PALETTES_ALL, -1, 0x0F, 0x00, RGB_WHITE);
     CreateTask(Task_PhotoFlash, 90);
 }
+
+//code ported over from pokeemerald
+#define tDelayCounter  data[1]
+#define tShakeCounter  data[2]
+#define tVerticalPan   data[4]
+#define tDelay         data[5]
+#define tNumShakes     data[6]
+
+static void Task_SealedChamberShakingEffect(u8 taskId)
+{
+    struct Task *task = &gTasks[taskId];
+
+    task->tDelayCounter++;
+    if (task->tDelayCounter % task->tDelay == 0)
+    {
+        task->tDelayCounter = 0;
+        task->tShakeCounter++;
+        task->tVerticalPan = -task->tVerticalPan;
+        SetCameraPanning(0, task->tVerticalPan);
+        if (task->tShakeCounter == task->tNumShakes)
+        {
+            DestroyTask(taskId);
+            ScriptContext_Enable();
+            InstallCameraPanAheadCallback();
+        }
+    }
+}
+
+void DoPokemonEmeraldShakingEffect(void)
+{
+    u8 taskId = CreateTask(Task_SealedChamberShakingEffect, 9);
+
+    gTasks[taskId].tDelayCounter = 0;
+    gTasks[taskId].tShakeCounter = 0;
+    gTasks[taskId].tVerticalPan = 2;
+    gTasks[taskId].tDelay = 5;
+    gTasks[taskId].tNumShakes = 50;
+    SetCameraPanningCallback(0);
+}
+
+#undef tDelayCounter
+#undef tShakeCounter
+#undef tVerticalPan
+#undef tDelay
+#undef tNumShakes
