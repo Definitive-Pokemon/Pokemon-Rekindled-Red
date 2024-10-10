@@ -305,32 +305,6 @@ const struct SpriteTemplate gWeatherBallRockDownSpriteTemplate =
     .callback = AnimWeatherBallDown,
 };
 
-static const union AffineAnimCmd sSpriteAffineAnim_CrushGripHandEnemyAttack[] =
-{
-    AFFINEANIMCMD_FRAME(0, 0, 96, 1), //180 degree turn
-    AFFINEANIMCMD_END
-};
-static const union AffineAnimCmd sSpriteAffineAnim_DoNothing[] =
-{
-    AFFINEANIMCMD_FRAME(0, 0, 0, 1), //Do nothing
-    AFFINEANIMCMD_END
-};
-static const union AffineAnimCmd* const sSpriteAffineAnimTable_CrushGripHand[] =
-{
-    sSpriteAffineAnim_DoNothing,
-    sSpriteAffineAnim_CrushGripHandEnemyAttack,
-};
-const struct SpriteTemplate gCrushGripHandTemplate =
-{
-    .tileTag = ANIM_TAG_PURPLE_HAND_OUTLINE,
-    .paletteTag = ANIM_TAG_ACUPRESSURE,
-    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
-    .anims = sAnims_BasicRock,
-    .images = NULL,
-    .affineAnims = sSpriteAffineAnimTable_CrushGripHand,
-    .callback = AnimRockBlastRock
-};
-
 static void AnimFallingRock(struct Sprite *sprite)
 {
     if (gBattleAnimArgs[3] != 0)

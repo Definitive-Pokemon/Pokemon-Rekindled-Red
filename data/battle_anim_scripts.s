@@ -10135,28 +10135,25 @@ WeatherBallIce:
 	waitforvisualfinish
 	end
 
-Move_CRUSH_GRIP::
-	loadspritegfx ANIM_TAG_EXPLOSION
-	loadspritegfx ANIM_TAG_ACUPRESSURE
-	loadspritegfx ANIM_TAG_PURPLE_HAND_OUTLINE
-	setalpha 15, 0
-	createsprite gCrushGripHandTemplate, ANIM_TARGET, 2, 16, 0, 0, 0, 25, 0x101
+Move_CRUSH_GRIP:
+	loadspritegfx ANIM_TAG_GRAB_AWAY
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	createsprite gCrushGripAwayTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 2
+	playsewithpan SE_M_DOUBLE_SLAP, SOUND_PAN_TARGET
 	waitforvisualfinish
-	createvisualtask AnimTask_CompressTargetHorizontally, 2
-	createsprite gCrushGripExplosionTemplate, ANIM_TARGET, 0, 0, 0, 1, 1
-	delay 3
-	playsewithpan SE_M_EXPLOSION, SOUND_PAN_ATTACKER
-	createsprite gCrushGripExplosionTemplate, ANIM_TARGET, 0, 0x18, 0xffe8, 1, 1
-	delay 3
-	playsewithpan SE_M_EXPLOSION, SOUND_PAN_ATTACKER
-	createsprite gCrushGripExplosionTemplate, ANIM_TARGET, 0, 0xfff0, 16, 1, 1
-	delay 3
-	playsewithpan SE_M_EXPLOSION, SOUND_PAN_ATTACKER
-	createsprite gCrushGripExplosionTemplate, ANIM_TARGET, 0, 0xffe8, -12, 1, 1
-	delay 3
-	playsewithpan SE_M_EXPLOSION, SOUND_PAN_ATTACKER
-	createsprite gCrushGripExplosionTemplate, ANIM_TARGET, 0, 16, 16, 1, 1
+	clearmonbg ANIM_TARGET
+	blendoff
+	end
+
+CrushGripTargetPlayer:
+	loadspritegfx ANIM_TAG_GRAB_AWAY
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	playsewithpan SE_M_DOUBLE_SLAP, SOUND_PAN_TARGET
+	createsprite gCrushGripAwayTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 2
 	waitforvisualfinish
+	clearmonbg ANIM_TARGET
 	blendoff
 	end
 

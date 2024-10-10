@@ -1254,15 +1254,49 @@ const struct SpriteTemplate gGuardRingSpriteTemplate =
     .callback = AnimGuardRing,
 };
 
-const struct SpriteTemplate gCrushGripExplosionTemplate =
+static const union AnimCmd sCrushGripAnimCmds[] =
 {
-    .tileTag = ANIM_TAG_EXPLOSION,
-    .paletteTag = ANIM_TAG_EXPLOSION,
-    .oam = &gOamData_AffineOff_ObjNormal_32x32,
-    .anims = gExplosionAnimTable,
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_FRAME(4096, 5),
+    ANIMCMD_FRAME(4096 * 2, 5),
+    ANIMCMD_FRAME(4096 * 3, 20),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sCrushGripClosingAnimCmds[] =
+{
+    ANIMCMD_FRAME(4096, 5),
+    ANIMCMD_FRAME(4096 * 2, 5),
+    ANIMCMD_FRAME(4096 * 3, 30),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sCrushGripAnimTable[] =
+{
+    sCrushGripAnimCmds,
+    sCrushGripClosingAnimCmds,
+};
+
+const struct SpriteTemplate gCrushGripAwayTemplate =    
+{
+    .tileTag = ANIM_TAG_GRAB_AWAY,
+    .paletteTag = ANIM_TAG_GRAB_AWAY,
+    .oam = &gOamData_AffineOff_ObjNormal_64x64,
     .images = NULL,
+    .anims = sCrushGripAnimTable,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimSpriteOnMonPos
+    .callback = AnimCrushGrip,
+};
+
+const struct SpriteTemplate gCrushGripTowardTemplate =    
+{
+    .tileTag = ANIM_TAG_GRAB_TOWARDS,
+    .paletteTag = ANIM_TAG_GRAB_TOWARDS,
+    .oam = &gOamData_AffineOff_ObjNormal_64x64,
+    .images = NULL,
+    .anims = sCrushGripAnimTable,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimCrushGrip,
 };
 
 #define sAmplitudeX  data[1]
