@@ -3915,7 +3915,10 @@ void AnimTask_GetFuryCutterHitCount(u8 taskId)
 static void AnimCrushGrip(struct Sprite *sprite)
 {
     if (GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)
+    {
         sprite->hFlip = 1;
+        sprite->vFlip = 1;
+    }
     InitSpritePosToAnimAttacker(sprite, TRUE);
     sprite->data[0] = 20;
     sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
