@@ -1048,9 +1048,6 @@ const struct SpriteTemplate gCrushGripTowardTemplate =
     .callback = AnimCrushGrip,
 };
 
-{
-    sprite->callback = StartAnimLinearTranslation;
-}
 
 void AnimTask_CrushGrip(u8 taskId)
 {
