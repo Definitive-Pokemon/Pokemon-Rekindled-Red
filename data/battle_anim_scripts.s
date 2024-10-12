@@ -10136,7 +10136,7 @@ WeatherBallIce:
 	end
 
 Move_CRUSH_GRIP:
-	createvisualtask AnimTask_CrushGrip
+	createvisualtask AnimTask_CrushGrip, 2
 	monbg ANIM_TARGET
 	setalpha 12, 8
 	playsewithpan SE_M_DOUBLE_SLAP, SOUND_PAN_TARGET
