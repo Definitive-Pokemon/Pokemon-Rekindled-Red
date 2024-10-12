@@ -995,3 +995,67 @@ static void AnimFlashingHitSplat_Step(struct Sprite *sprite)
     if (sprite->data[0]++ > 12)
         DestroyAnimSprite(sprite);
 }
+
+static const union AnimCmd sCrushGripAnimCmds[] =
+{
+    ANIMCMD_FRAME(0, 20)
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sCrushGripClosingAnimCmds[] =
+{
+    ANIMCMD_FRAME(4096, 5),
+    ANIMCMD_FRAME(4096 * 2, 5),
+    ANIMCMD_FRAME(4096 * 3, 30),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sCrushGripAnimTable[] =
+{
+    sCrushGripAnimCmds,
+    sCrushGripClosingAnimCmds,
+};
+
+const struct SpriteTemplate gCrushGripAwayTemplate =    
+{
+    .tileTag = ANIM_TAG_GRAB_AWAY,
+    .paletteTag = ANIM_TAG_GRAB_AWAY,
+    .oam = &gOamData_AffineOff_ObjNormal_64x64,
+    .images = NULL,
+    .anims = sCrushGripAnimTable,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimCrushGrip,
+};
+
+const struct SpriteTemplate gCrushGripTowardTemplate =    
+{
+    .tileTag = ANIM_TAG_GRAB_TOWARDS,
+    .paletteTag = ANIM_TAG_GRAB_TOWARDS,
+    .oam = &gOamData_AffineOff_ObjNormal_64x64,
+    .images = NULL,
+    .anims = sCrushGripAnimTable,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimCrushGrip,
+};
+
+static void AnimCrushGrip(struct Sprite *sprite)
+{
+    InitSpritePosToAnimAttacker(sprite, TRUE);
+    sprite->data[0] = 20;
+    sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
+    sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
+    sprite->callback = StartAnimLinearTranslation;
+    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
+}
+
+void AnimTask_CrushGrip(u8 taskId)
+{
+    u8 x = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
+    u8 y = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
+
+    if (GetBattlerSide(gBattleAnimAttacker) == B_SIDE_OPPONENT)
+        CreateSprite(&gCrushGripTowardTemplate, x, y, 4);
+    else
+        CreateSprite(&gCrushGripAwayTemplate, x, y, 4);
+    DestroyAnimVisualTask(taskId);
+}

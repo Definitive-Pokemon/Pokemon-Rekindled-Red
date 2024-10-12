@@ -98,9 +98,6 @@ static void AnimPinkHeart(struct Sprite *);
 static void AnimDevil(struct Sprite *);
 static void AnimFurySwipes(struct Sprite *);
 static void AnimGuardRing(struct Sprite *);
-static void AnimCrushGrip(struct Sprite *);
-static void CrushGripFinal(struct Sprite *);
-static void AnimCrushGrip_Step(struct Sprite *);
 
 // Unused
 static const struct SpriteTemplate sCirclingFingerSpriteTemplate =
@@ -3910,32 +3907,4 @@ void AnimTask_GetFuryCutterHitCount(u8 taskId)
 {
     gBattleAnimArgs[ARG_RET_ID] = gAnimDisableStructPtr->furyCutterCounter;
     DestroyAnimVisualTask(taskId);
-}
-
-static void AnimCrushGrip(struct Sprite *sprite)
-{
-    if (GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)
-    {
-        sprite->hFlip = 1;
-        sprite->vFlip = 1;
-    }
-    InitSpritePosToAnimAttacker(sprite, TRUE);
-    sprite->data[0] = 20;
-    sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
-    sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
-    sprite->callback = StartAnimLinearTranslation;
-    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
-}
-
-static void CrushGripFinal(struct Sprite *sprite)
-{
-    StartSpriteAnim(sprite, 1);
-    sprite->callback = StartAnimLinearTranslation;
-    StoreSpriteCallbackInData6(sprite, AnimCrushGrip_Step);
-}
-
-static void AnimCrushGrip_Step(struct Sprite *sprite)
-{
-    if (sprite->animEnded)
-        DestroyAnimSprite(sprite);
 }

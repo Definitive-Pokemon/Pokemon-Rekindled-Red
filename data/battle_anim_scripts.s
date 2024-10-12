@@ -10136,22 +10136,10 @@ WeatherBallIce:
 	end
 
 Move_CRUSH_GRIP:
-	loadspritegfx ANIM_TAG_GRAB_AWAY
-	monbg ANIM_TARGET
-	setalpha 12, 8
-	createsprite gCrushGripAwayTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 2
-	playsewithpan SE_M_DOUBLE_SLAP, SOUND_PAN_TARGET
-	waitforvisualfinish
-	clearmonbg ANIM_TARGET
-	blendoff
-	end
-
-CrushGripTargetPlayer:
-	loadspritegfx ANIM_TAG_GRAB_AWAY
+	createvisualtask AnimTask_CrushGrip
 	monbg ANIM_TARGET
 	setalpha 12, 8
 	playsewithpan SE_M_DOUBLE_SLAP, SOUND_PAN_TARGET
-	createsprite gCrushGripAwayTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 2
 	waitforvisualfinish
 	clearmonbg ANIM_TARGET
 	blendoff
