@@ -999,7 +999,7 @@ static void AnimFlashingHitSplat_Step(struct Sprite *sprite)
 
 static const union AnimCmd sCrushGripAnimCmds[] =
 {
-    ANIMCMD_FRAME(0, 20)
+    ANIMCMD_FRAME(0, 20),
     ANIMCMD_END,
 };
 
