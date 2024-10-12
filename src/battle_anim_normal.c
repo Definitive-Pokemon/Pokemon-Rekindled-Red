@@ -1016,6 +1016,16 @@ static const union AnimCmd *const sCrushGripAnimTable[] =
     sCrushGripClosingAnimCmds,
 };
 
+static void AnimCrushGrip(struct Sprite *sprite)
+{
+    InitSpritePosToAnimAttacker(sprite, TRUE);
+    sprite->data[0] = 20;
+    sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
+    sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
+    sprite->callback = StartAnimLinearTranslation;
+    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
+}
+
 const struct SpriteTemplate gCrushGripAwayTemplate =    
 {
     .tileTag = ANIM_TAG_GRAB_AWAY,
@@ -1038,14 +1048,8 @@ const struct SpriteTemplate gCrushGripTowardTemplate =
     .callback = AnimCrushGrip,
 };
 
-static void AnimCrushGrip(struct Sprite *sprite)
 {
-    InitSpritePosToAnimAttacker(sprite, TRUE);
-    sprite->data[0] = 20;
-    sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
-    sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
     sprite->callback = StartAnimLinearTranslation;
-    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
 }
 
 void AnimTask_CrushGrip(u8 taskId)
