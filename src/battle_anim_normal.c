@@ -33,6 +33,7 @@ static void AnimShakeMonOrBattleTerrain_UpdateCoordOffsetEnabled(void);
 static void AnimShakeMonOrBattleTerrain_Step(struct Sprite *sprite);
 static void AnimTask_ShakeBattleTerrain_Step(u8 taskId);
 static void AnimFlashingHitSplat_Step(struct Sprite *sprite);
+static void AnimCrushGrip(struct Sprite *sprite);
 
 
 static const union AnimCmd sAnim_ConfusionDuck_0[] =
