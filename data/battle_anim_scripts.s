@@ -10136,6 +10136,8 @@ WeatherBallIce:
 	end
 
 Move_CRUSH_GRIP:
+	loadspritegfx ANIM_TAG_GRAB_AWAY
+	loadspritegfx ANIM_TAG_GRAB_TOWARDS
 	createvisualtask AnimTask_CrushGrip, 2
 	monbg ANIM_TARGET
 	setalpha 12, 8

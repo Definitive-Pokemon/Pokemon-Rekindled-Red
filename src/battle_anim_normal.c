@@ -1052,12 +1052,22 @@ const struct SpriteTemplate gCrushGripTowardTemplate =
 
 void AnimTask_CrushGrip(u8 taskId)
 {
-    u8 x = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
-    u8 y = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
+    if (gTasks[taskId].data[0] == 0)
+    {
+        u8 x = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
+        u8 y = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
 
-    if (GetBattlerSide(gBattleAnimAttacker) == B_SIDE_OPPONENT)
-        CreateSprite(&gCrushGripTowardTemplate, x, y, 4);
+        if (GetBattlerSide(gBattleAnimAttacker) == B_SIDE_OPPONENT)
+            gTasks[taskId].data[1] = CreateSprite(&gCrushGripTowardTemplate, x, y, 4);
+        else
+            gTasks[taskId].data[1] = CreateSprite(&gCrushGripAwayTemplate, x, y, 4);
+    }
+    gTasks[taskId].data[0]++;
+    
+    if (gTasks[taskId].data[0] > 80)
+    {
+        DestroyAnimSprite(gTasks[taskId].data[1]);
+        DestroyAnimVisualTask(taskId);
+    }
     else
-        CreateSprite(&gCrushGripAwayTemplate, x, y, 4);
-    DestroyAnimVisualTask(taskId);
 }
