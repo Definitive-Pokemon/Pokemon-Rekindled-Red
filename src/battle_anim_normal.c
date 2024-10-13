@@ -1066,7 +1066,7 @@ void AnimTask_CrushGrip(u8 taskId)
     
     if (gTasks[taskId].data[0] > 80)
     {
-        DestroyAnimSprite(gTasks[taskId].data[1]);
+        //DestroyAnimSprite(gTasks[taskId].data[1]);
         DestroyAnimVisualTask(taskId);
     }
 }
