@@ -1019,17 +1019,17 @@ static const union AnimCmd *const sCrushGripAnimTable[] =
     sCrushGripAnimCmds,
 };
 
+static void AnimCrushGrip_Step(struct Sprite *sprite)
+{
+    if (sprite->animEnded)
+        DestroyAnimSprite(sprite);
+}
+
 static void CrushGripFinal(struct Sprite *sprite)
 {
     StartSpriteAnim(sprite, 1);
     sprite->animNum = 3;
     StoreSpriteCallbackInData6(sprite, AnimCrushGrip_Step);
-}
-
-static void AnimCrushGrip_Step(struct Sprite *sprite)
-{
-    if (sprite->animEnded)
-        DestroyAnimSprite(sprite);
 }
 
 static void AnimCrushGrip(struct Sprite *sprite)
