@@ -1069,5 +1069,4 @@ void AnimTask_CrushGrip(u8 taskId)
         DestroyAnimSprite(gTasks[taskId].data[1]);
         DestroyAnimVisualTask(taskId);
     }
-    else
 }
