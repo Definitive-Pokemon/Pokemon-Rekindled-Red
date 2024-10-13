@@ -999,7 +999,7 @@ static void AnimFlashingHitSplat_Step(struct Sprite *sprite)
 
 static const union AnimCmd sCrushGripAnimCmds[] =
 {
-    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_FRAME(0, 1),
     ANIMCMD_FRAME(4096, 5),
     ANIMCMD_FRAME(4096 * 2, 5),
     ANIMCMD_FRAME(4096 * 3, 30),
@@ -1022,7 +1022,7 @@ static const union AnimCmd *const sCrushGripAnimTable[] =
 static void AnimCrushGrip(struct Sprite *sprite)
 {
     InitSpritePosToAnimAttacker(sprite, TRUE);
-    sprite->data[0] = 20;
+    sprite->data[0] = 3;
     sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
     sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
     sprite->callback = StartAnimLinearTranslation;
