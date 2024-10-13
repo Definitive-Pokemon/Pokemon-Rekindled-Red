@@ -1021,6 +1021,7 @@ static const union AnimCmd *const sCrushGripAnimTable[] =
 
 static void AnimCrushGrip(struct Sprite *sprite)
 {
+    StartSpriteAnim(sprite, 0);
     InitSpritePosToAnimAttacker(sprite, TRUE);
     sprite->data[0] = 40;
     sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
