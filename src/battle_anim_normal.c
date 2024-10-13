@@ -1028,7 +1028,6 @@ static void AnimCrushGrip_Step(struct Sprite *sprite)
 static void CrushGripFinal(struct Sprite *sprite)
 {
     StartSpriteAnim(sprite, 1);
-    sprite->animNum = 3;
     StoreSpriteCallbackInData6(sprite, AnimCrushGrip_Step);
 }
 
