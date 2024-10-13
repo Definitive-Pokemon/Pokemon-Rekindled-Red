@@ -1019,6 +1019,19 @@ static const union AnimCmd *const sCrushGripAnimTable[] =
     sCrushGripAnimCmds,
 };
 
+static void CrushGripFinal(struct Sprite *sprite)
+{
+    StartSpriteAnim(sprite, 1);
+    sprite->animNum = 3;
+    StoreSpriteCallbackInData6(sprite, AnimCrushGrip_Step);
+}
+
+static void AnimCrushGrip_Step(struct Sprite *sprite)
+{
+    if (sprite->animEnded)
+        DestroyAnimSprite(sprite);
+}
+
 static void AnimCrushGrip(struct Sprite *sprite)
 {
     InitSpritePosToAnimAttacker(sprite, TRUE);
@@ -1026,8 +1039,8 @@ static void AnimCrushGrip(struct Sprite *sprite)
     sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
     sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
     sprite->callback = StartAnimLinearTranslation;
-    StartSpriteAnim(sprite, 0);
-    StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
+    StartSpriteAnim(sprite, 2);
+    StoreSpriteCallbackInData6(sprite, CrushGripFinal);
 }
 
 const struct SpriteTemplate gCrushGripAwayTemplate =    
