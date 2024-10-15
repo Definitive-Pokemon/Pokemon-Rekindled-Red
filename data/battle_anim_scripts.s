@@ -10144,6 +10144,8 @@ Move_CRUSH_GRIP:
 	setalpha 12, 8
 	delay 45
 	playsewithpan SE_M_DOUBLE_SLAP, SOUND_PAN_TARGET
+	delay 10
+	waitforvisualfinish
 	clearmonbg ANIM_TARGET
 	blendoff
 	end
