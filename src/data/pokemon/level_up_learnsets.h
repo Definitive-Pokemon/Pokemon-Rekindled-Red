@@ -5805,6 +5805,6 @@ static const u16 sRegigigasLevelUpLearnset[] = {
     LEVEL_UP_MOVE(1, MOVE_CONFUSE_RAY),
     LEVEL_UP_MOVE(25, MOVE_SUPERPOWER),
     LEVEL_UP_MOVE(25, MOVE_REVENGE),
-    LEVEL_UP_MOVE(75, MOVE_HYPER_BEAM),// normally Crush Grip
+    LEVEL_UP_MOVE(75, MOVE_CRUSH_GRIP),
     LEVEL_UP_END
 };
