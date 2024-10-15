@@ -1007,7 +1007,7 @@ static const union AnimCmd sCrushGripClosingAnimCmds[] =
 {
     ANIMCMD_FRAME(64, 3),
     ANIMCMD_FRAME(64 * 2, 3),
-    ANIMCMD_FRAME(64 * 3, 25),
+    ANIMCMD_FRAME(64 * 3, 36),
     ANIMCMD_END,
 };
 
@@ -1074,7 +1074,7 @@ void AnimTask_CrushGrip(u8 taskId)
     }
     gTasks[taskId].data[0]++;
     
-    if (gTasks[taskId].data[0] > 80)
+    if (gTasks[taskId].data[0] > 85)
     {
         DestroyAnimVisualTask(taskId);
     }
