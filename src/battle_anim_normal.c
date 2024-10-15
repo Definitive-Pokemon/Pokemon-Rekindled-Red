@@ -33,7 +33,7 @@ static void AnimShakeMonOrBattleTerrain_UpdateCoordOffsetEnabled(void);
 static void AnimShakeMonOrBattleTerrain_Step(struct Sprite *sprite);
 static void AnimTask_ShakeBattleTerrain_Step(u8 taskId);
 static void AnimFlashingHitSplat_Step(struct Sprite *sprite);
-static void AnimCrushGrip(struct Sprite *sprite);
+static void AnimStartCrushGrip(struct Sprite *sprite);
 
 
 static const union AnimCmd sAnim_ConfusionDuck_0[] =
@@ -999,46 +999,44 @@ static void AnimFlashingHitSplat_Step(struct Sprite *sprite)
 
 static const union AnimCmd sCrushGripAnimCmds[] =
 {
-    ANIMCMD_FRAME(0, 3),
-    ANIMCMD_FRAME(64, 3),
-    ANIMCMD_FRAME(64 * 2, 3),
-    ANIMCMD_FRAME(64 * 3, 3),
-    ANIMCMD_END,
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_JUMP(0),
 };
 
 static const union AnimCmd sCrushGripClosingAnimCmds[] =
 {
-    ANIMCMD_FRAME(4096, 5),
-    ANIMCMD_FRAME(4096 * 2, 5),
-    ANIMCMD_FRAME(4096 * 3, 30),
+    ANIMCMD_FRAME(64, 3),
+    ANIMCMD_FRAME(64 * 2, 3),
+    ANIMCMD_FRAME(64 * 3, 25),
     ANIMCMD_END,
 };
 
 static const union AnimCmd *const sCrushGripAnimTable[] =
 {
     sCrushGripAnimCmds,
+    sCrushGripClosingAnimCmds,
 };
 
-static void AnimCrushGrip_Step(struct Sprite *sprite)
+static void AnimCrushGrip_Final(struct Sprite *sprite)
 {
     if (sprite->animEnded)
         DestroyAnimSprite(sprite);
 }
 
-static void CrushGripFinal(struct Sprite *sprite)
+static void CrushGripFollowUp(struct Sprite *sprite)
 {
-    //StartSpriteAnim(sprite, 1);
-    StoreSpriteCallbackInData6(sprite, AnimCrushGrip_Step);
+    StartSpriteAnim(sprite, 1);
+    PlaySE12WithPanning(songId, BattleAnimAdjustPanning(pan));
+    sprite->callback = AnimCrushGrip_Final;
 }
 
-static void AnimCrushGrip(struct Sprite *sprite)
+static void AnimStartCrushGrip(struct Sprite *sprite)
 {
-    InitSpritePosToAnimAttacker(sprite, TRUE);
     sprite->data[0] = 40;
     sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
     sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
     sprite->callback = StartAnimLinearTranslation;
-    StoreSpriteCallbackInData6(sprite, CrushGripFinal);
+    StoreSpriteCallbackInData6(sprite, CrushGripFollowUp);
 }
 
 const struct SpriteTemplate gCrushGripAwayTemplate =    
@@ -1049,7 +1047,7 @@ const struct SpriteTemplate gCrushGripAwayTemplate =
     .images = NULL,
     .anims = sCrushGripAnimTable,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimCrushGrip,
+    .callback = AnimStartCrushGrip,
 };
 
 const struct SpriteTemplate gCrushGripTowardTemplate =    
@@ -1060,9 +1058,8 @@ const struct SpriteTemplate gCrushGripTowardTemplate =
     .images = NULL,
     .anims = sCrushGripAnimTable,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimCrushGrip,
+    .callback = AnimStartCrushGrip,
 };
-
 
 void AnimTask_CrushGrip(u8 taskId)
 {
@@ -1072,15 +1069,14 @@ void AnimTask_CrushGrip(u8 taskId)
         u8 y = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
 
         if (GetBattlerSide(gBattleAnimAttacker) == B_SIDE_OPPONENT)
-            gTasks[taskId].data[1] = CreateSprite(&gCrushGripTowardTemplate, x, y, 4);
+            CreateSprite(&gCrushGripTowardTemplate, x, y, 4);
         else
-            gTasks[taskId].data[1] = CreateSprite(&gCrushGripAwayTemplate, x, y, 4);
+            CreateSprite(&gCrushGripAwayTemplate, x, y, 4);
     }
     gTasks[taskId].data[0]++;
     
     if (gTasks[taskId].data[0] > 80)
     {
-        //DestroyAnimSprite(gTasks[taskId].data[1]);
         DestroyAnimVisualTask(taskId);
     }
 }

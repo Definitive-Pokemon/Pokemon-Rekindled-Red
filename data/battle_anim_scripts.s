@@ -10139,8 +10139,10 @@ Move_CRUSH_GRIP:
 	loadspritegfx ANIM_TAG_GRAB_AWAY
 	loadspritegfx ANIM_TAG_GRAB_TOWARDS
 	createvisualtask AnimTask_CrushGrip, 2
+	playsewithpan SE_M_HAZE, SOUND_PAN_ATTACKER
 	monbg ANIM_TARGET
 	setalpha 12, 8
+	delay 45
 	playsewithpan SE_M_DOUBLE_SLAP, SOUND_PAN_TARGET
 	waitforvisualfinish
 	clearmonbg ANIM_TARGET
