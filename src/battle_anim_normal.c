@@ -1026,7 +1026,6 @@ static void AnimCrushGrip_Final(struct Sprite *sprite)
 static void CrushGripFollowUp(struct Sprite *sprite)
 {
     StartSpriteAnim(sprite, 1);
-    PlaySE12WithPanning(songId, BattleAnimAdjustPanning(pan));
     sprite->callback = AnimCrushGrip_Final;
 }
 
