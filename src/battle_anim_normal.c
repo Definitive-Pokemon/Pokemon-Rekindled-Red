@@ -33,6 +33,7 @@ static void AnimShakeMonOrBattleTerrain_UpdateCoordOffsetEnabled(void);
 static void AnimShakeMonOrBattleTerrain_Step(struct Sprite *sprite);
 static void AnimTask_ShakeBattleTerrain_Step(u8 taskId);
 static void AnimFlashingHitSplat_Step(struct Sprite *sprite);
+static void AnimStartCrushGrip(struct Sprite *sprite);
 
 
 static const union AnimCmd sAnim_ConfusionDuck_0[] =
@@ -994,4 +995,87 @@ static void AnimFlashingHitSplat_Step(struct Sprite *sprite)
     sprite->invisible ^= 1;
     if (sprite->data[0]++ > 12)
         DestroyAnimSprite(sprite);
+}
+
+static const union AnimCmd sCrushGripAnimCmds[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sCrushGripClosingAnimCmds[] =
+{
+    ANIMCMD_FRAME(64, 3),
+    ANIMCMD_FRAME(64 * 2, 3),
+    ANIMCMD_FRAME(64 * 3, 36),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sCrushGripAnimTable[] =
+{
+    sCrushGripAnimCmds,
+    sCrushGripClosingAnimCmds,
+};
+
+static void AnimCrushGrip_Final(struct Sprite *sprite)
+{
+    if (sprite->animEnded)
+        DestroyAnimSprite(sprite);
+}
+
+static void CrushGripFollowUp(struct Sprite *sprite)
+{
+    StartSpriteAnim(sprite, 1);
+    sprite->callback = AnimCrushGrip_Final;
+}
+
+static void AnimStartCrushGrip(struct Sprite *sprite)
+{
+    sprite->data[0] = 40;
+    sprite->data[2] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2);
+    sprite->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
+    sprite->callback = StartAnimLinearTranslation;
+    StoreSpriteCallbackInData6(sprite, CrushGripFollowUp);
+}
+
+const struct SpriteTemplate gCrushGripAwayTemplate =    
+{
+    .tileTag = ANIM_TAG_GRAB_AWAY,
+    .paletteTag = ANIM_TAG_GRAB_AWAY,
+    .oam = &gOamData_AffineOff_ObjNormal_64x64,
+    .images = NULL,
+    .anims = sCrushGripAnimTable,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimStartCrushGrip,
+};
+
+const struct SpriteTemplate gCrushGripTowardTemplate =    
+{
+    .tileTag = ANIM_TAG_GRAB_TOWARDS,
+    .paletteTag = ANIM_TAG_GRAB_TOWARDS,
+    .oam = &gOamData_AffineOff_ObjNormal_64x64,
+    .images = NULL,
+    .anims = sCrushGripAnimTable,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimStartCrushGrip,
+};
+
+void AnimTask_CrushGrip(u8 taskId)
+{
+    if (gTasks[taskId].data[0] == 0)
+    {
+        u8 x = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
+        u8 y = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
+
+        if (GetBattlerSide(gBattleAnimAttacker) == B_SIDE_OPPONENT)
+            CreateSprite(&gCrushGripTowardTemplate, x, y, 4);
+        else
+            CreateSprite(&gCrushGripAwayTemplate, x, y, 4);
+    }
+    gTasks[taskId].data[0]++;
+    
+    if (gTasks[taskId].data[0] > 85)
+    {
+        DestroyAnimVisualTask(taskId);
+    }
 }
