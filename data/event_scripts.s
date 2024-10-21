@@ -1525,3 +1525,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/ForsakenTombB9F/scripts.inc"
 	.include "data/maps/ForsakenTombB9F/text.inc"
+
+	.include "data/maps/Route28/scripts.inc"
+	.include "data/maps/Route28/text.inc"

@@ -5436,6 +5436,18 @@
       "secondary_tileset": "gTileset_TanobyRuins",
       "border_filepath": "data/layouts/ForsakenTombB9F/border.bin",
       "blockdata_filepath": "data/layouts/ForsakenTombB9F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE28",
+      "name": "Route28_Layout",
+      "width": 62,
+      "height": 24,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_ViridianCity",
+      "border_filepath": "data/layouts/Route28/border.bin",
+      "blockdata_filepath": "data/layouts/Route28/map.bin"
     }
   ]
 }
