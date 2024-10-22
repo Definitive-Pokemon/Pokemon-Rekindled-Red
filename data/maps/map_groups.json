@@ -43,7 +43,8 @@
     "gMapGroup_IndoorTwoIslandRoute",
     "gMapGroup_IndoorSixIslandRoute",
     "gMapGroup_IndoorSevenIslandRoute",
-    "gMapGroup_RSE"
+    "gMapGroup_RSE",
+    "gMapGroup_MtSilverArea"
   ],
   "gMapGroup_Link": [
     "BattleColosseum_2P",
