@@ -22,8 +22,7 @@ enum MainMenuType
 {
     MAIN_MENU_NEWGAME = 0,
     MAIN_MENU_CONTINUE,
-    MAIN_MENU_MYSTERYGIFT,
-    MAIN_MENU_KEYSYSTEM
+    MAIN_MENU_MYSTERYGIFT
 };
 
 enum MainMenuWindow
