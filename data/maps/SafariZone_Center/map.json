@@ -18,7 +18,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 24,
       "y": 15,
       "elevation": 3,
@@ -28,7 +27,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SafariZone_Center_EventScript_ItemNugget",
-      "flag": "FLAG_HIDE_SAFARI_ZONE_CENTER_NUGGET"
+      "flag": "FLAG_HIDE_SAFARI_ZONE_CENTER_NUGGET",
+      "in_connection": false
     }
   ],
   "warp_events": [

@@ -15,21 +15,20 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "down",
+      "map": "MAP_THREE_ISLAND_PORT",
       "offset": 0,
-      "map": "MAP_THREE_ISLAND_PORT"
+      "direction": "down"
     },
     {
-      "direction": "left",
+      "map": "MAP_THREE_ISLAND_BOND_BRIDGE",
       "offset": -20,
-      "map": "MAP_THREE_ISLAND_BOND_BRIDGE"
+      "direction": "left"
     }
   ],
   "object_events": [
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MAN",
-      "in_connection": false,
       "x": 7,
       "y": 24,
       "elevation": 3,
@@ -39,12 +38,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_EventScript_AntiBiker1",
-      "flag": "FLAG_HIDE_THREE_ISLAND_ANTIBIKERS"
+      "flag": "FLAG_HIDE_THREE_ISLAND_ANTIBIKERS",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MAN",
-      "in_connection": false,
       "x": 8,
       "y": 23,
       "elevation": 3,
@@ -54,7 +53,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_EventScript_AntiBiker2",
-      "flag": "FLAG_HIDE_THREE_ISLAND_ANTIBIKERS"
+      "flag": "FLAG_HIDE_THREE_ISLAND_ANTIBIKERS",
+      "in_connection": false
     },
     {
       "type": "object",
@@ -73,7 +73,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 9,
       "y": 23,
       "elevation": 3,
@@ -83,12 +82,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_EventScript_Biker",
-      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 9,
       "y": 24,
       "elevation": 3,
@@ -98,12 +97,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_EventScript_Biker",
-      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 10,
       "y": 22,
       "elevation": 3,
@@ -113,12 +112,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_EventScript_Biker",
-      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 10,
       "y": 24,
       "elevation": 3,
@@ -128,12 +127,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_EventScript_Biker",
-      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 11,
       "y": 23,
       "elevation": 3,
@@ -143,12 +142,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_EventScript_Biker",
-      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "in_connection": false,
       "x": 20,
       "y": 7,
       "elevation": 3,
@@ -158,12 +157,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_THREE_ISLAND_CUT_TREE"
+      "flag": "FLAG_THREE_ISLAND_CUT_TREE",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 18,
       "y": 17,
       "elevation": 3,
@@ -173,12 +172,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_EventScript_ItemZinc",
-      "flag": "FLAG_HIDE_THREE_ISLAND_ZINC"
+      "flag": "FLAG_HIDE_THREE_ISLAND_ZINC",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "in_connection": false,
       "x": 15,
       "y": 7,
       "elevation": 3,
@@ -188,12 +187,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_EventScript_Woman",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
-      "in_connection": false,
       "x": 14,
       "y": 14,
       "elevation": 3,
@@ -203,12 +202,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_EventScript_LittleBoy",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_DODUO",
-      "in_connection": false,
       "x": 15,
       "y": 14,
       "elevation": 3,
@@ -218,12 +217,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_EventScript_Doduo",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 15,
       "y": 31,
       "elevation": 3,
@@ -233,7 +232,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_EventScript_Biker6",
-      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS",
+      "in_connection": false
     }
   ],
   "warp_events": [

@@ -15,14 +15,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "left",
+      "map": "MAP_CELADON_CITY",
       "offset": -10,
-      "map": "MAP_CELADON_CITY"
+      "direction": "left"
     },
     {
-      "direction": "right",
+      "map": "MAP_SAFFRON_CITY_CONNECTION",
       "offset": -10,
-      "map": "MAP_SAFFRON_CITY_CONNECTION"
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -37,7 +37,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MASTER_COOLTRAINER_M",
-      "in_connection": false,
       "x": 18,
       "y": 2,
       "elevation": 3,
@@ -47,7 +46,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MasterTrainer_EventScript_Growlithe",
-      "flag": "FLAG_HIDE_MASTER_TRAINERS"
+      "flag": "FLAG_HIDE_MASTER_TRAINERS",
+      "in_connection": false
     }
   ],
   "warp_events": [

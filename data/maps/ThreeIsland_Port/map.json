@@ -15,16 +15,15 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "up",
+      "map": "MAP_THREE_ISLAND",
       "offset": 0,
-      "map": "MAP_THREE_ISLAND"
+      "direction": "up"
     }
   ],
   "object_events": [
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
-      "in_connection": false,
       "x": 14,
       "y": 9,
       "elevation": 3,
@@ -34,12 +33,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_Port_EventScript_Woman",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 8,
       "y": 8,
       "elevation": 3,
@@ -49,12 +48,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_Port_EventScript_Biker1",
-      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 13,
       "y": 10,
       "elevation": 3,
@@ -64,7 +63,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ThreeIsland_Port_EventScript_Biker2",
-      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS"
+      "flag": "FLAG_HIDE_THREE_ISLAND_BIKERS",
+      "in_connection": false
     }
   ],
   "warp_events": [

@@ -15,21 +15,20 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "left",
+      "map": "MAP_SAFFRON_CITY_CONNECTION",
       "offset": -10,
-      "map": "MAP_SAFFRON_CITY_CONNECTION"
+      "direction": "left"
     },
     {
-      "direction": "right",
+      "map": "MAP_LAVENDER_TOWN",
       "offset": 0,
-      "map": "MAP_LAVENDER_TOWN"
+      "direction": "right"
     }
   ],
   "object_events": [
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "in_connection": false,
       "x": 62,
       "y": 14,
       "elevation": 3,
@@ -39,12 +38,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "6",
       "script": "Route8_EventScript_Julia",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
-      "in_connection": false,
       "x": 55,
       "y": 15,
       "elevation": 3,
@@ -54,7 +53,8 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route8_EventScript_Rich",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
@@ -73,7 +73,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "in_connection": false,
       "x": 29,
       "y": 3,
       "elevation": 3,
@@ -83,7 +82,8 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route8_EventScript_Paige",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
@@ -102,7 +102,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "in_connection": false,
       "x": 29,
       "y": 5,
       "elevation": 3,
@@ -112,12 +111,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route8_EventScript_Andrea",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "in_connection": false,
       "x": 29,
       "y": 6,
       "elevation": 3,
@@ -127,12 +126,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "6",
       "script": "Route8_EventScript_Megan",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
-      "in_connection": false,
       "x": 21,
       "y": 3,
       "elevation": 3,
@@ -142,7 +141,8 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route8_EventScript_Stan",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
@@ -161,7 +161,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "in_connection": false,
       "x": 33,
       "y": 15,
       "elevation": 3,
@@ -171,12 +170,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_ROUTE_8_CUT_TREE_2"
+      "flag": "FLAG_ROUTE_8_CUT_TREE_2",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "in_connection": false,
       "x": 47,
       "y": 12,
       "elevation": 3,
@@ -186,7 +185,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_ROUTE_8_CUT_TREE_1"
+      "flag": "FLAG_ROUTE_8_CUT_TREE_1",
+      "in_connection": false
     },
     {
       "type": "object",
@@ -219,7 +219,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 14,
       "y": 16,
       "elevation": 3,
@@ -229,12 +228,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route8_EventScript_Ricardo",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 24,
       "y": 17,
       "elevation": 3,
@@ -244,11 +243,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route8_EventScript_Jaren",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MASTER_BUG_CATCHER",
-      "in_connection": false,
       "x": 40,
       "y": 18,
       "elevation": 3,
@@ -258,7 +258,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MasterTrainer_EventScript_Beedrill",
-      "flag": "FLAG_HIDE_MASTER_TRAINERS"
+      "flag": "FLAG_HIDE_MASTER_TRAINERS",
+      "in_connection": false
     }
   ],
   "warp_events": [

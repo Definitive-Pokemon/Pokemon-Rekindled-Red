@@ -376,7 +376,10 @@
     "CinnabarVolcano",
     "PrimordialAltar",
     "Route103",
-    "Route28"
+    "Route28",
+    "MtSilver",
+    "MtSilverCave1",
+    "MtSilverGate"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

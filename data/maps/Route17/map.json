@@ -15,21 +15,20 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "up",
+      "map": "MAP_ROUTE16",
       "offset": 0,
-      "map": "MAP_ROUTE16"
+      "direction": "up"
     },
     {
-      "direction": "down",
+      "map": "MAP_ROUTE18",
       "offset": 0,
-      "map": "MAP_ROUTE18"
+      "direction": "down"
     }
   ],
   "object_events": [
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 4,
       "y": 18,
       "elevation": 3,
@@ -39,7 +38,8 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route17_EventScript_Virgil",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
@@ -72,7 +72,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 18,
       "y": 41,
       "elevation": 3,
@@ -82,12 +81,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route17_EventScript_Nikolas",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 7,
       "y": 38,
       "elevation": 3,
@@ -97,7 +96,8 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
       "script": "Route17_EventScript_Billy",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
@@ -144,7 +144,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 16,
       "y": 134,
       "elevation": 3,
@@ -154,12 +153,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route17_EventScript_William",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "in_connection": false,
       "x": 4,
       "y": 116,
       "elevation": 3,
@@ -169,7 +168,8 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route17_EventScript_Jaxon",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     }
   ],
   "warp_events": [

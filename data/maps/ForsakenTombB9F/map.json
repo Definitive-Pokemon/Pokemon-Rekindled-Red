@@ -2,7 +2,7 @@
   "id": "MAP_FORSAKEN_TOMB_B9F",
   "name": "ForsakenTombB9F",
   "layout": "LAYOUT_FORSAKEN_TOMB_B9F",
-  "music": "MUS_SEALED_CHAMBER",
+  "music": "MUS_B_PYRAMID",
   "region_map_section": "MAPSEC_MONEAN_CHAMBER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

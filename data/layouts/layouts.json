@@ -5441,13 +5441,49 @@
       "id": "LAYOUT_ROUTE28",
       "name": "Route28_Layout",
       "width": 62,
-      "height": 24,
+      "height": 29,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_ViridianCity",
       "border_filepath": "data/layouts/Route28/border.bin",
       "blockdata_filepath": "data/layouts/Route28/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SILVER",
+      "name": "MtSilver_Layout",
+      "width": 29,
+      "height": 31,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_CinnabarIsland",
+      "border_filepath": "data/layouts/MtSilver/border.bin",
+      "blockdata_filepath": "data/layouts/MtSilver/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SILVER_CAVE1",
+      "name": "MtSilverCave1_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtSilverCave1/border.bin",
+      "blockdata_filepath": "data/layouts/MtSilverCave1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SILVER_GATE",
+      "name": "MtSilverGate_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtSilverGate/border.bin",
+      "blockdata_filepath": "data/layouts/MtSilverGate/map.bin"
     }
   ]
 }

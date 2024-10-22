@@ -26,7 +26,7 @@
     },
     {
       "map": "MAP_ROUTE28",
-      "offset": 0,
+      "offset": -3,
       "direction": "left"
     }
   ],
@@ -61,6 +61,13 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE22_NORTH_ENTRANCE",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE22",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

@@ -1528,3 +1528,12 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/Route28/scripts.inc"
 	.include "data/maps/Route28/text.inc"
+
+	.include "data/maps/MtSilver/scripts.inc"
+	.include "data/maps/MtSilver/text.inc"
+
+	.include "data/maps/MtSilverCave1/scripts.inc"
+	.include "data/maps/MtSilverCave1/text.inc"
+
+	.include "data/maps/MtSilverGate/scripts.inc"
+	.include "data/maps/MtSilverGate/text.inc"

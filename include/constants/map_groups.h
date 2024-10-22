@@ -337,6 +337,9 @@
 #define MAP_PRIMORDIAL_ALTAR                     (71 | (3 << 8))
 #define MAP_ROUTE103                             (72 | (3 << 8))
 #define MAP_ROUTE28                              (73 | (3 << 8))
+#define MAP_MT_SILVER                            (74 | (3 << 8))
+#define MAP_MT_SILVER_CAVE1                      (75 | (3 << 8))
+#define MAP_MT_SILVER_GATE                       (76 | (3 << 8))
 
 // gMapGroup_IndoorPallet
 #define MAP_PALLET_TOWN_PLAYERS_HOUSE_1F   (0 | (4 << 8))

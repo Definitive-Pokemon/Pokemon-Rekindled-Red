@@ -15,21 +15,20 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "up",
+      "map": "MAP_FUCHSIA_CITY",
       "offset": -12,
-      "map": "MAP_FUCHSIA_CITY"
+      "direction": "up"
     },
     {
-      "direction": "left",
+      "map": "MAP_ROUTE20",
       "offset": 40,
-      "map": "MAP_ROUTE20"
+      "direction": "left"
     }
   ],
   "object_events": [
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_LAND",
-      "in_connection": false,
       "x": 15,
       "y": 10,
       "elevation": 3,
@@ -39,12 +38,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route19_EventScript_Reece",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_LAND",
-      "in_connection": false,
       "x": 10,
       "y": 9,
       "elevation": 3,
@@ -54,12 +53,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route19_EventScript_Richard",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-      "in_connection": false,
       "x": 12,
       "y": 17,
       "elevation": 1,
@@ -69,12 +68,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "Route19_EventScript_Tony",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-      "in_connection": false,
       "x": 18,
       "y": 33,
       "elevation": 1,
@@ -84,12 +83,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route19_EventScript_Matthew",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-      "in_connection": false,
       "x": 8,
       "y": 27,
       "elevation": 1,
@@ -99,12 +98,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route19_EventScript_Douglas",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-      "in_connection": false,
       "x": 16,
       "y": 22,
       "elevation": 1,
@@ -114,12 +113,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "6",
       "script": "Route19_EventScript_David",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-      "in_connection": false,
       "x": 11,
       "y": 47,
       "elevation": 1,
@@ -129,7 +128,8 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route19_EventScript_Axle",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
@@ -190,7 +190,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TUBER_M_WATER",
-      "in_connection": false,
       "x": 9,
       "y": 41,
       "elevation": 1,
@@ -200,11 +199,12 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route19_EventScript_Luc",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MASTER_BEAUTY",
-      "in_connection": false,
       "x": 16,
       "y": 6,
       "elevation": 3,
@@ -214,11 +214,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MasterTrainer_EventScript_Staryu",
-      "flag": "FLAG_HIDE_MASTER_TRAINERS"
+      "flag": "FLAG_HIDE_MASTER_TRAINERS",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER",
-      "in_connection": false,
       "x": 20,
       "y": 28,
       "elevation": 3,
@@ -228,11 +229,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MasterTrainer_EventScript_Horsea",
-      "flag": "FLAG_HIDE_MASTER_TRAINERS"
+      "flag": "FLAG_HIDE_MASTER_TRAINERS",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER",
-      "in_connection": false,
       "x": 14,
       "y": 56,
       "elevation": 3,
@@ -242,7 +244,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MasterTrainer_EventScript_Shellder",
-      "flag": "FLAG_HIDE_MASTER_TRAINERS"
+      "flag": "FLAG_HIDE_MASTER_TRAINERS",
+      "in_connection": false
     }
   ],
   "warp_events": [

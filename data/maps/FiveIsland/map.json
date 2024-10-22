@@ -15,21 +15,20 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "up",
+      "map": "MAP_FIVE_ISLAND_WATER_LABYRINTH",
       "offset": -48,
-      "map": "MAP_FIVE_ISLAND_WATER_LABYRINTH"
+      "direction": "up"
     },
     {
-      "direction": "right",
+      "map": "MAP_FIVE_ISLAND_MEADOW",
       "offset": 0,
-      "map": "MAP_FIVE_ISLAND_MEADOW"
+      "direction": "right"
     }
   ],
   "object_events": [
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
-      "in_connection": false,
       "x": 8,
       "y": 5,
       "elevation": 3,
@@ -39,12 +38,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FiveIsland_EventScript_Fisher",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "in_connection": false,
       "x": 16,
       "y": 10,
       "elevation": 3,
@@ -54,7 +53,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FiveIsland_EventScript_BugCatcher",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
       "type": "clone",

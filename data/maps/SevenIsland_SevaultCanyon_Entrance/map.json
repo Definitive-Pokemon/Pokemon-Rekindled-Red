@@ -15,14 +15,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "up",
+      "map": "MAP_SEVEN_ISLAND",
       "offset": 0,
-      "map": "MAP_SEVEN_ISLAND"
+      "direction": "up"
     },
     {
-      "direction": "right",
+      "map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON",
       "offset": 19,
-      "map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON"
+      "direction": "right"
     }
   ],
   "object_events": [

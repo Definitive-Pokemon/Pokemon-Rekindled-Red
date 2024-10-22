@@ -18,7 +18,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 13,
       "y": 12,
       "elevation": 3,
@@ -28,12 +27,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SafariZone_East_EventScript_ItemMaxPotion",
-      "flag": "FLAG_HIDE_SAFARI_ZONE_EAST_MAX_POTION"
+      "flag": "FLAG_HIDE_SAFARI_ZONE_EAST_MAX_POTION",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 37,
       "y": 15,
       "elevation": 3,
@@ -43,12 +42,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SafariZone_East_EventScript_ItemFullRestore",
-      "flag": "FLAG_HIDE_SAFARI_ZONE_EAST_FULL_RESTORE"
+      "flag": "FLAG_HIDE_SAFARI_ZONE_EAST_FULL_RESTORE",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 31,
       "y": 18,
       "elevation": 3,
@@ -58,12 +57,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SafariZone_East_EventScript_ItemTM11",
-      "flag": "FLAG_HIDE_SAFARI_ZONE_EAST_TM11"
+      "flag": "FLAG_HIDE_SAFARI_ZONE_EAST_TM11",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "in_connection": false,
       "x": 36,
       "y": 17,
       "elevation": 4,
@@ -73,7 +72,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SafariZone_East_EventScript_ItemLeafStone",
-      "flag": "FLAG_HIDE_SAFARI_ZONE_EAST_LEAF_STONE"
+      "flag": "FLAG_HIDE_SAFARI_ZONE_EAST_LEAF_STONE",
+      "in_connection": false
     }
   ],
   "warp_events": [

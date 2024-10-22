@@ -1751,6 +1751,22 @@
       "y": 0,
       "width": 1,
       "height": 1
+    },
+    {
+      "map_section": "MAPSEC_MT_SILVER_PATH",
+      "name": "PATH TO MT. SILVER",
+      "x": 1,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_MT_SILVER",
+      "name": "MT. SILVER",
+      "x": 0,
+      "y": 8,
+      "width": 1,
+      "height": 1
     }
   ]
 }
