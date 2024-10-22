@@ -336,10 +336,6 @@
 #define MAP_CINNABAR_VOLCANO                     (70 | (3 << 8))
 #define MAP_PRIMORDIAL_ALTAR                     (71 | (3 << 8))
 #define MAP_ROUTE103                             (72 | (3 << 8))
-#define MAP_ROUTE28                              (73 | (3 << 8))
-#define MAP_MT_SILVER                            (74 | (3 << 8))
-#define MAP_MT_SILVER_CAVE1                      (75 | (3 << 8))
-#define MAP_MT_SILVER_GATE                       (76 | (3 << 8))
 
 // gMapGroup_IndoorPallet
 #define MAP_PALLET_TOWN_PLAYERS_HOUSE_1F   (0 | (4 << 8))
@@ -621,6 +617,12 @@
 #define MAP_BATTLE_FRONTIER_LOUNGE7                 (20 | (43 << 8))
 #define MAP_BATTLE_FRONTIER_LOUNGE8                 (21 | (43 << 8))
 
-#define MAP_GROUPS_COUNT 44
+// gMapGroup_MtSilverArea
+#define MAP_ROUTE28                              (0 | (44 << 8))
+#define MAP_MT_SILVER                            (1 | (44 << 8))
+#define MAP_MT_SILVER_CAVE1                      (2 | (44 << 8))
+#define MAP_MT_SILVER_GATE                       (3 | (44 << 8))
+
+#define MAP_GROUPS_COUNT 45
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

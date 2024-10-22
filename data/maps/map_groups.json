@@ -375,11 +375,7 @@
     "KyogreDen",
     "CinnabarVolcano",
     "PrimordialAltar",
-    "Route103",
-    "Route28",
-    "MtSilver",
-    "MtSilverCave1",
-    "MtSilverGate"
+    "Route103"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",
@@ -660,5 +656,11 @@
     "BattleFrontier_Lounge6",
     "BattleFrontier_Lounge7",
     "BattleFrontier_Lounge8"
+  ],
+  "gMapGroup_MtSilverArea": [
+    "Route28",
+    "MtSilver",
+    "MtSilverCave1",
+    "MtSilverGate"
   ]
 }
