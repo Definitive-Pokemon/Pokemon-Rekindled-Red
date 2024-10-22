@@ -479,7 +479,7 @@ static void Task_ExecuteMainMenuSelection(u8 taskId)
                 menuAction = MAIN_MENU_NEWGAME;
                 break;
             case 1:
-                menuAction = MAIN_MENU_KEYSYSTEM;
+                //menuAction = MAIN_MENU_KEYSYSTEM;
                 break;
             }
             break;
@@ -494,7 +494,7 @@ static void Task_ExecuteMainMenuSelection(u8 taskId)
                 menuAction = MAIN_MENU_NEWGAME;
                 break;
             case 2:
-                menuAction = MAIN_MENU_KEYSYSTEM;
+                //menuAction = MAIN_MENU_KEYSYSTEM;
                 break;
             }
             break;
@@ -522,7 +522,7 @@ static void Task_ExecuteMainMenuSelection(u8 taskId)
                 }
                 break;
             case 3:
-                menuAction = MAIN_MENU_KEYSYSTEM;
+                //menuAction = MAIN_MENU_KEYSYSTEM;
                 break;
             }
             break;
@@ -549,12 +549,12 @@ static void Task_ExecuteMainMenuSelection(u8 taskId)
             FreeAllWindowBuffers();
             DestroyTask(taskId);
             break;
-        case MAIN_MENU_KEYSYSTEM:
+        /*case MAIN_MENU_KEYSYSTEM:
             SetMainCallback2(CB2_KeySystemMenuFromContinueScreen);
             //HelpSystem_Disable();
             FreeAllWindowBuffers();
             DestroyTask(taskId);
-            break;
+            break;*/
         }
     }
 }
