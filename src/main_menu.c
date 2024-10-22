@@ -170,7 +170,7 @@ static const struct BgTemplate sBgTemplate[] = {
     }
 };
 
-static const u8 sMenuCursorYMax[] = { 1, 2, 3 };
+static const u8 sMenuCursorYMax[] = { 1, 1, 2 };
 
 static void CB2_MainMenu(void)
 {
