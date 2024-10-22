@@ -5464,8 +5464,8 @@
     {
       "id": "LAYOUT_MT_SILVER_CAVE1",
       "name": "MtSilverCave1_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 60,
+      "height": 53,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",

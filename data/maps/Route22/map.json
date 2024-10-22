@@ -66,8 +66,8 @@
       "x": 1,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE22",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_MT_SILVER_GATE",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

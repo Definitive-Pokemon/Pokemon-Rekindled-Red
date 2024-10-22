@@ -618,10 +618,10 @@
 #define MAP_BATTLE_FRONTIER_LOUNGE8                 (21 | (43 << 8))
 
 // gMapGroup_MtSilverArea
-#define MAP_ROUTE28                              (0 | (44 << 8))
-#define MAP_MT_SILVER                            (1 | (44 << 8))
-#define MAP_MT_SILVER_CAVE1                      (2 | (44 << 8))
-#define MAP_MT_SILVER_GATE                       (3 | (44 << 8))
+#define MAP_ROUTE28         (0 | (44 << 8))
+#define MAP_MT_SILVER       (1 | (44 << 8))
+#define MAP_MT_SILVER_CAVE1 (2 | (44 << 8))
+#define MAP_MT_SILVER_GATE  (3 | (44 << 8))
 
 #define MAP_GROUPS_COUNT 45
 
