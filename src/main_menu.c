@@ -25,15 +25,16 @@ enum MainMenuType
     MAIN_MENU_MYSTERYGIFT
 };
 
+#define MAIN_MENU_WINDOW_KEYSYSTEM 6
+#define MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED 7
+#define MAIN_MENU_WINDOW_KEYSYSTEM_NEWGAME_ONLY 8
+
 enum MainMenuWindow
 {
     MAIN_MENU_WINDOW_NEWGAME_ONLY = 0,
     MAIN_MENU_WINDOW_CONTINUE,
     MAIN_MENU_WINDOW_NEWGAME,
     MAIN_MENU_WINDOW_MYSTERYGIFT,
-    MAIN_MENU_WINDOW_KEYSYSTEM,
-    MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED,
-    MAIN_MENU_WINDOW_KEYSYSTEM_NEWGAME_ONLY,
     MAIN_MENU_WINDOW_ERROR,
     MAIN_MENU_WINDOW_COUNT
 };
@@ -382,57 +383,52 @@ static void Task_PrintMainMenuText(u8 taskId)
     case MAIN_MENU_NEWGAME:
     default:
         FillWindowPixelBuffer(MAIN_MENU_WINDOW_NEWGAME_ONLY, PIXEL_FILL(10));
-        FillWindowPixelBuffer(MAIN_MENU_WINDOW_KEYSYSTEM_NEWGAME_ONLY, PIXEL_FILL(10));
         AddTextPrinterParameterized3(MAIN_MENU_WINDOW_NEWGAME_ONLY, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_NewGame);
-        AddTextPrinterParameterized3(MAIN_MENU_WINDOW_KEYSYSTEM_NEWGAME_ONLY, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_KeySystemSettings);
         MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_NEWGAME_ONLY]);
-        MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_KEYSYSTEM_NEWGAME_ONLY]);
         PutWindowTilemap(MAIN_MENU_WINDOW_NEWGAME_ONLY);
-        PutWindowTilemap(MAIN_MENU_WINDOW_KEYSYSTEM_NEWGAME_ONLY);
         CopyWindowToVram(MAIN_MENU_WINDOW_NEWGAME_ONLY, COPYWIN_GFX);
-        CopyWindowToVram(MAIN_MENU_WINDOW_KEYSYSTEM_NEWGAME_ONLY, COPYWIN_FULL);
         break;
     case MAIN_MENU_CONTINUE:
         FillWindowPixelBuffer(MAIN_MENU_WINDOW_CONTINUE, PIXEL_FILL(10));
         FillWindowPixelBuffer(MAIN_MENU_WINDOW_NEWGAME, PIXEL_FILL(10));
-        FillWindowPixelBuffer(MAIN_MENU_WINDOW_KEYSYSTEM, PIXEL_FILL(10));
+        //FillWindowPixelBuffer(MAIN_MENU_WINDOW_KEYSYSTEM, PIXEL_FILL(10));
         AddTextPrinterParameterized3(MAIN_MENU_WINDOW_CONTINUE, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_Continue);
         AddTextPrinterParameterized3(MAIN_MENU_WINDOW_NEWGAME, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_NewGame);
-        AddTextPrinterParameterized3(MAIN_MENU_WINDOW_KEYSYSTEM, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_KeySystemSettings);
+        //AddTextPrinterParameterized3(MAIN_MENU_WINDOW_KEYSYSTEM, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_KeySystemSettings);
         PrintContinueStats();
         MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_CONTINUE]);
         MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_NEWGAME]);
-        MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_KEYSYSTEM]);
+        //MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_KEYSYSTEM]);
         PutWindowTilemap(MAIN_MENU_WINDOW_CONTINUE);
         PutWindowTilemap(MAIN_MENU_WINDOW_NEWGAME);
-        PutWindowTilemap(MAIN_MENU_WINDOW_KEYSYSTEM);
+        //PutWindowTilemap(MAIN_MENU_WINDOW_KEYSYSTEM);
         CopyWindowToVram(MAIN_MENU_WINDOW_CONTINUE, COPYWIN_GFX);
         CopyWindowToVram(MAIN_MENU_WINDOW_NEWGAME, COPYWIN_GFX);
-        CopyWindowToVram(MAIN_MENU_WINDOW_KEYSYSTEM, COPYWIN_FULL);
+        //CopyWindowToVram(MAIN_MENU_WINDOW_KEYSYSTEM, COPYWIN_FULL);
         break;
     case MAIN_MENU_MYSTERYGIFT:
         FillWindowPixelBuffer(MAIN_MENU_WINDOW_CONTINUE, PIXEL_FILL(10));
         FillWindowPixelBuffer(MAIN_MENU_WINDOW_NEWGAME, PIXEL_FILL(10));
         FillWindowPixelBuffer(MAIN_MENU_WINDOW_MYSTERYGIFT, PIXEL_FILL(10));
-        FillWindowPixelBuffer(MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED, PIXEL_FILL(10));
+        //FillWindowPixelBuffer(MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED, PIXEL_FILL(10));
         AddTextPrinterParameterized3(MAIN_MENU_WINDOW_CONTINUE, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_Continue);
         AddTextPrinterParameterized3(MAIN_MENU_WINDOW_NEWGAME, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_NewGame);
         gTasks[taskId].tMGErrorType = 1;
         AddTextPrinterParameterized3(MAIN_MENU_WINDOW_MYSTERYGIFT, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_MysteryGift);
-        AddTextPrinterParameterized3(MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_KeySystemSettings);
+        //AddTextPrinterParameterized3(MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_KeySystemSettings);
         PrintContinueStats();
         MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_CONTINUE]);
         MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_NEWGAME]);
         MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_MYSTERYGIFT]);
-        MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED]);
+        //MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED]);
         PutWindowTilemap(MAIN_MENU_WINDOW_CONTINUE);
         PutWindowTilemap(MAIN_MENU_WINDOW_NEWGAME);
         PutWindowTilemap(MAIN_MENU_WINDOW_MYSTERYGIFT);
-        PutWindowTilemap(MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED);
+        //PutWindowTilemap(MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED);
         CopyWindowToVram(MAIN_MENU_WINDOW_CONTINUE, COPYWIN_GFX);
         CopyWindowToVram(MAIN_MENU_WINDOW_NEWGAME, COPYWIN_GFX);
         CopyWindowToVram(MAIN_MENU_WINDOW_MYSTERYGIFT, COPYWIN_GFX);
-        CopyWindowToVram(MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED, COPYWIN_FULL);
+        //CopyWindowToVram(MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED, COPYWIN_FULL);
         break;
     }
     gTasks[taskId].func = Task_WaitDma3AndFadeIn;
