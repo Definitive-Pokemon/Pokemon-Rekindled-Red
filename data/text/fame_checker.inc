@@ -822,7 +822,7 @@ gFameCheckerFlavorTextOriginLocation_Daisy1::
 	.string "VERMILION CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Daisy2::
-	.string "WATER LABYRINTH$"
+	.string "PEWTER CITY$"
 
 gFameCheckerFlavorTextOriginLocation_Daisy3::
 	.string "VIRIDIAN CITY$"

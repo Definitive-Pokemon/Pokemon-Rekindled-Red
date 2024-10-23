@@ -5484,6 +5484,18 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/MtSilverGate/border.bin",
       "blockdata_filepath": "data/layouts/MtSilverGate/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SILVER_OUTDOOR1",
+      "name": "MtSilverOutdoor1_Layout",
+      "width": 27,
+      "height": 47,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtSilverOutdoor1/border.bin",
+      "blockdata_filepath": "data/layouts/MtSilverOutdoor1/map.bin"
     }
   ]
 }
