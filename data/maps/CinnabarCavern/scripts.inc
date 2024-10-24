@@ -1,7 +1,6 @@
 .set LOCALID_RAIKOU, 1
 
 CinnabarCavern_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, MtEmber_Summit_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CinnabarCavern_OnResume
 	.byte 0
 
@@ -14,16 +13,7 @@ CinnabarCavern_EventScript_TryRemoveRaikou::
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne EventScript_Return
 	removeobject VAR_LAST_TALKED
-	return
-
-CinnabarCavern_OnTransition::
-	call_if_set FLAG_FOUGHT_RAIKOU, CinnabarCavern_EventScript_HideRaikou
-	call_if_unset FLAG_FOUGHT_RAIKOU, CinnabarCavern_EventScript_TryShowRaikou
-	end
-
-CinnabarCavern_EventScript_TryShowRaikou::
-	goto_if_set FLAG_RAIKOU_FLED, EventScript_Return
-	clearflag FLAG_HIDE_RAIKOU_ROAM
+	setflag FLAG_HIDE_RAIKOU_ROAM
 	return
 
 CinnabarCavern_EventScript_HideRaikou::
