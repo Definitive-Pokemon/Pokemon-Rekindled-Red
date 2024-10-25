@@ -230,8 +230,9 @@
 #define MAPSEC_MT_SILVER_PATH               0xDC
 #define MAPSEC_MT_SILVER                    0xDD
 #define MAPSEC_MT_SILVER_CAVE               0xDE
-#define MAPSEC_NONE                         0xDF
-#define MAPSEC_COUNT                        0xE0
+#define MAPSEC_FIERY_PASSAGE                0xDF
+#define MAPSEC_NONE                         0xE0
+#define MAPSEC_COUNT                        0xE1
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE
