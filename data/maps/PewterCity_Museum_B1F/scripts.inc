@@ -19,6 +19,8 @@ PewterCity_Museum_B1F_EventScript_FlashScientist::
 	goto_if_eq Aide_EventScript_NoRoomForItem
 	giveitem_msg PewterCity_Museum_B1F_Text_ReceivedHM05FromScientist, ITEM_HM05
 	setflag FLAG_GOT_HM05
+	animateflash 0
+	setflashlevel 0
 	msgbox PewterCity_Museum_B1F_Text_ExplainHM05
 	release
 	end
