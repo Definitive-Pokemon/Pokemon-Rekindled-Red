@@ -41,6 +41,9 @@ MtMoon_B2F_EventScript_MiguelTrigger::
 	applymovement LOCALID_MIGUEL, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	call MtMoon_B2F_EventScript_BattleMiguel
+	setflag FLAG_HIDE_SUICUNE_ROAM
+	setflag FLAG_HIDE_ENTEI_ROAM
+	setflag FLAG_HIDE_RAIKOU_ROAM
 	releaseall
 	end
 

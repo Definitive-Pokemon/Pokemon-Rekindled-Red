@@ -1114,6 +1114,9 @@ static void InitRegionMapType(void)
     }
     switch (gMapHeader.regionMapSectionId)
     {
+        case MAPSEC_FIERY_PASSAGE:
+        region = REGIONMAP_KANTO;
+        break;
         case MAPSEC_UNDERWATER_124:
         case MAPSEC_PRIMORDIAL_ALTAR:
         case MAPSEC_AERO_CAVE:
