@@ -247,6 +247,9 @@ CeruleanCity_EventScript_GruntTrigger::
 	textcolor NPC_TEXT_COLOR_MALE
 	msgbox CeruleanCity_Text_GruntIntro
 	setvar VAR_LAST_TALKED, LOCALID_GRUNT
+	setflag FLAG_HIDE_SUICUNE_ROAM
+	setflag FLAG_HIDE_ENTEI_ROAM
+	setflag FLAG_HIDE_RAIKOU_ROAM
 	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_5, CeruleanCity_Text_GruntDefeat
 	setvar VAR_MAP_SCENE_CERULEAN_CITY_ROCKET, 1
 	goto CeruleanCity_EventScript_GruntDefeated
