@@ -50,14 +50,6 @@ MtSilverGate_EventScript_Route_22::
 	release
 	end
 
-MtSilverGate_EventScript_Route_26::
-	lock
-	faceplayer
-	msgbox MtSilverGate_Text_Route_26
-	closemessage
-	release
-	end
-
 MtSilverGate_Movement_Face::
 	walk_in_place_up
 	step_end
