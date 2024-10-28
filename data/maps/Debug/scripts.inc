@@ -205,3 +205,9 @@ Debug_Emerald::
 	giveitem ITEM_EMERALD
 	release
 	end
+
+Debug_Flags::
+	lock
+	setflag FLAG_HIDE_CERULEAN_CAVE_GUARD
+	setvar VAR_MT_SILVER_ACCESS, 1
+	end
