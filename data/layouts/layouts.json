@@ -5476,12 +5476,12 @@
     {
       "id": "LAYOUT_MT_SILVER_GATE",
       "name": "MtSilverGate_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 27,
+      "height": 21,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
       "border_filepath": "data/layouts/MtSilverGate/border.bin",
       "blockdata_filepath": "data/layouts/MtSilverGate/map.bin"
     },
