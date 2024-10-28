@@ -15,7 +15,7 @@ CeruleanCity_MapScripts::
 
 CeruleanCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_CERULEAN_CITY
-	call_if_unset FLAG_HIDE_CERULEAN_CAVE_GUARD, CeruleanCity_EventScript_BlockExits
+	call_if_unset FLAG_GOT_SS_TICKET, CeruleanCity_EventScript_BlockExits
 	goto CeruleanCity_MapScript_SetMasterTrainerMovementTypes
 	end
 
