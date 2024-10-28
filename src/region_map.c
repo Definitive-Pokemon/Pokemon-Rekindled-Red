@@ -3046,7 +3046,6 @@ static u16 GetDungeonMapsecUnderCursor(void)
 
     mapsec = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_DUNGEON, sMapCursor->y, sMapCursor->x);
     if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
-    if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
         mapsec = MAPSEC_NONE;
     return mapsec;
 }
