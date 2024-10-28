@@ -767,6 +767,10 @@ static const struct DungeonMapInfo sDungeonInfo[] = {
         .id = MAPSEC_DOTTED_HOLE,
         .name = sMapsecName_DOTTEDHOLE,
         .desc = gText_RegionMap_AreaDesc_DottedHole
+    }, {
+        .id = MAPSEC_MT_SILVER_CAVE,
+        .name = sMapsecName_MTSILVERCAVE,
+        .desc = gText_RegionMap_AreaDesc_MtSilverCave
     }
 };
 
@@ -3040,6 +3044,7 @@ static u16 GetDungeonMapsecUnderCursor(void)
 
     mapsec = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_DUNGEON, sMapCursor->y, sMapCursor->x);
     if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
+    if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
         mapsec = MAPSEC_NONE;
     return mapsec;
 }
@@ -3173,6 +3178,8 @@ static u8 GetDungeonMapsecType(u8 mapsec)
         return FlagGet(FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_PRIMORDIAL_ALTAR:
         return FlagGet(FLAG_WORLD_MAP_PRIMORDIAL_CAVE) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
+    case MAPSEC_MT_SILVER_CAVE:
+        return FlagGet(FLAG_WORLD_MAP_MT_SILVER_CAVE) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     default:
         return MAPSECTYPE_ROUTE;
     }
@@ -3462,7 +3469,6 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     case MAPSEC_MT_SILVER_CAVE:
         sMapCursor->x = 11;
         sMapCursor->y = 6;
->>>>>>> Stashed changes
         break;
     case MAPSEC_ALTERING_CAVE_E:
         sMapCursor->x = 0;
