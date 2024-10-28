@@ -3465,16 +3465,9 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     case MAPSEC_TERRA_CAVE:
     case MAPSEC_AERO_CAVE:
     case MAPSEC_ROUTE_103:
-    case MAPSEC_FIERY_PASSAGE:
-        sMapCursor->x = 14;
-        sMapCursor->y = 1;
-        break;
-    case MAPSEC_MT_MOON:
-        sMapCursor->x = 9;
-        sMapCursor->y = 3;
     case MAPSEC_MT_SILVER_CAVE:
-        sMapCursor->x = 11;
-        sMapCursor->y = 6;
+        sMapCursor->x = 0;
+        sMapCursor->y = 8;
         break;
     case MAPSEC_ALTERING_CAVE_E:
         sMapCursor->x = 0;
@@ -3491,6 +3484,7 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     case MAPSEC_TWO_ISLAND_HO_OH:
         sMapCursor->x = 10;
         sMapCursor->y = 11;
+		break;
     case MAPSEC_STONE_TOMB:
         sMapCursor->x = 19;
         sMapCursor->y = 13;
