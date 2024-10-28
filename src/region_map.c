@@ -3458,6 +3458,13 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     case MAPSEC_FIERY_PASSAGE:
         sMapCursor->x = 14;
         sMapCursor->y = 3;
+<<<<<<< Updated upstream
+=======
+        break;
+    case MAPSEC_MT_SILVER_CAVE:
+        sMapCursor->x = 11;
+        sMapCursor->y = 6;
+>>>>>>> Stashed changes
         break;
     case MAPSEC_ALTERING_CAVE_E:
         sMapCursor->x = 0;
