@@ -3047,6 +3047,8 @@ static u16 GetDungeonMapsecUnderCursor(void)
     mapsec = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_DUNGEON, sMapCursor->y, sMapCursor->x);
     if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
         mapsec = MAPSEC_NONE;
+    if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
+        mapsec = MAPSEC_NONE;
     return mapsec;
 }
 
@@ -3752,6 +3754,8 @@ static void CreateDungeonIcons(void)
                 if (mapsec == MAPSEC_NONE)
                     continue;
                 if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
+                    continue;
+                if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
                     continue;
                 CreateDungeonIconSprite(i, numIcons, x, y, numIcons + 35, 10);
                 if (GetDungeonMapsecType(mapsec) != 2)
