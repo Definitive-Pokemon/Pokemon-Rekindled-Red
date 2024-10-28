@@ -3456,8 +3456,8 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     case MAPSEC_AERO_CAVE:
     case MAPSEC_ROUTE_103:
     case MAPSEC_FIERY_PASSAGE:
-        sMapCursor->x = 11;
-        sMapCursor->y = 6;
+        sMapCursor->x = 14;
+        sMapCursor->y = 3;
         break;
     case MAPSEC_ALTERING_CAVE_E:
         sMapCursor->x = 0;
