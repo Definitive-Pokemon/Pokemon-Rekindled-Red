@@ -1126,6 +1126,8 @@ static void InitRegionMapType(void)
         case MAPSEC_AERO_CAVE:
         case MAPSEC_TERRA_CAVE:
         case MAPSEC_MARINE_CAVE:
+        case MAPSEC_TWO_ISLAND_ROUTE:
+        case MAPSEC_TWO_ISLAND_HO_OH:
         region = REGIONMAP_SEVII123;
         break;
         case MAPSEC_MONITORING_STATION: 
@@ -3482,6 +3484,9 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         sMapCursor->x = 5;
         sMapCursor->y = 6;
         break;
+    case MAPSEC_TWO_ISLAND_HO_OH:
+        sMapCursor->x = 10;
+        sMapCursor->y = 11;
     case MAPSEC_STONE_TOMB:
         sMapCursor->x = 19;
         sMapCursor->y = 13;

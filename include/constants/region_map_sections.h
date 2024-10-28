@@ -231,8 +231,13 @@
 #define MAPSEC_MT_SILVER                    0xDD
 #define MAPSEC_MT_SILVER_CAVE               0xDE
 #define MAPSEC_FIERY_PASSAGE                0xDF
-#define MAPSEC_NONE                         0xE0
-#define MAPSEC_COUNT                        0xE1
+#define MAPSEC_ROUTE_26                     0xE0
+#define MAPSEC_ROUTE_27                     0xE1
+#define MAPSEC_TOHJO_FALLS                  0xE2
+#define MAPSEC_TWO_ISLAND_ROUTE             0xE3
+#define MAPSEC_TWO_ISLAND_HO_OH             0xE4
+#define MAPSEC_NONE                         0xE5
+#define MAPSEC_COUNT                        0xE6
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE
