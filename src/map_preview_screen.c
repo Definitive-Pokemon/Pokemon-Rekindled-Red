@@ -80,9 +80,9 @@ static const u8 sIcefallCaveMapPreviewTilemap[] = INCBIN_U8("graphics/map_previe
 static const u8 sAlteringCaveMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/altering_cave/tiles.gbapal");
 static const u8 sAlteringCaveMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/altering_cave/tiles.4bpp.lz");
 static const u8 sAlteringCaveMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/altering_cave/tilemap.bin.lz");
-static const u8 sMonitoringStationMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/monitoring_station/tiles.gbapal");
-static const u8 sMonitoringStationMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/monitoring_station/tiles.4bpp.lz");
-static const u8 sMonitoringStationMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/monitoring_station/tilemap.bin");
+static const u8 sMtSilverCaveMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/mt_silver_cave/tiles.gbapal");
+static const u8 sMtSilverCaveMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/mt_silver_cave/tiles.4bpp.lz");
+static const u8 sMtSilverCaveMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/mt_silver_cave/tilemap.bin.lz");
 
 static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
     [MPS_VIRIDIAN_FOREST] = {
