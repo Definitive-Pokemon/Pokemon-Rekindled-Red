@@ -13,7 +13,13 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_ROUTE26",
+      "offset": -92,
+      "direction": "right"
+    }
+  ],
   "object_events": [
 
   ],
