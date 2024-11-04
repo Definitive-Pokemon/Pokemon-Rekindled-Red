@@ -1203,7 +1203,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RSYoungster[] = {
 static const struct TrainerMonItemCustomMoves sParty_Celio[] = {
     {
         .iv = 255,
-        .lvl = 77,
+        .lvl = 80,
         .species = SPECIES_SHEDINJA,
         .heldItem = ITEM_SCOPE_LENS,
         .abilityNum = 0,
@@ -1211,7 +1211,7 @@ static const struct TrainerMonItemCustomMoves sParty_Celio[] = {
     },
     {
         .iv = 255,
-        .lvl = 78,
+        .lvl = 81,
         .species = SPECIES_CLAYDOL,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -1219,7 +1219,7 @@ static const struct TrainerMonItemCustomMoves sParty_Celio[] = {
     },
     {
         .iv = 255,
-        .lvl = 78,
+        .lvl = 81,
         .species = SPECIES_PORYGON2,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -1227,7 +1227,7 @@ static const struct TrainerMonItemCustomMoves sParty_Celio[] = {
     },
     {
         .iv = 255,
-        .lvl = 77,
+        .lvl = 80,
         .species = SPECIES_ELECTRODE,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -1235,7 +1235,7 @@ static const struct TrainerMonItemCustomMoves sParty_Celio[] = {
     },
     {
         .iv = 255,
-        .lvl = 80,
+        .lvl = 83,
         .species = SPECIES_GOLEM,
         .heldItem = ITEM_CHOICE_BAND,
         .abilityNum = 0,
@@ -1243,7 +1243,7 @@ static const struct TrainerMonItemCustomMoves sParty_Celio[] = {
     },
     {
         .iv = 255,
-        .lvl = 80,
+        .lvl = 83,
         .species = SPECIES_METAGROSS,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,

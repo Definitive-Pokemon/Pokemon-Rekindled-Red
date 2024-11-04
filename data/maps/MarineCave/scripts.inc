@@ -36,7 +36,7 @@ MarineCave_EventScript_Kyogre::
 	delay 40
 	waitmoncry
 	setvar VAR_LAST_TALKED, LOCALID_KYOGRE
-	setwildbattle SPECIES_KYOGRE, 75
+	setwildbattle SPECIES_KYOGRE, 80
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartGroudonKyogreBattle
 	waitstate
