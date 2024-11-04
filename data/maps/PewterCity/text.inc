@@ -196,8 +196,8 @@ PewterCity_Text_GladIMetSomeoneLikeYou:: @ 818A9C0
 PewterCity_Text_CuteMonRemindsMeOfDaisy:: @ 818AA0C
     .string "Oh, hello.\n"
     .string "That's a cute {STR_VAR_2}.\p"
-    .string "Seeing it reminds me of a sweet \n"
-    .string "little girl I met a few days ago.\p"
+    .string "Seeing it reminds me of a kind\n"
+    .string "girl I met a few days ago.\p"
     .string "She was gently grooming POKéMON…\n"
     .string "She was like an angel.\p"
     .string "That girl's name…\n"

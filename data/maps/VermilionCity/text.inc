@@ -22,7 +22,7 @@ VermilionCity_Text_Machop::
     .string "MACHOP: Guoh! Gogogoh!$"
 
 VermilionCity_Text_MachopStompingLandFlat::
-    .string "A MACHOP is stomping the land flat.$"
+    .string "A MACHOP is playing here!$"
 
 VermilionCity_Text_SSAnneVisitsOnceAYear::
     .string "The S.S. ANNE is a famous luxury\n"

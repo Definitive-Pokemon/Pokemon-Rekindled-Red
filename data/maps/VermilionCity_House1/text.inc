@@ -18,7 +18,7 @@ VermilionCity_House1_Text_GoodRodCanCatchBetterMons::
     .string "Fishing is a way of life!\n"
     .string "It is like the finest poetry.\p"
     .string "A crummy OLD ROD could only catch\n"
-    .string "MAGIKARP, yes?\p"
+    .string "weak POKéMON, yes?\p"
     .string "But with a GOOD ROD, you can\n"
     .string "catch much better POKéMON.$"
 
