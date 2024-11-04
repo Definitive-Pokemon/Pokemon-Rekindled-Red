@@ -1540,3 +1540,9 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/MtSilverOutdoor1/scripts.inc"
 	.include "data/maps/MtSilverOutdoor1/text.inc"
+
+	.include "data/maps/Route26/scripts.inc"
+	.include "data/maps/Route26/text.inc"
+
+	.include "data/maps/Route27/scripts.inc"
+	.include "data/maps/Route27/text.inc"

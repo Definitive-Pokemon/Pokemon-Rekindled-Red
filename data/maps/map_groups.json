@@ -376,7 +376,9 @@
     "KyogreDen",
     "CinnabarVolcano",
     "PrimordialAltar",
-    "Route103"
+    "Route103",
+    "Route26",
+    "Route27"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

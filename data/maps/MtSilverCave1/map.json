@@ -18,7 +18,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 39,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_MT_SILVER",
+      "dest_warp_id": "1"
+    }
   ],
   "coord_events": [
 

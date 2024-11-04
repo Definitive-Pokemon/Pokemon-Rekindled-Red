@@ -36,7 +36,7 @@ TerraCave_EventScript_Groudon::
 	delay 40
 	waitmoncry
 	setvar VAR_LAST_TALKED, LOCALID_GROUDON
-	setwildbattle SPECIES_GROUDON, 70
+	setwildbattle SPECIES_GROUDON, 75
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartGroudonKyogreBattle
 	waitstate
