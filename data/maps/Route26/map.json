@@ -5,7 +5,7 @@
   "music": "MUS_ROUTE11",
   "region_map_section": "MAPSEC_ROUTE_26",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -13,18 +13,59 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_ROUTE27",
+      "offset": 103,
+      "direction": "left"
+    }
+  ],
   "object_events": [
 
   ],
   "warp_events": [
-
+    {
+      "x": 13,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_MT_SILVER_GATE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 27,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE26",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 74,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE26",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 51,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    }
   ],
   "level_scaling": "0"
 }

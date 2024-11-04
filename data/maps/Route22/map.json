@@ -15,26 +15,21 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE23",
-      "offset": 0,
-      "direction": "up"
-    },
-    {
       "map": "MAP_VIRIDIAN_CITY",
       "offset": -10,
       "direction": "right"
     },
     {
-      "map": "MAP_ROUTE28",
-      "offset": -3,
-      "direction": "left"
+      "map": "MAP_ROUTE23",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLUE",
-      "x": 25,
+      "x": 30,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -49,21 +44,21 @@
   ],
   "warp_events": [
     {
-      "x": 8,
+      "x": 13,
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_ROUTE22_NORTH_ENTRANCE",
       "dest_warp_id": "2"
     },
     {
-      "x": 9,
+      "x": 14,
       "y": 5,
       "elevation": 0,
       "dest_map": "MAP_ROUTE22_NORTH_ENTRANCE",
       "dest_warp_id": "2"
     },
     {
-      "x": 1,
+      "x": 6,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_MT_SILVER_GATE",
@@ -73,7 +68,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 33,
+      "x": 38,
       "y": 4,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_ROUTE22",
@@ -82,7 +77,7 @@
     },
     {
       "type": "trigger",
-      "x": 33,
+      "x": 38,
       "y": 5,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_ROUTE22",
@@ -91,7 +86,7 @@
     },
     {
       "type": "trigger",
-      "x": 33,
+      "x": 38,
       "y": 6,
       "elevation": 0,
       "var": "VAR_MAP_SCENE_ROUTE22",
@@ -100,7 +95,7 @@
     },
     {
       "type": "trigger",
-      "x": 33,
+      "x": 38,
       "y": 4,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_ROUTE22",
@@ -109,7 +104,7 @@
     },
     {
       "type": "trigger",
-      "x": 33,
+      "x": 38,
       "y": 5,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_ROUTE22",
@@ -118,7 +113,7 @@
     },
     {
       "type": "trigger",
-      "x": 33,
+      "x": 38,
       "y": 6,
       "elevation": 0,
       "var": "VAR_MAP_SCENE_ROUTE22",
@@ -129,7 +124,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 7,
+      "x": 12,
       "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

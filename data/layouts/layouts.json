@@ -1108,7 +1108,7 @@
     {
       "id": "LAYOUT_ROUTE22",
       "name": "Route22_Layout",
-      "width": 48,
+      "width": 53,
       "height": 24,
       "border_width": 2,
       "border_height": 2,
@@ -5500,12 +5500,12 @@
     {
       "id": "LAYOUT_ROUTE26",
       "name": "Route26_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 32,
+      "height": 130,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SeviiIslands6",
+      "secondary_tileset": "gTileset_ViridianCity",
       "border_filepath": "data/layouts/Route26/border.bin",
       "blockdata_filepath": "data/layouts/Route26/map.bin"
     },
