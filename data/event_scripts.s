@@ -1546,3 +1546,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/Route27/scripts.inc"
 	.include "data/maps/Route27/text.inc"
+
+	.include "data/maps/TohjoFalls/scripts.inc"
+	.include "data/maps/TohjoFalls/text.inc"

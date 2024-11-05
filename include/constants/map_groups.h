@@ -625,6 +625,7 @@
 #define MAP_MT_SILVER_CAVE1    (2 | (44 << 8))
 #define MAP_MT_SILVER_GATE     (3 | (44 << 8))
 #define MAP_MT_SILVER_OUTDOOR1 (4 | (44 << 8))
+#define MAP_TOHJO_FALLS        (5 | (44 << 8))
 
 #define MAP_GROUPS_COUNT 45
 
