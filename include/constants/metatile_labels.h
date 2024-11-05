@@ -101,6 +101,7 @@
 #define METATILE_General_SlidingSingleDoor       0x062
 #define METATILE_General_ThinTreeTop_Grass       0x00A
 #define METATILE_General_ThinTreeTop_Mowed       0x013
+#define METATILE_General_Waterfall               0x12F
 #define METATILE_General_WideTreeTopLeft_Grass   0x00B
 #define METATILE_General_WideTreeTopLeft_Mowed   0x00E
 #define METATILE_General_WideTreeTopRight_Grass  0x00C
@@ -226,18 +227,20 @@
 #define METATILE_PokemonMansion_Wall_EndPost_Mid                         0x2A5
 
 // gTileset_RockTunnel
-#define METATILE_RockTunnel_Bottom       0x2F4
-#define METATILE_RockTunnel_BottomLeft   0x2F9
-#define METATILE_RockTunnel_BottomRight  0x2F8
-#define METATILE_RockTunnel_Floor        0x281
-#define METATILE_RockTunnel_Hole         0x286
-#define METATILE_RockTunnel_Left         0x2FD
-#define METATILE_RockTunnel_Right        0x2FB
-#define METATILE_RockTunnel_Soil         0x2FC
-#define METATILE_RockTunnel_Spot         0x2C0
-#define METATILE_RockTunnel_Top          0x304
-#define METATILE_RockTunnel_TopLeft      0x301
-#define METATILE_RockTunnel_TopRight     0x300
+#define METATILE_RockTunnel_Bottom              0x2F4
+#define METATILE_RockTunnel_BottomLeft          0x2F9
+#define METATILE_RockTunnel_BottomRight         0x2F8
+#define METATILE_RockTunnel_DoorUnderWaterfall  0x2D7
+#define METATILE_RockTunnel_Floor               0x281
+#define METATILE_RockTunnel_Hole                0x286
+#define METATILE_RockTunnel_Left                0x2FD
+#define METATILE_RockTunnel_Right               0x2FB
+#define METATILE_RockTunnel_Soil                0x2FC
+#define METATILE_RockTunnel_Spot                0x2C0
+#define METATILE_RockTunnel_Top                 0x304
+#define METATILE_RockTunnel_TopLeft             0x301
+#define METATILE_RockTunnel_TopRight            0x300
+#define METATILE_RockTunnel_UnderWaterfall      0x2CF
 
 // gTileset_SSAnne
 #define METATILE_SSAnne_Door  0x281
