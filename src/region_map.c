@@ -1119,6 +1119,10 @@ static void InitRegionMapType(void)
     switch (gMapHeader.regionMapSectionId)
     {
         case MAPSEC_FIERY_PASSAGE:
+	case MAPSEC_MT_SILVER_PATH:
+        case MAPSEC_ROUTE_26:
+        case MAPSEC_ROUTE_27:
+        case MAPSEC_TOHJO_FALLS:
         region = REGIONMAP_KANTO;
         break;
         case MAPSEC_UNDERWATER_124:
