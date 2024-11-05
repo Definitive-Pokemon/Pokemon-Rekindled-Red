@@ -1267,7 +1267,7 @@
 #define FLAG_FOUGHT_REGIGIGAS    0x4C4
 #define FLAG_REGIGIGAS_GONE      0x4C5
 #define FLAG_HIDE_REGIGIGAS      0x4C6
-#define FLAG_0x4C7               0x4C7
+#define FLAG_BEAT_DAISY          0x4C7
 #define FLAG_0x4C8               0x4C8
 #define FLAG_0x4C9               0x4C9
 #define FLAG_0x4CA               0x4CA
@@ -1476,7 +1476,7 @@
 #define FLAG_WORLD_MAP_MONITORING_STATION                           (SYS_FLAGS + 0xC6)
 #define FLAG_WORLD_MAP_PRIMORDIAL_CAVE                              (SYS_FLAGS + 0xC7)
 #define FLAG_WORLD_MAP_MT_SILVER_CAVE                               (SYS_FLAGS + 0xC8)
-#define FLAG_0x8C9                                                  (SYS_FLAGS + 0xC9)
+#define FLAG_WORLD_MAP_TOHJO_FALLS                                  (SYS_FLAGS + 0xC9)
 #define FLAG_0x8CA                                                  (SYS_FLAGS + 0xCA)
 #define FLAG_0x8CB                                                  (SYS_FLAGS + 0xCB)
 #define FLAG_0x8CC                                                  (SYS_FLAGS + 0xCC)

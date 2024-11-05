@@ -208,6 +208,6 @@ Debug_Emerald::
 
 Debug_Flags::
 	lock
-	setflag FLAG_HIDE_CERULEAN_CAVE_GUARD
+	setflag FLAG_BEAT_DAISY
 	setvar VAR_MT_SILVER_ACCESS, 1
 	end

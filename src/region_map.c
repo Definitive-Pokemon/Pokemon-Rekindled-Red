@@ -3051,7 +3051,9 @@ static u16 GetDungeonMapsecUnderCursor(void)
     mapsec = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_DUNGEON, sMapCursor->y, sMapCursor->x);
     if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
         mapsec = MAPSEC_NONE;
-    if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
+    if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_BEAT_DAISY))
+        mapsec = MAPSEC_NONE;
+    if (mapsec == MAPSEC_TOHJO_FALLS && !FlagGet(FLAG_BEAT_DAISY))
         mapsec = MAPSEC_NONE;
     return mapsec;
 }
@@ -3187,6 +3189,8 @@ static u8 GetDungeonMapsecType(u8 mapsec)
         return FlagGet(FLAG_WORLD_MAP_PRIMORDIAL_CAVE) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_MT_SILVER_CAVE:
         return FlagGet(FLAG_WORLD_MAP_MT_SILVER_CAVE) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
+    case MAPSEC_TOHJO_FALLS:
+        return FlagGet(FLAG_WORLD_MAP_TOHJO_FALLS) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     default:
         return MAPSECTYPE_ROUTE;
     }
@@ -3469,13 +3473,17 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     case MAPSEC_TERRA_CAVE:
     case MAPSEC_AERO_CAVE:
     case MAPSEC_ROUTE_103:
+    case MAPSEC_ALTERING_CAVE_E:
+        sMapCursor->x = 0;
+        sMapCursor->y = 17;
+        break;
     case MAPSEC_MT_SILVER_CAVE:
         sMapCursor->x = 0;
         sMapCursor->y = 8;
         break;
-    case MAPSEC_ALTERING_CAVE_E:
+    case MAPSEC_TOHJO_FALLS:
         sMapCursor->x = 0;
-        sMapCursor->y = 17;
+        sMapCursor->y = 12;
         break;
     case MAPSEC_PRIMORDIAL_ALTAR:
         sMapCursor->x = 1;
@@ -3756,7 +3764,9 @@ static void CreateDungeonIcons(void)
                     continue;
                 if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
                     continue;
-                if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
+                if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_BEAT_DAISY))
+                    continue;
+                if (mapsec == MAPSEC_TOHJO_FALLS && !FlagGet(FLAG_BEAT_DAISY))
                     continue;
                 CreateDungeonIconSprite(i, numIcons, x, y, numIcons + 35, 10);
                 if (GetDungeonMapsecType(mapsec) != 2)
