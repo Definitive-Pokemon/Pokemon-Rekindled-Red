@@ -31,6 +31,20 @@ static const u16 *const sTilesetAnims_General_Flower[] = {
     sTilesetAnims_General_Flower_Frame3,
     sTilesetAnims_General_Flower_Frame4
 };
+static const u16 sTilesetAnims_General_Flower_Black_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/flowerblack/0.4bpp");
+static const u16 sTilesetAnims_General_Flower_Black_Frame1[] = INCBIN_U16("data/tilesets/primary/general/anim/flowerblack/1.4bpp");
+static const u16 sTilesetAnims_General_Flower_Black_Frame2[] = INCBIN_U16("data/tilesets/primary/general/anim/flowerblack/2.4bpp");
+static const u16 sTilesetAnims_General_Flower_Black_Frame3[] = INCBIN_U16("data/tilesets/primary/general/anim/flowerblack/3.4bpp");
+static const u16 sTilesetAnims_General_Flower_Black_Frame4[] = INCBIN_U16("data/tilesets/primary/general/anim/flowerblack/4.4bpp");
+
+static const u16 *const sTilesetAnims_General_Flower_Black[] = {
+    sTilesetAnims_General_Flower_Black_Frame0,
+    sTilesetAnims_General_Flower_Black_Frame1,
+    sTilesetAnims_General_Flower_Black_Frame2,
+    sTilesetAnims_General_Flower_Black_Frame3,
+    sTilesetAnims_General_Flower_Black_Frame4
+};
+
 
 // palette: general 04
 static const u16 sTilesetAnims_General_Water_Current_LandWatersEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/general/anim/water_current_landwatersedge/0.4bpp");
@@ -303,6 +317,7 @@ static void _InitSecondaryTilesetAnimation(void)
 static void QueueAnimTiles_General_Flower(u16 timer)
 {
     AppendTilesetAnimToBuffer(sTilesetAnims_General_Flower[timer % ARRAY_COUNT(sTilesetAnims_General_Flower)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 4 * TILE_SIZE_4BPP);
+    AppendTilesetAnimToBuffer(sTilesetAnims_General_Flower_Black[timer % ARRAY_COUNT(sTilesetAnims_General_Flower_Black)], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(488)), 4 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_General_Water_Current_LandWatersEdge(u16 timer)
