@@ -5440,7 +5440,7 @@
     {
       "id": "LAYOUT_ROUTE28",
       "name": "Route28_Layout",
-      "width": 63,
+      "width": 59,
       "height": 29,
       "border_width": 2,
       "border_height": 2,
@@ -5452,7 +5452,7 @@
     {
       "id": "LAYOUT_MT_SILVER",
       "name": "MtSilver_Layout",
-      "width": 29,
+      "width": 33,
       "height": 31,
       "border_width": 2,
       "border_height": 2,

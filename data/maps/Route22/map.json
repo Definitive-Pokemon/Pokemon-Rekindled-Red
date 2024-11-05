@@ -62,7 +62,7 @@
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_MT_SILVER_GATE",
-      "dest_warp_id": "1"
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

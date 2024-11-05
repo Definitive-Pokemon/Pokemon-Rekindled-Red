@@ -24,7 +24,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 8,
+      "x": 4,
       "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -66,14 +66,14 @@
   ],
   "warp_events": [
     {
-      "x": 55,
+      "x": 51,
       "y": 10,
       "elevation": 0,
       "dest_map": "MAP_MT_SILVER_GATE",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
-      "x": 19,
+      "x": 15,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_ROUTE28",
@@ -86,7 +86,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 50,
+      "x": 46,
       "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
