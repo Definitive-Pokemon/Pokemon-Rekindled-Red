@@ -1108,7 +1108,7 @@
     {
       "id": "LAYOUT_ROUTE22",
       "name": "Route22_Layout",
-      "width": 53,
+      "width": 54,
       "height": 24,
       "border_width": 2,
       "border_height": 2,
@@ -5440,7 +5440,7 @@
     {
       "id": "LAYOUT_ROUTE28",
       "name": "Route28_Layout",
-      "width": 62,
+      "width": 63,
       "height": 29,
       "border_width": 2,
       "border_height": 2,
