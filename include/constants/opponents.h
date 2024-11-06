@@ -26,7 +26,7 @@
 #define TRAINER_SWIMMER_FEMALE_SEDEF_2            22
 #define TRAINER_MASTER_OAK                        23
 #define TRAINER_MISTY_REMATCH_CHALLENGE           24
-#define TRAINER_DAISY                             25
+#define TRAINER_LEADER_DAISY                      25
 #define TRAINER_LEADER_GIOVANNI_REMATCH           26
 #define TRAINER_TEAM_ROCKET_JUNGLE                27
 #define TRAINER_BLACK_BELT_KOICHI2                28

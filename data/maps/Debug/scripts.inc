@@ -206,6 +206,6 @@ Debug_Emerald::
 	release
 	end
 
-Debug_Daisy::
+Daisy::
 	setflag FLAG_HIDE_DAISY
 	end
