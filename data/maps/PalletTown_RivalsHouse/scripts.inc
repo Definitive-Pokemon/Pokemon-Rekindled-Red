@@ -397,11 +397,8 @@ PalletTown_RivalsHouse_Text_Going:
 	
 PalletTown_RivalsHouse_Movement_Away::
 	face_away_player
-	lock_facing_direction
-	walk_in_place_left
-	unlock_facing_direction
+	delay_16
+	delay_16
+	delay_16
 	face_player
-	lock_facing_direction
-	walk_in_place_left
-	unlock_facing_direction
 	step_end
