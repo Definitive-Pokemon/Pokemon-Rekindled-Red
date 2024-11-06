@@ -7,6 +7,7 @@ ViridianCity_Gym_MapScripts::
 
 ViridianCity_Gym_EventScript_DaisyCheck::
 	call_if_set FLAG_DAISY_READY, ViridianCity_Gym_EventScript_ShowDaisy
+	end
 
 ViridianCity_Gym_EventScript_ShowDaisy::
 	addobject LOCALID_DAISY
