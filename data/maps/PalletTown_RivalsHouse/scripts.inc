@@ -397,7 +397,7 @@ PalletTown_RivalsHouse_Text_Going:
 	.string "I need to do something there…$"
 	
 PalletTown_RivalsHouse_Movement_Away::
-	face_away_player
+	walk_in_place_up
 	delay_16
 	delay_16
 	delay_16
