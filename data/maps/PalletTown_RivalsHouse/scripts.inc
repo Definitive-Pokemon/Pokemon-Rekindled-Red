@@ -309,6 +309,7 @@ PalletTown_RivalsHouse_EventScript_GiveFinalStarter_15:
 	msgbox PalletTown_RivalsHouse_EventScript_GiveFinalStarter_Text_8
 	closemessage
 	applymovement LOCALID_DAISY, PalletTown_RivalsHouse_Movement_Away
+	waitmovement 0
 	msgbox PalletTown_RivalsHouse_Text_Going
 	closemessage
 	fadescreen FADE_TO_BLACK
