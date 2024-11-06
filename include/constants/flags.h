@@ -1268,8 +1268,8 @@
 #define FLAG_REGIGIGAS_GONE      0x4C5
 #define FLAG_HIDE_REGIGIGAS      0x4C6
 #define FLAG_BEAT_DAISY          0x4C7
-#define FLAG_0x4C8               0x4C8
-#define FLAG_0x4C9               0x4C9
+#define FLAG_DAISY_READY         0x4C8
+#define FLAG_HIDE_DAISY          0x4C9
 #define FLAG_0x4CA               0x4CA
 #define FLAG_0x4CB               0x4CB
 #define FLAG_0x4CC               0x4CC

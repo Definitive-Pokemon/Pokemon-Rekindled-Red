@@ -1,7 +1,63 @@
 .set LOCALID_GIOVANNI, 8
+.set LOCALID_DAISY, 11
 
 ViridianCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, ViridianCity_Gym_EventScript_DaisyCheck
 	.byte 0
+
+ViridianCity_Gym_EventScript_DaisyCheck::
+	call_if_set FLAG_DAISY_READY, ViridianCity_Gym_EventScript_ShowDaisy
+
+ViridianCity_Gym_EventScript_ShowDaisy::
+	addobject LOCALID_DAISY
+	clearflag FLAG_HIDE_DAISY
+	end
+
+ViridianCity_Gym_EventScript_Daisy::
+	lock
+	faceplayer
+	trainerbattle_single TRAINER_LEADER_DAISY, ViridianCity_Gym_Text_DaisyIntro, ViridianCity_Gym_Text_DaisyDefeat, ViridianCity_Gym_EventScript_DefeatedDaisy, NO_MUSIC
+	settrainerflag TRAINER_LEADER_DAISY
+	msgbox ViridianCity_Gym_Text_DaisyPostBattle
+	closemessage
+	release
+	end
+
+ViridianCity_Gym_Text_DaisyIntro::
+	.string "I knew you'd come, {PLAYER}.\n"
+	.string "I'm sure you didn't expect this.\p"
+	.string "I've been a TRAINER since before\n"
+	.string "you and {RIVAL} were born!\p"
+	.string "When Grandpa told me what happened\n"
+	.string "here between you and GIOVANNI,\p"
+	.string "I just couldn't help myself…\p"
+	.string "I had to pick up battling again!\p"
+	.string "This town needs to be protected\n"
+	.string "from evildoers like GIOVANNI.\p"
+	.string "You made me realize that I could\n"
+	.string "do something about all of this.\p"
+	.string "… just like you and {RIVAL}!\p"
+	.string "And so, I began training my\n"
+	.string "POKéMON again.\p"
+	.string "Then, I applied for the position of\n"
+	.string "the VIRIDIAN CITY GYM LEADER.\p"
+	.string "That's right.\n"
+	.string "I'm a GYM LEADER now!\p"
+	.string "{PLAYER}…\p"
+	.string "I challenge you to take me on!$"
+
+ViridianCity_Gym_Text_DaisyDefeat::
+	.string "So this is what they meant…$"
+
+ViridianCity_Gym_Text_DaisyPostBattle::
+	.string "You win, blah blah.\n"
+	.string "I'll tell guards to open Silver.$"
+
+ViridianCity_Gym_EventScript_DefeatedDaisy::
+	setflag FLAG_BEAT_DAISY
+	setflag FLAG_HIDE_DAISY
+	clearflag FLAG_DAISY_READY
+	end
 
 ViridianCity_Gym_EventScript_Giovanni::
 	famechecker FAMECHECKER_GIOVANNI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005

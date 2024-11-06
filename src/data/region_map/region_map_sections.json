@@ -1745,14 +1745,6 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_FIERY_PASSAGE",
-      "name": "FIERY PASSAGE",
-      "x": 0,
-      "y": 0,
-      "width": 1,
-      "height": 1
-    },
-    {
       "map_section": "MAPSEC_MONITORING_STATION",
       "name": "MONITORING STATION",
       "x": 0,
@@ -1780,7 +1772,7 @@
       "map_section": "MAPSEC_MT_SILVER_CAVE",
       "name": "MT. SILVER CAVE",
       "x": 0,
-      "y": 7,
+      "y": 8,
       "width": 1,
       "height": 1
     },

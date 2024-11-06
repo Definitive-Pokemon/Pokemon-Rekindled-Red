@@ -1001,6 +1001,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_LAPRAS_OLD
 	setflag FLAG_HIDE_MURAL
 	setflag FLAG_HIDE_MOM_REAL
+	setflag FLAG_HIDE_DAISY
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
 	setvar VAR_JIRACHI, 1
 	setvar VAR_REGICHECK, 1

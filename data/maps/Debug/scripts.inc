@@ -206,8 +206,6 @@ Debug_Emerald::
 	release
 	end
 
-Debug_Flags::
-	lock
-	setflag FLAG_BEAT_DAISY
-	setvar VAR_MT_SILVER_ACCESS, 1
+Debug_Daisy::
+	setflag FLAG_HIDE_DAISY
 	end

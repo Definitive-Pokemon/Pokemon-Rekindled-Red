@@ -307,6 +307,14 @@ PalletTown_RivalsHouse_EventScript_GiveFinalStarter_15:
 	call EventScript_RestorePrevTextColor
 	setflag FLAG_GOT_DAISY_STARTER
 	msgbox PalletTown_RivalsHouse_EventScript_GiveFinalStarter_Text_8
+	closemessage
+	applymovement LOCALID_DAISY, PalletTown_RivalsHouse_Movement_Away
+	msgbox PalletTown_RivalsHouse_Text_Going
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_DAISY
+	setflag FLAG_DAISY_READY
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 
@@ -380,3 +388,20 @@ PalletTown_RivalsHouse_EventScript_GiveFinalStarter_Text_7:
 
 PalletTown_RivalsHouse_EventScript_GiveFinalStarter_Text_8:
 	.string "DAISY: Thank you, {PLAYER}!\pTake good care of\n{STR_VAR_1}!$"
+
+PalletTown_RivalsHouse_Text_Going:
+	.string "{PLAYER}…\n"
+	.string "There's something else…\p"
+	.string "I'm leaving for the VIRIDIAN GYM.\n"
+	.string "I need to do something there…$"
+	
+PalletTown_RivalsHouse_Movement_Away::
+	face_away_player
+	lock_facing_direction
+	walk_in_place_left
+	unlock_facing_direction
+	face_player
+	lock_facing_direction
+	walk_in_place_left
+	unlock_facing_direction
+	step_end

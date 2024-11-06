@@ -70,8 +70,9 @@ MtSilverGate_Text_NoPass::
 	.string "Bwahaha!$"
 
 MtSilverGate_Text_Pass::
-	.string "You sure have become a\n"
-	.string "powerful TRAINER.\p"
+	.string "I got word from the VIRIDIAN\n"
+	.string "GYM LEADER.\p"
+	.string "You can go through now.\n"
 	.string "Go right ahead, buddy!$"
 
 MtSilverGate_Text_Mt_Silver::
