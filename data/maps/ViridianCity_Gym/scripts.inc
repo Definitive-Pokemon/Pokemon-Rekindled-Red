@@ -19,8 +19,6 @@ ViridianCity_Gym_EventScript_Daisy::
 	faceplayer
 	trainerbattle_single TRAINER_LEADER_DAISY, ViridianCity_Gym_Text_DaisyIntro, ViridianCity_Gym_Text_DaisyDefeat, ViridianCity_Gym_EventScript_DefeatedDaisy, NO_MUSIC
 	settrainerflag TRAINER_LEADER_DAISY
-	msgbox ViridianCity_Gym_Text_DaisyPostBattle
-	closemessage
 	release
 	end
 
@@ -55,9 +53,12 @@ ViridianCity_Gym_Text_DaisyPostBattle::
 	.string "I'll tell guards to open Silver.$"
 
 ViridianCity_Gym_EventScript_DefeatedDaisy::
+	msgbox ViridianCity_Gym_Text_DaisyPostBattle
+	closemessage
 	setflag FLAG_BEAT_DAISY
 	setflag FLAG_HIDE_DAISY
 	clearflag FLAG_DAISY_READY
+	setvar VAR_MT_SILVER_ACCESS, 1
 	end
 
 ViridianCity_Gym_EventScript_Giovanni::
