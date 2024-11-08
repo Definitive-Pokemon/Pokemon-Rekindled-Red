@@ -25,10 +25,6 @@ enum MainMenuType
     MAIN_MENU_MYSTERYGIFT
 };
 
-#define MAIN_MENU_WINDOW_KEYSYSTEM 6
-#define MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED 7
-#define MAIN_MENU_WINDOW_KEYSYSTEM_NEWGAME_ONLY 8
-
 enum MainMenuWindow
 {
     MAIN_MENU_WINDOW_NEWGAME_ONLY = 0,
@@ -36,6 +32,9 @@ enum MainMenuWindow
     MAIN_MENU_WINDOW_NEWGAME,
     MAIN_MENU_WINDOW_MYSTERYGIFT,
     MAIN_MENU_WINDOW_ERROR,
+    MAIN_MENU_WINDOW_KEYSYSTEM,
+    MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED,
+    MAIN_MENU_WINDOW_KEYSYSTEM_NEWGAME_ONLY,
     MAIN_MENU_WINDOW_COUNT
 };
 
@@ -391,20 +390,15 @@ static void Task_PrintMainMenuText(u8 taskId)
     case MAIN_MENU_CONTINUE:
         FillWindowPixelBuffer(MAIN_MENU_WINDOW_CONTINUE, PIXEL_FILL(10));
         FillWindowPixelBuffer(MAIN_MENU_WINDOW_NEWGAME, PIXEL_FILL(10));
-        //FillWindowPixelBuffer(MAIN_MENU_WINDOW_KEYSYSTEM, PIXEL_FILL(10));
         AddTextPrinterParameterized3(MAIN_MENU_WINDOW_CONTINUE, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_Continue);
         AddTextPrinterParameterized3(MAIN_MENU_WINDOW_NEWGAME, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_NewGame);
-        //AddTextPrinterParameterized3(MAIN_MENU_WINDOW_KEYSYSTEM, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_KeySystemSettings);
         PrintContinueStats();
         MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_CONTINUE]);
         MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_NEWGAME]);
-        //MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_KEYSYSTEM]);
         PutWindowTilemap(MAIN_MENU_WINDOW_CONTINUE);
         PutWindowTilemap(MAIN_MENU_WINDOW_NEWGAME);
-        //PutWindowTilemap(MAIN_MENU_WINDOW_KEYSYSTEM);
         CopyWindowToVram(MAIN_MENU_WINDOW_CONTINUE, COPYWIN_GFX);
         CopyWindowToVram(MAIN_MENU_WINDOW_NEWGAME, COPYWIN_GFX);
-        //CopyWindowToVram(MAIN_MENU_WINDOW_KEYSYSTEM, COPYWIN_FULL);
         break;
     case MAIN_MENU_MYSTERYGIFT:
         FillWindowPixelBuffer(MAIN_MENU_WINDOW_CONTINUE, PIXEL_FILL(10));
@@ -474,9 +468,6 @@ static void Task_ExecuteMainMenuSelection(u8 taskId)
             case 0:
                 menuAction = MAIN_MENU_NEWGAME;
                 break;
-            case 1:
-                //menuAction = MAIN_MENU_KEYSYSTEM;
-                break;
             }
             break;
         case MAIN_MENU_CONTINUE:
@@ -488,9 +479,6 @@ static void Task_ExecuteMainMenuSelection(u8 taskId)
                 break;
             case 1:
                 menuAction = MAIN_MENU_NEWGAME;
-                break;
-            case 2:
-                //menuAction = MAIN_MENU_KEYSYSTEM;
                 break;
             }
             break;
@@ -517,9 +505,6 @@ static void Task_ExecuteMainMenuSelection(u8 taskId)
                     menuAction = MAIN_MENU_MYSTERYGIFT;
                 }
                 break;
-            case 3:
-                //menuAction = MAIN_MENU_KEYSYSTEM;
-                break;
             }
             break;
         }
@@ -545,12 +530,6 @@ static void Task_ExecuteMainMenuSelection(u8 taskId)
             FreeAllWindowBuffers();
             DestroyTask(taskId);
             break;
-        /*case MAIN_MENU_KEYSYSTEM:
-            SetMainCallback2(CB2_KeySystemMenuFromContinueScreen);
-            //HelpSystem_Disable();
-            FreeAllWindowBuffers();
-            DestroyTask(taskId);
-            break;*/
         }
     }
 }
