@@ -169,7 +169,7 @@ static const struct BgTemplate sBgTemplate[] = {
     }
 };
 
-static const u8 sMenuCursorYMax[] = { 1, 1, 2 };
+static const u8 sMenuCursorYMax[] = { 0, 1, 2 };
 
 static void CB2_MainMenu(void)
 {
@@ -385,7 +385,7 @@ static void Task_PrintMainMenuText(u8 taskId)
         AddTextPrinterParameterized3(MAIN_MENU_WINDOW_NEWGAME_ONLY, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_NewGame);
         MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_NEWGAME_ONLY]);
         PutWindowTilemap(MAIN_MENU_WINDOW_NEWGAME_ONLY);
-        CopyWindowToVram(MAIN_MENU_WINDOW_NEWGAME_ONLY, COPYWIN_GFX);
+        CopyWindowToVram(MAIN_MENU_WINDOW_NEWGAME_ONLY, COPYWIN_FULL);
         break;
     case MAIN_MENU_CONTINUE:
         FillWindowPixelBuffer(MAIN_MENU_WINDOW_CONTINUE, PIXEL_FILL(10));
@@ -398,31 +398,26 @@ static void Task_PrintMainMenuText(u8 taskId)
         PutWindowTilemap(MAIN_MENU_WINDOW_CONTINUE);
         PutWindowTilemap(MAIN_MENU_WINDOW_NEWGAME);
         CopyWindowToVram(MAIN_MENU_WINDOW_CONTINUE, COPYWIN_GFX);
-        CopyWindowToVram(MAIN_MENU_WINDOW_NEWGAME, COPYWIN_GFX);
+        CopyWindowToVram(MAIN_MENU_WINDOW_NEWGAME, COPYWIN_FULL);
         break;
     case MAIN_MENU_MYSTERYGIFT:
         FillWindowPixelBuffer(MAIN_MENU_WINDOW_CONTINUE, PIXEL_FILL(10));
         FillWindowPixelBuffer(MAIN_MENU_WINDOW_NEWGAME, PIXEL_FILL(10));
         FillWindowPixelBuffer(MAIN_MENU_WINDOW_MYSTERYGIFT, PIXEL_FILL(10));
-        //FillWindowPixelBuffer(MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED, PIXEL_FILL(10));
         AddTextPrinterParameterized3(MAIN_MENU_WINDOW_CONTINUE, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_Continue);
         AddTextPrinterParameterized3(MAIN_MENU_WINDOW_NEWGAME, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_NewGame);
         gTasks[taskId].tMGErrorType = 1;
         AddTextPrinterParameterized3(MAIN_MENU_WINDOW_MYSTERYGIFT, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_MysteryGift);
-        //AddTextPrinterParameterized3(MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED, FONT_NORMAL, 2, 2, sTextColor1, -1, gText_KeySystemSettings);
         PrintContinueStats();
         MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_CONTINUE]);
         MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_NEWGAME]);
         MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_MYSTERYGIFT]);
-        //MainMenu_DrawWindow(&sWindowTemplate[MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED]);
         PutWindowTilemap(MAIN_MENU_WINDOW_CONTINUE);
         PutWindowTilemap(MAIN_MENU_WINDOW_NEWGAME);
         PutWindowTilemap(MAIN_MENU_WINDOW_MYSTERYGIFT);
-        //PutWindowTilemap(MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED);
         CopyWindowToVram(MAIN_MENU_WINDOW_CONTINUE, COPYWIN_GFX);
         CopyWindowToVram(MAIN_MENU_WINDOW_NEWGAME, COPYWIN_GFX);
-        CopyWindowToVram(MAIN_MENU_WINDOW_MYSTERYGIFT, COPYWIN_GFX);
-        //CopyWindowToVram(MAIN_MENU_WINDOW_KEYSYSTEM_MYSTERYGIFT_ENABLED, COPYWIN_FULL);
+        CopyWindowToVram(MAIN_MENU_WINDOW_MYSTERYGIFT, COPYWIN_FULL);
         break;
     }
     gTasks[taskId].func = Task_WaitDma3AndFadeIn;
@@ -462,13 +457,7 @@ static void Task_ExecuteMainMenuSelection(u8 taskId)
         {
         default:
         case MAIN_MENU_NEWGAME:
-            switch (gTasks[taskId].tCursorPos)
-            {
-            default:
-            case 0:
-                menuAction = MAIN_MENU_NEWGAME;
-                break;
-            }
+            menuAction = MAIN_MENU_NEWGAME;
             break;
         case MAIN_MENU_CONTINUE:
             switch (gTasks[taskId].tCursorPos)
@@ -698,7 +687,7 @@ static void PrintPlayerName(void)
     for (i = 0; i < PLAYER_NAME_LENGTH; i++)
         *ptr++ = gSaveBlock2Ptr->playerName[i];
     *ptr = EOS;
-    AddTextPrinterParameterized3(MAIN_MENU_WINDOW_CONTINUE, FONT_NORMAL, 52, 18, sTextColor2, -1, name);
+    AddTextPrinterParameterized3(MAIN_MENU_WINDOW_CONTINUE, FONT_NORMAL, 62, 18, sTextColor2, -1, name);
 }
 
 static void PrintPlayTime(void)
@@ -710,7 +699,7 @@ static void PrintPlayTime(void)
     ptr = ConvertIntToDecimalStringN(strbuf, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
     *ptr++ = CHAR_COLON;
     ConvertIntToDecimalStringN(ptr, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);
-    AddTextPrinterParameterized3(MAIN_MENU_WINDOW_CONTINUE, FONT_NORMAL, 52, 34, sTextColor2, -1, strbuf);
+    AddTextPrinterParameterized3(MAIN_MENU_WINDOW_CONTINUE, FONT_NORMAL, 62, 34, sTextColor2, -1, strbuf);
 }
 
 static void PrintDexCount(void)
