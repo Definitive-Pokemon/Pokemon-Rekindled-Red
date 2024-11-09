@@ -3257,7 +3257,13 @@ static void GetPlayerPositionOnRegionMap(void)
         y = gSaveBlock1Ptr->dynamicWarp.y;
         break;
     case MAP_TYPE_INDOOR:
-        if ((sMapCursor->selectedMapsec = gMapHeader.regionMapSectionId) != MAPSEC_SPECIAL_AREA)
+        if (gMapHeader.regionMapSectionId == MAPSEC_ROUTE_22)
+        {
+            sMapCursor->x = 2;
+            sMapCursor->y = 8;
+            return;
+        }
+        else if ((sMapCursor->selectedMapsec = gMapHeader.regionMapSectionId) != MAPSEC_SPECIAL_AREA)
         {
             warp = &gSaveBlock1Ptr->escapeWarp;
             mapHeader = Overworld_GetMapHeaderByGroupAndId(warp->mapGroup, warp->mapNum);
