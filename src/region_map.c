@@ -3259,12 +3259,9 @@ static void GetPlayerPositionOnRegionMap(void)
     case MAP_TYPE_INDOOR:
         if (gMapHeader.regionMapSectionId == MAPSEC_ROUTE_22)
         {
-            warp = &gSaveBlock1Ptr->location;
-            sMapCursor->selectedMapsec = gMapHeader.regionMapSectionId;
-            width = gMapHeader.mapLayout->width;
-            height = gMapHeader.mapLayout->height;
-            x = gSaveBlock1Ptr->pos.x;
-            y = gSaveBlock1Ptr->pos.y;
+            sMapCursor->x = 2;
+            sMapCursor->y = 8;
+            return;
         }
         else if ((sMapCursor->selectedMapsec = gMapHeader.regionMapSectionId) != MAPSEC_SPECIAL_AREA)
         {
