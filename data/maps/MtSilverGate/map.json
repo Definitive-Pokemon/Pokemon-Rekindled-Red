@@ -94,15 +94,6 @@
     {
       "type": "trigger",
       "x": 20,
-      "y": 6,
-      "elevation": 0,
-      "var": "VAR_MT_SILVER_ACCESS",
-      "var_value": "0",
-      "script": "MtSilverGate_EventScript_NoPass"
-    },
-    {
-      "type": "trigger",
-      "x": 20,
       "y": 7,
       "elevation": 0,
       "var": "VAR_MT_SILVER_ACCESS",
@@ -113,15 +104,6 @@
       "type": "trigger",
       "x": 20,
       "y": 5,
-      "elevation": 0,
-      "var": "VAR_MT_SILVER_ACCESS",
-      "var_value": "1",
-      "script": "MtSilverGate_EventScript_Pass"
-    },
-    {
-      "type": "trigger",
-      "x": 20,
-      "y": 6,
       "elevation": 0,
       "var": "VAR_MT_SILVER_ACCESS",
       "var_value": "1",
