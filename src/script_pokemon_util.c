@@ -218,9 +218,12 @@ void CreateScriptedWildMon(u16 species, u8 level, u16 item)
 {
     u8 heldItem[2];
     u8 version = VERSION_EMERALD;
+    u8 useMoreShinyPersonality;
+    u32 personality;
 
     ZeroEnemyPartyMons();
-    CreateMon(&gEnemyParty[0], species, level, 32, 0, 0, OT_ID_PLAYER_ID, 0);
+    useMoreShinyPersonality = PersonalityGenerationMoreShiny(&personality);
+    CreateMon(&gEnemyParty[0], species, level, 32, useMoreShinyPersonality, personality, OT_ID_PLAYER_ID, 0);
     if (item)
     {
         heldItem[0] = item;

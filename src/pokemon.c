@@ -2229,12 +2229,33 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
 void CreateMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 nature)
 {
     u32 personality;
-
-    do
+    if (FALSE)
     {
-        personality = Random32();
+        u32 shinyValue = 0xFFFFFFFF;
+        s16 rerolls = -1;
+        u32 value = gSaveBlock2Ptr->playerTrainerId[0]
+              | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
+              | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
+              | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+        while (shinyValue > SHINY_ODDS && rerolls < SHINY_REROLLS)
+        {
+            do
+            {
+                personality = Random32();
+            }
+            while (nature != GetNatureFromPersonality(personality));
+            shinyValue = GET_SHINY_VALUE(value, personality);
+            rerolls++;
+        }
     }
-    while (nature != GetNatureFromPersonality(personality));
+    else
+    {
+        do
+        {
+            personality = Random32();
+        }
+        while (nature != GetNatureFromPersonality(personality));
+    }
 
     CreateMon(mon, species, level, fixedIV, TRUE, personality, OT_ID_PLAYER_ID, 0);
 }
@@ -2258,12 +2279,35 @@ void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level,
     }
     else
     {
-        do
+        if (FALSE)
         {
-            personality = Random32();
+            u32 shinyValue = 0xFFFFFFFF;
+            s16 rerolls = -1;
+            u32 value = gSaveBlock2Ptr->playerTrainerId[0]
+                | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
+                | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
+                | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+            while (shinyValue > SHINY_ODDS && rerolls < SHINY_REROLLS)
+            {
+                do
+                {
+                    personality = Random32();
+                }
+                while (nature != GetNatureFromPersonality(personality)
+                       || gender != GetGenderFromSpeciesAndPersonality(species, personality));
+                shinyValue = GET_SHINY_VALUE(value, personality);
+                rerolls++;
+            }
         }
-        while (nature != GetNatureFromPersonality(personality)
-            || gender != GetGenderFromSpeciesAndPersonality(species, personality));
+        else
+        {
+            do
+            {
+                personality = Random32();
+            }
+            while (nature != GetNatureFromPersonality(personality)
+                   || gender != GetGenderFromSpeciesAndPersonality(species, personality));
+        }
     }
 
     CreateMon(mon, species, level, fixedIV, TRUE, personality, OT_ID_PLAYER_ID, 0);
@@ -7598,6 +7642,31 @@ u8 IndexInFormTableOfOriginSpecies(u16 originSpecies)
 const u8 *GetFormSymbolBySpecies(u16 formSpecies)
 {
     return gRegionalSymbols[gFormMonOriginRegion[FORM_SPECIES_INDEX(formSpecies)]];
+}
+
+u8 PersonalityGenerationMoreShiny(u32 *personality)
+{
+    if (FALSE)
+    {
+        u32 shinyValue = 0xFFFFFFFF;
+        s16 rerolls = -1;
+        u32 value = gSaveBlock2Ptr->playerTrainerId[0]
+              | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
+              | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
+              | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+        while (shinyValue > SHINY_ODDS && rerolls < SHINY_REROLLS)
+        {
+            *personality = Random32();
+            shinyValue = GET_SHINY_VALUE(value, *personality);
+            rerolls++;
+        }
+        return TRUE;
+    }
+    else
+    {
+        *personality = Random32();
+    }
+    return FALSE;
 }
 
 static bool32 ShouldSkipFriendshipChange(void)

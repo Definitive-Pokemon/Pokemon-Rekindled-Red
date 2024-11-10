@@ -186,6 +186,7 @@
 
 // Shiny odds
 #define SHINY_ODDS 8 // Actual probability is SHINY_ODDS/65536
+#define SHINY_REROLLS 16
 
 #define MAX_LEVEL 100
 

@@ -439,5 +439,6 @@ u16 StripFormToSpecies(u16 species);
 u16 *FormsOfSpecies(u16 species);
 u8 IndexInFormTableOfOriginSpecies(u16 originSpecies);
 const u8 *GetFormSymbolBySpecies(u16 formSpecies);
+u8 PersonalityGenerationMoreShiny(u32 *personality);
 
 #endif // GUARD_POKEMON_H

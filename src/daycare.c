@@ -1258,8 +1258,11 @@ void CreateEgg(struct Pokemon *mon, u16 species, bool8 setHotSpringsLocation)
     u8 language;
     u8 metLocation;
     u8 isEgg;
+    u8 useMoreShinyPersonality;
+    u32 personality;
 
-    CreateMon(mon, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+    useMoreShinyPersonality = PersonalityGenerationMoreShiny(&personality);
+    CreateMon(mon, species, EGG_HATCH_LEVEL, USE_RANDOM_IVS, useMoreShinyPersonality, personality, OT_ID_PLAYER_ID, 0);
     metLevel = 0;
     ball = ITEM_POKE_BALL;
     language = LANGUAGE_JAPANESE;
