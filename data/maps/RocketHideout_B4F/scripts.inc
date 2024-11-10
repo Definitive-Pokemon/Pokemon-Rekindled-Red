@@ -35,6 +35,7 @@ RocketHideout_B4F_EventScript_CountGruntDefeated::
 RocketHideout_B4F_EventScript_Giovanni::
 	lock
 	faceplayer
+	setflag FLAG_HIDE_DAISY
 	famechecker FAMECHECKER_GIOVANNI, 0
 	message RocketHideout_B4F_Text_GiovanniIntro
 	waitmessage
