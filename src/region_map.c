@@ -3770,7 +3770,7 @@ static void CreateDungeonIcons(void)
                     continue;
                 if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
                     continue;
-                if (mapsec == MAPSEC_MT_MOON && !FlagGet(FLAG_FIERY_PASSAGE_VISITED))
+                if (mapsec == MAPSEC_MT_MOON && !FlagGet(FLAG_FIERY_PASSAGE_VISITED) && x == 14 && y == 1)
                     continue;
                 if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_BEAT_DAISY))
                     continue;
