@@ -20,7 +20,7 @@ Route16_NorthEntrance_2F_Text_LongPathOverWater::
 Route16_NorthEntrance_2F_Text_GiveAmuletCoinIfCaught40::
     .string "Hi! Remember me?\n"
     .string "I'm one of PROF. OAK's AIDES.\p"
-    .string "If your POKéDEX has complete data\n"
+    .string "If your KANTO DEX has complete data\n"
     .string "on 40 species, I'm supposed to\l"
     .string "give you a reward.\p"
     .string "PROF. OAK entrusted me with an\n"

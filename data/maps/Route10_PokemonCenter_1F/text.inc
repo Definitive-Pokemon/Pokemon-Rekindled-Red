@@ -17,7 +17,7 @@ Route10_PokemonCenter_1F_Text_GiveEverstoneIfCaught20Mons::
     .string "I've been looking for you!\p"
     .string "It's me, one of the ever-present\n"
     .string "AIDES to PROF. OAK.\p"
-    .string "If your POKéDEX has complete data\n"
+    .string "If your KANTO DEX has complete data\n"
     .string "on twenty species, I'm supposed to\l"
     .string "give you a reward from PROF. OAK.\p"
     .string "He entrusted me with this\n"
