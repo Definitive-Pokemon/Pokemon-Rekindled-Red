@@ -136,6 +136,7 @@ Route9_EventScript_BulbasaurTransferredToPC::
 	end
 
 Route9_EventScript_EndReceiveBulbasaur::
+	faceplayer
 	applymovement OBJ_EVENT_ID_PLAYER, Route9_Movement_PlayerBack\
 	waitmovement 0
 	textcolor 1

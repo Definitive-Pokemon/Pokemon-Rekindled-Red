@@ -61,6 +61,9 @@ ViridianCity_Gym_EventScript_DefeatedDaisy::
 	setvar VAR_MT_SILVER_ACCESS, 1
 	end
 
+ViridianCity_Gym_EventScript_DaisyAfterBattle::
+	.string "Fuck you asshole.$"
+
 ViridianCity_Gym_EventScript_Giovanni::
 	famechecker FAMECHECKER_GIOVANNI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	callnative IsChallengeModeToVarResult
