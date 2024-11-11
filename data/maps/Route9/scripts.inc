@@ -132,6 +132,8 @@ Route9_EventScript_ReceiveBulbasaurPC::
 	end
 
 Route9_EventScript_BulbasaurTransferredToPC::
+	applymovement LOCALID_LADY, Route9_Movement_LadyLook\
+	waitmovement 0
 	call EventScript_TransferredToPC
 	goto Route9_EventScript_EndReceiveBulbasaur
 	end
