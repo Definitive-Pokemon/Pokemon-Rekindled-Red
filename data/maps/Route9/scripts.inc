@@ -1,6 +1,7 @@
 .set LOCALID_NINETALES_MASTER, 13
 .set TRAINER, VAR_0x8009
 .equ LOCALID_BULBASAUR, 14
+.equ LOCALID_LADY, 15
 
 Route9_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route9_MapScript_SetMasterTrainerMovementTypes
@@ -136,7 +137,8 @@ Route9_EventScript_BulbasaurTransferredToPC::
 	end
 
 Route9_EventScript_EndReceiveBulbasaur::
-	faceplayer
+	applymovement LOCALID_LADY, Route9_Movement_LadyLook\
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Route9_Movement_PlayerBack\
 	waitmovement 0
 	textcolor 1
@@ -166,4 +168,8 @@ Route9_Movement_BulbaJump::
 	
 Route9_Movement_PlayerBack::
 	walk_in_place_left
+	step_end
+
+Route9_Movement_LadyLook::
+	face_right
 	step_end
