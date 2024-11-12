@@ -139,6 +139,8 @@ Route9_EventScript_BulbasaurTransferredToPC::
 Route9_EventScript_EndReceiveBulbasaur::
 	applymovement OBJ_EVENT_ID_PLAYER, Route9_Movement_PlayerBack\
 	waitmovement 0
+	applymovement LOCALID_LADY, Route9_Movement_LadyBack\
+	waitmovement 0
 	textcolor 1
 	msgbox Route9_Text_TreatHimRight
 	setflag FLAG_GOT_BULBASAUR_FROM_LADY
@@ -166,4 +168,8 @@ Route9_Movement_BulbaJump::
 	
 Route9_Movement_PlayerBack::
 	walk_in_place_up
+	step_end
+	
+Route9_Movement_LadyBack::
+	walk_in_place_down
 	step_end
