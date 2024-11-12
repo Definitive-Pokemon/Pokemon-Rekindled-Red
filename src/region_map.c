@@ -1365,7 +1365,7 @@ static void Task_RegionMap(u8 taskId)
             }
             break;
         case MAP_INPUT_A_BUTTON:
-            if (GetSelectedMapsecType(LAYER_DUNGEON) == MAPSECTYPE_VISITED && sRegionMap->permissions[MAPPERM_HAS_MAP_PREVIEW] == TRUE)
+            if (GetSelectedMapsecType(LAYER_DUNGEON) == MAPSECTYPE_VISITED && GetDungeonMapsecUnderCursor() != MAPSEC_NONE && sRegionMap->permissions[MAPPERM_HAS_MAP_PREVIEW] == TRUE)
                 InitDungeonMapPreview(0, taskId, SaveMainMapTask);
             break;
         case MAP_INPUT_SWITCH:
