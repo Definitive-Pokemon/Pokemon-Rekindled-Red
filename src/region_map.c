@@ -3053,6 +3053,8 @@ static u16 GetDungeonMapsecUnderCursor(void)
         mapsec = MAPSEC_NONE;
     if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_BEAT_DAISY))
         mapsec = MAPSEC_NONE;
+    if (mapsec == MAPSEC_MT_MOON && !FlagGet(FLAG_FIERY_PASSAGE_VISITED) && sMapCursor->x == 14 && sMapCursor->y == 1)
+        mapsec = MAPSEC_NONE;
     if (mapsec == MAPSEC_TOHJO_FALLS && !FlagGet(FLAG_BEAT_DAISY))
         mapsec = MAPSEC_NONE;
     return mapsec;
