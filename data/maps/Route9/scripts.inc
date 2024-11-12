@@ -132,15 +132,11 @@ Route9_EventScript_ReceiveBulbasaurPC::
 	end
 
 Route9_EventScript_BulbasaurTransferredToPC::
-	applymovement LOCALID_LADY, Route9_Movement_LadyLook\
-	waitmovement 0
 	call EventScript_TransferredToPC
 	goto Route9_EventScript_EndReceiveBulbasaur
 	end
 
 Route9_EventScript_EndReceiveBulbasaur::
-	applymovement LOCALID_LADY, Route9_Movement_LadyLook\
-	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Route9_Movement_PlayerBack\
 	waitmovement 0
 	textcolor 1
@@ -156,22 +152,18 @@ Route9_EventScript_AlreadyGotBulbasaur::
 	end
 
 Route9_Movement_Bulbasaur::
-	walk_right
-	walk_in_place_down
-	step_end
-
-Route9_Movement_PlayerHeal::
-	walk_in_place_up
-	step_end
-
-Route9_Movement_BulbaJump::
-	jump_in_place_down
-	step_end
-	
-Route9_Movement_PlayerBack::
+	walk_down
 	walk_in_place_left
 	step_end
 
-Route9_Movement_LadyLook::
-	face_right
+Route9_Movement_PlayerHeal::
+	walk_in_place_right
+	step_end
+
+Route9_Movement_BulbaJump::
+	jump_in_place_left
+	step_end
+	
+Route9_Movement_PlayerBack::
+	walk_in_place_up
 	step_end
