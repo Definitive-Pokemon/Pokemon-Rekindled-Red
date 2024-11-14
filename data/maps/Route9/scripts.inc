@@ -68,7 +68,7 @@ Route9_EventScript_ReceiveBulbasaurParty::
 	applymovement LOCALID_BULBASAUR, Route9_Movement_Bulbasaur
 	waitmovement 0
 	msgbox Route9_Text_Administer
-	applymovement OBJ_EVENT_ID_PLAYER, Route9_Movement_PlayerHeal\
+	applymovement OBJ_EVENT_ID_PLAYER, Route9_Movement_PlayerHeal
 	waitmovement 0
 	waitse
 	playse SE_USE_ITEM
@@ -102,7 +102,7 @@ Route9_EventScript_ReceiveBulbasaurPC::
 	applymovement LOCALID_BULBASAUR, Route9_Movement_Bulbasaur
 	waitmovement 0
 	msgbox Route9_Text_Administer
-	applymovement OBJ_EVENT_ID_PLAYER, Route9_Movement_PlayerHeal\
+	applymovement OBJ_EVENT_ID_PLAYER, Route9_Movement_PlayerHeal
 	waitmovement 0
 	waitse
 	playse SE_USE_ITEM
@@ -137,9 +137,9 @@ Route9_EventScript_BulbasaurTransferredToPC::
 	end
 
 Route9_EventScript_EndReceiveBulbasaur::
-	applymovement OBJ_EVENT_ID_PLAYER, Route9_Movement_PlayerBack\
+	applymovement OBJ_EVENT_ID_PLAYER, Route9_Movement_PlayerBack
 	waitmovement 0
-	applymovement LOCALID_LADY, Route9_Movement_LadyBack\
+	applymovement LOCALID_LADY, Route9_Movement_LadyBack
 	waitmovement 0
 	textcolor 1
 	msgbox Route9_Text_TreatHimRight
