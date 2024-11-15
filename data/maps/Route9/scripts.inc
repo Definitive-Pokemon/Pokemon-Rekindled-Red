@@ -5,7 +5,15 @@
 
 Route9_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route9_MapScript_SetMasterTrainerMovementTypes
+	map_script MAP_SCRIPT_ON_RESUME, Route9_MapScript_OnResume
 	.byte 0
+
+Route9_MapScript_OnResume::
+	compare VAR_TEMP_1, SPECIES_BULBASAUR
+	goto_if_ne Route9_ResumeContinue
+	faceplayer
+Route9_ResumeContinue::
+	end
 
 Route9_MapScript_SetMasterTrainerMovementTypes::
 	setvar TRAINER, MASTER_NINETALES
@@ -92,7 +100,7 @@ Route9_EventScript_ReceiveBulbasaurParty::
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Route9_EventScript_EndReceiveBulbasaur
-	Route9_EventScript_NicknameBulbasaurParty::
+Route9_EventScript_NicknameBulbasaurParty::
 	call EventScript_GetGiftMonPartySlot
 	call EventScript_ChangePokemonNickname
 	goto Route9_EventScript_EndReceiveBulbasaur
@@ -126,7 +134,7 @@ Route9_EventScript_ReceiveBulbasaurPC::
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq Route9_EventScript_BulbasaurTransferredToPC
-	Route9_EventScript_NicknameBulbasaurPC::
+Route9_EventScript_NicknameBulbasaurPC::
 	call EventScript_NameReceivedBoxMon
 	goto Route9_EventScript_BulbasaurTransferredToPC
 	end
