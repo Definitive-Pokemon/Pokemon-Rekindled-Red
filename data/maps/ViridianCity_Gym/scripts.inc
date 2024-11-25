@@ -17,8 +17,26 @@ ViridianCity_Gym_EventScript_ShowDaisy::
 ViridianCity_Gym_EventScript_Daisy::
 	lock
 	faceplayer
+	goto_if_set FLAG_BEAT_DAISY, ViridianCity_Gym_EventScript_AfterDaisy
 	trainerbattle_single TRAINER_LEADER_DAISY, ViridianCity_Gym_Text_DaisyIntro, ViridianCity_Gym_Text_DaisyDefeat, ViridianCity_Gym_EventScript_DefeatedDaisy, NO_MUSIC
 	settrainerflag TRAINER_LEADER_DAISY
+	release
+	end
+
+ViridianCity_Gym_EventScript_DefeatedDaisy::
+	msgbox ViridianCity_Gym_Text_DaisyPostBattle
+	closemessage
+	setflag FLAG_BEAT_DAISY
+	setflag FLAG_HIDE_DAISY
+	clearflag FLAG_DAISY_READY
+	setvar VAR_MT_SILVER_ACCESS, 1
+	end
+
+ViridianCity_Gym_EventScript_AfterDaisy::
+	lock
+	faceplayer
+	msgbox ViridianCity_Gym_Text_DaisyAfterBattle
+	closemessage
 	release
 	end
 
@@ -50,8 +68,8 @@ ViridianCity_Gym_Text_DaisyDefeat::
 
 ViridianCity_Gym_Text_DaisyPostBattle::
 	.string "You've grown so much, {PLAYER}!\p"
-	.string "I wish I could give you another\l"
-	.string "GYM BADGE, but you already have\l"
+	.string "I wish I could give you another\n"
+	.string "GYM BADGE, but you already have\p"
 	.string "the one from this GYM, right?\p"
 	.string "Don't worry, I can help you in\n"
 	.string "a different way.\p"
@@ -65,16 +83,7 @@ ViridianCity_Gym_Text_DaisyPostBattle::
 	.string "will absolutely excite you.\p"
 	.string "I'll pay them a visit!$"
 
-ViridianCity_Gym_EventScript_DefeatedDaisy::
-	msgbox ViridianCity_Gym_Text_DaisyPostBattle
-	closemessage
-	setflag FLAG_BEAT_DAISY
-	setflag FLAG_HIDE_DAISY
-	clearflag FLAG_DAISY_READY
-	setvar VAR_MT_SILVER_ACCESS, 1
-	end
-
-ViridianCity_Gym_EventScript_DaisyAfterBattle::
+ViridianCity_Gym_Text_DaisyAfterBattle::
 	.string "After informing the guards at ROUTE 22,\n"
 	.string "I'll be returning to PALLET TOWN.\p"
 	.string "You know that you are always welcome\n"
