@@ -48,7 +48,7 @@ Route12_Text_JustinDefeat::
     .string "Oww!$"
 
 Route12_Text_JustinPostBattle::
-    .string "I could have made my POKéMON\n"
+    .string "I could have made my NIDORINO\n"
     .string "evolve with a MOON STONE.\p"
     .string "I would have won then, I bet.$"
 

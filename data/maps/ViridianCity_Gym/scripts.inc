@@ -49,8 +49,21 @@ ViridianCity_Gym_Text_DaisyDefeat::
 	.string "So this is what they meant…$"
 
 ViridianCity_Gym_Text_DaisyPostBattle::
-	.string "You win, blah blah.\n"
-	.string "I'll tell guards to open Silver.$"
+	.string "You've grown so much, {PLAYER}!\p"
+	.string "I wish I could give you another\l"
+	.string "GYM BADGE, but you already have\l"
+	.string "the one from this GYM, right?\p"
+	.string "Don't worry, I can help you in\n"
+	.string "a different way.\p"
+	.string "Do you know about the gate west\n"
+	.string "of ROUTE 22?\p"
+	.string "Most TRAINERS are not allowed to\n"
+	.string "pass through that gate…\p"
+	.string "… but as a GYM LEADER, I can order\n"
+	.string "the guards to let you pass.\p"
+	.string "Beyond lie places and challenges that\n"
+	.string "will absolutely excite you.\p"
+	.string "I'll pay them a visit!$"
 
 ViridianCity_Gym_EventScript_DefeatedDaisy::
 	msgbox ViridianCity_Gym_Text_DaisyPostBattle
@@ -62,7 +75,10 @@ ViridianCity_Gym_EventScript_DefeatedDaisy::
 	end
 
 ViridianCity_Gym_EventScript_DaisyAfterBattle::
-	.string "Fuck you asshole.$"
+	.string "After informing the guards at ROUTE 22,\n"
+	.string "I'll be returning to PALLET TOWN.\p"
+	.string "You know that you are always welcome\n"
+	.string "to pay me a visit!$"
 
 ViridianCity_Gym_EventScript_Giovanni::
 	famechecker FAMECHECKER_GIOVANNI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005

@@ -28,7 +28,7 @@ Route8_Text_GlennDefeat::
     .string "It's not logical!$"
 
 Route8_Text_GlennPostBattle::
-    .string "Go with GRIMER first…and…\n"
+    .string "Go with GULPIN first…and…\n"
     .string "…and…then…$"
 
 Route8_Text_PaigeIntro::

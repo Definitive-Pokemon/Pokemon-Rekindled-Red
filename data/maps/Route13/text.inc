@@ -3,7 +3,7 @@ Route13_Text_SebastianIntro::
     .string "with you!$"
 
 Route13_Text_SebastianDefeat::
-    .string "My PIDGEY and PIDGEOTTO combo\n"
+    .string "My SWABLU and PIDGEOTTO combo\n"
     .string "lost?$"
 
 Route13_Text_SebastianPostBattle::
