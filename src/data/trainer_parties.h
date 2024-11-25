@@ -1400,7 +1400,7 @@ static const struct TrainerMonItemCustomMoves sParty_MarkYoung[] = {
         .lvl = 75,
         .species = SPECIES_STARMIE,
 		.heldItem = ITEM_SCOPE_LENS,
-        .moves = {MOVE_THUNDER, MOVE_BLIZZARD, MOVE_HYDRO PUMP, MOVE_RECOVER},
+        .moves = {MOVE_THUNDER, MOVE_BLIZZARD, MOVE_HYDRO_PUMP, MOVE_RECOVER},
     },
     {
         .iv = 255,
@@ -1445,7 +1445,7 @@ static const struct TrainerMonItemCustomMoves sParty_Sammy[] = {
         .lvl = 78,
         .species = SPECIES_SCEPTILE,
 		.heldItem = ITEM_LEFTOVERS,
-        .moves = {MOVE_LEAF_BLADE, MOVE_LEECH_SEED, MOVE_PROTECT, MOVE_THUNDERPUNCH},
+        .moves = {MOVE_LEAF_BLADE, MOVE_LEECH_SEED, MOVE_PROTECT, MOVE_THUNDER_PUNCH},
     },
     {
         .iv = 255,
