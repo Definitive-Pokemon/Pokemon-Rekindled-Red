@@ -3058,7 +3058,7 @@ static u16 GetDungeonMapsecUnderCursor(void)
         mapsec = MAPSEC_NONE;
     if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_BEAT_DAISY))
         mapsec = MAPSEC_NONE;
-    if (mapsec == MAPSEC_FIERY_PASSAGE && !FlagGet(FLAG_FIERY_PASSAGE_VISITED) && sMapCursor->x == 14 && sMapCursor->y == 1)
+    if (mapsec == MAPSEC_FIERY_PASSAGE && !FlagGet(FLAG_WORLD_MAP_FIERY_PASSAGE) && sMapCursor->x == 14 && sMapCursor->y == 1)
         mapsec = MAPSEC_NONE;
     if (mapsec == MAPSEC_TOHJO_FALLS && !FlagGet(FLAG_BEAT_DAISY))
         mapsec = MAPSEC_NONE;
@@ -3199,7 +3199,7 @@ static u8 GetDungeonMapsecType(u8 mapsec)
     case MAPSEC_TOHJO_FALLS:
         return FlagGet(FLAG_WORLD_MAP_TOHJO_FALLS) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_FIERY_PASSAGE:
-        return FlagGet(FLAG_FIERY_PASSAGE_VISITED) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
+        return FlagGet(FLAG_WORLD_MAP_FIERY_PASSAGE) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     default:
         return MAPSECTYPE_ROUTE;
     }
@@ -3788,7 +3788,7 @@ static void CreateDungeonIcons(void)
                     continue;
                 if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
                     continue;
-                if (mapsec == MAPSEC_FIERY_PASSAGE && !FlagGet(FLAG_FIERY_PASSAGE_VISITED) && x == 14 && y == 1)
+                if (mapsec == MAPSEC_FIERY_PASSAGE && !FlagGet(FLAG_WORLD_MAP_FIERY_PASSAGE) && x == 14 && y == 1)
                     continue;
                 if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_BEAT_DAISY))
                     continue;
