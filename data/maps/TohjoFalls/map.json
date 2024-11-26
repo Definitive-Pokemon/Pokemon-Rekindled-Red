@@ -59,7 +59,7 @@
       "x": 27,
       "y": 22,
       "elevation": 0,
-      "var": "VAR_CHANGEDFALLS",
+      "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "TohjoFalls_EventScript_RegularFalls"
     },
@@ -68,25 +68,25 @@
       "x": 26,
       "y": 22,
       "elevation": 0,
-      "var": "VAR_CHANGEDFALLS",
+      "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "TohjoFalls_EventScript_RegularFalls"
     },
     {
       "type": "trigger",
-      "x": 32,
-      "y": 17,
+      "x": 35,
+      "y": 21,
       "elevation": 0,
-      "var": "VAR_CHANGEDFALLS",
+      "var": "VAR_TEMP_0",
       "var_value": "1",
       "script": "TohjoFalls_EventScript_UnderFalls"
     },
     {
       "type": "trigger",
-      "x": 32,
-      "y": 18,
+      "x": 34,
+      "y": 21,
       "elevation": 0,
-      "var": "VAR_CHANGEDFALLS",
+      "var": "VAR_TEMP_0",
       "var_value": "1",
       "script": "TohjoFalls_EventScript_UnderFalls"
     },
@@ -95,7 +95,7 @@
       "x": 28,
       "y": 22,
       "elevation": 0,
-      "var": "VAR_CHANGEDFALLS",
+      "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "TohjoFalls_EventScript_RegularFalls"
     },
@@ -104,7 +104,7 @@
       "x": 29,
       "y": 22,
       "elevation": 0,
-      "var": "VAR_CHANGEDFALLS",
+      "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "TohjoFalls_EventScript_RegularFalls"
     },
@@ -113,7 +113,142 @@
       "x": 30,
       "y": 22,
       "elevation": 0,
-      "var": "VAR_CHANGEDFALLS",
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "TohjoFalls_EventScript_RegularFalls"
     }

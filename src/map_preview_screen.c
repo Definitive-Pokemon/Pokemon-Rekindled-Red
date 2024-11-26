@@ -86,6 +86,9 @@ static const u8 sMtSilverCaveMapPreviewTilemap[] = INCBIN_U8("graphics/map_previ
 static const u8 sFieryPassageMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/fiery_passage/tiles.gbapal");
 static const u8 sFieryPassageMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/fiery_passage/tiles.4bpp.lz");
 static const u8 sFieryPassageMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/fiery_passage/tilemap.bin.lz");
+static const u8 sTohjoFallsMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/tohjo_falls/tiles.gbapal");
+static const u8 sTohjoFallsMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/tohjo_falls/tiles.4bpp.lz");
+static const u8 sTohjoFallsMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/tohjo_falls/tilemap.bin.lz");
 
 static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
     [MPS_VIRIDIAN_FOREST] = {
@@ -327,6 +330,14 @@ static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
         .tilesptr = sFieryPassageMapPreviewTiles,
         .tilemapptr = sFieryPassageMapPreviewTilemap,
         .palptr = sFieryPassageMapPreviewPalette
+    },
+    [MPS_TOHJO_FALLS] = {
+        .mapsec = MAPSEC_TOHJO_FALLS,
+        .type = MPS_TYPE_CAVE,
+        .flagId = FLAG_WORLD_MAP_TOHJO_FALLS,
+        .tilesptr = sTohjoFallsMapPreviewTiles,
+        .tilemapptr = sTohjoFallsMapPreviewTilemap,
+        .palptr = sTohjoFallsMapPreviewPalette
     }
 };
 
