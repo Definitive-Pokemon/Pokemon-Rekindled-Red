@@ -2,6 +2,7 @@ TohjoFalls_MapScripts::
 	.byte 0
 
 TohjoFalls_EventScript_RegularFalls::
+    setvar VAR_TEMP_0, 1
 	setmetatile 14, 14, METATILE_General_Waterfall, 0
 	setmetatile 15, 14, METATILE_General_Waterfall, 0
 	setmetatile 16, 14, METATILE_General_Waterfall, 0
@@ -75,6 +76,7 @@ TohjoFalls_EventScript_RegularFalls::
 	end
 
 TohjoFalls_EventScript_UnderFalls::
+	setvar VAR_TEMP_0, 0
 	setmetatile 14, 14, METATILE_RockTunnel_UnderWaterfall, 0
 	setmetatile 15, 14, METATILE_RockTunnel_UnderWaterfall, 0
 	setmetatile 16, 14, METATILE_RockTunnel_UnderWaterfall, 0
