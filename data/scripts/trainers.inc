@@ -2805,3 +2805,162 @@ SevenIsland_TanobyRuins_EventScript_CliffordRematch::
 	trainerbattle_rematch TRAINER_GENTLEMAN_CLIFFORD, SevenIsland_TanobyRuins_Text_CliffordRematchIntro, SevenIsland_TanobyRuins_Text_CliffordDefeat
 	msgbox SevenIsland_TanobyRuins_Text_CliffordPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route26_EventScript_MarkBug::
+	trainerbattle_single TRAINER_MARKBUG, Route26_Text_MarkBugIntro, Route26_Text_MarkBugDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route26_EventScript_MarkBugRematch
+	msgbox Route26_Text_MarkBugPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route26_EventScript_MarkBugRematch::
+	trainerbattle_rematch TRAINER_MARKBUG, Route26_Text_MarkBugRematchIntro, Route26_Text_MarkBugDefeat
+	msgbox Route26_Text_MarkBugPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route26_Text_MarkBugIntro::
+	.string "Welcome to ROUTE 26.\n"
+	.string "This is where the fun begins.$"
+
+Route26_Text_MarkBugDefeat::
+	.string "Hm.$"
+
+Route26_Text_MarkBugPostBattle::
+	.string "Enjoy your trip.$"
+
+Route26_Text_MarkBugRematchIntro::
+	.string "You're back.\n"
+	.string "Let's go, then.$"
+
+Route26_EventScript_Andre::
+	trainerbattle_single TRAINER_ANDRE, Route26_Text_AndreIntro, Route26_Text_AndreDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route26_EventScript_AndreRematch
+	msgbox Route26_Text_AndrePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route26_EventScript_AndreRematch::
+	trainerbattle_rematch TRAINER_ANDRE, Route26_Text_AndreRematchIntro, Route26_Text_AndreDefeat
+	msgbox Route26_Text_AndrePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route26_Text_AndreIntro::
+	.string "I love music!\n"
+	.string "It makes the heart roar!$"
+
+Route26_Text_AndreDefeat::
+	.string "I know!$"
+
+Route26_Text_AndrePostBattle::
+	.string "The louder, the better!$"
+
+Route26_Text_AndreRematchIntro::
+	.string "Yeah man, let's rumble!$"
+
+Route26_EventScript_Jorn::
+	trainerbattle_single TRAINER_JORN, Route26_Text_JornIntro, Route26_Text_JornDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route26_EventScript_JornRematch
+	msgbox Route26_Text_JornPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route26_EventScript_JornRematch::
+	trainerbattle_rematch TRAINER_JORN, Route26_Text_JornRematchIntro, Route26_Text_JornDefeat
+	msgbox Route26_Text_JornPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route26_Text_JornIntro::
+	.string "I work for the VIOLET CITY\n"
+	.string "local government.\p"
+	.string "Unfortunately, I'm not very good\n"
+	.string "with computers.$"
+
+Route26_Text_JornDefeat::
+	.string "Time to get to work, I guess.$"
+
+Route26_Text_JornPostBattle::
+	.string "I must sound incompetent.$"
+
+Route26_Text_JornRematchIntro::
+	.string "A rematch?\n"
+	.string "Let's go!$"
+
+Route26_EventScript_Will::
+	trainerbattle_single TRAINER_WILL, Route26_Text_WillIntro, Route26_Text_WillDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route26_EventScript_WillRematch
+	msgbox Route26_Text_WillPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route26_EventScript_WillRematch::
+	trainerbattle_rematch TRAINER_WILL, Route26_Text_WillRematchIntro, Route26_Text_WillDefeat
+	msgbox Route26_Text_WillPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route26_Text_WillIntro::
+	.string "I'd love to offer you tea and\n"
+	.string "something to eat.\p"
+	.string "But right now, we're out in the open!$"
+
+Route26_Text_WillDefeat::
+	.string "Darn!$"
+
+Route26_Text_WillPostBattle::
+	.string "Not many TRAINERS from KANTO\n"
+	.string "get to visit ROUTE 26.$"
+
+Route26_Text_WillRematchIntro::
+	.string "I still haven't got the tea!$"
+
+Route26_EventScript_MarkYoung::
+	trainerbattle_single TRAINER_MARKYOUNG, Route26_Text_MarkYoungIntro, Route26_Text_MarkYoungDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route26_EventScript_MarkYoungRematch
+	msgbox Route26_Text_MarkYoungPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route26_EventScript_MarkYoungRematch::
+	trainerbattle_rematch TRAINER_MARKYOUNG, Route26_Text_MarkYoungRematchIntro, Route26_Text_MarkYoungDefeat
+	msgbox Route26_Text_MarkYoungPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route26_Text_MarkYoungIntro::
+	.string "I like shorts!\n"
+	.string "But that isn't relevant now.$"
+
+Route26_Text_MarkYoungDefeat::
+	.string "Woah!$"
+
+Route26_Text_MarkYoungPostBattle::
+	.string "I haven't seen you around before.$"
+
+Route26_Text_MarkYoungRematchIntro::
+	.string "Another battle?\n"
+	.string "Always ready!$"
+
+Route26_EventScript_Steve::
+	trainerbattle_single TRAINER_STEVE, Route26_Text_SteveIntro, Route26_Text_SteveDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route26_EventScript_SteveRematch
+	msgbox Route26_Text_StevePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route26_EventScript_SteveRematch::
+	trainerbattle_rematch TRAINER_STEVE, Route26_Text_SteveRematchIntro, Route26_Text_SteveDefeat
+	msgbox Route26_Text_StevePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route26_Text_SteveIntro::
+	.string "TRAINERS like you and me know\n"
+	.string "what it's all about.$"
+
+Route26_Text_SteveDefeat::
+	.string "I lost?$"
+
+Route26_Text_StevePostBattle::
+	.string "My friend ANDREW has invited me\n"
+	.string "to train on this route.\p"
+	.string "But I can't find him.$"
+
+Route26_Text_SteveRematchIntro::
+	.string "I still haven't found ANDREW!$"
