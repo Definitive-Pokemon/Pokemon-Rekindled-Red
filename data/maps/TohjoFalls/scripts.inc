@@ -73,6 +73,7 @@ TohjoFalls_EventScript_RegularFalls::
 	setmetatile 28, 20, METATILE_General_Waterfall, 0
 	setmetatile 29, 20, METATILE_General_Waterfall, 0
 	setmetatile 30, 20, METATILE_General_Waterfall, 0
+	special DrawWholeMapView
 	end
 
 TohjoFalls_EventScript_UnderFalls::
@@ -147,5 +148,6 @@ TohjoFalls_EventScript_UnderFalls::
 	setmetatile 28, 20, METATILE_RockTunnel_UnderWaterfall, 0
 	setmetatile 29, 20, METATILE_RockTunnel_UnderWaterfall, 0
 	setmetatile 30, 20, METATILE_RockTunnel_UnderWaterfall, 0
+	special DrawWholeMapView
 	end
 	
