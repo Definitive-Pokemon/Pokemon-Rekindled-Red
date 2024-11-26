@@ -1550,3 +1550,15 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/TohjoFalls/scripts.inc"
 	.include "data/maps/TohjoFalls/text.inc"
+
+	.include "data/maps/NewBarkTown/scripts.inc"
+	.include "data/maps/NewBarkTown/text.inc"
+
+	.include "data/maps/Route26WeekSisters/scripts.inc"
+	.include "data/maps/Route26WeekSisters/text.inc"
+
+	.include "data/maps/Route26OldHealer/scripts.inc"
+	.include "data/maps/Route26OldHealer/text.inc"
+
+	.include "data/maps/Route27HappinessHouse/scripts.inc"
+	.include "data/maps/Route27HappinessHouse/text.inc"

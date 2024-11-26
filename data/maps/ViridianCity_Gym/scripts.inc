@@ -84,9 +84,9 @@ ViridianCity_Gym_Text_DaisyPostBattle::
 	.string "I'll pay them a visit!$"
 
 ViridianCity_Gym_Text_DaisyAfterBattle::
-	.string "After informing the guards at ROUTE 22,\n"
+	.string "After informing the ROUTE 22 guards,\n"
 	.string "I'll be returning to PALLET TOWN.\p"
-	.string "You know that you are always welcome\n"
+	.string "Just know you are always welcome\n"
 	.string "to pay me a visit!$"
 
 ViridianCity_Gym_EventScript_Giovanni::

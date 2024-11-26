@@ -5512,7 +5512,7 @@
     {
       "id": "LAYOUT_ROUTE27",
       "name": "Route27_Layout",
-      "width": 92,
+      "width": 131,
       "height": 39,
       "border_width": 2,
       "border_height": 2,
@@ -5532,6 +5532,54 @@
       "secondary_tileset": "gTileset_RockTunnel",
       "border_filepath": "data/layouts/TohjoFalls/border.bin",
       "blockdata_filepath": "data/layouts/TohjoFalls/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_BARK_TOWN",
+      "name": "NewBarkTown_Layout",
+      "width": 28,
+      "height": 30,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_PalletTown",
+      "border_filepath": "data/layouts/NewBarkTown/border.bin",
+      "blockdata_filepath": "data/layouts/NewBarkTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE26WEEK_SISTERS",
+      "name": "Route26WeekSisters_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/Route26WeekSisters/border.bin",
+      "blockdata_filepath": "data/layouts/Route26WeekSisters/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE26OLD_HEALER",
+      "name": "Route26OldHealer_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/Route26OldHealer/border.bin",
+      "blockdata_filepath": "data/layouts/Route26OldHealer/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE27HAPPINESS_HOUSE",
+      "name": "Route27HappinessHouse_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/Route27HappinessHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Route27HappinessHouse/map.bin"
     }
   ]
 }

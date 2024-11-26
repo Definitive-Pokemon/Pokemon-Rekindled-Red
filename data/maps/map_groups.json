@@ -378,13 +378,17 @@
     "PrimordialAltar",
     "Route103",
     "Route26",
-    "Route27"
+    "Route27",
+    "NewBarkTown"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",
     "PalletTown_PlayersHouse_2F",
     "PalletTown_RivalsHouse",
-    "PalletTown_ProfessorOaksLab"
+    "PalletTown_ProfessorOaksLab",
+    "Route26WeekSisters",
+    "Route26OldHealer",
+    "Route27HappinessHouse"
   ],
   "gMapGroup_IndoorViridian": [
     "ViridianCity_House",
