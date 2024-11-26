@@ -768,6 +768,10 @@ static const struct DungeonMapInfo sDungeonInfo[] = {
         .name = sMapsecName_DOTTEDHOLE,
         .desc = gText_RegionMap_AreaDesc_DottedHole
     }, {
+        .id = MAPSEC_FIERY_PASSAGE,
+        .name = sMapsecName_FIERYPASSAGE,
+        .desc = gText_RegionMap_AreaDesc_MtMoon
+    }, {
         .id = MAPSEC_MT_SILVER_CAVE,
         .name = sMapsecName_MTSILVERCAVE,
         .desc = gText_RegionMap_AreaDesc_MtSilverCave
@@ -993,6 +997,7 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_RIXY_CHAMBER        ] = {MAP(PALLET_TOWN),                           0},
     [MAPSEC_VIAPOIS_CHAMBER     ] = {MAP(PALLET_TOWN),                           0},
     [MAPSEC_EMBER_SPA           ] = {MAP(PALLET_TOWN),                           0},
+    [MAPSEC_FIERY_PASSAGE       ] = {MAP(PALLET_TOWN),                           0},
 };
 
 static void RegionMap_DarkenPalette(u16 *pal, u16 size, u16 tint)
@@ -1119,7 +1124,7 @@ static void InitRegionMapType(void)
     switch (gMapHeader.regionMapSectionId)
     {
         case MAPSEC_FIERY_PASSAGE:
-	case MAPSEC_MT_SILVER_PATH:
+	    case MAPSEC_MT_SILVER_PATH:
         case MAPSEC_ROUTE_26:
         case MAPSEC_ROUTE_27:
         case MAPSEC_TOHJO_FALLS:
@@ -3053,7 +3058,7 @@ static u16 GetDungeonMapsecUnderCursor(void)
         mapsec = MAPSEC_NONE;
     if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_BEAT_DAISY))
         mapsec = MAPSEC_NONE;
-    if (mapsec == MAPSEC_MT_MOON && !FlagGet(FLAG_FIERY_PASSAGE_VISITED) && sMapCursor->x == 14 && sMapCursor->y == 1)
+    if (mapsec == MAPSEC_FIERY_PASSAGE && !FlagGet(FLAG_FIERY_PASSAGE_VISITED) && sMapCursor->x == 14 && sMapCursor->y == 1)
         mapsec = MAPSEC_NONE;
     if (mapsec == MAPSEC_TOHJO_FALLS && !FlagGet(FLAG_BEAT_DAISY))
         mapsec = MAPSEC_NONE;
@@ -3193,6 +3198,8 @@ static u8 GetDungeonMapsecType(u8 mapsec)
         return FlagGet(FLAG_WORLD_MAP_MT_SILVER_CAVE) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     case MAPSEC_TOHJO_FALLS:
         return FlagGet(FLAG_WORLD_MAP_TOHJO_FALLS) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
+    case MAPSEC_FIERY_PASSAGE:
+        return FlagGet(FLAG_FIERY_PASSAGE_VISITED) ? MAPSECTYPE_VISITED : MAPSECTYPE_NOT_VISITED;
     default:
         return MAPSECTYPE_ROUTE;
     }
@@ -3485,6 +3492,10 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         sMapCursor->x = 0;
         sMapCursor->y = 17;
         break;
+    case MAPSEC_FIERY_PASSAGE:
+        sMapCursor->x = 14;
+        sMapCursor->y = 1;
+        break;
     case MAPSEC_MT_SILVER_CAVE:
         sMapCursor->x = 0;
         sMapCursor->y = 8;
@@ -3772,7 +3783,7 @@ static void CreateDungeonIcons(void)
                     continue;
                 if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
                     continue;
-                if (mapsec == MAPSEC_MT_MOON && !FlagGet(FLAG_FIERY_PASSAGE_VISITED) && x == 14 && y == 1)
+                if (mapsec == MAPSEC_FIERY_PASSAGE && !FlagGet(FLAG_FIERY_PASSAGE_VISITED) && x == 14 && y == 1)
                     continue;
                 if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_BEAT_DAISY))
                     continue;
