@@ -1562,3 +1562,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/Route27HappinessHouse/scripts.inc"
 	.include "data/maps/Route27HappinessHouse/text.inc"
+
+	.include "data/maps/TohjoFallsSecret/scripts.inc"
+	.include "data/maps/TohjoFallsSecret/text.inc"

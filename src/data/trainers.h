@@ -304,7 +304,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_ANDREW] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_PSYCHIC_M,
         .trainerName = _("ANDREW"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
@@ -314,7 +314,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_STEVE] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_COLLECTOR,
         .trainerName = _("STEVE"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
@@ -324,7 +324,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_ALEX] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_RS_COOLTRAINER_M,
         .trainerName = _("ALEX"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
@@ -334,7 +334,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_MARKBUG] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_BUG_CATCHER,
         .trainerName = _("MARK"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
@@ -344,7 +344,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_JORN] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_RS_POKEMON_RANGER_M,
         .trainerName = _("JORN"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
@@ -354,7 +354,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_ANDRE] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_ROCKER,
         .trainerName = _("ANDRE"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
@@ -364,7 +364,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_WILL] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_JUGGLER,
         .trainerName = _("WILL"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
@@ -374,7 +374,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_MARKYOUNG] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_YOUNGSTER,
         .trainerName = _("MARK"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
@@ -384,7 +384,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_SAMMY] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_COOLTRAINER_M,
         .trainerName = _("SAMMY"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
@@ -394,7 +394,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_DAVID] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_TAMER,
         .trainerName = _("DAVID"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
@@ -404,7 +404,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_DUKE] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
         .trainerPic = TRAINER_PIC_COOLTRAINER_M,
         .trainerName = _("DUKE"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},

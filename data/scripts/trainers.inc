@@ -2964,3 +2964,114 @@ Route26_Text_StevePostBattle::
 
 Route26_Text_SteveRematchIntro::
 	.string "I still haven't found ANDREW!$"
+
+Route27_EventScript_David::
+	trainerbattle_single TRAINER_DAVID, Route27_Text_DavidIntro, Route27_Text_DavidDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route27_EventScript_DavidRematch
+	msgbox Route27_Text_DavidPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route27_EventScript_DavidRematch::
+	trainerbattle_rematch TRAINER_DAVID, Route27_Text_DavidRematchIntro, Route27_Text_DavidDefeat
+	msgbox Route27_Text_DavidPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route27_Text_DavidIntro::
+	.string "I came here from far away.$"
+
+Route27_Text_DavidDefeat::
+	.string "Wow, spicy!$"
+
+Route27_Text_DavidPostBattle::
+	.string "In my region, POKéMON battles\n"
+	.string "are a rarity.\p"
+	.string "But the region next to it\n"
+	.string "is filled with TRAINERS!$"
+
+Route27_Text_DavidRematchIntro::
+	.string "Go, LUDICOLO!$"
+
+Route27_EventScript_Sammy::
+	trainerbattle_single TRAINER_SAMMY, Route27_Text_SammyIntro, Route27_Text_SammyDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route27_EventScript_SammyRematch
+	msgbox Route27_Text_SammyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route27_EventScript_SammyRematch::
+	trainerbattle_rematch TRAINER_SAMMY, Route27_Text_SammyRematchIntro, Route27_Text_SammyDefeat
+	msgbox Route27_Text_SammyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route27_Text_SammyIntro::
+	.string "I live in a region far away.$"
+
+Route27_Text_SammyDefeat::
+	.string "Blimey!$"
+
+Route27_Text_SammyPostBattle::
+	.string "Me and my boyfriend DAVID hail\n"
+	.string "from neighbouring regions.\p"
+	.string "POKéMON battles are all the rage\n"
+	.string "in my region, but DAVID's place\p"
+	.string "doesn't want to be involved.$"
+
+Route27_Text_SammyRematchIntro::
+	.string "Teehee!\n"
+	.string "Let's battle!$"
+
+Route27_EventScript_Alex::
+	trainerbattle_single TRAINER_ALEX, Route27_Text_AlexIntro, Route27_Text_AlexDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route27_EventScript_AlexRematch
+	msgbox Route27_Text_AlexPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route27_EventScript_AlexRematch::
+	trainerbattle_rematch TRAINER_ALEX, Route27_Text_AlexRematchIntro, Route27_Text_AlexDefeat
+	msgbox Route27_Text_AlexPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route27_Text_AlexIntro::
+	.string "I'm looking for POKéMON.\n"
+	.string "But I got some time to battle.$"
+
+Route27_Text_AlexDefeat::
+	.string "Nice victory!$"
+
+Route27_Text_AlexPostBattle::
+	.string "I don't really know what kinds\n"
+	.string "of POKéMON I'm looking for.$"
+
+Route27_Text_AlexRematchIntro::
+	.string "Ah, another battle?$"
+
+Route27_EventScript_Andrew::
+	trainerbattle_single TRAINER_ANDREW, Route27_Text_AndrewIntro, Route27_Text_AndrewDefeat
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route27_EventScript_AndrewRematch
+	msgbox Route27_Text_AndrewPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route27_EventScript_AndrewRematch::
+	trainerbattle_rematch TRAINER_ANDREW, Route27_Text_AndrewRematchIntro, Route27_Text_AndrewDefeat
+	msgbox Route27_Text_AndrewPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route27_Text_AndrewIntro::
+	.string "This cave is named TOHJO FALLS.\n"
+	.string "It is the gateway to JOHTO.\p"
+	.string "Let's see if you're strong enough\n"
+	.string "to deserve access!$"
+
+Route27_Text_AndrewDefeat::
+	.string "Impressive skill!$"
+
+Route27_Text_AndrewPostBattle::
+	.string "You certainly are powerful.\n"
+	.string "The TOHJO FALLS await you!$"
+
+Route27_Text_AndrewRematchIntro::
+	.string "You want to battle me again?\n"
+	.string "Sure, why not?$"

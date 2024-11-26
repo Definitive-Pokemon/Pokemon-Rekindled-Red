@@ -5580,6 +5580,18 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/Route27HappinessHouse/border.bin",
       "blockdata_filepath": "data/layouts/Route27HappinessHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_TOHJO_FALLS_SECRET",
+      "name": "TohjoFallsSecret_Layout",
+      "width": 11,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RockTunnel",
+      "border_filepath": "data/layouts/TohjoFallsSecret/border.bin",
+      "blockdata_filepath": "data/layouts/TohjoFallsSecret/map.bin"
     }
   ]
 }

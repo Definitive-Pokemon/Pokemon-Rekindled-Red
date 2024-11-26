@@ -14,5 +14,5 @@ Route26_EventScript_RouteSign2::
 	end
 
 Route26_Text_RouteSign2::
-    .string "North to ROUTE 22\n"
-    .string "South to ROUTE 27$"
+    .string "{UP_ARROW_2} North to ROUTE 22\n"
+    .string "{DOWN_ARROW_2} South to ROUTE 27$"

@@ -738,3 +738,35 @@ ArtisanCave_1F_EventScript_ItemCarbos::
 OneIsland_KindleRoad_EmberSpa_EventScript_ItemMoonStone::
 	finditem ITEM_MOON_STONE
 	end
+
+Route26_EventScript_ItemMaxElixir::
+	finditem ITEM_MAX_ELIXIR
+	end
+
+Route26_EventScript_ItemPPMax::
+	finditem ITEM_PP_MAX
+	end
+
+Route26_EventScript_ItemWhiteHerb::
+	finditem ITEM_WHITE_HERB
+	end
+
+Route27_EventScript_ItemFullRestore::
+	finditem ITEM_FULL_RESTORE
+	end
+
+Route27_EventScript_ItemHPUp::
+	finditem ITEM_HP_UP
+	end
+
+Route27_EventScript_ItemLuckyEgg::
+	finditem ITEM_LUCKY_EGG
+	end
+
+TohjoFalls_EventScript_ItemNugget::
+	finditem ITEM_NUGGET
+	end
+
+TohjoFalls_EventScript_ItemAuroraTicket::
+	finditem ITEM_AURORA_TICKET
+	end
