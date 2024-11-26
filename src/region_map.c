@@ -3058,8 +3058,6 @@ static u16 GetDungeonMapsecUnderCursor(void)
         mapsec = MAPSEC_NONE;
     if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_BEAT_DAISY))
         mapsec = MAPSEC_NONE;
-    if (mapsec == MAPSEC_FIERY_PASSAGE && !FlagGet(FLAG_WORLD_MAP_FIERY_PASSAGE) && sMapCursor->x == 14 && sMapCursor->y == 1)
-        mapsec = MAPSEC_NONE;
     if (mapsec == MAPSEC_TOHJO_FALLS && !FlagGet(FLAG_BEAT_DAISY))
         mapsec = MAPSEC_NONE;
     return mapsec;
@@ -3251,8 +3249,8 @@ static void GetPlayerPositionOnRegionMap(void)
     case MAP_TYPE_UNDERGROUND:
     case MAP_TYPE_UNKNOWN:
         mapHeader = Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->escapeWarp.mapGroup, gSaveBlock1Ptr->escapeWarp.mapNum);
-        if (Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum)->regionMapSectionId == MAPSEC_FIERY_PASSAGE
-        && mapHeader->regionMapSectionId == MAPSEC_MT_MOON)
+        if (Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum)->regionMapSectionId == MAPSEC_MT_MOON
+        && mapHeader->regionMapSectionId == MAPSEC_FIERY_PASSAGE)
         {
             mapHeader = Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
         }
@@ -3788,8 +3786,6 @@ static void CreateDungeonIcons(void)
                 if (mapsec == MAPSEC_NONE)
                     continue;
                 if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
-                    continue;
-                if (mapsec == MAPSEC_FIERY_PASSAGE && !FlagGet(FLAG_WORLD_MAP_FIERY_PASSAGE) && x == 14 && y == 1)
                     continue;
                 if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_BEAT_DAISY))
                     continue;

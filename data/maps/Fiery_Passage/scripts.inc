@@ -1,8 +1,13 @@
 Fiery_Passage_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Fiery_Passage_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Fiery_Passage_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, Fiery_Passage_OnTransition
 	.byte 0
-	
+
+Fiery_Passage_OnTransition::
+	setworldmapflag FLAG_WORLD_MAP_FIERY_PASSAGE
+	end
+
 Fiery_Passage_OnResume::
 	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, Fiery_Passage_EventScript_TryRemoveCyndaquil
 	end
