@@ -116,6 +116,33 @@
       "var": "VAR_TEMP_0",
       "var_value": "1",
       "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_UnderFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_UnderFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_UnderFalls"
     }
   ],
   "bg_events": [
