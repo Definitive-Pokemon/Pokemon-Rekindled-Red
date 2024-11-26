@@ -3,7 +3,7 @@
   "name": "Route27HappinessHouse",
   "layout": "LAYOUT_ROUTE27HAPPINESS_HOUSE",
   "music": "MUS_MYSTERY_GIFT",
-  "region_map_section": "MAPSEC_Route27",
+  "region_map_section": "MAPSEC_ROUTE_27",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
