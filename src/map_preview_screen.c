@@ -83,6 +83,9 @@ static const u8 sAlteringCaveMapPreviewTilemap[] = INCBIN_U8("graphics/map_previ
 static const u8 sMtSilverCaveMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/mt_silver_cave/tiles.gbapal");
 static const u8 sMtSilverCaveMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/mt_silver_cave/tiles.4bpp.lz");
 static const u8 sMtSilverCaveMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/mt_silver_cave/tilemap.bin.lz");
+static const u8 sFieryPassageMapPreviewPalette[] = INCBIN_U8("graphics/map_preview/fiery_passage/tiles.gbapal");
+static const u8 sFieryPassageMapPreviewTiles[] = INCBIN_U8("graphics/map_preview/fiery_passage/tiles.4bpp.lz");
+static const u8 sFieryPassageMapPreviewTilemap[] = INCBIN_U8("graphics/map_preview/fiery_passage/tilemap.bin.lz");
 
 static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
     [MPS_VIRIDIAN_FOREST] = {
@@ -308,6 +311,22 @@ static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
         .tilesptr = sMoneanChamberMapPreviewTiles,
         .tilemapptr = sMoneanChamberMapPreviewTilemap,
         .palptr = sMoneanChamberMapPreviewPalette
+    },
+    [MPS_MT_SILVER_CAVE] = {
+        .mapsec = MAPSEC_MT_SILVER_CAVE,
+        .type = MPS_TYPE_CAVE,
+        .flagId = FLAG_WORLD_MAP_MT_SILVER_CAVE,
+        .tilesptr = sMtSilverCaveMapPreviewTiles,
+        .tilemapptr = sMtSilverCaveMapPreviewTilemap,
+        .palptr = sMtSilverCaveMapPreviewPalette
+    },
+    [MPS_FIERY_PASSAGE] = {
+        .mapsec = MAPSEC_FIERY_PASSAGE,
+        .type = MPS_TYPE_CAVE,
+        .flagId = FLAG_WORLD_MAP_FIERY_PASSAGE,
+        .tilesptr = sFieryPassageMapPreviewTiles,
+        .tilemapptr = sFieryPassageMapPreviewTilemap,
+        .palptr = sFieryPassageMapPreviewPalette
     }
 };
 
