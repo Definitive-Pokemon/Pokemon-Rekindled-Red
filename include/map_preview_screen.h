@@ -33,6 +33,7 @@ enum MapPreviewScreenId
     MPS_VIAPOIS_CHAMBER,
 	MPS_MT_SILVER_CAVE,
     MPS_FIERY_PASSAGE,
+    MPS_TOHJO_FALLS,
     MPS_COUNT
 };
 
