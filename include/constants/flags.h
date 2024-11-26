@@ -1270,7 +1270,7 @@
 #define FLAG_BEAT_DAISY          0x4C7
 #define FLAG_DAISY_READY         0x4C8
 #define FLAG_HIDE_DAISY          0x4C9
-#define FLAG_FIERY_PASSAGE_VISITED    0x4CA
+#define FLAG_0x4CA               0x4CA
 #define FLAG_0x4CB               0x4CB
 #define FLAG_0x4CC               0x4CC
 #define FLAG_0x4CD               0x4CD
@@ -1477,7 +1477,7 @@
 #define FLAG_WORLD_MAP_PRIMORDIAL_CAVE                              (SYS_FLAGS + 0xC7)
 #define FLAG_WORLD_MAP_MT_SILVER_CAVE                               (SYS_FLAGS + 0xC8)
 #define FLAG_WORLD_MAP_TOHJO_FALLS                                  (SYS_FLAGS + 0xC9)
-#define FLAG_0x8CA                                                  (SYS_FLAGS + 0xCA)
+#define FLAG_WORLD_MAP_FIERY_PASSAGE                                (SYS_FLAGS + 0xCA)
 #define FLAG_0x8CB                                                  (SYS_FLAGS + 0xCB)
 #define FLAG_0x8CC                                                  (SYS_FLAGS + 0xCC)
 #define FLAG_0x8CD                                                  (SYS_FLAGS + 0xCD)
