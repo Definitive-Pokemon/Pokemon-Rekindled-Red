@@ -31,7 +31,7 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
+      "trainer_sight_or_berry_tree_id": "5",
       "script": "Route26_EventScript_MarkBug",
       "flag": "0"
     },
@@ -45,7 +45,7 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
+      "trainer_sight_or_berry_tree_id": "6",
       "script": "Route26_EventScript_Jorn",
       "flag": "0"
     },
@@ -59,21 +59,21 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
+      "trainer_sight_or_berry_tree_id": "5",
       "script": "Route26_EventScript_Andre",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_JUGGLER",
-      "x": 20,
+      "x": 22,
       "y": 62,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "9",
+      "trainer_sight_or_berry_tree_id": "7",
       "script": "Route26_EventScript_Will",
       "flag": "0"
     },
@@ -87,7 +87,7 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
+      "trainer_sight_or_berry_tree_id": "5",
       "script": "Route26_EventScript_MarkYoung",
       "flag": "0"
     },
@@ -101,7 +101,7 @@
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "6",
+      "trainer_sight_or_berry_tree_id": "7",
       "script": "Route26_EventScript_Steve",
       "flag": "0"
     }

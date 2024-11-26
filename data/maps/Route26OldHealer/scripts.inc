@@ -12,14 +12,14 @@ Route26_EventScript_HealingWoman::
 	end
 	
 Route26_Text_HealingWoman::
-	.string "Did you think you were lucky to find/n"
-	.string "a place to rest right where you/p"
-	.string "needed it?/p"
-	.string "Don't be reserved!/n"
-	.string "I look forward to people's smiles./p"
+	.string "Did you think you were lucky to find\n"
+	.string "a place to rest right where you\p"
+	.string "needed it?\p"
+	.string "Don't be reserved!\n"
+	.string "I look forward to people's smiles.\p"
 	.string "Let your POKéMON rest here!$"
 
 Route26_Text_AfterHeal::
-	.string "There!/n"
-	.string "Your POKéMON are looking good!/p"
+	.string "There!\n"
+	.string "Your POKéMON are looking good!\p"
 	.string "Keep at it!$"
