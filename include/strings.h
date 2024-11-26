@@ -1096,6 +1096,7 @@ extern const u8 gText_RegionMap_AreaDesc_PatternBush[];
 extern const u8 gText_RegionMap_AreaDesc_DottedHole[];
 extern const u8 gText_RegionMap_AreaDesc_FieryPassage[];
 extern const u8 gText_RegionMap_AreaDesc_MtSilverCave[];
+extern const u8 gText_RegionMap_AreaDesc_TohjoFalls[];
 
 // field_screen_effect
 extern const u8 gText_PlayerScurriedToCenter[];

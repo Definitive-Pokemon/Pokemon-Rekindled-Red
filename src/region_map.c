@@ -775,6 +775,10 @@ static const struct DungeonMapInfo sDungeonInfo[] = {
         .id = MAPSEC_MT_SILVER_CAVE,
         .name = sMapsecName_MTSILVERCAVE,
         .desc = gText_RegionMap_AreaDesc_MtSilverCave
+    }, {
+        .id = MAPSEC_TOHJO_FALLS,
+        .name = sMapsecName_TOHJOFALLS,
+        .desc = gText_RegionMap_AreaDesc_TohjoFalls
     }
 };
 
