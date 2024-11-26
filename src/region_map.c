@@ -770,7 +770,7 @@ static const struct DungeonMapInfo sDungeonInfo[] = {
     }, {
         .id = MAPSEC_FIERY_PASSAGE,
         .name = sMapsecName_FIERYPASSAGE,
-        .desc = gText_RegionMap_AreaDesc_MtMoon
+        .desc = gText_RegionMap_AreaDesc_FieryPassage
     }, {
         .id = MAPSEC_MT_SILVER_CAVE,
         .name = sMapsecName_MTSILVERCAVE,
