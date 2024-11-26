@@ -1,9 +1,13 @@
 TohjoFalls_MapScripts::
-	@map_script MAP_SCRIPT_ON_LOAD, TohjoFalls_EventScript_UnderFalls
-	.byte 0	
+	map_script MAP_SCRIPT_ON_TRANSITION, TohjoFalls_OnTransition
+	.byte 0
+
+TohjoFalls_OnTransition::
+	setworldmapflag FLAG_WORLD_MAP_TOHJO_FALLS
+	end
 
 TohjoFalls_EventScript_RegularFalls::
-    setvar VAR_TEMP_0, 1
+    setvar VAR_CHANGEDFALLS, 1
 	setmetatile 14, 14, METATILE_General_Waterfall, 0
 	setmetatile 15, 14, METATILE_General_Waterfall, 0
 	setmetatile 16, 14, METATILE_General_Waterfall, 0
@@ -78,7 +82,7 @@ TohjoFalls_EventScript_RegularFalls::
 	end
 
 TohjoFalls_EventScript_UnderFalls::
-	setvar VAR_TEMP_0, 0
+	setvar VAR_CHANGEDFALLS, 0
 	setmetatile 14, 14, METATILE_RockTunnel_UnderWaterfall, 0
 	setmetatile 15, 14, METATILE_RockTunnel_UnderWaterfall, 0
 	setmetatile 16, 14, METATILE_RockTunnel_UnderWaterfall, 0

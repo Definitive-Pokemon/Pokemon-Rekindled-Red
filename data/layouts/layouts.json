@@ -5512,7 +5512,7 @@
     {
       "id": "LAYOUT_ROUTE27",
       "name": "Route27_Layout",
-      "width": 131,
+      "width": 126,
       "height": 39,
       "border_width": 2,
       "border_height": 2,
@@ -5536,7 +5536,7 @@
     {
       "id": "LAYOUT_NEW_BARK_TOWN",
       "name": "NewBarkTown_Layout",
-      "width": 28,
+      "width": 33,
       "height": 30,
       "border_width": 2,
       "border_height": 2,

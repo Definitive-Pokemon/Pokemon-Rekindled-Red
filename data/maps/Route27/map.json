@@ -29,7 +29,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M",
-      "x": 53,
+      "x": 48,
       "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -43,7 +43,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
-      "x": 77,
+      "x": 72,
       "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -57,7 +57,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
-      "x": 95,
+      "x": 90,
       "y": 16,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_RIGHT_DOWN_UP_LEFT",
@@ -71,7 +71,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TAMER",
-      "x": 116,
+      "x": 111,
       "y": 20,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
@@ -85,7 +85,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 17,
+      "x": 12,
       "y": 29,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -99,7 +99,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 82,
+      "x": 77,
       "y": 29,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -113,7 +113,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 118,
+      "x": 113,
       "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -127,7 +127,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 35,
+      "x": 30,
       "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -141,21 +141,21 @@
   ],
   "warp_events": [
     {
-      "x": 54,
+      "x": 49,
       "y": 14,
       "elevation": 0,
       "dest_map": "MAP_TOHJO_FALLS",
       "dest_warp_id": "0"
     },
     {
-      "x": 50,
+      "x": 45,
       "y": 19,
       "elevation": 0,
       "dest_map": "MAP_ROUTE27HAPPINESS_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 39,
+      "x": 34,
       "y": 16,
       "elevation": 0,
       "dest_map": "MAP_TOHJO_FALLS",
@@ -168,7 +168,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 53,
+      "x": 48,
       "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -176,7 +176,7 @@
     },
     {
       "type": "sign",
-      "x": 38,
+      "x": 33,
       "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

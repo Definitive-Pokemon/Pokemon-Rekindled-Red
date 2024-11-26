@@ -248,7 +248,7 @@
 #define VAR_JIRACHI                0x40C3
 #define VAR_REGICHECK              0x40C4
 #define VAR_MT_SILVER_ACCESS       0x40C5
-#define VAR_0x40C6                 0x40C6
+#define VAR_CHANGEDFALLS           0x40C6
 #define VAR_0x40C7                 0x40C7
 #define VAR_0x40C8                 0x40C8
 #define VAR_0x40C9                 0x40C9
