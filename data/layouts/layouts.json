@@ -5592,6 +5592,18 @@
       "secondary_tileset": "gTileset_RockTunnel",
       "border_filepath": "data/layouts/TohjoFallsSecret/border.bin",
       "blockdata_filepath": "data/layouts/TohjoFallsSecret/map.bin"
+    },
+    {
+      "id": "LAYOUT_ELMS_LAB",
+      "name": "ElmsLab_Layout",
+      "width": 12,
+      "height": 13,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/ElmsLab/border.bin",
+      "blockdata_filepath": "data/layouts/ElmsLab/map.bin"
     }
   ]
 }

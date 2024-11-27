@@ -348,6 +348,7 @@
 #define MAP_ROUTE26WEEK_SISTERS            (4 | (4 << 8))
 #define MAP_ROUTE26OLD_HEALER              (5 | (4 << 8))
 #define MAP_ROUTE27HAPPINESS_HOUSE         (6 | (4 << 8))
+#define MAP_ELMS_LAB                       (7 | (4 << 8))
 
 // gMapGroup_IndoorViridian
 #define MAP_VIRIDIAN_CITY_HOUSE             (0 | (5 << 8))

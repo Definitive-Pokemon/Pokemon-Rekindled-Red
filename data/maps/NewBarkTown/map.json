@@ -23,13 +23,27 @@
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ABRA",
-      "x": 16,
-      "y": 15,
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
+      "x": 10,
+      "y": 14,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+      "x": 11,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 3,
+      "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
@@ -41,7 +55,7 @@
       "x": 11,
       "y": 10,
       "elevation": 0,
-      "dest_map": "MAP_NEW_BARK_TOWN",
+      "dest_map": "MAP_ELMS_LAB",
       "dest_warp_id": "0"
     },
     {
@@ -73,10 +87,10 @@
     {
       "type": "sign",
       "x": 12,
-      "y": 14,
+      "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "NewBarkTown_EventScript_NewBark"
     },
     {
       "type": "sign",
@@ -84,7 +98,7 @@
       "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "NewBarkTown_EventScript_EthansHouse"
     },
     {
       "type": "sign",
@@ -92,7 +106,7 @@
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "NewBarkTown_EventScript_ElmsLab"
     },
     {
       "type": "sign",
@@ -100,7 +114,7 @@
       "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "NewBarkTown_EventScript_LyrasHouse"
     }
   ],
   "level_scaling": "0"
