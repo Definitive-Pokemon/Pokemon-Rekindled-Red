@@ -16,12 +16,12 @@
   "connections": [
     {
       "map": "MAP_PROTOTYPE_SEVII_ISLE_6",
-      "offset": 0,
+      "offset": 2,
       "direction": "up"
     },
     {
       "map": "MAP_PROTOTYPE_SEVII_ISLE_6",
-      "offset": 0,
+      "offset": 2,
       "direction": "up"
     }
   ],
@@ -30,7 +30,7 @@
   ],
   "warp_events": [
     {
-      "x": 17,
+      "x": 19,
       "y": 10,
       "elevation": 0,
       "dest_map": "MAP_UMBILICAL_TOWER",
