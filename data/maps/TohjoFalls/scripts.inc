@@ -1,6 +1,12 @@
 TohjoFalls_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, TohjoFalls_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, TohjoFalls_OnTransition
 	.byte 0
+
+TohjoFalls_OnLoad::
+	compare VAR_CHANGEFALLS, 1
+	goto_if_eq TohjoFalls_EventScript_RegularFalls
+	end
 
 TohjoFalls_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_TOHJO_FALLS
