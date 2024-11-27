@@ -928,6 +928,10 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_ROUTE_23            ] = {MAP(ROUTE23),                               0},
     [MAPSEC_ROUTE_24            ] = {MAP(ROUTE24),                               0},
     [MAPSEC_ROUTE_25            ] = {MAP(ROUTE25),                               0},
+    [MAPSEC_ROUTE_26            ] = {MAP(ROUTE26),                               0},
+    [MAPSEC_ROUTE_27            ] = {MAP(ROUTE27),                               0},
+    [MAPSEC_ROUTE_28            ] = {MAP(ROUTE28),                               0},
+    [MAPSEC_MT_SILVER           ] = {MAP(MT_SILVER),                             SPAWN_MT_SILVER},
     [MAPSEC_VIRIDIAN_FOREST     ] = {MAP(PALLET_TOWN),                           0},
     [MAPSEC_MT_MOON             ] = {MAP(PALLET_TOWN),                           0},
     [MAPSEC_S_S_ANNE            ] = {MAP(PALLET_TOWN),                           0},
@@ -952,6 +956,7 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_FIVE_ISLAND         ] = {MAP(FIVE_ISLAND),                           SPAWN_FIVE_ISLAND},
     [MAPSEC_SEVEN_ISLAND        ] = {MAP(SEVEN_ISLAND),                          SPAWN_SEVEN_ISLAND},
     [MAPSEC_SIX_ISLAND          ] = {MAP(SIX_ISLAND),                            SPAWN_SIX_ISLAND},
+    [MAPSEC_NEW_BARK_TOWN       ] = {MAP(NEW_BARK_TOWN),                         SPAWN_NEW_BARK_TOWN},
     [MAPSEC_KINDLE_ROAD         ] = {MAP(ONE_ISLAND_KINDLE_ROAD),                0},
     [MAPSEC_TREASURE_BEACH      ] = {MAP(ONE_ISLAND_TREASURE_BEACH),             0},
     [MAPSEC_CAPE_BRINK          ] = {MAP(TWO_ISLAND_CAPE_BRINK),                 0},
@@ -1002,6 +1007,8 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_VIAPOIS_CHAMBER     ] = {MAP(PALLET_TOWN),                           0},
     [MAPSEC_EMBER_SPA           ] = {MAP(PALLET_TOWN),                           0},
     [MAPSEC_FIERY_PASSAGE       ] = {MAP(PALLET_TOWN),                           0},
+    [MAPSEC_MT_SILVER_CAVE      ] = {MAP(PALLET_TOWN),                           0},
+    [MAPSEC_TOHJO_FALLS         ] = {MAP(PALLET_TOWN),                           0},
 };
 
 static void RegionMap_DarkenPalette(u16 *pal, u16 size, u16 tint)
@@ -3058,7 +3065,7 @@ static u16 GetDungeonMapsecUnderCursor(void)
         return MAPSEC_NONE;
 
     mapsec = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_DUNGEON, sMapCursor->y, sMapCursor->x);
-    if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
+    if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_BEAT_DAISY))
         mapsec = MAPSEC_NONE;
     if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_BEAT_DAISY))
         mapsec = MAPSEC_NONE;
@@ -3536,6 +3543,10 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         sMapCursor->x = 18;
         sMapCursor->y = 14;
         break;
+    case MAPSEC_NEW_BARK_TOWN:
+        sMapCursor->x = -2;
+        sMapCursor->y = 12;
+        break;
     default:
         GetPlayerPositionOnRegionMap();
         break;
@@ -3789,7 +3800,7 @@ static void CreateDungeonIcons(void)
                 mapsec = GetSelectedMapSection(i, LAYER_DUNGEON, y, x);
                 if (mapsec == MAPSEC_NONE)
                     continue;
-                if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_HIDE_CERULEAN_CAVE_GUARD))
+                if (mapsec == MAPSEC_CERULEAN_CAVE && !FlagGet(FLAG_BEAT_DAISY))
                     continue;
                 if (mapsec == MAPSEC_MT_SILVER_CAVE && !FlagGet(FLAG_BEAT_DAISY))
                     continue;
