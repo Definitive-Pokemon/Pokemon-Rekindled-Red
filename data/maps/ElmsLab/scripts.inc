@@ -9,7 +9,7 @@ ElmsLab_EventScript_AideFullRestores::
 	msgbox ElmsLab_Text_AideFullRestores, MSGBOX_NPC
 	closemessage
 	giveitem_msg PalletTown_ElmsLab_Text_ReceivedFullRestores, ITEM_FULL_RESTORE, 5
-	VarSet(VAR_RENEWABLE_ITEM_STEP_COUNTER, 0);
+	setvar VAR_RENEWABLE_ITEM_STEP_COUNTER, 0
 	release
 	end
 
