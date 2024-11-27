@@ -56,8 +56,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 35,
-      "y": 21,
+      "x": 27,
+      "y": 22,
       "elevation": 0,
       "var": "VAR_CHANGEFALLS",
       "var_value": "0",
@@ -65,8 +65,8 @@
     },
     {
       "type": "trigger",
-      "x": 34,
-      "y": 21,
+      "x": 26,
+      "y": 22,
       "elevation": 0,
       "var": "VAR_CHANGEFALLS",
       "var_value": "0",
@@ -89,6 +89,33 @@
       "var": "VAR_CHANGEFALLS",
       "var_value": "1",
       "script": "TohjoFalls_EventScript_UnderFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_CHANGEFALLS",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_CHANGEFALLS",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_CHANGEFALLS",
+      "var_value": "0",
+      "script": "TohjoFalls_EventScript_RegularFalls"
     }
   ],
   "bg_events": [
