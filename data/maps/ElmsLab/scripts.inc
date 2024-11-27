@@ -7,22 +7,22 @@ ElmsLab_EventScript_OnTransition::
 	end
 
 ElmsLab_EventScript_AideFullRestores::
-	lock
+	lockall
 	faceplayer
 	compare VAR_RENEWABLE_ITEM_STEP_COUNTER, 1500
 	goto_if_lt ElmsLab_EventScript_ComeBackLater
 	msgbox ElmsLab_Text_AideFullRestores, MSGBOX_NPC
 	closemessage
-	giveitem ITEM_FULL_RESTORE, 5
+	giveitem_msg PalletTown_ElmsLab_Text_ReceivedFullRestores, ITEM_FULL_RESTORE, 5
 	setvar VAR_RENEWABLE_ITEM_STEP_COUNTER, 0
-	release
+	releaseall
 	end
 
 ElmsLab_Text_AideFullRestores::
 	.string "Hello, you're not from here,\n"
 	.string "are you?\p"
 	.string "Your POKéMON seem very powerful!\n"
-	.string "I think you could use these.\p"
+	.string "I think you could use these.$"
 
 PalletTown_ElmsLab_Text_ReceivedFullRestores::
 	.string "{PLAYER} received five FULL RESTORES\n"
