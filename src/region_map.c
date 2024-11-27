@@ -3547,8 +3547,8 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         sMapCursor->y = 14;
         break;
     case MAPSEC_NEW_BARK_TOWN:
-        sMapCursor->x = -2;
-        sMapCursor->y = 12;
+        sMapCursor->x = 0;
+        sMapCursor->y = 11;
         break;
     default:
         GetPlayerPositionOnRegionMap();

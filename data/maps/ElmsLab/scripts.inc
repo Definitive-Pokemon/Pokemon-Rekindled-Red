@@ -4,11 +4,12 @@ ElmsLab_MapScripts::
 ElmsLab_EventScript_AideFullRestores::
 	lock
 	faceplayer
-	compare VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 1000
+	compare VAR_RENEWABLE_ITEM_STEP_COUNTER, 1500
 	goto_if_lt ElmsLab_EventScript_ComeBackLater
 	msgbox ElmsLab_Text_AideFullRestores, MSGBOX_NPC
 	closemessage
 	giveitem_msg PalletTown_ElmsLab_Text_ReceivedFullRestores, ITEM_FULL_RESTORE, 5
+	VarSet(VAR_RENEWABLE_ITEM_STEP_COUNTER, 0);
 	release
 	end
 
@@ -64,11 +65,11 @@ ElmsLab_Text_Notice1::
 	.string "appear to have a completely\n"
 	.string "different color than usual.\p"
 	.string "It is unknown whether such POKéMON\n"
-	.string "were born with this condition or not.\p"
-	.string "In fact, we know next to nothing about\n"
+	.string "were born this way or not.\p"
+	.string "In fact, we know very little about\n"
 	.string "this mysterious phenomenon.\p"
-	.string "However, I have created a device that\n"
-	.string "attracts these specific POKéMON.\p"
+	.string "However, I have created a device\n"
+	.string "that attracts SHINY POKéMON.\p"
 	.string "These encounters are very rare still,\n"
 	.string "but it should increase the odds.$"
 
