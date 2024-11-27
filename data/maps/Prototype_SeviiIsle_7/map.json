@@ -2,8 +2,8 @@
   "id": "MAP_PROTOTYPE_SEVII_ISLE_7",
   "name": "Prototype_SeviiIsle_7",
   "layout": "LAYOUT_PROTOTYPE_SEVII_ISLE_7",
-  "music": "MUS_SEVII_ROUTE",
-  "region_map_section": "MAPSEC_SEVII_ISLE_7",
+  "music": "MUS_B_PYRAMID_TOP",
+  "region_map_section": "MAPSEC_TWO_ISLAND_HO_OH",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
@@ -13,12 +13,29 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_PROTOTYPE_SEVII_ISLE_6",
+      "offset": 0,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_PROTOTYPE_SEVII_ISLE_6",
+      "offset": 0,
+      "direction": "up"
+    }
+  ],
   "object_events": [
 
   ],
   "warp_events": [
-
+    {
+      "x": 17,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_UMBILICAL_TOWER",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 

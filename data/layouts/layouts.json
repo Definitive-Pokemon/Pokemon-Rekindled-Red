@@ -2680,24 +2680,24 @@
     {
       "id": "LAYOUT_PROTOTYPE_SEVII_ISLE_6",
       "name": "Prototype_SeviiIsle_6_Layout",
-      "width": 1,
-      "height": 1,
+      "width": 30,
+      "height": 31,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CeladonCity",
+      "secondary_tileset": "gTileset_BerryForest",
       "border_filepath": "data/layouts/Prototype_SeviiIsle_6/border.bin",
       "blockdata_filepath": "data/layouts/Prototype_SeviiIsle_6/map.bin"
     },
     {
       "id": "LAYOUT_PROTOTYPE_SEVII_ISLE_7",
       "name": "Prototype_SeviiIsle_7_Layout",
-      "width": 1,
-      "height": 1,
+      "width": 30,
+      "height": 29,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CeladonCity",
+      "secondary_tileset": "gTileset_BerryForest",
       "border_filepath": "data/layouts/Prototype_SeviiIsle_7/border.bin",
       "blockdata_filepath": "data/layouts/Prototype_SeviiIsle_7/map.bin"
     },
@@ -3945,7 +3945,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_NavelRock",
+      "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/NavelRock_SummitPath_2F/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_SummitPath_2F/map.bin"
     },
@@ -3957,7 +3957,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_NavelRock",
+      "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/NavelRock_SummitPath_3F/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_SummitPath_3F/map.bin"
     },
@@ -3969,7 +3969,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_NavelRock",
+      "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/NavelRock_SummitPath_4F/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_SummitPath_4F/map.bin"
     },
@@ -3981,7 +3981,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_NavelRock",
+      "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/NavelRock_SummitPath_5F/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_SummitPath_5F/map.bin"
     },
@@ -5604,6 +5604,18 @@
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/ElmsLab/border.bin",
       "blockdata_filepath": "data/layouts/ElmsLab/map.bin"
+    },
+    {
+      "id": "LAYOUT_UMBILICAL_TOWER",
+      "name": "UmbilicalTower_Layout",
+      "width": 17,
+      "height": 26,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/UmbilicalTower/border.bin",
+      "blockdata_filepath": "data/layouts/UmbilicalTower/map.bin"
     }
   ]
 }

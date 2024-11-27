@@ -1568,3 +1568,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/ElmsLab/scripts.inc"
 	.include "data/maps/ElmsLab/text.inc"
+
+	.include "data/maps/UmbilicalTower/scripts.inc"
+	.include "data/maps/UmbilicalTower/text.inc"

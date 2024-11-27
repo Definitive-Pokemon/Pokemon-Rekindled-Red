@@ -237,8 +237,9 @@
 #define MAPSEC_TWO_ISLAND_ROUTE             0xE3
 #define MAPSEC_TWO_ISLAND_HO_OH             0xE4
 #define MAPSEC_NEW_BARK_TOWN                0xE5
-#define MAPSEC_NONE                         0xE6
-#define MAPSEC_COUNT                        0xE7
+#define MAPSEC_UMBILICAL_TOWER              0xE6
+#define MAPSEC_NONE                         0xE7
+#define MAPSEC_COUNT                        0xE8
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

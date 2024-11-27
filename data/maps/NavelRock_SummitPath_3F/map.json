@@ -2,8 +2,8 @@
   "id": "MAP_NAVEL_ROCK_SUMMIT_PATH_3F",
   "name": "NavelRock_SummitPath_3F",
   "layout": "LAYOUT_NAVEL_ROCK_SUMMIT_PATH_3F",
-  "music": "MUS_SEVII_CAVE",
-  "region_map_section": "MAPSEC_NAVEL_ROCK",
+  "music": "MUS_B_ARENA",
+  "region_map_section": "MAPSEC_UMBILICAL_TOWER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -13,8 +13,10 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
-  "object_events": [],
+  "connections": 0,
+  "object_events": [
+
+  ],
   "warp_events": [
     {
       "x": 2,
@@ -31,7 +33,11 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
-  "bg_events": [],
-	"level_scaling": "0"
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ],
+  "level_scaling": "0"
 }

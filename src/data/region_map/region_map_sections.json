@@ -1815,6 +1815,30 @@
       "y": 11,
       "width": 1,
       "height": 1
+    },
+    {
+      "map_section": "MAPSEC_TWO_ISLAND_ROUTE",
+      "name": "SUNLIT SEAMAZE",
+      "x": 10,
+      "y": 9,
+      "width": 1,
+      "height": 2
+    },
+    {
+      "map_section": "MAPSEC_TWO_ISLAND_HO_OH",
+      "name": "PRENATAL ISLAND",
+      "x": 10,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_UMBILICAL_TOWER",
+      "name": "UMBILICAL TOWER",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
     }
   ]
 }

@@ -632,6 +632,7 @@
 #define MAP_MT_SILVER_OUTDOOR1 (4 | (44 << 8))
 #define MAP_TOHJO_FALLS        (5 | (44 << 8))
 #define MAP_TOHJO_FALLS_SECRET (6 | (44 << 8))
+#define MAP_UMBILICAL_TOWER    (7 | (44 << 8))
 
 #define MAP_GROUPS_COUNT 45
 

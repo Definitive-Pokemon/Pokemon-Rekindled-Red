@@ -2,8 +2,8 @@
   "id": "MAP_PROTOTYPE_SEVII_ISLE_6",
   "name": "Prototype_SeviiIsle_6",
   "layout": "LAYOUT_PROTOTYPE_SEVII_ISLE_6",
-  "music": "MUS_SEVII_ROUTE",
-  "region_map_section": "MAPSEC_SEVII_ISLE_6",
+  "music": "MUS_ROUTE24",
+  "region_map_section": "MAPSEC_TWO_ISLAND_ROUTE",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
@@ -13,9 +13,33 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_TWO_ISLAND",
+      "offset": 0,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_PROTOTYPE_SEVII_ISLE_7",
+      "offset": 0,
+      "direction": "down"
+    }
+  ],
   "object_events": [
-
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_DODUO",
+      "x": 1,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TwoIsland_EventScript_Doduo",
+      "flag": "0"
+    }
   ],
   "warp_events": [
 
@@ -24,7 +48,14 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Prototype_SeviiIsle_6_EventScript_RouteSign"
+    }
   ],
   "level_scaling": "0"
 }

@@ -219,3 +219,12 @@ TwoIsland_EventScript_JoyfulGameCornerSign::
 TwoIsland_EventScript_FastCurrentSign::
 	msgbox TwoIsland_Text_DangerFastCurrent, MSGBOX_SIGN
 	end
+
+TwoIsland_EventScript_Doduo::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_DODUO, CRY_MODE_NORMAL
+	waitmoncry
+	release
+	end
