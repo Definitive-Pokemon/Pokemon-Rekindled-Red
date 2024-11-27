@@ -13,7 +13,7 @@ ElmsLab_EventScript_AideFullRestores::
 	goto_if_lt ElmsLab_EventScript_ComeBackLater
 	msgbox ElmsLab_Text_AideFullRestores, MSGBOX_NPC
 	closemessage
-	giveitem_msg PalletTown_ElmsLab_Text_ReceivedFullRestores, ITEM_FULL_RESTORE, 5
+	giveitem ITEM_FULL_RESTORE, 5
 	setvar VAR_RENEWABLE_ITEM_STEP_COUNTER, 0
 	release
 	end
