@@ -1,5 +1,10 @@
 ElmsLab_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ElmsLab_EventScript_OnTransition
 	.byte 0
+
+ElmsLab_EventScript_OnTransition::
+    setrespawn SPAWN_NEW_BARK_TOWN
+	end
 
 ElmsLab_EventScript_AideFullRestores::
 	lock
@@ -76,3 +81,4 @@ ElmsLab_Text_Notice1::
 ElmsLab_Text_Notice2::
 	.string "Regarding \p"
 	.string "$"
+	
