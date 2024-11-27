@@ -19,7 +19,7 @@ BattleTower_Lobby_EventScript_16029C::
 	compare VAR_RESULT, TRUE
 	goto_if_eq BattleTower_Lobby_EventScript_CheckShouldGiveEonTicket
 	callnative GetBestBattleTowerStreakToVar0x8007
-	compare VAR_0x8007, 21
+	compare VAR_0x8007, 28
 	goto_if_lt BattleTower_Lobby_EventScript_HideScott
 	clearflag FLAG_HIDE_AWARD_SCOTT_BATTLE_TOWER
 	callnative TryInitBattleTowerAwardManObjectEvent
@@ -27,7 +27,7 @@ BattleTower_Lobby_EventScript_16029C::
 
 BattleTower_Lobby_EventScript_CheckShouldGiveEonTicket::
 	callnative GetBestBattleTowerStreakToVar0x8007
-	compare VAR_0x8007, 42
+	compare VAR_0x8007, 56
 	goto_if_lt BattleTower_Lobby_EventScript_HideScott
 	clearflag FLAG_HIDE_AWARD_SCOTT_BATTLE_TOWER
 	callnative TryInitBattleTowerAwardManObjectEvent
@@ -369,29 +369,9 @@ BattleTower_Lobby_EventScript_Scott::
 	checkitem ITEM_EON_TICKET, 1
 	compare VAR_RESULT, TRUE
 	goto_if_eq BattleTower_Lobby_EventScript_Scott_GaveEonTicket
-	checkitem ITEM_AURORA_TICKET, 1
-	compare VAR_RESULT, TRUE
-	goto_if_eq BattleTower_Lobby_EventScript_Scott_TryGiveEonTicket
 	msgbox BattleTower_Lobby_Text_Scott28Wins, MSGBOX_DEFAULT
-	giveitem ITEM_AURORA_TICKET, 1
-	setflag FLAG_RECEIVED_AURORA_TICKET
-	setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
-	msgbox BattleTower_Lobby_Text_ScottExplainAuroraTicket, MSGBOX_DEFAULT
-	release
-	end
-
-BattleTower_Lobby_EventScript_Scott_TryGiveEonTicket::
-	callnative GetBestBattleTowerStreakToVar0x8007
-	compare VAR_0x8007, 42
-	goto_if_lt BattleTower_Lobby_EventScript_Scott_GaveAuroraTicket
-	msgbox BattleTower_Lobby_Text_Scott56Wins, MSGBOX_DEFAULT
 	giveitem ITEM_EON_TICKET, 1
 	msgbox BattleTower_Lobby_Text_ScottExplainEonTicket, MSGBOX_DEFAULT
-	release
-	end
-
-BattleTower_Lobby_EventScript_Scott_GaveAuroraTicket::
-	msgbox BattleTower_Lobby_Text_ScottGaveAuroraTicket, MSGBOX_DEFAULT
 	release
 	end
 

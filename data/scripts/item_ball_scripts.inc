@@ -769,4 +769,6 @@ TohjoFalls_EventScript_ItemNugget::
 
 TohjoFalls_EventScript_ItemAuroraTicket::
 	finditem ITEM_AURORA_TICKET
+	setflag FLAG_RECEIVED_AURORA_TICKET
+	setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
 	end
