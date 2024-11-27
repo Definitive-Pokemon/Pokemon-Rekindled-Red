@@ -1479,7 +1479,7 @@
 #define FLAG_WORLD_MAP_TOHJO_FALLS                                  (SYS_FLAGS + 0xC9)
 #define FLAG_WORLD_MAP_FIERY_PASSAGE                                (SYS_FLAGS + 0xCA)
 #define FLAG_WORLD_MAP_NEW_BARK_TOWN                                (SYS_FLAGS + 0xCB)
-#define FLAG_0x8CC                                                  (SYS_FLAGS + 0xCC)
+#define FLAG_WORLD_MAP_UMBILICAL_TOWER                              (SYS_FLAGS + 0xCC)
 #define FLAG_0x8CD                                                  (SYS_FLAGS + 0xCD)
 #define FLAG_0x8CE                                                  (SYS_FLAGS + 0xCE)
 #define FLAG_0x8CF                                                  (SYS_FLAGS + 0xCF)
