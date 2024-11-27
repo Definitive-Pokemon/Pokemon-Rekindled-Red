@@ -1642,6 +1642,8 @@ static void BufferRegionMapBg(u8 bg, u16 *map)
         whichMap = sSwitchMapMenu->currentSelection;
     else
         whichMap = sRegionMap->selectedRegion;
+    if (whichMap == REGIONMAP_KANTO && !FlagGet(FLAG_WORLD_MAP_NEW_BARK_TOWN))
+        FillBgTilemapBufferRect_Palette0(0, 0x007, 4, 15, 1, 1);
     if (whichMap == REGIONMAP_SEVII45 && !FlagGet(FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR))
         FillBgTilemapBufferRect_Palette0(0, 0x003, 13, 11, 3, 2);
     if (whichMap == REGIONMAP_SEVII67 && !FlagGet(FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR))
