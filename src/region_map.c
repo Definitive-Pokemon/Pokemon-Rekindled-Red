@@ -1136,9 +1136,12 @@ static void InitRegionMapType(void)
     {
         case MAPSEC_FIERY_PASSAGE:
 	    case MAPSEC_MT_SILVER_PATH:
+	    case MAPSEC_MT_SILVER:
+	    case MAPSEC_MT_SILVER_CAVE:
         case MAPSEC_ROUTE_26:
         case MAPSEC_ROUTE_27:
         case MAPSEC_TOHJO_FALLS:
+		case MAPSEC_NEW_BARK_TOWN:
         region = REGIONMAP_KANTO;
         break;
         case MAPSEC_UNDERWATER_124:
