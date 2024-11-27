@@ -35,6 +35,9 @@ NavelRock_Summit_EventScript_TryRemoveHoOh::
 NavelRock_Summit_EventScript_HoOh::
 	goto_if_questlog EventScript_ReleaseEnd
 	special QuestLog_CutRecording
+	checkitem ITEM_RAINBOW_WING, 1
+	compare VAR_RESULT, TRUE
+	goto_if_lt NavelRock_Summit_Nothing
 	lockall
 	setvar VAR_TEMP_1, 1
 	special SpawnCameraObject
@@ -71,6 +74,9 @@ NavelRock_Summit_EventScript_HoOh::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NavelRock_Summit_EventScript_RanFromHoOh
 	setflag FLAG_FOUGHT_HO_OH
 	releaseall
+	end
+
+NavelRock_Summit_Nothing::
 	end
 
 NavelRock_Summit_EventScript_DefeatedHoOh::

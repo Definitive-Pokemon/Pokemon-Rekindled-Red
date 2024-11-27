@@ -3617,12 +3617,12 @@
       "secondaryId": 0
     },
     {
-      "english": "SECRET FILES",
-      "itemId": "ITEM_SECRET_FILES",
+      "english": "RAINBOW WING",
+      "itemId": "ITEM_RAINBOW_WING",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "Stolen from the ROCKET WAREHOUSE,\\nthese files hold important\\ninformation regarding POKéMON.",
+      "description_english": "A mystical, rainbow feather\\nthat sparkles.",
       "importance": 1,
       "registrability": 1,
       "pocket": "POCKET_KEY_ITEMS",
