@@ -74,6 +74,13 @@ EventScript_AfterWhiteOutMomHeal::
 	releaseall
 	end
 
+EventScript_AfterWhiteOutElmHeal::
+    lockall
+	call EventScript_OutOfCenterPartyHeal
+	fadedefaultbgm
+	releaseall
+	end
+
 EventScript_NuzlockeGameOver::
 	lockall
 	textcolor 3
