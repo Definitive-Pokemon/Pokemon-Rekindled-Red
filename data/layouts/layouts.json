@@ -2692,8 +2692,8 @@
     {
       "id": "LAYOUT_PROTOTYPE_SEVII_ISLE_7",
       "name": "Prototype_SeviiIsle_7_Layout",
-      "width": 34,
-      "height": 29,
+      "width": 37,
+      "height": 32,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
