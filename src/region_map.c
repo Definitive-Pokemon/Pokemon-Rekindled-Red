@@ -3056,7 +3056,11 @@ static u16 GetMapsecUnderCursor(void)
         return MAPSEC_NONE;
 
     mapsec = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_MAP, sMapCursor->y, sMapCursor->x);
-    if ((mapsec == MAPSEC_NAVEL_ROCK || mapsec == MAPSEC_BIRTH_ISLAND) && !FlagGet(FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR))
+    if (mapsec == MAPSEC_NEW_BARK_TOWN && !FlagGet(FLAG_WORLD_MAP_NEW_BARK_TOWN))
+        mapsec = MAPSEC_NONE;
+    if (mapsec == MAPSEC_NAVEL_ROCK && !FlagGet(FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR))
+        mapsec = MAPSEC_NONE;
+	if (mapsec == MAPSEC_BIRTH_ISLAND && !FlagGet(FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR))
         mapsec = MAPSEC_NONE;
     return mapsec;
 }
