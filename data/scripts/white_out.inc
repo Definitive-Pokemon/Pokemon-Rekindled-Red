@@ -76,7 +76,10 @@ EventScript_AfterWhiteOutMomHeal::
 
 EventScript_AfterWhiteOutElmHeal::
     lockall
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox ElmsLab_Text_YouShouldTakeQuickRest
 	call EventScript_OutOfCenterPartyHeal
+	msgbox ElmsLab_Text_LookingGreatTakeCare
 	fadedefaultbgm
 	releaseall
 	end
