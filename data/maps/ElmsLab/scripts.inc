@@ -7,15 +7,15 @@ ElmsLab_EventScript_OnTransition::
 	end
 
 ElmsLab_EventScript_AideFullRestores::
-	lockall
+	lock
 	faceplayer
 	compare VAR_RENEWABLE_ITEM_STEP_COUNTER, 1500
 	goto_if_lt ElmsLab_EventScript_ComeBackLater
 	msgbox ElmsLab_Text_AideFullRestores, MSGBOX_NPC
-	closemessage
 	giveitem_msg PalletTown_ElmsLab_Text_ReceivedFullRestores, ITEM_FULL_RESTORE, 5
+	waitstate
 	setvar VAR_RENEWABLE_ITEM_STEP_COUNTER, 0
-	releaseall
+	release
 	end
 
 ElmsLab_Text_AideFullRestores::
