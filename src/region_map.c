@@ -17,13 +17,13 @@
 #include "constants/heal_locations.h"
 #include "constants/maps.h"
 
-#define MAP_WIDTH 24
+#define MAP_WIDTH 22
 #define MAP_HEIGHT 15
 
-#define CANCEL_BUTTON_X 23
+#define CANCEL_BUTTON_X 21
 #define CANCEL_BUTTON_Y 13
 
-#define SWITCH_BUTTON_X 23
+#define SWITCH_BUTTON_X 21
 #define SWITCH_BUTTON_Y 11
 
 enum {
@@ -1643,6 +1643,8 @@ static void BufferRegionMapBg(u8 bg, u16 *map)
         whichMap = sSwitchMapMenu->currentSelection;
     else
         whichMap = sRegionMap->selectedRegion;
+    if (whichMap == REGIONMAP_KANTO && !FlagGet(FLAG_WORLD_MAP_NEW_BARK_TOWN))
+        FillBgTilemapBufferRect_Palette0(0, 0x007, 4, 15, 1, 1);
     if (whichMap == REGIONMAP_SEVII45 && !FlagGet(FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR))
         FillBgTilemapBufferRect_Palette0(0, 0x003, 13, 11, 3, 2);
     if (whichMap == REGIONMAP_SEVII67 && !FlagGet(FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR))
@@ -3054,6 +3056,8 @@ static u16 GetMapsecUnderCursor(void)
         return MAPSEC_NONE;
 
     mapsec = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_MAP, sMapCursor->y, sMapCursor->x);
+    if (mapsec == MAPSEC_NEW_BARK_TOWN && !FlagGet(FLAG_WORLD_MAP_NEW_BARK_TOWN))
+        mapsec = MAPSEC_NONE;
     if (mapsec == MAPSEC_NAVEL_ROCK && !FlagGet(FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR))
         mapsec = MAPSEC_NONE;
 	if (mapsec == MAPSEC_BIRTH_ISLAND && !FlagGet(FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR))
@@ -3291,7 +3295,7 @@ static void GetPlayerPositionOnRegionMap(void)
     case MAP_TYPE_INDOOR:
         if (gMapHeader.regionMapSectionId == MAPSEC_ROUTE_22)
         {
-            sMapCursor->x = 4;
+            sMapCursor->x = 2;
             sMapCursor->y = 8;
             return;
         }
@@ -3335,52 +3339,52 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     switch (GetPlayerCurrentMapSectionId())
     {
     case MAPSEC_KANTO_SAFARI_ZONE:
-        sMapCursor->x = 14;
+        sMapCursor->x = 12;
         sMapCursor->y = 12;
         break;
     case MAPSEC_SILPH_CO:
-        sMapCursor->x = 16;
+        sMapCursor->x = 14;
         sMapCursor->y = 6;
         break;
     case MAPSEC_POKEMON_MANSION:
-        sMapCursor->x = 6;
+        sMapCursor->x = 4;
         sMapCursor->y = 14;
         break;
     case MAPSEC_POKEMON_TOWER:
-        sMapCursor->x = 20;
+        sMapCursor->x = 18;
         sMapCursor->y = 6;
         break;
     case MAPSEC_POWER_PLANT:
-        sMapCursor->x = 20;
+        sMapCursor->x = 18;
         sMapCursor->y = 4;
         break;
     case MAPSEC_S_S_ANNE:
-        sMapCursor->x = 16;
+        sMapCursor->x = 14;
         sMapCursor->y = 9;
         break;
     case MAPSEC_POKEMON_LEAGUE:
-        sMapCursor->x = 4;
+        sMapCursor->x = 2;
         sMapCursor->y = 3;
         break;
     case MAPSEC_ROCKET_HIDEOUT:
-        sMapCursor->x = 13;
+        sMapCursor->x = 11;
         sMapCursor->y = 6;
         break;
     case MAPSEC_UNDERGROUND_PATH:
-        sMapCursor->x = 16;
+        sMapCursor->x = 14;
         sMapCursor->y = 7;
         if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(UNDERGROUND_PATH_NORTH_ENTRANCE))
         {
-            sMapCursor->x = 16; // optimized out but required to match
+            sMapCursor->x = 14; // optimized out but required to match
             sMapCursor->y = 5;
         }
         break;
     case MAPSEC_UNDERGROUND_PATH_2:
-        sMapCursor->x = 14;
+        sMapCursor->x = 12;
         sMapCursor->y = 6;
         if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(UNDERGROUND_PATH_EAST_ENTRANCE))
         {
-            sMapCursor->x = 17;
+            sMapCursor->x = 15;
             sMapCursor->y = 6; // optimized out but required to match
         }
         break;
@@ -3428,18 +3432,18 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         sMapCursor->y = 8;
         break;
     case MAPSEC_VIRIDIAN_FOREST:
-        sMapCursor->x = 6;
+        sMapCursor->x = 4;
         sMapCursor->y = 6;
         break;
     case MAPSEC_ROUTE_2:
         if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(PALLET_TOWN))
         {
-            sMapCursor->x = 6;
+            sMapCursor->x = 4;
             sMapCursor->y = 7;
         }
         else if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(CERULEAN_CITY))
         {
-            sMapCursor->x = 6;
+            sMapCursor->x = 4;
             sMapCursor->y = 5;
         }
         else
@@ -3450,19 +3454,19 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     case MAPSEC_ROUTE_21:
         if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE21_NORTH))
         {
-            sMapCursor->x = 6;
+            sMapCursor->x = 4;
             sMapCursor->y = 12;
         }
         else if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE21_SOUTH))
         {
-            sMapCursor->x = 6;
+            sMapCursor->x = 4;
             sMapCursor->y = 13;
         }
         break;
     case MAPSEC_ROUTE_5:
         if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(VIRIDIAN_CITY))
         {
-            sMapCursor->x = 16;
+            sMapCursor->x = 14;
             sMapCursor->y = 5;
         }
         else
@@ -3473,7 +3477,7 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     case MAPSEC_ROUTE_6:
         if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(PALLET_TOWN))
         {
-            sMapCursor->x = 16;
+            sMapCursor->x = 14;
             sMapCursor->y = 7;
         }
         else
@@ -3484,7 +3488,7 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     case MAPSEC_ROUTE_7:
         if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(PALLET_TOWN))
         {
-            sMapCursor->x = 15;
+            sMapCursor->x = 13;
             sMapCursor->y = 6;
         }
         else
@@ -3495,7 +3499,7 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
     case MAPSEC_ROUTE_8:
         if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(PALLET_TOWN))
         {
-            sMapCursor->x = 17;
+            sMapCursor->x = 15;
             sMapCursor->y = 6;
         }
         else
@@ -3516,15 +3520,15 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         sMapCursor->y = 17;
         break;
     case MAPSEC_FIERY_PASSAGE:
-        sMapCursor->x = 16;
+        sMapCursor->x = 14;
         sMapCursor->y = 1;
         break;
     case MAPSEC_MT_SILVER_CAVE:
-        sMapCursor->x = 2;
+        sMapCursor->x = 0;
         sMapCursor->y = 8;
         break;
     case MAPSEC_TOHJO_FALLS:
-        sMapCursor->x = 2;
+        sMapCursor->x = 0;
         sMapCursor->y = 12;
         break;
     case MAPSEC_PRIMORDIAL_ALTAR:
@@ -3553,7 +3557,7 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         break;
     case MAPSEC_NEW_BARK_TOWN:
         sMapCursor->x = 0;
-        sMapCursor->y = 12;
+        sMapCursor->y = 11;
         break;
     default:
         GetPlayerPositionOnRegionMap();
