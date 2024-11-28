@@ -12,11 +12,25 @@ ElmsLab_EventScript_AideFullRestores::
 	compare VAR_RENEWABLE_ITEM_STEP_COUNTER, 1500
 	goto_if_lt ElmsLab_EventScript_ComeBackLater
 	msgbox ElmsLab_Text_AideFullRestores, MSGBOX_NPC
-	giveitem_msg PalletTown_ElmsLab_Text_ReceivedFullRestores, ITEM_FULL_RESTORE, 5
-	waitstate
+	closemessage
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	checkitemspace ITEM_FULL_RESTORE
+	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
+	bufferitemname STR_VAR_2, ITEM_FULL_RESTORE
+	playfanfare MUS_LEVEL_UP
+	message Text_ObtainedTheX
+	waitmessage
+	waitfanfare
+	additem ITEM_FULL_RESTORE, 5
+	msgbox ElmsLab_Text_PutItemAway
+	call EventScript_RestorePrevTextColor
 	setvar VAR_RENEWABLE_ITEM_STEP_COUNTER, 0
 	release
 	end
+
+ElmsLab_Text_PutItemAway::
+    .string "{PLAYER} put the items away in\n"
+    .string "the BAG's MEDICINE POCKET.$"
 
 ElmsLab_Text_AideFullRestores::
 	.string "Hello, you're not from here,\n"
