@@ -1181,6 +1181,7 @@ extern const u8 EventScript_BothGameOver[];
 extern const u8 EventScript_NoPMCGameOver[];
 extern const u8 EventScript_BothGameOver_Mom[];
 extern const u8 EventScript_NoPMCGameOver_Mom[];
+extern const u8 EventScript_AfterWhiteOutElmHeal[];
 
 // start_menu
 extern const u8 gText_WouldYouLikeToSaveTheGame[];
