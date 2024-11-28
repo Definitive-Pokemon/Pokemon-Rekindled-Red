@@ -2,7 +2,7 @@
   "id": "MAP_NAVEL_ROCK_BASE_PATH_B7F",
   "name": "NavelRock_BasePath_B7F",
   "layout": "LAYOUT_NAVEL_ROCK_BASE_PATH_B7F",
-  "music": "MUS_SEVII_CAVE",
+  "music": "MUS_B_PALACE",
   "region_map_section": "MAPSEC_NAVEL_ROCK",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -13,8 +13,10 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
-  "object_events": [],
+  "connections": 0,
+  "object_events": [
+
+  ],
   "warp_events": [
     {
       "x": 2,
@@ -31,7 +33,11 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
-  "bg_events": [],
-	"level_scaling": "0"
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ],
+  "level_scaling": "0"
 }
