@@ -400,6 +400,7 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
         PutWindowTilemap(windowId);
         CopyWindowToVram(windowId, COPYWIN_FULL);
 
+        gTasks[taskId].tState = 1;
         // Scene changes if last heal location was the player's house
         loc = GetHealLocation(SPAWN_PALLET_TOWN);
         if (gSaveBlock1Ptr->lastHealLocation.mapGroup == loc->group
@@ -408,9 +409,16 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
          && gSaveBlock1Ptr->lastHealLocation.x == loc->x
          && gSaveBlock1Ptr->lastHealLocation.y == loc->y)
             gTasks[taskId].tState = 4;
-        else
-            gTasks[taskId].tState = 1;
+        
+        loc = GetHealLocation(SPAWN_NEW_BARK_TOWN);
+        if (gSaveBlock1Ptr->lastHealLocation.mapGroup == loc->group
+         && gSaveBlock1Ptr->lastHealLocation.mapNum == loc->map
+         && gSaveBlock1Ptr->lastHealLocation.warpId == WARP_ID_NONE
+         && gSaveBlock1Ptr->lastHealLocation.x == loc->x
+         && gSaveBlock1Ptr->lastHealLocation.y == loc->y)
+            gTasks[taskId].tState = 7;
         break;
+    case 7:
     case 1:
         if (PrintWhiteOutRecoveryMessage(taskId, gText_PlayerScurriedToCenter, 2, 8))
         {
@@ -427,6 +435,7 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
         break;
     case 2:
     case 5:
+    case 8:
         windowId = gTasks[taskId].tWindowId;
         ClearWindowTilemap(windowId);
         CopyWindowToVram(windowId, COPYWIN_MAP);
@@ -493,6 +502,12 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
                 }
             }
             ScriptContext_SetupScript(EventScript_AfterWhiteOutMomHeal);
+        }
+        break;
+    case 9:
+        if (FieldFadeTransitionBackgroundEffectIsFinished() == TRUE)
+        {
+            ScriptContext_SetupScript(EventScript_AfterWhiteOutElmHeal);
         }
         break;
     }
