@@ -3769,6 +3769,60 @@ const struct WildPokemon sJohtoAlteringCave_LandMons[] =
 
 const struct WildPokemonInfo sJohtoAlteringCave_LandMonsInfo = { 5, sJohtoAlteringCave_LandMons };
 
+const struct WildPokemon sPrototypeSeviiIsle6_WaterMons[] =
+{
+    { 5, 20, SPECIES_TENTACOOL },
+    { 20, 35, SPECIES_TENTACOOL },
+    { 35, 40, SPECIES_TENTACOOL },
+    { 35, 40, SPECIES_TENTACRUEL },
+    { 35, 40, SPECIES_TENTACRUEL },
+};
+
+const struct WildPokemonInfo sPrototypeSeviiIsle6_WaterMonsInfo = { 1, sPrototypeSeviiIsle6_WaterMons };
+
+const struct WildPokemon sPrototypeSeviiIsle6_FishingMons[] =
+{
+    { 5, 5, SPECIES_MAGIKARP },
+    { 5, 5, SPECIES_MAGIKARP },
+    { 5, 15, SPECIES_HORSEA },
+    { 5, 15, SPECIES_MAGIKARP },
+    { 5, 15, SPECIES_HORSEA },
+    { 15, 40, SPECIES_SHELLDER },
+    { 15, 40, SPECIES_SHELLDER },
+    { 15, 40, SPECIES_GYARADOS },
+    { 25, 40, SPECIES_CLOYSTER },
+    { 30, 50, SPECIES_SHELLDER },
+};
+
+const struct WildPokemonInfo sPrototypeSeviiIsle6_FishingMonsInfo = { 10, sPrototypeSeviiIsle6_FishingMons };
+
+const struct WildPokemon sPrototypeSeviiIsle7_WaterMons[] =
+{
+    { 5, 20, SPECIES_TENTACOOL },
+    { 20, 35, SPECIES_TENTACOOL },
+    { 35, 40, SPECIES_TENTACOOL },
+    { 35, 40, SPECIES_TENTACRUEL },
+    { 35, 40, SPECIES_TENTACRUEL },
+};
+
+const struct WildPokemonInfo sPrototypeSeviiIsle7_WaterMonsInfo = { 1, sPrototypeSeviiIsle7_WaterMons };
+
+const struct WildPokemon sPrototypeSeviiIsle7_FishingMons[] =
+{
+    { 5, 5, SPECIES_MAGIKARP },
+    { 5, 5, SPECIES_MAGIKARP },
+    { 5, 15, SPECIES_HORSEA },
+    { 5, 15, SPECIES_MAGIKARP },
+    { 5, 15, SPECIES_HORSEA },
+    { 15, 40, SPECIES_SHELLDER },
+    { 15, 40, SPECIES_SHELLDER },
+    { 15, 40, SPECIES_GYARADOS },
+    { 25, 40, SPECIES_CLOYSTER },
+    { 30, 50, SPECIES_SHELLDER },
+};
+
+const struct WildPokemonInfo sPrototypeSeviiIsle7_FishingMonsInfo = { 10, sPrototypeSeviiIsle7_FishingMons };
+
 const struct WildPokemon sSevenIslandTanobyRuinsMoneanChamber_LeafGreen_LandMons[] =
 {
     { 65, 65, SPECIES_UNOWN },
@@ -9450,5 +9504,29 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .rockSmashMonsInfo_LG = NULL,
         .fishingMonsInfo_FR = NULL,
         .fishingMonsInfo_LG = NULL,
+    },
+	{
+        .mapGroup = MAP_GROUP(PROTOTYPE_SEVIIISLE_6),
+        .mapNum = MAP_NUM(PROTOTYPE_SEVIIISLE_6),
+        .landMonsInfo_FR = NULL,
+        .landMonsInfo_LG = NULL,
+        .waterMonsInfo_FR = &sPrototypeSeviiIsle6_WaterMonsInfo,
+        .waterMonsInfo_LG = &sPrototypeSeviiIsle6_WaterMonsInfo,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &sPrototypeSeviiIsle6_FishingMonsInfo,
+        .fishingMonsInfo_LG = &sPrototypeSeviiIsle6_FishingMonsInfo,
+    },
+	{
+        .mapGroup = MAP_GROUP(PROTOTYPE_SEVIIISLE_7),
+        .mapNum = MAP_NUM(PROTOTYPE_SEVIIISLE_7),
+        .landMonsInfo_FR = NULL,
+        .landMonsInfo_LG = NULL,
+        .waterMonsInfo_FR = &sPrototypeSeviiIsle7_WaterMonsInfo,
+        .waterMonsInfo_LG = &sPrototypeSeviiIsle7_WaterMonsInfo,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &sPrototypeSeviiIsle7_FishingMonsInfo,
+        .fishingMonsInfo_LG = &sPrototypeSeviiIsle7_FishingMonsInfo,
     },
 };
