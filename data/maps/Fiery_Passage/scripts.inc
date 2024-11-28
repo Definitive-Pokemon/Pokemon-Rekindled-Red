@@ -76,3 +76,11 @@ Fiery_Passage_EventScript_CyndaquilFled::
     msgbox Fiery_Passage_Text_CyndaquilFled
     release
     end
+
+Fiery_Passage_EventScript_Sign::
+	masgbox Fiery_Passage_Text_Sign, MSGBOX_SIGN
+	end
+
+Fiery_Passage_Text_Sign::
+	.string "WARNING!!!\n"
+	.string "Don't enter the hot spring!$"

@@ -95,6 +95,7 @@ Movement_CameraPanUp:
 	walk_up
 	walk_up
 	walk_up
+	walk_up
 	step_end
 
 Movement_CameraPanDown:
@@ -103,9 +104,11 @@ Movement_CameraPanDown:
 	walk_down
 	walk_down
 	walk_down
+	walk_down
 	step_end
 
 Movement_HoOhApproach:
+	walk_down
 	walk_down
 	walk_down
 	walk_down
