@@ -77,7 +77,7 @@ NavelRock_Summit_EventScript_HoOh::
 	end
 
 NavelRock_Summit_Nothing::
-	setvar VAR_TEMP_1, 0
+	setvar VAR_TEMP_1, 2
 	end
 
 NavelRock_Summit_EventScript_DefeatedHoOh::
