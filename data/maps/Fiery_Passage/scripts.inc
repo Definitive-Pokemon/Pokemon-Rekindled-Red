@@ -78,7 +78,7 @@ Fiery_Passage_EventScript_CyndaquilFled::
     end
 
 Fiery_Passage_EventScript_Sign::
-	masgbox Fiery_Passage_Text_Sign, MSGBOX_SIGN
+	msgbox Fiery_Passage_Text_Sign, MSGBOX_SIGN
 	end
 
 Fiery_Passage_Text_Sign::
