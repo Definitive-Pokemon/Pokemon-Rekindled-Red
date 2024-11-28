@@ -3277,6 +3277,11 @@ static void GetPlayerPositionOnRegionMap(void)
         {
             mapHeader = Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
         }
+        else if (Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum)->regionMapSectionId == MAPSEC_FIERY_PASSAGE
+        && mapHeader->regionMapSectionId == MAPSEC_MT_MOON)
+        {
+            mapHeader = Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
+        }
         
         sMapCursor->selectedMapsec = mapHeader->regionMapSectionId;
         width = mapHeader->mapLayout->width;
