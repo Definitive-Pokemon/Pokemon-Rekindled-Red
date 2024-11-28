@@ -9506,8 +9506,8 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .fishingMonsInfo_LG = NULL,
     },
 	{
-        .mapGroup = MAP_GROUP(PROTOTYPE_SEVIIISLE_6),
-        .mapNum = MAP_NUM(PROTOTYPE_SEVIIISLE_6),
+        .mapGroup = MAP_GROUP(PROTOTYPE_SEVII_ISLE_6),
+        .mapNum = MAP_NUM(PROTOTYPE_SEVII_ISLE_6),
         .landMonsInfo_FR = NULL,
         .landMonsInfo_LG = NULL,
         .waterMonsInfo_FR = &sPrototypeSeviiIsle6_WaterMonsInfo,
@@ -9518,8 +9518,8 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .fishingMonsInfo_LG = &sPrototypeSeviiIsle6_FishingMonsInfo,
     },
 	{
-        .mapGroup = MAP_GROUP(PROTOTYPE_SEVIIISLE_7),
-        .mapNum = MAP_NUM(PROTOTYPE_SEVIIISLE_7),
+        .mapGroup = MAP_GROUP(PROTOTYPE_SEVII_ISLE_7),
+        .mapNum = MAP_NUM(PROTOTYPE_SEVII_ISLE_7),
         .landMonsInfo_FR = NULL,
         .landMonsInfo_LG = NULL,
         .waterMonsInfo_FR = &sPrototypeSeviiIsle7_WaterMonsInfo,

@@ -967,6 +967,7 @@ AI_CV_DefenseUp_PhysicalTypes::
 	.byte TYPE_BUG
 	.byte TYPE_DARK
 	.byte TYPE_STEEL
+	.byte TYPE_DRAGON
 	.byte -1
 
 AI_CV_SpeedUp::
@@ -1045,8 +1046,9 @@ AI_CV_SpDefUp_PhysicalTypes::
 	.byte TYPE_FLYING
 	.byte TYPE_ROCK
 	.byte TYPE_BUG
-	.byte TYPE_GHOST
+	.byte TYPE_DARK
 	.byte TYPE_STEEL
+	.byte TYPE_DRAGON
 	.byte -1
 
 AI_CV_AccuracyUp::
@@ -1159,6 +1161,10 @@ AI_CV_AttackDown_PhysicalTypeList::
 	.byte TYPE_ROCK
 	.byte TYPE_BUG
 	.byte TYPE_STEEL
+	.byte TYPE_POISON
+	.byte TYPE_FLYING
+	.byte TYPE_DARK
+	.byte TYPE_DRAGON
 	.byte -1
 
 AI_CV_DefenseDown::
@@ -1227,7 +1233,6 @@ AI_CV_SpAtkDown_SpecialTypeList::
 	.byte TYPE_ELECTRIC
 	.byte TYPE_PSYCHIC
 	.byte TYPE_ICE
-	.byte TYPE_DRAGON
 	.byte TYPE_GHOST
 	.byte -1
 
@@ -1468,7 +1473,6 @@ AI_CV_LightScreen_SpecialTypeList::
 	.byte TYPE_ELECTRIC
 	.byte TYPE_PSYCHIC
 	.byte TYPE_ICE
-	.byte TYPE_DRAGON
 	.byte TYPE_GHOST
 	.byte -1
 
@@ -1605,6 +1609,7 @@ AI_CV_Reflect_PhysicalTypeList::
 	.byte TYPE_BUG
 	.byte TYPE_DARK
 	.byte TYPE_STEEL
+	.byte TYPE_DRAGON
 	.byte -1
 
 AI_CV_Poison::
@@ -1785,6 +1790,7 @@ AI_CV_Counter_PhysicalTypeList::
 	.byte TYPE_BUG
 	.byte TYPE_DARK
 	.byte TYPE_STEEL
+	.byte TYPE_DRAGON
 	.byte -1
 
 AI_CV_Encore::
@@ -2299,7 +2305,6 @@ AI_CV_MirrorCoat_SpecialTypeList::
 	.byte TYPE_ELECTRIC
 	.byte TYPE_PSYCHIC
 	.byte TYPE_ICE
-	.byte TYPE_DRAGON
 	.byte TYPE_GHOST
 	.byte -1
 
