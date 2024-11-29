@@ -103,8 +103,8 @@ void SetWhiteoutRespawnWarpAndHealerNpc(struct WarpData * warp)
         }
         else if (sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][0] == MAP_GROUP(ELMS_LAB) && sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][1] == MAP_NUM(ELMS_LAB))
         {
-            warp->x = 5;
-            warp->y = 5;
+            warp->x = 3;
+            warp->y = 4;
         }
         else
         {
