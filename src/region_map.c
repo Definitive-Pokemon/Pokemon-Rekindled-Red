@@ -1284,7 +1284,7 @@ static bool32 SelectedMapsecSEEnabled(void)
     u8 cursorMapSection = GetSelectedMapSection(GetSelectedRegionMap(), LAYER_MAP, GetMapCursorY(), GetMapCursorX());
     if (cursorMapSection == MAPSEC_ROUTE_4_POKECENTER)
         return FALSE;
-    else if (cursorMapSection == MAPSEC_NEW_BARK_TOWN && !GetFlag(FLAG_WORLD_MAP_NEW_BARK_TOWN))
+    else if (cursorMapSection == MAPSEC_NEW_BARK_TOWN && !FlagGet(FLAG_WORLD_MAP_NEW_BARK_TOWN))
         return FALSE;
     else
         return TRUE;
