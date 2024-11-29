@@ -3274,18 +3274,7 @@ static void GetPlayerPositionOnRegionMap(void)
         break;
     case MAP_TYPE_UNDERGROUND:
     case MAP_TYPE_UNKNOWN:
-        mapHeader = Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->escapeWarp.mapGroup, gSaveBlock1Ptr->escapeWarp.mapNum);
-        if (Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum)->regionMapSectionId == MAPSEC_MT_MOON
-        && mapHeader->regionMapSectionId == MAPSEC_FIERY_PASSAGE)
-        {
-            mapHeader = Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
-        }
-        else if (Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum)->regionMapSectionId == MAPSEC_FIERY_PASSAGE
-        && mapHeader->regionMapSectionId == MAPSEC_MT_MOON)
-        {
-            mapHeader = Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
-        }
-        
+        mapHeader = Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->escapeWarp.mapGroup, gSaveBlock1Ptr->escapeWarp.mapNum);        
         sMapCursor->selectedMapsec = mapHeader->regionMapSectionId;
         width = mapHeader->mapLayout->width;
         height = mapHeader->mapLayout->height;

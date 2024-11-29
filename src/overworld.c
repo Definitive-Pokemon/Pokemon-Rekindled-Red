@@ -720,6 +720,13 @@ void UpdateEscapeWarp(s16 x, s16 y)
     {
         delta = GetPlayerFacingDirection() != DIR_SOUTH;
         SetEscapeWarp(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, -1, x - 7, y - 7 + delta);
+        return;
+    }
+    
+    if (Overworld_GetMapHeaderByGroupAndId(sWarpDestination.mapGroup, sWarpDestination.mapNum) == MAPSEC_MT_MOON &&
+        Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum) == MAPSEC_FIERY_PASSAGE)
+    {
+        SetEscapeWarp(MAP_ROUTE4 >> 8, MAP_ROUTE4 & 0x0F, -1, 19 * 16, 5 * 16);
     }
 }
 
