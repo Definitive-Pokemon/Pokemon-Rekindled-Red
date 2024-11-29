@@ -88,7 +88,7 @@ Debug_UnlockGame::
 	setflag FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR
 
 	@set all trainer flags
-	@special SetAllTrainersBattled
+	special SetAllTrainersBattled
 
 	@give master balls
 	giveitem ITEM_MASTER_BALL, 50
