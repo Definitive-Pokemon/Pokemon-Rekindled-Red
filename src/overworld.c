@@ -723,10 +723,10 @@ void UpdateEscapeWarp(s16 x, s16 y)
         return;
     }
     
-    if (Overworld_GetMapHeaderByGroupAndId(sWarpDestination.mapGroup, sWarpDestination.mapNum) == MAPSEC_MT_MOON &&
-        Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum) == MAPSEC_FIERY_PASSAGE)
+    if (Overworld_GetMapHeaderByGroupAndId(sWarpDestination.mapGroup, sWarpDestination.mapNum)->regionMapSectionId == MAPSEC_MT_MOON &&
+        Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum)->regionMapSectionId == MAPSEC_FIERY_PASSAGE)
     {
-        SetEscapeWarp(MAP_ROUTE4 >> 8, MAP_ROUTE4 & 0x0F, -1, 19 * 16, 5 * 16);
+        SetEscapeWarp(MAP_ROUTE4 >> 8, (MAP_ROUTE4 & 0x07)(s8), -1, 19 * 16, 5 * 16);
     }
 }
 
