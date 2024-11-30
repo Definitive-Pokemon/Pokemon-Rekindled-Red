@@ -726,7 +726,7 @@ void UpdateEscapeWarp(s16 x, s16 y)
     if (Overworld_GetMapHeaderByGroupAndId(sWarpDestination.mapGroup, sWarpDestination.mapNum)->regionMapSectionId == MAPSEC_MT_MOON &&
         Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum)->regionMapSectionId == MAPSEC_FIERY_PASSAGE)
     {
-        SetEscapeWarp(3, 22, -1, 19 -7, 5 -7);
+        SetEscapeWarp(3, 22, -1, 19, 6);
     }
 }
 
