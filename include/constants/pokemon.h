@@ -104,10 +104,10 @@
 #define TYPE_GROUND         4
 #define TYPE_ROCK           5
 #define TYPE_BUG            6
-#define TYPE_DARK          7
+#define TYPE_DARK           7
 #define TYPE_STEEL          8
-#define TYPE_DRAGON         9
-#define TYPE_MYSTERY        10
+#define TYPE_MYSTERY        9
+#define TYPE_DRAGON         10
 #define TYPE_FIRE           11
 #define TYPE_WATER          12
 #define TYPE_GRASS          13
