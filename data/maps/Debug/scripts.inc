@@ -24,8 +24,8 @@ Debug_BugmeBattle::
 
 Debug_GiveNormalMon::
 	lock
-	giveitem ITEM_SUPER_REPEL, 50
-	giveitem ITEM_ESCAPE_ROPE, 3
+	givemon SPECIES_REGIGIGAS, 5, ITEM_NONE
+	release
 	end
 	
 Debug_FinishCelioQuestVanilla::
