@@ -9,8 +9,8 @@ EthansHouse_EventScript_Mom::
 	end
 
 EthansHouse_Text_Mom::
-	.string "My boy is such a headache sometimes.\p"
+	.string "My boy can be such a headache.\p"
 	.string "He keeps asking for a POKéMON\n"
 	.string "of his own.\p"
 	.string "He really should learn to behave\n"
-	.string "a little first.$"
+	.string "a little first…$"

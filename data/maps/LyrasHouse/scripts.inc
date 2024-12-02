@@ -15,6 +15,6 @@ LyrasHouse_Text_Dad::
 	.string "when she grows up.\p"
 	.string "I'm very proud of her.\p"
 	.string "I can't say the same about her\n"
-	.string " best friend, ETHAN.\p"
+	.string "best friend, ETHAN.\p"
 	.string "Everyone in town speaks about\n"
 	.string "his troublemaking.$"

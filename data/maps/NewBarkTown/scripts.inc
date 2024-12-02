@@ -44,8 +44,8 @@ NewBarkTown_EventScript_Man::
 
 NewBarkTown_Text_Man::
 	.string "Yo, stranger!\p"
-	.string "I hear PROFESSOR ELM discovered some\n"
-	.string "new type of POKéMON.$"
+	.string "I hear PROFESSOR ELM discovered\n"
+	.string "some new type of POKéMON.$"
 
 NewBarkTown_EventScript_Woman::
 	lock

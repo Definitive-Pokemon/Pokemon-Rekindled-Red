@@ -16,8 +16,6 @@ NewBarkHouse_Text_Girl::
 	.string "findings.\p"
 	.string "He's so famous for his research on\n"
 	.string "POKéMON evolution.\p"
-	.string "He's so famous for his research on\n"
-	.string "POKéMON evolution.\p"
 	.string "Sigh…\p"
 	.string "I wish I could be a researcher\n"
 	.string "like him…$"
