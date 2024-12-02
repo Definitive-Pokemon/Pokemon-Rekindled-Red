@@ -835,3 +835,14 @@ const struct Tileset gTileset_Lava =
     .metatileAttributes = gMetatileAttributes_Lava,
     .callback = InitTilesetAnim_Lava,
 };
+
+const struct Tileset gTileset_UmbilicalTower =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_UmbilicalTower,
+    .palettes = gTilesetPalettes_UmbilicalTower,
+    .metatiles = gMetatiles_UmbilicalTower,
+    .metatileAttributes = gMetatileAttributes_UmbilicalTower,
+    .callback = NULL,
+};
