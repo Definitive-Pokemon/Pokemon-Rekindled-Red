@@ -1787,9 +1787,9 @@
     {
       "map_section": "MAPSEC_ROUTE_27",
       "name": "ROUTE 27",
-      "x": 0,
+      "x": -1,
       "y": 12,
-      "width": 2,
+      "width": 3,
       "height": 1
     },
     {
