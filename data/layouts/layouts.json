@@ -3921,7 +3921,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_NavelRock",
+      "secondary_tileset": "gTileset_UmbilicalTower",
       "border_filepath": "data/layouts/NavelRock_Summit/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_Summit/map.bin"
     },
@@ -3945,7 +3945,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_UmbilicalTower",
       "border_filepath": "data/layouts/NavelRock_SummitPath_2F/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_SummitPath_2F/map.bin"
     },
@@ -3957,7 +3957,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_UmbilicalTower",
       "border_filepath": "data/layouts/NavelRock_SummitPath_3F/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_SummitPath_3F/map.bin"
     },
@@ -3969,7 +3969,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_UmbilicalTower",
       "border_filepath": "data/layouts/NavelRock_SummitPath_4F/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_SummitPath_4F/map.bin"
     },
@@ -3981,7 +3981,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_UmbilicalTower",
       "border_filepath": "data/layouts/NavelRock_SummitPath_5F/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_SummitPath_5F/map.bin"
     },
@@ -5613,7 +5613,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_UmbilicalTower",
       "border_filepath": "data/layouts/UmbilicalTower/border.bin",
       "blockdata_filepath": "data/layouts/UmbilicalTower/map.bin"
     },

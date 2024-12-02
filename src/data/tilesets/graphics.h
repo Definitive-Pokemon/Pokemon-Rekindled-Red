@@ -1577,4 +1577,4 @@ const u16 gTilesetPalettes_UmbilicalTower[][16] =
 	INCBIN_U16("data/tilesets/secondary/umbilical_tower/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_Umbilical[] = INCBIN_U32("data/tilesets/secondary/umbilical_tower/tiles.4bpp.lz");
+const u32 gTilesetTiles_UmbilicalTower[] = INCBIN_U32("data/tilesets/secondary/umbilical_tower/tiles.4bpp.lz");

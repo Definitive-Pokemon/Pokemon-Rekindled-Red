@@ -181,7 +181,13 @@ static const s8 sAreaMarkers[][4] = {
     [DEX_AREA_DOTTED_HOLE]      = { MARKER_CIRCULAR,  73,  95 },
     [DEX_AREA_TANOBY_CHAMBER]   = { MARKER_MED_H,     96,  90 },
     [DEX_AREA_SUNLIT_SEAROAD]   = { MARKER_CIRCULAR,  14,  33 },
-    [DEX_AREA_UMBILICAL_TOWER]   = { MARKER_CIRCULAR, 14,  39 },
+    [DEX_AREA_UMBILICAL_TOWER]  = { MARKER_CIRCULAR, 14,  39 },
+    [DEX_AREA_ROUTE_26]         = { MARKER_CIRCULAR, 0,  0 },
+    [DEX_AREA_ROUTE_27]         = { MARKER_CIRCULAR, 0,  0 },
+    [DEX_AREA_TOHJO_FALLS]      = { MARKER_CIRCULAR, 0,  0 },
+    [DEX_AREA_ROUTE_28]         = { MARKER_CIRCULAR, 0,  0 },
+    [DEX_AREA_MT_SILVER]        = { MARKER_CIRCULAR, 0,  0 },
+    [DEX_AREA_MT_SILVER_CAVE]   = { MARKER_CIRCULAR, 0,  0 },
 };
 
 static void Task_ShowAreaMarkers(u8 taskId)
