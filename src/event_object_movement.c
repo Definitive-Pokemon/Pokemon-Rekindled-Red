@@ -951,21 +951,19 @@ bool8 (*const gDirectionBlockedMetatileFuncs[])(u8) = {
 };
 
 static const struct Coords16 sDirectionToVectors[] = {
-    [DIR_NONE]      = { 0,  0},
-    [DIR_SOUTH]     = { 0,  1},
-    [DIR_NORTH]     = { 0, -1},
-    [DIR_WEST]      = {-1,  0},
-    [DIR_EAST]      = { 1,  0},
-    [DIR_SOUTHWEST] = {-1,  1},
-    [DIR_SOUTHEAST] = { 1,  1},
-    [DIR_NORTHWEST] = {-1, -1},
-    [DIR_NORTHEAST] = { 1, -1},
-        { 1, -1}
+    { 0,  0},
+    { 0,  1},
+    { 0, -1},
+    {-1,  0},
+    { 1,  0},
+    {-1,  1},
+    { 1,  1},
+    {-1, -1},
     { 1, -1},
     {-2,  1},
     { 2,  1},
     {-2, -1},
-    { 2, -1}
+    { 2, -1},
 };
 
 static const u8 sFaceDirectionMovementActions[] = {
@@ -1288,17 +1286,6 @@ static const u8 sAcroWheelieMoveMovementActions[] = {
     [DIR_NORTHEAST] = MOVEMENT_ACTION_ACRO_WHEELIE_MOVE_RIGHT,
 };
 
-static const u8 sAcroEndWheelieMoveDirectionMovementActions[] = {
-    [DIR_NONE] = MOVEMENT_ACTION_ACRO_END_WHEELIE_MOVE_DOWN,
-    [DIR_SOUTH] = MOVEMENT_ACTION_ACRO_END_WHEELIE_MOVE_DOWN,
-    [DIR_NORTH] = MOVEMENT_ACTION_ACRO_END_WHEELIE_MOVE_UP,
-    [DIR_WEST] = MOVEMENT_ACTION_ACRO_END_WHEELIE_MOVE_LEFT,
-    [DIR_EAST] = MOVEMENT_ACTION_ACRO_END_WHEELIE_MOVE_RIGHT,
-    [DIR_SOUTHWEST] = MOVEMENT_ACTION_ACRO_END_WHEELIE_MOVE_LEFT,
-    [DIR_NORTHWEST] = MOVEMENT_ACTION_ACRO_END_WHEELIE_MOVE_LEFT,
-    [DIR_SOUTHEAST] = MOVEMENT_ACTION_ACRO_END_WHEELIE_MOVE_RIGHT,
-    [DIR_NORTHEAST] = MOVEMENT_ACTION_ACRO_END_WHEELIE_MOVE_RIGHT,
-};
 // run slow
 static const u8 sRunSlowMovementActions[] = {
     [DIR_NONE]  = MOVEMENT_ACTION_RUN_DOWN_SLOW,
@@ -4987,7 +4974,7 @@ u8 GetSidewaysStairsCollision(struct ObjectEvent *objectEvent, u8 dir, u8 curren
         return collision;
 
     // cant descend stairs into water
-    if (MetatileBehavior_IsSurfableFishableWater(nextBehavior))
+    if (MetatileBehavior_IsSurfable(nextBehavior))
         return collision;
 
     if (MetatileBehavior_IsSidewaysStairsLeftSide(nextBehavior))
@@ -5576,7 +5563,7 @@ static bool8 ObjectEventExecSingleMovementAction(struct ObjectEvent *objectEvent
 
 static void ObjectEventSetSingleMovement(struct ObjectEvent *objectEvent, struct Sprite *sprite, u8 movementActionId)
 {
-    objectEvent->movementActionId = TryUpdateMovementActionOnStairs(objectEvent, animId);
+    objectEvent->movementActionId = TryUpdateMovementActionOnStairs(objectEvent, movementActionId);
     sprite->data[2] = 0;
     
     if (gQuestLogPlaybackState == QL_PLAYBACK_STATE_RECORDING)
@@ -9858,7 +9845,7 @@ bool8 MovementActionFunc_RunSlow_Step1(struct ObjectEvent *objectEvent, struct S
 {
     if (UpdateMovementNormal(objectEvent, sprite))
     {
-        sprite->sActionFuncId = 2;
+        sprite->data[2] = 2;
         return TRUE;
     }
     return FALSE;
