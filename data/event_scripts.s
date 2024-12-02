@@ -1571,3 +1571,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/UmbilicalTower/scripts.inc"
 	.include "data/maps/UmbilicalTower/text.inc"
+
+	.include "data/maps/DebugSidewayStair/scripts.inc"
+	.include "data/maps/DebugSidewayStair/text.inc"

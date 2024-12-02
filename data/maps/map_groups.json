@@ -61,7 +61,8 @@
     "ForsakenTombB6F",
     "ForsakenTombB7F",
     "ForsakenTombB8F",
-    "ForsakenTombB9F"
+    "ForsakenTombB9F",
+    "DebugSidewayStair"
   ],
   "gMapGroup_Dungeons": [
     "ViridianForest",
