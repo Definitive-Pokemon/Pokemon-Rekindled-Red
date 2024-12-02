@@ -86,7 +86,7 @@ ElmsLab_Text_Notice2::
 	.string "know about this phenomenon,\p"
 	.string "in other regions, POKéMON are known\n"
 	.string "to lay EGGs when paired together.\p"
-	.string "Such an EGG will hatch into a newborn\n"
-	.string "POKéMON.\p"
+	.string "Such an EGG will hatch into a\n"
+	.string "newborn POKéMON.\p"
 	.string "Further research pending.$"
 	
