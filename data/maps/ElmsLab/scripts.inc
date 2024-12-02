@@ -81,6 +81,12 @@ ElmsLab_Text_Notice1::
 	.string "but it should increase the odds.$"
 
 ElmsLab_Text_Notice2::
-	.string "Regarding \p"
-	.string "$"
+	.string "Regarding EGGs\p"
+	.string "Though the KANTO region does not\n"
+	.string "know about this phenomenon,\p"
+	.string "in other regions, POKéMON are known\n"
+	.string "to lay EGGs when paired together.\p"
+	.string "Such an EGG will hatch into a newborn\n"
+	.string "POKéMON.\p"
+	.string "Further research pending.$"
 	
