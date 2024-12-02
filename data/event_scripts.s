@@ -1571,3 +1571,18 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/UmbilicalTower/scripts.inc"
 	.include "data/maps/UmbilicalTower/text.inc"
+
+	.include "data/maps/EthansHouse/scripts.inc"
+	.include "data/maps/EthansHouse/text.inc"
+
+	.include "data/maps/EthansHouse2F/scripts.inc"
+	.include "data/maps/EthansHouse2F/text.inc"
+
+	.include "data/maps/LyrasHouse/scripts.inc"
+	.include "data/maps/LyrasHouse/text.inc"
+
+	.include "data/maps/LyrasHouse2F/scripts.inc"
+	.include "data/maps/LyrasHouse2F/text.inc"
+
+	.include "data/maps/NewBarkHouse/scripts.inc"
+	.include "data/maps/NewBarkHouse/text.inc"

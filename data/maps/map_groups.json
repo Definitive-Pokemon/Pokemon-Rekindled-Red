@@ -389,7 +389,12 @@
     "Route26WeekSisters",
     "Route26OldHealer",
     "Route27HappinessHouse",
-    "ElmsLab"
+    "ElmsLab",
+    "EthansHouse",
+    "EthansHouse2F",
+    "LyrasHouse",
+    "LyrasHouse2F",
+    "NewBarkHouse"
   ],
   "gMapGroup_IndoorViridian": [
     "ViridianCity_House",

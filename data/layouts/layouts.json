@@ -5616,6 +5616,66 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/UmbilicalTower/border.bin",
       "blockdata_filepath": "data/layouts/UmbilicalTower/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETHANS_HOUSE",
+      "name": "EthansHouse_Layout",
+      "width": 11,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EthansHouse/border.bin",
+      "blockdata_filepath": "data/layouts/EthansHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_ETHANS_HOUSE2F",
+      "name": "EthansHouse2F_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/EthansHouse2F/border.bin",
+      "blockdata_filepath": "data/layouts/EthansHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LYRAS_HOUSE",
+      "name": "LyrasHouse_Layout",
+      "width": 11,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/LyrasHouse/border.bin",
+      "blockdata_filepath": "data/layouts/LyrasHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_LYRAS_HOUSE2F",
+      "name": "LyrasHouse2F_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/LyrasHouse2F/border.bin",
+      "blockdata_filepath": "data/layouts/LyrasHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_BARK_HOUSE",
+      "name": "NewBarkHouse_Layout",
+      "width": 9,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PewterGym",
+      "border_filepath": "data/layouts/NewBarkHouse/border.bin",
+      "blockdata_filepath": "data/layouts/NewBarkHouse/map.bin"
     }
   ]
 }

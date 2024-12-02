@@ -34,3 +34,27 @@ NewBarkTown_Text_NewBark::
 
 NewBarkTown_Text_ElmsLab::
     .string "PROFESSOR ELM's LAB$"
+
+NewBarkTown_EventScript_Man::
+	lock
+	faceplayer
+	msgbox NewBarkTown_Text_Man
+	release
+	end
+
+NewBarkTown_Text_Man::
+	.string "Yo, stranger!\p"
+	.string "I hear PROFESSOR ELM discovered some\n"
+	.string "new type of POKéMON.$"
+
+NewBarkTown_EventScript_Woman::
+	lock
+	faceplayer
+	msgbox NewBarkTown_Text_Woman
+	release
+	end
+
+NewBarkTown_Text_Woman::
+	.string "I like your BAG!\p"
+	.string "It looks more modern than any BAG\n"
+	.string "we got in JOHTO.$"
