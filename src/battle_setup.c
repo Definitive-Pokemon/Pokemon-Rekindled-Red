@@ -1274,7 +1274,7 @@ void PlayTrainerEncounterMusic(void)
             music = MUS_ENCOUNTER_BOY;
             break;
         case TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR:
-			music = MUS_ENCOUNTER_ELITE_FOUR
+			music = MUS_ENCOUNTER_ELITE_FOUR;
             break;
         default:
             music = MUS_ENCOUNTER_ROCKET;
