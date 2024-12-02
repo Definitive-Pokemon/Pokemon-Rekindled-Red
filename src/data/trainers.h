@@ -420,7 +420,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = ITEM_CUSTOM_MOVES(sParty_Leaf),
+        .party = ITEM_CUSTOM_MOVES(sParty_Green),
     },
     [TRAINER_LEADER_GIOVANNI_MEWTWO] = {
         .trainerClass = TRAINER_CLASS_LEADER,

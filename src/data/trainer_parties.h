@@ -101,7 +101,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderLtSurgeRematchChallen
 };
 
 static const struct TrainerMonItemCustomMoves sParty_LeaderErikaRematch[] = {
-    },
+    {
         .iv = 255,
         .lvl = 71,
         .species = SPECIES_JUMPLUFF,
@@ -125,7 +125,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderErikaRematch[] = {
         .abilityNum = 0,
         .moves = {MOVE_SURF, MOVE_LEECH_SEED, MOVE_ICE_BEAM, MOVE_RAIN_DANCE},
     },
-    {{
+    {
         .iv = 255,
         .lvl = 71,
         .species = SPECIES_BLISSEY,
