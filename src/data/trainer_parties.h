@@ -14225,7 +14225,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMistyRematch[] = {
         .species = SPECIES_SWAMPERT,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
-        .moves = {MOVE_CURSE, MOVE_EARTHQUAKE, MOVE_SURF, MOVE_REST},
+        .moves = {MOVE_ICE_BEAM, MOVE_EARTHQUAKE, MOVE_SURF, MOVE_PROTECT},
     },
     {
         .iv = 255,
