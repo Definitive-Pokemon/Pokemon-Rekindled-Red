@@ -1003,7 +1003,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderDaisy[] = {
 static const struct TrainerMonItemCustomMoves sParty_LeaderGiovanniRematch[] = {
     {
         .iv = 255,
-        .lvl = 82,
+        .lvl = 87,
         .species = SPECIES_FLYGON,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 1,
@@ -1011,7 +1011,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderGiovanniRematch[] = {
     },
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 88,
         .species = SPECIES_SKARMORY,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -1019,7 +1019,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderGiovanniRematch[] = {
     },
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 88,
         .species = SPECIES_SLAKING,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -1027,7 +1027,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderGiovanniRematch[] = {
     },
     {
         .iv = 255,
-        .lvl = 82,
+        .lvl = 87,
         .species = SPECIES_GENGAR,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -1035,7 +1035,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderGiovanniRematch[] = {
     },
     {
         .iv = 255,
-        .lvl = 85,
+        .lvl = 90,
         .species = SPECIES_SWAMPERT,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -1043,7 +1043,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderGiovanniRematch[] = {
     },
     {
         .iv = 255,
-        .lvl = 85,
+        .lvl = 90,
         .species = SPECIES_TYRANITAR,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -1559,46 +1559,46 @@ static const struct TrainerMonItemCustomMoves sParty_David[] = {
     },
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Duke[] = {
+static const struct TrainerMonItemCustomMoves sParty_Red[] = {
     {
         .iv = 255,
-        .lvl = 30,
-        .species = SPECIES_WYNAUT,
+        .lvl = 94,
+        .species = SPECIES_PIKACHU,
 		.heldItem = ITEM_LEFTOVERS,
         .moves = {MOVE_SPLASH, MOVE_ENCORE, MOVE_NONE, MOVE_NONE},
     },
     {
         .iv = 255,
         .lvl = 40,
-        .species = SPECIES_WOBBUFFET,
+        .species = SPECIES_VENUSAUR,
 		.heldItem = ITEM_LEFTOVERS,
         .moves = {MOVE_ENCORE, MOVE_MIRROR_COAT, MOVE_COUNTER, MOVE_SAFEGUARD},
     },
     {
         .iv = 255,
         .lvl = 50,
-        .species = SPECIES_WOBBUFFET,
+        .species = SPECIES_CHARIZARD,
 		.heldItem = ITEM_LEFTOVERS,
         .moves = {MOVE_MIRROR_COAT, MOVE_DESTINY_BOND, MOVE_COUNTER, MOVE_ENCORE},
     },
     {
         .iv = 255,
         .lvl = 60,
-        .species = SPECIES_WOBBUFFET,
+        .species = SPECIES_BLASTOISE,
 		.heldItem = ITEM_LEFTOVERS,
         .moves = {MOVE_ENCORE, MOVE_SAFEGUARD, MOVE_MIRROR_COAT, MOVE_COUNTER},
     },
     {
         .iv = 255,
         .lvl = 70,
-        .species = SPECIES_WOBBUFFET,
+        .species = SPECIES_ESPEON,
 		.heldItem = ITEM_LEFTOVERS,
         .moves = {MOVE_COUNTER, MOVE_SAFEGUARD, MOVE_MIRROR_COAT, MOVE_DESTINY_BOND},
     },
     {
         .iv = 255,
-        .lvl = 80,
-        .species = SPECIES_WOBBUFFET,
+        .lvl = 95,
+        .species = SPECIES_SNORLAX,
 		.heldItem = ITEM_LEFTOVERS,
         .moves = {MOVE_COUNTER, MOVE_MIRROR_COAT, MOVE_DESTINY_BOND, MOVE_ENCORE},
     },
