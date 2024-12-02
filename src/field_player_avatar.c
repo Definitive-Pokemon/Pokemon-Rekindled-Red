@@ -81,8 +81,6 @@ static void PlayerAvatarTransition_Underwater(struct ObjectEvent * playerObject)
 static void PlayerAvatarTransition_ReturnToField(struct ObjectEvent * playerObject);
 static bool8 PlayerIsAnimActive(void);
 static bool8 PlayerCheckIfAnimFinishedOrInactive(void);
-static void PlayerWalkSlow(u8 direction);
-static void PlayerRunSlow(u8 direction);
 static bool8 PlayerAnimIsMultiFrameStationary(void);
 static bool8 PlayerAnimIsMultiFrameStationaryAndStateNotTurning(void);
 static void PlayCollisionSoundIfNotFacingWarp(u8 direction);
