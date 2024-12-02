@@ -81,7 +81,7 @@ static const u16 sDexAreas_Kanto[][2] = {
     { MAPSEC_ROUTE_26,            DEX_AREA_ROUTE_26 },
     { MAPSEC_ROUTE_27,            DEX_AREA_ROUTE_27 },
     { MAPSEC_TOHJO_FALLS,         DEX_AREA_TOHJO_FALLS },
-    { MAPSEC_ROUTE_28,            DEX_AREA_ROUTE_28 },
+    { MAPSEC_MT_SILVER_PATH,      DEX_AREA_ROUTE_28 },
     { MAPSEC_MT_SILVER,           DEX_AREA_MT_SILVER },
     { MAPSEC_MT_SILVER_CAVE,      DEX_AREA_MT_SILVER_CAVE }
 };
