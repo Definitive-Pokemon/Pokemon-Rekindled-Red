@@ -17,4 +17,4 @@ LyrasHouse_Text_Dad::
 	.string "I can't say the same about her\n"
 	.string " best friend, ETHAN.\p"
 	.string "Everyone in town speaks about\n"
-	.string "his troublemaking.$
+	.string "his troublemaking.$"
