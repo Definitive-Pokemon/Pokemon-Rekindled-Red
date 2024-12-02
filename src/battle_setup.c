@@ -1268,11 +1268,13 @@ void PlayTrainerEncounterMusic(void)
         case TRAINER_ENCOUNTER_MUSIC_INTENSE:
         case TRAINER_ENCOUNTER_MUSIC_COOL:
         case TRAINER_ENCOUNTER_MUSIC_SWIMMER:
-        case TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR:
         case TRAINER_ENCOUNTER_MUSIC_HIKER:
         case TRAINER_ENCOUNTER_MUSIC_INTERVIEWER:
         case TRAINER_ENCOUNTER_MUSIC_RICH:
             music = MUS_ENCOUNTER_BOY;
+            break;
+        case TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR:
+			music = MUS_ENCOUNTER_ELITE_FOUR
             break;
         default:
             music = MUS_ENCOUNTER_ROCKET;

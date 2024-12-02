@@ -42,9 +42,9 @@
 #define TRAINER_MARKYOUNG                         38
 #define TRAINER_SAMMY                             39
 #define TRAINER_DAVID                             40
-#define TRAINER_DUKE                              41
-#define TRAINER_RUNNING_TRIATHLETE_M              42
-#define TRAINER_RUNNING_TRIATHLETE_F              43
+#define TRAINER_RED                               41
+#define TRAINER_GREEN                             42
+#define TRAINER_LEADER_GIOVANNI_MEWTWO            43
 #define TRAINER_SWIMMING_TRIATHLETE_M             44
 #define TRAINER_SWIMMING_TRIATHLETE_F             45
 #define TRAINER_DRAGON_TAMER                      46
