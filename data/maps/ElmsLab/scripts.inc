@@ -59,8 +59,8 @@ ElmsLab_Text_ElmHow::
 	.string "still take a long time before you\p"
 	.string "manage to encounter one.\p"
 	.string "I'd encourage you to not give up,\n"
-	.string "but as a CHAMPION, you surely must\p"
-	.string "have a full schedule, am I right?$"
+	.string "but as a CHAMPION, you must have\p"
+	.string "a full schedule, am I right?$"
 
 ElmsLab_EventScript_AideFullRestores::
 	lock
