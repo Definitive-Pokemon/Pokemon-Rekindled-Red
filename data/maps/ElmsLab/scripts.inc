@@ -58,9 +58,9 @@ ElmsLab_Text_ElmHow::
 	.string "Even with the SHINY RADAR, it might\n"
 	.string "still take a long time before you\p"
 	.string "manage to encounter one.\p"
-	.string "I'd encourage you to not give up, but\n"
-	.string "as a CHAMPION, you surely must have\p"
-	.string "a full schedule, am I right?$"
+	.string "I'd encourage you to not give up,\n"
+	.string "but as a CHAMPION, you surely must\p"
+	.string "have a full schedule, am I right?$"
 
 ElmsLab_EventScript_AideFullRestores::
 	lock

@@ -3638,7 +3638,7 @@
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A tool that can detect SHINY POKéMON.\\nIt increases the odds of finding\\nSHINY POKéMON by 16 times.",
+      "description_english": "A tool that detects SHINY POKéMON.\\nIt increases the odds of finding\\nSHINY POKéMON by 16 times.",
       "importance": 1,
       "registrability": 1,
       "pocket": "POCKET_KEY_ITEMS",
