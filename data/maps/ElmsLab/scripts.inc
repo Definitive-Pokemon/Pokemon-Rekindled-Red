@@ -65,45 +65,14 @@ ElmsLab_Text_ElmHow::
 ElmsLab_EventScript_AideFullRestores::
 	lock
 	faceplayer
-	compare VAR_RENEWABLE_ITEM_STEP_COUNTER, 1500
-	goto_if_lt ElmsLab_EventScript_ComeBackLater
 	msgbox ElmsLab_Text_AideFullRestores, MSGBOX_NPC
-	closemessage
-	checkitemspace ITEM_FULL_RESTORE
-	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
-	giveitem_msg ElmsLab_Text_ReceivedFullRestores, ITEM_FULL_RESTORE, 5
-	setvar VAR_RENEWABLE_ITEM_STEP_COUNTER, 0
 	release
 	end
 
 ElmsLab_Text_AideFullRestores::
-	.string "Hello, you're not from here,\n"
+	.string "You're not from here,\n"
 	.string "are you?\p"
-	.string "Your POKéMON seem very powerful!\n"
-	.string "I think you could use these.$"
-
-ElmsLab_Text_ReceivedFullRestores::
-	.string "{PLAYER} received five FULL RESTORES\n"
-	.string "from ELM's AIDE!$"
-
-ElmsLab_EventScript_ComeBackLater::
-	msgbox ElmsLab_Text_ComeBackLater, MSGBOX_NPC
-	release
-	end
-
-ElmsLab_Text_ComeBackLater::
-	.string "I don't have any FULL RESTORES left\n"
-	.string "at this point.\p"
-	.string "Please come back another time.\n"
-	.string "The LAB will have more supplies then.$"
-
-ElmsLab_EventScript_Heal::
-	msgbox ElmsLab_Text_YouShouldTakeQuickRest MSGBOX_NPC
-	closemessage
-	call EventScript_OutOfCenterPartyHeal
-	msgbox ElmsLab_Text_LookingGreatTakeCare MSGBOX_NPC
-	release
-	end
+	.string "Your POKéMON seem very powerful!$"
 
 ElmsLab_Text_YouShouldTakeQuickRest::
 	.string "{PLAYER} used the machine\n"
@@ -111,7 +80,7 @@ ElmsLab_Text_YouShouldTakeQuickRest::
 
 ElmsLab_Text_LookingGreatTakeCare::
 	.string "{PLAYER}'s POKéMON are\n"
-	.string "fully healed.$"
+	.string "restored to full health.$"
 
 ElmsLab_EventScript_Notice1::
 	msgbox ElmsLab_Text_Notice1, MSGBOX_SIGN

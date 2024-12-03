@@ -80,6 +80,7 @@ EventScript_AfterWhiteOutElmHeal::
 	msgbox ElmsLab_Text_YouShouldTakeQuickRest
 	call EventScript_OutOfCenterPartyHeal
 	msgbox ElmsLab_Text_LookingGreatTakeCare
+	closemessage
 	fadedefaultbgm
 	applymovement LOCALID_ELM, Movement_ElmFacingYou
 	waitmovement 0
