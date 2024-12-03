@@ -2229,7 +2229,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
 void CreateMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 nature)
 {
     u32 personality;
-    if (FALSE)
+    if (CheckBagHasItem(ITEM_SHINY_RADAR, 1))
     {
         u32 shinyValue = 0xFFFFFFFF;
         s16 rerolls = -1;
