@@ -555,39 +555,18 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (heldKeys & B_BUTTON || FlagGet(FLAG_AUTO_RUN_TOGGLED))
         && !IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior))
     {
-        //if running
-        if (PlayerIsMovingOnRockStairs(direction))
+        if(heldKeys & B_BUTTON && FlagGet(FLAG_AUTO_RUN_TOGGLED))
         {
-            if(heldKeys & B_BUTTON && FlagGet(FLAG_AUTO_RUN_TOGGLED))
-            {
-                //autorun toggled but B pressed, walk
-                PlayerWalkSlow(direction);
-            }
-            else
-            {
-                if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
-                    PlayerRunSlow(direction);
-                else
-                    PlayerRun(direction);
-                gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
-            }
+            //autorun toggled but B pressed, walk
+            PlayerWalkSlow(direction);
         }
         else
         {
-            if(heldKeys & B_BUTTON && FlagGet(FLAG_AUTO_RUN_TOGGLED))
-            {
-                //autorun toggled but B pressed, walk
-                if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
-                    PlayerWalkSlow(direction);
-                else
-                    PlayerWalkNormal(direction);
-            }
+            if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
+                PlayerRunSlow(direction);
             else
             {
-                if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
-                    PlayerRunSlow(direction);
-                else
-                    PlayerRun(direction);
+                PlayerRun(direction);
                 gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
             }
         }
