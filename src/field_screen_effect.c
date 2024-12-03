@@ -507,6 +507,7 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
     case 9:
         if (FieldFadeTransitionBackgroundEffectIsFinished() == TRUE)
         {
+            DestroyTask(taskId);
             ScriptContext_SetupScript(EventScript_AfterWhiteOutElmHeal);
         }
         break;
