@@ -3338,6 +3338,8 @@ extern const u32 gItemIcon_LinkBracelet[];
 extern const u32 gItemIconPalette_LinkBracelet[];
 extern const u32 gItemIcon_RainbowWing[];
 extern const u32 gItemIconPalette_RainbowWing[];
+extern const u32 gItemIcon_ShinyRadar[];
+extern const u32 gItemIconPalette_ShinyRadar[];
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u32 gItemIconPalette_ReturnToFieldArrow[];
 

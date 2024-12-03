@@ -8,6 +8,61 @@ ElmsLab_EventScript_OnTransition::
     setrespawn SPAWN_NEW_BARK_TOWN
 	end
 
+ElmsLab_EventScript_Elm::
+	lock
+	faceplayer
+	checkitem ITEM_SHINY_RADAR, 1
+	compare VAR_RESULT, TRUE
+	goto_if_lt ElmsLab_EventScript_Nothing
+	msgbox ElmsLab_Text_ElmShinyRadar
+	closemessage
+	giveitem_msg PalletTown_ElmsLab_Text_ReceivedShinyRadar, ITEM_SHINY_RADAR, 1
+	msgbox ElmsLab_Text_ElmAfter
+	release
+	end
+
+ElmsLab_Text_ElmShinyRadar::
+	.string "Heya!\n"
+	.string "You must be {PLAYER}!\p"
+	.string "PROFESSOR OAK has told me all\n"
+	.string "about you!\p"
+	.string "Say, how about helping me out\n"
+	.string "with my research?\p"
+	.string "All you need is this little radar.$"
+
+ElmsLab_Text_ReceivedShinyRadar::
+	.string "{PLAYER} received the SHINY RADAR\n"
+	.string "from PROFESSOR ELM!$"
+
+ElmsLab_Text_ElmAfter::
+	.string "This SHINY RADAR will help you\n"
+	.string "with finding SHINY POKéMON.\p"
+	.string "SHINY POKéMON are strange variations of\n"
+	.string "familiar species, sporting a unique\p"
+	.string "color scheme.\p"
+	.string "I hung up a note all about it\n"
+	.string "right behind me!\p"
+	.string "You would help me tremendously\n"
+	.string "simply by finding SHINY POKéMON\p"
+	.string "of all sorts.$"
+
+ElmsLab_EventScript_Nothing::
+	msgbox ElmsLab_Text_ElmHow MSGBOX_NPC
+	release
+	end
+
+ElmsLab_Text_ElmHow::
+	.string "Hi, {PLAYER}!\n"
+	.string "How is it going?\p"
+	.string "Have you been catching some\n"
+	.string "SHINY POKéMON?\p"
+	.string "Even with the SHINY RADAR, it might\n"
+	.string "still take a long time before you\p"
+	.string "manage to encounter one.\p"
+	.string "I'd encourage you to not give up, but\n"
+	.string "as a CHAMPION, you surely must have\p"
+	.string "a full schedule, am I right?$"
+
 ElmsLab_EventScript_AideFullRestores::
 	lock
 	faceplayer
