@@ -724,5 +724,5 @@ const u32 gItemIconPalette_LinkBracelet[] = INCBIN_U32("graphics/items/icon_pale
 const u32 gItemIcon_RainbowWing[] = INCBIN_U32("graphics/items/icons/rainbow_wing.4bpp.lz");
 const u32 gItemIconPalette_RainbowWing[] = INCBIN_U32("graphics/items/icon_palettes/rainbow_wing.gbapal.lz");
 
-const u32 gItemIcon_RainbowWing[] = INCBIN_U32("graphics/items/icons/shiny_radar.4bpp.lz");
-const u32 gItemIconPalette_RainbowWing[] = INCBIN_U32("graphics/items/icon_palettes/shiny_radar.gbapal.lz");
+const u32 gItemIcon_ShinyRadar[] = INCBIN_U32("graphics/items/icons/shiny_radar.4bpp.lz");
+const u32 gItemIconPalette_ShinyRadar[] = INCBIN_U32("graphics/items/icon_palettes/shiny_radar.gbapal.lz");
