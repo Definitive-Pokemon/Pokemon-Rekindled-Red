@@ -81,8 +81,29 @@ EventScript_AfterWhiteOutElmHeal::
 	call EventScript_OutOfCenterPartyHeal
 	msgbox ElmsLab_Text_LookingGreatTakeCare
 	fadedefaultbgm
+	applymovement LOCALID_ELM, Movement_ElmFacingYou
+	waitmovement 0
+	textcolor 0
+	msgbox ElmsLab_Text_Heyy
+	closemessage
+	applymovement LOCALID_ELM, Movement_ElmFacingAway
+	waitmovement 0
 	releaseall
 	end
+
+Movement_ElmFacingYou::
+	walk_in_place_left
+	step_end
+
+Movement_ElmFacingAway::
+	face_down
+	step_end
+
+ElmsLab_Text_Heyy::
+	.string "Hey, it's {PLAYER}!\p"
+	.string "I guess even a CHAMPION still loses\n"
+	.string "battles occasionally.\p"
+	.string "Please be more careful from here on!$"
 
 EventScript_NuzlockeGameOver::
 	lockall

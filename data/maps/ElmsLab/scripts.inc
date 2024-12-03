@@ -1,3 +1,5 @@
+.equ LOCALID_ELM,    1
+
 ElmsLab_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, ElmsLab_EventScript_OnTransition
 	.byte 0
