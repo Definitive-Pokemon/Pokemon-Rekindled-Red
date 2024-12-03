@@ -62,6 +62,14 @@ ElmsLab_Text_ElmHow::
 	.string "but as a CHAMPION, you must have\p"
 	.string "a full schedule, am I right?$"
 
+ElmsLab_EventScript_Heal::
+	msgbox ElmsLab_Text_YouShouldTakeQuickRest MSGBOX_NPC
+	closemessage
+	call EventScript_OutOfCenterPartyHeal
+	msgbox ElmsLab_Text_LookingGreatTakeCare MSGBOX_NPC
+	release
+	end
+
 ElmsLab_EventScript_AideFullRestores::
 	lock
 	faceplayer
