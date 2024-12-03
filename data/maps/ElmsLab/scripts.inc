@@ -16,7 +16,7 @@ ElmsLab_EventScript_Elm::
 	goto_if_lt ElmsLab_EventScript_Nothing
 	msgbox ElmsLab_Text_ElmShinyRadar
 	closemessage
-	giveitem_msg PalletTown_ElmsLab_Text_ReceivedShinyRadar, ITEM_SHINY_RADAR, 1
+	giveitem_msg ElmsLab_Text_ReceivedShinyRadar, ITEM_SHINY_RADAR, 1
 	msgbox ElmsLab_Text_ElmAfter
 	release
 	end
@@ -72,7 +72,7 @@ ElmsLab_EventScript_AideFullRestores::
 	closemessage
 	checkitemspace ITEM_FULL_RESTORE
 	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
-	giveitem_msg PalletTown_ElmsLab_Text_ReceivedFullRestores, ITEM_FULL_RESTORE, 5
+	giveitem_msg ElmsLab_Text_ReceivedFullRestores, ITEM_FULL_RESTORE, 5
 	setvar VAR_RENEWABLE_ITEM_STEP_COUNTER, 0
 	release
 	end
@@ -83,7 +83,7 @@ ElmsLab_Text_AideFullRestores::
 	.string "Your POKéMON seem very powerful!\n"
 	.string "I think you could use these.$"
 
-PalletTown_ElmsLab_Text_ReceivedFullRestores::
+ElmsLab_Text_ReceivedFullRestores::
 	.string "{PLAYER} received five FULL RESTORES\n"
 	.string "from ELM's AIDE!$"
 
