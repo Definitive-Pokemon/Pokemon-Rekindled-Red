@@ -1101,6 +1101,7 @@ extern const u8 gText_RegionMap_AreaDesc_TohjoFalls[];
 // field_screen_effect
 extern const u8 gText_PlayerScurriedToCenter[];
 extern const u8 gText_PlayerScurriedBackHome[];
+extern const u8 gText_PlayerWhitesOutToElm[];
 
 // save_failed_screen
 extern const u8 gText_SaveFailedCheckingBackup[];
