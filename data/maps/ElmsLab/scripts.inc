@@ -12,8 +12,7 @@ ElmsLab_EventScript_Elm::
 	lock
 	faceplayer
 	checkitem ITEM_SHINY_RADAR, 1
-	compare VAR_RESULT, TRUE
-	goto_if_lt ElmsLab_EventScript_Nothing
+	goto_if_eq VAR_RESULT, TRUE, ElmsLab_EventScript_Nothing
 	msgbox ElmsLab_Text_ElmShinyRadar
 	closemessage
 	giveitem_msg ElmsLab_Text_ReceivedShinyRadar, ITEM_SHINY_RADAR, 1
