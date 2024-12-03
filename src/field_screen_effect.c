@@ -419,7 +419,7 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
             gTasks[taskId].tState = 7;
         break;
     case 7:
-        if (PrintWhiteOutRecoveryMessage(taskId, gText_PlayerWhitesOutToElm, 2, 8))
+        if (PrintWhiteOutRecoveryMessage(taskId, gText_PlayerWhitesOutToElm, 8, 8))
         {
             ObjectEventTurn(&gObjectEvents[gPlayerAvatar.objectEventId], DIR_NORTH);
             gTasks[taskId].tState++;
