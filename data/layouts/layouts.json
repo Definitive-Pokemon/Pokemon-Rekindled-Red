@@ -5469,7 +5469,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RockTunnel",
       "border_filepath": "data/layouts/MtSilverCave1/border.bin",
       "blockdata_filepath": "data/layouts/MtSilverCave1/map.bin"
     },
