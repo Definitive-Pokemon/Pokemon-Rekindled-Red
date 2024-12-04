@@ -5488,8 +5488,8 @@
     {
       "id": "LAYOUT_MT_SILVER_OUTDOOR1",
       "name": "MtSilverOutdoor1_Layout",
-      "width": 27,
-      "height": 47,
+      "width": 26,
+      "height": 45,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -5676,6 +5676,42 @@
       "secondary_tileset": "gTileset_PewterGym",
       "border_filepath": "data/layouts/NewBarkHouse/border.bin",
       "blockdata_filepath": "data/layouts/NewBarkHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SILVER_ITEM_ROOM",
+      "name": "MtSilverItemRoom_Layout",
+      "width": 11,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RockTunnel",
+      "border_filepath": "data/layouts/MtSilverItemRoom/border.bin",
+      "blockdata_filepath": "data/layouts/MtSilverItemRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SILVER_LEGEND",
+      "name": "MtSilverLegend_Layout",
+      "width": 21,
+      "height": 17,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RockTunnel",
+      "border_filepath": "data/layouts/MtSilverLegend/border.bin",
+      "blockdata_filepath": "data/layouts/MtSilverLegend/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SILVER_CAVE2",
+      "name": "MtSilverCave2_Layout",
+      "width": 41,
+      "height": 32,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RockTunnel",
+      "border_filepath": "data/layouts/MtSilverCave2/border.bin",
+      "blockdata_filepath": "data/layouts/MtSilverCave2/map.bin"
     }
   ]
 }

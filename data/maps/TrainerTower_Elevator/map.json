@@ -2,7 +2,7 @@
   "id": "MAP_TRAINER_TOWER_ELEVATOR",
   "name": "TrainerTower_Elevator",
   "layout": "LAYOUT_TRAINER_TOWER_ELEVATOR",
-  "music": "MUS_B_DOME_LOBBY",
+  "music": "MUS_B_FACTORY",
   "region_map_section": "MAPSEC_TRAINER_TOWER_2",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -13,8 +13,10 @@
   "show_map_name": false,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
-  "object_events": [],
+  "connections": 0,
+  "object_events": [
+
+  ],
   "warp_events": [
     {
       "x": 2,
@@ -24,7 +26,9 @@
       "dest_warp_id": "WARP_ID_DYNAMIC"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -35,5 +39,5 @@
       "script": "TrainerTower_Elevator_EventScript_FloorSelect"
     }
   ],
-	"level_scaling": "0"
+  "level_scaling": "0"
 }

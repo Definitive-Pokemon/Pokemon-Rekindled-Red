@@ -630,14 +630,17 @@
 #define MAP_BATTLE_FRONTIER_LOUNGE8                 (21 | (43 << 8))
 
 // gMapGroup_MtSilverArea
-#define MAP_ROUTE28            (0 | (44 << 8))
-#define MAP_MT_SILVER          (1 | (44 << 8))
-#define MAP_MT_SILVER_CAVE1    (2 | (44 << 8))
-#define MAP_MT_SILVER_GATE     (3 | (44 << 8))
-#define MAP_MT_SILVER_OUTDOOR1 (4 | (44 << 8))
-#define MAP_TOHJO_FALLS        (5 | (44 << 8))
-#define MAP_TOHJO_FALLS_SECRET (6 | (44 << 8))
-#define MAP_UMBILICAL_TOWER    (7 | (44 << 8))
+#define MAP_ROUTE28             (0 | (44 << 8))
+#define MAP_MT_SILVER           (1 | (44 << 8))
+#define MAP_MT_SILVER_CAVE1     (2 | (44 << 8))
+#define MAP_MT_SILVER_GATE      (3 | (44 << 8))
+#define MAP_MT_SILVER_OUTDOOR1  (4 | (44 << 8))
+#define MAP_TOHJO_FALLS         (5 | (44 << 8))
+#define MAP_TOHJO_FALLS_SECRET  (6 | (44 << 8))
+#define MAP_UMBILICAL_TOWER     (7 | (44 << 8))
+#define MAP_MT_SILVER_ITEM_ROOM (8 | (44 << 8))
+#define MAP_MT_SILVER_LEGEND    (9 | (44 << 8))
+#define MAP_MT_SILVER_CAVE2     (10 | (44 << 8))
 
 #define MAP_GROUPS_COUNT 45
 

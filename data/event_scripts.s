@@ -1586,3 +1586,12 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/NewBarkHouse/scripts.inc"
 	.include "data/maps/NewBarkHouse/text.inc"
+
+	.include "data/maps/MtSilverItemRoom/scripts.inc"
+	.include "data/maps/MtSilverItemRoom/text.inc"
+
+	.include "data/maps/MtSilverLegend/scripts.inc"
+	.include "data/maps/MtSilverLegend/text.inc"
+
+	.include "data/maps/MtSilverCave2/scripts.inc"
+	.include "data/maps/MtSilverCave2/text.inc"

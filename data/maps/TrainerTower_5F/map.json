@@ -2,7 +2,7 @@
   "id": "MAP_TRAINER_TOWER_5F",
   "name": "TrainerTower_5F",
   "layout": "LAYOUT_TRAINER_TOWER_5F",
-  "music": "MUS_B_DOME",
+  "music": "MUS_B_FACTORY",
   "region_map_section": "MAPSEC_TRAINER_TOWER_2",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -13,7 +13,7 @@
   "show_map_name": false,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "type": "object",
@@ -138,6 +138,8 @@
       "script": "TrainerTower_EventScript_DoubleBattleTriggerBottom"
     }
   ],
-  "bg_events": [],
-	"level_scaling": "0"
+  "bg_events": [
+
+  ],
+  "level_scaling": "0"
 }

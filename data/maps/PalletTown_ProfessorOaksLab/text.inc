@@ -102,19 +102,19 @@ PalletTown_ProfessorOaksLab_Text_OakHeyDontGoAwayYet::
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingCharmander::
     .string "Ah! ELEKID is your choice.\n"
-    .string "You should raise it patiently.\p"
+    .string "It has a lot of flare.\p"
     .string "So, {PLAYER}, you're claiming the\n"
     .string "ELECTRIC POKéMON ELEKID?$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingSquirtle::
     .string "Hm! SMOOCHUM is your choice.\n"
-    .string "It's one worth raising.\p"
+    .string "SMOOCHUM is a cool, fun POKéMON.\p"
     .string "So, {PLAYER}, you've decided on the\n"
     .string "ICE POKéMON SMOOCHUM?$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur::
     .string "I see! MAGBY is your choice.\n"
-    .string "It's very easy to raise.\p"
+    .string "It's certainly fiery. Oho!\p"
     .string "So, {PLAYER}, you want to go with\n"
     .string "the FIRE POKéMON MAGBY?$"
 
