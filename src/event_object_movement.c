@@ -918,10 +918,10 @@ static const u8 sRunningDirectionAnimNums[] = {
     [DIR_NORTH]     = ANIM_RUN_NORTH,
     [DIR_WEST]      = ANIM_RUN_WEST,
     [DIR_EAST]      = ANIM_RUN_EAST,
-    [DIR_SOUTHWEST] = ANIM_RUN_SOUTH,
-    [DIR_SOUTHEAST] = ANIM_RUN_SOUTH,
-    [DIR_NORTHWEST] = ANIM_RUN_NORTH,
-    [DIR_NORTHEAST] = ANIM_RUN_NORTH,
+    [DIR_SOUTHWEST] = ANIM_RUN_WEST,
+    [DIR_SOUTHEAST] = ANIM_RUN_EAST,
+    [DIR_NORTHWEST] = ANIM_RUN_WEST,
+    [DIR_NORTHEAST] = ANIM_RUN_EAST,
 };
 
 static const u8 sTrainerFacingDirectionMovementTypes[] = {
