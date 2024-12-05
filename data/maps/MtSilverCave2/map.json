@@ -154,8 +154,43 @@
       "x": 20,
       "y": 1,
       "elevation": 0,
-      "dest_map": "",
+      "dest_map": "MAP_MT_SILVER_OUTDOOR2",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 38,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_MT_SILVER_OUTDOOR2",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 38,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_MT_SILVER_OUTDOOR2",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 38,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_MT_SILVER_OUTDOOR2",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 34,
+      "y": 30,
+      "elevation": 0,
+      "dest_map": "MAP_MT_SILVER_OUTDOOR2",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "elevation": 0,
+      "dest_map": "MAP_MT_SILVER_OUTDOOR2",
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [
