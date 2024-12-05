@@ -235,5 +235,11 @@ u8 GetJumpSpecialWithEffectMovementAction(u32 direction);
 u8 GetFishingBiteDirectionAnimNum(u8 direction);
 void TrySpawnObjectEvents(s16 cameraX, s16 cameraY);
 void ResetObjectEvents(void);
+u8 GetObjectEventIdByLocalId(u8 localId);
+
+//sideways stairs
+u8 GetSidewaysStairsToRightDirection(s16, s16, u8);
+u8 GetSidewaysStairsToLeftDirection(s16, s16, u8);
+u8 GetSidewaysStairsCollision(struct ObjectEvent *objectEvent, u8 dir, u8 currentBehavior, u8 nextBehavior, u8 collision);
 
 #endif // GUARD_EVENT_OBJECT_MOVEMENT_H

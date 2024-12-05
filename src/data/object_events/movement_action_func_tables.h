@@ -286,6 +286,11 @@ static bool8 MovementAction_JumpSpecialWithEffectRight_Step0(struct ObjectEvent 
 static bool8 MovementAction_JumpSpecialWithEffectRight_Step1(struct ObjectEvent *, struct Sprite *);
 static bool8 MovementAction_WaitSpriteAnim(struct ObjectEvent *, struct Sprite *);
 static bool8 MovementAction_Finish(struct ObjectEvent *, struct Sprite *);
+static bool8 MovementActionFunc_RunSlowDown_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool8 MovementActionFunc_RunSlowUp_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool8 MovementActionFunc_RunSlowLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool8 MovementActionFunc_RunSlowRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite);
+static bool8 MovementActionFunc_RunSlow_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite);
 
 static bool8 (*const sMovementActionFuncs_FaceDown[])(struct ObjectEvent *, struct Sprite *);
 static bool8 (*const sMovementActionFuncs_FaceUp[])(struct ObjectEvent *, struct Sprite *);
@@ -457,6 +462,11 @@ static bool8 (*const sMovementActionFuncs_JumpSpecialWithEffectDown[])(struct Ob
 static bool8 (*const sMovementActionFuncs_JumpSpecialWithEffectUp[])(struct ObjectEvent *, struct Sprite *);
 static bool8 (*const sMovementActionFuncs_JumpSpecialWithEffectLeft[])(struct ObjectEvent *, struct Sprite *);
 static bool8 (*const sMovementActionFuncs_JumpSpecialWithEffectRight[])(struct ObjectEvent *, struct Sprite *);
+//run slow
+static bool8 (*const sMovementActionFuncs_RunDownSlow[])(struct ObjectEvent *, struct Sprite *);
+static bool8 (*const sMovementActionFuncs_RunUpSlow[])(struct ObjectEvent *, struct Sprite *);
+static bool8 (*const sMovementActionFuncs_RunLeftSlow[])(struct ObjectEvent *, struct Sprite *);
+static bool8 (*const sMovementActionFuncs_RunRightSlow[])(struct ObjectEvent *, struct Sprite *);
 
 static u8 GetMoveDirectionFastAnimNum(u8 direction);
 static u8 GetMoveDirectionFasterAnimNum(u8 direction);
@@ -633,6 +643,11 @@ static bool8 (*const *const sMovementActionFuncs[])(struct ObjectEvent *, struct
     [MOVEMENT_ACTION_JUMP_SPECIAL_WITH_EFFECT_UP]        = sMovementActionFuncs_JumpSpecialWithEffectUp,
     [MOVEMENT_ACTION_JUMP_SPECIAL_WITH_EFFECT_LEFT]      = sMovementActionFuncs_JumpSpecialWithEffectLeft,
     [MOVEMENT_ACTION_JUMP_SPECIAL_WITH_EFFECT_RIGHT]     = sMovementActionFuncs_JumpSpecialWithEffectRight,
+    //run slow
+    [MOVEMENT_ACTION_RUN_DOWN_SLOW] = sMovementActionFuncs_RunDownSlow,
+    [MOVEMENT_ACTION_RUN_UP_SLOW] = sMovementActionFuncs_RunUpSlow,
+    [MOVEMENT_ACTION_RUN_LEFT_SLOW] = sMovementActionFuncs_RunLeftSlow,
+    [MOVEMENT_ACTION_RUN_RIGHT_SLOW] = sMovementActionFuncs_RunRightSlow,
 };
 
 static bool8 (*const sMovementActionFuncs_FaceDown[])(struct ObjectEvent *, struct Sprite *) = {
@@ -1663,4 +1678,29 @@ static bool8 (*const sMovementActionFuncs_FlyDown[])(struct ObjectEvent *, struc
     MovementAction_FlyDown_Step0,
     MovementAction_FlyDown_Step1,
     MovementAction_FlyUp_Step2,
+};
+
+//slow running
+static bool8 (*const sMovementActionFuncs_RunDownSlow[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementActionFunc_RunSlowDown_Step0,
+    MovementActionFunc_RunSlow_Step1,
+    MovementAction_PauseSpriteAnim,
+};
+
+static bool8 (*const sMovementActionFuncs_RunUpSlow[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementActionFunc_RunSlowUp_Step0,
+    MovementActionFunc_RunSlow_Step1,
+    MovementAction_PauseSpriteAnim,
+};
+
+static bool8 (*const sMovementActionFuncs_RunLeftSlow[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementActionFunc_RunSlowLeft_Step0,
+    MovementActionFunc_RunSlow_Step1,
+    MovementAction_PauseSpriteAnim,
+};
+
+static bool8 (*const sMovementActionFuncs_RunRightSlow[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementActionFunc_RunSlowRight_Step0,
+    MovementActionFunc_RunSlow_Step1,
+    MovementAction_PauseSpriteAnim,
 };

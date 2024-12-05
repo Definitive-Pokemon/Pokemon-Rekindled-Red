@@ -57,6 +57,19 @@ static u8 BikeInputHandler_Normal(u8 *direction_p, u16 newKeys, u16 heldKeys)
     struct ObjectEvent *playerObjEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     u8 direction = GetPlayerMovementDirection();
 
+        // fix direction when moving on sideways stairs
+    switch (direction)
+    {
+    case DIR_SOUTHWEST:
+    case DIR_NORTHWEST:
+        direction = DIR_WEST;
+        break;
+    case DIR_SOUTHEAST:
+    case DIR_NORTHEAST:
+        direction = DIR_EAST;
+        break;
+    }
+
     gPlayerAvatar.bikeFrameCounter = 0;
     if (MetatileBehavior_IsCyclingRoadPullDownTile(playerObjEvent->currentMetatileBehavior) == TRUE)
     {
@@ -115,6 +128,18 @@ static u8 BikeInputHandler_Slope(u8 *direction_p, u16 newKeys, u16 heldKeys)
 {
     u8 direction = GetPlayerMovementDirection();
     u8 playerObjEventId = gPlayerAvatar.objectEventId;
+    // fix direction when moving on sideways stairs
+    switch (direction)
+    {
+    case DIR_SOUTHWEST:
+    case DIR_NORTHWEST:
+        direction = DIR_WEST;
+        break;
+    case DIR_SOUTHEAST:
+    case DIR_NORTHEAST:
+        direction = DIR_EAST;
+        break;
+    }
     if (MetatileBehavior_IsCyclingRoadPullDownTile(playerObjEventId[gObjectEvents].currentMetatileBehavior) == TRUE)
     {
         if (*direction_p != direction)

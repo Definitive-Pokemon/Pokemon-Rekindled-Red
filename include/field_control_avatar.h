@@ -37,5 +37,9 @@ void FieldInput_HandleCancelSignpost(struct FieldInput * input);
 void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys);
 void HandleBoulderActivateVictoryRoadSwitch(u16 x, u16 y);
 u8 TrySetDiveWarp(void);
+bool8 ObjectMovingOnRockStairs(struct ObjectEvent *objectEvent, u8 direction);
+//sideways stairs
+u8 GetRightSideStairsDirection(u8 direction);
+u8 GetLeftSideStairsDirection(u8 direction);
 
 #endif //GUARD_FIELD_CONTROL_AVATAR_H
