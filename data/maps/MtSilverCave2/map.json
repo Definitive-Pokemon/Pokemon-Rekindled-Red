@@ -149,6 +149,13 @@
       "elevation": 0,
       "dest_map": "MAP_MT_SILVER_CAVE1",
       "dest_warp_id": "6"
+    },
+    {
+      "x": 20,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
