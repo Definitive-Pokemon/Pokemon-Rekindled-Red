@@ -5616,18 +5616,6 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/UmbilicalTower/border.bin",
       "blockdata_filepath": "data/layouts/UmbilicalTower/map.bin"
-    },
-    {
-      "id": "LAYOUT_DEBUG_SIDEWAY_STAIR",
-      "name": "DebugSidewayStair_Layout",
-      "width": 20,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_MtEmber",
-      "border_filepath": "data/layouts/DebugSidewayStair/border.bin",
-      "blockdata_filepath": "data/layouts/DebugSidewayStair/map.bin"
     }
   ]
 }
