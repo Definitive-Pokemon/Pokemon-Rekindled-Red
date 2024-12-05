@@ -18,7 +18,20 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 34,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_MT_SILVER_OUTDOOR2",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 13,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_MT_SILVER_CAVE3",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
