@@ -642,6 +642,7 @@
 #define MAP_MT_SILVER_LEGEND    (9 | (44 << 8))
 #define MAP_MT_SILVER_CAVE2     (10 | (44 << 8))
 #define MAP_MT_SILVER_OUTDOOR2  (11 | (44 << 8))
+#define MAP_MT_SILVER_CAVE3     (12 | (44 << 8))
 
 #define MAP_GROUPS_COUNT 45
 

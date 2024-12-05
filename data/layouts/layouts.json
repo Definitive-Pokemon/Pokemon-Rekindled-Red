@@ -5724,6 +5724,18 @@
       "secondary_tileset": "gTileset_SeviiIslands45",
       "border_filepath": "data/layouts/MtSilverOutdoor2/border.bin",
       "blockdata_filepath": "data/layouts/MtSilverOutdoor2/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SILVER_CAVE3",
+      "name": "MtSilverCave3_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_RockTunnel",
+      "border_filepath": "data/layouts/MtSilverCave3/border.bin",
+      "blockdata_filepath": "data/layouts/MtSilverCave3/map.bin"
     }
   ]
 }
