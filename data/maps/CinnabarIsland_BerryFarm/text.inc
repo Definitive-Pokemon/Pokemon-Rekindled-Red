@@ -56,7 +56,7 @@ CinnabarIsland_BerryFarm_Text_GiveJar::
 	.string "Hey there!\p"
 	.string "I work the land, growing our trees\n"
 	.string "and picking berries once they've\p"
-	.string "ripened enough.$"
+	.string "ripened enough.\p"
 	.string "To give people a taste of what you\n"
 	.string "can do with BERRIES, we are giving\p"
 	.string "away jars filled with BERRY POWDER\n"
