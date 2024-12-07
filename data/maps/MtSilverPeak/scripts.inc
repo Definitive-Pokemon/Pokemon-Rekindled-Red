@@ -19,7 +19,7 @@ MtSilverPeak_EventScript_RedorGreen::
 	end
 
 MtSilverPeak_EventScript_Green::
-	showobject LOCALID_GREEN
+	addobject LOCALID_GREEN
 	textcolor 1
 	msgbox MtSilverPeak_Text_GreenAppears, MSGBOX_NPC
 	closemessage
@@ -37,7 +37,7 @@ MtSilverPeak_Text_GreenAppears::
 	
 
 MtSilverPeak_EventScript_Red::
-	showobject LOCALID_GREEN
+	addobject LOCALID_RED
 	textcolor 0
 	msgbox MtSilverPeak_Text_RedAppears, MSGBOX_NPC
 	closemessage
