@@ -24,11 +24,10 @@ MtSilverPeak_EventScript_Green::
 	textcolor 1
 	msgbox MtSilverPeak_Text_GreenAppears, MSGBOX_NPC
 	closemessage
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_GREEN_NORMAL
 	delay_16
 	delay_16
 	delay_16
-	applymovement LOCALID_GREEN, MtSilverPeak_Movement_GreenUp
+	applymovement LOCALID_GREEN, MtSilverPeak_Movement_Up
 	waitmovement 0
 	releaseall
 	end
@@ -42,11 +41,10 @@ MtSilverPeak_EventScript_Red::
 	textcolor 0
 	msgbox MtSilverPeak_Text_RedAppears, MSGBOX_NPC
 	closemessage
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RED_NORMAL
 	delay_16
 	delay_16
 	delay_16
-	applymovement LOCALID_RED, MtSilverPeak_Movement_RedUp
+	applymovement LOCALID_RED, MtSilverPeak_Movement_Up
 	waitmovement 0
 	releaseall
 	end
@@ -54,14 +52,7 @@ MtSilverPeak_EventScript_Red::
 MtSilverPeak_Text_RedAppears::
 	.string "...$"
 
-MtSilverPeak_Movement_GreenUp::
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	step_end
-
-MtSilverPeak_Movement_RedUp::
+MtSilverPeak_Movement_Up::
 	walk_up
 	walk_up
 	walk_up
