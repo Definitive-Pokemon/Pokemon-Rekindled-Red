@@ -1,4 +1,4 @@
-.equ LOCALID_
+.equ LOCALID_REDGREEN, 1
 MtSilverPeak_MapScripts::
 	.byte 0	
 
@@ -35,7 +35,7 @@ MtSilverPeak_EventScript_Red::
 	delay_16
 	delay_16
 	delay_16
-	applymovement MtSilverPeak_Movement_Up
+	applymovement 1, MtSilverPeak_Movement_Up
 	waitmovement 0
 	releaseall
 	end
