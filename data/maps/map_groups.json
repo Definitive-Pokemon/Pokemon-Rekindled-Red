@@ -512,7 +512,8 @@
     "Route2_ViridianForest_SouthEntrance",
     "Route2_House",
     "Route2_EastBuilding",
-    "Route2_ViridianForest_NorthEntrance"
+    "Route2_ViridianForest_NorthEntrance",
+    "Route2_EastBuildingNew"
   ],
   "gMapGroup_IndoorRoute4": [
     "Route4_PokemonCenter_1F",

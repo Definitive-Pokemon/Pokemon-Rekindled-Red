@@ -5440,8 +5440,8 @@
     {
       "id": "LAYOUT_ROUTE28",
       "name": "Route28_Layout",
-      "width": 59,
-      "height": 29,
+      "width": 63,
+      "height": 26,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -5452,8 +5452,8 @@
     {
       "id": "LAYOUT_MT_SILVER",
       "name": "MtSilver_Layout",
-      "width": 33,
-      "height": 31,
+      "width": 31,
+      "height": 30,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -5772,6 +5772,18 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/MtSilverPokeCenter2F/border.bin",
       "blockdata_filepath": "data/layouts/MtSilverPokeCenter2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_EAST_BUILDING_NEW",
+      "name": "Route2_EastBuildingNew_Layout",
+      "width": 15,
+      "height": 12,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/Route2_EastBuildingNew/border.bin",
+      "blockdata_filepath": "data/layouts/Route2_EastBuildingNew/map.bin"
     }
   ]
 }

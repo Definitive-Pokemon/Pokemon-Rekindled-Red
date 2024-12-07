@@ -472,6 +472,7 @@
 #define MAP_ROUTE2_HOUSE                          (1 | (15 << 8))
 #define MAP_ROUTE2_EAST_BUILDING                  (2 | (15 << 8))
 #define MAP_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE (3 | (15 << 8))
+#define MAP_ROUTE2_EAST_BUILDING_NEW              (4 | (15 << 8))
 
 // gMapGroup_IndoorRoute4
 #define MAP_ROUTE4_POKEMON_CENTER_1F (0 | (16 << 8))
