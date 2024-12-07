@@ -25,6 +25,9 @@ MtSilverPeak_EventScript_Green::
 	waitmovement 0
 	releaseall
 	end
+
+MtSilverPeak_Text_GreenAppears::
+	.string "Hey!$"
 	
 
 MtSilverPeak_EventScript_Red::
@@ -40,7 +43,8 @@ MtSilverPeak_EventScript_Red::
 	releaseall
 	end
 
-
+MtSilverPeak_Text_RedAppears::
+	.string "...$"
 
 MtSilverPeak_Movement_Up::
 	walk_up
