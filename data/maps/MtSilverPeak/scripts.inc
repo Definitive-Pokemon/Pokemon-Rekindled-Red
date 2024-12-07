@@ -5,9 +5,10 @@ MtSilverPeak_MapScripts::
 	.byte 0
 
 MtSilverPeak_OnTransition::
-		removeobject LOCALID_GREEN
-		removeobject LOCALID_RED
-		end
+	setflag FLAG_HIDE_REDGREEN
+	removeobject LOCALID_GREEN
+	removeobject LOCALID_RED
+	end
 
 MtSilverPeak_EventScript_RedorGreen::
 	lockall
@@ -27,7 +28,7 @@ MtSilverPeak_EventScript_Green::
 	delay_16
 	delay_16
 	delay_16
-	applymovement LOCALID_GREEN, MtSilverPeak_Movement_Up
+	applymovement LOCALID_GREEN, MtSilverPeak_Movement_GreenUp
 	waitmovement 0
 	releaseall
 	end
@@ -45,7 +46,7 @@ MtSilverPeak_EventScript_Red::
 	delay_16
 	delay_16
 	delay_16
-	applymovement LOCALID_RED, MtSilverPeak_Movement_Up
+	applymovement LOCALID_RED, MtSilverPeak_Movement_RedUp
 	waitmovement 0
 	releaseall
 	end
@@ -53,7 +54,14 @@ MtSilverPeak_EventScript_Red::
 MtSilverPeak_Text_RedAppears::
 	.string "...$"
 
-MtSilverPeak_Movement_Up::
+MtSilverPeak_Movement_GreenUp::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+MtSilverPeak_Movement_RedUp::
 	walk_up
 	walk_up
 	walk_up
