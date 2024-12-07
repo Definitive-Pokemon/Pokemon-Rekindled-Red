@@ -448,7 +448,7 @@ FiveIsland_LostCave_Room10_Text_Oak10::
 FiveIsland_LostCave_Room10_Text_Agatha11::
 	.string "You always told me to give it my all,\n"
 	.string "and now you're just giving up on our\l"
-	.string shared dream!\p"
+	.string "shared dream!\p"
 	.string "To me, that feels like giving up on a\n"
 	.string "promising future.\p"
 	.string "Throwing away our potential…$"
