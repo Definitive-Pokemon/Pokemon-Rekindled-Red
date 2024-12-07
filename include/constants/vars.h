@@ -249,7 +249,7 @@
 #define VAR_REGICHECK              0x40C4
 #define VAR_MT_SILVER_ACCESS       0x40C5
 #define VAR_CHANGEFALLS            0x40C6
-#define VAR_0x40C7                 0x40C7
+#define VAR_RED_OR_GREEN           0x40C7
 #define VAR_0x40C8                 0x40C8
 #define VAR_0x40C9                 0x40C9
 #define VAR_0x40CA                 0x40CA

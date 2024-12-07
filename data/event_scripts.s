@@ -1613,3 +1613,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/Route2_EastBuildingNew/scripts.inc"
 	.include "data/maps/Route2_EastBuildingNew/text.inc"
+
+	.include "data/maps/Route28_House/scripts.inc"
+	.include "data/maps/Route28_House/text.inc"

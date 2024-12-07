@@ -6,6 +6,6 @@ Prototype_SeviiIsle_6_EventScript_RouteSign::
 	end
 
 Prototype_SeviiIsle_6_Text_RouteSign::
-    .string "SUNLIT SEAMAZE \p"
+    .string "AURUM PATH \p"
     .string "Warning!\n"
     .string "Impassable sea currents ahead!$"

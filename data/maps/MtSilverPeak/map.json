@@ -26,8 +26,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "MtSilverPeak_EventScript_RedorGreen",
+      "flag": "FLAG_TEMP_1"
     }
   ],
   "warp_events": [
@@ -45,9 +45,9 @@
       "x": 14,
       "y": 1,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_RED_OR_GREEN",
       "var_value": "0",
-      "script": "NULL"
+      "script": "MtSilverPeak_EventScript_RedorGreen"
     }
   ],
   "bg_events": [

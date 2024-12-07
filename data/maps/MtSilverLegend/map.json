@@ -30,7 +30,26 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 2,
+      "y": 2,
+      "elevation": 0,
+      "item": "ITEM_HYPER_POTION",
+      "flag": "FLAG_SILVER_HYPER",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "item": "ITEM_ULTRA_BALL",
+      "flag": "FLAG_SILVER_ULTRA",
+      "quantity": 1,
+      "underfoot": false
+    }
   ],
   "level_scaling": "0"
 }

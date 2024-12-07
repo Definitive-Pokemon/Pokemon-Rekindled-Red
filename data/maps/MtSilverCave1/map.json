@@ -21,13 +21,13 @@
       "x": 53,
       "y": 7,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "MtSilverCave_EventScript_FullRestore",
+      "flag": "FLAG_HIDE_MT_SILVER_FULL_RESTORE"
     }
   ],
   "warp_events": [
@@ -85,7 +85,36 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 8,
+      "y": 27,
+      "elevation": 0,
+      "item": "ITEM_ULTRA_BALL",
+      "flag": "FLAG_SILVER_ULTRA_BALL",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 43,
+      "y": 34,
+      "elevation": 0,
+      "item": "ITEM_DIRE_HIT",
+      "flag": "FLAG_HIDDEN_DIRE_HIT",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 43,
+      "y": 8,
+      "elevation": 0,
+      "item": "ITEM_REVIVE",
+      "flag": "FLAG_HIDDEN_REVIVE",
+      "quantity": 1,
+      "underfoot": false
+    }
   ],
   "level_scaling": "0"
 }

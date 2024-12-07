@@ -772,3 +772,47 @@ TohjoFalls_EventScript_ItemAuroraTicket::
 	setflag FLAG_RECEIVED_AURORA_TICKET
 	setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
 	end
+
+Route28_EventScript_ItemTM35::
+	finditem ITEM_TM35
+	end
+
+MtSilverCave_EventScript_FullRestore::
+	finditem ITEM_FULL_RESTORE
+	end
+
+MtSilverCave_EventScript_Dragon_Fang::
+	finditem ITEM_DRAGON_FANG
+	end
+
+MtSilverOut_EventScript_Escape_Rope::
+	finditem ITEM_ESCAPE_ROPE
+	end
+
+MtSilverOut_EventScript_TM13::
+	finditem ITEM_TM13
+	end
+
+MtSilverOut_EventScript_Max_Elixir::
+	finditem ITEM_MAX_ELIXIR
+	end
+
+MtSilverOut_EventScript_Max_Revive::
+	finditem ITEM_MAX_REVIVE
+	end
+
+MtSilverOut_EventScript_Calcium::
+	finditem ITEM_CALCIUM
+	end
+
+MtSilverOut_EventScript_Protein::
+	finditem ITEM_PROTEIN
+	end
+
+MtSilverOut_EventScript_TM24::
+	finditem ITEM_TM24
+	end
+
+MtSilverOut_EventScript_Sun_Stone::
+	finditem ITEM_SUN_STONE
+	end

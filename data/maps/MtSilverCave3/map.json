@@ -37,7 +37,16 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 23,
+      "y": 3,
+      "elevation": 0,
+      "item": "ITEM_MAX_REVIVE",
+      "flag": "FLAG_HIDDEN_MAX_REVIVE",
+      "quantity": 1,
+      "underfoot": false
+    }
   ],
   "level_scaling": "0"
 }
