@@ -225,6 +225,10 @@ TwoIsland_EventScript_Doduo::
 	faceplayer
 	waitse
 	playmoncry SPECIES_DODUO, CRY_MODE_NORMAL
+	msgbox TwoIsland_Text_Doduo
 	waitmoncry
 	release
 	end
+
+TwoIsland_Text_Doduo::
+	.string "DODUO: Boing!!$"
