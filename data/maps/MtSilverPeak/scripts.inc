@@ -182,7 +182,7 @@ MtSilverPeak_EventScript_RedDefeated::
 	closemessage
 	msgbox MtSilverPeak_Text_RedGoodbye, MSGBOX_NPC
 	closemessage
-	applymovement LOCALID_Red, MtSilverPeak_Movement_Leaving
+	applymovement LOCALID_RED, MtSilverPeak_Movement_Leaving
 	waitmovement 0
 	delay_16
 	delay_16
