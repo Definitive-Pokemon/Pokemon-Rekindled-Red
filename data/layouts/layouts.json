@@ -1541,7 +1541,7 @@
       "id": "LAYOUT_POKEMON_MANSION_B1F",
       "name": "PokemonMansion_B1F_Layout",
       "width": 38,
-      "height": 36,
+      "height": 35,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
@@ -5748,6 +5748,30 @@
       "secondary_tileset": "gTileset_SeviiIslands45",
       "border_filepath": "data/layouts/MtSilverPeak/border.bin",
       "blockdata_filepath": "data/layouts/MtSilverPeak/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SILVER_POKE_CENTER",
+      "name": "MtSilverPokeCenter_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/MtSilverPokeCenter/border.bin",
+      "blockdata_filepath": "data/layouts/MtSilverPokeCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SILVER_POKE_CENTER2F",
+      "name": "MtSilverPokeCenter2F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/MtSilverPokeCenter2F/border.bin",
+      "blockdata_filepath": "data/layouts/MtSilverPokeCenter2F/map.bin"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "id": "MAP_MT_SILVER_CAVE2",
   "name": "MtSilverCave2",
   "layout": "LAYOUT_MT_SILVER_CAVE2",
-  "music": "MUS_B_DOME",
+  "music": "MUS_B_ARENA",
   "region_map_section": "MAPSEC_MT_SILVER_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

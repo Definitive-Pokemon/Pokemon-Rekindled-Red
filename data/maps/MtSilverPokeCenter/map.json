@@ -1,16 +1,16 @@
 {
-  "id": "MAP_UMBILICAL_TOWER",
-  "name": "UmbilicalTower",
-  "layout": "LAYOUT_UMBILICAL_TOWER",
-  "music": "MUS_B_PYRAMID_TOP",
-  "region_map_section": "MAPSEC_UMBILICAL_TOWER",
+  "id": "MAP_MT_SILVER_POKE_CENTER",
+  "name": "MtSilverPokeCenter",
+  "layout": "LAYOUT_MT_SILVER_POKE_CENTER",
+  "music": "MUS_POKE_CENTER",
+  "region_map_section": "MAPSEC_MT_SILVER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_UNDERGROUND",
+  "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
@@ -19,17 +19,17 @@
   ],
   "warp_events": [
     {
-      "x": 8,
-      "y": 23,
+      "x": 7,
+      "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_PROTOTYPE_SEVII_ISLE_7",
+      "dest_map": "MAP_MT_SILVER",
       "dest_warp_id": "0"
     },
     {
-      "x": 8,
-      "y": 2,
+      "x": 1,
+      "y": 6,
       "elevation": 0,
-      "dest_map": "MAP_NAVEL_ROCK_SUMMIT_PATH_2F",
+      "dest_map": "MAP_MT_SILVER_POKE_CENTER2F",
       "dest_warp_id": "0"
     }
   ],
