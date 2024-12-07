@@ -1284,7 +1284,7 @@
 #define FLAG_HIDDEN_RARE_CANDY   0x4D5
 #define FLAG_HIDDEN_HYPER_POTION 0x4D6
 #define FLAG_HIDDEN_MAX_REVIVE   0x4D7
-#define FLAG_BEAT_RED_OR_GREEN   0x4D8
+#define FLAG_HIDE_REDGREEN       0x4D8
 #define FLAG_0x4D9               0x4D9
 #define FLAG_0x4DA               0x4DA
 #define FLAG_0x4DB               0x4DB

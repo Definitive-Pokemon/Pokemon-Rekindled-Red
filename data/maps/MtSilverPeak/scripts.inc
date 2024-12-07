@@ -1,7 +1,13 @@
 .equ LOCALID_GREEN, 1
 .equ LOCALID_RED, 2
 MtSilverPeak_MapScripts::
-	.byte 0	
+	map_script MAP_SCRIPT_ON_TRANSITION, MtSilverPeak_OnTransition
+	.byte 0
+
+MtSilverPeak_OnTransition::
+		removeobject LOCALID_GREEN
+		removeobject LOCALID_RED
+		end
 
 MtSilverPeak_EventScript_RedorGreen::
 	lockall
@@ -13,8 +19,7 @@ MtSilverPeak_EventScript_RedorGreen::
 	end
 
 MtSilverPeak_EventScript_Green::
-	setobjectmovementtype LOCALID_GREEN, MOVEMENT_TYPE_FACE_UP
-	setobjectxyperm 3, 14, 8
+	showobject LOCALID_GREEN
 	textcolor 1
 	msgbox MtSilverPeak_Text_GreenAppears, MSGBOX_NPC
 	closemessage
@@ -32,8 +37,7 @@ MtSilverPeak_Text_GreenAppears::
 	
 
 MtSilverPeak_EventScript_Red::
-	setobjectmovementtype LOCALID_RED, MOVEMENT_TYPE_FACE_UP
-	setobjectxyperm 3, 14, 8
+	showobject LOCALID_GREEN
 	textcolor 0
 	msgbox MtSilverPeak_Text_RedAppears, MSGBOX_NPC
 	closemessage
