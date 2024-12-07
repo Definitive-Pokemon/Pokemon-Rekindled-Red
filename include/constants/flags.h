@@ -1481,7 +1481,7 @@
 #define FLAG_WORLD_MAP_NEW_BARK_TOWN                                (SYS_FLAGS + 0xCB)
 #define FLAG_WORLD_MAP_UMBILICAL_TOWER                              (SYS_FLAGS + 0xCC)
 #define FLAG_WORLD_MAP_MT_SILVER                                    (SYS_FLAGS + 0xCD)
-#define FLAG_0x8CE                                                  (SYS_FLAGS + 0xCE)
+#define FLAG_WORLD_MAP_MT_SILVER_CAVE                               (SYS_FLAGS + 0xCE)
 #define FLAG_0x8CF                                                  (SYS_FLAGS + 0xCF)
 #define FLAG_0x8D0                                                  (SYS_FLAGS + 0xD0)
 #define FLAG_0x8D1                                                  (SYS_FLAGS + 0xD1)

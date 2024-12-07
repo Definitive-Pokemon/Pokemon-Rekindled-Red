@@ -1,11 +1,10 @@
-.equ LOCALID_REDGREEN, 1
+.equ LOCALID_GREEN, 1
+.equ LOCALID_RED, 2
 MtSilverPeak_MapScripts::
 	.byte 0	
 
 MtSilverPeak_EventScript_RedorGreen::
 	lockall
-	setobjectmovementtype 1, MOVEMENT_TYPE_FACE_UP
-	setobjectxyperm 3, 14, 8
 	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq MtSilverPeak_EventScript_Green
@@ -14,6 +13,8 @@ MtSilverPeak_EventScript_RedorGreen::
 	end
 
 MtSilverPeak_EventScript_Green::
+	setobjectmovementtype LOCALID_GREEN, MOVEMENT_TYPE_FACE_UP
+	setobjectxyperm 3, 14, 8
 	textcolor 1
 	msgbox MtSilverPeak_Text_GreenAppears, MSGBOX_NPC
 	closemessage
@@ -21,7 +22,7 @@ MtSilverPeak_EventScript_Green::
 	delay_16
 	delay_16
 	delay_16
-	applymovement 1, MtSilverPeak_Movement_Up
+	applymovement LOCALID_GREEN, MtSilverPeak_Movement_Up
 	waitmovement 0
 	releaseall
 	end
@@ -31,6 +32,8 @@ MtSilverPeak_Text_GreenAppears::
 	
 
 MtSilverPeak_EventScript_Red::
+	setobjectmovementtype LOCALID_RED, MOVEMENT_TYPE_FACE_UP
+	setobjectxyperm 3, 14, 8
 	textcolor 0
 	msgbox MtSilverPeak_Text_RedAppears, MSGBOX_NPC
 	closemessage
@@ -38,7 +41,7 @@ MtSilverPeak_EventScript_Red::
 	delay_16
 	delay_16
 	delay_16
-	applymovement 1, MtSilverPeak_Movement_Up
+	applymovement LOCALID_RED, MtSilverPeak_Movement_Up
 	waitmovement 0
 	releaseall
 	end
