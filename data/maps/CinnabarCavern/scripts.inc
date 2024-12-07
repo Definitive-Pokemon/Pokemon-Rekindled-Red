@@ -78,7 +78,7 @@ CinnabarCavern_Text_Message::
 	.string "There's an e-mail message here.\p"
     .string "…\p"
     .string "Reminder!\n"
-    .string "Delete all remaining evidence\l"
+    .string "Delete all remaining evidence\n"
     .string "of the MEWTWO Project before\l"
     .string "the police visit!\p"
     .string "No one is allowed to know of\n"

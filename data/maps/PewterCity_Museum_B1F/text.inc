@@ -1,8 +1,8 @@
 PewterCity_Museum_B1F_Text_HikerExplains::
     .string "Welcome to the UNDERGROUND\n"
 	.string "CHALLENGE!\p"
-	.string "In this darkened room, your task is\n"
-	.string "to reach the end, where a radiant\p"
+	.string "In this darkened room, your job is\n"
+	.string "to reach the end, where a radiant\l"
 	.string "prize awaits you!\p"
 	.string "If you aren't up to the task,\n"
 	.string "return back to the surface.\p"

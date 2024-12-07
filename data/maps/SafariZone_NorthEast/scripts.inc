@@ -88,9 +88,9 @@ SafariZone_NorthEast_Movement_AnabelContinue::
 SafariZone_NorthEast_Text_Anabel::
 	.string "Once again, we were too late…\n"
 	.string "LATIAS is gone…\p"
-	.string "At this rate, we will keep\n"
-	.string "running after it without\p"
-	.string "yielding any results…\p"
+	.string "At this rate, we will keep running\n"
+	.string "after it without yielding any\l"
+	.string "results…\p"
 	.string "For now, I will just connect with\n"
 	.string "LATIAS once more…$"
 	

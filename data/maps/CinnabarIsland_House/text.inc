@@ -6,5 +6,5 @@ CinnabarIsland_House_Text_LittleGirl::
 
 CinnabarIsland_House_Text_OldLady::
 	.string "Watching my granddaughter learn\n"
-	.string "about the many wonders of the\p"
+	.string "about the many wonders of the\l"
 	.string "world fills my heart with joy.$"

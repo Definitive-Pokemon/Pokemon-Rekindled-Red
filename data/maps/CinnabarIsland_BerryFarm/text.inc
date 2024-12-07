@@ -1,7 +1,7 @@
 CinnabarIsland_BerryFarm_Text_Farm::
 	.string "Hello there!\p"
 	.string "I'm terribly sorry, but our BERRIES\n"
-	.string "are specifically grown for folks\p"
+	.string "are specifically grown for folks\l"
 	.string "who live on CINNABAR ISLAND.\p"
 	.string "However, I could tell you about the\n"
 	.string "history of our farm if you like.\p"
@@ -14,17 +14,17 @@ CinnabarIsland_BerryFarm_Text_Okay::
 	
 CinnabarIsland_BerryFarm_Text_FarmExplain::
 	.string "This farm was built by our ancestors,\n"
-	.string "the first settlers of what we now\p"
+	.string "the first settlers of what we now\l"
 	.string "call CINNABAR ISLAND.\p"
 	.string "The rich, volcanic soil gave them the\n"
-	.string "perfect opportunity to plant our\p"
+	.string "perfect opportunity to plant our\l"
 	.string "BERRY TREES.\p"
 	.string "Our BERRIES quickly became famous,\n"
 	.string "and soon, people started flocking\p"
 	.string "to this island just to get a taste\n"
 	.string "of what we had to offer.\p"
 	.string "Eventually, folks began to settle,\n"
-	.string "and this farm became the source\p"
+	.string "and this farm became the source\l"
 	.string "of food for every islander.\p"
 	.string "To this day, the farm remains\n"
 	.string "a family business.\p"
@@ -49,13 +49,13 @@ CinnabarIsland_BerryFarm_Text_Hello::
 CinnabarIsland_BerryFarm_Text_Farmer::
 	.string "Hey there!\p"
 	.string "I work the land, growing our trees\n"
-	.string "and picking berries once they've\p"
+	.string "and picking berries once they've\l"
 	.string "ripened enough.$"
 
 CinnabarIsland_BerryFarm_Text_GiveJar::
 	.string "Hey there!\p"
 	.string "I work the land, growing our trees\n"
-	.string "and picking berries once they've\p"
+	.string "and picking berries once they've\l"
 	.string "ripened enough.\p"
 	.string "To give people a taste of what you\n"
 	.string "can do with BERRIES, we are giving\p"

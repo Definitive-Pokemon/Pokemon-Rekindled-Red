@@ -14,5 +14,5 @@ Route27HappinessHouse_Text_Woman::
 	.string "It is a quaint little village\n"
 	.string "with little to it.\p"
 	.string "But I've heard that PROFESSOR ELM,\n"
-	.string "who lives there, has made a\p"
+	.string "who lives there, has made a\l"
 	.string "groundbreaking discovery.$"

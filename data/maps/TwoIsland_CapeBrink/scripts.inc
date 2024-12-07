@@ -41,8 +41,8 @@ CapeBrink_Text_Anabel::
 CapeBrink_Text_Anabel2::
 	.string "I fail to understand…\p"
 	.string "Why was LATIAS so inclined to let\n"
-	.string "me touch its forehead, only to\p"
-	.string "flee every subsequent encounter?\p"
+	.string "me touch its forehead at first,\l"
+	.string "only to avoid me everytime since?\p"
 	.string "Normally, I understand everything\n"
 	.string "that happens to and around me.\p"
 	.string "But I have never understood\n"

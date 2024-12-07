@@ -13,7 +13,7 @@ Route26_EventScript_HealingWoman::
 	
 Route26_Text_HealingWoman::
 	.string "Did you think you were lucky to find\n"
-	.string "a place to rest right where you\p"
+	.string "a place to rest right where you\l"
 	.string "needed it?\p"
 	.string "Don't be reserved!\n"
 	.string "I look forward to people's smiles.\p"

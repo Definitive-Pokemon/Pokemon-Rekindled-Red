@@ -33,7 +33,7 @@ SevenIsland_TrainerTower_Text_TrainerTowerAhead::
 SevenIsland_TrainerTower_Text_Renovations::
 	.string "You seem to be a strong TRAINER.\p"
 	.string "Unfortunately, TRAINER TOWER is\n"
-	.string "currently undergoing some minor\p"
+	.string "currently undergoing some minor\l"
 	.string "renovations.\p"
 	.string "Be sure to check back later.\n"
 	.string "Wahahah!$"

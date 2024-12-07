@@ -126,9 +126,9 @@ ViridianForest_Text_ObtainedTorchic::
 ViridianForest_Text_Grunt::
     .string "And you are?\p"
 	.string "Yes, I'm trying to get this stupid\n"
-	.string "thing to listen.\p"
+	.string "thing to listen.\l"
 	.string "Is that so bad?\p"
-	.string "W-wait, it's my POKéMON.\p"
+	.string "W-wait, it's my POKéMON.\n"
 	.string "I can do whatever I want with it!\p"
 	.string "I really think you need to be\n"
 	.string "taught a lesson.\p"

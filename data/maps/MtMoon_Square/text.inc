@@ -23,7 +23,7 @@ MtMoon_Square_Text_MudkipStillAngry::
 MtMoon_Square_Text_MudkipHappyJoin::
     .string "MUDKIP is no longer angry!\p"
 	.string "It seems to really appreciate your\n"
-	.string "kind gesture and wants to join you\p"
+	.string "kind gesture and wants to join you\l"
 	.string "on your adventure.\p"
 	.string "Do you want to bring MUDKIP along?$"
 	
@@ -56,7 +56,7 @@ MtMoon_Square_Text_AnabelAero::
 	.string "LATIAS' forehead twice.\p"
 	.string "Could it be…\p"
 	.string "Could it be that LATIAS lets people\n"
-	.string "touch it to give them a reason to\p"
+	.string "touch it to give them motivation to\l"
 	.string "travel the lands?\p"
 	.string "Does LATIAS want to inspire people\n"
 	.string "to see all the world has to offer?\p"

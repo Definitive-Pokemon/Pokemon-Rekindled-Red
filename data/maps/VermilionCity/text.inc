@@ -160,7 +160,7 @@ VermilionCity_Text_Route2AideHasPackageForYou::
     .string "It's made to give visitors a taste\n"
     .string "of exploring a cave system.\p"
     .string "It is said that the prize at the\n"
-    .string "end is very useful for exploring\p"
+    .string "end is very useful for exploring\l"
     .string "pitch-black caves.$"
 
 VermilionCity_Text_JustCaughtASquirtle::

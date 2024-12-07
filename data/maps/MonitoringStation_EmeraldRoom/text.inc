@@ -2,7 +2,7 @@ Monitoring_Station_EmeraldRoom_Text_Text::
 	.string "WARNING!\n"
 	.string "Unexplored territory ahead.\p"
 	.string "We noticed a new cavern opening up\n"
-	.string "when we took the EMERALD from its\p"
+	.string "when we took the EMERALD from its\l"
 	.string "pedestal.\p"
 	.string "As of yet, we have no idea where\n"
 	.string "this opening will lead us.\p"

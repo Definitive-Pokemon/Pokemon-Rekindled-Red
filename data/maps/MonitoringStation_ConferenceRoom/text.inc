@@ -2,7 +2,7 @@ MonitoringStation_ConferenceRoom_Text_RocketM1::
 	.string "Yeah, we were notified that you had\n"
 	.string "somehow snuck your way in.\p"
 	.string "The pipsqueak you saw near the lift\n"
-	.string "is right there, trying to reach his\p"
+	.string "is right there, trying to reach his\l"
 	.string "family.\p"
 	.string "He rushed in here the moment the\n"
 	.string "emergency doors reopened.\p"
@@ -17,7 +17,7 @@ MonitoringStation_ConferenceRoom_Text_RocketM3::
 	.string "You're trying to find a way to escape\n"
 	.string "this place?\p"
 	.string "Hm. You might want to look for a way\n"
-	.string "to get inside the personal office\p"
+	.string "to get inside the personal office\l"
 	.string "of our UNDERBOSS.\p"
 	.string "You will need a YELLOW KEY\n"
 	.string "for that.\p"
@@ -32,7 +32,7 @@ MonitoringStation_ConferenceRoom_Text_ObtainedBlueKey::
 
 MonitoringStation_ConferenceRoom_Text_RocketM32::
 	.string "I hope you manage to reach the\n"
-	.string "UNDERBOSS without running into\p"
+	.string "UNDERBOSS without running into\l"
 	.string "trouble.$"
 
 MonitoringStation_ConferenceRoom_Text_RocketF1::
@@ -66,7 +66,7 @@ MonitoringStation_ConferenceRoom_Text_Text::
 	.string "Entry: Sept. 16\n"
     .string "The Dig\p"
 	.string "Shortly after this base was built,\n"
-	.string "large energy readings were picked\p"
+	.string "large energy readings were picked\l"
 	.string "up by our radar technology.\p"
 	.string "The readings came from even further\n"
 	.string "below ground.\p"
@@ -81,7 +81,7 @@ MonitoringStation_ConferenceRoom_Text_Text::
 	.string "ordered the stone to be taken and\n"
 	.string "subjected to rigorous testing.\p"
 	.string "Unfortunately, initial tests failed\n"
-	.string "to unlock the powers hidden within\p"
+	.string "to unlock the powers hidden within\l"
 	.string "the EMERALD…$"
 
 MonitoringStation_ConferenceRoom_Text_RocketM4::

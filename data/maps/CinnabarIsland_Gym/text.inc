@@ -17,7 +17,7 @@ CinnabarIsland_Gym_Text_CelioIntro::
 	.string "BLAINE's style is unrefined\n"
 	.string "and hot-headed.\p"
     .string "As the INTERIM GYM LEADER of\n"
-	.string "CINNABAR ISLAND, I accept\p"
+	.string "CINNABAR ISLAND, I accept\l"
 	.string "your challenge!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 	
 CinnabarIsland_Gym_Text_CelioDefeat::

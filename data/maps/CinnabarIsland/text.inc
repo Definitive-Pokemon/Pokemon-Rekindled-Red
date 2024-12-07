@@ -15,7 +15,7 @@ CinnabarIsland_Text_FatMan::
 
 CinnabarIsland_Text_BaldingMan::
 	.string "Not many outsiders know this,\n"
-	.string "but the island is, in fact,\p"
+	.string "but the island is, in fact,\l"
 	.string "a volcano.\p"
 	.string "It's the volcano's rich soil that\n"
 	.string "attracted the island's settlers.\p"

@@ -69,8 +69,8 @@ FiveIsland_LostCave_Room1_Text_Agatha1::
 FiveIsland_LostCave_Room1_Text_Agatha2::
 	.string "Found it!\p"
 	.string "Three rocks means going right,\n"
-	.string "corresponding to the position of\p"
-	.string "the number three on the clock!$"
+	.string "corresponding to the position\l"
+	.string "of the number three on the clock!$"
 	
 FiveIsland_LostCave_Room1_Text_Oak2::
 	.string "You always amaze me with your\n"

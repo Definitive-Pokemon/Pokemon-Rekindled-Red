@@ -37,12 +37,12 @@ ElmsLab_Text_ElmAfter::
 	.string "This SHINY RADAR will help you\n"
 	.string "with finding SHINY POKéMON.\p"
 	.string "SHINY POKéMON are strange variations of\n"
-	.string "familiar species, sporting a unique\p"
+	.string "familiar species, sporting a unique\l"
 	.string "color scheme.\p"
 	.string "I hung up a note all about it\n"
 	.string "right behind me!\p"
 	.string "You would help me tremendously\n"
-	.string "simply by finding SHINY POKéMON\p"
+	.string "simply by finding SHINY POKéMON\l"
 	.string "of all sorts.$"
 
 ElmsLab_EventScript_Nothing::
@@ -56,10 +56,10 @@ ElmsLab_Text_ElmHow::
 	.string "Have you been catching some\n"
 	.string "SHINY POKéMON?\p"
 	.string "Even with the SHINY RADAR, it might\n"
-	.string "still take a long time before you\p"
+	.string "still take a long time before you\l"
 	.string "manage to encounter one.\p"
-	.string "I'd encourage you to not give up,\n"
-	.string "but as a CHAMPION, you must have\p"
+	.string "I'd encourage you to not give up.\p"
+	.string "But as a CHAMPION, you must have\n"
 	.string "a full schedule, am I right?$"
 
 ElmsLab_EventScript_Heal::

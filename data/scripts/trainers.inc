@@ -3014,7 +3014,7 @@ Route27_Text_SammyPostBattle::
 	.string "Me and my boyfriend DAVID hail\n"
 	.string "from neighbouring regions.\p"
 	.string "POKéMON battles are all the rage\n"
-	.string "in my region, but DAVID's place\p"
+	.string "in my region, but DAVID's place\l"
 	.string "doesn't want to be involved.$"
 
 Route27_Text_SammyRematchIntro::

@@ -307,7 +307,7 @@ OneIsland_PokemonCenter_1F_Text_CelioHearingRumorsAboutYou2::
     .string "CELIO: Hello, {PLAYER}!\n"
     .string "How nice to meet you again.\p"
     .string "I've been honing my skills here\n"
-    .string "at TRAINER TOWER, and boy,\p"
+    .string "at TRAINER TOWER, and boy,\l"
     .string "are these TRAINERS tough!\p"
     .string "But that's enough about me.\p"
     .string "{PLAYER}, I've been hearing rumors\n"

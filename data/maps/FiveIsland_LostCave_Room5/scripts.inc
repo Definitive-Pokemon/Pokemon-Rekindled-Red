@@ -73,7 +73,7 @@ FiveIsland_LostCave_Room5_Text_Oak3::
 	.string "Haha, my strength is nothing compared\n"
 	.string "to the power of CELEBI.\p"
 	.string "It is said to rival even the POKéMON\n"
-	.string "of light, HO-OH, as well as the\p"
+	.string "of light, HO-OH, as well as the\l"
 	.string "POKéMON of sound, LUGIA.$"
 	
 FiveIsland_LostCave_Room5_Text_Agatha3::

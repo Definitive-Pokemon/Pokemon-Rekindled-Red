@@ -26,8 +26,6 @@ MonitoringStation_Power_Text_Lance::
 	.string "But you are still a failure…\p"
 	.string "You will never become…\n"
 	.string "a POKéMON MASTER…$"
-	.string "Now go away…\p"
-	.string "You have ruined me…$"
 	
 MonitoringStation_Power_Text_Honey1::
 	.string "{PLAYER}!\n"
@@ -41,7 +39,7 @@ MonitoringStation_Power_Text_Mom::
 	.string "IT'S YOU!!\p"
 	.string "HAPPY BIRTHDAY HONEY!!!\p"
 	.string "THOUGH YOUR DAD IS STILL MISSING\n"
-	.string "MISSING, I BET THE CAKE WILL\p"
+	.string "MISSING, I BET THE CAKE WILL\l"
 	.string "DELICIOUS!!!$"
 
 MonitoringStation_Power_Text_Giovanni::
@@ -53,5 +51,5 @@ MonitoringStation_Power_Text_Giovanni::
 	.string "to your father?\p"
 	.string "Still the silent type. No matter.\p"
 	.string "Now is the time to put aside your\n"
-	.string "weak sympathy and join me in\p"
+	.string "weak sympathy and join me in\l"
 	.string "REMAKING this world!$"

@@ -2,11 +2,11 @@ MonitoringStation_Text_ExecutiveFinal::
 	.string "You really are something, aren't you?\n"
 	.string "CHAMPION of KANTO, and our savior.\p"
 	.string "I know you won't join our ranks,\n"
-	.string "and that means we will remain\p"
+	.string "and that means we will remain\l"
 	.string "enemies.\p"
 	.string "Please don't get in our way again,\n"
 	.string "or we will have to take action.\p"
-	.string "Goodbye!$"
+	.string "Goodbye.$"
 
 MonitoringStation_Text_AdminFinal::
 	.string "I thank you for helping us out\n"
@@ -42,7 +42,7 @@ MonitoringStation_Text_StorageGrunt::
 	.string "Without the key, I need to override\n"
 	.string "the lock manually.\p"
 	.string "You could have just helped that kid\n"
-	.string "get to the UNDERBOSS by giving him\p"
+	.string "get to the UNDERBOSS by giving him\l"
 	.string "that YELLOW KEY…$"
 	
 MonitoringStation_Text_Quartet::
@@ -59,7 +59,7 @@ MonitoringStation_Text_Admin2::
 MonitoringStation_Text_Executive::
 	.string "I AM the UNDERBOSS, you nitwit!\p"
 	.string "I've been undercover as a GRUNT for\n"
-	.string "a while now, in order to uncover\p"
+	.string "a while now, in order to uncover\l"
 	.string "your scheme to overthrow me.$"
 	
 MonitoringStation_Text_StorageGrunt2::
@@ -67,8 +67,8 @@ MonitoringStation_Text_StorageGrunt2::
 	
 MonitoringStation_Text_Executive2::
 	.string "And now, you can explain to me why\n"
-	.string "you wanted to leave me, and so\p"
-	.string "many GRUNTS, behind.$"
+	.string "you wanted to leave me and all\l"
+	.string "those GRUNTS behind.$"
 	
 MonitoringStation_Text_Admin3::
 	.string "Alright then. I wanted to be the\n"
@@ -79,10 +79,10 @@ MonitoringStation_Text_Executive3::
 	.string "You were willing to leave everyone\n"
 	.string "behind just to accomplish that.\p"
 	.string "You wanted to sacrifice all your\n"
-	.string "colleagues to a monster to get\p"
-	.string "what you want.\p"
+	.string "comrades to a monster to get\l"
+	.string "your way.\p"
 	.string "You aren't worthy of the rank of\n"
-	.string "ADMIN, let alone the rank of\p"
+	.string "ADMIN, let alone the rank of\l"
 	.string "UNDERBOSS.$"
 	
 MonitoringStation_Text_TookYellowKey::
@@ -107,7 +107,7 @@ MonitoringStation_Text_Executive5::
 	.string "Anyway, my RED KEY lies on my desk\n"
 	.string "in my personal office.\p"
 	.string "You can use it to open this door\n"
-	.string "in a second, rather than taking\p"
+	.string "in a second, rather than taking\l"
 	.string "hours like these buffoons.$"
 	
 MonitoringStation_Text_StorageGruntLoose::

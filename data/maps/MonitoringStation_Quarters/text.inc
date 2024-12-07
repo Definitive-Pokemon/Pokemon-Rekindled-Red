@@ -20,8 +20,8 @@ MonitoringStation_Quarters_Text_RocketM3::
 	.string "so you should go find our ADMIN.\p"
 	.string "You must have ran into our her\n"
 	.string "somewhere along the way.\p"
-	.string "The ADMIN is supposed to have a\n"
-	.string "YELLOW KEY on her.\p"
+	.string "The ADMIN is supposed to have\n"
+	.string "a YELLOW KEY on her.\p"
 	.string "…… …… …… ……\p"
 	.string "If she didn't mention it whatsoever,\n"
 	.string "she must be hiding something…\p"
@@ -42,6 +42,6 @@ MonitoringStation_Quarters_Text_RocketF1::
 	
 MonitoringStation_Quarters_Text_RocketF2::
 	.string "Some people claim that our ADMIN\n"
-	.string "has been plotting to take over\p"
+	.string "has been plotting to take over\l"
 	.string "the position of SEVII's UNDERBOSS.$"
 	

@@ -324,7 +324,7 @@ FiveIsland_LostCave_Room10_Text_Oak1::
 FiveIsland_LostCave_Room10_Text_Agatha2::
 	.string "THAT THERE?!\p"
 	.string "You're telling me we've braved this\n"
-	.string "horrible place for some ugly\p"
+	.string "horrible place for some ugly\l"
 	.string "cave troll?!$"
 
 FiveIsland_LostCave_Room10_Text_Oak2::
@@ -365,10 +365,10 @@ FiveIsland_LostCave_Room10_Text_Oak5::
 	.string "hidden caverns with no idea what to\n"
 	.string "expect!\p"
 	.string "Investing time into every single\n"
-	.string "POKéMON you've caught, or\p"
+	.string "POKéMON you've caught, or\l"
 	.string "obtained from a dear friend.\p"
 	.string "Giving each of your partners utmost\n"
-	.string "care to make them grow stronger\p"
+	.string "care to make them grow stronger\l"
 	.string "and wiser!\p"
 	.string "All of that is POKéMON!\n"
 	.string "POKéMON is fun!$"
@@ -430,7 +430,7 @@ FiveIsland_LostCave_Room10_Text_Agatha9::
 	.string "You being CHAMPION IS our future,\n"
 	.string "you oaf!\p"
 	.string "How are we going to pay our bills\n"
-	.string "if you waste your time exploring\p"
+	.string "if you waste your time exploring\l"
 	.string "murky caves for no reason at all?$"
 	
 FiveIsland_LostCave_Room10_Text_Agatha10::
@@ -447,8 +447,8 @@ FiveIsland_LostCave_Room10_Text_Oak10::
 	
 FiveIsland_LostCave_Room10_Text_Agatha11::
 	.string "You always told me to give it my all,\n"
-	.string "and now you're just giving up on\p"
-	.string "our shared dream!\p"
+	.string "and now you're just giving up on our\l"
+	.string shared dream!\p"
 	.string "To me, that feels like giving up on a\n"
 	.string "promising future.\p"
 	.string "Throwing away our potential…$"

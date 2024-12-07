@@ -12,7 +12,7 @@ MonitoringStation_Central_Text_QuartetRock::
 	.string "That one would be perfect for\n"
 	.string "our little plan.\p"
 	.string "If you go free that caged POKéMON,\n"
-	.string "I can command it to use STRENGTH\p"
+	.string "I can command it to use STRENGTH\l"
 	.string "against that boulder.$"
 	
 MonitoringStation_Central_Text_KangaHappy::
@@ -75,7 +75,7 @@ MonitoringStation_Central_Text_Admin::
 	.string "Well, unfortunately, I no longer\n"
 	.string "have it.\p"
 	.string "It was taken from me by the ghost\n"
-	.string "you have probably seen wandering\p"
+	.string "you have probably seen wandering\l"
 	.string "around.\p"
 	.string "Our UNDERBOSS has the other key,\n"
 	.string "so you should go look for him.\p"
