@@ -42,7 +42,7 @@ MtSilverPeak_EventScript_Green::
 	closemessage
 	applymovement LOCALID_GREEN, MtSilverPeak_Movement_Up2
 	waitmovement 0
-	MtSilverPeak_Text_GreenPower, MSGBOX_NPC
+	msgbox MtSilverPeak_Text_GreenPower, MSGBOX_NPC
 	closemessage
 	applymovement LOCALID_GREEN, MtSilverPeak_Movement_Readying
 	waitmovement 0
@@ -150,7 +150,7 @@ MtSilverPeak_EventScript_Red::
 	closemessage
 	applymovement LOCALID_RED, MtSilverPeak_Movement_Up2
 	waitmovement 0
-	MtSilverPeak_Text_RedPower, MSGBOX_NPC
+	msgbox MtSilverPeak_Text_RedPower, MSGBOX_NPC
 	closemessage
 	applymovement LOCALID_RED, MtSilverPeak_Movement_Readying
 	waitmovement 0
