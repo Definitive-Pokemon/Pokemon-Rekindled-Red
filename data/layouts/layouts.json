@@ -3916,12 +3916,12 @@
     {
       "id": "LAYOUT_NAVEL_ROCK_SUMMIT",
       "name": "NavelRock_Summit_Layout",
-      "width": 19,
-      "height": 25,
+      "width": 17,
+      "height": 30,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_UmbilicalTower",
+      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
       "border_filepath": "data/layouts/NavelRock_Summit/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_Summit/map.bin"
     },
@@ -3940,12 +3940,12 @@
     {
       "id": "LAYOUT_NAVEL_ROCK_SUMMIT_PATH_2F",
       "name": "NavelRock_SummitPath_2F_Layout",
-      "width": 7,
-      "height": 7,
+      "width": 11,
+      "height": 10,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_UmbilicalTower",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleArena",
       "border_filepath": "data/layouts/NavelRock_SummitPath_2F/border.bin",
       "blockdata_filepath": "data/layouts/NavelRock_SummitPath_2F/map.bin"
     },
