@@ -3517,18 +3517,12 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         sMapCursor->y = 17;
         break;
     case MAPSEC_FIERY_PASSAGE:
-        if (Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->escapeWarp.mapGroup, gSaveBlock1Ptr->escapeWarp.mapNum)->regionMapSectionId == MAPSEC_ROUTE_4 && 
-            Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum)->regionMapSectionId == MAPSEC_FIERY_PASSAGE)
-        {
-            sMapCursor->selectedMapsec = MAPSEC_MT_MOON;
-            sMapCursor->x = 9;
-            sMapCursor->y = 3;
-        }
-        else
-        {
-            sMapCursor->x = 14;
-            sMapCursor->y = 1;
-        }
+        sMapCursor->x = 14;
+        sMapCursor->y = 1;
+        break;
+    case MAPSEC_MT_MOON:
+        sMapCursor->x = 9;
+        sMapCursor->y = 3;
         break;
     case MAPSEC_MT_SILVER_CAVE:
         sMapCursor->x = 0;
