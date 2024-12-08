@@ -479,7 +479,7 @@ static void FieldEffectScript_LoadFadedPal(const u8 **script)
         {
             spritePalette = &gBlackSandFootprintsPal;
         }
-        else if(gSaveBlock1Ptr->mapLayoutId == LAYOUT_FOUR_ISLAND || gSaveBlock1Ptr->mapLayoutId == LAYOUT_MT_SILVER_OUTDOOR2 || gSaveBlock1Ptr->mapLayoutId == LAYOUT_MT_SILVER_PEAK) //Four Island town's snow footprints
+        else if(gSaveBlock1Ptr->mapLayoutId == LAYOUT_FOUR_ISLAND || mapsec == MAPSEC_MT_SILVER_CAVE) //Four Island town's snow footprints
         {
             spritePalette = &gSnowFootprintsPal;
         }
