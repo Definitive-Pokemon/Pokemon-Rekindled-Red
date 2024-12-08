@@ -20,11 +20,11 @@ CeruleanCave_B1F_EventScript_GiovanniEvent::
 	special RemoveCameraObject
 	delay 60
 	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_CatchMewtwo
-	showobject LOCALID_BALL
+	addobject LOCALID_BALL
 	waitmovement 0
 	playse SE_BALL_THROW
 	applymovement LOCALID_BALL, CeruleanCave_B1F_Movement_BallThrow
-	waitmovement
+	waitmovement 0
 	waitse
 	playse SE_BALL_OPEN
 	fadescreen FADE_TO_WHITE
