@@ -403,7 +403,7 @@ const struct Trainer gTrainers[] = {
         .party = ITEM_CUSTOM_MOVES(sParty_David),
     },
     [TRAINER_RED] = {
-        .trainerClass = TRAINER_CLASS_RS_CHAMPION,
+        .trainerClass = TRAINER_CLASS_MAGMA_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_RED,
         .trainerName = _("RED"),

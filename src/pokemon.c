@@ -6868,6 +6868,7 @@ static u16 GetBattleBGM(void)
         {
         case TRAINER_CLASS_PKMN_PROF:
         case TRAINER_CLASS_CHAMPION:
+		case TRAINER_CLASS_MAGMA_LEADER:
             return MUS_VS_CHAMPION;
         case TRAINER_CLASS_LEADER:
         case TRAINER_CLASS_ELITE_FOUR:
