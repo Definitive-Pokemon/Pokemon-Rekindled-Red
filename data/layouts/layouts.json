@@ -2685,7 +2685,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_BerryForest",
+      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
       "border_filepath": "data/layouts/Prototype_SeviiIsle_6/border.bin",
       "blockdata_filepath": "data/layouts/Prototype_SeviiIsle_6/map.bin"
     },
@@ -2697,7 +2697,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_BerryForest",
+      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
       "border_filepath": "data/layouts/Prototype_SeviiIsle_7/border.bin",
       "blockdata_filepath": "data/layouts/Prototype_SeviiIsle_7/map.bin"
     },
@@ -5612,8 +5612,8 @@
       "height": 26,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_UmbilicalTower",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleArena",
       "border_filepath": "data/layouts/UmbilicalTower/border.bin",
       "blockdata_filepath": "data/layouts/UmbilicalTower/map.bin"
     },

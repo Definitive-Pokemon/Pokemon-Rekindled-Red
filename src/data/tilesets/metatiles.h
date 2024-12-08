@@ -228,3 +228,6 @@ const u32 gMetatileAttributes_Lava[] = INCBIN_U32("data/tilesets/primary/lava/me
 
 const u16 gMetatiles_UmbilicalTower[] = INCBIN_U16("data/tilesets/secondary/umbilical_tower/metatiles.bin");
 const u32 gMetatileAttributes_UmbilicalTower[] = INCBIN_U32("data/tilesets/secondary/umbilical_tower/metatile_attributes.bin");
+
+const u16 gMetatiles_BattleArena[] = INCBIN_U16("data/tilesets/secondary/battlearena/metatiles.bin");
+const u32 gMetatileAttributes_BattleArena[] = INCBIN_U32("data/tilesets/secondary/battlearena/metatile_attributes.bin");

@@ -846,3 +846,16 @@ const struct Tileset gTileset_UmbilicalTower =
     .metatileAttributes = gMetatileAttributes_UmbilicalTower,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_BattleArena = 
+{
+	.isCompressed = TRUE,
+	.isSecondary = TRUE,
+	.tiles = gTilesetTiles_BattleArena,
+	.palettes = gTilesetPalettes_BattleArena,
+	.metatiles = gMetatiles_BattleArena,
+	.metatileAttributes = gMetatileAttributes_BattleArena,
+	.callback = InitTilesetAnim_BattleArena
+};
+
+
