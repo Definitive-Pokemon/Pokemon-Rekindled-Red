@@ -47,7 +47,18 @@ PalletTown_EventScript_PlaceMasterYoungsterOutsideLab::
 PalletTown_OnFrame::
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_OAK, 2, PalletTown_EventScript_OakRatingScene
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_OAK, 3, PalletTown_EventScript_MasterTrainerYoungster
+	map_script_2 VAR_RED_OR_GREEN, 1, PalletTown_EventScript_GiveRainbowWing
 	.2byte 0
+
+PalletTown_EventScript_GiveRainbowWing::
+	checkitem ITEM_RAINBOW_WING, 1
+	compare VAR_RESULT, TRUE
+	goto_if_eq PalletTown_Nothing
+	giveitem ITEM_RAINBOW_WING, 1
+	end
+
+PalletTown_Nothing::
+	end
 
 @ Master Trainer Youngster explains after exiting lab with upgraded dex
 PalletTown_EventScript_MasterTrainerYoungster::
