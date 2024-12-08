@@ -82,9 +82,6 @@ MtSilverPeak_EventScript_GreenDefeated::
 	waitmovement 0
 	setvar VAR_RED_OR_GREEN, 1
 	delay 100
-	special EnterHallOfFame
-	waitstate
-	releaseall
 	end
 
 MtSilverPeak_Text_GreenReward::
