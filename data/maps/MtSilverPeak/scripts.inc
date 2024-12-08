@@ -12,7 +12,6 @@ MtSilverPeak_OnTransition::
 
 MtSilverPeak_EventScript_RedorGreen::
 	lockall
-	setvar VAR_RED_OR_GREEN, 1
 	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq MtSilverPeak_EventScript_Green
@@ -98,6 +97,7 @@ MtSilverPeak_EventScript_GreenDefeated::
 	closemessage
 	applymovement LOCALID_GREEN, MtSilverPeak_Movement_Leaving
 	waitmovement 0
+	setvar VAR_RED_OR_GREEN, 1
 	delay_16
 	delay_16
 	delay_16
@@ -207,6 +207,7 @@ MtSilverPeak_EventScript_RedDefeated::
 	closemessage
 	applymovement LOCALID_RED, MtSilverPeak_Movement_Leaving
 	waitmovement 0
+	setvar VAR_RED_OR_GREEN, 1
 	delay_16
 	delay_16
 	delay_16
