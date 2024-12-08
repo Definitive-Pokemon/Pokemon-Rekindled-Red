@@ -6,7 +6,7 @@
   "region_map_section": "MAPSEC_UMBILICAL_TOWER",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_UNDERGROUND",
+  "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
@@ -19,15 +19,15 @@
   ],
   "warp_events": [
     {
-      "x": 8,
-      "y": 23,
+      "x": 5,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_PROTOTYPE_SEVII_ISLE_7",
       "dest_warp_id": "0"
     },
     {
-      "x": 8,
-      "y": 2,
+      "x": 5,
+      "y": 3,
       "elevation": 0,
       "dest_map": "MAP_NAVEL_ROCK_SUMMIT_PATH_2F",
       "dest_warp_id": "0"
