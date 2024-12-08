@@ -41,7 +41,7 @@ CeruleanCave_B1F_EventScript_GiovanniEvent::
 	waitmovement 0
 	special RemoveCameraObject
 	delay 60
-	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_CatchMewtwo
+	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_LookUp
 	addobject LOCALID_BALL
 	waitmovement 0
 	playse SE_BALL_THROW
@@ -89,10 +89,6 @@ CeruleanCave_B1F_Movement_LookUp::
 
 CeruleanCave_B1F_Movement_PanToActionFromBottom::
 	walk_slow_up
-	step_end
-
-CeruleanCave_B1F_Movement_CatchMewtwo::
-	walk_in_place_up
 	step_end
 
 CeruleanCave_B1F_Movement_BallThrow::
@@ -177,19 +173,41 @@ CeruleanCave_B1F_Text_GiovanniDefeat2::
 
 CeruleanCave_B1F_EventScript_GiovanniAfter::
 	textcolor 0
+	msgbox CeruleanCave_B1F_Text_GiovanniUnbelievable, MSGBOX_NPC
+	closemessage
+	playse SE_BALL_OPEN
+	fadescreen FADE_TO_WHITE
+	addobject LOCALID_MEWTWO
+	waitse
+	fadescreen FADE_FROM_WHITE
+	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_LookUp
+	waitmovement 0
+	msgbox CeruleanCave_B1F_Text_GiovanniArgh, MSGBOX_NPC
+	closemessage
+	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_LookDown
+	waitmovement 0
 	msgbox CeruleanCave_B1F_Text_GiovanniDone, MSGBOX_NPC
 	closemessage
 	fadescreen FADE_TO_BLACK
 	setflag FLAG_HIDE_GIOVANNI
-	addobject LOCALID_MEWTWO
 	removeobject LOCALID_GIOVANNI
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_GIOVANNI, 1
 	releaseall
 	end
 
-CeruleanCave_B1F_Text_GiovanniDone::
+CeruleanCave_B1F_Movement_LookDown::
+	walk_in_place_down
+	step_end
+
+CeruleanCave_B1F_Text_GiovanniUnbelievable::
 	.string "Fuck off biach.$"
+
+CeruleanCave_B1F_Text_GiovanniArgh::
+	.string "How could Mewtwo escape?!$"
+
+CeruleanCave_B1F_Text_GiovanniDone::
+	.string "I'm done here!$"
 
 CeruleanCave_B1F_EventScript_Mewtwo::
 	goto_if_questlog EventScript_ReleaseEnd
