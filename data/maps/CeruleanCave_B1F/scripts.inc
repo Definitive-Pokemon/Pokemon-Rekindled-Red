@@ -61,6 +61,7 @@ CeruleanCave_B1F_EventScript_GiovanniEvent::
 	waitse
 	playse SE_BALL_CLICK
 	waitse
+	delay 50
 	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_WalkUp
 	waitmovement 0
 	removeobject LOCALID_BALL
@@ -105,6 +106,7 @@ CeruleanCave_B1F_Movement_WalkUp::
 	step_end
 
 CeruleanCave_B1F_Movement_Talk::
+	walk_down
 	walk_in_place_down
 	step_end
 
@@ -125,8 +127,8 @@ CeruleanCave_B1F_Text_Haha::
 	.string "POKéMON alive!\p"
 	.string "In fact, it was mine to begin with!\p"
 	.string "TEAM ROCKET created this POKéMON,\n"
-	.string "with the help of a competent\l"
-	.string "team of scientists and scholars.\p"
+	.string "with the help of a renowned team\l"
+	.string "of scientists and scholars.\p"
 	.string "It managed to escape our grasp,\n"
 	.string "but now that's in the past.\p"
 	.string "The all-powerful MEWTWO belongs\n"
