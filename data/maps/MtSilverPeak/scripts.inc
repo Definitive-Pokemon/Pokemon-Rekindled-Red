@@ -24,32 +24,17 @@ MtSilverPeak_EventScript_Green::
 	textcolor 1
 	msgbox MtSilverPeak_Text_GreenAppears, MSGBOX_NPC
 	closemessage
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
+	delay 100
 	applymovement LOCALID_GREEN, MtSilverPeak_Movement_Up
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, MtSilverPeak_Movement_LookDown
 	waitmovement 0
-	delay_16
-	delay_16
-	delay_16
+	delay 50
 	msgbox MtSilverPeak_Text_GreenIntroduce, MSGBOX_NPC
 	closemessage
 	applymovement LOCALID_GREEN, MtSilverPeak_Movement_Up2
 	waitmovement 0
-	delay_16
-	delay_16
-	delay_16
+	delay 50
 	msgbox MtSilverPeak_Text_GreenPower, MSGBOX_NPC
 	closemessage
 	applymovement LOCALID_GREEN, MtSilverPeak_Movement_Readying
@@ -88,9 +73,7 @@ MtSilverPeak_EventScript_GreenDefeated::
 	textcolor 1
 	msgbox MtSilverPeak_Text_GreenReward, MSGBOX_NPC
 	closemessage
-	delay_16
-	delay_16
-	delay_16
+	delay 50
 	giveitem_msg MtSilverPeak_Text_ReceivedRainbowWingGreen, ITEM_RAINBOW_WING, 1
 	closemessage
 	msgbox MtSilverPeak_Text_GreenGoodbye, MSGBOX_NPC
@@ -98,15 +81,7 @@ MtSilverPeak_EventScript_GreenDefeated::
 	applymovement LOCALID_GREEN, MtSilverPeak_Movement_Leaving
 	waitmovement 0
 	setvar VAR_RED_OR_GREEN, 1
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
+	delay 100
 	special EnterHallOfFame
 	waitstate
 	releaseall
@@ -144,32 +119,17 @@ MtSilverPeak_EventScript_Red::
 	textcolor 0
 	msgbox MtSilverPeak_Text_RedAppears, MSGBOX_NPC
 	closemessage
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
+	delay 100
 	applymovement LOCALID_RED, MtSilverPeak_Movement_Up
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, MtSilverPeak_Movement_LookDown
 	waitmovement 0
-	delay_16
-	delay_16
-	delay_16
+	delay 50
 	msgbox MtSilverPeak_Text_RedIntroduce, MSGBOX_NPC
 	closemessage
 	applymovement LOCALID_RED, MtSilverPeak_Movement_Up2
 	waitmovement 0
-	delay_16
-	delay_16
-	delay_16
+	delay 50
 	msgbox MtSilverPeak_Text_RedPower, MSGBOX_NPC
 	closemessage
 	applymovement LOCALID_RED, MtSilverPeak_Movement_Readying
@@ -198,9 +158,7 @@ MtSilverPeak_EventScript_RedDefeated::
 	textcolor 0
 	msgbox MtSilverPeak_Text_RedReward, MSGBOX_NPC
 	closemessage
-	delay_16
-	delay_16
-	delay_16
+	delay 50
 	giveitem_msg MtSilverPeak_Text_ReceivedRainbowWingRed, ITEM_RAINBOW_WING, 1
 	closemessage
 	msgbox MtSilverPeak_Text_RedGoodbye, MSGBOX_NPC
@@ -208,15 +166,7 @@ MtSilverPeak_EventScript_RedDefeated::
 	applymovement LOCALID_RED, MtSilverPeak_Movement_Leaving
 	waitmovement 0
 	setvar VAR_RED_OR_GREEN, 1
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	delay_16
+	delay 100
 	special EnterHallOfFame
 	waitstate
 	releaseall
