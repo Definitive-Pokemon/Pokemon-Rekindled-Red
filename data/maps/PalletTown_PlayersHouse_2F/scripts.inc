@@ -3,22 +3,7 @@
 PalletTown_PlayersHouse_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_PlayersHouse_2F_OnTransition
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PalletTown_PlayersHouse_2F_OnWarp
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_PlayersHouse_2F_OnFrame
 	.byte 0
-
-@PalletTown_PlayersHouse_2F_OnFrame::
-	map_script_2 VAR_TEMP_0, 0, PalletTown_PlayersHouse_2F_EventScript_MomCheck
-	.2byte 0
-
-
-@PalletTown_PlayersHouse_2F_EventScript_MomCheck::
-	setvar VAR_TEMP_0, 1
-	goto_if_set FLAG_MOM_GONE_DOWN, PalletTown_PlayersHouse_2F_EventScript_DontDoMomEvent
-	goto_if_set FLAG_OAK_HAS_LETTER, PalletTown_PlayersHouse_2F_EventScript_Mom
-	end
-
-PalletTown_PlayersHouse_2F_EventScript_DontDoMomEvent::
-	end
 	
 PalletTown_PlayersHouse_2F_EventScript_Mom:
 	lockall
