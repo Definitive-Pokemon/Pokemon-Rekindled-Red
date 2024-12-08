@@ -264,7 +264,7 @@
       "y": 15,
       "elevation": 3,
       "item": "ITEM_SUN_STONE",
-      "flag": "FLAG_0xHIDDEN_ITEM_CINNABAR_FIRE_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_CINNABAR_FIRE_STONE",
       "quantity": 1,
       "underfoot": false
     },

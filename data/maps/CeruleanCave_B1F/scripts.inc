@@ -1,3 +1,7 @@
+.equ LOCALID_MEWTWO, 3
+.equ LOCALID_GIOVANNI, 13
+.equ LOCALID_BALL, 14
+
 CeruleanCave_B1F_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, CeruleanCave_B1F_OnResume
 	map_script MAP_SCRIPT_ON_TRANSITION, CeruleanCave_B1F_OnTransition
@@ -6,6 +10,85 @@ CeruleanCave_B1F_MapScripts::
 CeruleanCave_B1F_OnResume::
 	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, CeruleanCave_B1F_EventScript_TryRemoveMewtwo
 	end
+
+CeruleanCave_B1F_EventScript_GiovanniEvent::
+	lockall
+	delay 60
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, CeruleanCave_B1F_Movement_PanToActionFromBottom
+	waitmovement 0
+	special RemoveCameraObject
+	delay 60
+	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_CatchMewtwo
+	showobject LOCALID_BALL
+	waitmovement 0
+	playse SE_BALL_THROW
+	applymovement LOCALID_BALL, CeruleanCave_B1F_Movement_BallThrow
+	waitmovement
+	waitse
+	playse SE_BALL_OPEN
+	fadescreen FADE_TO_WHITE
+	removeobject LOCALID_MEWTWO
+	waitse
+	fadescreen FADE_FROM_WHITE
+	playse SE_BALL_BOUNCE_1
+	waitse
+	playse SE_BALL_BOUNCE_2
+	waitse
+	playse SE_BALL_BOUNCE_3
+	waitse
+	playse SE_BALL_BOUNCE_4
+	waitse
+	playse SE_BALL_CLICK
+	waitse
+	textcolor 0
+	msgbox CeruleanCave_B1F_Text_Muhaha, MSGBOX_NPC
+	closemessage
+	playse SE_PIN
+	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_Pin
+	waitmovement 0
+	delay_16
+	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_Turn
+	waitmovement 0
+	msgbox CeruleanCave_B1F_Text_You, MSGBOX_NPC
+	closemessage
+	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_Turn
+	waitmovement 0
+	msgbox CeruleanCave_B1F_Text_Haha, MSGBOX_NPC
+	releaseall
+	end
+	
+
+CeruleanCave_B1F_Movement_PanToActionFromBottom::
+	walk_slow_up
+	step_end
+
+CeruleanCave_B1F_Movement_CatchMewtwo::
+	walk_in_place_up
+	step_end
+
+CeruleanCave_B1F_Movement_BallThrow::
+	walk_fast_up
+	step_end
+
+CeruleanCave_B1F_Movement_Pin::
+	emote_exclamation_mark
+	step_end
+
+CeruleanCave_B1F_Movement_Turn::
+	walk_in_place_down
+	step_end
+
+CeruleanCave_B1F_Text_Muhaha::
+	.string "Finally!\n"
+	.string "I've retrieved my creation.\p"
+	.string "I've still got what it takes!$"
+
+CeruleanCave_B1F_Text_You::
+	.string "It's… it's you…$"
+
+CeruleanCave_B1F_Text_Haha::
+	.string "Haha! To be continued!$"
 
 CeruleanCave_B1F_EventScript_TryRemoveMewtwo::
 	specialvar VAR_RESULT, GetBattleOutcome

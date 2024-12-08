@@ -1259,7 +1259,7 @@
 // Unused?
 #define HIDDEN_ITEM_CAPE_BRINK_BIG_PEARL                              213 //continued from above numbering because of how these are set by GetHiddenItemAttr
 #define FLAG_HIDDEN_ITEM_CINNABAR_BERRY               214
-#define FLAG_0xHIDDEN_ITEM_CINNABAR_FIRE_STONE               215
+#define FLAG_HIDDEN_ITEM_CINNABAR_FIRE_STONE               215
 #define FLAG_FOUGHT_SUICUNE      0x4C0
 #define FLAG_HIDE_TOWER_CELIO    0x4C1
 #define FLAG_CHECKED_ALTAR       0x4C2
@@ -1285,8 +1285,8 @@
 #define FLAG_HIDDEN_HYPER_POTION 0x4D6
 #define FLAG_HIDDEN_MAX_REVIVE   0x4D7
 #define FLAG_HIDE_REDGREEN       0x4D8
-#define FLAG_0x4D9               0x4D9
-#define FLAG_0x4DA               0x4DA
+#define FLAG_HIDE_GIOVANNI       0x4D9
+#define FLAG_HIDE_CAVE_BALL      0x4DA
 #define FLAG_0x4DB               0x4DB
 #define FLAG_0x4DC               0x4DC
 #define FLAG_0x4DD               0x4DD

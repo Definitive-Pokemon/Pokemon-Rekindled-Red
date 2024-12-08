@@ -64,6 +64,7 @@ OneIsland_PokemonCenter_1F_OnFrame::
 
 OneIsland_PokemonCenter_1F_EventScript_MeetCelioScene::
 	lockall
+	setflag FLAG_HIDE_CAVE_BALL
 	textcolor NPC_TEXT_COLOR_MALE
 	applymovement OBJ_EVENT_ID_PLAYER, OneIsland_PokemonCenter_1F_Movement_PlayerWalkToCelio
 	applymovement LOCALID_BILL, OneIsland_PokemonCenter_1F_Movement_BillWalkToCelio
