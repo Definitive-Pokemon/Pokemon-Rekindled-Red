@@ -33,6 +33,7 @@ CeruleanCave_B1F_EventScript_HideMewtwo::
 
 CeruleanCave_B1F_EventScript_GiovanniEvent::
 	lockall
+	playbgm MUS_NONE, 1
 	delay 60
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, CeruleanCave_B1F_Movement_PanToActionFromBottom
@@ -73,6 +74,7 @@ CeruleanCave_B1F_EventScript_GiovanniEvent::
 	msgbox CeruleanCave_B1F_Text_You, MSGBOX_NPC
 	closemessage
 	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_Talk
+	playbgm MUS_SILPH, 0
 	waitmovement 0
 	trainerbattle_single TRAINER_LEADER_GIOVANNI_MEWTWO, CeruleanCave_B1F_Text_Haha, CeruleanCave_B1F_Text_GiovanniDefeat1, CeruleanCave_B1F_EventScript_GiovanniOntoBattle2, NO_MUSIC
 	releaseall
