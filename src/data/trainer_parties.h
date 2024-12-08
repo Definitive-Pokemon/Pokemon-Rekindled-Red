@@ -1004,10 +1004,10 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderGiovanniRematch[] = {
     {
         .iv = 255,
         .lvl = 88,
-        .species = SPECIES_FLYGON,
+        .species = SPECIES_MACHAMP,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
-        .moves = {MOVE_EARTHQUAKE, MOVE_FIRE_BLAST, MOVE_SANDSTORM, MOVE_ROCK_SLIDE},
+        .moves = {MOVE_CROSS_CHOP, MOVE_ROCK_SLIDE, MOVE_SLEEP_TALK, MOVE_REST},
     },
     {
         .iv = 255,
@@ -1043,7 +1043,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderGiovanniRematch[] = {
     },
     {
         .iv = 255,
-        .lvl = 90,
+        .lvl = 92,
         .species = SPECIES_TYRANITAR,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
