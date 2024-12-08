@@ -174,6 +174,7 @@ CeruleanCave_B1F_EventScript_GiovanniAfter::
 	addobject LOCALID_MEWTWO
 	removeobject LOCALID_GIOVANNI
 	fadescreen FADE_FROM_BLACK
+	setvar VAR_GIOVANNI, 1
 	releaseall
 	end
 
