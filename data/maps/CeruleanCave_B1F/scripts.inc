@@ -37,6 +37,7 @@ CeruleanCave_B1F_EventScript_GiovanniEvent::
 	delay 60
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, CeruleanCave_B1F_Movement_PanToActionFromBottom
+	applymovement OBJ_EVENT_ID_PLAYER, CeruleanCave_B1F_Movement_LookUp
 	waitmovement 0
 	special RemoveCameraObject
 	delay 60
@@ -82,6 +83,10 @@ CeruleanCave_B1F_EventScript_GiovanniEvent::
 	releaseall
 	end
 
+CeruleanCave_B1F_Movement_LookUp::
+	walk_in_place_up
+	step_end
+
 CeruleanCave_B1F_Movement_PanToActionFromBottom::
 	walk_slow_up
 	step_end
@@ -96,6 +101,10 @@ CeruleanCave_B1F_Movement_BallThrow::
 
 CeruleanCave_B1F_Movement_Pin::
 	emote_exclamation_mark
+	delay_16
+	delay_16
+	delay_16
+	delay_16
 	delay_16
 	delay_16
 	walk_in_place_down
