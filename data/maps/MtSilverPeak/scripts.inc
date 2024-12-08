@@ -34,14 +34,23 @@ MtSilverPeak_EventScript_Green::
 	delay_16
 	delay_16
 	delay_16
+	delay_16
+	delay_16
+	delay_16
 	applymovement LOCALID_GREEN, MtSilverPeak_Movement_Up
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, MtSilverPeak_Movement_LookDown
 	waitmovement 0
+	delay_16
+	delay_16
+	delay_16
 	msgbox MtSilverPeak_Text_GreenIntroduce, MSGBOX_NPC
 	closemessage
 	applymovement LOCALID_GREEN, MtSilverPeak_Movement_Up2
 	waitmovement 0
+	delay_16
+	delay_16
+	delay_16
 	msgbox MtSilverPeak_Text_GreenPower, MSGBOX_NPC
 	closemessage
 	applymovement LOCALID_GREEN, MtSilverPeak_Movement_Readying
@@ -80,6 +89,9 @@ MtSilverPeak_EventScript_GreenDefeated::
 	textcolor 1
 	msgbox MtSilverPeak_Text_GreenReward, MSGBOX_NPC
 	closemessage
+	delay_16
+	delay_16
+	delay_16
 	giveitem_msg MtSilverPeak_Text_ReceivedRainbowWingGreen, ITEM_RAINBOW_WING, 1
 	closemessage
 	msgbox MtSilverPeak_Text_GreenGoodbye, MSGBOX_NPC
@@ -117,9 +129,8 @@ MtSilverPeak_Text_GreenGoodbye::
 	.string "People from the JOHTO region claim\n"
 	.string "that this item is linked to the\l"
 	.string "legendary POKéMON called HO-OH.\p"
-	.string "Who knows…\n"
-	.string "Maybe there is some place connected\l"
-	.string "to this skyborne creature.\p"
+	.string "Who knows… Maybe there is some place\n"
+	.string "connected to this skyborne creature.\p"
 	.string "Be sure to take this RAINBOW WING\n"
 	.string "with you when you visit such\l"
 	.string "a location!\p"
@@ -142,14 +153,23 @@ MtSilverPeak_EventScript_Red::
 	delay_16
 	delay_16
 	delay_16
+	delay_16
+	delay_16
+	delay_16
 	applymovement LOCALID_RED, MtSilverPeak_Movement_Up
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, MtSilverPeak_Movement_LookDown
 	waitmovement 0
+	delay_16
+	delay_16
+	delay_16
 	msgbox MtSilverPeak_Text_RedIntroduce, MSGBOX_NPC
 	closemessage
 	applymovement LOCALID_RED, MtSilverPeak_Movement_Up2
 	waitmovement 0
+	delay_16
+	delay_16
+	delay_16
 	msgbox MtSilverPeak_Text_RedPower, MSGBOX_NPC
 	closemessage
 	applymovement LOCALID_RED, MtSilverPeak_Movement_Readying
@@ -178,6 +198,9 @@ MtSilverPeak_EventScript_RedDefeated::
 	textcolor 0
 	msgbox MtSilverPeak_Text_RedReward, MSGBOX_NPC
 	closemessage
+	delay_16
+	delay_16
+	delay_16
 	giveitem_msg MtSilverPeak_Text_ReceivedRainbowWingRed, ITEM_RAINBOW_WING, 1
 	closemessage
 	msgbox MtSilverPeak_Text_RedGoodbye, MSGBOX_NPC
