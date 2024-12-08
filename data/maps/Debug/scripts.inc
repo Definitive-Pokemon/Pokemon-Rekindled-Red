@@ -1,6 +1,12 @@
 Debug_MapScripts::
 	.byte 0
 
+Green_Give_RainbowWing_Debug::
+	lock
+	giveitem_msg MtSilverPeak_Text_ReceivedRainbowWingGreen, ITEM_RAINBOW_WING, 1
+	release
+	end
+
 Debug_GiveFormMon::
 	lock
 	givemon SPECIES_RAIKOU, 5, ITEM_NONE
