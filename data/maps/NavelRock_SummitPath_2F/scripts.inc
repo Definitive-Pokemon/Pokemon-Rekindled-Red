@@ -25,7 +25,6 @@ UmbilicalTower_2F_Text_Old_Man_Worthy::
 UmbilicalTower_2F_Text_Old_Man_Hahaha::
 	.string "WHAHAHAHA!\p"
 	.string "You aren't worthy of meeting the\n"
-	.string "legendary bringer of light,\l"
-	.string "HO-OH.\p"
+	.string "legendary bringer of light, HO-OH.\p"
 	.string "You may attempt to climb this tower,\n"
 	.string "but you will be climbing for naught.$"
