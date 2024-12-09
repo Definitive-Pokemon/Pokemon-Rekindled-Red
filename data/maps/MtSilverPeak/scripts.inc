@@ -105,7 +105,7 @@ MtSilverPeak_Text_GreenGoodbye::
 	.string "that this item is linked to the\l"
 	.string "legendary POKéMON called HO-OH.\p"
 	.string "Who knows… Maybe there is some place\n"
-	.string "connected to this skyborne creature.\p"
+	.string "connected to this skyborne being.\p"
 	.string "Be sure to take this RAINBOW WING\n"
 	.string "with you when you visit such\l"
 	.string "a location!\p"
