@@ -9,6 +9,7 @@
 #include "field_effect_helpers.h"
 #include "field_player_avatar.h"
 #include "fieldmap.h"
+#include "field_weather.h"
 #include "metatile_behavior.h"
 #include "overworld.h"
 #include "quest_log.h"
@@ -16,6 +17,7 @@
 #include "script.h"
 #include "trainer_see.h"
 #include "trig.h"
+#include "constants/weather.h"
 #include "constants/maps.h"
 #include "constants/event_object_movement.h"
 #include "constants/event_objects.h"
@@ -8828,7 +8830,10 @@ void GroundEffect_SpawnOnTallGrass(struct ObjectEvent *objEvent, struct Sprite *
     gFieldEffectArguments[5] = objEvent->mapGroup;
     gFieldEffectArguments[6] = (u8)gSaveBlock1Ptr->location.mapNum << 8 | (u8)gSaveBlock1Ptr->location.mapGroup;
     gFieldEffectArguments[7] = 1;
-    FieldEffectStart(FLDEFF_TALL_GRASS);
+    if(GetCurrentRegionMapSectionId() == MAPSEC_MT_SILVER_CAVE || gWeatherPtr->currWeather == WEATHER_SNOW)
+        FieldEffectStart(FLDEFF_SNOW_GRASS);
+    else
+        FieldEffectStart(FLDEFF_TALL_GRASS);
 }
 
 void GroundEffect_StepOnTallGrass(struct ObjectEvent *objEvent, struct Sprite *sprite)
@@ -8841,7 +8846,10 @@ void GroundEffect_StepOnTallGrass(struct ObjectEvent *objEvent, struct Sprite *s
     gFieldEffectArguments[5] = objEvent->mapGroup;
     gFieldEffectArguments[6] = (u8)gSaveBlock1Ptr->location.mapNum << 8 | (u8)gSaveBlock1Ptr->location.mapGroup;
     gFieldEffectArguments[7] = 0;
-    FieldEffectStart(FLDEFF_TALL_GRASS);
+    if(GetCurrentRegionMapSectionId() == MAPSEC_MT_SILVER_CAVE || gWeatherPtr->currWeather == WEATHER_SNOW)
+        FieldEffectStart(FLDEFF_SNOW_GRASS);
+    else
+        FieldEffectStart(FLDEFF_TALL_GRASS);
 }
 
 void GroundEffect_SpawnOnLongGrass(struct ObjectEvent *objEvent, struct Sprite *sprite)

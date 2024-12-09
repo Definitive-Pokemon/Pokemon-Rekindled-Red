@@ -208,6 +208,7 @@ void SetObjectMovementType(u16 localId, u8 movementType);
 
 extern const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[];
 extern const struct SpritePalette gSpritePalette_GeneralFieldEffect1;
+extern const struct SpritePalette gSpritePalette_SnowGrass;
 extern const struct SpriteTemplate * const gFieldEffectObjectTemplatePointers[];
 extern const struct OamData gObjectEventBaseOam_32x32;
 extern const u16 gFieldEffectObjectPic_CutGrass[];

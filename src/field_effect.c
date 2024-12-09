@@ -424,6 +424,7 @@ extern const struct SpritePalette gBlackSandFootprintsPal;
 extern const struct SpritePalette gThreeIslandGrassPal;
 extern const struct SpritePalette gSpritePalette_GeneralFieldEffect1; //tall grass pal
 extern const struct SpritePalette gSnowFootprintsPal;
+extern const struct SpritePalette gSnowGrassPal;
 
 static bool8 FieldEffectCmd_loadfadedpal_callnative(const u8 **script, u32 *result)
 {
