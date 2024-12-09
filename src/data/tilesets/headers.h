@@ -855,7 +855,7 @@ const struct Tileset gTileset_BattleArena =
 	.palettes = gTilesetPalettes_BattleArena,
 	.metatiles = gMetatiles_BattleArena,
 	.metatileAttributes = gMetatileAttributes_BattleArena,
-	.callback = InitTilesetAnim_BattleArena,
+	.callback = NULL,
 };
 
 
