@@ -72,7 +72,7 @@ gFieldEffectScriptPointers::
 	.4byte gFldEffScript_MoveDeoxysRock          @ FLDEFF_MOVE_DEOXYS_ROCK
 	.4byte gFldEffScript_DestroyDeoxysRock       @ FLDEFF_DESTROY_DEOXYS_ROCK
 	.4byte gFldEffScript_PhotoFlash              @ FLDEFF_PHOTO_FLASH
-	.4btye gFldEffScript_SnowTallGrass           @ FLDEFF_SNOW_GRASS
+	.4byte gFldEffScript_SnowTallGrass           @ FLDEFF_SNOW_GRASS
 
 gFldEffScript_ExclamationMarkIcon::
 	callnative FldEff_ExclamationMarkIcon1
