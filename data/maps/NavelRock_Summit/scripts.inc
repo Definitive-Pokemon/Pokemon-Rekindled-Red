@@ -37,7 +37,6 @@ NavelRock_Summit_EventScript_WalkRight::
 	compare VAR_RESULT, TRUE
 	goto_if_lt NavelRock_Summit_Nothing
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Summit_Movement_WalkRight
-	waitstate
 	end
 
 NavelRock_Summit_EventScript_WalkLeft::
@@ -45,7 +44,6 @@ NavelRock_Summit_EventScript_WalkLeft::
 	compare VAR_RESULT, TRUE
 	goto_if_lt NavelRock_Summit_Nothing
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Summit_Movement_WalkRight
-	waitstate
 	end
 
 NavelRock_Summit_Movement_WalkRight::
