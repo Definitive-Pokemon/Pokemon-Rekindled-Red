@@ -610,10 +610,12 @@ const u32 gItemIcon_StorageKey[] = INCBIN_U32("graphics/items/icons/storage_key.
 
 const u32 gItemIcon_RootFossil[] = INCBIN_U32("graphics/items/icons/root_fossil.4bpp.lz");
 const u32 gItemIconPalette_HoennFossil[] = INCBIN_U32("graphics/items/icon_palettes/hoenn_fossil.gbapal.lz");
-const u32 gItemIcon_ClawFossil[] = INCBIN_U32("graphics/items/icons/claw_fossil.4bpp.lz");
 
-const u32 gItemIcon_DevonScope[] = INCBIN_U32("graphics/items/icons/devon_scope.4bpp.lz");
-const u32 gItemIconPalette_DevonScope[] = INCBIN_U32("graphics/items/icon_palettes/devon_scope.gbapal.lz");
+const u32 gItemIcon_ShinyRadar[] = INCBIN_U32("graphics/items/icons/shiny_radar.4bpp.lz");
+const u32 gItemIconPalette_ShinyRadar[] = INCBIN_U32("graphics/items/icon_palettes/shiny_radar.gbapal.lz");
+
+const u32 gItemIcon_RainbowWing[] = INCBIN_U32("graphics/items/icons/rainbow_wing.4bpp.lz");
+const u32 gItemIconPalette_RainbowWing[] = INCBIN_U32("graphics/items/icon_palettes/rainbow_wing.gbapal.lz");
 
 // TMs/HMs
 
@@ -720,9 +722,3 @@ const u32 gItemIconPalette_OldSeaMap[] = INCBIN_U32("graphics/items/icon_palette
 
 const u32 gItemIcon_LinkBracelet[] = INCBIN_U32("graphics/items/icons/link_bracelet.4bpp.lz");
 const u32 gItemIconPalette_LinkBracelet[] = INCBIN_U32("graphics/items/icon_palettes/link_bracelet.gbapal.lz");
-
-const u32 gItemIcon_RainbowWing[] = INCBIN_U32("graphics/items/icons/rainbow_wing.4bpp.lz");
-const u32 gItemIconPalette_RainbowWing[] = INCBIN_U32("graphics/items/icon_palettes/rainbow_wing.gbapal.lz");
-
-const u32 gItemIcon_ShinyRadar[] = INCBIN_U32("graphics/items/icons/shiny_radar.4bpp.lz");
-const u32 gItemIconPalette_ShinyRadar[] = INCBIN_U32("graphics/items/icon_palettes/shiny_radar.gbapal.lz");

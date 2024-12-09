@@ -32,28 +32,6 @@ NavelRock_Summit_EventScript_TryRemoveHoOh::
 	removeobject LOCALID_HO_OH
 	return
 
-NavelRock_Summit_EventScript_WalkRight::
-	checkitem ITEM_RAINBOW_WING, 1
-	compare VAR_RESULT, TRUE
-	goto_if_lt NavelRock_Summit_Nothing
-	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Summit_Movement_WalkRight
-	end
-
-NavelRock_Summit_EventScript_WalkLeft::
-	checkitem ITEM_RAINBOW_WING, 1
-	compare VAR_RESULT, TRUE
-	goto_if_lt NavelRock_Summit_Nothing
-	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Summit_Movement_WalkRight
-	end
-
-NavelRock_Summit_Movement_WalkRight::
-	walk_right
-	step_end
-
-NavelRock_Summit_Movement_WalkLeft::
-	walk_left
-	step_end
-
 NavelRock_Summit_EventScript_HoOh::
 	goto_if_questlog EventScript_ReleaseEnd
 	special QuestLog_CutRecording

@@ -244,7 +244,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_THICK_CLUB]     = {gItemIcon_ThickClub, gItemIconPalette_ThickClub},
     [ITEM_STICK]          = {gItemIcon_Stick, gItemIconPalette_Stick},
     // ????????
-    [ITEM_RAINBOW_WING]   = {gItemIcon_RainbowWing, gItemIconPalette_RainbowWing},
+    [ITEM_0E2]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_SHINY_RADAR]    = {gItemIcon_ShinyRadar, gItemIconPalette_ShinyRadar},
     [ITEM_0E4]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0E5]            = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
@@ -307,8 +307,8 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_ROOM_6_KEY]     = {gItemIcon_Room6Key, gItemIconPalette_Key},
     [ITEM_STORAGE_KEY]    = {gItemIcon_StorageKey, gItemIconPalette_OldKey},
     [ITEM_ROOT_FOSSIL]    = {gItemIcon_RootFossil, gItemIconPalette_HoennFossil},
-    [ITEM_CLAW_FOSSIL]    = {gItemIcon_ClawFossil, gItemIconPalette_HoennFossil},
-    [ITEM_DEVON_SCOPE]    = {gItemIcon_DevonScope, gItemIconPalette_DevonScope},
+    [ITEM_SHINY_RADAR]    = {gItemIcon_ShinyRadar, gItemIconPalette_ShinyRadar},
+    [ITEM_RAINBOW_WING]   = {gItemIcon_RainbowWing, gItemIconPalette_RainbowWing},
     // TMs / HMs
     [ITEM_TM01]           = {gItemIcon_TMHM, gItemIconPalette_FightingTMHM},
     [ITEM_TM02]           = {gItemIcon_TMHM, gItemIconPalette_DragonTMHM},
