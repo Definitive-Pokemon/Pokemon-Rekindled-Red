@@ -74,6 +74,7 @@
 
 #define FLDEFF_PAL_TAG_GENERAL_0          0x1004
 #define FLDEFF_PAL_TAG_GENERAL_1          0x1005
+#define FLDEFF_PAL_TAG_SNOW_GRASS         0x1006
 #define FLDEFF_PAL_TAG_POKEBALL_TRAIL     0x1009
 #define FLDEFF_PAL_TAG_ASH                0x100D
 #define FLDEFF_PAL_TAG_SMALL_SPARKLE      0x100F
@@ -114,5 +115,6 @@
 #define FLDEFFOBJ_ASH_LAUNCH               33
 #define FLDEFFOBJ_BUBBLES                  34
 #define FLDEFFOBJ_SMALL_SPARKLE            35
+#define FLDEFFOBJ_SNOW_GRASS               36
 
 #endif // GUARD_CONSTANTS_FIELD_EFFECTS_H
