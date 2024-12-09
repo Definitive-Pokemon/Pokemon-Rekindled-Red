@@ -115,6 +115,6 @@
 #define FLDEFFOBJ_ASH_LAUNCH               33
 #define FLDEFFOBJ_BUBBLES                  34
 #define FLDEFFOBJ_SMALL_SPARKLE            35
-#define FLDEFFOBJ_SNOW_GRASS               36
+#define FLDEFFOBJ_SNOW_GRASS               38
 
 #endif // GUARD_CONSTANTS_FIELD_EFFECTS_H
