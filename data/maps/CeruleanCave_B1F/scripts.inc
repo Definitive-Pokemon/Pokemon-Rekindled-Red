@@ -34,10 +34,11 @@ CeruleanCave_B1F_EventScript_HideMewtwo::
 CeruleanCave_B1F_EventScript_GiovanniEvent::
 	lockall
 	fadenewbgm MUS_NONE
+	applymovement OBJ_EVENT_ID_PLAYER, CeruleanCave_B1F_Movement_LookUp
+	waitmovement 0
 	delay 60
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, CeruleanCave_B1F_Movement_PanToActionFromBottom
-	applymovement OBJ_EVENT_ID_PLAYER, CeruleanCave_B1F_Movement_LookUp
 	waitmovement 0
 	special RemoveCameraObject
 	delay 60

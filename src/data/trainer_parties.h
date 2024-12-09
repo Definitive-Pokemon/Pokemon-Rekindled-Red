@@ -1643,13 +1643,11 @@ static const struct TrainerMonItemCustomMoves sParty_Green[] = {
     },
 };
 
-static const struct TrainerMonItemCustomMoves sParty_LeaderGiovanniMewtwo[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaderGiovanniMewtwo[] = {
     {
         .iv = 255,
         .lvl = 90,
         .species = SPECIES_MEWTWO,
-		.heldItem = ITEM_NONE,
-        .moves = {MOVE_SAFEGUARD, MOVE_PSYCHIC, MOVE_PSYCH_UP, MOVE_FUTURE_SIGHT},
     },
 };
 
