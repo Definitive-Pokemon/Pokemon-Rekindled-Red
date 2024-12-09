@@ -18,5 +18,6 @@ void InitTilesetAnim_BattleFrontierOutsideWest(void);
 void InitTilesetAnim_BattleFrontierOutsideEast(void);
 void InitTilesetAnim_SeviiIslands67(void);
 void InitTilesetAnim_SeviiIslands5(void);
+void InitTilesetAnim_BattleArena(void);
 
 #endif // GUARD_TILESET_ANIMS_H

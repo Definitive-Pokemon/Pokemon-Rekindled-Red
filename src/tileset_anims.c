@@ -569,3 +569,10 @@ void InitTilesetAnim_SeviiIslands5(void)
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
     sSecondaryTilesetAnimCallback = TilesetAnim_SeviiIslands5;
 }
+
+void InitTilesetAnim_BattleArena(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCallback = TilesetAnim_BattleArena;
+}
