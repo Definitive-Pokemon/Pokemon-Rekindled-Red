@@ -17,7 +17,7 @@
 #include "script.h"
 #include "trainer_see.h"
 #include "trig.h"
-#include "region_map_sections.h"
+#include "constants/region_map_sections.h"
 #include "constants/weather.h"
 #include "constants/maps.h"
 #include "constants/event_object_movement.h"
