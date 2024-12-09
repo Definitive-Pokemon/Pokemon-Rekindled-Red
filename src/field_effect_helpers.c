@@ -9,6 +9,7 @@
 #include "metatile_behavior.h"
 #include "overworld.h"
 #include "constants/field_effects.h"
+#include "constants/weather.h"
 #include "constants/region_map_sections.h"
 #include "constants/event_objects.h"
 #include "constants/songs.h"
