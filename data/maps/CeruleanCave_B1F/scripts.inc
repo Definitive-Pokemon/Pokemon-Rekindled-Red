@@ -202,13 +202,40 @@ CeruleanCave_B1F_Movement_LookDown::
 	step_end
 
 CeruleanCave_B1F_Text_GiovanniUnbelievable::
-	.string "Fuck off biach.$"
+	.string "Such incredible strength…\p"
+	.string "You would have been a perfect\n"
+	.string "second-in-command for me…\l"
+	.string "like your father once was.\p"
+	.string "Surprised? Your father once served\n"
+	.string "as my strongest and most loyal\l"
+	.string "TEAM ROCKET EXECUTIVE.\p"
+	.string "Unfortunately, even I do not know\n"
+	.string "where he's gone to. Such a shame…\p"
+	.string "Oh well…\p"
+	.string "I still have MEWTWO in my possession.\n"
+	.string "Once properly trained, it will be\l"
+	.string "completely indestructible!$"
 
 CeruleanCave_B1F_Text_GiovanniArgh::
-	.string "How could Mewtwo escape?!$"
+	.string "WHAT?!\n"
+	.string "How could MEWTWO escape from this\l"
+	.string "MASTER BALL?!\p"
+	.string "That… that's impossible!$"
 
 CeruleanCave_B1F_Text_GiovanniDone::
-	.string "I'm done here!$"
+	.string "What did you do?!\p"
+	.string "… Say what?!\p"
+	.string "You redirected your POKéMON's moves\n"
+	.string "to break it during our battle?\p"
+	.string "Very clever…\p"
+	.string "I must say I'm impressed.\p"
+	.string "I need copies of the MASTER BALL,\n"
+	.string "and more powerful POKéMON if\l"
+	.string "I am to lead TEAM ROCKET again.\p"
+	.string "I hope you will consider following\n"
+	.string "in your father's footsteps, but\l"
+	.string "I know that will likely not happen.\p"
+	.string "If so, I hope this is farewell.$"
 
 CeruleanCave_B1F_EventScript_Mewtwo::
 	goto_if_questlog EventScript_ReleaseEnd
