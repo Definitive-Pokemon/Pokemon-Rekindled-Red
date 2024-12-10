@@ -1670,7 +1670,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderSidney[] = {
         .iv = 250,
         .lvl = 54,
         .species = SPECIES_HOUNDOOM,
-		.heldItem = ITEM_BLACKGLASSES,
+		.heldItem = ITEM_BLACK_GLASSES,
         .moves = {MOVE_CRUNCH, MOVE_FLAMETHROWER, MOVE_WILL_O_WISP, MOVE_SHADOW_BALL},
     },
     {
