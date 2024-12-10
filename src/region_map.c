@@ -1134,6 +1134,7 @@ static void InitRegionMapType(void)
     }
     switch (gMapHeader.regionMapSectionId)
     {
+        case MAPSEC_CINNABAR_ISLAND:
         case MAPSEC_FIERY_PASSAGE:
 	    case MAPSEC_MT_SILVER_PATH:
 	    case MAPSEC_MT_SILVER:
