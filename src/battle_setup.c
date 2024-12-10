@@ -646,6 +646,8 @@ u8 BattleSetup_GetTerrainId(void)
         return BATTLE_TERRAIN_LONG_GRASS;
     if (MetatileBehavior_IsSandOrShallowFlowingWater(tileBehavior))
         return BATTLE_TERRAIN_SAND;
+    if (MetatileBehavior_IsSnow(tileBehavior))
+        return BATTLE_TERRAIN_SNOW;
     switch (gMapHeader.mapType)
     {
     case MAP_TYPE_TOWN:

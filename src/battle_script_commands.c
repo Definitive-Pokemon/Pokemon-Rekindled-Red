@@ -753,6 +753,7 @@ const u16 gNaturePowerMoves[] =
     [BATTLE_TERRAIN_MOUNTAIN]   = MOVE_ROCK_SLIDE,
     [BATTLE_TERRAIN_CAVE]       = MOVE_SHADOW_BALL,
     [BATTLE_TERRAIN_BUILDING]   = MOVE_SWIFT,
+    [BATTLE_TERRAIN_SNOW]       = MOVE_BLIZZARD,
     [BATTLE_TERRAIN_PLAIN]      = MOVE_SWIFT
 };
 
@@ -9334,6 +9335,9 @@ static void Cmd_getsecretpowereffect(void)
         break;
     case BATTLE_TERRAIN_CAVE:
         gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_FLINCH;
+        break;
+    case BATTLE_TERRAIN_SNOW:
+        gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_FREEZE;
         break;
     default:
         gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_PARALYSIS;

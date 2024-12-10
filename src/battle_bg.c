@@ -437,6 +437,12 @@ static const u32 sBattleTerrainPalette_Plain[] = INCBIN_U32("graphics/battle_ter
 static const u32 sBattleTerrainTiles_Indoor[] = INCBIN_U32("graphics/battle_terrain/indoor/terrain.4bpp.lz");
 static const u32 sBattleTerrainTilemap_Indoor[] = INCBIN_U32("graphics/battle_terrain/indoor/terrain.bin.lz");
 
+static const u32 sBattleTerrainPalette_Snow[] = INCBIN_U32("graphics/battle_terrain/snow/terrain.gbapal.lz");
+static const u32 sBattleTerrainPalette_Snow[] = INCBIN_U32("graphics/battle_terrain/snow/terrain.4bpp.lz");
+static const u32 sBattleTerrainPalette_Snow[] = INCBIN_U32("graphics/battle_terrain/snow/terrain.bin.lz");
+static const u32 sBattleTerrainPalette_Snow[] = INCBIN_U32("graphics/battle_terrain/snow/anim.4bpp.lz");
+static const u32 sBattleTerrainPalette_Snow[] = INCBIN_U32("graphics/battle_terrain/snow/anim.bin.lz");
+
 static const struct BattleBackground sBattleTerrainTable[] = {
     [BATTLE_TERRAIN_GRASS] =
     {
@@ -597,6 +603,14 @@ static const struct BattleBackground sBattleTerrainTable[] = {
         .entryTileset = sBattleTerrainAnimTiles_Building,
         .entryTilemap = sBattleTerrainAnimTilemap_Building,
         .palette = sBattleTerrainPalette_Champion
+    },
+    [BATTLE_TERRAIN_SNOW] =
+    {
+        .tileset = sBattleTerrainTiles_Snow,
+        .tilemap = sBattleTerrainTilemap_Snow,
+        .entryTileset = sBattleTerrainAnimTiles_Snow,
+        .entryTilemap = sBattleTerrainAnimTilemap_Snow,
+        .palette = sBattleTerrainPalette_Snow
     }
 };
 

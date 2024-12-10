@@ -9847,6 +9847,7 @@ Move_SECRET_POWER:
 	jumpargeq 0, BATTLE_TERRAIN_MOUNTAIN,   Move_ROCK_THROW
 	jumpargeq 0, BATTLE_TERRAIN_CAVE,       Move_BITE
 	jumpargeq 0, BATTLE_TERRAIN_BUILDING,   Move_STRENGTH
+	jumpargeq 0, BATTLE_TERRAIN_SNOW,       Move_BLIZZARD
 	goto Move_SLAM
 
 Move_TWISTER:

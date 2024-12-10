@@ -137,6 +137,7 @@ bool8 MetatileBehavior_IsTrainerTowerMonitor(u8 metatileBehavior);
 bool8 MetatileBehavior_IsAshGrass(u8 metatileBehavior);
 bool8 MetatileBehavior_IsSecretBaseJumpMat(u8 metatileBehavior);
 bool8 MetatileBehavior_IsSecretBaseSpinMat(u8 metatileBehavior);
+bool8 MetatileBehavior_IsSnow(u8 metatileBehavior);
 //sideways stairs
 bool8 MetatileBehavior_IsSidewaysStairsRightSide(u8 metatileBehavior);
 bool8 MetatileBehavior_IsSidewaysStairsLeftSide(u8 metatileBehavior);
