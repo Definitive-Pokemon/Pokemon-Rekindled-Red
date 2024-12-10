@@ -277,7 +277,7 @@ u32 FldEff_TallGrass(void)
         spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[36], x, y, 0);
     else if(mapsec == MAPSEC_CANYON_ENTRANCE || mapsec == MAPSEC_SEVAULT_CANYON)
         spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[37], x, y, 0);
-    else if(mapsec == MAPSEC_MT_SILVER_CAVE || gWeatherPtr->currWeather == WEATHER_SNOW)
+    else if(mapsec == MAPSEC_MT_SILVER_CAVE && gWeatherPtr->currWeather == WEATHER_SNOW)
         spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_SNOW_GRASS], x, y, 0);
     else
         spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS], x, y, 0);

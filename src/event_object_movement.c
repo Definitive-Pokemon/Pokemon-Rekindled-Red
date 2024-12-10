@@ -8831,7 +8831,7 @@ void GroundEffect_SpawnOnTallGrass(struct ObjectEvent *objEvent, struct Sprite *
     gFieldEffectArguments[5] = objEvent->mapGroup;
     gFieldEffectArguments[6] = (u8)gSaveBlock1Ptr->location.mapNum << 8 | (u8)gSaveBlock1Ptr->location.mapGroup;
     gFieldEffectArguments[7] = 1;
-    if(GetCurrentRegionMapSectionId() == MAPSEC_MT_SILVER_CAVE || gWeatherPtr->currWeather == WEATHER_SNOW)
+    if(GetCurrentRegionMapSectionId() == MAPSEC_MT_SILVER_CAVE && gWeatherPtr->currWeather == WEATHER_SNOW)
         FieldEffectStart(FLDEFF_SNOW_GRASS);
     else
         FieldEffectStart(FLDEFF_TALL_GRASS);
@@ -8847,7 +8847,7 @@ void GroundEffect_StepOnTallGrass(struct ObjectEvent *objEvent, struct Sprite *s
     gFieldEffectArguments[5] = objEvent->mapGroup;
     gFieldEffectArguments[6] = (u8)gSaveBlock1Ptr->location.mapNum << 8 | (u8)gSaveBlock1Ptr->location.mapGroup;
     gFieldEffectArguments[7] = 0;
-    if(GetCurrentRegionMapSectionId() == MAPSEC_MT_SILVER_CAVE || gWeatherPtr->currWeather == WEATHER_SNOW)
+    if(GetCurrentRegionMapSectionId() == MAPSEC_MT_SILVER_CAVE && gWeatherPtr->currWeather == WEATHER_SNOW)
         FieldEffectStart(FLDEFF_SNOW_GRASS);
     else
         FieldEffectStart(FLDEFF_TALL_GRASS);
