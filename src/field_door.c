@@ -9,6 +9,7 @@
 enum {
     DOOR_SOUND_NORMAL,
     DOOR_SOUND_SLIDING,
+    DOOR_SOUND_WOOD_SLIDING,
 };
 
 enum {
@@ -83,7 +84,7 @@ static const u8 sDoorAnimTiles_SSAnne[] = INCBIN_U8("graphics/door_anims/ss_anne
 static const u16 sDoorNullPalette21[16] = {};
 
 // Doors from R/S dummied below
-static const u8 sDoorAnimTiles_Empty1[256 * 3] = {};
+static const u8 sDoorAnimTiles_Tower[] = INCBIN_U8("graphics/door_anims/battle_arena.4bpp");
 static const u16 sDoorNullPalette22[16] = {};
 static const u8 sDoorAnimTiles_Empty2[256 * 3] = {};
 static const u16 sDoorNullPalette23[16] = {};
@@ -250,6 +251,7 @@ static const u8 sDoorAnimPalettes_Sevii67[] = {5, 5, 5, 5, 5, 5, 5, 5};
 static const u8 sDoorAnimPalettes_Teleporter[] = {8, 8, 8, 8, 8, 8, 8, 8};
 static const u8 sDoorAnimPalettes_TrainerTowerLobbyElevator[] = {8, 8, 2, 2, 2, 2, 2, 2};
 static const u8 sDoorAnimPalettes_TrainerTowerRoofElevator[] = {11, 11, 2, 2, 2, 2, 2, 2};
+static const u8 sDoorAnimPalettes_Tower[] = {7, 7, 7, 7, 7, 7, 7, 7};
 
 static const struct DoorGraphics sDoorGraphics[] = {
     {METATILE_General_Door,                                DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_General, sDoorAnimPalettes_General},
@@ -291,6 +293,7 @@ static const struct DoorGraphics sDoorGraphics[] = {
     {METATILE_BerryForest_Door,                            DOOR_SOUND_NORMAL,  DOOR_SIZE_1x1, sDoorAnimTiles_Sevii45, sDoorAnimPalettes_Sevii45},
     {METATILE_BattleFrontierOutsideEast_BattleTower,       DOOR_SOUND_SLIDING, DOOR_SIZE_1x1, sDoorAnimTiles_BattleTower, sDoorAnimPalettes_SlidingSingle},
     {METATILE_BattleFrontier_BattleTowerElevator,          DOOR_SOUND_SLIDING, DOOR_SIZE_1x1, sDoorAnimTiles_BattleTowerElevator, sDoorAnimPalettes_SSAnne},
+    {METATILE_Umbilical_TowerDoor,                             DOOR_SOUND_WOOD_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_Tower, sDoorAnimPalettes_Tower},
     {}
 };
 
@@ -518,6 +521,8 @@ u16 GetDoorSoundEffect(int x, int y)
 {
     if (GetDoorSoundType(sDoorGraphics, x, y) == DOOR_SOUND_NORMAL)
         return SE_DOOR;
+    else if (GetDoorSoundType(sDoorGraphics, x, y) == DOOR_SOUND_WOOD_SLIDING)
+        return SE_REPEL;
     else // DOOR_SOUND_SLIDING
         return SE_SLIDING_DOOR;
 }
