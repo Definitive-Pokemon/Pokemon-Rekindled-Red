@@ -5488,8 +5488,8 @@
     {
       "id": "LAYOUT_MT_SILVER_OUTDOOR1",
       "name": "MtSilverOutdoor1_Layout",
-      "width": 26,
-      "height": 45,
+      "width": 28,
+      "height": 47,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
