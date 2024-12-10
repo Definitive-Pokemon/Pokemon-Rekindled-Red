@@ -39,11 +39,11 @@ CinnabarIsland_EventScript_Beauty::
 CinnabarIsland_Text_Beauty::
 	.string "They say the POKéMON MANSION\n"
 	.string "became inaccessible because\l"
-	.string "of what happened there.\p"
+	.string "of the incident that took place.\p"
 	.string "But I've heard rumors of a\n"
 	.string "hidden entrance somewhere.\p"
 	.string "Honestly, I couldn't care less.\n"
-	.string "That thing gives me the spooks!$"
+	.string "That place gives me the spooks!$"
 
 CinnabarIsland_EventScript_BaldingMan::
 	msgbox CinnabarIsland_Text_BaldingMan, MSGBOX_NPC

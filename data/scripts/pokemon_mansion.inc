@@ -38,12 +38,6 @@ PokemonMansion_EventScript_PressSwitch_1F::
 	setmetatile 27, 26, METATILE_PokemonMansion_Floor_ShadeFull, 0
 	setmetatile 28, 26, METATILE_PokemonMansion_Floor, 0
 	setmetatile 29, 26, METATILE_PokemonMansion_Floor, 0
-	setmetatile 32, 25, METATILE_PokemonMansion_Floor_ShadeFull, 0
-	setmetatile 33, 25, METATILE_PokemonMansion_Floor, 0
-	setmetatile 34, 25, METATILE_PokemonMansion_Floor, 0
-	setmetatile 32, 26, METATILE_PokemonMansion_Floor_ShadeFull, 0
-	setmetatile 33, 26, METATILE_PokemonMansion_Floor, 0
-	setmetatile 34, 26, METATILE_PokemonMansion_Floor, 0
 	setmetatile 31, 18, METATILE_PokemonMansion_Barrier_Horizontal_TopLeft, 1
 	setmetatile 32, 18, METATILE_PokemonMansion_Barrier_Horizontal_TopMid, 1
 	setmetatile 33, 18, METATILE_PokemonMansion_Barrier_Horizontal_TopRight, 1
@@ -66,12 +60,6 @@ PokemonMansion_EventScript_ResetSwitch_1F::
 	setmetatile 27, 26, METATILE_PokemonMansion_Barrier_Horizontal_BottomLeft, 1
 	setmetatile 28, 26, METATILE_PokemonMansion_Barrier_Horizontal_BottomMid, 1
 	setmetatile 29, 26, METATILE_PokemonMansion_Barrier_Horizontal_BottomRight, 1
-	setmetatile 32, 25, METATILE_PokemonMansion_Barrier_Horizontal_TopLeft, 1
-	setmetatile 33, 25, METATILE_PokemonMansion_Barrier_Horizontal_TopMid, 1
-	setmetatile 34, 25, METATILE_PokemonMansion_Barrier_Horizontal_TopRight, 1
-	setmetatile 32, 26, METATILE_PokemonMansion_Barrier_Horizontal_BottomLeft, 1
-	setmetatile 33, 26, METATILE_PokemonMansion_Barrier_Horizontal_BottomMid, 1
-	setmetatile 34, 26, METATILE_PokemonMansion_Barrier_Horizontal_BottomRight, 1
 	setmetatile 31, 18, METATILE_PokemonMansion_Floor_ShadeFull, 0
 	setmetatile 32, 18, METATILE_PokemonMansion_Floor, 0
 	setmetatile 33, 18, METATILE_PokemonMansion_Floor, 0
