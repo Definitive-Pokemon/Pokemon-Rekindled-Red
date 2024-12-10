@@ -3561,10 +3561,6 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         sMapCursor->x = 0;
         sMapCursor->y = 11;
         break;
-    case MAPSEC_CINNABAR_UNDERGROUND:
-        sMapCursor->x = 4;
-        sMapCursor->y = 14;
-        break;
     default:
         GetPlayerPositionOnRegionMap();
         break;
