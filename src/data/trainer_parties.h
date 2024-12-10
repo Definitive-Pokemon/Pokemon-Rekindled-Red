@@ -1651,11 +1651,48 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LeaderGiovanniMewtwo[] =
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_RunningTriathleteF[] = {
+static const struct TrainerMonItemCustomMoves sParty_LeaderSidney[] = {
     {
-        .iv = 0,
-        .lvl = 5,
-        .species = SPECIES_EKANS,
+        .iv = 250,
+        .lvl = 54,
+        .species = SPECIES_MURKROW,
+		.heldItem = ITEM_CHOICE_BAND,
+        .moves = {MOVE_DRILL_PECK, MOVE_SHADOW_BALL, MOVE_DOUBLE_EDGE, MOVE_HIDDEN_POWER},
+    },
+    {
+        .iv = 250,
+        .lvl = 55,
+        .species = SPECIES_SHIFTRY,
+		.heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_BRICK_BREAK, MOVE_FAINT_ATTACK, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM},
+    },
+    {
+        .iv = 250,
+        .lvl = 54,
+        .species = SPECIES_HOUNDOOM,
+		.heldItem = ITEM_BLACKGLASSES,
+        .moves = {MOVE_CRUNCH, MOVE_FLAMETHROWER, MOVE_WILL_O_WISP, MOVE_SHADOW_BALL},
+    },
+    {
+        .iv = 250,
+        .lvl = 56,
+        .species = SPECIES_DUSCLOPS,
+		.heldItem = ITEM_SPELL_TAG,
+        .moves = {MOVE_WILL_O_WISP, MOVE_SHADOW_BALL, MOVE_PAIN_SPLIT, MOVE_SEISMIC_TOSS},
+    },
+    {
+        .iv = 250,
+        .lvl = 56,
+        .species = SPECIES_CRAWDAUNT,
+		.heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_CRUNCH, MOVE_SURF, MOVE_BRICK_BREAK, MOVE_SUBSTITUTE},
+    },
+    {
+        .iv = 250,
+        .lvl = 58,
+        .species = SPECIES_ABSOL,
+		.heldItem = ITEM_STARF_BERRY,
+        .moves = {MOVE_FAINT_ATTACK, MOVE_BODY_SLAM, MOVE_QUICK_ATTACK, MOVE_SHADOW_BALL},
     },
 };
 

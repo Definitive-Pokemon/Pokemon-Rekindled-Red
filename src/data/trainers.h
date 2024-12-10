@@ -432,15 +432,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_LeaderGiovanniMewtwo),
     },
-    [TRAINER_SWIMMING_TRIATHLETE_M] = {
-        .trainerClass = TRAINER_CLASS_TRIATHLETE,
+    [TRAINER_LEADER_SIDNEY] = {
+        .trainerClass = TRAINER_CLASS_RS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_SWIMMING_TRIATHLETE_M,
-        .trainerName = _(""),
-        .items = {},
+        .trainerName = _("SIDNEY"),
+        .items = {ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_FULL_RESTORE, ITEM_HYPER_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_SwimmingTriathleteM),
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_LeaderSidney),
     },
     [TRAINER_SWIMMING_TRIATHLETE_F] = {
         .trainerClass = TRAINER_CLASS_TRIATHLETE,

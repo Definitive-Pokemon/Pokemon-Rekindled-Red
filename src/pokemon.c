@@ -6880,6 +6880,8 @@ static u16 GetBattleBGM(void)
 			return MUS_VS_ELITE_FOUR;
 		case TRAINER_CLASS_PKMN_TRAINER:
 			return MUS_RS_VS_TRAINER;
+		case TRAINER_CLASS_RS_LEADER:
+			return MUS_RS_VS_LEADER;
         default:
             return MUS_VS_TRAINER;
         }
