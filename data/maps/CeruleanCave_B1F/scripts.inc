@@ -230,12 +230,12 @@ CeruleanCave_B1F_Text_GiovanniDone::
 	.string "Very clever…\p"
 	.string "I must say I'm impressed.\p"
 	.string "I need copies of the MASTER BALL,\n"
-	.string "and more powerful POKéMON if\l"
-	.string "I am to lead TEAM ROCKET again.\p"
-	.string "I hope you will consider following\n"
-	.string "in your father's footsteps, but\l"
-	.string "I know that will likely not happen.\p"
-	.string "If so, I hope this is farewell.$"
+	.string "and more powerful POKéMON if I am\l"
+	.string "to lead TEAM ROCKET again.\p"
+	.string "I hope you will someday follow\n"
+	.string "in your father's footsteps,\l"
+	.string "no matter how unlikely.\p"
+	.string "If not, I hope this is farewell.$"
 
 CeruleanCave_B1F_EventScript_Mewtwo::
 	goto_if_questlog EventScript_ReleaseEnd
