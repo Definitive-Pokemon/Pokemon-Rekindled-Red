@@ -57,7 +57,7 @@
 #define MAPSEC_UNDERWATER_128               0x35
 #define MAPSEC_UNDERWATER_SOOTOPOLIS        0x36
 #define MAPSEC_GRANITE_CAVE                 0x37
-#define MAPSEC_CINNABAR_VOLCANO             0x38
+#define MAPSEC_MT_CHIMNEY             0x38
 #define MAPSEC_SAFARI_ZONE                  0x39
 #define MAPSEC_BATTLE_FRONTIER              0x3A
 #define MAPSEC_PETALBURG_WOODS              0x3B
@@ -238,8 +238,9 @@
 #define MAPSEC_TWO_ISLAND_HO_OH             0xE4
 #define MAPSEC_NEW_BARK_TOWN                0xE5
 #define MAPSEC_UMBILICAL_TOWER              0xE6
-#define MAPSEC_NONE                         0xE7
-#define MAPSEC_COUNT                        0xE8
+#define MAPSEC_CINNABAR_UNDERGROUND         0xE7
+#define MAPSEC_NONE                         0xE8
+#define MAPSEC_COUNT                        0xE9
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

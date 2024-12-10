@@ -1142,7 +1142,7 @@ static void InitRegionMapType(void)
         case MAPSEC_ROUTE_27:
         case MAPSEC_TOHJO_FALLS:
 		case MAPSEC_NEW_BARK_TOWN:
-		case MAPSEC_CINNABAR_VOLCANO:
+		case MAPSEC_MT_CHIMNEY:
         region = REGIONMAP_KANTO;
         break;
         case MAPSEC_UNDERWATER_124:
@@ -3561,7 +3561,7 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         sMapCursor->x = 0;
         sMapCursor->y = 11;
         break;
-    case MAPSEC_CINNABAR_VOLCANO:
+    case MAPSEC_CINNABAR_UNDERGROUND:
         sMapCursor->x = 4;
         sMapCursor->y = 14;
         break;
