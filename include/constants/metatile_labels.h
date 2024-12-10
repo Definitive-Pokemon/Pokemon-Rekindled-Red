@@ -447,9 +447,6 @@
 #define METATILE_ViridianForest_HugeTreeTopMiddle_Grass  0x284
 #define METATILE_ViridianForest_HugeTreeTopMiddle_Mowed  0x281
 
-// gTileset_UmbilicalTower
-#define METATILE_Umbilical_TowerDoor                     0x3D7
-
 // Other
 #define METATILE_Fallarbor_AshGrass                      0x20A
 #define METATILE_Fallarbor_NormalGrass                   0x212
@@ -457,5 +454,6 @@
 #define METATILE_Pacifidlog_SkyPillar_CrackedFloor_Hole  0x237
 #define METATILE_RSCave_CrackedFloor                     0x22F
 #define METATILE_RSCave_CrackedFloor_Hole                0x206
+#define METATILE_Umbilical_TowerDoor                     0x3D7
 
 #endif // GUARD_METATILE_LABELS_H
