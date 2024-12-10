@@ -441,10 +441,10 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_MT_CHIMNEY",
-      "name": "MT. CHIMNEY",
-      "x": 6,
-      "y": 2,
+      "map_section": "MAPSEC_CINNABAR_VOLCANO",
+      "name": "CINNABAR UNDERGROUND",
+      "x": 0,
+      "y": 0,
       "width": 1,
       "height": 1
     },
