@@ -3983,7 +3983,7 @@ static void CursorCB_FieldMove(u8 taskId)
             gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
         }
         // All field moves before WATERFALL are HMs.
-        else if ((fieldMove <= FIELD_MOVE_ROCK_SMASH && fieldMove != FIELD_MOVE_DIVE) && FlagGet(FLAG_BADGE01_GET + fieldMove) != TRUE)
+        else if ((fieldMove <= FIELD_MOVE_WATERFALL && fieldMove != FIELD_MOVE_DIVE && fieldMove != FIELD_MOVE_ROCK_SMASH) && FlagGet(FLAG_BADGE01_GET + fieldMove) != TRUE)
         {
             DisplayPartyMenuMessage(gText_CantUseUntilNewBadge, TRUE);
             gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
