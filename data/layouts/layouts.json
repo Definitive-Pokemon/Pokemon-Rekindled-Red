@@ -5153,7 +5153,7 @@
       "id": "LAYOUT_CINNABAR_VOLCANO",
       "name": "CinnabarVolcano_Layout",
       "width": 30,
-      "height": 30,
+      "height": 36,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
