@@ -49,6 +49,14 @@
       "script": "EventScript_CutTree",
       "flag": "FLAG_ROUTE_28_CUT_TREE"
     }
+    {
+      "type": "clone",
+      "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
+      "x": 39,
+      "y": 11,
+      "target_local_id": 2,
+      "target_map": "MAP_ROUTE28"
+    },
   ],
   "warp_events": [
     {
