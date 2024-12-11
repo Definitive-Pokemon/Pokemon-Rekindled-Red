@@ -110,8 +110,8 @@ MtEmber_Summit_Text_Maximus_Mock2::
 	.string "Guess this is farewell.$"
 
 MtEmber_Summit_Text_Maximus_Mock::
-	.string "There, there.\n"
-	.string "It doesn't hurt too much,\l"
+	.string "There, there.\p"
+	.string "It doesn't hurt too much,\n"
 	.string "does it?$"
 
 MtEmber_Summit_Movement_LookDown::
