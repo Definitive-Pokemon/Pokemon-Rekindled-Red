@@ -858,4 +858,13 @@ const struct Tileset gTileset_BattleArena =
 	.callback = NULL,
 };
 
-
+const struct Tileset gTileset_BattleTower = 
+{
+	.isCompressed = TRUE,
+	.isSecondary = TRUE,
+	.tiles = gTilesetTiles_BattleTower,
+	.palettes = gTilesetPalettes_BattleTower,
+	.metatiles = gMetatiles_BattleTower,
+	.metatileAttributes = gMetatileAttributes_BattleTower,
+	.callback = NULL,
+};
