@@ -442,15 +442,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES(sParty_LeaderSidney),
     },
-    [TRAINER_SWIMMING_TRIATHLETE_F] = {
-        .trainerClass = TRAINER_CLASS_TRIATHLETE,
+    [TRAINER_COLLECTOR_MAXIMUS] = {
+        .trainerClass = TRAINER_CLASS_RICH_BOY,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_SWIMMING_TRIATHLETE_F,
-        .trainerName = _(""),
-        .items = {},
+        .trainerPic = TRAINER_PIC_RICH_BOY,
+        .trainerName = _("MAXIMUS"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_SwimmingTriathleteF),
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_HP_AWARE,
+        .party = ITEM_CUSTOM_MOVES(sParty_CollectorMaximus),
     },
     [TRAINER_DRAGON_TAMER] = {
         .trainerClass = TRAINER_CLASS_DRAGON_TAMER,

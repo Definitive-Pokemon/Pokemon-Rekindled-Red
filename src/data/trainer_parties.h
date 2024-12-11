@@ -1696,7 +1696,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderSidney[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_SwimmingTriathleteM[] = {
+static const struct TrainerMonItemCustomMoves sParty_CollectorMaximus[] = {
     {
         .iv = 0,
         .lvl = 5,
