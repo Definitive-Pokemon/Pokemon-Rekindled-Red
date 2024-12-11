@@ -112,7 +112,7 @@ MtEmber_Summit_Text_Maximus_Mock2::
 MtEmber_Summit_Text_Maximus_Mock::
 	.string "There, there.\n"
 	.string "It doesn't hurt too much,\l"
-	.string "does it?\$"
+	.string "does it?$"
 
 MtEmber_Summit_Movement_LookDown::
 	walk_in_place_down
