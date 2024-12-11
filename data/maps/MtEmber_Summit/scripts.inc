@@ -29,6 +29,7 @@ MtEmber_Summit_EventScript_SetRain::
 
 MtEmber_Summit_EventScript_Maximus::
 	lockall
+	textcolor 0
 	fadeoutbgm 2
 	delay 60
 	special SpawnCameraObject
@@ -44,21 +45,30 @@ MtEmber_Summit_EventScript_Maximus::
 	closemessage
 	applymovement LOCALID_MAXIMUS, MtEmber_Summit_Movement_TakeFromMoltres
 	waitmovement 0
+	delay 10
+	applymovement LOCALID_MAXIMUS, MtEmber_Summit_Movement_TakeFromMoltres
+	waitmovement 0
+	delay 60
 	msgbox MtEmber_Summit_Text_Maximus_Mock2, MSGBOX_NPC
 	closemessage
+	delay 80
+	playse SE_PIN
 	applymovement LOCALID_MAXIMUS, MtEmber_Summit_Movement_LookDown
+	waitse
 	waitmovement 0
 	msgbox MtEmber_Summit_Text_Maximus_Look, MSGBOX_NPC
 	closemessage
-	playse SE_WARP_OUT
+	fadescreen FADE_TO_BLACK
+	playse SE_WARP_IN
 	waitse
 	removeobject LOCALID_MAXIMUS
+	clearflag FLAG_RAIN_AND_EMBER
+	setflag FLAG_HIDE_MAXIMUS_MOLTRES
+	fadescreen FADE_FROM_BLACK
 	setweather WEATHER_VOLCANIC_ASH
 	doweather
 	setvar VAR_EMBER_RAIN, 1
-	clearflag FLAG_RAIN_AND_EMBER
-	setflag FLAG_HIDE_MAXIMUS_MOLTRES
-	delay 500
+	delay 400
 	playmoncry SPECIES_MOLTRES, 2
 	waitmoncry
 	delay 60
@@ -66,8 +76,9 @@ MtEmber_Summit_EventScript_Maximus::
 	playse SE_M_HEAT_WAVE
 	waitse
 	doweather
+	textcolor 2
 	message MtEmber_Summit_Text_MoltresPowers
-	closemessage
+	waitbuttonpress
 	delay 60
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, MtEmber_Summit_Movement_PanToActionBack
@@ -102,7 +113,7 @@ MtEmber_Summit_Text_Maximus_Look::
 
 MtEmber_Summit_Text_Maximus_Mock2::
 	.string "Well, all done!\n"
-	.string "Now you can stop struggling.\p"
+	.string "Now you can stop whining.\p"
 	.string "Our RAIN DANCE was just perfect.\n"
 	.string "Look how pathetic you are!\p"
 	.string "You're not even worth catching now,\n"
@@ -115,6 +126,11 @@ MtEmber_Summit_Text_Maximus_Mock::
 	.string "does it?$"
 
 MtEmber_Summit_Movement_LookDown::
+	emote_exclamation_mark
+	delay_16
+	delay_16
+	delay_16
+	delay_16
 	walk_in_place_down
 	step_end
 
