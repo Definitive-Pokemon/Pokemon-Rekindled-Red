@@ -56,8 +56,8 @@ Route10_EventScript_Incident::
 	end
 
 Route10_Text_Incident::
-	.string "I'm sorry, but the POWER PLANT\n"
-	.string "is currently off-limits due to\l"
-	.string "electricity leakage.\p"
-	.string "Don't ask me what it means, kid,\n"
-	.string "but I got my orders.$"
+	.string "I'm sorry, but the POWER PLANT is\n"
+	.string "currently off-limits due to an\l"
+	.string "electricity leak.\p"
+	.string "Don't ask me what it means, kid.\n"
+	.string "I have my orders.$"
