@@ -30,7 +30,7 @@ MtEmber_Summit_EventScript_SetRain::
 MtEmber_Summit_EventScript_Maximus::
 	lockall
 	textcolor 0
-	fadeoutbgm 2
+	fadenewbgm MUS_NONE
 	delay 60
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, MtEmber_Summit_Movement_PanToActionFromBottom
@@ -43,6 +43,8 @@ MtEmber_Summit_EventScript_Maximus::
 	waitmovement 0
 	msgbox MtEmber_Summit_Text_Maximus_Mock, MSGBOX_NPC
 	closemessage
+	delay 30
+	playbgm MUS_B_PIKE, 0
 	applymovement LOCALID_MAXIMUS, MtEmber_Summit_Movement_TakeFromMoltres
 	waitmovement 0
 	delay 10
@@ -68,6 +70,7 @@ MtEmber_Summit_EventScript_Maximus::
 	setweather WEATHER_VOLCANIC_ASH
 	doweather
 	setvar VAR_EMBER_RAIN, 1
+	fadenewbgm MUS_NONE
 	delay 400
 	playmoncry SPECIES_MOLTRES, 2
 	waitmoncry
