@@ -89,6 +89,7 @@ Route20_EventScript_Maximus::
 Route20_Text_Maximus::
 	.string "So this is where the legendary\n"
 	.string "ARTICUNO is hiding…\p"
-	.string "Good to know, but first,\n"
-	.string "I will go meet with MOLTRES\l"
-	.string "at the SEVII ISLANDS…$"
+	.string "Good to know, but first I will visit\n"
+	.string "MT. EMBER at the SEVII ISLANDS…\p"
+	.string "MOLTRES is an easier target,\n"
+	.string "after all.$"
