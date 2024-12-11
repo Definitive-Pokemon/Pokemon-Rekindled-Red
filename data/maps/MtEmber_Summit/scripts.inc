@@ -30,6 +30,7 @@ MtEmber_Summit_EventScript_Maximus::
 	setweather WEATHER_VOLCANIC_ASH
 	doweather
 	setvar VAR_EMBER_RAIN, 1
+	clearflag FLAG_RAIN_AND_EMBER
 	releaseall
 	end
 	
