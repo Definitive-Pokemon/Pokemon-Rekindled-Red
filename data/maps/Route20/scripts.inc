@@ -81,7 +81,7 @@ Route20_EventScript_SeafoamIslandsSign::
 	end
 
 Route20_EventScript_MaximusFaceUp::
-	setobjectmovementtype MAXIMUS, MOVEMENT_TYPE_FACE_UP
+	setobjectmovementtype LOCALID_MAXIMUS, MOVEMENT_TYPE_FACE_UP
 	return
 
 Route20_EventScript_Maximus::
