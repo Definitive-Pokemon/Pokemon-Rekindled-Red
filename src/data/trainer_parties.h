@@ -1698,9 +1698,46 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderSidney[] = {
 
 static const struct TrainerMonItemCustomMoves sParty_CollectorMaximus[] = {
     {
-        .iv = 0,
-        .lvl = 5,
-        .species = SPECIES_EKANS,
+        .iv = 255,
+        .lvl = 92,
+        .species = SPECIES_GENGAR,
+		.heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_SHADOW_BALL, MOVE_HYPNOSIS, MOVE_DREAM_EATER, MOVE_THUNDER},
+    },
+    {
+        .iv = 255,
+        .lvl = 93,
+        .species = SPECIES_ELECTABUZZ,
+		.heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_THUNDER, MOVE_ICE_PUNCH, MOVE_THUNDER_WAVE, MOVE_CROSS_CHOP},
+    },
+    {
+        .iv = 255,
+        .lvl = 92,
+        .species = SPECIES_BLISSEY,
+		.heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_SOFT_BOILED, MOVE_COUNTER, MOVE_THUNDER, MOVE_TOXIC},
+    },
+    {
+        .iv = 255,
+        .lvl = 93,
+        .species = SPECIES_LATIOS,
+		.heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_SURF, MOVE_THUNDER, MOVE_PSYCHIC, MOVE_DRAGON_CLAW},
+    },
+    {
+        .iv = 255,
+        .lvl = 94,
+        .species = SPECIES_DRAGONITE,
+		.heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_THUNDER, MOVE_EARTHQUAKE, MOVE_SURF, MOVE_FLY},
+    },
+    {
+        .iv = 255,
+        .lvl = 95,
+        .species = SPECIES_BLASTOISE,
+		.heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_SLEEP_TALK, MOVE_REST},
     },
 };
 
