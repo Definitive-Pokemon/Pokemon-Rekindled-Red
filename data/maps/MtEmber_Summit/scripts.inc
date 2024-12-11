@@ -38,6 +38,8 @@ MtEmber_Summit_EventScript_Moltres::
 	waitse
 	playmoncry SPECIES_MOLTRES, 2
 	message Text_Gyaoo
+	setweather WEATHER_DROUGHT
+	doweather
 	waitmessage
 	waitmoncry
 	delay 10
