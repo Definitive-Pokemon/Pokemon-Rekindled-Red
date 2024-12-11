@@ -29,7 +29,7 @@ MtEmber_Summit_EventScript_SetRain::
 
 MtEmber_Summit_EventScript_Maximus::
 	lockall
-	fadeoutbgm, 2
+	fadeoutbgm 2
 	delay 60
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, MtEmber_Summit_Movement_PanToActionFromBottom
