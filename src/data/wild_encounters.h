@@ -10041,8 +10041,8 @@ const struct WildPokemonHeader gWildMonHeaders[] =
 	{
         .mapGroup = MAP_GROUP(MT_SILVER_OUTDOOR2),
         .mapNum = MAP_NUM(MT_SILVER_OUTDOOR2),
-        .landMonsInfo_FR = &sMtSilverCaveOutdoor2_LandMonsInfo,
-        .landMonsInfo_LG = &sMtSilverCaveOutdoor2_LandMonsInfo,
+        .landMonsInfo_FR = &sMtSilverOutdoor2_LandMonsInfo,
+        .landMonsInfo_LG = &sMtSilverOutdoor2_LandMonsInfo,
         .waterMonsInfo_FR = NULL,
         .waterMonsInfo_LG = NULL,
         .rockSmashMonsInfo_FR = NULL,
