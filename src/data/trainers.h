@@ -444,7 +444,7 @@ const struct Trainer gTrainers[] = {
     },
     [TRAINER_COLLECTOR_MAXIMUS] = {
         .trainerClass = TRAINER_CLASS_RICH_BOY,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_RICH_BOY,
         .trainerName = _("MAXIMUS"),
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},

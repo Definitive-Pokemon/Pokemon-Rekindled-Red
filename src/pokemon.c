@@ -6882,6 +6882,8 @@ static u16 GetBattleBGM(void)
 			return MUS_RS_VS_TRAINER;
 		case TRAINER_CLASS_RS_LEADER:
 			return MUS_RS_VS_GYM_LEADER;
+		case TRAINER_CLASS_RICH_BOY:
+			return MUS_VS_FRONTIER_BRAIN;
         default:
             return MUS_VS_TRAINER;
         }

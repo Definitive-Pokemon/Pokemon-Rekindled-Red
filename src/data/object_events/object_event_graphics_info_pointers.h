@@ -454,6 +454,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MASTER_SCIENTIST]         = &gObjectEventGraphicsInfo_MasterScientist,
     [OBJ_EVENT_GFX_MASTER_YOUNGSTER]         = &gObjectEventGraphicsInfo_MasterYoungster,
     [OBJ_EVENT_GFX_LADY]                     = &gObjectEventGraphicsInfo_Lady,
+    [OBJ_EVENT_GFX_MAXIMUS]                  = &gObjectEventGraphicsInfo_Maximus,
     [OBJ_EVENT_GFX_ROCKER_2]                 = &gObjectEventGraphicsInfo_Rocker2,
     [OBJ_EVENT_GFX_ANABEL]                   = &gObjectEventGraphicsInfo_Anabel,
     [OBJ_EVENT_GFX_TUCKER]                   = &gObjectEventGraphicsInfo_Tucker,

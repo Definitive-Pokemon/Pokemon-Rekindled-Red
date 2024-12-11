@@ -2,7 +2,7 @@
   "id": "MAP_MT_SILVER_OUTDOOR2",
   "name": "MtSilverOutdoor2",
   "layout": "LAYOUT_MT_SILVER_OUTDOOR2",
-  "music": "MUS_B_ARENA",
+  "music": "MUS_B_PALACE",
   "region_map_section": "MAPSEC_MT_SILVER_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_SNOW",
