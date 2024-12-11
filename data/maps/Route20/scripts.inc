@@ -82,8 +82,9 @@ Route20_EventScript_SeafoamIslandsSign::
 Route20_EventScript_Maximus::
 	lock
 	textcolor 0
-	message Route20_Text_Maximus, MSGBOX_NPC
+	message Route20_Text_Maximus
 	waitbuttonpress
+	release
 	end
 
 Route20_Text_Maximus::
