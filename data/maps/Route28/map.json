@@ -47,7 +47,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
-      "flag": "FLAG_ROUTE_28_CUT_TREE"
+      "flag": "FLAG_ROUTE_28_CUT_TREE",
+      "in_connection": false
     }
   ],
   "warp_events": [
