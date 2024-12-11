@@ -3823,6 +3823,310 @@ const struct WildPokemon sPrototypeSeviiIsle7_FishingMons[] =
 
 const struct WildPokemonInfo sPrototypeSeviiIsle7_FishingMonsInfo = { 10, sPrototypeSeviiIsle7_FishingMons };
 
+const struct WildPokemon sRoute26_LandMons[] =
+{
+    { 68, 68, SPECIES_DODRIO },
+    { 69, 69, SPECIES_JUMPLUFF },
+    { 68, 70, SPECIES_RAPIDASH },
+    { 68, 70, SPECIES_HOUNDOOM },
+    { 69, 69, SPECIES_MAGNETON },
+    { 68, 70, SPECIES_KANGASKHAN },
+    { 68, 69, SPECIES_SANDSLASH },
+    { 68, 69, SPECIES_GRANBULL },
+    { 68, 69, SPECIES_ARBOK },
+    { 70, 71, SPECIES_GRANBULL },
+    { 70, 71, SPECIES_GRANBULL },
+    { 68, 69, SPECIES_ARBOK },
+};
+
+const struct WildPokemonInfo sRoute26_LandMonsInfo = { 21, sRoute26_LandMons };
+
+const struct WildPokemon sRoute26_WaterMons[] =
+{
+    { 25, 30, SPECIES_PELIPPER },
+    { 30, 40, SPECIES_TENTACRUEL },
+    { 40, 50, SPECIES_MANTINE },
+    { 50, 60, SPECIES_DEWGONG },
+    { 50, 60, SPECIES_DEWGONG },
+};
+
+const struct WildPokemonInfo sRoute26_WaterMonsInfo = { 2, sRoute26_WaterMons };
+
+const struct WildPokemon sRoute26_FishingMons[] =
+{
+    { 30, 35, SPECIES_LUVDISC },
+    { 35, 40, SPECIES_LUVDISC },
+    { 40, 45, SPECIES_LUVDISC },
+    { 45, 50, SPECIES_LUVDISC },
+    { 50, 55, SPECIES_LUVDISC },
+    { 55, 60, SPECIES_LUVDISC },
+    { 35, 55, SPECIES_LANTURN },
+    { 30, 40, SPECIES_TENTACRUEL },
+    { 40, 50, SPECIES_TENTACRUEL },
+    { 50, 60, SPECIES_TENTACRUEL },
+};
+
+const struct WildPokemonInfo sRoute26_FishingMonsInfo = { 20, sRoute26_FishingMons };
+
+const struct WildPokemon sRoute27_LandMons[] =
+{
+    { 70, 70, SPECIES_QUAGSIRE },
+    { 71, 71, SPECIES_JUMPLUFF },
+    { 70, 71, SPECIES_RAPIDASH },
+    { 70, 71, SPECIES_HOUNDOOM },
+    { 71, 72, SPECIES_GRUMPIG },
+    { 71, 72, SPECIES_GRANBULL },
+    { 70, 71, SPECIES_SANDSLASH },
+    { 71, 72, SPECIES_SANDSLASH },
+    { 70, 71, SPECIES_ARBOK },
+    { 71, 72, SPECIES_ARBOK },
+    { 70, 71, SPECIES_ARBOK },
+    { 71, 72, SPECIES_ARBOK },
+};
+
+const struct WildPokemonInfo sRoute27_LandMonsInfo = { 21, sRoute27_LandMons };
+
+const struct WildPokemon sRoute27_WaterMons[] =
+{
+    { 35, 40, SPECIES_PELIPPER },
+    { 40, 50, SPECIES_TENTACRUEL },
+    { 50, 60, SPECIES_MANTINE },
+    { 60, 70, SPECIES_DEWGONG },
+    { 60, 70, SPECIES_DEWGONG },
+};
+
+const struct WildPokemonInfo sRoute27_WaterMonsInfo = { 2, sRoute27_WaterMons };
+
+const struct WildPokemon sRoute27_FishingMons[] =
+{
+    { 30, 35, SPECIES_LUVDISC },
+    { 35, 40, SPECIES_LUVDISC },
+    { 40, 45, SPECIES_LUVDISC },
+    { 45, 50, SPECIES_LUVDISC },
+    { 50, 55, SPECIES_LUVDISC },
+    { 25, 35, SPECIES_LUVDISC },
+    { 35, 45, SPECIES_LUVDISC },
+    { 40, 50, SPECIES_LUVDISC },
+    { 50, 60, SPECIES_LUVDISC },
+    { 60, 70, SPECIES_LUVDISC },
+};
+
+const struct WildPokemon sRoute28_LandMons[] =
+{
+    { 68, 69, SPECIES_TANGELA },
+    { 69, 70, SPECIES_RAPIDASH },
+    { 72, 74, SPECIES_URSARING },
+    { 72, 74, SPECIES_DONPHAN },
+    { 71, 72, SPECIES_DODRIO },
+    { 71, 72, SPECIES_MANECTRIC },
+    { 71, 73, SPECIES_TANGELA },
+    { 72, 74, SPECIES_RAPIDASH },
+    { 70, 71, SPECIES_SNEASEL },
+    { 71, 72, SPECIES_ARBOK },
+    { 70, 71, SPECIES_SNEASEL },
+    { 71, 72, SPECIES_ARBOK },
+};
+
+const struct WildPokemonInfo sRoute28_LandMonsInfo = { 21, sRoute28_LandMons };
+
+const struct WildPokemon sRoute28_WaterMons[] =
+{
+    { 35, 40, SPECIES_POLIWHIRL },
+    { 40, 50, SPECIES_POLIWHIRL },
+    { 50, 60, SPECIES_POLIWRATH },
+    { 60, 70, SPECIES_POLIWRATH },
+    { 60, 70, SPECIES_POLIWRATH },
+};
+
+const struct WildPokemonInfo sRoute28_WaterMonsInfo = { 2, sRoute28_WaterMons };
+
+const struct WildPokemon sRoute28_FishingMons[] =
+{
+    { 30, 35, SPECIES_LUVDISC },
+    { 35, 40, SPECIES_POLIWIRL },
+    { 45, 50, SPECIES_LUVDISC },
+    { 50, 55, SPECIES_POLIWHIRL },
+    { 55, 60, SPECIES_POLIWRATH },
+    { 25, 35, SPECIES_POLIWHIRL },
+    { 50, 60, SPECIES_LUVDISC },
+    { 50, 60, SPECIES_POLIWHIRL },
+    { 55, 65, SPECIES_GYARADOS },
+    { 60, 70, SPECIES_GYARADOS },
+};
+
+const struct WildPokemonInfo sRoute28_FishingMonsInfo = { 20, sRoute28_FishingMons };
+
+const struct WildPokemon sMtSilver_LandMons[] =
+{
+    { 70, 71, SPECIES_TANGELA },
+    { 73, 75, SPECIES_MANECTRIC },
+    { 74, 76, SPECIES_RAPIDASH },
+    { 74, 76, SPECIES_URSARING },
+    { 73, 75, SPECIES_DODRIO },
+    { 73, 75, SPECIES_DONPHAN },
+    { 74, 75, SPECIES_TANGELA },
+    { 72, 74, SPECIES_MANECTRIC },
+    { 72, 74, SPECIES_DUSCLOPS },
+    { 72, 74, SPECIES_SNEASEL },
+    { 74, 76, SPECIES_DUSCLOPS },
+    { 74, 76, SPECIES_SNEASEL },
+};
+
+const struct WildPokemonInfo sMtSilver_LandMonsInfo = { 21, sMtSilver_LandMons };
+
+const struct WildPokemon sMtSilver_WaterMons[] =
+{
+    { 40, 45, SPECIES_POLIWHIRL },
+    { 45, 55, SPECIES_POLIWHIRL },
+    { 55, 65, SPECIES_POLIWRATH },
+    { 65, 75, SPECIES_POLIWRATH },
+    { 65, 75, SPECIES_POLIWRATH },
+};
+
+const struct WildPokemonInfo sMtSilver_WaterMonsInfo = { 2, sMtSilver_WaterMons };
+
+const struct WildPokemon sMtSilver_FishingMons[] =
+{
+    { 35, 40, SPECIES_LUVDISC },
+    { 40, 45, SPECIES_POLIWIRL },
+    { 50, 55, SPECIES_LUVDISC },
+    { 55, 60, SPECIES_POLIWHIRL },
+    { 60, 65, SPECIES_POLIWRATH },
+    { 30, 40, SPECIES_POLIWHIRL },
+    { 55, 65, SPECIES_LUVDISC },
+    { 55, 65, SPECIES_POLIWHIRL },
+    { 60, 70, SPECIES_GYARADOS },
+    { 65, 75, SPECIES_GYARADOS },
+};
+
+const struct WildPokemonInfo sMtSilver_FishingMonsInfo = { 20, sMtSilver_FishingMons };
+
+const struct WildPokemon sTohjoFalls_LandMons[] =
+{
+    { 70, 71, SPECIES_RATICATE },
+    { 73, 75, SPECIES_AZUMARILL },
+    { 74, 76, SPECIES_SLOWBRO },
+    { 74, 76, SPECIES_SLOWBRO },
+    { 73, 75, SPECIES_DEWGONG },
+    { 73, 75, SPECIES_METANG },
+    { 74, 75, SPECIES_GOLBAT },
+    { 72, 74, SPECIES_GOLBAT },
+    { 72, 74, SPECIES_QUAGSIRE },
+    { 72, 74, SPECIES_QUAGSIRE },
+    { 74, 76, SPECIES_CROBAT },
+    { 74, 76, SPECIES_CROBAT },
+};
+
+const struct WildPokemonInfo sTohjoFalls_LandMonsInfo = { 7, sTohjoFalls_LandMons };
+
+const struct WildPokemon sTohjoFalls_WaterMons[] =
+{
+    { 50, 55, SPECIES_SEAKING },
+    { 55, 65, SPECIES_SLOWBRO },
+    { 55, 65, SPECIES_SLOWKING },
+    { 65, 75, SPECIES_SLOWKING },
+    { 65, 75, SPECIES_SLOWKING },
+};
+
+const struct WildPokemonInfo sTohjoFalls_WaterMonsInfo = { 2, sTohjoFalls_WaterMons };
+
+const struct WildPokemon sTohjoFalls_FishingMons[] =
+{
+    { 55, 60, SPECIES_MAGIKARP },
+    { 50, 55, SPECIES_GOLDEEN },
+    { 50, 55, SPECIES_MAGIKARP },
+    { 55, 60, SPECIES_GOLDEEN },
+    { 60, 65, SPECIES_GOLDEEN },
+    { 45, 50, SPECIES_SEAKING },
+    { 55, 65, SPECIES_SEAKING },
+    { 55, 65, SPECIES_SEAKING },
+    { 60, 70, SPECIES_GYARADOS },
+    { 65, 75, SPECIES_GYARADOS },
+};
+
+const struct WildPokemonInfo sTohjoFalls_FishingMonsInfo = { 20, sTohjoFalls_FishingMons };
+
+const struct WildPokemon sMtSilverCave1_LandMons[] =
+{
+    { 73, 75, SPECIES_DONPHAN },
+    { 73, 75, SPECIES_URSARING },
+    { 74, 76, SPECIES_QUAGSIRE },
+    { 74, 76, SPECIES_GRAVELER },
+    { 73, 75, SPECIES_GOLBAT },
+    { 73, 75, SPECIES_GOLDUCK },
+    { 74, 75, SPECIES_PUPITAR },
+    { 72, 74, SPECIES_MISDREAVUS },
+    { 72, 74, SPECIES_MISDREAVUS },
+    { 72, 74, SPECIES_CROBAT },
+    { 73, 75, SPECIES_CROBAT },
+    { 74, 76, SPECIES_CROBAT },
+};
+
+const struct WildPokemonInfo sMtSilverCave1_LandMonsInfo = { 7, sMtSilverCave1_LandMons };
+
+const struct WildPokemon sMtSilverCave1_WaterMons[] =
+{
+    { 50, 55, SPECIES_GOLBAT },
+    { 55, 65, SPECIES_SEADRA },
+    { 55, 65, SPECIES_SEADRA },
+    { 65, 75, SPECIES_SEADRA },
+    { 65, 75, SPECIES_SEADRA },
+};
+
+const struct WildPokemonInfo sMtSilverCave1_WaterMonsInfo = { 2, sMtSilverCave1_WaterMons };
+
+const struct WildPokemon sMtSilverCave1_FishingMons[] =
+{
+    { 55, 60, SPECIES_MAGIKARP },
+    { 50, 55, SPECIES_GOLDEEN },
+    { 50, 55, SPECIES_MAGIKARP },
+    { 55, 60, SPECIES_GOLDEEN },
+    { 60, 65, SPECIES_GOLDEEN },
+    { 50, 60, SPECIES_SEAKING },
+    { 67, 72, SPECIES_KINGLER },
+    { 65, 70, SPECIES_CRAWDAUNT },
+    { 60, 70, SPECIES_SEAKING },
+    { 65, 75, SPECIES_SEAKING },
+};
+
+const struct WildPokemonInfo sMtSilverCave1_FishingMonsInfo = { 20, sMtSilverCave1_FishingMons };
+
+const struct WildPokemon sMtSilverOutdoor1_LandMons[] =
+{
+    { 73, 75, SPECIES_STEELIX },
+    { 73, 75, SPECIES_GLIGAR },
+    { 74, 76, SPECIES_STEELIX },
+    { 74, 76, SPECIES_GRAVELER },
+    { 73, 75, SPECIES_MACHOKE },
+    { 73, 75, SPECIES_AGGRON },
+    { 74, 75, SPECIES_MACHAMP },
+    { 72, 74, SPECIES_GOLEM },
+    { 72, 74, SPECIES_FLYGON },
+    { 72, 74, SPECIES_SKARMORY },
+    { 73, 75, SPECIES_FLYGON },
+    { 74, 76, SPECIES_SKARMORY },
+};
+
+const struct WildPokemonInfo sMtSilverItemRoom_LandMonsInfo = { 10, sMtSilverOutdoor1_LandMons };
+
+const struct WildPokemon sMtSilverOutdoor1_LandMons[] =
+{
+    { 73, 75, SPECIES_STEELIX },
+    { 73, 75, SPECIES_GLIGAR },
+    { 74, 76, SPECIES_STEELIX },
+    { 74, 76, SPECIES_GRAVELER },
+    { 73, 75, SPECIES_MACHOKE },
+    { 73, 75, SPECIES_AGGRON },
+    { 74, 75, SPECIES_MACHAMP },
+    { 72, 74, SPECIES_GOLEM },
+    { 72, 74, SPECIES_FLYGON },
+    { 72, 74, SPECIES_SKARMORY },
+    { 73, 75, SPECIES_FLYGON },
+    { 74, 76, SPECIES_SKARMORY },
+};
+
+const struct WildPokemonInfo sMtSilverItemRoom_LandMonsInfo = { 10, sMtSilverItemRoom_LandMons };
+
 const struct WildPokemon sSevenIslandTanobyRuinsMoneanChamber_LeafGreen_LandMons[] =
 {
     { 65, 65, SPECIES_UNOWN },
@@ -7501,7 +7805,6 @@ const struct WildPokemon sSafariZone_NorthWest_LandMons[] =
     { 56, 56, SPECIES_VICTREEBEL },
     { 57, 57, SPECIES_HERACROSS },
     { 59, 59, SPECIES_PINSIR },
-    { 60, 60, SPECIES_HERACROSS },
 };
 
 const struct WildPokemonInfo sSafariZone_NorthWest_LandMonsInfo = { 25, sSafariZone_NorthWest_LandMons };
@@ -7521,9 +7824,9 @@ const struct WildPokemon sSafariZone_NorthWest_LeafGreen_WaterMons[] = // Wooper
 {
     { 25, 30, SPECIES_WOOPER },
     { 25, 30, SPECIES_MARILL },
-    { 25, 30, SPECIES_MUDKIP },
-    { 25, 30, SPECIES_MARSHTOMP },
-    { 35, 40, SPECIES_SWAMPERT },
+    { 25, 30, SPECIES_BARBOACH },
+    { 25, 30, SPECIES_WHISCASH },
+    { 35, 40, SPECIES_WHISCASH },
 };
 
 const struct WildPokemonInfo sSafariZone_NorthWest_LeafGreen_WaterMonsInfo = { 9, sSafariZone_NorthWest_LeafGreen_WaterMons };
@@ -9528,5 +9831,161 @@ const struct WildPokemonHeader gWildMonHeaders[] =
         .rockSmashMonsInfo_LG = NULL,
         .fishingMonsInfo_FR = &sPrototypeSeviiIsle7_FishingMonsInfo,
         .fishingMonsInfo_LG = &sPrototypeSeviiIsle7_FishingMonsInfo,
+    },
+	{
+        .mapGroup = MAP_GROUP(ROUTE_26),
+        .mapNum = MAP_NUM(ROUTE_26),
+        .landMonsInfo_FR = &sRoute26_LandMonsInfo,
+        .landMonsInfo_LG = sRoute26_LandMonsInfo,
+        .waterMonsInfo_FR = &sRoute26_WaterMonsInfo,
+        .waterMonsInfo_LG = &sRoute26_WaterMonsInfo,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &sRoute26_FishingMonsInfo,
+        .fishingMonsInfo_LG = &sRoute26_FishingMonsInfo,
+    },
+	{
+        .mapGroup = MAP_GROUP(ROUTE_27),
+        .mapNum = MAP_NUM(ROUTE_27),
+        .landMonsInfo_FR = &sRoute27_LandMonsInfo,
+        .landMonsInfo_LG = sRoute27_LandMonsInfo,
+        .waterMonsInfo_FR = &sRoute27_WaterMonsInfo,
+        .waterMonsInfo_LG = &sRoute27_WaterMonsInfo,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &sRoute27_FishingMonsInfo,
+        .fishingMonsInfo_LG = &sRoute27_FishingMonsInfo,
+    },
+	{
+        .mapGroup = MAP_GROUP(ROUTE_28),
+        .mapNum = MAP_NUM(ROUTE_28),
+        .landMonsInfo_FR = &sRoute28_LandMonsInfo,
+        .landMonsInfo_LG = sRoute28_LandMonsInfo,
+        .waterMonsInfo_FR = &sRoute28_WaterMonsInfo,
+        .waterMonsInfo_LG = &sRoute28_WaterMonsInfo,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &sRoute28_FishingMonsInfo,
+        .fishingMonsInfo_LG = &sRoute28_FishingMonsInfo,
+    },
+	{
+        .mapGroup = MAP_GROUP(MT_SILVER),
+        .mapNum = MAP_NUM(MT_SILVER),
+        .landMonsInfo_FR = &sMtSilver_LandMonsInfo,
+        .landMonsInfo_LG = sMtSilver_LandMonsInfo,
+        .waterMonsInfo_FR = &sMtSilver_WaterMonsInfo,
+        .waterMonsInfo_LG = &sMtSilver_WaterMonsInfo,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &sMtSilver_FishingMonsInfo,
+        .fishingMonsInfo_LG = &sMtSilver_FishingMonsInfo,
+    },
+	{
+        .mapGroup = MAP_GROUP(TOHJO_FALLS),
+        .mapNum = MAP_NUM(TOHJO_FALLS),
+        .landMonsInfo_FR = &sMtSilver_LandMonsInfo,
+        .landMonsInfo_LG = sMtSilver_LandMonsInfo,
+        .waterMonsInfo_FR = &sMtSilver_WaterMonsInfo,
+        .waterMonsInfo_LG = &sMtSilver_WaterMonsInfo,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &sMtSilver_FishingMonsInfo,
+        .fishingMonsInfo_LG = &sMtSilver_FishingMonsInfo,
+    },
+	{
+        .mapGroup = MAP_GROUP(TOHJO_FALLS),
+        .mapNum = MAP_NUM(TOHJO_FALLS),
+        .landMonsInfo_FR = &sMtSilver_LandMonsInfo,
+        .landMonsInfo_LG = sMtSilver_LandMonsInfo,
+        .waterMonsInfo_FR = &sMtSilver_WaterMonsInfo,
+        .waterMonsInfo_LG = &sMtSilver_WaterMonsInfo,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &sMtSilver_FishingMonsInfo,
+        .fishingMonsInfo_LG = &sMtSilver_FishingMonsInfo,
+    },
+	{
+        .mapGroup = MAP_GROUP(MT_SILVER_CAVE),
+        .mapNum = MAP_NUM(MT_SILVER_CAVE_1),
+        .landMonsInfo_FR = &sMtSilverCave1_LandMonsInfo,
+        .landMonsInfo_LG = sMtSilverCave1_LandMonsInfo,
+        .waterMonsInfo_FR = &sMtSilverCave1_WaterMonsInfo,
+        .waterMonsInfo_LG = &sMtSilverCave1_WaterMonsInfo,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &sMtSilverCave1_FishingMonsInfo,
+        .fishingMonsInfo_LG = &sMtSilverCave1_FishingMonsInfo,
+    },
+	{
+        .mapGroup = MAP_GROUP(MT_SILVER_CAVE),
+        .mapNum = MAP_NUM(MT_SILVER_CAVE_OUTDOOR_1),
+        .landMonsInfo_FR = &sMtSilverCaveOutDoor1_LandMonsInfo,
+        .landMonsInfo_LG = sMtSilverCaveOutDoor1_LandMonsInfo,
+        .waterMonsInfo_FR = &NULL,
+        .waterMonsInfo_LG = &NULL,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &NULL,
+        .fishingMonsInfo_LG = &NULL,
+    },
+	{
+        .mapGroup = MAP_GROUP(MT_SILVER_CAVE),
+        .mapNum = MAP_NUM(MT_SILVER_ITEM_ROOM),
+        .landMonsInfo_FR = &sMtSilverItemRoom_LandMonsInfo,
+        .landMonsInfo_LG = sMtSilverItemRoom_LandMonsInfo,
+        .waterMonsInfo_FR = &NULL,
+        .waterMonsInfo_LG = &NULL,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &NULL,
+        .fishingMonsInfo_LG = &NULL,
+    },
+	{
+        .mapGroup = MAP_GROUP(MT_SILVER_CAVE),
+        .mapNum = MAP_NUM(MT_SILVER_LEGEND),
+        .landMonsInfo_FR = &sMtSilverLegend_LandMonsInfo,
+        .landMonsInfo_LG = sMtSilverLegend_LandMonsInfo,
+        .waterMonsInfo_FR = &NULL,
+        .waterMonsInfo_LG = &NULL,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &NULL,
+        .fishingMonsInfo_LG = &NULL,
+    },
+	{
+        .mapGroup = MAP_GROUP(MT_SILVER_CAVE),
+        .mapNum = MAP_NUM(MT_SILVER_CAVE_2),
+        .landMonsInfo_FR = &sMtSilverCave2_LandMonsInfo,
+        .landMonsInfo_LG = sMtSilverCave2_LandMonsInfo,
+        .waterMonsInfo_FR = &NULL,
+        .waterMonsInfo_LG = &NULL,
+        .rockSmashMonsInfo_FR = sMtSilverCave2_RockSmashMonsInfo,
+        .rockSmashMonsInfo_LG = sMtSilverCave2_RockSmashMonsInfo,
+        .fishingMonsInfo_FR = &NULL,
+        .fishingMonsInfo_LG = &NULL,
+    },
+	{
+        .mapGroup = MAP_GROUP(MT_SILVER_CAVE),
+        .mapNum = MAP_NUM(MT_SILVER_CAVE_OUTDOOR_2),
+        .landMonsInfo_FR = &sMtSilverCaveOutDoor2_LandMonsInfo,
+        .landMonsInfo_LG = sMtSilverCaveOutDoor2_LandMonsInfo,
+        .waterMonsInfo_FR = &NULL,
+        .waterMonsInfo_LG = &NULL,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &NULL,
+        .fishingMonsInfo_LG = &NULL,
+    },
+	{
+        .mapGroup = MAP_GROUP(MT_SILVER_CAVE),
+        .mapNum = MAP_NUM(MT_SILVER_CAVE_3),
+        .landMonsInfo_FR = &sMtSilverCave3_LandMonsInfo,
+        .landMonsInfo_LG = sMtSilverCave3_LandMonsInfo,
+        .waterMonsInfo_FR = &NULL,
+        .waterMonsInfo_LG = &NULL,
+        .rockSmashMonsInfo_FR = NULL,
+        .rockSmashMonsInfo_LG = NULL,
+        .fishingMonsInfo_FR = &NULL,
+        .fishingMonsInfo_LG = &NULL,
     },
 };

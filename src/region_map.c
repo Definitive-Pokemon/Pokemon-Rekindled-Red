@@ -930,7 +930,7 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_ROUTE_25            ] = {MAP(ROUTE25),                               0},
     [MAPSEC_ROUTE_26            ] = {MAP(ROUTE26),                               0},
     [MAPSEC_ROUTE_27            ] = {MAP(ROUTE27),                               0},
-    [MAPSEC_MT_SILVER_PATH      ] = {MAP(ROUTE28),                               0},
+    [MAPSEC_ROUTE_28            ] = {MAP(ROUTE28),                               0},
     [MAPSEC_MT_SILVER           ] = {MAP(MT_SILVER),                             SPAWN_MT_SILVER},
     [MAPSEC_VIRIDIAN_FOREST     ] = {MAP(PALLET_TOWN),                           0},
     [MAPSEC_MT_MOON             ] = {MAP(PALLET_TOWN),                           0},
@@ -1135,7 +1135,7 @@ static void InitRegionMapType(void)
     switch (gMapHeader.regionMapSectionId)
     {
         case MAPSEC_FIERY_PASSAGE:
-	    case MAPSEC_MT_SILVER_PATH:
+	    case MAPSEC_ROUTE_28:
 	    case MAPSEC_MT_SILVER:
 	    case MAPSEC_MT_SILVER_CAVE:
         case MAPSEC_ROUTE_26:

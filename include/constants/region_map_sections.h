@@ -227,7 +227,7 @@
 #define MAPSEC_PRIMORDIAL_ALTAR             0xD9
 #define MAPSEC_AERO_CAVE                    0xDA
 #define MAPSEC_UNDERWATER_TREASURE_BEACH    0xDB
-#define MAPSEC_MT_SILVER_PATH               0xDC
+#define MAPSEC_ROUTE_28                     0xDC
 #define MAPSEC_MT_SILVER                    0xDD
 #define MAPSEC_MT_SILVER_CAVE               0xDE
 #define MAPSEC_FIERY_PASSAGE                0xDF
