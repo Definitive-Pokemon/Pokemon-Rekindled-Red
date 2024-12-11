@@ -175,6 +175,9 @@ static const u16 sCutGrassMetatileMapping[][2] = {
         METATILE_ID(SeviiIslands67, Grass_Up),
         METATILE_ID(SeviiIslands67, Up)
     }, {
+        0x359,
+        0x369
+    }, {
         0xffff,
         0xffff
     }
