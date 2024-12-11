@@ -4107,25 +4107,109 @@ const struct WildPokemon sMtSilverOutdoor1_LandMons[] =
     { 74, 76, SPECIES_SKARMORY },
 };
 
-const struct WildPokemonInfo sMtSilverItemRoom_LandMonsInfo = { 10, sMtSilverOutdoor1_LandMons };
+const struct WildPokemonInfo sMtSilverOutdoor1_LandMonsInfo = { 10, sMtSilverOutdoor1_LandMons };
 
-const struct WildPokemon sMtSilverOutdoor1_LandMons[] =
+const struct WildPokemon sMtSilverItemRoom_LandMons[] =
 {
-    { 73, 75, SPECIES_STEELIX },
-    { 73, 75, SPECIES_GLIGAR },
-    { 74, 76, SPECIES_STEELIX },
-    { 74, 76, SPECIES_GRAVELER },
-    { 73, 75, SPECIES_MACHOKE },
-    { 73, 75, SPECIES_AGGRON },
-    { 74, 75, SPECIES_MACHAMP },
-    { 72, 74, SPECIES_GOLEM },
-    { 72, 74, SPECIES_FLYGON },
-    { 72, 74, SPECIES_SKARMORY },
-    { 73, 75, SPECIES_FLYGON },
-    { 74, 76, SPECIES_SKARMORY },
+    { 73, 75, SPECIES_PARASECT },
+    { 73, 75, SPECIES_PARASECT },
+    { 74, 76, SPECIES_GOLDUCK },
+    { 74, 76, SPECIES_GOLDUCK },
+    { 73, 75, SPECIES_QUAGSIRE },
+    { 73, 75, SPECIES_SHELGON },
+    { 74, 75, SPECIES_PARASECT },
+    { 72, 74, SPECIES_QUAGSIRE },
+    { 72, 74, SPECIES_SHELGON },
+    { 72, 74, SPECIES_MISDREAVUS },
+    { 73, 75, SPECIES_SHELGON },
+    { 74, 76, SPECIES_MISDREAVUS },
 };
 
-const struct WildPokemonInfo sMtSilverItemRoom_LandMonsInfo = { 10, sMtSilverItemRoom_LandMons };
+const struct WildPokemonInfo sMtSilverItemRoom_LandMonsInfo = { 7, sMtSilverItemRoom_LandMons };
+
+
+const struct WildPokemon sMtSilverLegend_LandMons[] =
+{
+    { 74, 76, SPECIES_GOLBAT },
+    { 74, 76, SPECIES_GRAVELER },
+    { 75, 77, SPECIES_STEELIX },
+    { 75, 77, SPECIES_STEELIX },
+    { 75, 77, SPECIES_RHYDON },
+    { 75, 77, SPECIES_RHYDON },
+    { 75, 76, SPECIES_PUPITAR },
+    { 74, 76, SPECIES_QUAGSIRE },
+    { 73, 76, SPECIES_MISDREAVUS },
+    { 73, 76, SPECIES_MISDREAVUS },
+    { 73, 75, SPECIES_SHELGON },
+    { 74, 76, SPECIES_MISDREAVUS },
+};
+
+const struct WildPokemonInfo sMtSilverLegend_LandMonsInfo = { 7, sMtSilverLegend_LandMons };
+
+const struct WildPokemon sMtSilverCave2_LandMons[] =
+{
+    { 74, 76, SPECIES_GOLBAT },
+    { 74, 76, SPECIES_GRAVELER },
+    { 75, 77, SPECIES_MAGNETON },
+    { 75, 77, SPECIES_MAGNETON },
+    { 75, 77, SPECIES_MAWILE },
+    { 75, 77, SPECIES_SABLEYE },
+    { 75, 76, SPECIES_GOLBAT },
+    { 74, 76, SPECIES_GRAVELER },
+    { 74, 77, SPECIES_SOLROCK },
+    { 74, 77, SPECIES_LUNATONE },
+    { 75, 78, SPECIES_SOLROCK },
+    { 75, 78, SPECIES_LUNATONE },
+};
+
+const struct WildPokemonInfo sMtSilverCave2_LandMonsInfo = { 7, sMtSilverCave2_LandMons };
+
+const struct WildPokemon sMtSilverCave2_RockSmashMons[] =
+{
+    { 55, 65, SPECIES_GRAVELER },
+    { 70, 70, SPECIES_GRAVELER },
+    { 70, 70, SPECIES_GRAVELER },
+    { 70, 75, SPECIES_GOLEM },
+    { 70, 75, SPECIES_GOLEM },
+};
+
+const struct WildPokemonInfo sMtSilverCave2_RockSmashMonsInfo = { 50, sMtSilverCave2_RockSmashMons };
+
+const struct WildPokemon sMtSilverOutdoor2_LandMons[] =
+{
+    { 78, 78, SPECIES_URSARING },
+    { 77, 77, SPECIES_MEDICHAM },
+    { 79, 80, SPECIES_URSARING },
+    { 77, 78, SPECIES_LOUDRED },
+    { 79, 80, SPECIES_LOUDRED },
+    { 80, 83, SPECIES_SNEASEL },
+    { 79, 81, SPECIES_PILOSWINE },
+    { 80, 82, SPECIES_PILOSWINE },
+    { 78, 80, SPECIES_ABSOL },
+    { 79, 82, SPECIES_NOCTOWL },
+    { 80, 82, SPECIES_ABSOL },
+    { 80, 84, SPECIES_NOCTOWL },
+};
+
+const struct WildPokemonInfo sMtSilverOutdoor2_LandMonsInfo = { 10, sMtSilverOutdoor2_LandMons };
+
+const struct WildPokemon sMtSilverCave3_LandMons[] =
+{
+    { 80, 82, SPECIES_GOLBAT },
+    { 79, 81, SPECIES_SHELGON },
+    { 79, 81, SPECIES_METANG },
+    { 80, 82, SPECIES_MAWILE },
+    { 80, 82, SPECIES_SABLEYE },
+    { 82, 84, SPECIES_MAGNETON },
+    { 82, 84, SPECIES_CROBAT },
+    { 82, 84, SPECIES_METANG },
+    { 83, 85, SPECIES_MACHAMP },
+    { 83, 85, SPECIES_DUSCLOPS },
+    { 85, 86, SPECIES_MACHAMP },
+    { 85, 86, SPECIES_DUSCLOPS },
+};
+
+const struct WildPokemonInfo sMtSilverCave3_LandMonsInfo = { 10, sMtSilverCave3_LandMons };
 
 const struct WildPokemon sSevenIslandTanobyRuinsMoneanChamber_LeafGreen_LandMons[] =
 {
