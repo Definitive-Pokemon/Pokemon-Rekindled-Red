@@ -263,7 +263,7 @@
 #define FLAG_MOM_GONE_DOWN                    0x0F3
 #define FLAG_HIDE_MOM_REAL                    0x0F4
 #define FLAG_ROUTE_28_CUT_TREE                0x0F5
-#define FLAG_0x0F6               0x0F6
+#define FLAG_RAIN_AND_EMBER                   0x0F6
 #define FLAG_0x0F7               0x0F7
 #define FLAG_0x0F8               0x0F8
 #define FLAG_0x0F9               0x0F9

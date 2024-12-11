@@ -15,9 +15,24 @@ MtEmber_Summit_EventScript_TryRemoveMoltres::
 	return
 
 MtEmber_Summit_OnTransition::
+	call_if_set FLAG_RAIN_AND_EMBER, MtEmber_Summit_EventScript_SetRain
 	call_if_set FLAG_FOUGHT_MOLTRES, MtEmber_Summit_EventScript_HideMoltres
 	call_if_unset FLAG_FOUGHT_MOLTRES, MtEmber_Summit_EventScript_TryShowMoltres
 	end
+
+MtEmber_Summit_EventScript_SetRain::
+	setweather WEATHER_RAIN
+	doweather
+	return
+
+MtEmber_Summit_EventScript_Maximus::
+	lockall
+	setweather WEATHER_VOLCANIC_ASH
+	doweather
+	setvar VAR_EMBER_RAIN, 1
+	releaseall
+	end
+	
 
 MtEmber_Summit_EventScript_TryShowMoltres::
 	goto_if_set FLAG_MOLTRES_FLEW_AWAY, EventScript_Return

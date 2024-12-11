@@ -537,7 +537,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_BattleFrontierOutsideEast",
+      "secondary_tileset": "gTileset_BattleTower",
       "border_filepath": "data/layouts/RS_BattleTower/border.bin",
       "blockdata_filepath": "data/layouts/RS_BattleTower/map.bin"
     },

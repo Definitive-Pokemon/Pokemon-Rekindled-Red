@@ -13,7 +13,15 @@ MtEmber_Exterior_OnResume:
 
 MtEmber_Exterior_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_MT_EMBER_EXTERIOR
+	call_if_set FLAG_RAIN_AND_EMBER, MtEmber_Exterior_EventScript_SetRain
 	call_if_eq VAR_MAP_SCENE_MT_EMBER_EXTERIOR, 2, MtEmber_Exterior_EventScript_RocketsFaceDown
+	end
+
+MtEmber_Exterior_EventScript_SetRain::
+	setweather WEATHER_RAIN
+	doweather
+	setflag FLAG_RAIN_AND_EMBER
+	release
 	end
 
 MtEmber_Exterior_EventScript_RocketsFaceDown::

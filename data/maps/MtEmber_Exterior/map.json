@@ -424,6 +424,24 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "MtEmber_Exterior_EventScript_BoulderShortcutTriggers"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_EMBER_RAIN",
+      "var_value": "0",
+      "script": "MtEmber_Exterior_EventScript_SetRain"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_EMBER_RAIN",
+      "var_value": "0",
+      "script": "MtEmber_Exterior_EventScript_SetRain"
     }
   ],
   "bg_events": [
