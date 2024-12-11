@@ -78,7 +78,7 @@ MtEmber_Summit_EventScript_Maximus::
 	end
 
 MtEmber_Summit_Text_MoltresPowers::
-	.string "MOLTRES seems agitated!$
+	.string "MOLTRES seems agitated!$"
 
 MtEmber_Summit_Movement_PanToActionFromBottom::
 	walk_slow_up
