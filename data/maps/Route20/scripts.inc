@@ -3,6 +3,7 @@
 .set LOCALID_CLOYSTER_MASTER, 14
 .set LOCALID_WARTORTLE_MASTER, 15
 .set LOCALID_TENTACRUEL_MASTER, 16
+.set LOCALID_MAXIMUS, 17
 .set TRAINER, VAR_0x8009
 
 Route20_MapScripts::
@@ -10,6 +11,7 @@ Route20_MapScripts::
 	.byte 0
 
 Route20_OnTransition::
+	call Route20_EventScript_MaximusFaceUp
 	call_if_unset FLAG_STOPPED_SEAFOAM_B3F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB3F
 	call_if_unset FLAG_STOPPED_SEAFOAM_B4F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB4F
 	goto Route20_MapScript_SetMasterTrainerMovementTypes
@@ -77,3 +79,18 @@ Route20_EventScript_ResetSeafoamBouldersForB4F::
 Route20_EventScript_SeafoamIslandsSign::
 	msgbox Route20_Text_SeafoamIslands, MSGBOX_SIGN
 	end
+
+Route20_EventScript_MaximusFaceUp::
+	setobjectmovementtype MAXIMUS, MOVEMENT_TYPE_FACE_UP
+	return
+
+Route20_EventScript_Maximus::
+	msgbox Route20_Text_Maximus, MSGBOX_NPC
+	end
+
+Route20_Text_Maximus::
+	.string "So this is where the legendary\n"
+	.string "ARTICUNO is hiding…\p"
+	.string "Good to know, but first,\n"
+	.string "I will go meet with MOLTRES\l"
+	.string "at the SEVII ISLANDS…$"

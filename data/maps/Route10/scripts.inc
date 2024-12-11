@@ -50,3 +50,14 @@ Route10_EventScript_SouthRockTunnelSign::
 Route10_EventScript_PowerPlantSign::
 	msgbox Route10_Text_PowerPlant, MSGBOX_SIGN
 	end
+
+Route10_EventScript_Incident::
+	msgbox Route10_Text_Incident, MSGBOX_NPC
+	end
+
+Route10_Text_Incident::
+	.string "I'm sorry, but the POWER PLANT\n"
+	.string "is currently off-limits due to\l"
+	.string "electricity leakage.\p"
+	.string "Don't ask me what it means, kid,\n"
+	.string "but I got my orders.$"
