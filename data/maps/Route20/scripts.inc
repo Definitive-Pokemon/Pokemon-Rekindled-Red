@@ -83,6 +83,7 @@ Route20_EventScript_Maximus::
 	lock
 	textcolor 0
 	message Route20_Text_Maximus
+	waitmessage
 	waitbuttonpress
 	release
 	end
