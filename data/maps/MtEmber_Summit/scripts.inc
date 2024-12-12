@@ -80,8 +80,8 @@ MtEmber_Summit_EventScript_Maximus::
 	waitse
 	doweather
 	textcolor 2
-	message MtEmber_Summit_Text_MoltresPowers
-	waitbuttonpress
+	msgbox MtEmber_Summit_Text_MoltresPowers MSGBOX_NPC
+	closemessage
 	delay 60
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, MtEmber_Summit_Movement_PanToActionBack
@@ -118,7 +118,7 @@ MtEmber_Summit_Text_Maximus_Mock2::
 	.string "Well, all done!\n"
 	.string "Now you can stop whining.\p"
 	.string "Our RAIN DANCE was just perfect.\n"
-	.string "Look how pathetic you are!\p"
+	.string "Look how pathetic you are now!\p"
 	.string "You're not even worth catching now,\n"
 	.string "and I got what I needed from you.\p"
 	.string "Guess this is farewell.$"
