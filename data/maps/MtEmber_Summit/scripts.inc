@@ -152,9 +152,10 @@ MtEmber_Summit_EventScript_Moltres::
 	goto_if_questlog EventScript_ReleaseEnd
 	special QuestLog_CutRecording
 	lock
+	setflag FLAG_BATTLED_MOLTRES
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 2
 	faceplayer
-	setwildbattle SPECIES_MOLTRES, 50, ITEM_NONE
+	setwildbattle SPECIES_MOLTRES, 50, ITEM_MIRACLE_SEED
 	waitse
 	playmoncry SPECIES_MOLTRES, 2
 	message Text_Gyaoo
