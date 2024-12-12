@@ -17,6 +17,24 @@ MtEmber_Exterior_OnTransition::
 	call_if_eq VAR_MAP_SCENE_MT_EMBER_EXTERIOR, 2, MtEmber_Exterior_EventScript_RocketsFaceDown
 	end
 
+EventScript_Ember_RockSmash::
+	goto_if_questlog EventScript_ReleaseEnd
+	lockall
+	checkpartymove MOVE_ROCK_SMASH
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
+	setfieldeffectargument 0, VAR_RESULT
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	buffermovename STR_VAR_2, MOVE_ROCK_SMASH
+	msgbox Text_UseRockSmash, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_DontSmashRock
+	msgbox Text_MonUsedMove
+	closemessage
+	setflag FLAG_EMBER_ROCK
+	dofieldeffect FLDEFF_USE_ROCK_SMASH
+	waitstate
+	goto EventScript_UseRockSmash
+	end
+
 MtEmber_Exterior_EventScript_SetRain::
 	setweather WEATHER_RAIN
 	doweather

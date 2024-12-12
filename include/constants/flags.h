@@ -265,8 +265,8 @@
 #define FLAG_ROUTE_28_CUT_TREE                0x0F5
 #define FLAG_RAIN_AND_EMBER                   0x0F6
 #define FLAG_HIDE_MAXIMUS_MOLTRES             0x0F7
-#define FLAG_0x0F8               0x0F8
-#define FLAG_0x0F9               0x0F9
+#define FLAG_MANSION_ROCK                     0x0F8
+#define FLAG_EMBER_ROCK                       0x0F9
 #define FLAG_0x0FA               0x0FA
 #define FLAG_0x0FB               0x0FB
 #define FLAG_0x0FC               0x0FC

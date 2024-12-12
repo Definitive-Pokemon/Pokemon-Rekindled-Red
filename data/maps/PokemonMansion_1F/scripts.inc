@@ -1,4 +1,5 @@
 .set LOCALID_MAGMAR_MASTER, 6
+.set LOCALID_ROCK_SMASH, 7
 .set TRAINER, VAR_0x8009
 
 PokemonMansion_1F_MapScripts::
@@ -24,6 +25,24 @@ PokemonMansion_1F_MapScript_SetMasterTrainerMovementTypes::
 PokemonMansion_1F_MapScript_MagmarMasterMovementType::
 	setobjectmovementtype LOCALID_MAGMAR_MASTER, MOVEMENT_TYPE_RAISE_HAND_AND_STOP
 	return
+
+EventScript_Mansion_RockSmash::
+	goto_if_questlog EventScript_ReleaseEnd
+	lockall
+	checkpartymove MOVE_ROCK_SMASH
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
+	setfieldeffectargument 0, VAR_RESULT
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	buffermovename STR_VAR_2, MOVE_ROCK_SMASH
+	msgbox Text_UseRockSmash, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_DontSmashRock
+	msgbox Text_MonUsedMove
+	closemessage
+	setflag FLAG_MANSION_ROCK
+	dofieldeffect FLDEFF_USE_ROCK_SMASH
+	waitstate
+	goto EventScript_UseRockSmash
+	end
 
 PokemonMansion_1F_EventScript_Statue::
 	lockall
