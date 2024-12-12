@@ -267,7 +267,7 @@
 #define FLAG_HIDE_MAXIMUS_MOLTRES             0x0F7
 #define FLAG_MANSION_ROCK                     0x0F8
 #define FLAG_EMBER_ROCK                       0x0F9
-#define FLAG_BATTLED_MOLTRES                  0x0FA
+#define FLAG_MOLTRES_FIRST_TIME               0x0FA
 #define FLAG_0x0FB               0x0FB
 #define FLAG_0x0FC               0x0FC
 #define FLAG_0x0FD               0x0FD

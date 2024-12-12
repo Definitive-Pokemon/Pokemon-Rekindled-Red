@@ -152,8 +152,8 @@ MtEmber_Summit_EventScript_Moltres::
 	goto_if_questlog EventScript_ReleaseEnd
 	special QuestLog_CutRecording
 	lock
-	setflag FLAG_BATTLED_MOLTRES
-	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 2
+	call_if_unset FLAG_MOLTRES_FIRST_TIME, MtEmber_Summit_EventScript_FinishFirstIslandQuest
+	setflag FLAG_MOLTRES_FIRST_TIME
 	faceplayer
 	setwildbattle SPECIES_MOLTRES, 50, ITEM_MIRACLE_SEED
 	waitse
@@ -180,6 +180,10 @@ MtEmber_Summit_EventScript_Moltres::
 	setflag FLAG_FOUGHT_MOLTRES
 	release
 	end
+
+MtEmber_Summit_EventScript_FinishFirstIslandQuest::
+	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 2
+	return
 
 MtEmber_Summit_EventScript_DefeatedMoltres::
 	setflag FLAG_MOLTRES_FLEW_AWAY
