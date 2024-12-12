@@ -75,9 +75,11 @@ MtEmber_Summit_EventScript_Maximus::
 	playmoncry SPECIES_MOLTRES, 2
 	waitmoncry
 	delay 60
-	setweather WEATHER_DROUGHT
 	playse SE_M_HEAT_WAVE
+	fadescreen FADE_TO_WHITE
+	setweather WEATHER_DROUGHT
 	waitse
+	fadescreen FADE_FROM_WHITE
 	doweather
 	textcolor 2
 	msgbox MtEmber_Summit_Text_MoltresPowers MSGBOX_NPC
