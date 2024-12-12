@@ -798,6 +798,7 @@ OneIsland_PokemonCenter_1F_EventScript_LeaveOneIslandScene::
 	waitmovement 0
 	playse SE_EXIT
 	setflag FLAG_HIDE_ONE_ISLAND_POKECENTER_BILL
+	setflag FLAG_MOLTRES_FIRST_TIME
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 3
 	clearflag FLAG_HIDE_CINNABAR_BILL
 	setvar VAR_MAP_SCENE_CINNABAR_ISLAND, 3
