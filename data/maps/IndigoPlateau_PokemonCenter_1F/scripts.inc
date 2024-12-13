@@ -1,4 +1,4 @@
-.set LOCALID_DOOR_GUARD, 4
+.set LOCALID_DOOR_GUARD, 5
 
 IndigoPlateau_PokemonCenter_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, IndigoPlateau_PokemonCenter_1F_OnTransition
@@ -7,8 +7,7 @@ IndigoPlateau_PokemonCenter_1F_MapScripts::
 
 IndigoPlateau_PokemonCenter_1F_OnTransition::
 	setrespawn SPAWN_INDIGO_PLATEAU
-	specialvar VAR_RESULT, IsNationalPokedexEnabled
-	call_if_eq VAR_RESULT, TRUE, IndigoPlateau_PokemonCenter_1F_EventScript_CheckBlockDoor
+	goto_if_set FLAG_SYS_GAME_CLEAR, IndigoPlateau_PokemonCenter_1F_EventScript_CheckBlockDoor
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_CheckBlockDoor::
