@@ -54,7 +54,6 @@ PokemonLeague_HallOfFame_EventScript_ActivateOldSeaMapEvent::
 	
 PokemonLeague_HallOfFame_EventScript_ActivateMythicalEvents::
 	setflag FLAG_OAK_HAS_LETTER
-	clearflag FLAG_MOM_GONE_DOWN
 	clearflag FLAG_HIDE_MURAL
 	return
 

@@ -19,8 +19,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_CheckBlockDoor::
 IndigoPlateau_PokemonCenter_1F_EventScript_DoorGuard::
 	lock
 	faceplayer
-	specialvar VAR_RESULT, IsNationalPokedexEnabled
-	goto_if_eq VAR_RESULT, TRUE, IndigoPlateau_PokemonCenter_1F_EventScript_CheckSeviiIslandComplete
+	goto_if_set FLAG_SYS_GAME_CLEAR, IndigoPlateau_PokemonCenter_1F_EventScript_CheckSeviiIslandComplete
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck
 	release
 	end
