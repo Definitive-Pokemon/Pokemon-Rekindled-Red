@@ -123,7 +123,7 @@ ViridianCity_Gym_EventScript_DefeatedGiovanni::
 	setflag FLAG_BADGE08_GET
 	setvar VAR_MAP_SCENE_ROUTE22, 3
 	set_gym_trainers 8
-	goto ViridianCity_Gym_EventScript_GiveTM26
+	call ViridianCity_Gym_EventScript_GiveTM26
 	end
 
 ViridianCity_Gym_EventScript_GiveTM26::
@@ -133,8 +133,7 @@ ViridianCity_Gym_EventScript_GiveTM26::
 	giveitem_msg ViridianCity_Gym_Text_ReceivedTM26FromGiovanni, ITEM_TM26
 	setflag FLAG_GOT_TM26_FROM_GIOVANNI
 	msgbox ViridianCity_Gym_Text_ExplainTM26
-	release
-	end
+	return
 
 ViridianCity_Gym_EventScript_NoRoomForTM26::
 	msgbox ViridianCity_Gym_Text_YouDoNotHaveSpace
