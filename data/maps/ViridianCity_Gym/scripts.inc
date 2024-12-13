@@ -95,19 +95,13 @@ ViridianCity_Gym_EventScript_Giovanni::
 	goto_if_eq VAR_RESULT, TRUE, ViridianCity_Gym_EventScript_Giovanni_ChallengeMode
 	trainerbattle_single TRAINER_LEADER_GIOVANNI, ViridianCity_Gym_Text_GiovanniIntro, ViridianCity_Gym_Text_GiovanniDefeat, ViridianCity_Gym_EventScript_DefeatedGiovanni, NO_MUSIC
 	settrainerflag TRAINER_LEADER_GIOVANNI_CHALLENGE
-	goto_if_unset FLAG_GOT_TM26_FROM_GIOVANNI, ViridianCity_Gym_EventScript_GiveTM26
-	msgbox ViridianCity_Gym_Text_GiovanniPostBattle
-	closemessage
-	fadescreen FADE_TO_BLACK
-	removeobject 8
-	fadescreen FADE_FROM_BLACK
-	release
+	goto ViridianCity_Gym_EventScript_GiveTM26
 	end
 
 ViridianCity_Gym_EventScript_Giovanni_ChallengeMode::
 	trainerbattle_single TRAINER_LEADER_GIOVANNI_CHALLENGE, ViridianCity_Gym_Text_GiovanniIntro, ViridianCity_Gym_Text_GiovanniDefeat, ViridianCity_Gym_EventScript_DefeatedGiovanni, NO_MUSIC
 	settrainerflag TRAINER_LEADER_GIOVANNI
-	goto FLAG_GOT_TM26_FROM_GIOVANNI, ViridianCity_Gym_EventScript_GiveTM26
+	goto ViridianCity_Gym_EventScript_GiveTM26
 	end
 
 ViridianCity_Gym_EventScript_DefeatedGiovanni::
