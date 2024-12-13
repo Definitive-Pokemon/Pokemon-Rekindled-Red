@@ -133,8 +133,15 @@ ViridianCity_Gym_EventScript_GiveTM26::
 	giveitem_msg ViridianCity_Gym_Text_ReceivedTM26FromGiovanni, ITEM_TM26
 	setflag FLAG_GOT_TM26_FROM_GIOVANNI
 	message ViridianCity_Gym_Text_ExplainTM26
-	waitbuttonpress
+	waitmessage
+	closemessage
+	applymovement LOCALID_GIOVANNI, ViridianCity_Gym_Movement_GiovanniFinal
+	waitmovement
 	return
+
+ViridianCity_Gym_Movement_GiovanniFinal::
+	walk_in_place_down
+	step_end
 
 ViridianCity_Gym_EventScript_NoRoomForTM26::
 	msgbox ViridianCity_Gym_Text_YouDoNotHaveSpace
