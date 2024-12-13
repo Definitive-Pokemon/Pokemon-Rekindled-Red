@@ -136,7 +136,7 @@ ViridianCity_Gym_EventScript_GiveTM26::
 	waitmessage
 	closemessage
 	applymovement LOCALID_GIOVANNI, ViridianCity_Gym_Movement_GiovanniFinal
-	waitmovement
+	waitmovement 0
 	return
 
 ViridianCity_Gym_Movement_GiovanniFinal::

@@ -235,7 +235,7 @@ const struct BattleTowerTrainer gBattleTowerTrainers[] =
         },
     },
     {
-        .trainerClass = FACILITY_CLASS_RICH_BOY,
+        .trainerClass = FACILITY_CLASS_COLLECTOR,
         .name = _("CLINTON"),
         .teamFlags = 0x01,
         .greeting = {
