@@ -9,7 +9,7 @@ Green_Give_RainbowWing_Debug::
 
 Debug_GiveFormMon::
 	lock
-	givemon SPECIES_RAIKOU, 5, ITEM_NONE
+	giveitem ITEM_METEORITE
 	release
 	end
 
@@ -30,7 +30,7 @@ Debug_BugmeBattle::
 
 Debug_GiveNormalMon::
 	lock
-	givemon SPECIES_REGIGIGAS, 5, ITEM_NONE
+	removeitem ITEM_METEORITE
 	release
 	end
 	
