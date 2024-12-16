@@ -20,18 +20,17 @@ Route16_NorthEntrance_2F_Text_LongPathOverWater::
 Route16_NorthEntrance_2F_Text_GiveAmuletCoinIfCaught40::
     .string "Hi! Remember me?\n"
     .string "I'm one of PROF. OAK's AIDES.\p"
-    .string "If your KANTO DEX has complete data\n"
-    .string "on 40 species, I'm supposed to\l"
-    .string "give you a reward.\p"
+    .string "If you have obtained the SOULBADGE\n"
+    .string "from FUCHSIA CITY, I'm supposed to\l"
+    .string "give you a reward from PROF. OAK.\p"
     .string "PROF. OAK entrusted me with an\n"
     .string "AMULET COIN for you.\p"
-    .string "So, {PLAYER}, let me ask you.\p"
-    .string "Have you gathered data on at least\n"
-    .string "40 kinds of POKéMON?$"
+    .string "So, {PLAYER}, let me check your\n"
+    .string "TRAINED CARD right now…$"
 
 Route16_NorthEntrance_2F_Text_GreatHereYouGo::
-    .string "Great! You have caught or owned\n"
-    .string "{STR_VAR_3} kinds of POKéMON!\p"
+    .string "Great! You have defeated KOGA\n"
+    .string "and obtained his GYM BADGE!\p"
     .string "Congratulations!\n"
     .string "Here you go!$"
 

@@ -1,18 +1,17 @@
 Route11_EastEntrance_2F_Text_GiveItemfinderIfCaught30::
     .string "Hi! Remember me?\n"
     .string "I'm one of PROF. OAK's AIDES.\p"
-    .string "If your KANTO DEX has complete data\n"
-    .string "on {STR_VAR_1} species, I'm supposed to\l"
-    .string "give you a reward.\p"
+    .string "If you have obtained the RAINBOWBADGE\n"
+    .string "from CELADON CITY, I'm supposed to\l"
+    .string "give you a reward from PROF. OAK.\p"
     .string "PROF. OAK entrusted me with the\n"
     .string "{STR_VAR_2} for you.\p"
-    .string "So, {PLAYER}, let me ask you.\p"
-    .string "Have you gathered data on at least\n"
-    .string "{STR_VAR_1} kinds of POKéMON?$"
+    .string "So, {PLAYER}, let me check your\n"
+    .string "TRAINED CARD right now…$"
 
 Route11_EastEntrance_2F_Text_GreatHereYouGo::
-    .string "Great! You have caught or owned\n"
-    .string "{STR_VAR_3} kinds of POKéMON!\p"
+    .string "Great! You have defeated ERIKA\n"
+    .string "and obtained her GYM BADGE!\p"
     .string "Congratulations!\n"
     .string "Here you go!$"
 

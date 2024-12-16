@@ -123,11 +123,12 @@ CeruleanCave_B1F_Text_Muhaha::
 	.string "I've still got what it takes!$"
 
 CeruleanCave_B1F_Text_You::
-	.string "It's… it's you…$"
+	.string "I shouldn't be surprised to meet\n"
+	.string "you here, {PLAYER}.$"
 
 CeruleanCave_B1F_Text_Haha::
-	.string "The little TRAINER has returned\n"
-	.string "to play the hero again?\p"
+	.string "You are here looking for POKéMON\n"
+	.string "am I correct?\p"
 	.string "I urge you to reconsider.\n"
 	.string "You saw what I just did.\p"
 	.string "I just captured the most powerful\n"

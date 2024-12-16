@@ -36,14 +36,8 @@ CeladonCity_Condominiums_3F_EventScript_ShowDiploma::
 	waitmessage
 	delay 60
 	goto_if_questlog EventScript_ReleaseEnd
-	setvar VAR_TEMP_0, 2
 	special ShowDiploma
 	waitstate
-CeladonCity_Condominiums_3F_EventScript_CheckMysticTicket::
-	setvar VAR_TEMP_0, 0
-	checkitem ITEM_MYSTIC_TICKET, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq CeladonCity_Condominiums_3F_EventScript_GiveMysticTicket
 	release
 	end
 

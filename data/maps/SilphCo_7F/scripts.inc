@@ -53,7 +53,6 @@ SilphCo_7F_EventScript_RivalScene::
 	playbgm MUS_RIVAL_EXIT, 0
 	call_if_eq VAR_TEMP_1, 0, SilphCo_7F_EventScript_RivalExitTop
 	call_if_eq VAR_TEMP_1, 1, SilphCo_7F_EventScript_RivalExitBottom
-	call SilphCo_7F_EventScript_RivalGivesLinkBracelet
 	playse SE_WARP_IN
 	fadedefaultbgm
 	removeobject LOCALID_RIVAL
