@@ -320,7 +320,8 @@ PalletTown_ProfessorOaksLab_Text_RivalJustLetMeHandleEverything::
 PalletTown_ProfessorOaksLab_Text_OakNeedYourHelpTooNeedToSeePokedexes::
     .string "OAK: I know, I know.\n"
     .string "Of course I need your help, too.\p"
-    .string "Now, {PLAYER} and {RIVAL}!\p"
+    .string "Anyway…\n"
+    .string "{PLAYER} and {RIVAL}!\p"
     .string "This time, you really must work\n"
     .string "towards filling your POKéDEXES.\p"
     .string "I urge you to make them the best\n"
