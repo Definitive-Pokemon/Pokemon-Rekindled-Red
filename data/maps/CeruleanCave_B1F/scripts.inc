@@ -127,10 +127,9 @@ CeruleanCave_B1F_Text_You::
 	.string "you here, {PLAYER}.$"
 
 CeruleanCave_B1F_Text_Haha::
-	.string "You are here looking for POKéMON\n"
+	.string "You are here looking for POKéMON,\n"
 	.string "am I correct?\p"
-	.string "I urge you to reconsider.\n"
-	.string "You saw what I just did.\p"
+	.string "You no longer need to bother…\p"
 	.string "I just captured the most powerful\n"
 	.string "POKéMON alive!\p"
 	.string "In fact, it was mine to begin with!\p"
