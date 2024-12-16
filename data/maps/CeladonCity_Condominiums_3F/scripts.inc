@@ -1,10 +1,6 @@
 CeladonCity_Condominiums_3F_MapScripts::
 	.byte 0
 
-CeladonCity_Condominiums_3F_OnFrame::
-	map_script_2 VAR_TEMP_0, 2, CeladonCity_Condominiums_3F_EventScript_CheckMysticTicket
-	.2byte 0
-
 CeladonCity_Condominiums_3F_EventScript_Programmer::
 	msgbox CeladonCity_Condominiums_3F_Text_ImTheProgrammer, MSGBOX_NPC
 	end
