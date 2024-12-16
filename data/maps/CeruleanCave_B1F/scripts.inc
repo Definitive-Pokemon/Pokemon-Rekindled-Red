@@ -129,9 +129,9 @@ CeruleanCave_B1F_Text_You::
 CeruleanCave_B1F_Text_Haha::
 	.string "You are here looking for POKéMON,\n"
 	.string "am I correct?\p"
-	.string "You no longer need to bother…\p"
-	.string "I just captured the most powerful\n"
-	.string "POKéMON alive!\p"
+	.string "You should stop bothering…\p"
+	.string "… for I just captured the most\n"
+	.string "powerful POKéMON alive!\p"
 	.string "In fact, it was mine to begin with!\p"
 	.string "TEAM ROCKET created this POKéMON,\n"
 	.string "with the help of a renowned team\l"
