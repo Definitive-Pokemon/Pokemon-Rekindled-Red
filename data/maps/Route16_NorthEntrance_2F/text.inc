@@ -20,8 +20,8 @@ Route16_NorthEntrance_2F_Text_LongPathOverWater::
 Route16_NorthEntrance_2F_Text_GiveAmuletCoinIfCaught40::
     .string "Hi! Remember me?\n"
     .string "I'm one of PROF. OAK's AIDES.\p"
-    .string "If you have obtained the SOULBADGE\n"
-    .string "from FUCHSIA CITY, I'm supposed to\l"
+    .string "If you have the SOULBADGE from\n"
+    .string "FUCHSIA CITY, I'm supposed to\l"
     .string "give you a reward from PROF. OAK.\p"
     .string "PROF. OAK entrusted me with an\n"
     .string "AMULET COIN for you.\p"

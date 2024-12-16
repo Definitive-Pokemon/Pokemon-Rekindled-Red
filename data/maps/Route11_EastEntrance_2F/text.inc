@@ -1,8 +1,8 @@
 Route11_EastEntrance_2F_Text_GiveItemfinderIfCaught30::
     .string "Hi! Remember me?\n"
     .string "I'm one of PROF. OAK's AIDES.\p"
-    .string "If you have obtained the RAINBOWBADGE\n"
-    .string "from CELADON CITY, I'm supposed to\l"
+    .string "If you have the RAINBOWBADGE from\n"
+    .string "CELADON CITY, I'm supposed to\l"
     .string "give you a reward from PROF. OAK.\p"
     .string "PROF. OAK entrusted me with the\n"
     .string "{STR_VAR_2} for you.\p"

@@ -1,8 +1,8 @@
 Route15_WestEntrance_2F_Text_GiveItemIfCaughtEnough::
     .string "Hi! Remember me?\n"
     .string "I'm one of PROF. OAK's AIDES.\p"
-    .string "If you have obtained the MARSHBADGE\n"
-    .string "from SAFFRON CITY, I'm supposed to\l"
+    .string "If you have the MARSHBADGE from\n"
+    .string "SAFFRON CITY, I'm supposed to\l"
     .string "give you a reward from PROF. OAK.\p"
     .string "PROF. OAK entrusted me with the\n"
     .string "{STR_VAR_2} for you.\p"
