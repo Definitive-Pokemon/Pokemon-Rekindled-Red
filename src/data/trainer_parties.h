@@ -1736,8 +1736,8 @@ static const struct TrainerMonItemCustomMoves sParty_CollectorMaximus[] = {
         .iv = 255,
         .lvl = 95,
         .species = SPECIES_BLASTOISE,
-		.heldItem = ITEM_LEFTOVERS,
-        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_SLEEP_TALK, MOVE_REST},
+		.heldItem = ITEM_CHESTO_BERRY,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_RAIN_DANCE, MOVE_REST},
     },
 };
 
