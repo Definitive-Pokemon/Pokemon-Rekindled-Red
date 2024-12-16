@@ -7,38 +7,8 @@ Green_Give_RainbowWing_Debug::
 	release
 	end
 
-Debug_GiveFormMon::
-	lock
-	giveitem ITEM_METEORITE
-	release
-	end
-
 Debug_Text::
     .string "I AM NO ERROR$"
-
-Debug_Gigas_Battle::
-	lock
-	setwildbattle SPECIES_REGIGIGAS, 3, ITEM_NONE
-	delay 40
-	dowildbattle
-	release
-	end
-
-Debug_BugmeBattle::
-	trainerbattle_single TRAINER_CELIO, 0, Debug_Text, Debug_Text
-	end
-
-Debug_GiveNormalMon::
-	lock
-	removeitem ITEM_METEORITE
-	release
-	end
-	
-Debug_FinishCelioQuestVanilla::
-	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 7
-	setflag FLAG_SEVII_DETOUR_FINISHED
-	setflag FLAG_SYS_CAN_LINK_WITH_RS
-	end
 
 Debug_UnlockGame::
 	@unlock all fly locations
@@ -211,6 +181,165 @@ Debug_Emerald::
 	giveitem ITEM_EMERALD
 	release
 	end
+
+Debug_GiveAllKeyItems::
+	lock
+	giveitem ITEM_LETTER
+	giveitem ITEM_RUBY
+	giveitem ITEM_SAPPHIRE
+	giveitem ITEM_EMERALD
+	giveitem ITEM_METEORITE
+	giveitem ITEM_RAINBOW_WING
+	giveitem ITEM_COIN_CASE
+	giveitem ITEM_ITEMFINDER
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
+	giveitem ITEM_SS_TICKET
+	giveitem ITEM_BLUE_KEY
+	giveitem ITEM_YELLOW_KEY
+	giveitem ITEM_RED_KEY
+	giveitem ITEM_SHINY_RADAR
+	giveitem ITEM_OAKS_PARCEL
+	giveitem ITEM_POKE_FLUTE
+	giveitem ITEM_EON_TICKET
+	giveitem ITEM_SECRET_KEY
+	giveitem ITEM_BIKE_VOUCHER
+	giveitem ITEM_GOLD_TEETH
+	giveitem ITEM_OLD_AMBER
+	giveitem ITEM_CARD_KEY
+	giveitem ITEM_LIFT_KEY
+	giveitem ITEM_HELIX_FOSSIL
+	giveitem ITEM_DOME_FOSSIL
+	giveitem ITEM_SILPH_SCOPE
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_TOWN_MAP
+	giveitem ITEM_FAME_CHECKER
+	giveitem ITEM_TEACHY_TV
+	giveitem ITEM_TRI_PASS
+	giveitem ITEM_TEA
+	giveitem ITEM_MYSTIC_TICKET
+	giveitem ITEM_AURORA_TICKET
+	giveitem ITEM_OLD_SEA_MAP
+	giveitem ITEM_LINK_BRACELET
+	release
+	end
+
+Debug_GiveOtherKeyItems::
+	lock
+	giveitem ITEM_COIN_CASE
+	giveitem ITEM_ITEMFINDER
+	giveitem ITEM_OLD_ROD
+	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_SUPER_ROD
+	giveitem ITEM_SS_TICKET
+	giveitem ITEM_BLUE_KEY
+	giveitem ITEM_YELLOW_KEY
+	giveitem ITEM_RED_KEY
+	giveitem ITEM_SHINY_RADAR
+	giveitem ITEM_OAKS_PARCEL
+	giveitem ITEM_POKE_FLUTE
+	giveitem ITEM_EON_TICKET
+	giveitem ITEM_SECRET_KEY
+	giveitem ITEM_BIKE_VOUCHER
+	giveitem ITEM_GOLD_TEETH
+	giveitem ITEM_OLD_AMBER
+	giveitem ITEM_CARD_KEY
+	giveitem ITEM_LIFT_KEY
+	giveitem ITEM_HELIX_FOSSIL
+	giveitem ITEM_DOME_FOSSIL
+	giveitem ITEM_SILPH_SCOPE
+	giveitem ITEM_BICYCLE
+	giveitem ITEM_TOWN_MAP
+	giveitem ITEM_FAME_CHECKER
+	giveitem ITEM_TEACHY_TV
+	giveitem ITEM_TRI_PASS
+	giveitem ITEM_TEA
+	giveitem ITEM_MYSTIC_TICKET
+	giveitem ITEM_AURORA_TICKET
+	giveitem ITEM_OLD_SEA_MAP
+	giveitem ITEM_LINK_BRACELET
+	release
+	end
+
+Debug_GiveMeteorite::
+	lock
+	giveitem ITEM_METEORITE
+	release
+	end
+
+Debug_RemoveKeyItemsSane::
+	removeitem ITEM_LETTER
+	removeitem ITEM_RUBY
+	removeitem ITEM_SAPPHIRE
+	removeitem ITEM_EMERALD
+	removeitem ITEM_METEORITE
+	removeitem ITEM_RAINBOW_WING
+	removeitem ITEM_COIN_CASE
+	removeitem ITEM_ITEMFINDER
+	removeitem ITEM_OLD_ROD
+	removeitem ITEM_GOOD_ROD
+	removeitem ITEM_SUPER_ROD
+	removeitem ITEM_SS_TICKET
+	removeitem ITEM_BLUE_KEY
+	removeitem ITEM_YELLOW_KEY
+	removeitem ITEM_RED_KEY
+	removeitem ITEM_SHINY_RADAR
+	removeitem ITEM_OAKS_PARCEL
+	removeitem ITEM_POKE_FLUTE
+	removeitem ITEM_EON_TICKET
+	removeitem ITEM_SECRET_KEY
+	removeitem ITEM_BIKE_VOUCHER
+	removeitem ITEM_GOLD_TEETH
+	removeitem ITEM_OLD_AMBER
+	removeitem ITEM_CARD_KEY
+	removeitem ITEM_LIFT_KEY
+	removeitem ITEM_HELIX_FOSSIL
+	removeitem ITEM_DOME_FOSSIL
+	removeitem ITEM_SILPH_SCOPE
+	removeitem ITEM_BICYCLE
+	removeitem ITEM_TOWN_MAP
+	removeitem ITEM_FAME_CHECKER
+	removeitem ITEM_TEACHY_TV
+	removeitem ITEM_TRI_PASS
+	removeitem ITEM_TEA
+	removeitem ITEM_MYSTIC_TICKET
+	removeitem ITEM_AURORA_TICKET
+	removeitem ITEM_OLD_SEA_MAP
+	removeitem ITEM_LINK_BRACELET
+	playse SE_FAILURE
+	end
+
+Debug_RemoveLetter::
+	removeitem ITEM_LETTER
+	playse SE_FAILURE
+	end
+
+Debug_RemoveRuby::
+	removeitem ITEM_RUBY
+	playse SE_FAILURE
+	end
+
+Debug_RemoveSapphire::
+	removeitem ITEM_SAPPHIRE
+	playse SE_FAILURE
+	end
+
+Debug_RemoveEmerald::
+	removeitem ITEM_EMERALD
+	playse SE_FAILURE
+	end
+
+Debug_RemoveMeteorite::
+	removeitem ITEM_METEORITE
+	playse SE_FAILURE
+	end
+
+Debug_RemoveRainbowWing::
+	removeitem ITEM_RAINBOW_WING
+	playse SE_FAILURE
+	end
+
 
 Daisy::
 	setflag FLAG_HIDE_DAISY
