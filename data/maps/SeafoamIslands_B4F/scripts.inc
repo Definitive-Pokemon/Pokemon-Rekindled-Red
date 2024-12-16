@@ -47,6 +47,7 @@ SeafoamIslands_B4F_EventScript_HideMaximus::
 SeafoamIslands_B4F_EventScript_Maximus::
 	textcolor 0
 	msgbox SeafoamIslands_B4F_Text_MaximusCommend, MSGBOX_NPC
+	fadenewbgm MUS_NONE
 	closemessage
 	delay 80
 	fadescreen FADE_TO_BLACK
@@ -54,6 +55,7 @@ SeafoamIslands_B4F_EventScript_Maximus::
 	waitse
 	addobject LOCALID_MAXIMUS
 	fadescreen FADE_FROM_BLACK
+	playbgm MUS_B_PIKE, 0
 	delay 40
 	applymovement LOCALID_MAXIMUS, SeafoamIslands_B4F_Movement_WalkDownPickUpFeather
 	waitmovement 0
@@ -76,7 +78,9 @@ SeafoamIslands_B4F_EventScript_Maximus::
 	removeobject LOCALID_MAXIMUS
 	setflag FLAG_MAXIMUS_SEAFOAM
 	fadescreen FADE_FROM_BLACK
-	delay 40
+	fadenewbgm MUS_NONE
+	delay 60
+	playbgm MUS_VIRIDIAN_FOREST, 0
 	releaseall
 	end
 

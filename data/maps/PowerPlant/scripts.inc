@@ -52,6 +52,11 @@ PowerPlant_EventScript_TryShowZapdos::
 	clearflag FLAG_HIDE_ZAPDOS
 	return
 
+PowerPlant_EventScript_SeenZapdos::
+	setvar VAR_SEEN_ZAPDOS, 1
+	setflag FLAG_SEEN_ZAPDOS
+	end
+
 PowerPlant_EventScript_HideZapdos::
 	setflag FLAG_HIDE_ZAPDOS
 	return

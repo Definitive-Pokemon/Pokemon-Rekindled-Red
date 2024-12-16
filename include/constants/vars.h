@@ -253,8 +253,8 @@
 #define VAR_GIOVANNI               0x40C8
 #define VAR_EMBER_RAIN             0x40C9
 #define VAR_MAXIMUS_SEAFOAM        0x40CA
-#define VAR_0x40CB                 0x40CB
-#define VAR_0x40CC                 0x40CC
+#define VAR_MAXIMUS_SILVER         0x40CB
+#define VAR_SEEN_ZAPDOS            0x40CC
 #define VAR_0x40CD                 0x40CD
 #define VAR_0x40CE                 0x40CE
 #define VAR_FRONTIER_FACILITY      0x40CF
