@@ -252,7 +252,7 @@
 #define VAR_RED_OR_GREEN           0x40C7
 #define VAR_GIOVANNI               0x40C8
 #define VAR_EMBER_RAIN             0x40C9
-#define VAR_0x40CA                 0x40CA
+#define VAR_MAXIMUS_SEAFOAM        0x40CA
 #define VAR_0x40CB                 0x40CB
 #define VAR_0x40CC                 0x40CC
 #define VAR_0x40CD                 0x40CD

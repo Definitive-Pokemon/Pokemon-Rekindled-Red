@@ -1,5 +1,6 @@
 .equ NUM_BOULDERS_PRESENT, VAR_TEMP_2
 .set LOCALID_ARTICUNO_MASTER, 5
+.set LOCALID_MAXIMUS, 6
 .set TRAINER, VAR_0x8009
 
 SeafoamIslands_B4F_MapScripts::
@@ -25,6 +26,7 @@ SeafoamIslands_B4F_OnTransition::
 	call_if_unset FLAG_FOUGHT_ARTICUNO, SeafoamIslands_B4F_EventScript_TryShowArticuno
 	call_if_unset FLAG_STOPPED_SEAFOAM_B4F_CURRENT, SeafoamIslands_B4F_EventScript_CheckStoppedCurrent
 	call_if_set FLAG_STOPPED_SEAFOAM_B4F_CURRENT, SeafoamIslands_B4F_EventScript_SetNoCurrentLayout
+	call SeafoamIslands_B4F_EventScript_HideMaximus
 	goto SeafoamIslands_B4F_MapScript_SetMasterTrainerMovementTypes
 	end
 
@@ -37,6 +39,90 @@ SeafoamIslands_B4F_MapScript_SetMasterTrainerMovementTypes::
 SeafoamIslands_B4F_MapScript_ArticunoMasterMovementType::
 	setobjectmovementtype LOCALID_ARTICUNO_MASTER, MOVEMENT_TYPE_RAISE_HAND_AND_STOP
 	return
+
+SeafoamIslands_B4F_EventScript_HideMaximus::
+	removeobject LOCALID_MAXIMUS
+	return
+
+SeafoamIslands_B4F_EventScript_Maximus::
+	textcolor 0
+	msgbox SeafoamIslands_B4F_Text_MaximusCommend, MSGBOX_NPC
+	closemessage
+	delay 80
+	fadescreen FADE_TO_BLACK
+	playse SE_WARP_OUT
+	waitse
+	addobject LOCALID_MAXIMUS
+	fadescreen FADE_FROM_BLACK
+	delay 40
+	applymovement LOCALID_MAXIMUS, SeafoamIslands_B4F_Movement_WalkDownPickUpFeather
+	waitmovement 0
+	textcolor 2
+	msgbox SeafoamIslands_B4F_Text_MaximusTook, MSGBOX_NPC
+	closemessage
+	delay 80
+	textcolor 0
+	msgbox SeafoamIslands_B4F_Text_MaximusDone, MSGBOX_NPC
+	closemessage
+	delay 40
+	applymovement LOCALID_MAXIMUS, SeafoamIslands_B4F_Movement_Talk
+	waitmovement 0
+	msgbox SeafoamIslands_B4F_Text_Talk, MSGBOX_NPC
+	closemessage
+	delay 40
+	fadescreen FADE_TO_BLACK
+	playse SE_WARP_IN
+	waitse
+	removeobject LOCALID_MAXIMUS
+	setflag FLAG_MAXIMUS_SEAFOAM
+	fadescreen FADE_FROM_BLACK
+	delay 40
+	releaseall
+	end
+
+SeafoamIslands_B4F_Text_MaximusCommend::
+	.string "I commend you for taking on\n"
+	.string "the legendary ARTICUNO.\p"
+	.string "To be quite frank, I wasn't sure if\n"
+	.string "I would be able to collect this\l"
+	.string "CYAN FEATHER without your help.$"
+
+SeafoamIslands_B4F_Movement_WalkDownPickUpFeather::
+	walk_down
+	delay_16
+	walk_in_place_down
+	step_end
+
+SeafoamIslands_B4F_Text_MaximusTook::
+	.string "The MYSTERIOUS MAN obtained one\n"
+	.string "of ARTICUNO's fallen feathers!$"
+
+SeafoamIslands_B4F_Text_MaximusDone::
+	.string "That's the last one!\p"
+	.string "Wait, I haven't introduced myself\n"
+	.string "properly, have I?\p"
+	.string "My name is MAXIMUS.\n"
+	.string "I am a collector of rare POKéMON,\l"
+	.string "hailing from a faraway region.\p"
+	.string "As you may realize, I don't eschew…\n"
+	.string "more creative methods in order to\l"
+	.string "obtain the things I desire.\p"
+	.string "You may have already seen what I did\n"
+	.string "to poor ZAPDOS…$"
+
+SeafoamIslands_B4F_Movement_Talk::
+	walk_in_place_down
+	step_end
+
+SeafoamIslands_B4F_Text_Talk::
+	.string "… You're expecting some kind of\n"
+	.string "battle coming up, am I right?\p"
+	.string "I'm sorry, but I don't really\n"
+	.string "do these. I have work to do.\p"
+	.string "Who knows. Maybe we will meet\n"
+	.string "again some other time.\p"
+	.string "Maybe I have something special\n"
+	.string "to show you then…$"
 
 SeafoamIslands_B4F_EventScript_CheckStoppedCurrent::
 	setvar NUM_BOULDERS_PRESENT, 0
@@ -193,19 +279,30 @@ SeafoamIslands_B4F_EventScript_Articuno::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SeafoamIslands_B4F_EventScript_RanFromArticuno
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SeafoamIslands_B4F_EventScript_RanFromArticuno
 	setflag FLAG_FOUGHT_ARTICUNO
-	release
+	goto if_unset_flag FLAG_MAXIMUS_SEAFOAM, SeafoamIslands_B4F_EventScript_Maximus
 	end
 
 SeafoamIslands_B4F_EventScript_DefeatedArticuno::
 	setflag FLAG_ARTICUNO_FLEW_AWAY
 	setvar VAR_0x8004, SPECIES_ARTICUNO
-	goto EventScript_MonFlewAway
+	goto if_set_flag FLAG_MAXIMUS_SEAFOAM, EventScript_MonFlewAway
+	goto EventScript_MonFlewAwayMaximus
 	end
 
 SeafoamIslands_B4F_EventScript_RanFromArticuno::
 	setvar VAR_0x8004, SPECIES_ARTICUNO
-	goto EventScript_MonFlewAway
+	goto if_set_flag FLAG_MAXIMUS_SEAFOAM, EventScript_MonFlewAway
+	goto EventScript_MonFlewAwayMaximus
 	end
+
+EventScript_MonFlewAwayMaximus::
+    fadescreenswapbuffers FADE_TO_BLACK
+    removeobject VAR_LAST_TALKED
+    fadescreenswapbuffers FADE_FROM_BLACK
+    bufferspeciesname STR_VAR_1, VAR_0x8004
+    msgbox Text_MonFlewAway
+	goto SeafoamIslands_B4F_EventScript_Maximus
+    end
 
 SeafoamIslands_B4F_EventScript_BoulderHintSign::
 	msgbox SeafoamIslands_B4F_Text_BouldersMightChangeWaterFlow, MSGBOX_SIGN

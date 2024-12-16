@@ -1287,11 +1287,11 @@
 #define FLAG_HIDE_REDGREEN       0x4D8
 #define FLAG_HIDE_GIOVANNI       0x4D9
 #define FLAG_HIDE_CAVE_BALL      0x4DA
-#define FLAG_0x4DB               0x4DB
-#define FLAG_0x4DC               0x4DC
-#define FLAG_0x4DD               0x4DD
-#define FLAG_0x4DE               0x4DE
-#define FLAG_0x4DF               0x4DF
+#define FLAG_FOUGHT_POWER_PLANT_MACHOKE_1               0x4DB
+#define FLAG_FOUGHT_POWER_PLANT_MACHOKE_2               0x4DC
+#define FLAG_FOUGHT_POWER_PLANT_MACHOKE_3               0x4DD
+#define FLAG_FOUGHT_POWER_PLANT_MACHOKE_4               0x4DE
+#define FLAG_MAXIMUS_SEAFOAM     0x4DF
 #define FLAG_0x4E0               0x4E0
 #define FLAG_0x4E1               0x4E1
 #define FLAG_0x4E2               0x4E2

@@ -23,6 +23,10 @@ PowerPlant_OnTransition::
 	call_if_unset FLAG_FOUGHT_ZAPDOS, PowerPlant_EventScript_TryShowZapdos
 	call_if_unset FLAG_FOUGHT_POWER_PLANT_ELECTRODE_1, PowerPlant_EventScript_ShowElectrode1
 	call_if_unset FLAG_FOUGHT_POWER_PLANT_ELECTRODE_2, PowerPlant_EventScript_ShowElectrode2
+	call_if_unset FLAG_FOUGHT_POWER_PLANT_MACHOKE_1, PowerPlant_EventScript_ShowMachoke1
+	call_if_unset FLAG_FOUGHT_POWER_PLANT_MACHOKE_2, PowerPlant_EventScript_ShowMachoke2
+	call_if_unset FLAG_FOUGHT_POWER_PLANT_MACHOKE_3, PowerPlant_EventScript_ShowMachoke3
+	call_if_unset FLAG_FOUGHT_POWER_PLANT_MACHOKE_4, PowerPlant_EventScript_ShowMachoke4
 	goto PowerPlant_MapScript_SetMasterTrainerMovementTypes
 	end
 
@@ -67,7 +71,7 @@ PowerPlant_EventScript_Zapdos::
 	faceplayer
 	setwildbattle SPECIES_ZAPDOS, 50
 	waitse
-	playmoncry SPECIES_ZAPDOS, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_ZAPDOS, 11
 	message Text_Gyaoo
 	waitmessage
 	waitmoncry
@@ -95,6 +99,110 @@ PowerPlant_EventScript_DefeatedZapdos::
 PowerPlant_EventScript_RanFromZapdos::
 	setvar VAR_0x8004, SPECIES_ZAPDOS
 	goto EventScript_MonFlewAway
+	end
+
+PowerPlant_EventScript_Machoke1::
+	goto_if_questlog EventScript_ReleaseEnd
+	lock
+	faceplayer
+	setwildbattle SPECIES_MACHOKE, 45
+	waitse
+	playmoncry SPECIES_MACHOKE, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	dowildbattle
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special QuestLog_CutRecording
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, PowerPlant_EventScript_FoughtMachoke1
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, PowerPlant_EventScript_FoughtMachoke1
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, PowerPlant_EventScript_FoughtMachoke1
+	setflag FLAG_FOUGHT_POWER_PLANT_MACHOKE_1
+	release
+	end
+
+PowerPlant_EventScript_FoughtMachoke1::
+	setflag FLAG_FOUGHT_POWER_PLANT_MACHOKE_1
+	goto EventScript_RemoveStaticMon
+	end
+
+PowerPlant_EventScript_Machoke2::
+	goto_if_questlog EventScript_ReleaseEnd
+	lock
+	faceplayer
+	setwildbattle SPECIES_MACHOKE, 45
+	waitse
+	playmoncry SPECIES_MACHOKE, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	dowildbattle
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special QuestLog_CutRecording
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, PowerPlant_EventScript_FoughtMachoke2
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, PowerPlant_EventScript_FoughtMachoke2
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, PowerPlant_EventScript_FoughtMachoke2
+	setflag FLAG_FOUGHT_POWER_PLANT_MACHOKE_2
+	release
+	end
+
+PowerPlant_EventScript_FoughtMachoke2::
+	setflag FLAG_FOUGHT_POWER_PLANT_MACHOKE_2
+	goto EventScript_RemoveStaticMon
+	end
+
+PowerPlant_EventScript_Machoke3::
+	goto_if_questlog EventScript_ReleaseEnd
+	lock
+	faceplayer
+	setwildbattle SPECIES_MACHOKE, 45
+	waitse
+	playmoncry SPECIES_MACHOKE, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	dowildbattle
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special QuestLog_CutRecording
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, PowerPlant_EventScript_FoughtMachoke3
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, PowerPlant_EventScript_FoughtMachoke3
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, PowerPlant_EventScript_FoughtMachoke3
+	setflag FLAG_FOUGHT_POWER_PLANT_MACHOKE_3
+	release
+	end
+
+PowerPlant_EventScript_FoughtMachoke3::
+	setflag FLAG_FOUGHT_POWER_PLANT_MACHOKE_3
+	goto EventScript_RemoveStaticMon
+	end
+
+PowerPlant_EventScript_Machoke4::
+	goto_if_questlog EventScript_ReleaseEnd
+	lock
+	faceplayer
+	setwildbattle SPECIES_MACHOKE, 45
+	waitse
+	playmoncry SPECIES_MACHOKE, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	dowildbattle
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special QuestLog_CutRecording
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, PowerPlant_EventScript_FoughtMachoke4
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, PowerPlant_EventScript_FoughtMachoke4
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, PowerPlant_EventScript_FoughtMachoke4
+	setflag FLAG_FOUGHT_POWER_PLANT_MACHOKE_4
+	release
+	end
+
+PowerPlant_EventScript_FoughtMachoke4::
+	setflag FLAG_FOUGHT_POWER_PLANT_MACHOKE_4
+	goto EventScript_RemoveStaticMon
 	end
 
 PowerPlant_EventScript_Electrode1::

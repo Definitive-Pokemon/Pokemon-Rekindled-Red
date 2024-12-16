@@ -1805,7 +1805,7 @@
       "id": "LAYOUT_POWER_PLANT",
       "name": "PowerPlant_Layout",
       "width": 49,
-      "height": 40,
+      "height": 41,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
