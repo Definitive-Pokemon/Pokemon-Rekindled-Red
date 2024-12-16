@@ -279,19 +279,19 @@ SeafoamIslands_B4F_EventScript_Articuno::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SeafoamIslands_B4F_EventScript_RanFromArticuno
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SeafoamIslands_B4F_EventScript_RanFromArticuno
 	setflag FLAG_FOUGHT_ARTICUNO
-	goto if_unset_flag FLAG_MAXIMUS_SEAFOAM, SeafoamIslands_B4F_EventScript_Maximus
+	goto_if_unset FLAG_MAXIMUS_SEAFOAM, SeafoamIslands_B4F_EventScript_Maximus
 	end
 
 SeafoamIslands_B4F_EventScript_DefeatedArticuno::
 	setflag FLAG_ARTICUNO_FLEW_AWAY
 	setvar VAR_0x8004, SPECIES_ARTICUNO
-	goto if_set_flag FLAG_MAXIMUS_SEAFOAM, EventScript_MonFlewAway
+	goto_if_set FLAG_MAXIMUS_SEAFOAM, EventScript_MonFlewAway
 	goto EventScript_MonFlewAwayMaximus
 	end
 
 SeafoamIslands_B4F_EventScript_RanFromArticuno::
 	setvar VAR_0x8004, SPECIES_ARTICUNO
-	goto if_set_flag FLAG_MAXIMUS_SEAFOAM, EventScript_MonFlewAway
+	goto_if_set FLAG_MAXIMUS_SEAFOAM, EventScript_MonFlewAway
 	goto EventScript_MonFlewAwayMaximus
 	end
 
