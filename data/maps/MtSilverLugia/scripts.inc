@@ -6,7 +6,7 @@ MtSilverLugia_MapScripts::
 	.byte 0
 
 MtSilverLugia_OnTransition::
-	call_if_set FLAG_MAXIMUS_LUGIA, MtSilverLugia_EventScript_Event
+	goto_if_set FLAG_MAXIMUS_LUGIA, MtSilverLugia_EventScript_Event
 	end
 
 MtSilverLugia_EventScript_Event::
@@ -71,7 +71,7 @@ MtSilverLugia_EventScript_Event::
 	clearflag FLAG_MAXIMUS_LUGIA
 	setflag FLAG_MAXIMUS_HIDE_LUGIA
 	releaseall
-	return
+	end
 
 MtSilverLugia_Movement_PanToActionFromBottom::
 	walk_slow_up
