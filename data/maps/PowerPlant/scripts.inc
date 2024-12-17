@@ -69,6 +69,22 @@ PowerPlant_EventScript_ShowElectrode2::
 	clearflag FLAG_HIDE_POWER_PLANT_ELECTRODE_2
 	return
 
+PowerPlant_EventScript_ShowMachoke1::
+	clearflag FLAG_HIDE_POWER_PLANT_MACHOKE_1
+	return
+
+PowerPlant_EventScript_ShowMachoke2::
+	clearflag FLAG_HIDE_POWER_PLANT_MACHOKE_2
+	return
+
+PowerPlant_EventScript_ShowMachoke3::
+	clearflag FLAG_HIDE_POWER_PLANT_MACHOKE_3
+	return
+
+PowerPlant_EventScript_ShowMachoke4::
+	clearflag FLAG_HIDE_POWER_PLANT_MACHOKE_4
+	return
+
 PowerPlant_EventScript_Zapdos::
 	goto_if_questlog EventScript_ReleaseEnd
 	special QuestLog_CutRecording
