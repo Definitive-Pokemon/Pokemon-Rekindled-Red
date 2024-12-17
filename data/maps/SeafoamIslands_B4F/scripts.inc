@@ -42,6 +42,7 @@ SeafoamIslands_B4F_MapScript_ArticunoMasterMovementType::
 
 SeafoamIslands_B4F_EventScript_HideMaximus::
 	removeobject LOCALID_MAXIMUS
+	setflag FLAG_HIDE_MAXIMUS_SEAFOAM
 	return
 
 SeafoamIslands_B4F_EventScript_Maximus::
@@ -53,6 +54,7 @@ SeafoamIslands_B4F_EventScript_Maximus::
 	fadescreen FADE_TO_BLACK
 	playse SE_WARP_OUT
 	waitse
+	clearflag FLAG_HIDE_MAXIMUS_SEAFOAM
 	addobject LOCALID_MAXIMUS
 	fadescreen FADE_FROM_BLACK
 	playbgm MUS_B_PIKE, 0
@@ -77,6 +79,7 @@ SeafoamIslands_B4F_EventScript_Maximus::
 	waitse
 	removeobject LOCALID_MAXIMUS
 	setflag FLAG_MAXIMUS_SEAFOAM
+	setflag FLAG_HIDE_MAXIMUS_SEAFOAM
 	fadescreen FADE_FROM_BLACK
 	fadenewbgm MUS_NONE
 	delay 60
