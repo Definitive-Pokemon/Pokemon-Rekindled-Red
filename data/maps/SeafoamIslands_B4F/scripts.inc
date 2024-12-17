@@ -47,8 +47,8 @@ SeafoamIslands_B4F_EventScript_HideMaximus::
 
 SeafoamIslands_B4F_EventScript_Maximus::
 	textcolor 0
-	msgbox SeafoamIslands_B4F_Text_MaximusCommend, MSGBOX_NPC
 	fadenewbgm MUS_NONE
+	msgbox SeafoamIslands_B4F_Text_MaximusCommend, MSGBOX_NPC
 	closemessage
 	delay 80
 	fadescreen FADE_TO_BLACK
@@ -65,6 +65,8 @@ SeafoamIslands_B4F_EventScript_Maximus::
 	msgbox SeafoamIslands_B4F_Text_MaximusTook, MSGBOX_NPC
 	closemessage
 	delay 80
+	applymovement LOCALID_MAXIMUS, SeafoamIslands_B4F_Movement_Face
+	waitmovement 0
 	textcolor 0
 	msgbox SeafoamIslands_B4F_Text_MaximusDone, MSGBOX_NPC
 	closemessage
@@ -104,6 +106,12 @@ SeafoamIslands_B4F_Text_MaximusTook::
 	.string "The MYSTERIOUS MAN obtained one\n"
 	.string "of ARTICUNO's fallen feathers!$"
 
+SeafoamIslands_B4F_Movement_Face::
+	face_player
+	lock_facing_direction
+	walk_in_place_down
+	step_end
+
 SeafoamIslands_B4F_Text_MaximusDone::
 	.string "That's the last one!\p"
 	.string "Wait, I haven't introduced myself\n"
@@ -114,10 +122,12 @@ SeafoamIslands_B4F_Text_MaximusDone::
 	.string "As you may realize, I don't eschew…\n"
 	.string "more creative methods in order to\l"
 	.string "obtain the things I desire.\p"
-	.string "You may have already seen what I did\n"
-	.string "to poor ZAPDOS…$"
+	.string "You may have already seen what\n"
+	.string "I did to poor ZAPDOS…$"
 
 SeafoamIslands_B4F_Movement_Talk::
+	face_player
+	lock_facing_direction
 	walk_in_place_down
 	step_end
 
