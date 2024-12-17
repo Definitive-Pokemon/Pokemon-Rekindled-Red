@@ -7,6 +7,7 @@ MtSilverLegend_MapScripts::
 MtSilverLegend_OnTransition::
 	goto_if_unset FLAG_MAXIMUS_SEAFOAM, MtSilverLegend_EventScript_NoMaximus
 	goto_if_unset FLAG_SEEN_ZAPDOS, MtSilverLegend_EventScript_NoMaximus
+	goto_if_set FLAG_MAXIMUS_SILVER_DONE, MtSilverLegend_EventScript_NoMaximus
 	setvar VAR_MAXIMUS_SILVER, 0
 	clearflag FLAG_HIDE_MAXIMUS_SILVER
 	addobject LOCALID_MAXIMUS
@@ -31,6 +32,7 @@ MtSilverLegend_EventScript_Maximus::
 	playse SE_EXIT
 	waitse
 	setflag FLAG_HIDE_MAXIMUS_SILVER
+	setflag FLAG_MAXIMUS_SILVER_DONE
 	setvar VAR_MAXIMUS_SILVER, 1
 	releaseall
 	end
