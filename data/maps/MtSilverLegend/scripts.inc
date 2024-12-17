@@ -21,6 +21,7 @@ MtSilverLegend_EventScript_NoMaximus::
 
 MtSilverLegend_EventScript_Maximus::
 	lockall
+	delay 30
 	applymovement LOCALID_MAXIMUS, MtSilverLegend_Movement_Maximus
 	waitmovement 0
 	textcolor 0
