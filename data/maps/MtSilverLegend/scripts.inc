@@ -34,6 +34,8 @@ MtSilverLegend_EventScript_Maximus::
 	setflag FLAG_HIDE_MAXIMUS_SILVER
 	setflag FLAG_MAXIMUS_SILVER_DONE
 	setvar VAR_MAXIMUS_SILVER, 1
+	setflag FLAG_MAXIMUS_LUGIA
+	setflag FLAG_MAXIMUS_HIDE_LUGIA
 	releaseall
 	end
 
@@ -42,11 +44,12 @@ MtSilverLegend_Movement_Maximus::
 	step_end
 
 MtSilverLegend_Text_Maximus::
-	.string "There you are.\n"
-	.string "I have been waiting for you.\p"
-	.string "I heard you were heading for this place,\n"
-	.string "so I thought this would be the perfect\l"
-	.string "opportunity to do what I came here for.\p"
+	.string "There you are, TRAINER.\n"
+	.string "I have been waiting just for you.\p"
+	.string "When I heard you were heading for\n"
+	.string "MT. SILVER, I figured it would be\p"
+	.string "the perfect opportunity for me to\n"
+	.string "show you what I intend to do.\p"
 	.string "Now, come.$"
 
 MtSilverLegend_Movement_Maximus2::

@@ -1300,8 +1300,8 @@
 #define FLAG_HIDE_POWER_PLANT_MACHOKE_4               0x4E5
 #define FLAG_HIDE_MAXIMUS_SEAFOAM               0x4E6
 #define FLAG_MAXIMUS_SILVER_DONE               0x4E7
-#define FLAG_0x4E8               0x4E8
-#define FLAG_0x4E9               0x4E9
+#define FLAG_MAXIMUS_LUGIA               0x4E8
+#define FLAG_MAXIMUS_HIDE_LUGIA               0x4E9
 #define FLAG_0x4EA               0x4EA
 #define FLAG_0x4EB               0x4EB
 #define FLAG_0x4EC               0x4EC
