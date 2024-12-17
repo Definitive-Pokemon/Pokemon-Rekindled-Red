@@ -9,7 +9,7 @@ MtSilverLugia_OnTransition::
 	goto_if_set FLAG_MAXIMUS_LUGIA, MtSilverLugia_EventScript_Event
 	end
 
-MtSilverLugia_EventScript_Event
+MtSilverLugia_EventScript_Event::
 	lockall
 	textcolor 0
 	fadenewbgm MUS_NONE
