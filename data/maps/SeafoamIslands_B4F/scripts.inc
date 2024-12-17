@@ -308,6 +308,8 @@ EventScript_MonFlewAwayMaximus::
     fadescreenswapbuffers FADE_FROM_BLACK
     bufferspeciesname STR_VAR_1, VAR_0x8004
     msgbox Text_MonFlewAway
+	closemessage
+	delay 50
 	goto SeafoamIslands_B4F_EventScript_Maximus
     end
 

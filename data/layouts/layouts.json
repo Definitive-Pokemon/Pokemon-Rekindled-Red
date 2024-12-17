@@ -5493,7 +5493,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "secondary_tileset": "gTileset_RockTunnel",
       "border_filepath": "data/layouts/MtSilverOutdoor1/border.bin",
       "blockdata_filepath": "data/layouts/MtSilverOutdoor1/map.bin"
     },
@@ -5796,6 +5796,18 @@
       "secondary_tileset": "gTileset_GenericBuilding1",
       "border_filepath": "data/layouts/Route28_House/border.bin",
       "blockdata_filepath": "data/layouts/Route28_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_SILVER_LUGIA",
+      "name": "MtSilverLugia_Layout",
+      "width": 33,
+      "height": 29,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_IndigoPlateau",
+      "border_filepath": "data/layouts/MtSilverLugia/border.bin",
+      "blockdata_filepath": "data/layouts/MtSilverLugia/map.bin"
     }
   ]
 }

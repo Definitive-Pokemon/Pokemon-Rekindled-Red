@@ -1617,3 +1617,6 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/Route28_House/scripts.inc"
 	.include "data/maps/Route28_House/text.inc"
+
+	.include "data/maps/MtSilverLugia/scripts.inc"
+	.include "data/maps/MtSilverLugia/text.inc"

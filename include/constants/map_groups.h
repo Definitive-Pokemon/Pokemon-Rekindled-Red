@@ -648,6 +648,7 @@
 #define MAP_MT_SILVER_POKE_CENTER   (14 | (44 << 8))
 #define MAP_MT_SILVER_POKE_CENTER2F (15 | (44 << 8))
 #define MAP_ROUTE28_HOUSE           (16 | (44 << 8))
+#define MAP_MT_SILVER_LUGIA         (17 | (44 << 8))
 
 #define MAP_GROUPS_COUNT 45
 
