@@ -2,10 +2,10 @@
 .set LOCALID_LUGIA, 2
 
 MtSilverLugia_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, MtSilverLugia_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, MtSilverLugia_OnLoad
 	.byte 0
 
-MtSilverLugia_OnTransition::
+MtSilverLugia_OnLoad::
 	goto_if_set FLAG_MAXIMUS_LUGIA, MtSilverLugia_EventScript_Event
 	end
 
