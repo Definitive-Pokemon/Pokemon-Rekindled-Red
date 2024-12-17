@@ -108,8 +108,6 @@ SeafoamIslands_B4F_Text_MaximusTook::
 
 SeafoamIslands_B4F_Movement_Face::
 	face_player
-	lock_facing_direction
-	walk_in_place_down
 	step_end
 
 SeafoamIslands_B4F_Text_MaximusDone::
@@ -127,8 +125,6 @@ SeafoamIslands_B4F_Text_MaximusDone::
 
 SeafoamIslands_B4F_Movement_Talk::
 	face_player
-	lock_facing_direction
-	walk_in_place_down
 	step_end
 
 SeafoamIslands_B4F_Text_Talk::
