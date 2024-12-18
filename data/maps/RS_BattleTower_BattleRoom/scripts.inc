@@ -27,8 +27,13 @@ BattleTower_BattleRoom_EventScript_1608FA_Continue::
 	call_if_eq BattleTower_BattleRoom_EventScript_TextcolorMale
 	compare VAR_LAST_TALKED, 1
 	call_if_eq BattleTower_BattleRoom_EventScript_TextcolorFemale
+	goto_if_eq VAR_0x8004, 3, BattleTower_BrainBattleMessage
 	special PrintBattleTowerTrainerGreeting
 	msgbox gStringVar4, MSGBOX_DEFAULT
+	goto BattleTower_BattleRoom_EventScript_1608FA_Message_Continue
+BattleTower_BrainBattleMessage::
+	msgbox BattleTower_BattleRoom_BrainAnabel_Intro
+BattleTower_BattleRoom_EventScript_1608FA_Message_Continue::
 	waitmessage
 	closemessage
 	callnative HealPlayerPartyOak
