@@ -52,7 +52,7 @@ MtSilverLegend_EventScript_Maximus::
 	waitse
 	setflag FLAG_HIDE_MAXIMUS_SILVER
 	setflag FLAG_MAXIMUS_SILVER_DONE
-	setvar VAR_MAXIMUS_SILVER, 1
+	setvar VAR_MAXIMUS_SILVER, 2
 	setflag FLAG_MAXIMUS_LUGIA
 	setflag FLAG_MAXIMUS_HIDE_LUGIA
 	releaseall
