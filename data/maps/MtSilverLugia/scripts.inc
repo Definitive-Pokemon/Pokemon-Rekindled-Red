@@ -160,6 +160,7 @@ MtSilverLugia_EventScript_Event::
 	delay 20
 	playse SE_BALL_THROW
 	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_ThrowTracker
+	waitse
 	waitmovement 0
 	delay 5
 	playse SE_BALL_BOUNCE_1
