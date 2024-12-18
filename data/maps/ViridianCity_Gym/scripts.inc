@@ -27,6 +27,7 @@ ViridianCity_Gym_EventScript_DefeatedDaisy::
 	msgbox ViridianCity_Gym_Text_DaisyPostBattle
 	closemessage
 	setflag FLAG_BEAT_DAISY
+	setflag FLAG_HIDE_SILVER_SCIENTIST
 	setflag FLAG_HIDE_DAISY
 	clearflag FLAG_DAISY_READY
 	setvar VAR_MT_SILVER_ACCESS, 1

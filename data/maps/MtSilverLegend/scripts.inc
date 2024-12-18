@@ -12,6 +12,19 @@ MtSilverLegend_OnTransition::
 	clearflag FLAG_HIDE_MAXIMUS_SILVER
 	addobject LOCALID_MAXIMUS
 	end
+	
+	
+MtSilverLegend_EventScript_DoorLocked::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	delay 20
+	msgbox MtSilverLegend_Text_DoorIsLocked
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, CinnabarIsland_Movement_ForcePlayerFromDoor
+	waitmovement 0
+	releaseall
+	end
 
 MtSilverLegend_EventScript_NoMaximus::
 	setflag FLAG_HIDE_MAXIMUS_SILVER

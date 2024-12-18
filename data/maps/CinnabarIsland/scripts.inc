@@ -369,6 +369,12 @@ CinnabarIsland_EventScript_GymDoorLocked::
 	releaseall
 	end
 
+MtSilverLegend_Text_DoorIsLocked::
+	.string "Dangerous equipment can be\n"
+	.string "seen beyond the doorway.\p"
+	.string "Better steer clear of\n"
+	.string "this place!$"
+
 CinnabarIsland_Movement_ForcePlayerFromDoor::
 	walk_down
 	step_end
