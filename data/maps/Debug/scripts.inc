@@ -90,6 +90,14 @@ Debug_UnlockGame::
 	giveitem ITEM_HM08
 	end
 
+ArticunoMaxiFlag::
+	setflag FLAG_MAXIMUS_SEAFOAM
+	end
+	
+ZapdosMaxiFlag::
+	setflag FLAG_SEEN_ZAPDOS
+	end
+
 GiveMewtwo::
 	lock
 	givemon SPECIES_MEWTWO, 100, ITEM_LEFTOVERS
