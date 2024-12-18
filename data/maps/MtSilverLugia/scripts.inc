@@ -252,6 +252,7 @@ MtSilverLugia_Movement_CameraBackUp::
 	delay_16
 	walk_slow_up
 	walk_slow_up
+	walk_slow_up
 	step_end
 
 Movement_LugiaFree::
