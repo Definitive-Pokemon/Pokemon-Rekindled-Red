@@ -113,8 +113,18 @@ MtSilverLugia_EventScript_Event::
 	playmoncry SPECIES_LUGIA, 3
 	waitmoncry
 	waitse
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 10
+	setvar VAR_0x8007, 3
+	special ShakeScreen
 	playse SE_M_THUNDERBOLT2
 	waitse
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 10
+	setvar VAR_0x8007, 3
+	special ShakeScreen
 	playse SE_M_THUNDERBOLT2
 	waitse
 	delay 20
@@ -133,7 +143,10 @@ MtSilverLugia_EventScript_Event::
 	special ShakeScreen
 	playmoncry SPECIES_LUGIA, 2
 	waitmoncry
-	setvar VAR_0x8004, 3  @ Num loops
+	delay 60
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, MtSilverLugia_Movement_CameraBackUp
+	setvar VAR_0x8004, 2  @ Num loops
 	setvar VAR_0x8005, 35 @ Delay
 	special LoopWingFlapSound
 	applymovement LOCALID_LUGIA, Movement_HoOhAppear
@@ -144,8 +157,6 @@ MtSilverLugia_EventScript_Event::
 	setvar VAR_0x8004, 3  @ Num loops
 	setvar VAR_0x8005, 35 @ Delay
 	special LoopWingFlapSound
-	delay 60
-	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, MtSilverLugia_Movement_CameraBackUp
 	applymovement LOCALID_LUGIA, Movement_LugiaBackUp
 	waitmovement 0
