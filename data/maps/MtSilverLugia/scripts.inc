@@ -15,7 +15,7 @@ MtSilverLugia_OnLoad_SetVarForScene::
 
 MtSilverLugia_OnFrame::
 	map_script_2 VAR_TEMP_0, 1, MtSilverLugia_EventScript_Event
-	end
+	.2byte 0
 
 MtSilverLugia_EventScript_Event::
 	lockall
