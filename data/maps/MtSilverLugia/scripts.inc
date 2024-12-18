@@ -79,9 +79,76 @@ MtSilverLugia_EventScript_Event::
 	applymovement LOCALID_LUGIA, Movement_HoOhApproach
 	waitmovement 0
 	special RemoveCameraObject
-	delay 50
+	delay 60
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, MtSilverLugia_Movement_PanToActionFromTop
+	waitmovement 0
+	special RemoveCameraObject
+	delay 60
+	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_LookUp
+	waitmovement 0
 	msgbox MtSilverLugia_Text_Maximus_Behold, MSGBOX_NPC
 	closemessage
+	textcolor 2
+	msgbox MtSilverLugia_Text_Maximus_Remote, MSGBOX_NPC
+	closemessage
+	playse SE_PIN
+	waitse
+	delay 10
+	playse SE_THUNDERSTORM
+	fadescreen FADE_TO_WHITE
+	waitse
+	fadescreen FADE_FROM_WHITE
+	playmoncry SPECIES_LUGIA, 12
+	waitmoncry
+	playmoncry SPECIES_LUGIA, 3
+	waitmoncry
+	playse SE_M_THUNDER_WAVE
+	waitse
+	playse SE_M_THUNDERBOLT2
+	waitse
+	playse SE_M_THUNDERBOLT2
+	waitse
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 10
+	setvar VAR_0x8007, 3
+	special ShakeScreen
+	delay 20
+	playmoncry SPECIES_LUGIA, 11
+	waitmoncry
+	delay 40
+	textcolor 0
+	msgbox MtSilverLugia_Text_Maximus_Hah, MSGBOX_NPC
+	closemessage
+	delay 60
+	playmoncry SPECIES_LUGIA, 2
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 10
+	setvar VAR_0x8007, 3
+	special ShakeScreen
+	playmoncry SPECIES_LUGIA, 2
+	waitmoncry
+	setvar VAR_0x8004, 3  @ Num loops
+	setvar VAR_0x8005, 35 @ Delay
+	special LoopWingFlapSound
+	applymovement LOCALID_LUGIA, Movement_HoOhAppear
+	waitmovement 0
+	delay 50
+	setweather 13
+	doweather
+	setvar VAR_0x8004, 3  @ Num loops
+	setvar VAR_0x8005, 35 @ Delay
+	special LoopWingFlapSound
+	applymovement OBJ_EVENT_ID_CAMERA, MtSilverLugia_Movement_CameraBackUp
+	applymovement LOCALID_LUGIA, Movement_LugiaBackUp
+	waitmovement 0
+	special RemoveCameraObject
+	textcolor 0
+	msgbox MtSilverLugia_Text_MaximusWhat
+	closemessage
+	delay 20
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_LUGIA
 	fadescreen FADE_FROM_BLACK
@@ -141,7 +208,48 @@ MtSilverLugia_Text_Maximus_Show::
 	.string "MAXIMUS took the SILVER WING\n"
 	.string "and lifted it towards the skies!$"
 
+MtSilverLugia_Movement_PanToActionFromTop::
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	step_end
+
 MtSilverLugia_Text_Maximus_Behold::
 	.string "Look at that!\n"
 	.string "It's LUGIA!\l"
-	.string "Finally it's mine!$"
+	.string "Now, it's time for the machine\n"
+	.string "to do its job!$"
+
+MtSilverLugia_Text_Maximus_Remote::
+	.string "MAXIMUS took out a strange\n"
+	.string "looking remote.$"
+
+MtSilverLugia_Text_Maximus_Hah::
+	.string "Hah! LUGIA has been severely\n"
+	.string "weakened thanks to my machine.\p"
+	.string "LUGIA isn't a fan of lightning.\n"
+	.string "Hahahahaha!$"
+
+MtSilverLugia_Movement_CameraBackUp::
+	delay_16
+	delay_16
+	walk_slow_up
+	walk_slow_up
+	step_end
+
+Movement_LugiaBackUp::
+	walk_up
+	walk_up
+	walk_up
+	delay_16
+	delay_16
+	step_end
+
+MtSilverLugia_Text_MaximusWhat::
+	.string "WHAT?!\n"
+	.string "That thing should be completely\l"
+	.string "paralyzed at this point!\p"
+	.string "How can it even move?!\p"
+	.string "I am NOT letting it get away,\n"
+	.string "not after all this work!$"
