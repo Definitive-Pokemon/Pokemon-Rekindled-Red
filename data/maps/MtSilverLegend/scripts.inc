@@ -47,10 +47,10 @@ MtSilverLegend_Movement_Maximus::
 MtSilverLegend_Text_Maximus::
 	.string "There you are, TRAINER.\n"
 	.string "I have been waiting just for you.\p"
-	.string "It took me a while to set up this\n"
-	.string "part of the operation, so I had\p"
-	.string "plenty work to do before you\n"
-	.string "would show up.\p"
+	.string "It took me a while to set up\n"
+	.string "this part of the operation,\p"
+	.string "so I had plenty work to do before\n"
+	.string "you would show up.\p"
 	.string "What I have been up to?\n"
 	.string "You will see very soon.$"
 
