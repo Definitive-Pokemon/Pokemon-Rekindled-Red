@@ -102,7 +102,6 @@ MtSilverLugia_Movement_PanToActionFromBottom::
 	walk_slow_up
 	walk_slow_up
 	walk_slow_up
-	walk_slow_up
 	step_end
 
 MtSilverLugia_Movement_LookatPlayer::
