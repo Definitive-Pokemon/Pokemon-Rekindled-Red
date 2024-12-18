@@ -2,15 +2,24 @@
 .set LOCALID_LUGIA, 2
 
 MtSilverLugia_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, MtSilverLugia_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, MtSilverLugia_OnFrame
 	.byte 0
 
+MtSilverLugia_OnLoad::
+	goto_if_set FLAG_MAXIMUS_LUGIA, MtSilverLugia_OnLoad_SetVarForScene
+	end
+MtSilverLugia_OnLoad_SetVarForScene::
+	setvar VAR_TEMP_0, 1
+	end
+
 MtSilverLugia_OnFrame::
-	goto_if_set FLAG_MAXIMUS_LUGIA, MtSilverLugia_EventScript_Event
+	map_script_2 VAR_TEMP_0, 1, MtSilverLugia_EventScript_Event
 	end
 
 MtSilverLugia_EventScript_Event::
 	lockall
+	setvar VAR_TEMP_0, 0
 	textcolor 0
 	fadenewbgm MUS_NONE
 	delay 60
