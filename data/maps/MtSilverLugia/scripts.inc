@@ -152,8 +152,8 @@ MtSilverLugia_EventScript_Event::
 	applymovement LOCALID_LUGIA, Movement_LugiaFree
 	waitmovement 0
 	delay 50
-	setweather 5
-	doweather
+	playse SE_M_SOLAR_BEAM
+	waitse
 	textcolor 0
 	msgbox MtSilverLugia_Text_MaximusWhat
 	closemessage
@@ -193,6 +193,7 @@ MtSilverLugia_EventScript_Event::
 	waitmovement 0
 	msgbox MtSilverLugia_Text_MaximusOhWell
 	closemessage
+	delay 20
 	playse SE_PC_ON
 	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_Exclaim
 	waitse
