@@ -20,6 +20,7 @@ MtSilverLugia_OnFrame::
 MtSilverLugia_EventScript_Event::
 	lockall
 	setvar VAR_TEMP_0, 0
+	delay 60
 	applymovement OBJ_EVENT_ID_PLAYER, MtSilverLugia_Movement_PlayerFirst
 	waitmovement 0
 	textcolor 0
