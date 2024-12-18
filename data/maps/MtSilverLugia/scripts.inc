@@ -78,6 +78,8 @@ MtSilverLugia_Movement_PanToActionFromBottom::
 	walk_slow_up
 	walk_slow_up
 	walk_slow_up
+	walk_slow_up
+	walk_slow_up
 	step_end
 
 MtSilverLugia_Movement_LookatPlayer::
@@ -85,7 +87,7 @@ MtSilverLugia_Movement_LookatPlayer::
 	step_end
 
 MtSilverLugia_Text_Maximus_Announce::
-	.string "It is time!\n"
+	.string "It is time!\p"
 	.string "It is time to summon LUGIA,\n"
 	.string "legendary POKéMON of flight,\p"
 	.string "using the SILVER WING I created\n"
@@ -97,9 +99,8 @@ MtSilverLugia_Movement_LookUp::
 	step_end
 
 MtSilverLugia_Text_Maximus_Show::
-	.string "MAXIMUS took out the\n"
-	.string "SILVER WING and held\l"
-	.string "it to the skies!$"
+	.string "MAXIMUS took out the SILVER WING\n"
+	.string "and held it up in the air!$"
 
 MtSilverLugia_Text_Maximus_Behold::
 	.string "Look at that!\n"
