@@ -87,6 +87,7 @@ MtSilverLugia_EventScript_Event::
 	delay 60
 	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_LookUp
 	waitmovement 0
+	textcolor 0
 	msgbox MtSilverLugia_Text_Maximus_Behold, MSGBOX_NPC
 	closemessage
 	textcolor 2
