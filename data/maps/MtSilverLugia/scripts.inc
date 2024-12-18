@@ -102,12 +102,12 @@ MtSilverLugia_EventScript_Event::
 	fadescreen FADE_FROM_WHITE
 	delay 10
 	playse SE_M_THUNDER_WAVE
+	waitse
 	setvar VAR_0x8004, 2
 	setvar VAR_0x8005, 2
 	setvar VAR_0x8006, 10
 	setvar VAR_0x8007, 3
 	special ShakeScreen
-	waitse
 	playmoncry SPECIES_LUGIA, 12
 	waitmoncry
 	playmoncry SPECIES_LUGIA, 3
