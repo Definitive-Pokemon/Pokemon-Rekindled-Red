@@ -154,23 +154,69 @@ MtSilverLugia_EventScript_Event::
 	delay 50
 	setweather 5
 	doweather
+	textcolor 0
+	msgbox MtSilverLugia_Text_MaximusWhat
+	closemessage
+	delay 20
+	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_ThrowTracker
+	waitmovement 0
+	playse SE_BALL_OPEN
+	waitse
+	delay 20
 	setvar VAR_0x8004, 3  @ Num loops
 	setvar VAR_0x8005, 35 @ Delay
 	special LoopWingFlapSound
 	applymovement OBJ_EVENT_ID_CAMERA, MtSilverLugia_Movement_CameraBackUp
 	applymovement LOCALID_LUGIA, Movement_LugiaBackUp
 	waitmovement 0
+	delay 10
 	special RemoveCameraObject
-	delay 60
-	textcolor 0
-	msgbox MtSilverLugia_Text_MaximusWhat
-	closemessage
-	delay 20
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_LUGIA
 	fadescreen FADE_FROM_BLACK
 	clearflag FLAG_MAXIMUS_LUGIA
 	setflag FLAG_MAXIMUS_HIDE_LUGIA
+	setweather 2
+	doweather
+	delay 60
+	msgbox MtSilverLugia_Text_MaximusSigh
+	closemessage
+	setvar VAR_TEMP_1, 1
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, MtSilverLugia_Movement_CameraBackDown
+	waitmovement 0
+	special RemoveCameraObject
+	delay 60
+	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_LookatPlayer
+	waitmovement 0
+	msgbox MtSilverLugia_Text_MaximusOhWell
+	closemessage
+	playse SE_PC_ON
+	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_Exclaim
+	waitse
+	waitmovement 0
+	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_LookatPlayer
+	waitmovement 0
+	delay 10
+	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_LookatPlayer
+	waitmovement 0
+	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_LookatPlayer
+	waitmovement 0
+	msgbox MtSilverLugia_Text_MaximusAha
+	closemessage
+	delay 20
+	playbgm MUS_B_PIKE, 0
+	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_LookatPlayer
+	waitmovement 0
+	msgbox MtSilverLugia_Text_MaximusBye
+	closemessage
+	fadescreen FADE_TO_BLACK
+	playse SE_WARP_IN
+	waitse
+	removeobject LOCALID_MAXIMUS
+	setflag FLAG_MAXIMUS_SILVER_HIDE
+	fadescreen FADE_FROM_BLACK
+	fadenewbgm MUS_NONE
 	releaseall
 	end
 
@@ -262,6 +308,18 @@ Movement_LugiaFree::
 	walk_in_place_down
 	step_end
 
+MtSilverLugia_Text_MaximusWhat::
+	.string "WHAT?!\n"
+	.string "That thing should be completely\l"
+	.string "paralyzed at this point!\p"
+	.string "How can it even move?!\p"
+	.string "I am NOT letting it get away,\n"
+	.string "not after all this work!$"
+
+MtSilverLugia_Movement_ThrowTracker::
+	walk_in_place_up
+	step_end
+
 Movement_LugiaBackUp::
 	walk_up
 	walk_up
@@ -273,10 +331,51 @@ Movement_LugiaBackUp::
 	delay_16
 	step_end
 
-MtSilverLugia_Text_MaximusWhat::
-	.string "WHAT?!\n"
-	.string "That thing should be completely\l"
-	.string "paralyzed at this point!\p"
-	.string "How can it even move?!\p"
-	.string "I am NOT letting it get away,\n"
-	.string "not after all this work!$"
+MtSilverLugia_Text_MaximusSigh::
+	.string "The QUICK BALL just bounced off\n"
+	.string "like it was nothing…$"
+
+MtSilverLugia_Movement_CameraBackDown::
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	step_end
+
+MtSilverLugia_Text_MaximusOhWell::
+	.string "Oh well…\p"
+	.string "I can easily find LUGIA now that\n"
+	.string "I have placed my tracking device!\p"
+	.string "That's right, TRAINER!\p"
+	.string "All my POKé BALLS contain mechanisms\n"
+	.string "that release microscopic trackers\l"
+	.string "when being thrown at a POKéMON.\p"
+	.string "They then instantly latch onto\n"
+	.string "the POKéMON's surface.\p"
+	.string "Skin, fur, or whatever the thing\n"
+	.string "has on it.$"
+
+MtSilverLugia_Movement_Exclaim::
+	emote_exclamation_mark
+	delay_16
+	step_end
+
+MtSilverLugia_Text_MaximusAha::
+	.string "Aha!\p"
+	.string "So that's where your little\n"
+	.string "hiding place is…$"
+
+MtSilverLugia_Text_MaximusBye::
+	.string "Well, I know exactly where\n"
+	.string "to find my target.\p"
+	.string "Of course, I won't be telling you\n"
+	.string "anything about its location.\p"
+	.string "Sorry, but you would just be\n"
+	.string "in the way, TRAINER.\p"
+	.string "No, I won't be battling you,\n"
+	.string "hahahahaha!$"

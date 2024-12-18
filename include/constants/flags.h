@@ -1302,7 +1302,7 @@
 #define FLAG_MAXIMUS_SILVER_DONE               0x4E7
 #define FLAG_MAXIMUS_LUGIA               0x4E8
 #define FLAG_MAXIMUS_HIDE_LUGIA               0x4E9
-#define FLAG_0x4EA               0x4EA
+#define FLAG_MAXIMUS_SILVER_HIDE               0x4EA
 #define FLAG_0x4EB               0x4EB
 #define FLAG_0x4EC               0x4EC
 #define FLAG_0x4ED               0x4ED
