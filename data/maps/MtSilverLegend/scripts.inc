@@ -47,11 +47,12 @@ MtSilverLegend_Movement_Maximus::
 MtSilverLegend_Text_Maximus::
 	.string "There you are, TRAINER.\n"
 	.string "I have been waiting just for you.\p"
-	.string "When I heard you were heading for\n"
-	.string "MT. SILVER, I figured it would be\p"
-	.string "the perfect opportunity for me to\n"
-	.string "show you what I intend to do.\p"
-	.string "Now, come.$"
+	.string "It took me a while to set up\n"
+	.string "this part of the operation,\p"
+	.string "so I had plenty work to do\n"
+	.string "before you would show up.\p"
+	.string "What I have been up to?\n"
+	.string "You will see very soon.$"
 
 MtSilverLegend_Movement_Maximus2::
 	walk_up

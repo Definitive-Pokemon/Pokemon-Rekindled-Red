@@ -21,19 +21,16 @@ MtSilverLugia_EventScript_Event::
 	lockall
 	setvar VAR_TEMP_0, 0
 	textcolor 0
-	fadenewbgm MUS_NONE
-	delay 60
-	special SpawnCameraObject
-	applymovement OBJ_EVENT_ID_CAMERA, MtSilverLugia_Movement_PanToActionFromBottom
-	waitmovement 0
-	special RemoveCameraObject
-	delay 60
 	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_LookatPlayer
 	waitmovement 0
-	msgbox MtSilverLugia_Text_Maximus_Announce, MSGBOX_NPC
+	msgbox MtSilverLugia_Text_Maximus_Intro, MSGBOX_NPC
 	closemessage
+	delay 20
 	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_LookUp
 	waitmovement 0
+	delay 10
+	msgbox MtSilverLugia_Text_Maximus_Announce, MSGBOX_NPC
+	closemessage
 	delay 80
 	playse SE_M_DETECT
 	fadescreen FADE_TO_WHITE
@@ -42,6 +39,13 @@ MtSilverLugia_EventScript_Event::
 	textcolor 2
 	msgbox MtSilverLugia_Text_Maximus_Show, MSGBOX_NPC
 	closemessage
+	fadenewbgm MUS_NONE
+	delay 60
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, MtSilverLugia_Movement_PanToActionFromBottom
+	waitmovement 0
+	special RemoveCameraObject
+	delay 60
 	fadescreen FADE_TO_WHITE
 	playbgm MUS_AWAKEN_LEGEND, 0
 	addobject LOCALID_LUGIA
@@ -89,27 +93,46 @@ MtSilverLugia_Movement_PanToActionFromBottom::
 	walk_slow_up
 	walk_slow_up
 	walk_slow_up
+	walk_slow_up
+	walk_slow_up
 	step_end
 
 MtSilverLugia_Movement_LookatPlayer::
 	walk_in_place_down
 	step_end
 
+MtSilverLugia_Text_Maximus_Intro::
+	.string "You recognize this machinery,\n"
+	.string "don't you, TRAINER?\p"
+	.string "It's built from all kinds of stuff\n"
+	.string "I stole from the POWER PLANT when\l"
+	.string "I went to collect ZAPDOS' feather.\p"
+	.string "You see, TRAINER, I need all this\n"
+	.string "in order to collect the legendary\l"
+	.string "POKéMON of flight, LUGIA.\p"
+	.string "MOLTRES' BURNING FEATHER,\n"
+	.string "ZAPDOS' YELLOW FEATHER,\l"
+	.string "and ARTICUNO's CYAN FEATHER.\p"
+	.string "When combined, they form one of\n"
+	.string "LUGIA's famous SILVER WINGS.\p"
+	.string "And guess what?\n"
+	.string "LUGIA will only answer the call of\l"
+	.string "someone holding a SILVER WING.\p"
+	.string "Now, as for the machinery…\p"
+	.string "…I think a demonstration speaks\n"
+	.string "louder than any explanation could!$"
+
 MtSilverLugia_Text_Maximus_Announce::
-	.string "It is time!\p"
-	.string "It is time to summon LUGIA,\n"
-	.string "legendary POKéMON of flight,\p"
-	.string "using the SILVER WING I created\n"
-	.string "by combining the feathers I took\l"
-	.string "from the legendary birds!$"
+	.string "Come, LUGIA!\n"
+	.string "Legendary POKéMON of storms!$"
 
 MtSilverLugia_Movement_LookUp::
 	walk_in_place_up
 	step_end
 
 MtSilverLugia_Text_Maximus_Show::
-	.string "MAXIMUS took out the SILVER WING\n"
-	.string "and held it up in the air!$"
+	.string "MAXIMUS took the SILVER WING\n"
+	.string "and lifted it towards the skies!$"
 
 MtSilverLugia_Text_Maximus_Behold::
 	.string "Look at that!\n"
