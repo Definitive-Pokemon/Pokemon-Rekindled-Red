@@ -50,11 +50,9 @@ MtSilverLugia_EventScript_Event::
 	waitmovement 0
 	special RemoveCameraObject
 	delay 60
-	fadescreen FADE_TO_WHITE
 	playbgm MUS_AWAKEN_LEGEND, 0
 	addobject LOCALID_LUGIA
 	clearflag FLAG_MAXIMUS_HIDE_LUGIA
-	fadescreen FADE_FROM_WHITE
 	delay 50
 	setvar VAR_TEMP_1, 1
 	special SpawnCameraObject
@@ -90,6 +88,7 @@ MtSilverLugia_EventScript_Event::
 	textcolor 0
 	msgbox MtSilverLugia_Text_Maximus_Behold, MSGBOX_NPC
 	closemessage
+	delay 10
 	textcolor 2
 	msgbox MtSilverLugia_Text_Maximus_Remote, MSGBOX_NPC
 	closemessage
@@ -101,13 +100,13 @@ MtSilverLugia_EventScript_Event::
 	waitse
 	fadescreen FADE_FROM_WHITE
 	delay 10
-	playse SE_M_THUNDER_WAVE
-	waitse
 	setvar VAR_0x8004, 2
 	setvar VAR_0x8005, 2
 	setvar VAR_0x8006, 10
 	setvar VAR_0x8007, 3
 	special ShakeScreen
+	playse SE_M_THUNDER_WAVE
+	waitse
 	playmoncry SPECIES_LUGIA, 12
 	waitmoncry
 	playmoncry SPECIES_LUGIA, 3
@@ -144,12 +143,13 @@ MtSilverLugia_EventScript_Event::
 	playmoncry SPECIES_LUGIA, 2
 	waitmoncry
 	delay 60
+	setvar VAR_TEMP_1, 1
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, MtSilverLugia_Movement_CameraBackUp
 	setvar VAR_0x8004, 2  @ Num loops
 	setvar VAR_0x8005, 35 @ Delay
 	special LoopWingFlapSound
-	applymovement LOCALID_LUGIA, Movement_HoOhAppear
+	applymovement LOCALID_LUGIA, Movement_LugiaFree
 	waitmovement 0
 	delay 50
 	setweather 5
@@ -179,7 +179,6 @@ MtSilverLugia_Movement_PlayerFirst::
 	step_end
 
 MtSilverLugia_Movement_PanToActionFromBottom::
-	walk_slow_up
 	walk_slow_up
 	walk_slow_up
 	walk_slow_up
@@ -229,7 +228,6 @@ MtSilverLugia_Movement_PanToActionFromTop::
 	walk_slow_down
 	walk_slow_down
 	walk_slow_down
-	walk_slow_down
 	step_end
 
 MtSilverLugia_Text_Maximus_Behold::
@@ -240,7 +238,8 @@ MtSilverLugia_Text_Maximus_Behold::
 
 MtSilverLugia_Text_Maximus_Remote::
 	.string "MAXIMUS took out a strange\n"
-	.string "looking remote.$"
+	.string "looking remote and pressed\l"
+	.string "one of its buttons.$"
 
 MtSilverLugia_Text_Maximus_Hah::
 	.string "Hah! LUGIA has been severely\n"
@@ -255,10 +254,20 @@ MtSilverLugia_Movement_CameraBackUp::
 	walk_slow_up
 	step_end
 
+Movement_LugiaFree::
+	walk_in_place_down
+	walk_in_place_down
+	walk_in_place_down
+	walk_in_place_down
+	step_end
+
 Movement_LugiaBackUp::
 	walk_up
 	walk_up
 	walk_up
+	walk_up
+	walk_up
+	walk_in_place_up
 	delay_16
 	delay_16
 	step_end
