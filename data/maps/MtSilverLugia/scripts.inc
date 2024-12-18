@@ -65,7 +65,7 @@ MtSilverLugia_EventScript_Event::
 	applymovement OBJ_EVENT_ID_CAMERA, Movement_CameraPanUp
 	waitmovement 0
 	delay 50
-	setweather 5
+	setweather 3
 	doweather
 	waitse
 	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
@@ -99,21 +99,23 @@ MtSilverLugia_EventScript_Event::
 	fadescreen FADE_TO_WHITE
 	waitse
 	fadescreen FADE_FROM_WHITE
-	playmoncry SPECIES_LUGIA, 12
-	waitmoncry
-	playmoncry SPECIES_LUGIA, 3
-	waitmoncry
+	delay 10
 	playse SE_M_THUNDER_WAVE
-	waitse
-	playse SE_M_THUNDERBOLT2
-	waitse
-	playse SE_M_THUNDERBOLT2
-	waitse
 	setvar VAR_0x8004, 2
 	setvar VAR_0x8005, 2
 	setvar VAR_0x8006, 10
 	setvar VAR_0x8007, 3
 	special ShakeScreen
+	waitse
+	playmoncry SPECIES_LUGIA, 12
+	waitmoncry
+	playmoncry SPECIES_LUGIA, 3
+	waitmoncry
+	waitse
+	playse SE_M_THUNDERBOLT2
+	waitse
+	playse SE_M_THUNDERBOLT2
+	waitse
 	delay 20
 	playmoncry SPECIES_LUGIA, 11
 	waitmoncry
@@ -136,15 +138,18 @@ MtSilverLugia_EventScript_Event::
 	applymovement LOCALID_LUGIA, Movement_HoOhAppear
 	waitmovement 0
 	delay 50
-	setweather 13
+	setweather 5
 	doweather
 	setvar VAR_0x8004, 3  @ Num loops
 	setvar VAR_0x8005, 35 @ Delay
 	special LoopWingFlapSound
+	delay 60
+	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, MtSilverLugia_Movement_CameraBackUp
 	applymovement LOCALID_LUGIA, Movement_LugiaBackUp
 	waitmovement 0
 	special RemoveCameraObject
+	delay 60
 	textcolor 0
 	msgbox MtSilverLugia_Text_MaximusWhat
 	closemessage
@@ -216,8 +221,8 @@ MtSilverLugia_Movement_PanToActionFromTop::
 	step_end
 
 MtSilverLugia_Text_Maximus_Behold::
-	.string "Look at that!\n"
-	.string "It's LUGIA!\l"
+	.string "Look at that!\p"
+	.string "It's LUGIA!\p"
 	.string "Now, it's time for the machine\n"
 	.string "to do its job!$"
 
