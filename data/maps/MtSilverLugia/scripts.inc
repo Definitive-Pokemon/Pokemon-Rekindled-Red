@@ -221,6 +221,9 @@ MtSilverLugia_EventScript_Event::
 	setflag FLAG_MAXIMUS_SILVER_HIDE
 	fadescreen FADE_FROM_BLACK
 	fadenewbgm MUS_NONE
+	delay 100
+	warp MAP_MT_SILVER, 11, 5
+	waitstate
 	releaseall
 	end
 
