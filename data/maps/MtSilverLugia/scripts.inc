@@ -158,9 +158,10 @@ MtSilverLugia_EventScript_Event::
 	msgbox MtSilverLugia_Text_MaximusWhat
 	closemessage
 	delay 20
+	playse SE_BALL_THROW
 	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_ThrowTracker
 	waitmovement 0
-	playse SE_BALL_OPEN
+	playse SE_BALL_BOUNCE_1
 	waitse
 	delay 20
 	setvar VAR_0x8004, 3  @ Num loops
@@ -179,14 +180,15 @@ MtSilverLugia_EventScript_Event::
 	setweather 2
 	doweather
 	delay 60
-	msgbox MtSilverLugia_Text_MaximusSigh
-	closemessage
 	setvar VAR_TEMP_1, 1
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, MtSilverLugia_Movement_CameraBackDown
 	waitmovement 0
 	special RemoveCameraObject
 	delay 60
+	msgbox MtSilverLugia_Text_MaximusSigh
+	closemessage
+	delay 20
 	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_LookatPlayer
 	waitmovement 0
 	msgbox MtSilverLugia_Text_MaximusOhWell
