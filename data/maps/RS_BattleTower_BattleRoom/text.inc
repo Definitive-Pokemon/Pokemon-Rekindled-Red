@@ -20,3 +20,6 @@ BattleTower_BattleRoom_Text_1C6CE1::
 
 BattleTower_BattleRoom_Text_1C6D05::
 	.string "{PLAYER} saved the game.$"
+
+BattleTower_BattleRoom_BrainAnabel_Intro::
+	.string "Testing$"
