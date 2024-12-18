@@ -20,7 +20,10 @@ MtSilverLugia_OnFrame::
 MtSilverLugia_EventScript_Event::
 	lockall
 	setvar VAR_TEMP_0, 0
+	applymovement OBJ_EVENT_ID_PLAYER, MtSilverLugia_Movement_PlayerFirst
+	waitmovement 0
 	textcolor 0
+	delay 60
 	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_LookatPlayer
 	waitmovement 0
 	msgbox MtSilverLugia_Text_Maximus_Intro, MSGBOX_NPC
@@ -85,6 +88,10 @@ MtSilverLugia_EventScript_Event::
 	setflag FLAG_MAXIMUS_HIDE_LUGIA
 	releaseall
 	end
+
+MtSilverLugia_Movement_PlayerFirst::
+	walk_up
+	step_end
 
 MtSilverLugia_Movement_PanToActionFromBottom::
 	walk_slow_up
