@@ -81,7 +81,7 @@ PalletTown_PlayersHouse_2F_Movement_MomLookDown::
 	step_end
 
 PalletTown_PlayersHouse_2F_Text_Mom::
-	.string "Hey honey, PROFESSOR OAK\n"
+	.string "Hey honey, PROF. OAK\n"
 	.string "just dropped by.\p"
 	.string "He said he had something just\n"
 	.string "for you.\p"

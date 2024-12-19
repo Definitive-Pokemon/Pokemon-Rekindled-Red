@@ -41,6 +41,7 @@ PalletTown_ProfessorOaksLab_EventScript_OakExpo::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakSolution, MSGBOX_NPC
 	closemessage
 	clearflag FLAG_OAK_READY_EXPO
+	setvar VAR_NEW_BARK_ACCESS, 1
 	releaseall
 	end
 

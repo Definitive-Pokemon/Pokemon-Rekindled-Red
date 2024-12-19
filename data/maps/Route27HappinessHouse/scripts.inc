@@ -13,6 +13,6 @@ Route27HappinessHouse_Text_Woman::
 	.string "NEWBARK TOWN?\p"
 	.string "It is a quaint little village\n"
 	.string "with little to it.\p"
-	.string "But I've heard that PROFESSOR ELM,\n"
+	.string "But I've heard that PROF. ELM,\n"
 	.string "who lives there, has made a\l"
 	.string "groundbreaking discovery.$"

@@ -1,12 +1,12 @@
 FiveIsland_ResortGorgeous_House_Text_SelphyWhatsThis::
     .string "Oh, and what do you want?\p"
-    .string "A letter from PROFESSOR OAK,\n"
+    .string "A letter from PROF. OAK,\n"
 	.string "you say?\p"
 	.string "And you've been asked to deliver\n"
 	.string "this to me, of all people?\p"
 	.string "What's this world coming to…\p"
 	.string "Besides, I don't even know\n"
-	.string "a PROFESSOR OAK!\p"
+	.string "anyone named PROF. OAK!\p"
 	.string "Oh well, just stop staring and\n"
 	.string "hand me that letter!$"
 

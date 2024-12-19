@@ -23,7 +23,7 @@ ElmsLab_EventScript_Elm::
 ElmsLab_Text_ElmShinyRadar::
 	.string "Heya!\n"
 	.string "You must be {PLAYER}!\p"
-	.string "PROFESSOR OAK has told me all\n"
+	.string "PROF. OAK has told me all\n"
 	.string "about you!\p"
 	.string "Say, how about helping me out\n"
 	.string "with my research?\p"
@@ -31,7 +31,7 @@ ElmsLab_Text_ElmShinyRadar::
 
 ElmsLab_Text_ReceivedShinyRadar::
 	.string "{PLAYER} received the SHINY RADAR\n"
-	.string "from PROFESSOR ELM!$"
+	.string "from PROF. ELM!$"
 
 ElmsLab_Text_ElmAfter::
 	.string "This SHINY RADAR will help you\n"

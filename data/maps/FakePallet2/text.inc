@@ -17,7 +17,7 @@ FakePallet2_Text_Mom3::
 	.string "I've been so worried all this time…\n"
 	.string "You know what happened to DAD.\p"
 	.string "Maybe you could bring your POKéMON\n"
-	.string "to PROFESSOR OAK, so he can take\p"
+	.string "to PROF. OAK, so he can take\p"
 	.string "care of them, while you live\n"
 	.string "with me.\p"
 	.string "I don't want to force you… but…\n"

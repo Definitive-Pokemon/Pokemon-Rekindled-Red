@@ -380,8 +380,8 @@ PalletTown_ProfessorOaksLab_Text_HaveThisLetter::
 	.string "{PLAYER}.$"
 	
 PalletTown_ProfessorOaksLab_Text_ReceivedLetterFromOak::
-    .string "{PLAYER} received a LETTER from\n"
-	.string "PROFESSOR OAK!$"
+    .string "{PLAYER} received a LETTER\n"
+	.string "from PROF. OAK!$"
 
 PalletTown_ProfessorOaksLab_Text_BringToSelphy::
     .string "Haha, this LETTER isn't meant\n"

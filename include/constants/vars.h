@@ -255,7 +255,7 @@
 #define VAR_MAXIMUS_SEAFOAM        0x40CA
 #define VAR_MAXIMUS_SILVER         0x40CB
 #define VAR_SEEN_ZAPDOS            0x40CC
-#define VAR_0x40CD                 0x40CD
+#define VAR_NEW_BARK_ACCESS        0x40CD
 #define VAR_0x40CE                 0x40CE
 #define VAR_FRONTIER_FACILITY      0x40CF
 #define VAR_0x40D0                 0x40D0

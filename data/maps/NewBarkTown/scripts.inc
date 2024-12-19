@@ -33,7 +33,7 @@ NewBarkTown_Text_NewBark::
     .string "Winds of a New Beginning$"
 
 NewBarkTown_Text_ElmsLab::
-    .string "PROFESSOR ELM's LAB$"
+    .string "PROF. ELM's LAB$"
 
 NewBarkTown_EventScript_Man::
 	lock
@@ -44,7 +44,7 @@ NewBarkTown_EventScript_Man::
 
 NewBarkTown_Text_Man::
 	.string "Yo, stranger!\p"
-	.string "I hear PROFESSOR ELM discovered\n"
+	.string "I hear PROF. ELM discovered\n"
 	.string "some new type of POKéMON.$"
 
 NewBarkTown_EventScript_Woman::
