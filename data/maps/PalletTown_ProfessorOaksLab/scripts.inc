@@ -117,6 +117,7 @@ PalletTown_ProfessorOaksLab_OnFrame::
 	.2byte 0
 
 PalletTown_ProfessorOaksLab_EventScript_EnterForNationalDexScene:: 
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8
 	lockall
 	setvar VAR_FACING, DIR_NORTH
 	textcolor NPC_TEXT_COLOR_MALE
@@ -150,7 +151,6 @@ PalletTown_ProfessorOaksLab_EventScript_NationalDexScene::
 	call_if_eq VAR_FACING, DIR_WEST, PalletTown_ProfessorOaksLab_EventScript_RivalExit
 	removeobject LOCALID_RIVAL
 	fadedefaultbgm
-	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8
 	setflag FLAG_SYS_RECEIVED_EXTENDED_DEX
 	releaseall
 	end
