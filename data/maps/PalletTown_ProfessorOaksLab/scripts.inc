@@ -36,7 +36,7 @@ PalletTown_ProfessorOaksLab_EventScript_OakExpo::
 	textcolor 0
 	msgbox PalletTown_ProfessorOaksLab_Text_OakSigh, MSGBOX_NPC
 	closemessage
-	applymovement PalletTown_ProfessorOaksLab_Movement_OakPonder
+	applymovement LOCALID_PROF_OAK, PalletTown_ProfessorOaksLab_Movement_OakPonder
 	waitmovement 0
 	msgbox PalletTown_ProfessorOaksLab_Text_OakSolution, MSGBOX_NPC
 	closemessage

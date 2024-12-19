@@ -166,7 +166,7 @@ MtSilverLugia_EventScript_Event::
 	waitse
 	waitmovement 0
 	playse SE_BALL_BOUNCE_1
-	applymovement MtSilverLugia_Movement_BallBounce
+	applymovement LOCALID_BALL, MtSilverLugia_Movement_BallBounce
 	waitse
 	waitmovement 0
 	removeobject LOCALID_BALL
