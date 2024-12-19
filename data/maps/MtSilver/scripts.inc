@@ -1,16 +1,24 @@
 .set LOCALID_SCIENTIST, 3
 
 MtSilver_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, MtSilver_OnLoad	
 	map_script MAP_SCRIPT_ON_TRANSITION, MtSilver_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, MtSilver_OnFrame
 	.byte 0
+
+MtSilver_OnLoad::
+	goto_if_set FLAG_MAXIMUS_SILVER_HIDE, MtSilver_OnLoad_SetVarForScene
+	end
+MtSilver_OnLoad_SetVarForScene::
+	setvar VAR_TEMP_0, 1
+	end
 
 MtSilver_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_MT_SILVER
 	end
 
 MtSilver_OnFrame::
-	goto_if_set FLAG_MAXIMUS_SILVER_HIDE, MtSilver_EventScript_Aide
+	map_script_2 VAR_TEMP_0, 1, MtSilver_EventScript_Aide
 	.2byte 0
 
 MtSilver_EventScript_Sign::
@@ -21,6 +29,7 @@ MtSilver_Text_Sign::
 
 MtSilver_EventScript_Aide::
 	lockall
+	setvar VAR_TEMP_0, 0
 	delay 30
 	applymovement LOCALID_SCIENTIST, MtSilver_Movement_ScientistUp
 	waitmovement 0
