@@ -26,6 +26,31 @@ MtSilverGate_EventScript_Pass::
 	releaseall
 	end
 
+MtSilverGate_EventScript_NewbarkNoPass::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, MtSilverGate_Movement_FaceNewBark
+	waitmovement 0
+	textcolor 0
+	msgbox MtSilverGate_Text_NewBarkNoPass
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, MtSilverGate_Movement_WalkUp
+	waitmovement 0
+	releaseall
+	end
+
+MtSilverGate_EventScript_NewBarkPass::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, MtSilverGate_Movement_FaceNewBark
+	waitmovement 0
+	textcolor 0
+	msgbox MtSilverGate_Text_NewBarkPass
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, MtSilverGate_Movement_WalkDown
+	waitmovement 0
+	setvar VAR_NEW_BARK_ACCESS, 2
+	releaseall
+	end
+
 MtSilverGate_EventScript_Mt_Silver::
 	lock
 	faceplayer
@@ -54,12 +79,24 @@ MtSilverGate_Movement_Face::
 	walk_in_place_up
 	step_end
 
+MtSilverGate_Movement_FaceNewBark::
+	walk_in_place_left
+	step_end
+
 MtSilverGate_Movement_WalkRight::
 	walk_right
 	step_end
 	
 MtSilverGate_Movement_WalkLeft::
 	walk_left
+	step_end
+
+MtSilverGate_Movement_WalkUp::
+	walk_up
+	step_end
+	
+MtSilverGate_Movement_WalkDown::
+	walk_down
 	step_end
 
 MtSilverGate_Text_NoPass::
@@ -74,6 +111,17 @@ MtSilverGate_Text_Pass::
 	.string "GYM LEADER.\p"
 	.string "You can go through now.\n"
 	.string "Go right ahead, buddy!$"
+
+MtSilverGate_Text_NewBarkNoPass::
+	.string "Sorry buddy,\n"
+	.string "past these routes lies the\l"
+	.string "JOHTO region.\p"
+	.string "There's nothing for you there.$"
+
+MtSilverGate_Text_NewBarkPass::
+	.string "I got word from the PROFESSOR.\p"
+	.string "You are allowed access to\n"
+	.string "ROUTE 26 and beyond.$"
 
 MtSilverGate_Text_Mt_Silver::
 	.string "Mt. Silver lies in this direction.\p"
