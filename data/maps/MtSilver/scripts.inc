@@ -39,6 +39,7 @@ MtSilver_EventScript_Aide::
 	closemessage
 	setflag FLAG_HIDE_SILVER_SCIENTIST
 	clearflag FLAG_MAXIMUS_SILVER_HIDE
+	setflag FLAG_OAK_READY_EXPO
 	warp MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6, 4
 	waitstate
 	releaseall

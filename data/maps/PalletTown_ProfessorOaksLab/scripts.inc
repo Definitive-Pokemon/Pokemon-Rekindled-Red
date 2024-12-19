@@ -23,11 +23,49 @@ PalletTown_ProfessorOaksLab_MapScripts::
 
 PalletTown_ProfessorOaksLab_OnTransition::
 	setflag FLAG_VISITED_OAKS_LAB
+	call_if_set FLAG_OAK_READY_EXPO, PalletTown_ProfessorOaksLab_EventScript_OakExpo
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1, PalletTown_ProfessorOaksLab_EventScript_ReadyOakForStarterScene
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 7, PalletTown_ProfessorOaksLab_EventScript_ReadyOakForNationalDexScene
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8, PalletTown_ProfessorOaksLab_EventScript_SetNationalDexSceneFinished
 	call_if_set FLAG_GOT_POKEBALLS_FROM_OAK_AFTER_22_RIVAL, PalletTown_ProfessorOaksLab_EventScript_SetSkipPokeBallCheck
 	end
+
+PalletTown_ProfessorOaksLab_EventScript_OakExpo::
+	setobjectmovementtype OBJ_EVENT_ID_PLAYER, MOVEMENT_TYPE_FACE_UP
+	lockall
+	textcolor 0
+	msgbox PalletTown_ProfessorOaksLab_Text_OakSigh, MSGBOX_NPC
+	closemessage
+	applymovement PalletTown_ProfessorOaksLab_Movement_OakPonder
+	waitmovement 0
+	msgbox PalletTown_ProfessorOaksLab_Text_OakSolution, MSGBOX_NPC
+	closemessage
+	clearflag FLAG_OAK_READY_EXPO
+	releaseall
+	end
+
+PalletTown_ProfessorOaksLab_Text_OakSigh::
+	.string "Sigh… \p"
+	.string "So this MAXIMUS has disturbed\n"
+	.string "the slumber of a powerful and\l"
+	.string "unpredictable legendary POKéMON.\p"
+	.string "This POKéMON summons storms upon\n"
+	.string "waking up, exposing an entire\l"
+	.string "region to danger.$"
+
+PalletTown_ProfessorOaksLab_Movement_OakPonder::
+	walk_in_place_up
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_in_place_down
+	step_end
+
+PalletTown_ProfessorOaksLab_Text_OakSolution::
+	.string "This POKéMON is entirely unfamiliar\n"
+	.string "to me, {PLAYER}.\p"
+	
 
 PalletTown_ProfessorOaksLab_EventScript_SetSkipPokeBallCheck::
 	setflag FLAG_OAK_SKIP_22_RIVAL_CHECK

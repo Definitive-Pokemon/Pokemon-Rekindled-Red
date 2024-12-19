@@ -1,5 +1,6 @@
 .set LOCALID_MAXIMUS, 1
 .set LOCALID_LUGIA, 2
+.set LOCALID_BALL, 3
 
 MtSilverLugia_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, MtSilverLugia_OnLoad
@@ -158,13 +159,17 @@ MtSilverLugia_EventScript_Event::
 	msgbox MtSilverLugia_Text_MaximusWhat
 	closemessage
 	delay 20
-	playse SE_BALL_THROW
 	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_ThrowTracker
+	playse SE_BALL_THROW
+	addobject LOCALID_BALL
+	applymovement LOCALID_BALL, MtSilverLugia_Movement_Ball
 	waitse
 	waitmovement 0
-	delay 5
 	playse SE_BALL_BOUNCE_1
+	applymovement MtSilverLugia_Movement_BallBounce
 	waitse
+	waitmovement 0
+	removeobject LOCALID_BALL
 	delay 20
 	setvar VAR_0x8004, 3  @ Num loops
 	setvar VAR_0x8005, 35 @ Delay
@@ -327,6 +332,17 @@ MtSilverLugia_Text_MaximusWhat::
 
 MtSilverLugia_Movement_ThrowTracker::
 	walk_in_place_up
+	step_end
+
+MtSilverLugia_Movement_Ball::
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+MtSilverLugia_Movement_BallBounce::
+	walk_down
 	step_end
 
 Movement_LugiaBackUp::
