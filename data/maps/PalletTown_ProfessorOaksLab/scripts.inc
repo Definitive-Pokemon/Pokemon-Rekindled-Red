@@ -96,6 +96,7 @@ PalletTown_ProfessorOaksLab_EventScript_NationalDexScene::
 	removeobject LOCALID_RIVAL
 	fadedefaultbgm
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8
+	setflag FLAG_SYS_RECEIVED_EXTENDED_DEX
 	releaseall
 	end
 
