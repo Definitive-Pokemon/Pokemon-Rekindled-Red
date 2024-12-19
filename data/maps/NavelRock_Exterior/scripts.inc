@@ -5,3 +5,10 @@ NavelRock_Exterior_MapScripts::
 NavelRock_Exterior_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR
 	end
+
+NavelRock_Exterior_EventScript_Maximus::
+	lock
+	faceplayer
+	setflag FLAG_ELM_NAVEL
+	release
+	end

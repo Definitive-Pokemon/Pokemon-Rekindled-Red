@@ -269,7 +269,7 @@
 #define FLAG_EMBER_ROCK                       0x0F9
 #define FLAG_MOLTRES_FIRST_TIME               0x0FA
 #define FLAG_OAK_READY_EXPO               0x0FB
-#define FLAG_0x0FC               0x0FC
+#define FLAG_ELM_NAVEL               0x0FC
 #define FLAG_0x0FD               0x0FD
 #define FLAG_0x0FE               0x0FE
 #define FLAG_0x0FF               0x0FF

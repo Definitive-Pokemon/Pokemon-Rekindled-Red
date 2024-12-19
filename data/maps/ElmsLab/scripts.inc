@@ -11,6 +11,106 @@ ElmsLab_EventScript_OnTransition::
 ElmsLab_EventScript_Elm::
 	lock
 	faceplayer
+	goto_if_unset FLAG_ELM_NAVEL, ElmsLab_EventScript_Crisis
+	specialvar VAR_RESULT, HasAllMons
+	goto_if_eq VAR_RESULT, TRUE, ElmsLab_EventScript_CompletedDex
+	msgbox ElmsLab_Text_NoProblem, MSGBOX_NPC
+	release
+	end
+
+ElmsLab_EventScript_Crisis::
+	checkitem ITEM_MYSTICTICKET, 1
+	goto_if_eq VAR_RESULT, TRUE, ElmsLab_EventScript_GoPlayer
+	msgbox ElmsLab_Text_Crisis, MSGBOX_NPC
+	closemessage
+	applymovement LOCALID_ELM, ElmsLab_Movement_Elm
+	waitmovement 0
+	msgbox ElmsLab_Text_Lugia, MSGBOX_NPC
+	closemessage
+	giveitem_msg ElmsLab_Text_ReceivedMysticTicket, ITEM_MYSTICTICKET, 1
+	msgbox ElmsLab_Text_ElmNavel, MSGBOX_NPC
+	release
+	end
+
+ElmsLab_Text_Crisis::
+	.string "Heya!\n"
+	.string "You must be {PLAYER}.\p"
+	.string "PROF. OAK has already messaged\n"
+	.string "me about the state of things.\p"
+	.string "You came to the right person.\n"
+	.string "I know a handful of things about\l"
+	.string "this legendary POKéMON you met.$"
+
+ElmsLab_Movement_Elm::
+	delay_16
+	delay_16
+	walk_in_place_down
+	step_end
+
+ElmsLab_Text_Lugia::
+	.string "LUGIA is an ancient POKéMON\n"
+	.string "that once lived in the\l"
+	.string "center of the JOHTO region.\p"
+	.string "However, 150 years ago, the tower\n"
+	.string "it resided in was mysteriously\l"
+	.string "burned down.\p"
+	.string "Since then, LUGIA has hid itself\n"
+	.string "inside NAVEL ROCK, an island\l"
+	.string "part of the SEVII ISLANDS chain.\p"
+	.string "LUGIA's psychic powers cause hefty\n"
+	.string "storms wherever it appears.\p"
+	.string "These storms could be dangerous\n"
+	.string "for both JOHTO and KANTO.\p"
+	.string "That's why we need to calm down\n"
+	.string "LUGIA, and stop MAXIMUS.\p"
+	.string "{PLAYER}, only you are strong\n"
+	.string "enough to take on LUGIA by yourself.\p"
+	.string "I'm giving you the MYSTICTICKET.\n"
+	.string "Please show this to the sailor\l"
+	.string "at the VERMILION HARBOR.$"
+
+ElmsLab_Text_ReceivedMysticTicket::
+	.string "{PLAYER} received the MYSTIC-\n"
+	.string "TICKET from PROF. ELM!$"
+
+ElmsLab_Text_ElmNavel::
+	.string "This MYSTICTICKET is used by lead\n"
+	.string "experts on LEGENDARY POKéMON\l"
+	.string "to get access to NAVEL ROCK.\p"
+	.string "Normally, you wouldn't be allowed\n"
+	.string "on the island, but this is clearly\l"
+	.string "a special case.\p"
+	.string "I urge you to stop MAXIMUS\n"
+	.string "before he teleports out.\p"
+	.string "After that, calm down LUGIA\n"
+	.string "and things should be good.$"
+
+ElmsLab_EventScript_GoPlayer::
+	msgbox ElmsLab_Text_GoPlayer, MSGBOX_NPC
+	release
+	end
+
+ElmsLab_Text_GoPlayer::
+	.string "Good luck with your task!\n"
+	.string "Oh, and use my HEAL MACHINE\p"
+	.string "whenever your POKéMON\n"
+	.string "need a break!$"
+
+ElmsLab_Text_NoProblem::
+	.string "{PLAYER}! There you are!\p"
+	.string "Did you manage to put a stop\n"
+	.string "to MAXIMUS while calming\l"
+	.string "down LUGIA?\p"
+	.string "… That's great news!\n"
+	.string "I knew we could count on you!\p"
+	.string "{PLAYER}, just know that you're\n"
+	.string "always welcome at my LAB!\p"
+	.string "Maybe you should go out and\n"
+	.string "explore JOHTO sometime.\p"
+	.string "There are many more adventures\n"
+	.string "to be had, here in JOHTO!$"
+	
+ElmsLab_EventScript_CompletedDex::
 	checkitem ITEM_SHINY_RADAR, 1
 	goto_if_eq VAR_RESULT, TRUE, ElmsLab_EventScript_Nothing
 	msgbox ElmsLab_Text_ElmShinyRadar

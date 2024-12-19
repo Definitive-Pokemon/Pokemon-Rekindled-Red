@@ -269,7 +269,7 @@ MtSilverLugia_Text_Maximus_Intro::
 	.string "LUGIA will only answer the call of\l"
 	.string "someone holding a SILVER WING.\p"
 	.string "Now, as for the machinery…\p"
-	.string "…I think a demonstration speaks\n"
+	.string "… I think a demonstration speaks\n"
 	.string "louder than any explanation could!$"
 
 MtSilverLugia_Text_Maximus_Announce::

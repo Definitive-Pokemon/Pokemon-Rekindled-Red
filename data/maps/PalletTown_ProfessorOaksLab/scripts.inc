@@ -66,6 +66,22 @@ PalletTown_ProfessorOaksLab_Movement_OakPonder::
 PalletTown_ProfessorOaksLab_Text_OakSolution::
 	.string "This POKéMON is entirely unfamiliar\n"
 	.string "to me, {PLAYER}.\p"
+	.string "But my colleague, PROF. ELM,\n"
+	.string "might know more about it.\p"
+	.string "{PLAYER}, I'd like you to head\n"
+	.string "to NEW BARK TOWN, located in\l"
+	.string "the JOHTO region.\p"
+	.string "That's where PROF. ELM lives.\n"
+	.string "I need you to pay him a visit.\p"
+	.string "Tell him all about what happened,\n"
+	.string "and he'll be glad to help us out.\p"
+	.string "I will send an e-mail message\n"
+	.string "to the GUARDS on the west end\p"
+	.string "of ROUTE 22, asking them to\n"
+	.string "let you through.\p"
+	.string "You will need to hurry, however.\n"
+	.string "This POKéMON, LUGIA… \l"
+	.string "Its unpredictability concerns me.$"
 	
 
 PalletTown_ProfessorOaksLab_EventScript_SetSkipPokeBallCheck::
