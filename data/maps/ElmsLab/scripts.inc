@@ -19,7 +19,7 @@ ElmsLab_EventScript_Elm::
 	end
 
 ElmsLab_EventScript_Crisis::
-	checkitem ITEM_MYSTICTICKET, 1
+	checkitem ITEM_MYSTIC_TICKET, 1
 	goto_if_eq VAR_RESULT, TRUE, ElmsLab_EventScript_GoPlayer
 	msgbox ElmsLab_Text_Crisis, MSGBOX_NPC
 	closemessage
@@ -27,7 +27,7 @@ ElmsLab_EventScript_Crisis::
 	waitmovement 0
 	msgbox ElmsLab_Text_Lugia, MSGBOX_NPC
 	closemessage
-	giveitem_msg ElmsLab_Text_ReceivedMysticTicket, ITEM_MYSTICTICKET, 1
+	giveitem_msg ElmsLab_Text_ReceivedMysticTicket, ITEM_MYSTIC_TICKET, 1
 	msgbox ElmsLab_Text_ElmNavel, MSGBOX_NPC
 	release
 	end

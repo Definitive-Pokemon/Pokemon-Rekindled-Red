@@ -5188,8 +5188,8 @@
     {
       "id": "LAYOUT_DEBUG",
       "name": "Debug_Layout",
-      "width": 21,
-      "height": 21,
+      "width": 30,
+      "height": 30,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",

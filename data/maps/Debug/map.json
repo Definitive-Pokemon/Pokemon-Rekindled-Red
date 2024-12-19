@@ -19,7 +19,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 1,
-      "y": 9,
+      "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -32,8 +32,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_REGIGIGAS",
-      "x": 10,
-      "y": 14,
+      "x": 15,
+      "y": 16,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -46,8 +46,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_RAYQUAZA",
-      "x": 2,
-      "y": 16,
+      "x": 7,
+      "y": 25,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -60,8 +60,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_HO_OH",
-      "x": 0,
-      "y": 14,
+      "x": 4,
+      "y": 23,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -74,8 +74,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MEWTWO",
-      "x": 0,
-      "y": 16,
+      "x": 4,
+      "y": 25,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -88,8 +88,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KYOGRE",
-      "x": 0,
-      "y": 18,
+      "x": 4,
+      "y": 27,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -102,8 +102,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GROUDON",
-      "x": 2,
-      "y": 18,
+      "x": 7,
+      "y": 27,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -116,8 +116,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LUGIA",
-      "x": 2,
-      "y": 14,
+      "x": 7,
+      "y": 23,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -131,7 +131,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MASTER_BEAUTY",
       "x": 0,
-      "y": 11,
+      "y": 16,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -145,7 +145,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PROF_OAK",
       "x": 2,
-      "y": 9,
+      "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -159,7 +159,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_RUBY",
       "x": 3,
-      "y": 9,
+      "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -173,7 +173,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAPPHIRE",
       "x": 4,
-      "y": 9,
+      "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -187,7 +187,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_EMERALD",
       "x": 5,
-      "y": 9,
+      "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -200,8 +200,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_REGIROCK",
-      "x": 15,
-      "y": 5,
+      "x": 25,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -214,8 +214,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_REGICE",
-      "x": 17,
-      "y": 5,
+      "x": 24,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -228,7 +228,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_REGISTEEL",
-      "x": 15,
+      "x": 22,
       "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -242,8 +242,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_DAISY",
-      "x": 18,
-      "y": 18,
+      "x": 24,
+      "y": 24,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -257,7 +257,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GREEN_NORMAL",
       "x": 7,
-      "y": 9,
+      "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -271,7 +271,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_METEORITE",
       "x": 6,
-      "y": 9,
+      "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -285,7 +285,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SIGN",
       "x": 1,
-      "y": 10,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -299,7 +299,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SIGN",
       "x": 2,
-      "y": 10,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -313,7 +313,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SIGN",
       "x": 3,
-      "y": 10,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -327,7 +327,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SIGN",
       "x": 4,
-      "y": 10,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -341,7 +341,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SIGN",
       "x": 5,
-      "y": 10,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -355,7 +355,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SIGN",
       "x": 6,
-      "y": 10,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -369,7 +369,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 0,
-      "y": 9,
+      "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -383,7 +383,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SIGN",
       "x": 7,
-      "y": 10,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -396,8 +396,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
-      "x": 14,
-      "y": 17,
+      "x": 20,
+      "y": 25,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -410,8 +410,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
-      "x": 15,
-      "y": 17,
+      "x": 21,
+      "y": 25,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -424,8 +424,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
-      "x": 16,
-      "y": 17,
+      "x": 22,
+      "y": 25,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -438,8 +438,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
-      "x": 17,
-      "y": 17,
+      "x": 23,
+      "y": 25,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -453,7 +453,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ZAPDOS",
       "x": 4,
-      "y": 4,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -466,8 +466,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARTICUNO",
-      "x": 7,
-      "y": 4,
+      "x": 1,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -480,140 +480,133 @@
   ],
   "warp_events": [
     {
-      "x": 1,
+      "x": 28,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_NAVEL_ROCK_HARBOR",
+      "dest_map": "MAP_ICY_TOMB",
       "dest_warp_id": "0"
     },
     {
       "x": 13,
-      "y": 20,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER",
       "dest_warp_id": "0"
     },
     {
       "x": 10,
-      "y": 20,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_SOUTHERN_ISLAND_EXTERIOR",
       "dest_warp_id": "1"
     },
     {
       "x": 7,
-      "y": 20,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_SAFARI_ZONE_NORTH_EAST",
       "dest_warp_id": "2"
     },
     {
       "x": 4,
-      "y": 20,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_TWO_ISLAND_CAPE_BRINK",
       "dest_warp_id": "0"
     },
     {
       "x": 1,
-      "y": 20,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_VIRIDIAN_CITY_GYM",
       "dest_warp_id": "1"
     },
     {
-      "x": 19,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_MONITORING_STATION",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 16,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_MT_SILVER_LEGEND",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 13,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_POWER_PLANT",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 10,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_SEAFOAM_ISLANDS_B4F",
-      "dest_warp_id": "0"
-    },
-    {
       "x": 7,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_STONE_TOMB",
+      "dest_map": "MAP_MT_EMBER_SUMMIT",
       "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_ELMS_LAB",
+      "dest_map": "MAP_POWER_PLANT",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_SEAFOAM_ISLANDS_B4F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 25,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_STONE_TOMB",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_METAL_TOMB",
       "dest_warp_id": "0"
     },
     {
       "x": 19,
-      "y": 20,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_FIVE_ISLAND_LOST_CAVE_ENTRANCE",
       "dest_warp_id": "0"
     },
     {
       "x": 16,
-      "y": 20,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_FIVE_ISLAND_RESORT_GORGEOUS_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 10,
+      "x": 15,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_DEBUG",
       "dest_warp_id": "0"
     },
     {
-      "x": 20,
+      "x": 28,
       "y": 4,
       "elevation": 0,
       "dest_map": "MAP_PRIMORDIAL_ALTAR",
       "dest_warp_id": "0"
     },
     {
-      "x": 20,
+      "x": 28,
       "y": 17,
       "elevation": 0,
       "dest_map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_2F",
       "dest_warp_id": "1"
     },
     {
-      "x": 20,
+      "x": 28,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_CINNABAR_VOLCANO",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_MONITORING_STATION",
+      "dest_warp_id": "0"
     },
     {
-      "x": 20,
+      "x": 28,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_MT_SILVER_CAVE1",
       "dest_warp_id": "1"
     },
     {
-      "x": 20,
+      "x": 28,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CAVE_B1F",
@@ -621,9 +614,51 @@
     },
     {
       "x": 0,
-      "y": 4,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_SIX_ISLAND_ALTERING_CAVE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_ENTEI",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_CAVERN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE25",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_MT_SILVER_LEGEND",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 28,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY_GYM",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 28,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_NAVEL_ROCK_HARBOR",
       "dest_warp_id": "0"
     }
   ],
@@ -633,7 +668,7 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 16,
+      "x": 25,
       "y": 13,
       "elevation": 0,
       "item": "ITEM_TM43_SECRET_POWER",

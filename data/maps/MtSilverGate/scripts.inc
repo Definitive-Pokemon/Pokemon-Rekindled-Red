@@ -26,7 +26,7 @@ MtSilverGate_EventScript_Pass::
 	releaseall
 	end
 
-MtSilverGate_EventScript_NewbarkNoPass::
+MtSilverGate_EventScript_NewBarkNoPass::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, MtSilverGate_Movement_FaceNewBark
 	waitmovement 0
