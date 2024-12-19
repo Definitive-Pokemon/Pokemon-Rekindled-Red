@@ -43,6 +43,7 @@ CeruleanCave_B1F_EventScript_GiovanniEvent::
 	special RemoveCameraObject
 	delay 60
 	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_LookUp
+	clearflag FLAG_HIDE_CAVE_BALL
 	addobject LOCALID_BALL
 	waitmovement 0
 	playse SE_BALL_THROW
@@ -66,6 +67,7 @@ CeruleanCave_B1F_EventScript_GiovanniEvent::
 	delay 50
 	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_WalkUp
 	waitmovement 0
+	setflag FLAG_HIDE_CAVE_BALL
 	removeobject LOCALID_BALL
 	delay 50
 	textcolor 0

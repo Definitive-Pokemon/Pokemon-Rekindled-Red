@@ -161,6 +161,7 @@ MtSilverLugia_EventScript_Event::
 	delay 20
 	applymovement LOCALID_MAXIMUS, MtSilverLugia_Movement_ThrowTracker
 	playse SE_BALL_THROW
+	clearflag FLAG_HIDE_FING_BALL
 	addobject LOCALID_BALL
 	applymovement LOCALID_BALL, MtSilverLugia_Movement_Ball
 	waitse
@@ -169,6 +170,7 @@ MtSilverLugia_EventScript_Event::
 	applymovement LOCALID_BALL, MtSilverLugia_Movement_BallBounce
 	waitse
 	waitmovement 0
+	setflag FLAG_HIDE_FING_BALL
 	removeobject LOCALID_BALL
 	delay 20
 	setvar VAR_0x8004, 3  @ Num loops
