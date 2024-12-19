@@ -363,7 +363,7 @@ MtSilverLugia_Text_MaximusOhWell::
 	.string "That's right, TRAINER!\p"
 	.string "All my POKé BALLS contain mechanisms\n"
 	.string "that release microscopic trackers\l"
-	.string "when being thrown at a POKéMON.\p"
+	.string "when the BALL is being thrown.\p"
 	.string "They then instantly latch onto\n"
 	.string "the POKéMON's surface.\p"
 	.string "Skin, fur, or whatever the thing\n"
