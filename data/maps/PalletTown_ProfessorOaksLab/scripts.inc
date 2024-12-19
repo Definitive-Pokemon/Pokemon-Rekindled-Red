@@ -114,6 +114,7 @@ PalletTown_ProfessorOaksLab_EventScript_ReadyPlayerForStarterScene::
 PalletTown_ProfessorOaksLab_OnFrame::
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1, PalletTown_ProfessorOaksLab_ChooseStarterScene
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 7, PalletTown_ProfessorOaksLab_EventScript_EnterForNationalDexScene
+	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 10, PalletTown_ProfessorOaksLab_EventScript_CrisisScene
 	.2byte 0
 
 PalletTown_ProfessorOaksLab_EventScript_EnterForNationalDexScene:: 
@@ -153,6 +154,10 @@ PalletTown_ProfessorOaksLab_EventScript_NationalDexScene::
 	fadedefaultbgm
 	setflag FLAG_SYS_RECEIVED_EXTENDED_DEX
 	releaseall
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_CrisisScene::
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 11
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_GiveNationalDex::
