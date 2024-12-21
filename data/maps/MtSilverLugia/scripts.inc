@@ -341,10 +341,11 @@ MtSilverLugia_Movement_Ball::
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
+	walk_fast_up
 	step_end
 
 MtSilverLugia_Movement_BallBounce::
-	walk_left
+	walk_down
 	step_end
 
 Movement_LugiaBackUp::
