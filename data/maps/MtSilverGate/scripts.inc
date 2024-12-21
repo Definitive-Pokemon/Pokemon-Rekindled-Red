@@ -113,9 +113,8 @@ MtSilverGate_Text_Pass::
 	.string "Go right ahead, buddy!$"
 
 MtSilverGate_Text_NewBarkNoPass::
-	.string "Sorry buddy,\n"
-	.string "past these routes lies the\l"
-	.string "JOHTO region.\p"
+	.string "Sorry buddy, past these routes\n"
+	.string "lies the JOHTO region.\p"
 	.string "There's nothing for you there.$"
 
 MtSilverGate_Text_NewBarkPass::
