@@ -70,8 +70,8 @@ ElmsLab_Text_Lugia::
 	.string "at the VERMILION HARBOR.$"
 
 ElmsLab_Text_ReceivedMysticTicket::
-	.string "{PLAYER} received the MYSTIC-\n"
-	.string "TICKET from PROF. ELM!$"
+	.string "{PLAYER} received the MYSTICTICKET\n"
+	.string "from PROF. ELM!$"
 
 ElmsLab_Text_ElmNavel::
 	.string "This MYSTICTICKET is used by lead\n"
