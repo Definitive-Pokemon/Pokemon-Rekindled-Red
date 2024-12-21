@@ -23,26 +23,16 @@ PalletTown_ProfessorOaksLab_MapScripts::
 
 PalletTown_ProfessorOaksLab_OnTransition::
 	setflag FLAG_VISITED_OAKS_LAB
-	call_if_set FLAG_OAK_READY_EXPO, PalletTown_ProfessorOaksLab_EventScript_OakExpo
+	call_if_set FLAG_OAK_READY_EXPO, PalletTown_ProfessorOaksLab_EventScript_StartOakExpo
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1, PalletTown_ProfessorOaksLab_EventScript_ReadyOakForStarterScene
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 7, PalletTown_ProfessorOaksLab_EventScript_ReadyOakForNationalDexScene
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8, PalletTown_ProfessorOaksLab_EventScript_SetNationalDexSceneFinished
 	call_if_set FLAG_GOT_POKEBALLS_FROM_OAK_AFTER_22_RIVAL, PalletTown_ProfessorOaksLab_EventScript_SetSkipPokeBallCheck
 	end
 
-PalletTown_ProfessorOaksLab_EventScript_OakExpo::
+PalletTown_ProfessorOaksLab_EventScript_StartOakExpo::
 	setobjectmovementtype OBJ_EVENT_ID_PLAYER, MOVEMENT_TYPE_FACE_UP
-	lockall
-	textcolor 0
-	msgbox PalletTown_ProfessorOaksLab_Text_OakSigh, MSGBOX_NPC
-	closemessage
-	applymovement LOCALID_PROF_OAK, PalletTown_ProfessorOaksLab_Movement_OakPonder
-	waitmovement 0
-	msgbox PalletTown_ProfessorOaksLab_Text_OakSolution, MSGBOX_NPC
-	closemessage
-	clearflag FLAG_OAK_READY_EXPO
-	setvar VAR_NEW_BARK_ACCESS, 1
-	releaseall
+	setvar VAR_TEMP_0, 1
 	return
 
 PalletTown_ProfessorOaksLab_Text_OakSigh::
@@ -114,7 +104,25 @@ PalletTown_ProfessorOaksLab_EventScript_ReadyPlayerForStarterScene::
 PalletTown_ProfessorOaksLab_OnFrame::
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1, PalletTown_ProfessorOaksLab_ChooseStarterScene
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 7, PalletTown_ProfessorOaksLab_EventScript_EnterForNationalDexScene
+	map_script_2 VAR_TEMP_0, 1, PalletTown_ProfessorOaksLab_EventScript_OakExpo
     .2byte 0
+
+PalletTown_ProfessorOaksLab_EventScript_OakExpo::
+	setvar VAR_TEMP_0, 0
+	lockall
+	textcolor 0
+	msgbox PalletTown_ProfessorOaksLab_Text_OakSigh, MSGBOX_NPC
+	closemessage
+	applymovement LOCALID_PROF_OAK, PalletTown_ProfessorOaksLab_Movement_OakPonder
+	waitmovement 0
+	msgbox PalletTown_ProfessorOaksLab_Text_OakSolution, MSGBOX_NPC
+	closemessage
+	clearflag FLAG_OAK_READY_EXPO
+	setvar VAR_NEW_BARK_ACCESS, 1
+	releaseall
+	end
+
+
 
 PalletTown_ProfessorOaksLab_EventScript_EnterForNationalDexScene:: 
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8
