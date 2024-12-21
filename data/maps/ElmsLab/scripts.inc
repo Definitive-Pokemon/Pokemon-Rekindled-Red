@@ -49,8 +49,8 @@ ElmsLab_Movement_Elm::
 
 ElmsLab_Text_Lugia::
 	.string "LUGIA is an ancient POKéMON\n"
-	.string "that once lived in the\l"
-	.string "center of the JOHTO region.\p"
+	.string "that once lived in the center\l"
+	.string "of the JOHTO region.\p"
 	.string "However, 150 years ago, the tower\n"
 	.string "it resided in was mysteriously\l"
 	.string "burned down.\p"
