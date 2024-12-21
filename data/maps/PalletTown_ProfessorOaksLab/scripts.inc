@@ -43,7 +43,7 @@ PalletTown_ProfessorOaksLab_EventScript_OakExpo::
 	clearflag FLAG_OAK_READY_EXPO
 	setvar VAR_NEW_BARK_ACCESS, 1
 	releaseall
-	end
+	return
 
 PalletTown_ProfessorOaksLab_Text_OakSigh::
 	.string "Sigh… \p"
@@ -114,8 +114,7 @@ PalletTown_ProfessorOaksLab_EventScript_ReadyPlayerForStarterScene::
 PalletTown_ProfessorOaksLab_OnFrame::
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1, PalletTown_ProfessorOaksLab_ChooseStarterScene
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 7, PalletTown_ProfessorOaksLab_EventScript_EnterForNationalDexScene
-	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 10, PalletTown_ProfessorOaksLab_EventScript_CrisisScene
-	.2byte 0
+    .2byte 0
 
 PalletTown_ProfessorOaksLab_EventScript_EnterForNationalDexScene:: 
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8
@@ -154,10 +153,6 @@ PalletTown_ProfessorOaksLab_EventScript_NationalDexScene::
 	fadedefaultbgm
 	setflag FLAG_SYS_RECEIVED_EXTENDED_DEX
 	releaseall
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_CrisisScene::
-	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 11
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_GiveNationalDex::
