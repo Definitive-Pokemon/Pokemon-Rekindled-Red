@@ -32,7 +32,7 @@ PalletTown_ProfessorOaksLab_OnTransition::
 
 PalletTown_ProfessorOaksLab_EventScript_StartOakExpo::
 	setobjectmovementtype OBJ_EVENT_ID_PLAYER, MOVEMENT_TYPE_FACE_UP
-	setvar VAR_TEMP_0
+	setvar VAR_TEMP_0, 1
 	return
 
 PalletTown_ProfessorOaksLab_Text_OakSigh::
@@ -104,10 +104,10 @@ PalletTown_ProfessorOaksLab_EventScript_ReadyPlayerForStarterScene::
 PalletTown_ProfessorOaksLab_OnFrame::
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1, PalletTown_ProfessorOaksLab_ChooseStarterScene
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 7, PalletTown_ProfessorOaksLab_EventScript_EnterForNationalDexScene
-	map_script_2 VAR_TEMP_0, 1, PalletTown_ProfessorOaksLab_EventScript_StartOakExpo
+	map_script_2 VAR_TEMP_0, 1, PalletTown_ProfessorOaksLab_EventScript_OakExpo
     .2byte 0
 
-PalletTown_ProfessorOaksLab_EventScript_StartOakExpo::
+PalletTown_ProfessorOaksLab_EventScript_OakExpo::
 	setvar VAR_TEMP_0, 0
 	lockall
 	textcolor 0
