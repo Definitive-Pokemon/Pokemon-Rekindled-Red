@@ -138,7 +138,9 @@
 #define METATILE_NavelRock_CaveDoor4   0x293
 #define METATILE_NavelRock_CaveDoor5   0x294
 #define METATILE_NavelRock_CaveDoor6   0x295
+#define METATILE_NavelRock_Floor       0x281
 #define METATILE_NavelRock_Lower_Wall  0x299
+#define METATILE_NavelRock_SouthExit   0x287
 #define METATILE_NavelRock_Upper_Wall  0x2C4
 
 // gTileset_PalletTown
