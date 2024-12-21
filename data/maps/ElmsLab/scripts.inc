@@ -91,9 +91,9 @@ ElmsLab_EventScript_GoPlayer::
 	end
 
 ElmsLab_Text_GoPlayer::
-	.string "Good luck with your task!\n"
-	.string "Oh, and use my HEAL MACHINE\p"
-	.string "whenever your POKéMON\n"
+	.string "Good luck with your task!\p"
+	.string "Oh, and use my HEAL MACHINE\n"
+	.string "whenever your POKéMON\l"
 	.string "need a break!$"
 
 ElmsLab_Text_NoProblem::
