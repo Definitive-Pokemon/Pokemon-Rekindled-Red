@@ -660,6 +660,13 @@
       "elevation": 0,
       "dest_map": "MAP_NAVEL_ROCK_HARBOR",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ELMS_LAB",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

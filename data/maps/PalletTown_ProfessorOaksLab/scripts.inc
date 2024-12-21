@@ -37,8 +37,8 @@ PalletTown_ProfessorOaksLab_EventScript_StartOakExpo::
 
 PalletTown_ProfessorOaksLab_Text_OakSigh::
 	.string "Sigh… \p"
-	.string "So this MAXIMUS has disturbed\n"
-	.string "the slumber of a powerful and\l"
+	.string "So this MAXIMUS has disturbed the\n"
+	.string "slumber of a powerful and very\l"
 	.string "unpredictable legendary POKéMON.\p"
 	.string "This POKéMON summons storms upon\n"
 	.string "waking up, exposing an entire\l"
@@ -58,8 +58,8 @@ PalletTown_ProfessorOaksLab_Text_OakSolution::
 	.string "to me, {PLAYER}.\p"
 	.string "But my colleague, PROF. ELM,\n"
 	.string "might know more about it.\p"
-	.string "{PLAYER}, I'd like you to head\n"
-	.string "to NEW BARK TOWN, located in\l"
+	.string "{PLAYER}, I'd like you to head to\n"
+	.string "the town of NEW BARK, located in\l"
 	.string "the JOHTO region.\p"
 	.string "That's where PROF. ELM lives.\n"
 	.string "I need you to pay him a visit.\p"
@@ -71,7 +71,9 @@ PalletTown_ProfessorOaksLab_Text_OakSolution::
 	.string "let you through.\p"
 	.string "You will need to hurry, however.\n"
 	.string "This POKéMON, LUGIA… \l"
-	.string "Its unpredictability concerns me.$"
+	.string "Its unpredictability concerns me.\p"
+	.string "Have a safe journey, and have\n"
+	.string "faith in PROF. ELM's ideas.$"
 	
 
 PalletTown_ProfessorOaksLab_EventScript_SetSkipPokeBallCheck::
