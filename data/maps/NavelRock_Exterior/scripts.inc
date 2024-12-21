@@ -68,3 +68,11 @@ NavelRock_Exterior_EventScript_AfterMaximus::
 
 NavelRock_Exterior_Text_After::
 	.string "Oh yeah. Fuck you.$"
+
+NavelRock_Exterior_EventScript_Sign::
+	msgbox NavelRock_Exterior_Text_Sign, MSGBOX_SIGN
+	end
+
+NavelRock_Exterior_Text_Sign::
+	.string "DANGER! \n"
+	.string "Enter at your own risk $"
