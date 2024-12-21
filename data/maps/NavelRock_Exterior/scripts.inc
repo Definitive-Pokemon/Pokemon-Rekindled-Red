@@ -13,7 +13,6 @@ NavelRock_Exterior_EventScript_Maximus::
 	faceplayer
 	goto_if_set FLAG_ELM_NAVEL, NavelRock_Exterior_EventScript_AfterMaximus
 	trainerbattle_single TRAINER_COLLECTOR_MAXIMUS, NavelRock_Exterior_Text_Intro, NavelRock_Exterior_Text_Defeat, NavelRock_Exterior_EventScript_Defeated, NO_MUSIC
-	setflag FLAG_ELM_NAVEL
 	release
 	end
 
@@ -34,6 +33,7 @@ NavelRock_Exterior_EventScript_Defeated::
 	waitmovement 0
 	msgbox NavelRock_Exterior_Text_Asode, MSGBOX_NPC
 	closemessage
+	setflag FLAG_ELM_NAVEL
 	release
 	end
 
