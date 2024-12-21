@@ -81,7 +81,7 @@ ElmsLab_Text_ElmNavel::
 	.string "on the island, but this is clearly\l"
 	.string "a special case.\p"
 	.string "I urge you to stop MAXIMUS\n"
-	.string "before he teleports out.\p"
+	.string "before he teleports away.\p"
 	.string "After that, calm down LUGIA\n"
 	.string "and things should be good.$"
 
