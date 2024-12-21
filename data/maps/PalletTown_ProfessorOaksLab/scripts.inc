@@ -31,7 +31,6 @@ PalletTown_ProfessorOaksLab_OnTransition::
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_StartOakExpo::
-	setobjectmovementtype OBJ_EVENT_ID_PLAYER, MOVEMENT_TYPE_FACE_UP
 	setvar VAR_TEMP_0, 1
 	return
 
@@ -112,6 +111,7 @@ PalletTown_ProfessorOaksLab_OnFrame::
 PalletTown_ProfessorOaksLab_EventScript_OakExpo::
 	setvar VAR_TEMP_0, 0
 	lockall
+	setobjectmovementtype OBJ_EVENT_ID_PLAYER, MOVEMENT_TYPE_FACE_UP
 	textcolor 0
 	msgbox PalletTown_ProfessorOaksLab_Text_OakSigh, MSGBOX_NPC
 	closemessage
