@@ -65,8 +65,8 @@ ElmsLab_Text_Lugia::
 	.string "LUGIA, and stop MAXIMUS.\p"
 	.string "{PLAYER}, only you are strong enough\n"
 	.string "to take on LUGIA by yourself.\p"
-	.string "I'm giving you the MYSTICTICKET.\n"
-	.string "Please show this to the sailor\l"
+	.string "I'm giving you this MYSTICTICKET.\p"
+	.string "Please show this to the sailor\n"
 	.string "at the VERMILION HARBOR.$"
 
 ElmsLab_Text_ReceivedMysticTicket::
