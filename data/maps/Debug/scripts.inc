@@ -91,7 +91,7 @@ Debug_UnlockGame::
 	end
 
 FourIslandWarp::
-	warp MAP_FOUR_ISLAND, 6, 4
+	warp MAP_FOUR_ISLAND, 19, 21
 	end
 
 ArticunoMaxiFlag::
