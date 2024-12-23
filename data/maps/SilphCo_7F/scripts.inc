@@ -34,6 +34,7 @@ SilphCo_7F_EventScript_RivalTriggerBottom::
 
 SilphCo_7F_EventScript_RivalScene::
 	textcolor NPC_TEXT_COLOR_MALE
+	clearflag FLAG_HIDE_MURAL
 	playbgm MUS_ENCOUNTER_RIVAL, 0
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0

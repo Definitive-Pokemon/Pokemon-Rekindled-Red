@@ -999,7 +999,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_TOWER_CELIO
 	setflag FLAG_MYSTERY_MAN_GONE
 	setflag FLAG_HIDE_LAPRAS_OLD
-	setflag FLAG_HIDE_MURAL
 	setflag FLAG_HIDE_MOM_REAL
 	setflag FLAG_HIDE_DAISY
 	setflag FLAG_HIDE_CAVE_BALL

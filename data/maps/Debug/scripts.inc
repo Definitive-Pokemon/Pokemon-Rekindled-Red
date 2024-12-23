@@ -97,6 +97,10 @@ ArticunoMaxiFlag::
 ZapdosMaxiFlag::
 	setflag FLAG_SEEN_ZAPDOS
 	end
+	
+MuralJirachiFlag::
+	clearflag FLAG_HIDE_MURAL
+	end
 
 GiveMewtwo::
 	lock
