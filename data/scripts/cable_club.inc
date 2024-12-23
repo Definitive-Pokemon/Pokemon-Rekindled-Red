@@ -13,8 +13,6 @@ EventScript_HideMysteryGiftMan::
 	return
 
 CableClub_EventScript_MysteryGiftMan::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	trywondercardscript
 
 CableClub_OnWarp::
@@ -741,8 +739,6 @@ CableClub_EventScript_DoLinkRoomExit::
 	end
 
 CableClub_EventScript_UnionRoomAttendant::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	goto_if_unset FLAG_SYS_POKEDEX_GET, CableClub_EventScript_WirelessClubAdjustements
@@ -846,8 +842,6 @@ CableClub_EventScript_DontAskAboutLinking::
 	return
 
 CableClub_EventScript_DirectCornerAttendant::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	goto_if_unset FLAG_SYS_POKEDEX_GET, CableClub_EventScript_WirelessClubAdjustements
@@ -1127,8 +1121,6 @@ CableClub_EventScript_CloseGameCornerBarrier::
 	return
 
 JoyfulGameCorner_EventScript_InfoMan2::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	message Text_DescribeWhichGame
@@ -1157,8 +1149,6 @@ CableClub_EventScript_MinigameInfoExit::
 	end
 
 JoyfulGameCorner_EventScript_MinigameAttendant::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	message Text_WelcomeCanYouWait

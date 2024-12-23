@@ -21,8 +21,6 @@ CinnabarCavern_EventScript_HideRaikou::
 	return
 
 CinnabarCavern_EventScript_Raikou::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	setwildbattle SPECIES_RAIKOU, 60, ITEM_NONE

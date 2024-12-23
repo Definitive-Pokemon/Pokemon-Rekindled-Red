@@ -29,8 +29,6 @@ Metal_Tomb_EventScript_HideRegisteel::
 	return
 
 Metal_Tomb_EventScript_Registeel::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	setwildbattle SPECIES_REGISTEEL, 60, ITEM_NONE

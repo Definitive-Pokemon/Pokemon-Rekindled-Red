@@ -170,8 +170,6 @@ ViridianCity_EventScript_WatchToLearnBasics::
 @ Unused. Starts battle after the post battle text, which is odd.
 ViridianCity_EventScript_TutorialUnused::
 	msgbox ViridianCity_Text_ThatWasEducationalTakeThis
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	special StartOldManTutorialBattle
 	waitstate
 	release
@@ -266,8 +264,6 @@ ViridianCity_EventScript_DoTutorialBattle::
 	goto_if_ne ViridianCity_EventScript_SkipTutorialBattle
 	msgbox ViridianCity_Text_ShowYouHowToCatchMons
 	closemessage
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	special StartOldManTutorialBattle
 	waitstate
 	lock
@@ -280,8 +276,6 @@ ViridianCity_EventScript_DoTutorialBattle::
 
 ViridianCity_EventScript_SkipTutorialBattle::
 	msgbox ViridianCity_Text_SkipTutorial
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2
 	giveitem ITEM_TEACHY_TV
 	msgbox ViridianCity_Text_WatchThatToLearnBasics

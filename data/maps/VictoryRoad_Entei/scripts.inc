@@ -17,8 +17,6 @@ VictoryRoad_Entei_EventScript_TryRemoveEntei::
 	return
 
 VictoryRoad_Entei_EventScript_Entei::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	setwildbattle SPECIES_ENTEI, 60, ITEM_NONE

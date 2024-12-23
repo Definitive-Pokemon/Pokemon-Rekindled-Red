@@ -33,8 +33,6 @@ NavelRock_Summit_EventScript_TryRemoveHoOh::
 	return
 
 NavelRock_Summit_EventScript_HoOh::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	checkitem ITEM_RAINBOW_WING, 1
 	compare VAR_RESULT, TRUE
 	goto_if_lt NavelRock_Summit_Nothing

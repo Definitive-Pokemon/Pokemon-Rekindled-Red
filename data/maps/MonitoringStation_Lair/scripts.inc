@@ -29,8 +29,6 @@ MonitoringStation_Lair_EventScript_HideKabutops::
 	return
 
 MonitoringStation_Lair_EventScript_Kabutops::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	setwildbattle SPECIES_FOSSILIZED_KABUTOPS, 70, ITEM_NONE

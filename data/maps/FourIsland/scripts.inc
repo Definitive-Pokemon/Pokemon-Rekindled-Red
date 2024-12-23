@@ -26,8 +26,6 @@ FourIsland_OnFrame::
 	.2byte 0
 
 FourIsland_EventScript_DaycareMan::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	goto_if_unset FLAG_GOT_RIVAL_STARTER_EGG, FourIsland_EventScript_StarterEggDaycareMan

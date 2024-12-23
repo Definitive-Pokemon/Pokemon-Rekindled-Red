@@ -30,8 +30,6 @@ Fiery_Passage_EventScript_HideCyndaquil::
 	return
 
 Fiery_Passage_EventScript_Cyndaquil::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	setwildbattle SPECIES_CYNDAQUIL, 15, ITEM_NONE

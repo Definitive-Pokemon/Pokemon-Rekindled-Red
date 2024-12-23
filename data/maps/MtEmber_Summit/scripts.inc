@@ -149,8 +149,6 @@ MtEmber_Summit_EventScript_HideMoltres::
 	return
 
 MtEmber_Summit_EventScript_Moltres::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	call_if_unset FLAG_MOLTRES_FIRST_TIME, MtEmber_Summit_EventScript_FinishFirstIslandQuest
 	setflag FLAG_MOLTRES_FIRST_TIME

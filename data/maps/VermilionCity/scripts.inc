@@ -129,8 +129,6 @@ VermilionCity_EventScript_SetSailToFarawayIsland::
 	end
 
 VermilionCity_EventScript_ChooseSeagallopDestRainbowPass::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	setvar VAR_RESULT, 0
 	callnative CheckEventTickets
 	switch VAR_RESULT

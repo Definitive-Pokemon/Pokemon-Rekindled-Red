@@ -134,8 +134,6 @@ PalletTown_RivalsHouse_EventScript_HeardBattledRival::
 	end
 
 PalletTown_RivalsHouse_EventScript_GroomMon::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	compare VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
 	goto_if_lt PalletTown_RivalsHouse_EventScript_RateMonFriendship
 	msgbox PalletTown_RivalsHouse_Text_LikeMeToGroomMon, MSGBOX_YESNO

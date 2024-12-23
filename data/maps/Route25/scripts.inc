@@ -38,8 +38,6 @@ Route25_EventScript_TryRemoveSuicune::
 	return
 
 Route25_EventScript_Suicune::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	setwildbattle SPECIES_SUICUNE, 60, ITEM_NONE

@@ -29,8 +29,6 @@ Stone_Tomb_EventScript_HideRegirock::
 	return
 
 Stone_Tomb_EventScript_Regirock::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	setwildbattle SPECIES_REGIROCK, 60, ITEM_NONE

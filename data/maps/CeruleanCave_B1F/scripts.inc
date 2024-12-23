@@ -240,8 +240,6 @@ CeruleanCave_B1F_Text_GiovanniDone::
 	.string "If not, I hope this is farewell.$"
 
 CeruleanCave_B1F_EventScript_Mewtwo::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	waitse

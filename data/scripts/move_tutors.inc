@@ -911,8 +911,6 @@ EventScript_BodySlamNotEnoughMoney::
 .set LOCALID_CAPE_BRINK_TUTOR, 1
 
 TwoIsland_CapeBrink_House_EventScript_StarterTutor::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	goto_if_set FLAG_LEARNED_ALL_MOVES_AT_CAPE_BRINK, CapeBrinkTutor_EventScript_TaughtAllMoves

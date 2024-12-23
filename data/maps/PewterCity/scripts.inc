@@ -878,8 +878,6 @@ PewterCity_Movement_WalkInPlaceLeft::
 	step_end
 
 PewterCity_EventScript_EggGentleman::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_TOGEPI_EGG, PewterCity_EventScript_PostEggComment

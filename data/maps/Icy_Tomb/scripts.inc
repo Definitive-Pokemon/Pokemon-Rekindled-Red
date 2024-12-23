@@ -29,8 +29,6 @@ Icy_Tomb_EventScript_HideRegice::
 	return
 
 Icy_Tomb_EventScript_Regice::
-	goto_if_questlog EventScript_ReleaseEnd
-	special QuestLog_CutRecording
 	lock
 	faceplayer
 	setwildbattle SPECIES_REGICE, 60, ITEM_NONE
