@@ -90,6 +90,10 @@ Debug_UnlockGame::
 	giveitem ITEM_HM08
 	end
 
+FourIslandWarp::
+	warp MAP_FOUR_ISLAND, 6, 4
+	end
+
 ArticunoMaxiFlag::
 	setflag FLAG_MAXIMUS_SEAFOAM
 	end
