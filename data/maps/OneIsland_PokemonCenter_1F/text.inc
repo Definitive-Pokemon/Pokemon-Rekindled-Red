@@ -266,13 +266,13 @@ OneIsland_PokemonCenter_1F_Text_OkayThisIsGood::
 
 OneIsland_PokemonCenter_1F_Text_LinkedUpWithLanette::
     .string "I did it!\n"
-    .string "I linked up with LANETTE!$"
+    .string "I linked up with my colleagues!$"
 
 OneIsland_PokemonCenter_1F_Text_ManagedToLinkWithHoennThankYou::
     .string "{PLAYER}…\n"
     .string "{PLAYER}, I did it!\p"
     .string "I've managed to link up with\n"
-    .string "TRAINERS in the ALOLA region!\p"
+    .string "TRAINERS in exotic regions!\p"
     .string "Finally, the Network Machine is\n"
     .string "fully operational!\p"
     .string "{PLAYER}, I owe it all to you!\p"
