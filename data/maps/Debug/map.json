@@ -511,8 +511,8 @@
       "x": 10,
       "y": 29,
       "elevation": 0,
-      "dest_map": "MAP_SOUTHERN_ISLAND_EXTERIOR",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_FOUR_ISLAND",
+      "dest_warp_id": "0"
     },
     {
       "x": 7,
