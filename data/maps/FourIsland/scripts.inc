@@ -169,6 +169,7 @@ FourIsland_EventScript_RepositionDaycareMan::
 	goto_if_unset FLAG_PENDING_DAYCARE_EGG, FourIsland_EventScript_RepositionDaycareMan_3
 FourIsland_EventScript_RepositionDaycareMan_2:
 	setobjectmovementtype LOCALID_DAYCARE_MAN, MOVEMENT_TYPE_RAISE_HAND_AND_STOP
+	playse SE_BANG
 	setobjectmovementtypeinstant LOCALID_DAYCARE_MAN, MOVEMENT_TYPE_RAISE_HAND_AND_STOP
 FourIsland_EventScript_RepositionDaycareMan_3:
 	setvar VAR_DAYCARE_MAN_TRIGGERS, 1
