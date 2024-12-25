@@ -326,7 +326,7 @@ static s8 DoDrawStartMenu(void)
             // debug
             sDrawStartMenuState[0]++;
             ConvertIntToDecimalStringN(gStringVar4, gPlayerAvatar.flags, STR_CONV_MODE_LEADING_ZEROS, 3);
-            AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_BOLD, gStringVar4, 8, 0, 0xFF, NULL);
+            //AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_BOLD, gStringVar4, 8, 0, 0xFF, NULL);
         }
             
         break;
