@@ -323,11 +323,10 @@ static s8 DoDrawStartMenu(void)
     case 4:
         if (PrintStartMenuItems(&sDrawStartMenuState[1], 2) == TRUE)
         {
-            u8 strbuf[30];
             // debug
             sDrawStartMenuState[0]++;
-            ConvertIntToDecimalStringN(strbuf, gPlayerAvatar.flags, STR_CONV_MODE_LEADING_ZEROS, 3);
-            AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_BOLD, strbuf, 8, 0, 0xFF, NULL);
+            ConvertIntToDecimalStringN(gStringVar4, gPlayerAvatar.flags, STR_CONV_MODE_LEADING_ZEROS, 3);
+            AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_BOLD, gStringVar4, 8, 0, 0xFF, NULL);
         }
             
         break;
