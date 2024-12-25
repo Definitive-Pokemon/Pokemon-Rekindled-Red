@@ -81,7 +81,7 @@ static void QL_GfxTransition_Fish(void)
     {
         u8 taskId;
         LockPlayerFieldControls();
-        gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+        gPlayerAvatar.preventStep = TRUE;
         taskId = CreateTask(Task_QLFishMovement, 0xFF);
         gTasks[taskId].data[0] = 0;
     }
