@@ -283,6 +283,13 @@ static s8 PrintStartMenuItems(s8 *cursor_p, u8 nitems)
         {
             Menu_PrintFormatIntlPlayerName(GetStartMenuWindowId(), sStartMenuActionTable[sStartMenuOrder[i]].text, 8, i * 15);
         }
+        else if (sStartMenuOrder[i] == STARTMENU_EXIT)
+        {
+            u8 tempText[8] = {};
+            ConvertIntToDecimalStringN(tempText, gPlayerAvatar.flags, STR_CONV_MODE_LEADING_ZEROS, 3);
+            StringExpandPlaceholders(gStringVar4, tempText);
+            AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_NORMAL, gStringVar4, 8, i * 15, 0xFF, NULL); 
+        }   
         else
         {
             StringExpandPlaceholders(gStringVar4, sStartMenuActionTable[sStartMenuOrder[i]].text);
@@ -322,13 +329,7 @@ static s8 DoDrawStartMenu(void)
         break;
     case 4:
         if (PrintStartMenuItems(&sDrawStartMenuState[1], 2) == TRUE)
-        {
-            // debug
-            sDrawStartMenuState[0]++;
-            ConvertIntToDecimalStringN(gStringVar4, gPlayerAvatar.flags, STR_CONV_MODE_LEADING_ZEROS, 3);
-            //AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_BOLD, gStringVar4, 8, 0, 0xFF, NULL);
-        }
-            
+            sDrawStartMenuState[0]++;           
         break;
     case 5:
         sStartMenuCursorPos = Menu_InitCursor(GetStartMenuWindowId(), FONT_NORMAL, 0, 0, 15, sNumStartMenuItems, sStartMenuCursorPos);
