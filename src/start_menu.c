@@ -286,7 +286,7 @@ static s8 PrintStartMenuItems(s8 *cursor_p, u8 nitems)
         else if (sStartMenuOrder[i] == STARTMENU_EXIT)
         {
             u8 tempText[8] = {};
-            ConvertIntToDecimalStringN(tempText, gPlayerAvatar.tileTransitionState, STR_CONV_MODE_LEADING_ZEROS, 3);
+            ConvertIntToDecimalStringN(tempText, gPlayerAvatar.runningState, STR_CONV_MODE_LEADING_ZEROS, 3);
             StringExpandPlaceholders(gStringVar4, tempText);
             AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_NORMAL, gStringVar4, 8, i * 15, 0xFF, NULL); 
         }   
