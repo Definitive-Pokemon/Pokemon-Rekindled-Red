@@ -47,7 +47,7 @@ static void Task_FieldEffectShowMon_Init(u8 taskId)
     u8 mapObjId;
 
     LockPlayerFieldControls();
-    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     mapObjId = gPlayerAvatar.objectEventId;
     if (!ObjectEventIsMovementOverridden(&gObjectEvents[mapObjId])
      || ObjectEventClearHeldMovementIfFinished(&gObjectEvents[mapObjId]))

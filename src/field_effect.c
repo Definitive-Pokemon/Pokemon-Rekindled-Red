@@ -1246,7 +1246,7 @@ static bool8 FallWarpEffect_1(struct Task *task)
     playerSprite = &gSprites[gPlayerAvatar.spriteId];
     CameraObjectReset2();
     gObjectEvents[gPlayerAvatar.objectEventId].invisible = TRUE;
-    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     ObjectEventSetHeldMovement(playerObject, GetFaceDirectionMovementAction(GetPlayerFacingDirection()));
     task->data[4] = playerSprite->subspriteMode;
     playerObject->fixedPriority = TRUE;
@@ -1687,7 +1687,7 @@ static void Task_UseWaterfall(u8 taskId)
 static bool8 waterfall_0_setup(struct Task *task, struct ObjectEvent * playerObj)
 {
     LockPlayerFieldControls();
-    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     task->data[0]++;
     return FALSE;
 }
@@ -1764,7 +1764,7 @@ static void Task_UseDive(u8 taskId)
 
 static bool8 DiveFieldEffect_Init(struct Task *task)
 {
-    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     task->data[0]++;
     return FALSE;
 }
@@ -1829,7 +1829,7 @@ static bool8 LavaridgeGymB1FWarpEffect_1(struct Task *task, struct ObjectEvent *
     FreezeObjectEvents();
     CameraObjectReset2();
     SetCameraPanningCallback(NULL);
-    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     objectEvent->fixedPriority = TRUE;
     task->data[1] = 1;
     task->data[0]++;
@@ -1952,7 +1952,7 @@ static bool8 LavaridgeGymB1FWarpExitEffect_1(struct Task *task, struct ObjectEve
 {
     CameraObjectReset2();
     FreezeObjectEvents();
-    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     objectEvent->invisible = TRUE;
     task->data[0]++;
     return FALSE;
@@ -2046,7 +2046,7 @@ static bool8 LavaridgeGym1FWarpEffect_1(struct Task *task, struct ObjectEvent * 
 {
     FreezeObjectEvents();
     CameraObjectReset2();
-    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     objectEvent->fixedPriority = TRUE;
     task->data[0]++;
     return FALSE;
@@ -3089,7 +3089,7 @@ static void UseSurfEffect_1(struct Task *task)
 {
     LockPlayerFieldControls();
     FreezeObjectEvents();
-    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_SURFING);
     PlayerGetDestCoords(&task->data[1], &task->data[2]);
     MoveCoords(gObjectEvents[gPlayerAvatar.objectEventId].movementDirection, &task->data[1], &task->data[2]);
@@ -3185,7 +3185,7 @@ static void UseVsSeekerEffect_1(struct Task *task)
 {
     LockPlayerFieldControls();
     FreezeObjectEvents();
-    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     task->data[0]++;
 }
 
@@ -3321,7 +3321,7 @@ static void FlyOutFieldEffect_FieldMovePose(struct Task *task)
     if (!ObjectEventIsMovementOverridden(objectEvent) || ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
         task->tAvatarFlags = gPlayerAvatar.flags;
-        gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+        //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
         SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_ON_FOOT);
         StartPlayerAvatarSummonMonForFieldMoveAnim();
         ObjectEventSetHeldMovement(objectEvent, MOVEMENT_ACTION_START_ANIM_IN_DIRECTION);
@@ -3626,7 +3626,7 @@ static void FlyInFieldEffect_BirdSwoopDown(struct Task *task)
         task->tState++;
         task->tTimer = 33;
         task->tAvatarFlags = gPlayerAvatar.flags;
-        gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+        //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
         SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_ON_FOOT);
         if (task->tAvatarFlags & PLAYER_AVATAR_FLAG_SURFING)
             SetSurfBlob_BobState(playerObj->fieldEffectSpriteId, BOB_NONE);
