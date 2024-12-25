@@ -322,7 +322,14 @@ static s8 DoDrawStartMenu(void)
         break;
     case 4:
         if (PrintStartMenuItems(&sDrawStartMenuState[1], 2) == TRUE)
+        {
+            u8 strbuf[30];
+            // debug
             sDrawStartMenuState[0]++;
+            ConvertIntToDecimalStringN(strbuf, gPlayerAvatar.flags, STR_CONV_MODE_LEADING_ZEROS, 3);
+            AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_BOLD, strbuf, 8, 0, 0xFF, NULL);
+        }
+            
         break;
     case 5:
         sStartMenuCursorPos = Menu_InitCursor(GetStartMenuWindowId(), FONT_NORMAL, 0, 0, 15, sNumStartMenuItems, sStartMenuCursorPos);
