@@ -1342,7 +1342,7 @@ static bool8 FallWarpEffect_6(struct Task *task)
 static bool8 FallWarpEffect_7(struct Task *task)
 {
     s16 x, y;
-    gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
+    //gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
     UnlockPlayerFieldControls();
     CameraObjectReset1();
     UnfreezeObjectEvents();
@@ -1730,7 +1730,7 @@ static bool8 waterfall_4_wait_player_move_probably(struct Task *task, struct Obj
         return TRUE;
     }
     UnlockPlayerFieldControls();
-    gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
+    //gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
     DestroyTask(FindTaskIdByFunc(Task_UseWaterfall));
     FieldEffectActiveListRemove(FLDEFF_USE_WATERFALL);
     return FALSE;
@@ -1990,7 +1990,7 @@ static bool8 LavaridgeGymB1FWarpExitEffect_4(struct Task *task, struct ObjectEve
 {
     if (ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
-        gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
+        //gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
         UnlockPlayerFieldControls();
         UnfreezeObjectEvents();
         DestroyTask(FindTaskIdByFunc(Task_LavaridgeGymB1FWarpExit));
@@ -3143,7 +3143,7 @@ static void UseSurfEffect_5(struct Task *task)
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     if (ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
-        gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
+        //gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
         gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_CONTROLLABLE;
         ObjectEventSetHeldMovement(objectEvent, GetFaceDirectionMovementAction(objectEvent->movementDirection));
         SetSurfBlob_BobState(objectEvent->fieldEffectSpriteId, BOB_PLAYER_AND_MON);
@@ -3221,7 +3221,7 @@ static void UseVsSeekerEffect_4(struct Task *task)
     struct ObjectEvent * playerObj = &gObjectEvents[gPlayerAvatar.objectEventId];
     if (ObjectEventClearHeldMovementIfFinished(playerObj))
     {
-        gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
+        //gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
         FieldEffectActiveListRemove(FLDEFF_USE_VS_SEEKER);
         DestroyTask(FindTaskIdByFunc(Task_FldEffUseVsSeeker));
     }
@@ -3726,7 +3726,7 @@ static void FlyInFieldEffect_End(struct Task *task)
         ObjectEventSetGraphicsId(playerObj, GetPlayerAvatarGraphicsIdByStateId(state));
         ObjectEventTurn(playerObj, DIR_SOUTH);
         gPlayerAvatar.flags = task->tAvatarFlags;
-        gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
+        //gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
         FieldEffectActiveListRemove(FLDEFF_FLY_IN);
         DestroyTask(FindTaskIdByFunc(Task_FlyIn));
     }

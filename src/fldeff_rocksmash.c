@@ -99,7 +99,7 @@ static void Task_FieldEffectShowMon_WaitFldeff(u8 taskId)
 static void Task_FieldEffectShowMon_Cleanup(u8 taskId)
 {
     FLDEFF_CALL_FUNC_IN_DATA();
-    gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
+    //gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
     DestroyTask(taskId);
 }
 
