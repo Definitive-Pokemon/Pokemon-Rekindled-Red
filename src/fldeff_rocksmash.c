@@ -47,7 +47,7 @@ static void Task_FieldEffectShowMon_Init(u8 taskId)
     u8 mapObjId;
 
     LockPlayerFieldControls();
-    gPlayerAvatar.preventStep = TRUE;
+    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     mapObjId = gPlayerAvatar.objectEventId;
     if (!ObjectEventIsMovementOverridden(&gObjectEvents[mapObjId])
      || ObjectEventClearHeldMovementIfFinished(&gObjectEvents[mapObjId]))
@@ -99,7 +99,7 @@ static void Task_FieldEffectShowMon_WaitFldeff(u8 taskId)
 static void Task_FieldEffectShowMon_Cleanup(u8 taskId)
 {
     FLDEFF_CALL_FUNC_IN_DATA();
-    gPlayerAvatar.preventStep = FALSE;
+    gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
     DestroyTask(taskId);
 }
 
