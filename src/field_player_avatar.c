@@ -1557,7 +1557,7 @@ static bool8 DoBoulderFinish(struct Task *task, struct ObjectEvent *playerObject
         ObjectEventClearHeldMovementIfFinished(strengthObject);
         HandleBoulderFallThroughHole(strengthObject);
         HandleBoulderActivateVictoryRoadSwitch(strengthObject->currentCoords.x, strengthObject->currentCoords.y);
-        //gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
+        gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
         UnlockPlayerFieldControls();
         DestroyTask(FindTaskIdByFunc(Task_BumpBoulder));
     }
@@ -1590,7 +1590,7 @@ static bool8 PlayerAvatar_DoSecretBaseMatJump(struct Task *task, struct ObjectEv
         task->data[1]++;
         if (task->data[1] > 1)
         {
-            //gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
+            gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
             gPlayerAvatar.transitionFlags |= PLAYER_AVATAR_FLAG_CONTROLLABLE;
             DestroyTask(FindTaskIdByFunc(DoPlayerAvatarSecretBaseMatJump));
         }
@@ -1670,7 +1670,7 @@ static bool8 PlayerAvatar_SecretBaseMatSpinStep3(struct Task *task, struct Objec
     {
         QL_TryRecordPlayerStepWithDuration0(objectEvent, GetWalkSlowerMovementAction(GetOppositeDirection(task->data[1])));
         UnlockPlayerFieldControls();
-        //gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
+        gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
         DestroyTask(FindTaskIdByFunc(PlayerAvatar_DoSecretBaseMatSpin));
     }
     return FALSE;
@@ -1737,7 +1737,7 @@ static void Task_WaitStopSurfing(u8 taskId)
     {
         ObjectEventSetGraphicsId(playerObjEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_GFX_NORMAL));
         QL_TryRecordPlayerStepWithDuration0(playerObjEvent, GetFaceDirectionMovementAction(playerObjEvent->facingDirection));
-        //gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
+        gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
         UnlockPlayerFieldControls();
         UnfreezeObjectEvents();
         DestroySprite(&gSprites[playerObjEvent->fieldEffectSpriteId]);
@@ -2003,7 +2003,7 @@ static bool8 Fishing11(struct Task *task)
 
     if (task->tFrameCounter != 0)
     {
-        //gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
+        gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
         UnlockPlayerFieldControls();
         FishingWildEncounter(task->tFishingRod);
         DestroyTask(FindTaskIdByFunc(Task_Fishing));
@@ -2063,7 +2063,7 @@ static bool8 Fishing16(struct Task *task)
     RunTextPrinters();
     if (!IsTextPrinterActive(0))
     {
-        //gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
+        gPlayerAvatar.preventStep = FALSE; PlaySE(SE_BANG);
         UnlockPlayerFieldControls();
         UnfreezeObjectEvents();
         ClearDialogWindowAndFrame(0, TRUE);
