@@ -1523,7 +1523,7 @@ static void Task_BumpBoulder(u8 taskId)
 static bool8 DoBoulderInit(struct Task *task, struct ObjectEvent *playerObject, struct ObjectEvent *strengthObject)
 {
     LockPlayerFieldControls();
-    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     task->data[0]++;
     return FALSE;
 }
@@ -1582,7 +1582,7 @@ static void DoPlayerAvatarSecretBaseMatJump(u8 taskId)
 // because data[0] is used to call this, it can be inferred that there may have been multiple mat jump functions at one point, so the name for these groups of functions is appropriate in assuming the sole use of mat jump.
 static bool8 PlayerAvatar_DoSecretBaseMatJump(struct Task *task, struct ObjectEvent *objectEvent)
 {
-    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     if (ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
         PlaySE(SE_LEDGE);
@@ -1622,7 +1622,7 @@ static bool8 PlayerAvatar_SecretBaseMatSpinStep0(struct Task *task, struct Objec
 {
     task->data[0]++;
     task->data[1] = objectEvent->movementDirection;
-    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     LockPlayerFieldControls();
     PlaySE(SE_WARP_IN);
     return TRUE;
@@ -1686,7 +1686,7 @@ static void CreateStopSurfingTask(u8 direction)
     Overworld_ChangeMusicToDefault();
     gPlayerAvatar.flags ^= PLAYER_AVATAR_FLAG_SURFING;
     gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_ON_FOOT;
-    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     taskId = CreateTask(Task_StopSurfingInit, 0xFF);
     gTasks[taskId].data[0] = direction;
     Task_StopSurfingInit(taskId);
@@ -1700,7 +1700,7 @@ void CreateStopSurfingTask_NoMusicChange(u8 direction)
     FreezeObjectEvents();
     gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_SURFING;
     gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_ON_FOOT;
-    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     taskId = CreateTask(Task_StopSurfingInit, 0xFF);
     gTasks[taskId].data[0] = direction;
     Task_StopSurfingInit(taskId);
@@ -1802,7 +1802,7 @@ static void Task_Fishing(u8 taskId)
 static bool8 Fishing1(struct Task *task)
 {
     LockPlayerFieldControls();
-    //gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
+    gPlayerAvatar.preventStep = TRUE; PlaySE(SE_BANG);
     task->tStep++;
     return FALSE;
 }
