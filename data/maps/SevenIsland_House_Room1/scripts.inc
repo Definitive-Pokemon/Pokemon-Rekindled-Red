@@ -33,7 +33,7 @@ SevenIsland_House_Room1_OnTransition::
 	call_if_eq VAR_RESULT, 1, SevenIsland_House_Room1_EventScript_HideSpearow
 	setvar TYPE, CHECK_ALL_TOLD
 	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, 8, SevenIsland_House_Room1_EventScript_WalkSpearow
+	call_if_eq VAR_RESULT, 7, SevenIsland_House_Room1_EventScript_WalkSpearow
 	end
 
 SevenIsland_House_Room1_EventScript_SetTrainerVisitingLayout::
@@ -84,7 +84,6 @@ SevenIsland_House_Room1_EventScript_ShowingFameChecker::
 	case 4, SevenIsland_House_Room1_EventScript_Koga
 	case 5, SevenIsland_House_Room1_EventScript_Sabrina
 	case 6, SevenIsland_House_Room1_EventScript_Blaine
-	case 7, SevenIsland_House_Room1_EventScript_Daisy
 	case 8, SevenIsland_House_Room1_EventScript_RefuseToSelectLeader
 	case 127, SevenIsland_House_Room1_EventScript_RefuseToSelectLeader
 	end
@@ -152,15 +151,6 @@ SevenIsland_House_Room1_EventScript_Blaine::
 	goto_if_eq VAR_RESULT, TRUE, SevenIsland_House_Room1_EventScript_FullFamecheckerForPerson
 	goto SevenIsland_House_Room1_EventScript_NotFullFamecheckerForPerson
 
-SevenIsland_House_Room1_EventScript_Daisy::
-	setvar 0x8004, FAMECHECKER_DAISY
-	bufferstring 0, gText_Daisy
-	bufferstring 1, SevenIsland_House_Room1_Text_SheString
-	bufferstring 2, gFameCheckerFlavorTextOriginLocation_Daisy0
-	callnative CheckFilledFameCheckerFor0x8004
-	compare VAR_RESULT, TRUE
-	goto_if_eq SevenIsland_House_Room1_EventScript_FullFamecheckerForPerson
-	goto SevenIsland_House_Room1_EventScript_NotFullFamecheckerForPerson
 SevenIsland_House_Room1_EventScript_RefuseToSelectLeader::
 	msgbox SevenIsland_House_Room1_Text_NoShowFameChecker
 	release
@@ -276,7 +266,7 @@ SevenIsland_House_Room1_EventScript_OldWomanBasementOpen::
 	copyvar VAR_0x8000, VAR_RESULT
 	setvar TYPE, CHECK_ANY_VISITORS
 	callnative UseBattleHouseVar
-	goto_if_ge VAR_0x8000, 8, SevenIsland_House_Room1_EventScript_OldWomanToldAll
+	goto_if_ge VAR_0x8000, 7, SevenIsland_House_Room1_EventScript_OldWomanToldAll
 	goto_if_eq VAR_RESULT, 0, SevenIsland_House_Room1_EventScript_OldWomanNoVisitors
 	goto_if_eq VAR_RESULT, 1, SevenIsland_House_Room1_EventScript_OldWomanOneVisitor
 	switch VAR_RESULT

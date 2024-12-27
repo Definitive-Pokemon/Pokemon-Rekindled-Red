@@ -33,6 +33,7 @@ NavelRock_Exterior_EventScript_Defeated::
 	waitmovement 0
 	msgbox NavelRock_Exterior_Text_Asode, MSGBOX_NPC
 	closemessage
+	setobjectxyperm LOCALID_MAXIMUS, 7, 9
 	setflag FLAG_ELM_NAVEL
 	release
 	end
