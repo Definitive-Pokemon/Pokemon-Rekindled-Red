@@ -1261,4 +1261,28 @@ $(MID_SUBDIR)/se_dex_search.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G127 -v100 -P5
 
 $(MID_SUBDIR)/mus_aegis_cave.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G132 -V192
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V090
+
+$(MID_SUBDIR)/mus_brine_cave.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V090
+
+$(MID_SUBDIR)/mus_bw_vs_legendary.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V090
+
+$(MID_SUBDIR)/mus_dusk_forest.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V090
+
+$(MID_SUBDIR)/mus_looker_theme.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V079
+
+$(MID_SUBDIR)/mus_mus_vs_champion_nemona.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V090
+
+$(MID_SUBDIR)/mus_vs_cipher_admin.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V076
+
+$(MID_SUBDIR)/mus_vs_gym_leader_remix.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V080
+
+$(MID_SUBDIR)/mus_waterfall_colosseum.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V090
