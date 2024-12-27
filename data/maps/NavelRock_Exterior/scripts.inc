@@ -3,15 +3,20 @@
 
 NavelRock_Exterior_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, NavelRock_Exterior_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, NavelRock_Exterior_OnFrame
 	.byte 0
 
 NavelRock_Exterior_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR
-	call_if_eq VAR_BLOCK, 2, NavelRock_Exterior_EventScript_SetUpFinale
 	end
+
+NavelRock_Exterior_OnFrame::
+	map_script_2 VAR_BLOCK, 2, NavelRock_Exterior_EventScript_SetUpFinale
+	.2byte 0
 
 NavelRock_Exterior_EventScript_SetUpFinale::
 	lockall
+	setvar VAR_BLOCK, 3
 	delay 100
 	playse SE_THUNDERSTORM_STOP
 	setvar VAR_0x8004, 0  @ Vertical pan
@@ -27,7 +32,6 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	setvar VAR_0x8005, 35 @ Delay
 	applymovement LOCALID_LUGIA, NavelRock_Base_Movement_LugiaInvite
 	waitmovement 0
-	setvar VAR_BLOCK, 3
 	return
 
 NavelRock_Exterior_EventScript_Maximus::
