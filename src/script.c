@@ -1377,19 +1377,6 @@ void UseBattleHouseVar(void)
                 }
                 gSpecialVar_Result++;
                 StringAppend(gStringVar1, gText_Blaine);
-                                if(totalCount != runningCount && totalCount != 2)
-                {
-                    StringAppend(gStringVar1, gText_CommaSpace);
-                    if(runningCount == (totalCount - 1))
-                    {
-                        StringAppend(gStringVar1, gText_AndSpace);
-                    }
-                }
-                if(totalCount == 2 && runningCount != 2)
-                {
-                    StringAppend(gStringVar1, gText_RegionMap_Space);
-                    StringAppend(gStringVar1, gText_AndSpace);
-                }
             }
             break;
 
