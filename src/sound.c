@@ -560,6 +560,7 @@ static void Task_DuckBGMForPokemonCry(u8 taskId)
     else
     {
         m4aMPlayVolumeControl(&gMPlayInfo_BGM, TRACKS_ALL, 256);
+        PlaySE(SE_SELECT);
         DestroyTask(taskId);
     }
 
@@ -575,7 +576,7 @@ static void RestoreBGMVolumeAfterPokemonCry(void)
     if (FuncIsActiveTask(Task_DuckBGMForPokemonCry) != TRUE)
     {
         u8 taskId = CreateTask(Task_DuckBGMForPokemonCry, 80);
-        gTasks[taskId].data[1] = 2000;
+        gTasks[taskId].data[1] = 200;
     }
 }
 
