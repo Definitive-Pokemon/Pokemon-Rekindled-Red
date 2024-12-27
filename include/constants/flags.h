@@ -1306,7 +1306,7 @@
 #define FLAG_HIDE_SILVER_SCIENTIST               0x4EB
 #define FLAG_HIDE_FING_BALL               0x4EC
 #define FLAG_LUGIA_FLEE               0x4ED
-#define FLAG_0x4EE               0x4EE
+#define FLAG_HIDE_FINAL_LUGIA               0x4EE
 #define FLAG_0x4EF               0x4EF
 #define FLAG_0x4F0               0x4F0
 #define FLAG_0x4F1               0x4F1

@@ -47,7 +47,7 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	playmoncry SPECIES_LUGIA, 2
 	waitmoncry
 	delay 25
-	warp MAP_MT_SILVER, 19, 19
+	warp MAP_MT_SILVER_LUGIA, 16, 7
 	return
 
 NavelRock_Base_Movement_LugiaGoForth::

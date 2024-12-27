@@ -55,6 +55,7 @@ MtSilverLegend_EventScript_Maximus::
 	setflag FLAG_MAXIMUS_LUGIA
 	setflag FLAG_MAXIMUS_HIDE_LUGIA
 	setflag FLAG_HIDE_FING_BALL
+	setflag FLAG_HIDE_FINAL_LUGIA
 	releaseall
 	end
 
