@@ -8,7 +8,7 @@ NavelRock_Exterior_MapScripts::
 
 NavelRock_Exterior_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR
-	call_if_set VAR_BLOCK, 2, NavelRock_Exterior_EventScript_Location
+	call_if_eq VAR_BLOCK, 2, NavelRock_Exterior_EventScript_Location
 	end
 
 NavelRock_Exterior_OnFrame::
