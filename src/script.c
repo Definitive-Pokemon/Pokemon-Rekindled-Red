@@ -844,8 +844,7 @@ struct BattleHouse
     u16 toldErika:1;
     u16 toldKoga:1;
     u16 toldSabrina:1;
-    u16 toldBlaine:1;       
-    u16 toldDaisy:1;        // ^^ filled out Fame Checker and told lady for person
+    u16 toldBlaine:1;       // ^^ filled out Fame Checker and told lady for person
     // 1 byte
     u16 boxesMoved:1;       // controls setting the layout. Happens when Spearow returns for the first time.
     u16 visitorBrock:1;
@@ -854,8 +853,7 @@ struct BattleHouse
     u16 visitorErika:1;
     u16 visitorKoga:1;
     u16 visitorSabrina:1;
-    u16 visitorBlaine:1;    
-    u16 visitorDaisy:1;     // ^^ visitors currently in house
+    u16 visitorBlaine:1;    // ^^ visitors currently in house
     // 1 byte, overflows into next scripting var
     u16 spawnFails:3;       // after a Gym Leader fails to visit 6 times, this starts forcing visits
     u16 levelGrowth:5;      // adds levels to rematch Pokemon up to level 80. Maxes at +12.
