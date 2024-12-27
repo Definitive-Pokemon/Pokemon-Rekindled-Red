@@ -1305,7 +1305,7 @@
 #define FLAG_MAXIMUS_SILVER_HIDE               0x4EA
 #define FLAG_HIDE_SILVER_SCIENTIST               0x4EB
 #define FLAG_HIDE_FING_BALL               0x4EC
-#define FLAG_READY_OAK               0x4ED
+#define FLAG_0x4ED               0x4ED
 #define FLAG_0x4EE               0x4EE
 #define FLAG_0x4EF               0x4EF
 #define FLAG_0x4F0               0x4F0
