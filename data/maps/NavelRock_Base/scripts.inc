@@ -46,7 +46,6 @@ NavelRock_Base_EventScript_LugiaFirst::
 	delay 60
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_SteponLugia
 	waitmovement 0
-	removeobject OBJ_EVENT_ID_PLAYER
 	delay 50
 	setvar VAR_TEMP_1, 1
 	special SpawnCameraObject
@@ -86,6 +85,7 @@ NavelRock_Base_Movement_LugiaInvite::
 
 NavelRock_Base_Movement_SteponLugia::
 	walk_in_place_up
+	set_invisible
 	step_end
 
 Movement_CameraOneUp::
