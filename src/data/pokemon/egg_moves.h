@@ -1315,7 +1315,12 @@ const u16 gEggMoves[] = {
               MOVE_CONFUSE_RAY),
               
     egg_moves(SEVIIAN_AERODACTYL,
-              MOVE_EXPLOSION),
+              MOVE_WHIRLWIND,
+              MOVE_PURSUIT,
+              MOVE_FORESIGHT,
+              MOVE_STEEL_WING,
+              MOVE_DRAGON_BREATH,
+              MOVE_CURSE),
 
     EGG_MOVES_TERMINATOR
 };
