@@ -605,7 +605,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_5 = {
 				{
 					.species = SPECIES_CROBAT,
 					.heldItem = ITEM_LEFTOVERS,
-					.moves = {MOVE_TOXIC, MOVE_FLY, MOVE_CONFUSE_RAY, MOVE_SHADOW_BALL},
+					.moves = {MOVE_TOXIC, MOVE_FLY, MOVE_CONFUSE_RAY, MOVE_CRUNCH},
 					.hpEV = 100,
 					.attackEV = 0,
 					.defenseEV = 100,
@@ -1089,7 +1089,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_2 = {
 				{
 					.species = SPECIES_SNEASEL,
 					.heldItem = ITEM_SALAC_BERRY,
-					.moves = {MOVE_SHADOW_BALL, MOVE_SUNNY_DAY, MOVE_TAUNT, MOVE_AERIAL_ACE},
+					.moves = {MOVE_PURSUIT, MOVE_SUNNY_DAY, MOVE_TAUNT, MOVE_AERIAL_ACE},
 					.hpEV = 200,
 					.attackEV = 0,
 					.defenseEV = 50,
@@ -4455,7 +4455,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_3 = {
 				{
 					.species = SPECIES_SNORLAX,
 					.heldItem = ITEM_LUM_BERRY,
-					.moves = {MOVE_BODY_SLAM, MOVE_REST, MOVE_SNORE, MOVE_SHADOW_BALL},
+					.moves = {MOVE_BODY_SLAM, MOVE_REST, MOVE_SNORE, MOVE_CRUNCH},
 					.hpEV = 84,
 					.attackEV = 84,
 					.defenseEV = 84,
@@ -4874,7 +4874,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_1 = {
 				{
 					.species = SPECIES_MILTANK,
 					.heldItem = ITEM_LEFTOVERS,
-					.moves = {MOVE_EARTHQUAKE, MOVE_SHADOW_BALL, MOVE_ROCK_TOMB, MOVE_MILK_DRINK},
+					.moves = {MOVE_EARTHQUAKE, MOVE_BODY_SLAM, MOVE_ROCK_TOMB, MOVE_MILK_DRINK},
 					.hpEV = 155,
 					.attackEV = 255,
 					.defenseEV = 0,
@@ -4918,7 +4918,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_1 = {
 				{
 					.species = SPECIES_GRANBULL,
 					.heldItem = ITEM_LIECHI_BERRY,
-					.moves = {MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB},
+					.moves = {MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_BODY_SLAM, MOVE_SLUDGE_BOMB},
 					.hpEV = 0,
 					.attackEV = 255,
 					.defenseEV = 130,
@@ -5744,7 +5744,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_Unused1 = {
 				{
 					.species = SPECIES_SNUBBULL,
 					.heldItem = ITEM_PECHA_BERRY,
-					.moves = {MOVE_WATER_PULSE, MOVE_THUNDER_WAVE, MOVE_CRUNCH, MOVE_SHADOW_BALL},
+					.moves = {MOVE_WATER_PULSE, MOVE_THUNDER_WAVE, MOVE_CRUNCH, MOVE_BODY_SLAM},
 					.hpEV = 110,
 					.attackEV = 100,
 					.defenseEV = 100,
@@ -7340,7 +7340,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_Unused2 = {
 				{
 					.species = SPECIES_KANGASKHAN,
 					.heldItem = ITEM_SALAC_BERRY,
-					.moves = {MOVE_SHADOW_BALL, MOVE_REVERSAL, MOVE_ENDURE, MOVE_FAKE_OUT},
+					.moves = {MOVE_CRUNCH, MOVE_REVERSAL, MOVE_ENDURE, MOVE_FAKE_OUT},
 					.hpEV = 0,
 					.attackEV = 255,
 					.defenseEV = 105,
@@ -7384,7 +7384,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_Unused2 = {
 				{
 					.species = SPECIES_MILTANK,
 					.heldItem = ITEM_SALAC_BERRY,
-					.moves = {MOVE_BODY_SLAM, MOVE_SHADOW_BALL, MOVE_MILK_DRINK, MOVE_ROCK_TOMB},
+					.moves = {MOVE_BODY_SLAM, MOVE_BRICK_BREAK, MOVE_MILK_DRINK, MOVE_ROCK_TOMB},
 					.hpEV = 0,
 					.attackEV = 155,
 					.defenseEV = 50,
