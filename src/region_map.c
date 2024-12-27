@@ -1151,7 +1151,6 @@ static void InitRegionMapType(void)
         case MAPSEC_TERRA_CAVE:
         case MAPSEC_MARINE_CAVE:
         case MAPSEC_TWO_ISLAND_ROUTE:
-        case MAPSEC_TWO_ISLAND_HO_OH:
         case MAPSEC_UMBILICAL_TOWER:
         region = REGIONMAP_SEVII123;
         break;
