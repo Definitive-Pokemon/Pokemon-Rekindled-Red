@@ -549,7 +549,18 @@ static void Task_DuckBGMForPokemonCry(u8 taskId)
     if (gPokemonCryBGMDuckingCounter)
     {
         gPokemonCryBGMDuckingCounter--;
+        gTasks[taskId].data[1]--;
         return;
+    }
+
+    if (gTasks[taskId].data[1])
+    {
+        gTasks[taskId].data[1]--;
+    }
+    else
+    {
+        m4aMPlayVolumeControl(&gMPlayInfo_BGM, TRACKS_ALL, 256);
+        DestroyTask(taskId);
     }
 
     if (!IsPokemonCryPlaying(gMPlay_PokemonCry))
@@ -562,7 +573,10 @@ static void Task_DuckBGMForPokemonCry(u8 taskId)
 static void RestoreBGMVolumeAfterPokemonCry(void)
 {
     if (FuncIsActiveTask(Task_DuckBGMForPokemonCry) != TRUE)
-        CreateTask(Task_DuckBGMForPokemonCry, 80);
+    {
+        u8 taskId = CreateTask(Task_DuckBGMForPokemonCry, 80);
+        gTasks[taskId].data[1] = 6;
+    }
 }
 
 void PlayBGM(u16 songNum)
