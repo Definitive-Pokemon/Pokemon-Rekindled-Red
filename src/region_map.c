@@ -3542,10 +3542,6 @@ static void GetPlayerPositionOnRegionMap_HandleOverrides(void)
         sMapCursor->x = 5;
         sMapCursor->y = 6;
         break;
-    case MAPSEC_TWO_ISLAND_HO_OH:
-        sMapCursor->x = 10;
-        sMapCursor->y = 11;
-		break;
     case MAPSEC_STONE_TOMB:
         sMapCursor->x = 19;
         sMapCursor->y = 13;

@@ -235,7 +235,7 @@
 #define MAPSEC_ROUTE_27                     0xE1
 #define MAPSEC_TOHJO_FALLS                  0xE2
 #define MAPSEC_TWO_ISLAND_ROUTE             0xE3
-#define MAPSEC_MAPSEC_UMBILICAL_TOWER       0xE4
+#define MAPSEC_UMBILICAL_TOWER              0xE4
 #define MAPSEC_NEW_BARK_TOWN                0xE5
 #define MAPSEC_NONE                         0xE6
 #define MAPSEC_COUNT                        0xE7
