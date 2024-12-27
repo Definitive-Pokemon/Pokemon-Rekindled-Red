@@ -37,7 +37,9 @@ TrainerTower_Elevator_EventScript_ChooseFloor::
 	end
 
 TrainerTower_Elevator_EventScript_SelectLobby::
+	goto_if_set FLAG_HORROR_DONE, TrainerTower_Elevator_EventScript_SelectLobby_Continue
 	goto_if_set FLAG_GOT_EMERALD, TrainerTower_Elevator_EventScript_StartHorror
+TrainerTower_Elevator_EventScript_SelectLobby_Continue::
 	setvar VAR_0x8006, 3
 	setdynamicwarp MAP_TRAINER_TOWER_LOBBY, 255, 17, 8
 	compare VAR_ELEVATOR_FLOOR, 3
