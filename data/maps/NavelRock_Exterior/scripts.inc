@@ -8,14 +8,24 @@ NavelRock_Exterior_MapScripts::
 
 NavelRock_Exterior_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR
+	call_if_set VAR_BLOCK, 2, NavelRock_Exterior_EventScript_Location
 	end
 
 NavelRock_Exterior_OnFrame::
 	map_script_2 VAR_BLOCK, 2, NavelRock_Exterior_EventScript_SetUpFinale
 	.2byte 0
 
+NavelRock_Exterior_EventScript_Location::
+	setobjectxyperm LOCALID_MAXIMUS, 7, 9
+	setmetatile 8, 9, METATILE_General_Floory, 0
+	setmetatile 9, 9, METATILE_General_Rocky, 1
+	special DrawWholeMapView
+	return
+	
+
 NavelRock_Exterior_EventScript_SetUpFinale::
 	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_Invis
 	setvar VAR_BLOCK, 3
 	delay 100
 	playse SE_THUNDERSTORM_STOP
@@ -25,6 +35,7 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	setvar VAR_0x8007, 2  @ Shake delay
 	special ShakeScreen
 	setmetatile 9, 7, METATILE_SeviiIslands6_Unblock, 0
+	special DrawWholeMapView
 	delay 30
 	clearflag FLAG_LUGIA_FLEE
 	addobject LOCALID_LUGIA
@@ -32,7 +43,31 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	setvar VAR_0x8005, 35 @ Delay
 	applymovement LOCALID_LUGIA, NavelRock_Base_Movement_LugiaInvite
 	waitmovement 0
+	playmoncry SPECIES_LUGIA, 2
+	waitmoncry
+	delay 80
+	applymovement LOCALID_LUGIA, NavelRock_Base_Movement_LugiaGoForth
+	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_LugiaGoForth
+	delay 100
+	warp MAP_MT_SILVER, 19, 19
 	return
+
+NavelRock_Base_Movement_LugiaGoForth::
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+	
 
 NavelRock_Exterior_EventScript_Maximus::
 	lock
@@ -41,6 +76,10 @@ NavelRock_Exterior_EventScript_Maximus::
 	trainerbattle_single TRAINER_COLLECTOR_MAXIMUS, NavelRock_Exterior_Text_Intro, NavelRock_Exterior_Text_Defeat, NavelRock_Exterior_EventScript_Defeated, NO_MUSIC
 	release
 	end
+
+NavelRock_Base_Movement_Invis::
+	set_invisible
+	step_end
 
 NavelRock_Exterior_Text_Intro::
 	.string "I am Maxi$"
@@ -60,7 +99,6 @@ NavelRock_Exterior_EventScript_Defeated::
 	msgbox NavelRock_Exterior_Text_Asode, MSGBOX_NPC
 	closemessage
 	delay 20
-	setobjectxyperm LOCALID_MAXIMUS, 7, 9
 	setflag FLAG_ELM_NAVEL
 	release
 	end
@@ -83,6 +121,7 @@ NavelRock_Exterior_Movement_Aside2::
 	walk_left
 	walk_left
 	walk_up
+	walk_in_place_right
 	step_end
 
 NavelRock_Exterior_Text_Asode::

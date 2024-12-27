@@ -91,6 +91,7 @@
 #define METATILE_General_CaveWall                0x079
 #define METATILE_General_Door                    0x03D
 #define METATILE_General_EmeraldMowed            0x229
+#define METATILE_General_Floory                  0x0D9
 #define METATILE_General_LongGrass_Bottom        0x23B
 #define METATILE_General_LongGrass_Top           0x233
 #define METATILE_General_MountainCornerTopLeft   0x068
@@ -302,6 +303,7 @@
 #define METATILE_SeviiIslands6_ForestTreeCorner_Right_Mowed  0x2A2
 #define METATILE_SeviiIslands6_ForestTreeTop                 0x2B5
 #define METATILE_SeviiIslands6_ForestTreeTop_Mowed           0x28F
+#define METATILE_SeviiIslands6_Rocky                         0x2B7
 #define METATILE_SeviiIslands6_Unblock                       0x358
 
 // gTileset_SeviiIslands67
