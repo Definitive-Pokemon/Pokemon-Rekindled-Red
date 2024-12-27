@@ -1217,7 +1217,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel100Mons[] =
 			MOVE_CRUNCH,
 			MOVE_HOWL,
 			MOVE_SWAGGER,
-			MOVE_SHADOW_BALL
+			MOVE_POISON_FANG
 		},
 		.evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
 		.nature = NATURE_CALM,
@@ -2049,7 +2049,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel100Mons[] =
 			MOVE_RETURN,
 			MOVE_DOUBLE_TEAM,
 			MOVE_TOXIC,
-			MOVE_SHADOW_BALL
+			MOVE_SILVER_WIND
 		},
 		.evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
 		.nature = NATURE_HARDY,
@@ -2177,7 +2177,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel100Mons[] =
 		.teamFlags = 0x02,
 		.moves = {
 			MOVE_THUNDER,
-			MOVE_CRUNCH,
+			MOVE_FLAMETHROWER,
 			MOVE_THUNDER_WAVE,
 			MOVE_QUICK_ATTACK
 		},
@@ -2738,7 +2738,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel100Mons[] =
 			MOVE_THUNDERBOLT,
 			MOVE_THUNDER_WAVE,
 			MOVE_ROAR,
-			MOVE_CRUNCH
+			MOVE_FLAMETHROWER
 		},
 		.evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED,
 		.nature = NATURE_QUIET,
@@ -3128,7 +3128,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel100Mons[] =
 			MOVE_THUNDER,
 			MOVE_THUNDER_WAVE,
 			MOVE_QUICK_ATTACK,
-			MOVE_CRUNCH
+			MOVE_FLAMETHROWER
 		},
 		.evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED,
 		.nature = NATURE_QUIET,
@@ -3491,7 +3491,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel100Mons[] =
 		.moves = {
 			MOVE_SLUDGE_BOMB,
 			MOVE_CONFUSE_RAY,
-			MOVE_SHADOW_BALL,
+			MOVE_CRUNCH,
 			MOVE_SNATCH
 		},
 		.evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
@@ -3518,7 +3518,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel100Mons[] =
 			MOVE_THUNDERBOLT,
 			MOVE_THUNDER_WAVE,
 			MOVE_ATTRACT,
-			MOVE_CRUNCH
+			MOVE_FLAMETHROWER
 		},
 		.evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
 		.nature = NATURE_QUIET,
@@ -3815,7 +3815,7 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel100Mons[] =
 		.teamFlags = 0x20,
 		.moves = {
 			MOVE_CONFUSE_RAY,
-			MOVE_SHADOW_BALL,
+			MOVE_SILVER_WIND,
 			MOVE_TOXIC,
 			MOVE_GRUDGE
 		},
