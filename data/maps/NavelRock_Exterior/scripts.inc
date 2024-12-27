@@ -39,25 +39,28 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	delay 30
 	clearflag FLAG_LUGIA_FLEE
 	addobject LOCALID_LUGIA
-	setvar VAR_0x8004, 2  @ Num loops
+	setvar VAR_0x8004, 30  @ Num loops
 	setvar VAR_0x8005, 35 @ Delay
-	applymovement LOCALID_LUGIA, NavelRock_Base_Movement_LugiaInvite
-	waitmovement 0
-	playmoncry SPECIES_LUGIA, 2
-	waitmoncry
-	delay 80
 	applymovement LOCALID_LUGIA, NavelRock_Base_Movement_LugiaGoForth
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_LugiaGoForth
 	delay 100
+	playmoncry SPECIES_LUGIA, 2
+	waitmoncry
+	delay 80
 	warp MAP_MT_SILVER, 19, 19
 	return
 
 NavelRock_Base_Movement_LugiaGoForth::
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
-	walk_fast_down
+	walk_in_place_down
+	walk_in_place_down
+	walk_in_place_down
+	walk_in_place_down
+	walk_in_place_down
+	walk_in_place_down
+	walk_in_place_down
+	walk_in_place_down
+	walk_in_place_down
+	walk_in_place_down
 	walk_fast_down
 	walk_fast_down
 	walk_fast_down
