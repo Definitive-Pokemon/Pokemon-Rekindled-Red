@@ -18,7 +18,7 @@ NavelRock_Exterior_OnFrame::
 NavelRock_Exterior_EventScript_Location::
 	setobjectxyperm LOCALID_MAXIMUS, 7, 9
 	setmetatile 8, 9, METATILE_General_Floory, 0
-	setmetatile 9, 9, METATILE_General_Rocky, 1
+	setmetatile 9, 9, METATILE_SeviiIslands6_Rocky, 1
 	special DrawWholeMapView
 	return
 	
