@@ -1391,17 +1391,6 @@ void UseBattleHouseVar(void)
                     StringAppend(gStringVar1, gText_AndSpace);
                 }
             }
-            if(BattleHouseVar->visitorDaisy)
-            {
-                runningCount++;
-                if(gSpecialVar_Result == 4)
-                {
-                    StringAppend(gStringVar1, gText_NewLine);
-                    gSpecialVar_Result = 0;
-                }
-                gSpecialVar_Result++;
-                StringAppend(gStringVar1, gText_Daisy);
-            }
             break;
 
     }
