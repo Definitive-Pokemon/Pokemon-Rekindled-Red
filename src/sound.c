@@ -576,7 +576,7 @@ static void RestoreBGMVolumeAfterPokemonCry(void)
     if (FuncIsActiveTask(Task_DuckBGMForPokemonCry) != TRUE)
     {
         u8 taskId = CreateTask(Task_DuckBGMForPokemonCry, 80);
-        gTasks[taskId].data[1] = 200;
+        gTasks[taskId].data[1] = 100;
     }
 }
 
