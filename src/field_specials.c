@@ -1357,7 +1357,6 @@ static const u8 *const sListMenuLabels[][12] = {
         gText_Koga,
         gText_Sabrina,
         gText_Blaine,
-        gText_Daisy,
         gOtherText_Exit,
     },
     [LISTMENU_MASTER_TRAINER_TITLES] =
