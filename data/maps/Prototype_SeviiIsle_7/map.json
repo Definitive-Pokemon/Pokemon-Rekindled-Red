@@ -35,13 +35,6 @@
       "elevation": 0,
       "dest_map": "MAP_UMBILICAL_TOWER",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 4,
-      "y": 5,
-      "elevation": 0,
-      "dest_map": "MAP_NAVEL_ROCK_SUMMIT",
-      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
