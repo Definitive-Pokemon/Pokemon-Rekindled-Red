@@ -1,4 +1,5 @@
 .set LOCALID_MAXIMUS, 1
+.set LOCALID_LUGIA, 2
 
 NavelRock_Exterior_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, NavelRock_Exterior_OnTransition
@@ -6,7 +7,28 @@ NavelRock_Exterior_MapScripts::
 
 NavelRock_Exterior_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR
+	call_if_eq VAR_BLOCK, 2, NavelRock_Exterior_EventScript_SetUpFinale
 	end
+
+NavelRock_Exterior_EventScript_SetUpFinale::
+	lockall
+	delay 100
+	playse SE_THUNDERSTORM_STOP
+	setvar VAR_0x8004, 0  @ Vertical pan
+	setvar VAR_0x8005, 3  @ Horizontal pan
+	setvar VAR_0x8006, 4  @ Num shakes
+	setvar VAR_0x8007, 2  @ Shake delay
+	special ShakeScreen
+	setmetatile 9, 7, METATILE_NavelRock_Unblock, 0
+	delay 30
+	clearflag FLAG_LUGIA_FLEE
+	addobject LOCALID_LUGIA
+	setvar VAR_0x8004, 2  @ Num loops
+	setvar VAR_0x8005, 35 @ Delay
+	applymovement LOCALID_LUGIA, NavelRock_Base_Movement_LugiaInvite
+	waitmovement 0
+	setvar VAR_BLOCK, 3
+	return
 
 NavelRock_Exterior_EventScript_Maximus::
 	lock

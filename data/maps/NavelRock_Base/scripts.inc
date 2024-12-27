@@ -58,14 +58,17 @@ NavelRock_Base_EventScript_LugiaFirst::
 	applymovement LOCALID_LUGIA, NavelRock_Base_Movement_LugiaInvite
 	waitmovement 0
 	delay 50
-	setvar VAR_0x8004, 3  @ Num loops
+	setvar VAR_0x8004, 20  @ Num loops
 	setvar VAR_0x8005, 35 @ Delay
 	special LoopWingFlapSound
-	applymovement OBJ_EVENT_ID_CAMERA, MtSilverLugia_Movement_CameraBackUp
-	applymovement LOCALID_LUGIA, Movement_LugiaBackUp
+	applymovement OBJ_EVENT_ID_CAMERA, MtSilverLugia_Movement_CameraBackUp2
+	playmoncry SPECIES_LUGIA, 2
+	applymovement LOCALID_LUGIA, Movement_LugiaBackUp2
 	waitmovement 0
 	delay 10
 	setvar VAR_BLOCK, 2
+	warp MAP_NAVEL_ROCK_EXTERIOR, 9, 6
+	waitstate
 	release
 	end
 	
@@ -90,6 +93,37 @@ NavelRock_Base_Movement_SteponLugia::
 
 Movement_CameraOneUp::
 	walk_slow_up
+	step_end
+
+Movement_LugiaBackUp2::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_in_place_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+MtSilverLugia_Movement_CameraBackUp2::
+	delay_16
+	delay_16
+	walk_slow_up
+	walk_slow_up
+	walk_slow_up
+	delay_16
+	delay_16
 	step_end
 
 NavelRock_Base_EventScript_Lugia::

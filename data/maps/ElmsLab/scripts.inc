@@ -28,6 +28,7 @@ ElmsLab_EventScript_Crisis::
 	msgbox ElmsLab_Text_Lugia, MSGBOX_NPC
 	closemessage
 	giveitem_msg ElmsLab_Text_ReceivedMysticTicket, ITEM_MYSTIC_TICKET, 1
+	setflag FLAG_LUGIA_FLEE
 	msgbox ElmsLab_Text_ElmNavel, MSGBOX_NPC
 	release
 	end

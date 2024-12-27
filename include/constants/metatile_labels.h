@@ -302,6 +302,7 @@
 #define METATILE_SeviiIslands6_ForestTreeCorner_Right_Mowed  0x2A2
 #define METATILE_SeviiIslands6_ForestTreeTop                 0x2B5
 #define METATILE_SeviiIslands6_ForestTreeTop_Mowed           0x28F
+#define METATILE_SeviiIslands6_Unblock                       0x358
 
 // gTileset_SeviiIslands67
 #define METATILE_SeviiIslands67_BottomLeftCorner                      0x30E
