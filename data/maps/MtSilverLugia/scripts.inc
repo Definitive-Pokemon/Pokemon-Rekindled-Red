@@ -227,6 +227,7 @@ MtSilverLugia_EventScript_Event::
 	waitse
 	removeobject LOCALID_MAXIMUS
 	setflag FLAG_MAXIMUS_SILVER_HIDE
+	setflag FLAG_READY_OAK
 	clearflag FLAG_HIDE_SILVER_SCIENTIST
 	fadescreen FADE_FROM_BLACK
 	fadenewbgm MUS_NONE

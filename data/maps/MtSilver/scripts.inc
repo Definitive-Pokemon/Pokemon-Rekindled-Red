@@ -7,7 +7,7 @@ MtSilver_MapScripts::
 	.byte 0
 
 MtSilver_OnLoad::
-	goto_if_set FLAG_MAXIMUS_SILVER_HIDE, MtSilver_OnLoad_SetVarForScene
+	goto_if_set FLAG_READY_OAK, MtSilver_OnLoad_SetVarForScene
 	end
 MtSilver_OnLoad_SetVarForScene::
 	setvar VAR_TEMP_0, 1

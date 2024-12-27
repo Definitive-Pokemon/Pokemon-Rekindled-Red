@@ -256,7 +256,7 @@
 #define VAR_MAXIMUS_SILVER         0x40CB
 #define VAR_SEEN_ZAPDOS            0x40CC
 #define VAR_NEW_BARK_ACCESS        0x40CD
-#define VAR_0x40CE                 0x40CE
+#define VAR_BLOCK                  0x40CE
 #define VAR_FRONTIER_FACILITY      0x40CF
 #define VAR_0x40D0                 0x40D0
 #define VAR_0x40D1                 0x40D1

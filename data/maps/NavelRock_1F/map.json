@@ -39,7 +39,7 @@
       "x": 7,
       "y": 22,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_BLOCK",
       "var_value": "0",
       "script": "NavelRock_1F_EventScript_CloseEntrance"
     },
@@ -48,7 +48,7 @@
       "x": 8,
       "y": 22,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_BLOCK",
       "var_value": "0",
       "script": "NavelRock_1F_EventScript_CloseEntrance"
     },
@@ -57,7 +57,7 @@
       "x": 9,
       "y": 22,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_BLOCK",
       "var_value": "0",
       "script": "NavelRock_1F_EventScript_CloseEntrance"
     }
