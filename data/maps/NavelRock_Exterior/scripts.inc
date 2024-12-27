@@ -19,7 +19,7 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	setvar VAR_0x8006, 4  @ Num shakes
 	setvar VAR_0x8007, 2  @ Shake delay
 	special ShakeScreen
-	setmetatile 9, 7, METATILE_NavelRock_Unblock, 0
+	setmetatile 9, 7, METATILE_SeviiIslands6_Unblock, 0
 	delay 30
 	clearflag FLAG_LUGIA_FLEE
 	addobject LOCALID_LUGIA
