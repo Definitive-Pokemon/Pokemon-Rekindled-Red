@@ -33,6 +33,7 @@ NavelRock_Exterior_EventScript_Defeated::
 	waitmovement 0
 	msgbox NavelRock_Exterior_Text_Asode, MSGBOX_NPC
 	closemessage
+	delay 20
 	setobjectxyperm LOCALID_MAXIMUS, 7, 9
 	setflag FLAG_ELM_NAVEL
 	release
@@ -56,7 +57,6 @@ NavelRock_Exterior_Movement_Aside2::
 	walk_left
 	walk_left
 	walk_up
-	face_right
 	step_end
 
 NavelRock_Exterior_Text_Asode::
