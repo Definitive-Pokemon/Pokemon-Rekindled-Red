@@ -66,6 +66,8 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	playmoncry SPECIES_LUGIA, 2
 	waitmoncry
 	delay 25
+	setweather 2
+	doweather
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_Back
 	waitmovement 0
 	delay 25
