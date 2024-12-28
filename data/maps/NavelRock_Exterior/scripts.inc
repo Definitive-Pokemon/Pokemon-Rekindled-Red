@@ -149,9 +149,9 @@ NavelRock_Exterior_EventScript_MaximusFinal::
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Exterior_Movement_Move
 	waitmovement 0
 	applymovement LOCALID_POLICELER, NavelRock_Exterior_Movement_Take
-	delay 40
+	delay 45
 	applymovement LOCALID_MAXIMUS, NavelRock_Exterior_Movement_Go
-	delay 20
+	delay 30
 	applymovement LOCALID_POLICE_GUY, NavelRock_Exterior_Movement_Take2
 	waitmovement 0
 	msgbox NavelRock_Exterior_Text_Aap
@@ -239,7 +239,6 @@ NavelRock_Exterior_Movement_Take::
 	walk_down
 	walk_down
 	walk_down
-	walk_right
 	walk_in_place_down
 	step_end
 
@@ -252,7 +251,6 @@ NavelRock_Exterior_Movement_Go::
 	walk_down
 	walk_down
 	walk_down
-	walk_right
 	walk_in_place_down
 	step_end
 
@@ -271,11 +269,11 @@ NavelRock_Exterior_Text_Returned::
 	.string "So, you've used LUGIA to escape\n"
 	.string "from a life of captivity.\p"
 	.string "Isn't that great for you!\p"
-	.string "I guess we'll be sharing a spot\n"
-	.string "on the SEAGALLOP!\p"
 	.string "My WARP DEVICE broke thanks to\n"
 	.string "the thunderstorm LUGIA keeps\l"
-	.string "around itself all the time.$"
+	.string "around itself all the time.\p"
+	.string "I guess we'll be sharing a spot\n"
+	.string "on the SEAGALLOP!$"
 
 NavelRock_Exterior_Text_HoldIt::
 	.string "Hold it right there!\p"
