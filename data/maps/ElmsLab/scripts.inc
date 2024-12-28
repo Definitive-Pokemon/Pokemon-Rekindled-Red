@@ -45,6 +45,8 @@ ElmsLab_EventScript_GoodJob::
 ElmsLab_Text_GoodJob::
 	.string "You did it?!\n"
 	.string "Amazing, {PLAYER}!\p"
+	.string "I'm glad I did right in calling\n"
+	.string "the POLICE FORCE.\p"
 	.string "With MAXIMUS in custody and\n"
 	.string "LUGIA calmed down, both KANTO\l"
 	.string "and JOHTO are safe once more!$"
