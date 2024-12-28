@@ -67,6 +67,7 @@ NavelRock_Base_EventScript_LugiaFirst::
 	waitmovement 0
 	delay 10
 	setvar VAR_BLOCK, 3
+	setflag FLAG_TO_END
 	warp MAP_NAVEL_ROCK_EXTERIOR, 9, 7
 	waitstate
 	release

@@ -62,8 +62,28 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	delay 25
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_Back
 	waitmovement 0
+	delay 25
 	releaseall
 	return
+
+Movement_LugiaGo::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
 
 NavelRock_Base_Movement_LugiaGoForth::
 	walk_in_place_down
@@ -93,6 +113,14 @@ NavelRock_Base_Movement_Back::
 	step_end
 
 NavelRock_Exterior_EventScript_MaximusFinal::
+	setvar VAR_0x8004, 8  @ Num loops
+	setvar VAR_0x8005, 35 @ Delay
+	special LoopWingFlapSound
+	playmoncry SPECIES_LUGIA, 2
+	applymovement LOCALID_LUGIA, Movement_LugiaGo
+	waitmovement 0
+	removeobject LOCALID_LUGIA
+	setflag FLAG_LUGIA_FLEE
 	msgbox NavelRock_Exterior_Text_Returned
 	closemessage
 	delay 20
@@ -254,7 +282,7 @@ NavelRock_Exterior_Text_HoldIt::
 NavelRock_Exterior_EventScript_Maximus::
 	lock
 	faceplayer
-	goto_if_eq VAR_BLOCK, 3, NavelRock_Exterior_EventScript_MaximusFinal
+	goto_if_set FLAG_TO_END, NavelRock_Exterior_EventScript_MaximusFinal
 	goto_if_set FLAG_ELM_NAVEL, NavelRock_Exterior_EventScript_AfterMaximus
 	trainerbattle_single TRAINER_COLLECTOR_MAXIMUS, NavelRock_Exterior_Text_Intro, NavelRock_Exterior_Text_Defeat, NavelRock_Exterior_EventScript_Defeated, NO_MUSIC
 	release
@@ -267,15 +295,15 @@ NavelRock_Base_Movement_Invis::
 NavelRock_Exterior_Text_Intro::
 	.string "How in blazes did you manage\n"
 	.string "to find this island?\p"
-	.string "You really are beginning\n"
-	.string "to bother me, you know that?\p"
-	.string "You want to stop me from\n"
-	.string "obtaining LUGIA, right?\p"
+	.string "You really are starting to bother me,\n"
+	.string "you know that?\p"
+	.string "You want to stop me from obtaining\n"
+	.string "LUGIA, am I right?\p"
 	.string "Not a chance!\p"
-	.string "I told you that I do not\n"
-	.string "do stuff like battling.\p"
-	.string "That's not entirely true.\n"
-	.string "I have battled many times\l"
+	.string "I told you that I do not do stuff\n"
+	.string "like battling.\p"
+	.string "That's not entirely true.\p"
+	.string "I have battled many times\n"
 	.string "in my life…\p"
 	.string "You do not want me to, but I guess\n"
 	.string "it's time to show you your place!$"
@@ -305,13 +333,12 @@ NavelRock_Exterior_Text_Done::
 	.string "Congratulations.\p"
 	.string "Without my POKéMON, I cannot\n"
 	.string "even capture LUGIA.\p"
-	.string "Seems you've achieved\n"
+	.string "It looks like you've achieved\n"
 	.string "your goal, TRAINER.\p"
 	.string "You can have LUGIA.\n"
 	.string "You have won fair and square.\p"
-	.string "Maybe I have been obsessed\n"
-	.string "with collecting POKéMON\l"
-	.string "for much too long…$"
+	.string "Maybe I have been obsessed with\n"
+	.string "collecting POKéMON for too long…$"
 
 NavelRock_Exterior_Movement_Aside1::
 	walk_in_place_down
@@ -340,9 +367,9 @@ NavelRock_Exterior_EventScript_AfterMaximus::
 
 NavelRock_Exterior_Text_After::
 	.string "You are incredibly powerful.\p"
-	.string "Using such potential for\n"
-	.string "the good of all POKéMON\l"
-	.string "is something to be proud of.$"
+	.string "Using such potential for the good\n"
+	.string "of all POKéMON is something to\l"
+	.string "be proud of.$"
 
 NavelRock_Exterior_EventScript_Sign::
 	msgbox NavelRock_Exterior_Text_Sign, MSGBOX_SIGN
