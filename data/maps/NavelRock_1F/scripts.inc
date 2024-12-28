@@ -22,6 +22,8 @@ NavelRock_1F_EventScript_CloseEntrance::
 	setmetatile 8, 23, METATILE_NavelRock_Floor, 0
 	msgbox NavelRock_1F_Text_Haha
 	closemessage
+	delay 60
+	msgbox NavelRock_1F_Text_Huh
 	setvar VAR_BLOCK, 1
 	releaseall
 	end
@@ -31,4 +33,13 @@ NavelRock_1F_Block::
 	return
 
 NavelRock_1F_Text_Haha::
-	.string "Haha$"
+	.string "HAHAHAHA!\n"
+	.string "Idiot.\p"
+	.string "You can have LUGIA…\n"
+	.string "and rot within NAVEL ROCK!\p"
+	.string "Goodbye, TRAINER!$"
+
+NavelRock_1F_Text_Huh::
+	.string "What…?!\p"
+	.string "My WARPING DEVICE!\n"
+	.string "It's malfunctioning!$"
