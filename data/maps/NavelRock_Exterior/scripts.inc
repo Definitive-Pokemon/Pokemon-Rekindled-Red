@@ -197,6 +197,12 @@ NavelRock_Exterior_Movement_LastMax::
 	walk_in_place_down
 	step_end
 
+NavelRock_Exterior_Movement_LastPoliceGuy::
+	walk_down
+	walk_down
+	walk_in_place_down
+	step_end
+
 NavelRock_Exterior_Text_Police::
 	.string "You're coming with us, MAXIMUS.\p"
 	.string "The KANTO POLICE FORCE has heard\n"
