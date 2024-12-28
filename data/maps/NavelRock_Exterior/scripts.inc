@@ -113,7 +113,7 @@ NavelRock_Exterior_EventScript_MaximusFinal::
 	applymovement LOCALID_MAXIMUS, NavelRock_Exterior_Movement_Go
 	delay 20
 	applymovement LOCALID_POLICE_GUY, NavelRock_Exterior_Movement_Take2
-	waitmovement
+	waitmovement 0
 	msgbox NavelRock_Exterior_Text_Aap
 	closemessage
 	delay 50
