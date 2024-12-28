@@ -343,9 +343,7 @@ MonitoringStation_EventScript_RocketRight::
 	
 MonitoringStation_EventScript_Rocket::
 	setvar VAR_HONEY2, 1
-	setvar VAR_HONEY1, 1
 	setflag FLAG_HIDE_ADMIN2
-	setflag FLAG_HIDE_HORROR_NPC
 	setvar VAR_TAKEKEY, 1
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	compare VAR_TEMP_1, 0
