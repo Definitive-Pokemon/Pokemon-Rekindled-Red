@@ -1,8 +1,12 @@
 NavelRock_1F_MapScripts::
-map_script MAP_SCRIPT_ON_TRANSITION, NavelRock_1F_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, NavelRock_1F_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, NavelRock_1F_OnLoad
 	.byte 0
 
 NavelRock_1F_OnTransition::
+	end
+
+NavelRock_1F_OnLoad::
 	call_if_eq VAR_BLOCK, 1, NavelRock_1F_Block
 	end
 
@@ -24,7 +28,6 @@ NavelRock_1F_EventScript_CloseEntrance::
 
 NavelRock_1F_Block::
 	setmetatile 8, 23, METATILE_NavelRock_Floor, 0
-	special DrawWholeMapView
 	return
 
 NavelRock_1F_Text_Haha::
