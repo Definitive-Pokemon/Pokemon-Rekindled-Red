@@ -12,6 +12,7 @@ ElmsLab_EventScript_Elm::
 	lock
 	faceplayer
 	goto_if_unset FLAG_ELM_NAVEL, ElmsLab_EventScript_Crisis
+	goto_if_unset FLAG_ELM_DONE, ElmsLab_EventScript_GoodJob
 	specialvar VAR_RESULT, HasAllMons
 	goto_if_eq VAR_RESULT, TRUE, ElmsLab_EventScript_CompletedDex
 	msgbox ElmsLab_Text_NoProblem, MSGBOX_NPC
@@ -33,6 +34,20 @@ ElmsLab_EventScript_Crisis::
 	msgbox ElmsLab_Text_ElmNavel, MSGBOX_NPC
 	release
 	end
+
+ElmsLab_EventScript_GoodJob::
+	msgbox ElmsLab_Text_GoodJob, MSGBOX_NPC
+	closemessage
+	setflag FLAG_ELM_DONE
+	release
+	end
+
+ElmsLab_Text_GoodJob::
+	.string "You did it?!\n"
+	.string "Amazing, {PLAYER}!\p"
+	.string "With MAXIMUS in custody and\n"
+	.string "LUGIA calmed down, both KANTO\l"
+	.string "and JOHTO are safe once more!$"
 
 ElmsLab_Text_Crisis::
 	.string "Heya!\n"

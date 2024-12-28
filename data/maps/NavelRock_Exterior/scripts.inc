@@ -149,7 +149,7 @@ NavelRock_Exterior_EventScript_MaximusFinal::
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Exterior_Movement_Move
 	waitmovement 0
 	applymovement LOCALID_POLICELER, NavelRock_Exterior_Movement_Take
-	delay 20
+	delay 40
 	applymovement LOCALID_MAXIMUS, NavelRock_Exterior_Movement_Go
 	delay 20
 	applymovement LOCALID_POLICE_GUY, NavelRock_Exterior_Movement_Take2
@@ -163,6 +163,7 @@ NavelRock_Exterior_EventScript_MaximusFinal::
 	setflag FLAG_MAXIMUS_GONE
 	fadenewbgm MUS_NONE
 	delay 50
+	setflag FLAG_ELM_NAVEL
 	releaseall
 	return
 
@@ -233,6 +234,7 @@ NavelRock_Exterior_Movement_Take::
 	delay_16
 	walk_down
 	walk_down
+	walk_right
 	walk_down
 	walk_down
 	walk_down
@@ -245,6 +247,7 @@ NavelRock_Exterior_Movement_Go::
 	walk_down
 	walk_down
 	walk_down
+	walk_right
 	walk_down
 	walk_down
 	walk_down
@@ -283,7 +286,7 @@ NavelRock_Exterior_EventScript_Maximus::
 	lock
 	faceplayer
 	goto_if_set FLAG_TO_END, NavelRock_Exterior_EventScript_MaximusFinal
-	goto_if_set FLAG_ELM_NAVEL, NavelRock_Exterior_EventScript_AfterMaximus
+	goto_if_set FLAG_DEFEATED_MAXIMUS, NavelRock_Exterior_EventScript_AfterMaximus
 	trainerbattle_single TRAINER_COLLECTOR_MAXIMUS, NavelRock_Exterior_Text_Intro, NavelRock_Exterior_Text_Defeat, NavelRock_Exterior_EventScript_Defeated, NO_MUSIC
 	release
 	end
@@ -323,8 +326,8 @@ NavelRock_Exterior_EventScript_Defeated::
 	msgbox NavelRock_Exterior_Text_Asode, MSGBOX_NPC
 	closemessage
 	delay 20
-	setflag FLAG_ELM_NAVEL
 	setvar VAR_BLOCK, 1
+	setflag FLAG_DEFEATED_MAXIMUS
 	release
 	end
 
