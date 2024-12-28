@@ -166,7 +166,7 @@ NavelRock_Exterior_EventScript_MaximusFinal::
 	closemessage
 	playse SE_EXIT
 	applymovement LOCALID_POLICELER, NavelRock_Exterior_Movement_LastPoliceler
-	waitmovement
+	waitmovement 0
 	removeobject LOCALID_POLICELER
 	waitse
 	playse SE_EXIT
