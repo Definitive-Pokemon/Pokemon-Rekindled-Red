@@ -16,6 +16,7 @@ NavelRock_Exterior_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR
 	call_if_eq VAR_BLOCK, 1, NavelRock_Exterior_EventScript_Moved
 	call_if_eq VAR_BLOCK, 3, NavelRock_Exterior_EventScript_Location
+	call_if_eq VAR_BLOCK, 4, NavelRock_Exterior_EventScript_Music
 	end
 
 NavelRock_Exterior_OnFrame::
@@ -24,6 +25,12 @@ NavelRock_Exterior_OnFrame::
 
 NavelRock_Exterior_EventScript_Moved::
 	setobjectxyperm LOCALID_MAXIMUS, 8, 10
+	return
+
+NavelRock_Exterior_EventScript_Music::
+	fadenewbgm MUS_SEVII_ROUTE
+	setweather 2
+	doweather
 	return
 
 NavelRock_Exterior_EventScript_Location::
@@ -39,7 +46,6 @@ NavelRock_Exterior_Block::
 NavelRock_Exterior_EventScript_SetUpFinale::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_Invis
-	setvar VAR_BLOCK, 4
 	delay 100
 	playse SE_THUNDERSTORM_STOP
 	setvar VAR_0x8004, 0  @ Vertical pan
@@ -156,16 +162,38 @@ NavelRock_Exterior_EventScript_MaximusFinal::
 	waitmovement 0
 	msgbox NavelRock_Exterior_Text_Aap
 	closemessage
+	playse SE_EXIT
+	applymovement LOCALID_POLICELER, NavelRock_Exterior_Movement_LastPoliceler
+	waitmovement
 	removeobject LOCALID_POLICELER
+	waitse
+	playse SE_EXIT
+	applymovement LOCALID_MAXIMUS, NavelRock_Exterior_Movement_LastMax
+	waitmovement 0
 	removeobject LOCALID_MAXIMUS
+	waitse
+	playse SE_EXIT
+	applymovement LOCALID_POLICE_GUY, NavelRock_Exterior_Movement_LastPoliceGuy
+	waitmovement 0
 	removeobject LOCALID_POLICE_GUY
+	waitse
 	setflag FLAG_HIDE_NAVEL_POLICE
 	setflag FLAG_MAXIMUS_GONE
-	fadenewbgm MUS_NONE
+	fadenewbgm MUS_SEVII_ROUTE
 	delay 50
 	setflag FLAG_ELM_NAVEL
+	setvar VAR_BLOCK, 4
 	releaseall
 	return
+
+NavelRock_Exterior_Movement_LastPoliceler::
+	walk_in_place_down
+	step_end
+
+NavelRock_Exterior_Movement_LastMax::
+	walk_down
+	walk_in_place_down
+	step_end
 
 NavelRock_Exterior_Text_Police::
 	.string "You're coming with us, MAXIMUS.\p"
@@ -250,8 +278,6 @@ NavelRock_Exterior_Movement_Go::
 	walk_down
 	walk_down
 	walk_down
-	walk_down
-	walk_in_place_down
 	step_end
 
 NavelRock_Exterior_Movement_Take2::
@@ -260,9 +286,6 @@ NavelRock_Exterior_Movement_Take2::
 	walk_down
 	walk_down
 	walk_down
-	walk_down
-	walk_down
-	walk_in_place_down
 	step_end
 	
 NavelRock_Exterior_Text_Returned::
