@@ -28,7 +28,7 @@ NavelRock_Exterior_EventScript_Moved::
 	return
 
 NavelRock_Exterior_EventScript_Music::
-	fadenewbgm MUS_SEVII_ROUTE
+	playbgm MUS_SEVII_ROUTE, 0
 	setweather 2
 	doweather
 	return
@@ -170,14 +170,14 @@ NavelRock_Exterior_EventScript_MaximusFinal::
 	waitmovement 0
 	removeobject LOCALID_POLICELER
 	waitse
-	playse SE_EXIT
 	applymovement LOCALID_MAXIMUS, NavelRock_Exterior_Movement_LastMax
 	waitmovement 0
+	playse SE_EXIT
 	removeobject LOCALID_MAXIMUS
 	waitse
-	playse SE_EXIT
 	applymovement LOCALID_POLICE_GUY, NavelRock_Exterior_Movement_LastPoliceGuy
 	waitmovement 0
+	playse SE_EXIT
 	removeobject LOCALID_POLICE_GUY
 	waitse
 	setflag FLAG_HIDE_NAVEL_POLICE
