@@ -7,11 +7,12 @@ NavelRock_1F_OnTransition::
 	end
 
 NavelRock_1F_OnLoad::
-	call_if_eq VAR_BLOCK, 1, NavelRock_1F_Block
+	call_if_eq VAR_BLOCK, 2, NavelRock_1F_Block
 	end
 
 NavelRock_1F_EventScript_CloseEntrance::
 	lockall
+	textcolor 0
 	playse SE_THUNDERSTORM_STOP
 	setvar VAR_0x8004, 0  @ Vertical pan
 	setvar VAR_0x8005, 3  @ Horizontal pan
@@ -24,7 +25,7 @@ NavelRock_1F_EventScript_CloseEntrance::
 	closemessage
 	delay 60
 	msgbox NavelRock_1F_Text_Huh
-	setvar VAR_BLOCK, 1
+	setvar VAR_BLOCK, 2
 	releaseall
 	end
 

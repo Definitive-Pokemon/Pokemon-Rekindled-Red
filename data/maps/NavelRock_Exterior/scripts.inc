@@ -6,29 +6,40 @@
 NavelRock_Exterior_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, NavelRock_Exterior_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, NavelRock_Exterior_OnFrame
+	map_script MAP_SCRIPT_ON_LOAD, NavelRock_Exterior_OnLoad
 	.byte 0
+
+NavelRock_Exterior_OnLoad::
+	call_if_eq VAR_BLOCK, 3, NavelRock_Exterior_Block
 
 NavelRock_Exterior_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR
-	call_if_eq VAR_BLOCK, 2, NavelRock_Exterior_EventScript_Location
+	call_if_eq VAR_BLOCK, 1, NavelRock_Exterior_EventScript_Moved
+	call_if_eq VAR_BLOCK, 3, NavelRock_Exterior_EventScript_Location
 	end
 
 NavelRock_Exterior_OnFrame::
-	map_script_2 VAR_BLOCK, 2, NavelRock_Exterior_EventScript_SetUpFinale
+	map_script_2 VAR_BLOCK, 3, NavelRock_Exterior_EventScript_SetUpFinale
 	.2byte 0
+
+NavelRock_Exterior_EventScript_Moved::
+	setobjectxyperm LOCALID_MAXIMUS, 8, 10
+	return
 
 NavelRock_Exterior_EventScript_Location::
 	setobjectxyperm LOCALID_MAXIMUS, 8, 9
+	return
+
+NavelRock_Exterior_Block::
 	setmetatile 8, 9, METATILE_General_Floory, 0
 	setmetatile 9, 9, METATILE_SeviiIslands6_Rocky, 1
 	special DrawWholeMapView
 	return
-	
 
 NavelRock_Exterior_EventScript_SetUpFinale::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_Invis
-	setvar VAR_BLOCK, 3
+	setvar VAR_BLOCK, 4
 	delay 100
 	playse SE_THUNDERSTORM_STOP
 	setvar VAR_0x8004, 0  @ Vertical pan
@@ -87,6 +98,7 @@ NavelRock_Exterior_EventScript_MaximusFinal::
 	delay 20
 	msgbox NavelRock_Exterior_Text_HoldIt
 	closemessage
+	playbgm MUS_FUCHSIA, 0
 	clearflag FLAG_HIDE_NAVEL_POLICE
 	addobject LOCALID_POLICELER
 	addobject LOCALID_POLICE_GUY
@@ -116,6 +128,12 @@ NavelRock_Exterior_EventScript_MaximusFinal::
 	waitmovement 0
 	msgbox NavelRock_Exterior_Text_Aap
 	closemessage
+	removeobject LOCALID_POLICELER
+	removeobject LOCALID_MAXIMUS
+	removeobject LOCALID_POLICE_GUY
+	setflag FLAG_HIDE_NAVEL_POLICE
+	setflag FLAG_MAXIMUS_GONE
+	fadenewbgm MUS_NONE
 	delay 50
 	releaseall
 	return
@@ -127,9 +145,9 @@ NavelRock_Exterior_Text_Police::
 	.string "KANTO's legendary POKéMON.$"
 
 NavelRock_Exterior_Text_Response::
-	.string "Mother of…\n"
-	.string "Who do you think you are,\p"
-	.string "you jumped-up piece of…\n"
+	.string "Mother of…\p"
+	.string "Who do you think you are,\n"
+	.string "you jumped-up piece of…\l"
 	.string "third-rate Columbo!$"
 
 NavelRock_Exterior_Text_Nu::
@@ -160,9 +178,9 @@ NavelRock_Exterior_Movement_Police_Guy::
 	step_end
 
 NavelRock_Base_Movement_Response::
-	walk_in_place_down
-	delay_16
 	walk_in_place_right
+	delay_16
+	walk_in_place_down
 	step_end
 
 NavelRock_Exterior_Movement_Flop::
@@ -219,20 +237,19 @@ NavelRock_Exterior_Movement_Take2::
 	step_end
 	
 NavelRock_Exterior_Text_Returned::
-	.string "So, you've used LUGIA\n"
-	.string "to escape from a life\l"
-	.string "of captivity.\p"
+	.string "So, you've used LUGIA to escape\n"
+	.string "from a life of captivity.\p"
 	.string "Isn't that great for you!\p"
-	.string "I guess we'll be sharing\n"
-	.string "a spot on the SEAGALLOP!\p"
+	.string "I guess we'll be sharing a spot\n"
+	.string "on the SEAGALLOP!\p"
 	.string "My WARP DEVICE broke thanks to\n"
 	.string "the thunderstorm LUGIA keeps\l"
 	.string "around itself all the time.$"
 
 NavelRock_Exterior_Text_HoldIt::
 	.string "Hold it right there!\p"
-	.string "The only thing you'll\n"
-	.string "be sharing is a prison cell!$"
+	.string "The only thing you'll be sharing\n"
+	.string "is a prison cell!$"
 
 NavelRock_Exterior_EventScript_Maximus::
 	lock
@@ -260,9 +277,8 @@ NavelRock_Exterior_Text_Intro::
 	.string "That's not entirely true.\n"
 	.string "I have battled many times\l"
 	.string "in my life…\p"
-	.string "You do not want me to,\n"
-	.string "but I guess it's time\l"
-	.string "to show you your place!$"
+	.string "You do not want me to, but I guess\n"
+	.string "it's time to show you your place!$"
 
 NavelRock_Exterior_Text_Defeat::
 	.string "You little… !$"
@@ -280,21 +296,22 @@ NavelRock_Exterior_EventScript_Defeated::
 	closemessage
 	delay 20
 	setflag FLAG_ELM_NAVEL
+	setvar VAR_BLOCK, 1
 	release
 	end
 
 NavelRock_Exterior_Text_Done::
 	.string "You win.\n"
 	.string "Congratulations.\p"
-	.string "Without my POKéMON team,\n"
-	.string "I cannot even catch LUGIA.\p"
+	.string "Without my POKéMON, I cannot\n"
+	.string "even capture LUGIA.\p"
 	.string "Seems you've achieved\n"
 	.string "your goal, TRAINER.\p"
 	.string "You can have LUGIA.\n"
-	.string "I am stepping aside.\p"
-	.string "Maybe I have been too obsessed\n"
-	.string "with collecting POKéMON for\l"
-	.string "a long time…$"
+	.string "You have won fair and square.\p"
+	.string "Maybe I have been obsessed\n"
+	.string "with collecting POKéMON\l"
+	.string "for much too long…$"
 
 NavelRock_Exterior_Movement_Aside1::
 	walk_in_place_down
@@ -313,7 +330,8 @@ NavelRock_Exterior_Movement_Aside2::
 	step_end
 
 NavelRock_Exterior_Text_Asode::
-	.string "I'm now aside. Move along.$"
+	.string "There.\n"
+	.string "Go ahead and capture LUGIA.$"
 
 NavelRock_Exterior_EventScript_AfterMaximus::
 	msgbox NavelRock_Exterior_Text_After
@@ -321,7 +339,10 @@ NavelRock_Exterior_EventScript_AfterMaximus::
 	end
 
 NavelRock_Exterior_Text_After::
-	.string "Oh yeah. Fuck you.$"
+	.string "You are incredibly powerful.\p"
+	.string "Using such potential for\n"
+	.string "the good of all POKéMON\l"
+	.string "is something to be proud of.$"
 
 NavelRock_Exterior_EventScript_Sign::
 	msgbox NavelRock_Exterior_Text_Sign, MSGBOX_SIGN

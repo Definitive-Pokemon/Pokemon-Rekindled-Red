@@ -1307,7 +1307,7 @@
 #define FLAG_HIDE_FING_BALL               0x4EC
 #define FLAG_LUGIA_FLEE               0x4ED
 #define FLAG_HIDE_NAVEL_POLICE               0x4EE
-#define FLAG_0x4EF               0x4EF
+#define FLAG_MAXIMUS_GONE               0x4EF
 #define FLAG_0x4F0               0x4F0
 #define FLAG_0x4F1               0x4F1
 #define FLAG_0x4F2               0x4F2

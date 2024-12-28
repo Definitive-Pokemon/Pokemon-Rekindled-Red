@@ -66,7 +66,7 @@ NavelRock_Base_EventScript_LugiaFirst::
 	applymovement LOCALID_LUGIA, Movement_LugiaBackUp2
 	waitmovement 0
 	delay 10
-	setvar VAR_BLOCK, 2
+	setvar VAR_BLOCK, 3
 	warp MAP_NAVEL_ROCK_EXTERIOR, 9, 7
 	waitstate
 	release
@@ -129,7 +129,7 @@ MtSilverLugia_Movement_CameraBackUp2::
 NavelRock_Base_EventScript_Lugia::
 	lock
 	faceplayer
-	goto_if_eq VAR_BLOCK, 1, NavelRock_Base_EventScript_LugiaFirst
+	goto_if_eq VAR_BLOCK, 2, NavelRock_Base_EventScript_LugiaFirst
 	waitse
 	delay 20
 	playse SE_THUNDERSTORM_STOP
