@@ -45,6 +45,7 @@ NavelRock_Exterior_Block::
 
 NavelRock_Exterior_EventScript_SetUpFinale::
 	lockall
+	setvar VAR_BLOCK, 4
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_Invis
 	delay 100
 	playse SE_THUNDERSTORM_STOP
@@ -184,7 +185,6 @@ NavelRock_Exterior_EventScript_MaximusFinal::
 	fadenewbgm MUS_SEVII_ROUTE
 	delay 50
 	setflag FLAG_ELM_NAVEL
-	setvar VAR_BLOCK, 4
 	releaseall
 	return
 
