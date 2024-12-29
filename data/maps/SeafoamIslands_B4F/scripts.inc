@@ -63,7 +63,7 @@ SeafoamIslands_B4F_EventScript_Maximus::
 	waitmovement 0
 	textcolor 2
 	msgbox SeafoamIslands_B4F_Text_MaximusTook, MSGBOX_NPC
-	closemessage
+	waitmessage
 	delay 80
 	applymovement LOCALID_MAXIMUS, SeafoamIslands_B4F_Movement_Face
 	waitmovement 0
