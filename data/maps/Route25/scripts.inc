@@ -9,7 +9,8 @@ Route25_MapScripts::
 	.byte 0
 
 Route25_OnLoad::
-	goto_if_set FLAG_HIDE_SUICUNE_ROAM, DontShowSuicuneYet
+	compare_var_to_value VAR_SUICUNE, 0
+	goto_if_eq DontShowSuicuneYet
 	call_if_unset FLAG_FOUGHT_SUICUNE, Route25_EventScript_TryShowSuicune
 DontShowSuicuneYet::
 	end

@@ -7,7 +7,8 @@ VictoryRoad_Entei_MapScripts::
 	.byte 0
 
 VictoryRoad_Entei_OnLoad::
-	goto_if_set FLAG_HIDE_ENTEI_ROAM, DontShowEnteiYet
+	compare_var_to_value VAR_ENTEI, 0
+	goto_if_eq DontShowEnteiYet
 	call_if_unset FLAG_FOUGHT_ENTEI, VictoryRoad_Entei_EventScript_TryShowEntei
 DontShowEnteiYet::
 	end

@@ -135,6 +135,18 @@ FameCheckerFull::
 	famechecker FAMECHECKER_BLAINE, 5
 	end
 
+RaikouVar1::
+	setvar VAR_RAIKOU, 1
+	end
+
+EnteiVar1::
+	setvar VAR_ENTEI, 1
+	end
+
+SuicuneVar1::
+	setvar VAR_SUICUNE, 1
+	end
+
 FourIslandWarp::
 	warp MAP_FOUR_ISLAND, 19, 21
 	end

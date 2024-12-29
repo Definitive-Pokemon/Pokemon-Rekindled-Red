@@ -7,7 +7,8 @@ CinnabarCavern_MapScripts::
 	.byte 0
 
 CinnabarCavern_OnLoad::
-	goto_if_set FLAG_HIDE_RAIKOU_ROAM, DontShowRaikouYet
+	compare_var_to_value VAR_RAIKOU, 0
+	goto_if_eq DontShowRaikouYet
 	call_if_unset FLAG_FOUGHT_RAIKOU, CinnabarCavern_EventScript_TryShowRaikou
 DontShowRaikouYet::
 	end

@@ -258,9 +258,9 @@
 #define VAR_NEW_BARK_ACCESS        0x40CD
 #define VAR_BLOCK                  0x40CE
 #define VAR_FRONTIER_FACILITY      0x40CF
-#define VAR_0x40D0                 0x40D0
-#define VAR_0x40D1                 0x40D1
-#define VAR_0x40D2                 0x40D2
+#define VAR_ENTEI                  0x40D0
+#define VAR_RAIKOU                 0x40D1
+#define VAR_SUICUNE                0x40D2
 #define VAR_0x40D3                 0x40D3
 #define VAR_0x40D4                 0x40D4
 #define VAR_0x40D5                 0x40D5

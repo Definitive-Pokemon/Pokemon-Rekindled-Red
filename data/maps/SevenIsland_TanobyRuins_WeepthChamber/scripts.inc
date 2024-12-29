@@ -25,6 +25,7 @@ SevenIsland_TanobyRuins_WeepthChamber_EventScript_Entei::
     msgbox SevenIsland_TanobyRuins_WeepthChamber_Text_EnteiFled
 	closemessage
 	clearflag FLAG_HIDE_ENTEI_ROAM
+	setvar VAR_ENTEI, 1
 	releaseall
 	end
 	

@@ -25,6 +25,7 @@ SevenIsland_TanobyRuins_DilfordChamber_EventScript_Suicune::
     msgbox SevenIsland_TanobyRuins_DilfordChamber_Text_SuicuneFled
 	closemessage
 	clearflag FLAG_HIDE_SUICUNE_ROAM
+	setvar VAR_SUICUNE, 1
 	releaseall
 	end
 	

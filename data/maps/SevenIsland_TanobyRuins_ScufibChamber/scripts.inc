@@ -25,6 +25,7 @@ SevenIsland_TanobyRuins_ScufibChamber_EventScript_Raikou::
     msgbox SevenIsland_TanobyRuins_ScufibChamber_Text_RaikouFled
 	closemessage
 	clearflag FLAG_HIDE_RAIKOU_ROAM
+	setvar VAR_RAIKOU, 1
 	releaseall
 	end
 	
