@@ -25,31 +25,36 @@
 
 SevenIsland_House_Room2_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SevenIsland_House_Room2_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, SevenIsland_House_Room2_OnLoad
 	.byte 0
+
+SevenIsland_House_Room2_OnLoad::
+	setflag FLAG_TEMP_3
+	end
 
 SevenIsland_House_Room2_OnTransition::
 	setvar TYPE, CHECK_VISITOR_STATE
 	setvar ARGUMENT, FAMECHECKER_BROCK
 	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, 0, SevenIsland_House_Room2_HideBrock
+	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideBrock
 	setvar ARGUMENT, FAMECHECKER_MISTY
 	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, 0, SevenIsland_House_Room2_HideMisty
+	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideMisty
 	setvar ARGUMENT, FAMECHECKER_LTSURGE
 	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, 0, SevenIsland_House_Room2_HideLtSurge
+	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideLtSurge
 	setvar ARGUMENT, FAMECHECKER_ERIKA
 	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, 0, SevenIsland_House_Room2_HideErika
+	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideErika
 	setvar ARGUMENT, FAMECHECKER_KOGA
 	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, 0, SevenIsland_House_Room2_HideKoga
+	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideKoga
 	setvar ARGUMENT, FAMECHECKER_SABRINA
 	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, 0, SevenIsland_House_Room2_HideSabrina
+	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideSabrina
 	setvar ARGUMENT, FAMECHECKER_BLAINE
 	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, 0, SevenIsland_House_Room2_HideBlaine
+	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideBlaine
 	end
 
 SevenIsland_House_Room2_HideBrock::
