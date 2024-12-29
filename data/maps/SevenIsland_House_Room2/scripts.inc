@@ -24,10 +24,10 @@
 .equ Y_COORD, VAR_TEMP_8
 
 SevenIsland_House_Room2_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, SevenIsland_House_Room2_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, SevenIsland_House_Room2_OnLoad
 	.byte 0
 
-SevenIsland_House_Room2_OnTransition::
+SevenIsland_House_Room2_OnLoad::
 	setvar TYPE, CHECK_VISITOR_STATE
 	setvar ARGUMENT, FAMECHECKER_BROCK
 	callnative UseBattleHouseVar
