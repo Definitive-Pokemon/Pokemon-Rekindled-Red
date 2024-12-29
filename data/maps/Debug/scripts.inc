@@ -103,12 +103,12 @@ FameCheckerFull::
 	famechecker FAMECHECKER_MISTY, 3
 	famechecker FAMECHECKER_MISTY, 4
 	famechecker FAMECHECKER_MISTY, 5
-	famechecker FAMECHECKER_LT.SURGE, 0
-	famechecker FAMECHECKER_LT.SURGE, 1
-	famechecker FAMECHECKER_LT.SURGE, 2
-	famechecker FAMECHECKER_LT.SURGE, 3
-	famechecker FAMECHECKER_LT.SURGE, 4
-	famechecker FAMECHECKER_LT.SURGE, 5
+	famechecker FAMECHECKER_LTSURGE, 0
+	famechecker FAMECHECKER_LTSURGE, 1
+	famechecker FAMECHECKER_LTSURGE, 2
+	famechecker FAMECHECKER_LTSURGE, 3
+	famechecker FAMECHECKER_LTSURGE, 4
+	famechecker FAMECHECKER_LTSURGE, 5
 	famechecker FAMECHECKER_ERIKA, 0
 	famechecker FAMECHECKER_ERIKA, 1
 	famechecker FAMECHECKER_ERIKA, 2
