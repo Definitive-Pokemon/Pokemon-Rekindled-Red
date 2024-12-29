@@ -69,6 +69,7 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	delay 25
 	setweather 2
 	doweather
+	showobjectat OBJ_EVENT_ID_PLAYER, MAP_NAVEL_ROCK_EXTERIOR
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_Back
 	waitmovement 0
 	delay 25
@@ -117,7 +118,6 @@ NavelRock_Base_Movement_LugiaGoForth::
 	step_end
 
 NavelRock_Base_Movement_Back::
-	set_visible
 	walk_up
 	step_end
 
