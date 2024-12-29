@@ -63,12 +63,11 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	setvar VAR_0x8005, 35 @ Delay
 	applymovement LOCALID_LUGIA, NavelRock_Base_Movement_LugiaGoForth
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_LugiaGoForth
-	delay 100
-	playmoncry SPECIES_LUGIA, 2
-	waitmoncry
-	delay 25
 	setweather 2
 	doweather
+	playmoncry SPECIES_LUGIA, 2
+	waitmoncry
+	waitmovement 0
 	showobjectat OBJ_EVENT_ID_PLAYER, MAP_NAVEL_ROCK_EXTERIOR
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_Back
 	waitmovement 0
