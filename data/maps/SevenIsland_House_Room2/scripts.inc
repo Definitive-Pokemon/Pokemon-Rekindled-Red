@@ -53,30 +53,37 @@ SevenIsland_House_Room2_OnTransition::
 	end
 
 SevenIsland_House_Room2_HideBrock::
+	playse SE_BANG
 	setflag FLAG_TEMP_1
 	return
 
 SevenIsland_House_Room2_HideMisty::
+	playse SE_BANG
 	setflag FLAG_TEMP_2
 	return
 
 SevenIsland_House_Room2_HideLtSurge::
+	playse SE_BANG
 	setflag FLAG_TEMP_3
 	return
 
 SevenIsland_House_Room2_HideErika::
+	playse SE_BANG
 	setflag FLAG_TEMP_4
 	return
 
 SevenIsland_House_Room2_HideKoga::
+	playse SE_BANG
 	setflag FLAG_TEMP_5
 	return
 
 SevenIsland_House_Room2_HideSabrina::
+	playse SE_BANG
 	setflag FLAG_TEMP_6
 	return
 
 SevenIsland_House_Room2_HideBlaine::
+	playse SE_BANG
 	setflag FLAG_TEMP_7
 	return	
 
