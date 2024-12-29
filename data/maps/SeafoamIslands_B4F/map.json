@@ -138,7 +138,7 @@
       "x": 12,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_SEAFOAM_ISLANDS_B4F",
+      "dest_map": "MAP_DEBUG",
       "dest_warp_id": "0"
     }
   ],
