@@ -33,6 +33,7 @@ SevenIsland_House_Room2_OnLoad::
 	end
 
 SevenIsland_House_Room2_OnTransition::
+    setvar VAR_BLOCK, 1
 	setvar TYPE, CHECK_VISITOR_STATE
 	setvar ARGUMENT, FAMECHECKER_BROCK
 	callnative UseBattleHouseVar
