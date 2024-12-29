@@ -15,6 +15,7 @@
 #include "party_menu.h"
 #include "pokemon_storage_system.h"
 #include "quest_log.h"
+#include "constants/songs.h"
 #include "script_pokemon_util.h"
 #include "constants/items.h"
 #include "constants/map_scripts.h"
@@ -1139,6 +1140,8 @@ void UseBattleHouseVar(void)
                     break;
                 case FAMECHECKER_MISTY:
                     gSpecialVar_Result = BattleHouseVar->visitorMisty;
+                    if (BattleHouseVar->visitorMisty)
+                        PlaySE(SE_BANG);
                     break;
                 case FAMECHECKER_LTSURGE:
                     gSpecialVar_Result = BattleHouseVar->visitorLtSurge;
