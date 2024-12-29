@@ -9,6 +9,10 @@ Green_Give_RainbowWing_Debug::
 
 Debug_Text::
     .string "I AM NO ERROR$"
+	
+MoltresMaxiFlag::
+	setflag FLAG_MOLTRES_FIRST_TIME
+	end
 
 Debug_UnlockGame::
 	@unlock all fly locations
