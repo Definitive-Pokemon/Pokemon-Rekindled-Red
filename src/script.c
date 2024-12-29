@@ -1140,8 +1140,6 @@ void UseBattleHouseVar(void)
                     break;
                 case FAMECHECKER_MISTY:
                     gSpecialVar_Result = BattleHouseVar->visitorMisty;
-                    if (BattleHouseVar->visitorMisty)
-                        PlaySE(SE_BANG);
                     break;
                 case FAMECHECKER_LTSURGE:
                     gSpecialVar_Result = BattleHouseVar->visitorLtSurge;

@@ -53,7 +53,6 @@ SevenIsland_House_Room2_OnTransition::
 	end
 
 SevenIsland_House_Room2_HideBrock::
-	playse SE_BANG
 	setflag FLAG_TEMP_1
 	return
 
