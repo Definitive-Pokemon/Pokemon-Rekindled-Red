@@ -2,7 +2,7 @@
   "id": "MAP_SEVEN_ISLAND_HOUSE_ROOM2",
   "name": "SevenIsland_House_Room2",
   "layout": "LAYOUT_SEVEN_ISLAND_HOUSE_ROOM2",
-  "music": "MUS_MYSTERY_GIFT",
+  "music": "MUS_SEVII_67",
   "region_map_section": "MAPSEC_SEVEN_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -18,7 +18,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BROCK",
-      "in_connection": false,
       "x": 0,
       "y": 6,
       "elevation": 0,
@@ -28,12 +27,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SevenIsland_House_Room2_Eventscript_Brock",
-      "flag": "FLAG_TEMP_1"
+      "flag": "FLAG_TEMP_1",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MISTY",
-      "in_connection": false,
       "x": 5,
       "y": 2,
       "elevation": 3,
@@ -43,12 +42,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SevenIsland_House_Room2_Eventscript_Misty",
-      "flag": "FLAG_TEMP_2"
+      "flag": "FLAG_TEMP_2",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LT_SURGE",
-      "in_connection": false,
       "x": 8,
       "y": 4,
       "elevation": 3,
@@ -58,12 +57,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SevenIsland_House_Room2_Eventscript_LtSurge",
-      "flag": "FLAG_TEMP_3"
+      "flag": "FLAG_TEMP_3",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ERIKA",
-      "in_connection": false,
       "x": 1,
       "y": 2,
       "elevation": 3,
@@ -73,12 +72,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SevenIsland_House_Room2_Eventscript_Erika",
-      "flag": "FLAG_TEMP_4"
+      "flag": "FLAG_TEMP_4",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KOGA",
-      "in_connection": false,
       "x": 7,
       "y": 8,
       "elevation": 3,
@@ -88,12 +87,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SevenIsland_House_Room2_Eventscript_Koga",
-      "flag": "FLAG_TEMP_5"
+      "flag": "FLAG_TEMP_5",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SABRINA",
-      "in_connection": false,
       "x": 3,
       "y": 7,
       "elevation": 3,
@@ -103,12 +102,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SevenIsland_House_Room2_Eventscript_Sabrina",
-      "flag": "FLAG_TEMP_6"
+      "flag": "FLAG_TEMP_6",
+      "in_connection": false
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLAINE",
-      "in_connection": false,
       "x": 10,
       "y": 6,
       "elevation": 3,
@@ -118,7 +117,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SevenIsland_House_Room2_Eventscript_Blaine",
-      "flag": "FLAG_TEMP_7"
+      "flag": "FLAG_TEMP_7",
+      "in_connection": false
     }
   ],
   "warp_events": [
