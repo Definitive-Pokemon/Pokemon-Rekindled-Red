@@ -69,8 +69,7 @@ MtMoon_Square_EventScript_LatiasFinal::
 	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
 	goto_if_eq MtMoon_Square_EventScript_RanFromLatias
 	setflag FLAG_FOUGHT_LATIAS
-	startroaming ROAMER_SEVIIAN_AERODACTYL
-	call MtMoon_Square_EventScript_AnabelEnd
+	call_if_unset FLAG_ANABEL_DONE, MtMoon_Square_EventScript_AnabelEnd
 	release
 	end
 
@@ -91,7 +90,7 @@ MtMoon_Square_EventScript_LatiasFled::
     fadescreenswapbuffers FADE_FROM_BLACK
     msgbox MtMoon_Square_Text_LatiasFled
 	closemessage
-	call MtMoon_Square_EventScript_AnabelEnd
+	call_if_unset FLAG_ANABEL_DONE, MtMoon_Square_EventScript_AnabelEnd
 	release
 	end
 	
@@ -113,7 +112,8 @@ MtMoon_Square_EventScript_AnabelEnd::
 	waitmovement 0
 	removeobject LOCALID_ANABEL
 	setflag FLAG_HIDE_ANABEL_FOURTH
-	@roaming Aero activate
+	setflag FLAG_ANABEL_DONE
+	startroaming ROAMER_SEVIIAN_AERODACTYL
 	return
 
 MtMoon_Square_EventScript_Latias4::
