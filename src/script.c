@@ -1139,7 +1139,7 @@ void UseBattleHouseVar(void)
                     gSpecialVar_Result = BattleHouseVar->visitorBrock;
                     break;
                 case FAMECHECKER_MISTY:
-                    gSpecialVar_Result = BattleHouseVar->visitorMisty;
+                    gSpecialVar_Result = 1;//BattleHouseVar->visitorMisty;
                     break;
                 case FAMECHECKER_LTSURGE:
                     gSpecialVar_Result = BattleHouseVar->visitorLtSurge;
