@@ -17,6 +17,7 @@
 
 PalletTown_ProfessorOaksLab_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_ProfessorOaksLab_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, PalletTown_ProfessorOaksLab_OnLoad
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PalletTown_ProfessorOaksLab_OnWarp
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_ProfessorOaksLab_OnFrame
 	.byte 0
@@ -28,6 +29,14 @@ PalletTown_ProfessorOaksLab_OnTransition::
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 7, PalletTown_ProfessorOaksLab_EventScript_ReadyOakForNationalDexScene
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8, PalletTown_ProfessorOaksLab_EventScript_SetNationalDexSceneFinished
 	call_if_set FLAG_GOT_POKEBALLS_FROM_OAK_AFTER_22_RIVAL, PalletTown_ProfessorOaksLab_EventScript_SetSkipPokeBallCheck
+	end
+
+PalletTown_ProfessorOaksLab_OnLoad::
+	goto_if_eq VAR_TEMP_0, 1, PalletTown_ProfessorOaksLab_EventScript_Turn
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_Turn::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_StartOakExpo::
@@ -109,9 +118,9 @@ PalletTown_ProfessorOaksLab_OnFrame::
     .2byte 0
 
 PalletTown_ProfessorOaksLab_EventScript_OakExpo::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	setvar VAR_TEMP_0, 0
 	lockall
-	setobjectmovementtype OBJ_EVENT_ID_PLAYER, MOVEMENT_TYPE_FACE_UP
 	textcolor 0
 	msgbox PalletTown_ProfessorOaksLab_Text_OakSigh, MSGBOX_NPC
 	closemessage
