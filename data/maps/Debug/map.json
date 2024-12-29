@@ -702,6 +702,34 @@
       "elevation": 0,
       "dest_map": "MAP_MONITORING_STATION_OFFICE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_SEVEN_ISLAND_TANOBY_RUINS_SCUFIB_CHAMBER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_SEVEN_ISLAND_TANOBY_RUINS_WEEPTH_CHAMBER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_SEVEN_ISLAND_TANOBY_RUINS_DILFORD_CHAMBER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
