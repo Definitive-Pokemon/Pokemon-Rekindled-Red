@@ -3895,7 +3895,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Petrel = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dusclops = {
 	.tileTag = TAG_NONE,
-	.paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
+	.paletteTag = OBJ_EVENT_PAL_TAG_DUSCLOPS,
 	.reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
 	.size = 256,
 	.width = 16,
