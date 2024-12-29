@@ -3895,7 +3895,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Petrel = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dusclops = {
 	.tileTag = TAG_NONE,
-	.paletteTag = OBJ_EVENT_PAL_TAG_DUSCLOPS,
+	.paletteTag = OBJ_EVENT_PAL_TAG_NPC_WHITE,
 	.reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
 	.size = 256,
 	.width = 16,
@@ -3914,7 +3914,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dusclops = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FossilizedKabutops = {
 	.tileTag = TAG_NONE,
-	.paletteTag = OBJ_EVENT_PAL_TAG_NPC_BLUE,
+	.paletteTag = OBJ_EVENT_PAL_TAG_FOSSILIZED_KABUTOPS,
 	.reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
 	.size = 512,
 	.width = 32,
