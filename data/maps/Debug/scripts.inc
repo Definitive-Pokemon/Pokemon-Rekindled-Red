@@ -90,6 +90,51 @@ Debug_UnlockGame::
 	giveitem ITEM_HM08
 	end
 
+FameCheckerFull::
+	famechecker FAMECHECKER_BROCK, 0
+	famechecker FAMECHECKER_BROCK, 1
+	famechecker FAMECHECKER_BROCK, 2
+	famechecker FAMECHECKER_BROCK, 3
+	famechecker FAMECHECKER_BROCK, 4
+	famechecker FAMECHECKER_BROCK, 5
+	famechecker FAMECHECKER_MISTY, 0
+	famechecker FAMECHECKER_MISTY, 1
+	famechecker FAMECHECKER_MISTY, 2
+	famechecker FAMECHECKER_MISTY, 3
+	famechecker FAMECHECKER_MISTY, 4
+	famechecker FAMECHECKER_MISTY, 5
+	famechecker FAMECHECKER_LT_SURGE, 0
+	famechecker FAMECHECKER_LT_SURGE, 1
+	famechecker FAMECHECKER_LT_SURGE, 2
+	famechecker FAMECHECKER_LT_SURGE, 3
+	famechecker FAMECHECKER_LT_SURGE, 4
+	famechecker FAMECHECKER_LT_SURGE, 5
+	famechecker FAMECHECKER_LT_ERIKA, 0
+	famechecker FAMECHECKER_LT_ERIKA, 1
+	famechecker FAMECHECKER_LT_ERIKA, 2
+	famechecker FAMECHECKER_LT_ERIKA, 3
+	famechecker FAMECHECKER_LT_ERIKA, 4
+	famechecker FAMECHECKER_LT_ERIKA, 5
+	famechecker FAMECHECKER_LT_KOGA, 0
+	famechecker FAMECHECKER_LT_KOGA, 1
+	famechecker FAMECHECKER_LT_KOGA, 2
+	famechecker FAMECHECKER_LT_KOGA, 3
+	famechecker FAMECHECKER_LT_KOGA, 4
+	famechecker FAMECHECKER_LT_KOGA, 5
+	famechecker FAMECHECKER_LT_SABRINA, 0
+	famechecker FAMECHECKER_LT_SABRINA, 1
+	famechecker FAMECHECKER_LT_SABRINA, 2
+	famechecker FAMECHECKER_LT_SABRINA, 3
+	famechecker FAMECHECKER_LT_SABRINA, 4
+	famechecker FAMECHECKER_LT_SABRINA, 5
+	famechecker FAMECHECKER_LT_BLAINE, 0
+	famechecker FAMECHECKER_LT_BLAINE, 1
+	famechecker FAMECHECKER_LT_BLAINE, 2
+	famechecker FAMECHECKER_LT_BLAINE, 3
+	famechecker FAMECHECKER_LT_BLAINE, 4
+	famechecker FAMECHECKER_LT_BLAINE, 5
+	end
+
 FourIslandWarp::
 	warp MAP_FOUR_ISLAND, 19, 21
 	end
