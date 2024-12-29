@@ -1,23 +1,39 @@
 .set LOCALID_RAIKOU, 1
 
 CinnabarCavern_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, CinnabarCavern_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarCavern_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CinnabarCavern_OnResume
 	.byte 0
+
+CinnabarCavern_OnLoad::
+	goto_if_set FLAG_HIDE_RAIKOU_ROAM, DontShowRaikouYet
+	call_if_unset FLAG_FOUGHT_RAIKOU, CinnabarCavern_EventScript_TryShowRaikou
+DontShowRaikouYet::
+	end
+
+CinnabarCavern_OnTransition::
+	call_if_set FLAG_FOUGHT_RAIKOU, CinnabarCavern_EventScript_HideRaikou
+	end
 
 CinnabarCavern_OnResume::
 	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, CinnabarCavern_EventScript_TryRemoveRaikou
 	end
+
+CinnabarCavern_EventScript_TryShowRaikou::
+	goto_if_set FLAG_RAIKOU_FLED, EventScript_Return
+	clearflag FLAG_HIDE_RAIKOU_ROAM
+	return
+
+CinnabarCavern_EventScript_HideRaikou::
+	setflag FLAG_HIDE_RAIKOU_ROAM
+	return
 
 CinnabarCavern_EventScript_TryRemoveRaikou::
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne EventScript_Return
 	removeobject VAR_LAST_TALKED
-	setflag FLAG_HIDE_RAIKOU_ROAM
-	return
-
-CinnabarCavern_EventScript_HideRaikou::
-	setflag FLAG_HIDE_RAIKOU_ROAM
 	return
 
 CinnabarCavern_EventScript_Raikou::

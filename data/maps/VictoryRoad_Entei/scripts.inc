@@ -1,19 +1,39 @@
 .set LOCALID_ENTEI, 1
 
 VictoryRoad_Entei_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, VictoryRoad_Entei_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, VictoryRoad_Entei_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, VictoryRoad_Entei_OnResume
 	.byte 0
+
+VictoryRoad_Entei_OnLoad::
+	goto_if_set FLAG_HIDE_ENTEI_ROAM, DontShowEnteiYet
+	call_if_unset FLAG_FOUGHT_ENTEI, VictoryRoad_Entei_EventScript_TryShowEntei
+DontShowEnteiYet::
+	end
+
+VictoryRoad_Entei_OnTransition::
+	call_if_set FLAG_FOUGHT_ENTEI, VictoryRoad_Entei_EventScript_HideEntei
+	end
 
 VictoryRoad_Entei_OnResume::
 	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, VictoryRoad_Entei_EventScript_TryRemoveEntei
 	end
-	
+
+VictoryRoad_Entei_EventScript_TryShowEntei::
+	goto_if_set FLAG_ENTEI_FLED, EventScript_Return
+	clearflag FLAG_HIDE_ENTEI_ROAM
+	return
+
+VictoryRoad_Entei_EventScript_HideEntei::
+	setflag FLAG_HIDE_ENTEI_ROAM
+	return
+
 VictoryRoad_Entei_EventScript_TryRemoveEntei::
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne EventScript_Return
 	removeobject VAR_LAST_TALKED
-	setflag FLAG_HIDE_ENTEI_ROAM
 	return
 
 VictoryRoad_Entei_EventScript_Entei::
