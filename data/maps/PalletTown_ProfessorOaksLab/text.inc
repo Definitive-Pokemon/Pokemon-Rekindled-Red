@@ -1,3 +1,36 @@
+
+
+PalletTown_ProfessorOaksLab_Text_OakSigh::
+	.string "Sigh… \p"
+	.string "So this MAXIMUS has disturbed the\n"
+	.string "slumber of a powerful and very\l"
+	.string "unpredictable legendary POKéMON.\p"
+	.string "This POKéMON summons storms upon\n"
+	.string "waking up, exposing an entire\l"
+	.string "region to danger.$"
+
+PalletTown_ProfessorOaksLab_Text_OakSolution::
+	.string "This POKéMON is entirely unfamiliar\n"
+	.string "to me, {PLAYER}.\p"
+	.string "But my colleague, PROF. ELM,\n"
+	.string "might know more about it.\p"
+	.string "{PLAYER}, I'd like you to head to\n"
+	.string "the town of NEW BARK, located in\l"
+	.string "the JOHTO region.\p"
+	.string "That's where PROF. ELM lives.\n"
+	.string "I need you to pay him a visit.\p"
+	.string "Tell him all about what happened,\n"
+	.string "and he'll be glad to help us out.\p"
+	.string "I will send an e-mail message\n"
+	.string "to the GUARDS on the west end\p"
+	.string "of ROUTE 22, asking them to\n"
+	.string "let you through.\p"
+	.string "You will need to hurry, however.\n"
+	.string "This POKéMON, LUGIA… \l"
+	.string "Its unpredictability concerns me.\p"
+	.string "Have a safe journey, and have\n"
+	.string "faith in PROF. ELM's ideas.$"
+
 PalletTown_ProfessorOaksLab_Text_RivalGrampsIsntAround::
     .string "{RIVAL}: What, it's only {PLAYER}?\n"
     .string "Gramps isn't around.$"
