@@ -37,7 +37,6 @@ MtSilver_EventScript_Aide::
 	textcolor 0
 	msgbox MtSilver_Text_Aide, MSGBOX_NPC
 	closemessage
-	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 10
 	setflag FLAG_HIDE_SILVER_SCIENTIST
 	warp MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6, 4
 	waitstate
