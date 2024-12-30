@@ -322,7 +322,7 @@ static s8 DoDrawStartMenu(void)
         break;
     case 4:
         if (PrintStartMenuItems(&sDrawStartMenuState[1], 2) == TRUE)
-            sDrawStartMenuState[0]++;
+            sDrawStartMenuState[0]++;           
         break;
     case 5:
         sStartMenuCursorPos = Menu_InitCursor(GetStartMenuWindowId(), FONT_NORMAL, 0, 0, 15, sNumStartMenuItems, sStartMenuCursorPos);
