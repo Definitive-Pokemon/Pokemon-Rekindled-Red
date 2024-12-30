@@ -84,7 +84,7 @@ SevenIsland_House_Room1_EventScript_ShowingFameChecker::
 	case 4, SevenIsland_House_Room1_EventScript_Koga
 	case 5, SevenIsland_House_Room1_EventScript_Sabrina
 	case 6, SevenIsland_House_Room1_EventScript_Blaine
-	case 7, SevenIsland_House_Room1_EventScript_RefuseToSelectLeader
+	case 8, SevenIsland_House_Room1_EventScript_RefuseToSelectLeader
 	case 127, SevenIsland_House_Room1_EventScript_RefuseToSelectLeader
 	end
 
