@@ -147,6 +147,10 @@ ZapdosMaxiFlag::
 	setflag FLAG_SEEN_ZAPDOS
 	end
 	
+MoltresMaxiFlag::
+	setflag FLAG_MOLTRES_FIRST_TIME
+	end
+	
 MuralJirachiFlag::
 	clearflag FLAG_HIDE_MURAL
 	end
