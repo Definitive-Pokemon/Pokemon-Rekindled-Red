@@ -27,11 +27,15 @@ PalletTown_ProfessorOaksLab_OnTransition::
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1, PalletTown_ProfessorOaksLab_EventScript_ReadyOakForStarterScene
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 7, PalletTown_ProfessorOaksLab_EventScript_ReadyOakForNationalDexScene
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 8, PalletTown_ProfessorOaksLab_EventScript_SetNationalDexSceneFinished
+	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 10, PalletTown_ProfessorOaksLab_EventScript_ReadyExpoScene
 	call_if_set FLAG_GOT_POKEBALLS_FROM_OAK_AFTER_22_RIVAL, PalletTown_ProfessorOaksLab_EventScript_SetSkipPokeBallCheck
 	end
 
-PalletTown_ProfessorOaksLab_EventScript_StartOakExpo::
+PalletTown_ProfessorOaksLab_EventScript_ReadyExpoScene::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_StartOakExpo::
 	setvar VAR_TEMP_0, 1
 	return
 
@@ -112,7 +116,6 @@ PalletTown_ProfessorOaksLab_OnFrame::
 PalletTown_ProfessorOaksLab_EventScript_OakExpo::
 	setvar VAR_TEMP_0, 0
 	lockall
-	setobjectmovementtype OBJ_EVENT_ID_PLAYER, MOVEMENT_TYPE_FACE_UP
 	textcolor 0
 	msgbox PalletTown_ProfessorOaksLab_Text_OakSigh, MSGBOX_NPC
 	closemessage
@@ -122,6 +125,7 @@ PalletTown_ProfessorOaksLab_EventScript_OakExpo::
 	closemessage
 	clearflag FLAG_OAK_READY_EXPO
 	setvar VAR_NEW_BARK_ACCESS, 1
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 9
 	releaseall
 	end
 
