@@ -61,7 +61,10 @@
     "ForsakenTombB6F",
     "ForsakenTombB7F",
     "ForsakenTombB8F",
-    "ForsakenTombB9F"
+    "ForsakenTombB9F",
+    "GymLeaderRematchTemp",
+    "NewMap2",
+    "NewMap3"
   ],
   "gMapGroup_Dungeons": [
     "ViridianForest",

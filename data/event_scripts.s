@@ -1619,3 +1619,12 @@ EventScript_NoMoreRoomForPokemon::
 
 	.include "data/maps/MtSilverLugia/scripts.inc"
 	.include "data/maps/MtSilverLugia/text.inc"
+
+	.include "data/maps/GymLeaderRematchTemp/scripts.inc"
+	.include "data/maps/GymLeaderRematchTemp/text.inc"
+
+	.include "data/maps/NewMap2/scripts.inc"
+	.include "data/maps/NewMap2/text.inc"
+
+	.include "data/maps/NewMap3/scripts.inc"
+	.include "data/maps/NewMap3/text.inc"
