@@ -115,14 +115,12 @@ ElmsLab_Text_GoPlayer::
 	.string "whenever your POKéMON need a break!$"
 
 ElmsLab_Text_NoProblem::
-	.string "{PLAYER}! There you are!\p"
-	.string "Did you manage to put a stop\n"
-	.string "to MAXIMUS while calming\l"
-	.string "down LUGIA?\p"
-	.string "… That's great news!\n"
+	.string "Hey, {PLAYER}!\p"
+	.string "I want to thank you again for\n"
+	.string "helping LUGIA.\p"
 	.string "I knew we could count on you!\p"
 	.string "{PLAYER}, just know that you're\n"
-	.string "always welcome at my LAB!\p"
+	.string "always welcome at my LAB.\p"
 	.string "Maybe you should go out and\n"
 	.string "explore JOHTO sometime.\p"
 	.string "There are many more adventures\n"
