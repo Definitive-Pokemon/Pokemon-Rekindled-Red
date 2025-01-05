@@ -421,3 +421,8 @@ Debug_RemoveRainbowWing::
 Daisy::
 	setflag FLAG_HIDE_DAISY
 	end
+
+Debug_Foo_Oak::
+	setflag FLAG_OAK_READY_EXPO
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 10
+	end

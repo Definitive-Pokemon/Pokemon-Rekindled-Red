@@ -23,6 +23,17 @@ NavelRock_Exterior_OnFrame::
 	map_script_2 VAR_BLOCK, 3, NavelRock_Exterior_EventScript_SetUpFinale
 	.2byte 0
 
+NavelRock_Exterior_EventScript_Lugia::
+	lock
+	playmoncry SPECIES_LUGIA, CRY_MODE_NORMAL
+	msgbox NavelRock_Exterior_Text_Lugia
+	waitmoncry
+	release
+	end
+
+NavelRock_Exterior_Text_Lugia::
+	.string "LUGIA: Gyaaas!$"
+
 NavelRock_Exterior_EventScript_Moved::
 	setobjectxyperm LOCALID_MAXIMUS, 8, 10
 	return
@@ -46,6 +57,8 @@ NavelRock_Exterior_Block::
 
 NavelRock_Exterior_EventScript_SetUpFinale::
 	lockall
+	special SpawnCameraObject
+	setobjectxy OBJ_EVENT_ID_PLAYER, 0, 0
 	setvar VAR_BLOCK, 4
 	delay 100
 	playse SE_THUNDERSTORM_STOP
@@ -62,13 +75,14 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	setvar VAR_0x8004, 30  @ Num loops
 	setvar VAR_0x8005, 35 @ Delay
 	applymovement LOCALID_LUGIA, NavelRock_Base_Movement_LugiaGoForth
-	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_LugiaGoForth
+	applymovement OBJ_EVENT_ID_CAMERA, NavelRock_Base_Movement_LugiaGoForth
 	setweather 2
 	doweather
 	playmoncry SPECIES_LUGIA, 2
 	waitmoncry
 	waitmovement 0
-	showobjectat OBJ_EVENT_ID_PLAYER, MAP_NAVEL_ROCK_EXTERIOR
+	setobjectxy OBJ_EVENT_ID_PLAYER, 9, 16
+	special RemoveCameraObject
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_Back
 	waitmovement 0
 	delay 25
