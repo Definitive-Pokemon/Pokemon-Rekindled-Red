@@ -47,9 +47,9 @@ ElmsLab_Text_GoodJob::
 	.string "Amazing, {PLAYER}!\p"
 	.string "I'm glad I did right in calling\n"
 	.string "the POLICE FORCE.\p"
-	.string "With MAXIMUS in custody and\n"
-	.string "LUGIA calmed down, both KANTO\l"
-	.string "and JOHTO are safe once more!$"
+	.string "With MAXIMUS in custody and LUGIA\n"
+	.string "calmed down, both KANTO and JOHTO\l"
+	.string "should be safe once more.$"
 
 ElmsLab_Text_Crisis::
 	.string "Heya!\n"
@@ -112,8 +112,7 @@ ElmsLab_EventScript_GoPlayer::
 ElmsLab_Text_GoPlayer::
 	.string "Good luck with your task!\p"
 	.string "Oh, and use my HEAL MACHINE\n"
-	.string "whenever your POKéMON\l"
-	.string "need a break!$"
+	.string "whenever your POKéMON need a break!$"
 
 ElmsLab_Text_NoProblem::
 	.string "{PLAYER}! There you are!\p"
