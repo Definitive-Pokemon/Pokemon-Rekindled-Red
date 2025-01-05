@@ -32,7 +32,6 @@ PalletTown_ProfessorOaksLab_OnTransition::
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_ReadyExpoScene::
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	return
 
 PalletTown_ProfessorOaksLab_EventScript_StartOakExpo::
@@ -84,6 +83,7 @@ PalletTown_ProfessorOaksLab_OnFrame::
 PalletTown_ProfessorOaksLab_EventScript_OakExpo::
 	setvar VAR_TEMP_0, 0
 	lockall
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	textcolor 0
 	msgbox PalletTown_ProfessorOaksLab_Text_OakSigh, MSGBOX_NPC
 	closemessage
