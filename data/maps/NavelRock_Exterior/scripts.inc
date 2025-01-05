@@ -23,6 +23,17 @@ NavelRock_Exterior_OnFrame::
 	map_script_2 VAR_BLOCK, 3, NavelRock_Exterior_EventScript_SetUpFinale
 	.2byte 0
 
+NavelRock_Exterior_EventScript_Lugia::
+	lock
+	playmoncry SPECIES_LUGIA, CRY_MODE_NORMAL
+	msgbox NavelRock_Exterior_Text_Lugia
+	waitmoncry
+	release
+	end
+
+NavelRock_Exterior_Text_Lugia::
+	.string "LUGIA: Gyaaas!$"
+
 NavelRock_Exterior_EventScript_Moved::
 	setobjectxyperm LOCALID_MAXIMUS, 8, 10
 	return
