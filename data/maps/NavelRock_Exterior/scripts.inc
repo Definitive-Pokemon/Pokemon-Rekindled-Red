@@ -329,8 +329,7 @@ NavelRock_Exterior_EventScript_Maximus::
 	faceplayer
 	goto_if_set FLAG_TO_END, NavelRock_Exterior_EventScript_MaximusFinal
 	goto_if_set FLAG_DEFEATED_MAXIMUS, NavelRock_Exterior_EventScript_AfterMaximus
-	@trainerbattle_single TRAINER_COLLECTOR_MAXIMUS, NavelRock_Exterior_Text_Intro, NavelRock_Exterior_Text_Defeat, NavelRock_Exterior_EventScript_Defeated, NO_MUSIC
-	goto NavelRock_Exterior_EventScript_Defeated
+	trainerbattle_single TRAINER_COLLECTOR_MAXIMUS, NavelRock_Exterior_Text_Intro, NavelRock_Exterior_Text_Defeat, NavelRock_Exterior_EventScript_Defeated, NO_MUSIC
 	release
 	end
 
