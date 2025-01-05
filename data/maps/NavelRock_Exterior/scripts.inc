@@ -46,6 +46,8 @@ NavelRock_Exterior_Block::
 
 NavelRock_Exterior_EventScript_SetUpFinale::
 	lockall
+	special SpawnCameraObject
+	setobjectxy OBJ_EVENT_ID_PLAYER, 0, 0
 	setvar VAR_BLOCK, 4
 	delay 100
 	playse SE_THUNDERSTORM_STOP
@@ -62,13 +64,14 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	setvar VAR_0x8004, 30  @ Num loops
 	setvar VAR_0x8005, 35 @ Delay
 	applymovement LOCALID_LUGIA, NavelRock_Base_Movement_LugiaGoForth
-	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_LugiaGoForth
+	applymovement OBJ_EVENT_ID_CAMERA, NavelRock_Base_Movement_LugiaGoForth
 	setweather 2
 	doweather
 	playmoncry SPECIES_LUGIA, 2
 	waitmoncry
 	waitmovement 0
-	showobjectat OBJ_EVENT_ID_PLAYER, MAP_NAVEL_ROCK_EXTERIOR
+	setobjectxy OBJ_EVENT_ID_PLAYER, 9, 16
+	special RemoveCameraObject
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_Back
 	waitmovement 0
 	delay 25
@@ -315,7 +318,8 @@ NavelRock_Exterior_EventScript_Maximus::
 	faceplayer
 	goto_if_set FLAG_TO_END, NavelRock_Exterior_EventScript_MaximusFinal
 	goto_if_set FLAG_DEFEATED_MAXIMUS, NavelRock_Exterior_EventScript_AfterMaximus
-	trainerbattle_single TRAINER_COLLECTOR_MAXIMUS, NavelRock_Exterior_Text_Intro, NavelRock_Exterior_Text_Defeat, NavelRock_Exterior_EventScript_Defeated, NO_MUSIC
+	@trainerbattle_single TRAINER_COLLECTOR_MAXIMUS, NavelRock_Exterior_Text_Intro, NavelRock_Exterior_Text_Defeat, NavelRock_Exterior_EventScript_Defeated, NO_MUSIC
+	NavelRock_Exterior_EventScript_Defeated
 	release
 	end
 
