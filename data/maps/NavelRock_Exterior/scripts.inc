@@ -398,7 +398,6 @@ NavelRock_Exterior_Movement_AsidePlay::
 NavelRock_Exterior_Movement_Aside2::
 	walk_down
 	walk_left
-	walk_in_place_up
 	step_end
 
 NavelRock_Exterior_Text_Asode::
