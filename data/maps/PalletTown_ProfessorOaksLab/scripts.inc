@@ -33,7 +33,7 @@ PalletTown_ProfessorOaksLab_OnTransition::
 
 PalletTown_ProfessorOaksLab_EventScript_ReadyExpoScene::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
-	end
+	return
 
 PalletTown_ProfessorOaksLab_EventScript_StartOakExpo::
 	setvar VAR_TEMP_0, 1
