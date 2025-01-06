@@ -28,9 +28,9 @@ GymLeaderRematchTemp_Text_Sign::
 	.string "version of each LEADER.\p"
 	.string "The next contains stronger teams.\n"
 	.string "The last one contains the strongest.\p"
-	.string "This is a TEMPORARY room, and will be\n"
-	.string "properly replaced by a GYM house\l"
-	.string "according to quality standards.$"
+	.string "This is a TEMPORARY room, and will\n"
+	.string "be properly replaced by a rematch\l"
+	.string "house according to quality standards.$"
 
 Brock1::
 	trainerbattle TRAINER_BATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_BROCK_REMATCH, LOCALID_BROCK, Gym_Text_Done
