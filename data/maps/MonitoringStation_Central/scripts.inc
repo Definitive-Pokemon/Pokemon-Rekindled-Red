@@ -252,7 +252,6 @@ MonitoringStation_Central_Eventscript_Admin2::
 	end
 	
 MonitoringStation_Central_Eventscript_Boulder::
-	lock
 	msgbox MonitoringStation_Central_Text_Boulder
 	release
 	end
