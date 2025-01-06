@@ -13320,7 +13320,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBrockChallenge[] = {
     },
 };
 
-static const struct TrainerMonItemCustomMoves sParty_LeaderMistyRematch[] = {
+static const struct TrainerMonItemCustomMoves sParty_LeaderMistyChallenge[] = {
     {
         .iv = 255,
         .lvl = 83,
