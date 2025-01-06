@@ -1552,7 +1552,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     else
         sTrainers = (struct Trainer*)gTrainers;
 
-    if(gMapHeader.mapLayoutId == LAYOUT_SEVEN_ISLAND_HOUSE_ROOM2)
+    if(gMapHeader.mapLayoutId == LAYOUT_SEVEN_ISLAND_HOUSE_ROOM2 || gMapHeader.mapLayoutId == LAYOUT_GYM_LEADER_REMATCH_TEMP
+       || gMapHeader.mapLayoutId == LAYOUT_NEW_MAP2 || gMapHeader.mapLayoutId == LAYOUT_NEW_MAP3)
         inBattleHouse = TRUE;
 
     if(trainerNum >= TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE && trainerNum <= TRAINER_RIVAL_ROUTE22_LATE_CHARMANDER)
@@ -1665,8 +1666,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                     if(inBattleHouse)
                     {
                         level = partyData[i].lvl + ReturnBattleHouseLevel();
-                        if(level > 75)
-                            level = 75;
+                        if(level > 86)
+                            level = 86;
                         CreateMon(&party[i], partyData[i].species, level + levelScaling, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                     }
                     else
@@ -1702,8 +1703,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                     else if(inBattleHouse)
                     {
                         level = partyData[i].lvl + ReturnBattleHouseLevel();
-                        if(level > 75)
-                            level = 75;
+                        if(level > 86)
+                            level = 86;
                         CreateMonWithGenderNatureAbility(&party[i], partyData[i].species, level + levelScaling, fixedIV, gender, partyData[i].nature, partyData[i].abilityNum);
                     }
                     else
