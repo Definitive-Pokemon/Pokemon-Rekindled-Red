@@ -14,7 +14,6 @@ MonitoringStation_ConferenceRoom_EventScript_RocketM1::
 	lock
 	faceplayer
 	msgbox MonitoringStation_ConferenceRoom_Text_RocketM1
-	waitmessage
 	release
 	end
 	
@@ -22,7 +21,6 @@ MonitoringStation_ConferenceRoom_EventScript_RocketM2::
 	lock
 	faceplayer
 	msgbox MonitoringStation_ConferenceRoom_Text_RocketM2
-	waitmessage
 	release
 	end
 	
@@ -41,13 +39,11 @@ MonitoringStation_ConferenceRoom_EventScript_RocketM3::
 	setflag FLAG_HIDE_BOULDER2
 	setvar VAR_ADMIN_CONVO, 1
 	msgbox MonitoringStation_ConferenceRoom_Text_RocketM32
-	waitmessage
 	release
 	end
 	
 MonitoringStation_ConferenceRoom_EventScript_RocketM33::
 	msgbox MonitoringStation_ConferenceRoom_Text_RocketM32
-	waitmessage
 	release
 	end
 
@@ -55,7 +51,6 @@ MonitoringStation_ConferenceRoom_EventScript_RocketF1::
 	lock
 	faceplayer
 	msgbox MonitoringStation_ConferenceRoom_Text_RocketF1
-	waitmessage
 	release
 	end
 	
@@ -63,7 +58,6 @@ MonitoringStation_ConferenceRoom_EventScript_RocketF2::
 	lock
 	faceplayer
 	msgbox MonitoringStation_ConferenceRoom_Text_RocketF2
-	waitmessage
 	release
 	end
 	
@@ -71,7 +65,6 @@ MonitoringStation_ConferenceRoom_EventScript_Scientist1::
 	lock
 	faceplayer
 	msgbox MonitoringStation_ConferenceRoom_Text_Scientist1
-	waitmessage
 	release
 	end
 	
@@ -79,14 +72,12 @@ MonitoringStation_ConferenceRoom_EventScript_Scientist2::
 	lock
 	faceplayer
 	msgbox MonitoringStation_ConferenceRoom_Text_Scientist2
-	waitmessage
 	release
 	end
 	
 MonitoringStation_ConferenceRoom_EventScript_RocketM4::
 	lock
 	msgbox MonitoringStation_ConferenceRoom_Text_RocketM4
-	waitmessage
 	release
 	end
 	

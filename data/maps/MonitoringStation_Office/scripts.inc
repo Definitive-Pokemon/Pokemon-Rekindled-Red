@@ -45,7 +45,6 @@ MonitoringStation_Office_EventScript_Talk::
 	lock
 	faceplayer
 	msgbox MonitoringStation_Office_Text_Talk
-	closemessage
 	release
 	end
 	

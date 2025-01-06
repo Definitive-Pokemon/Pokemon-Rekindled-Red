@@ -43,7 +43,6 @@ MonitoringStation_Central_EventScript_QuartetRock::
 	waitmovement 0
 	textcolor 0
 	msgbox MonitoringStation_Central_Text_QuartetRock
-	closemessage
 	setvar VAR_MONITORING_STATION_QUARTET, 2
 	setvar VAR_MAP_SCENE_MONITORING_STATION_CENTRAL, 2
 	releaseall
@@ -55,7 +54,6 @@ MonitoringStation_Central_EventScript_QuartetKanga::
 	msgbox MonitoringStation_Central_Text_QuartetKanga
 	goto_if_set FLAG_HIDE_MOM, MonitoringStation_Central_EventScript_QuartetKangaYes
 	msgbox MonitoringStation_Central_Text_QuartetKangaNo
-	closemessage
 	release
 	end
 	
@@ -129,7 +127,6 @@ MonitoringStation_Central_EventScript_Kanga::
 	goto_if_set FLAG_HORROR_DONE, MonitoringStation_Central_EventScript_KangaHappy
 	playmoncry SPECIES_KANGASKHAN, CRY_MODE_NORMAL
 	msgbox MonitoringStation_Central_Text_Kanga
-	closemessage
 	waitmoncry
 	release
 	end
@@ -139,7 +136,6 @@ MonitoringStation_Central_EventScript_KangaHappy::
 	msgbox MonitoringStation_Central_Text_Kanga
 	waitmoncry
 	msgbox MonitoringStation_Central_Text_KangaHappy
-	closemessage
 	release
 	end
 	
@@ -147,7 +143,6 @@ MonitoringStation_Central_EventScript_GreyDoors::
 	lock
 	textcolor 2
 	msgbox MonitoringStation_Central_Text_GreyDoor
-	closemessage
 	release
 	end
 	
@@ -247,27 +242,23 @@ MonitoringStation_Central_Eventscript_Admin::
 	faceplayer
 	goto_if_set FLAG_FIND_BLUE_KEY, MonitoringStation_Central_Eventscript_Admin2
 	msgbox MonitoringStation_Central_Text_Admin
-	waitmessage
 	setflag FLAG_FIND_BLUE_KEY
 	release
 	end
 	
 MonitoringStation_Central_Eventscript_Admin2::
 	msgbox MonitoringStation_Central_Text_Admin2
-	waitmessage
 	release
 	end
 	
 MonitoringStation_Central_Eventscript_Boulder::
 	lock
 	msgbox MonitoringStation_Central_Text_Boulder
-	waitmessage
 	release
 	end
 	
 MonitoringStation_Central_Eventscript_BoulderPostScare::
 	msgbox MonitoringStation_Central_Text_Boulder2
-	waitmessage
 	release
 	end
 	

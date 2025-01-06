@@ -17,7 +17,6 @@ MonitoringStation_Hallway2_EventScript_Help::
 	lock
 	textcolor 0
 	msgbox MonitoringStation_Hallway2_Text_Help
-	waitmessage
 	setvar VAR_MONITORING_STATION_HALLWAY2_HELP, 1
 	release
 	end
@@ -25,6 +24,5 @@ MonitoringStation_Hallway2_EventScript_Help::
 MonitoringStation_Hallway2_EventScript_Help2::
 	lock
 	msgbox MonitoringStation_Hallway2_Text_Help2
-	closemessage
 	release
 	end

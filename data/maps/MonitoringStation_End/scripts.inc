@@ -22,7 +22,6 @@ MonitoringStation_End_EventScript_RedDoor::
 	goto_if_eq MonitoringStation_End_EventScript_RemoveRedDoor
 	textcolor 2
 	msgbox MonitoringStation_End_Text_RedDoor
-	closemessage
 	release
 	end
 	
@@ -37,6 +36,5 @@ MonitoringStation_End_EventScript_RemoveRedDoor::
 	setmetatile 4, 9, METATILE_SilphCo_HideoutFloor, 0
 	special DrawWholeMapView
 	msgbox MonitoringStation_End_Text_RedDoorGone
-	closemessage
 	release
 	end

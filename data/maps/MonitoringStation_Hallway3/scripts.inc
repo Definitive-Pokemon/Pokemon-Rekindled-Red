@@ -27,7 +27,6 @@ MonitoringStation_Hallway3_EventScript_BlueDoor::
 	goto_if_eq MonitoringStation_Hallway3_EventScript_RemoveBlueDoor
 	textcolor 2
 	msgbox MonitoringStation_Hallway3_Text_Door
-	closemessage
 	release
 	end
 	
@@ -38,7 +37,6 @@ MonitoringStation_Hallway3_EventScript_RemoveBlueDoor::
 	removeobject LOCALID_BLUE_DOOR1
 	removeobject LOCALID_BLUE_DOOR2
 	msgbox MonitoringStation_Hallway3_Text_BlueDoorGone
-	closemessage
 	release
 	end
 	
@@ -49,7 +47,6 @@ MonitoringStation_Hallway3_EventScript_YellowDoor::
 	goto_if_eq MonitoringStation_Hallway3_EventScript_RemoveYellowDoor
 	textcolor 2
 	msgbox MonitoringStation_Hallway3_Text_Door
-	closemessage
 	release
 	end
 	
@@ -67,6 +64,5 @@ MonitoringStation_Hallway3_EventScript_RemoveYellowDoor::
 	setmetatile 13, 21, METATILE_SilphCo_Floor, 0
 	special DrawWholeMapView
 	msgbox MonitoringStation_Hallway3_Text_YellowDoorGone
-	closemessage
 	release
 	end

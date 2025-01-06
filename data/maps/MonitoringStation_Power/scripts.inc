@@ -35,7 +35,6 @@ MonitoringStation_Power_EventScript_Rocket::
 MonitoringStation_Power_EventScript_Gym::
 	lock
 	msgbox MonitoringStation_Power_Text_Gym
-	closemessage
 	release
 	end
 	
@@ -67,7 +66,6 @@ MonitoringStation_Power_EventScript_Mom::
 	lock
 	faceplayer
 	msgbox MonitoringStation_Power_Text_Mom
-	closemessage
 	release
 	end
 	

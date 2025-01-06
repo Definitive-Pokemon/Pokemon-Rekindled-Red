@@ -24,7 +24,6 @@ MonitoringStation_Shortcut_EventScript_PokemonScared::
 	delay 50
 	setvar VAR_LOCK_FLASH, 0
 	msgbox MonitoringStation_Shortcut_Text_Scared
-	waitmessage
 	releaseall
 	end
 	

@@ -12,7 +12,6 @@ MonitoringStation_Quarters_EventScript_RocketM1::
 	lock
 	faceplayer
 	msgbox MonitoringStation_Quarters_Text_RocketM1
-	waitmessage
 	release
 	end
 	
@@ -20,7 +19,6 @@ MonitoringStation_Quarters_EventScript_RocketM2::
 	lock
 	faceplayer
 	msgbox MonitoringStation_Quarters_Text_RocketM2
-	waitmessage
 	release
 	end
 	
@@ -41,7 +39,6 @@ MonitoringStation_Quarters_EventScript_RocketM4::
 	lock
 	faceplayer
 	msgbox MonitoringStation_Quarters_Text_RocketM4
-	waitmessage
 	release
 	end
 	
@@ -50,13 +47,11 @@ MonitoringStation_Quarters_EventScript_RocketF1::
 	faceplayer
 	goto_if_set FLAG_HORROR_DONE, MonitoringStation_Quarters_EventScript_Funny
 	msgbox MonitoringStation_Quarters_Text_RocketF1
-	waitmessage
 	release
 	end
 
 MonitoringStation_Quarters_EventScript_Funny::
 	msgbox MonitoringStation_Quarters_Text_Funny
-	waitmessage
 	release
 	end
 	
@@ -64,6 +59,5 @@ MonitoringStation_Quarters_EventScript_RocketF2::
 	lock
 	faceplayer
 	msgbox MonitoringStation_Quarters_Text_RocketF2
-	waitmessage
 	release
 	end

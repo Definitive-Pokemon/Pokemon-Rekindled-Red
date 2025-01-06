@@ -24,7 +24,6 @@ MonitoringStation_Storage_EventScript_BlueDoor::
 	goto_if_eq MonitoringStation_Storage_EventScript_RemoveBlueDoor
 	textcolor 2
 	msgbox MonitoringStation_Storage_Text_BlueDoor
-	closemessage
 	release
 	end
 	
@@ -39,7 +38,6 @@ MonitoringStation_Storage_EventScript_RemoveBlueDoor::
 	setmetatile 20, 9, METATILE_SilphCo_HideoutFloor , 0
 	special DrawWholeMapView
 	msgbox MonitoringStation_Storage_Text_BlueDoorGone
-	closemessage
 	release
 	end
 	

@@ -43,7 +43,6 @@ MonitoringStation_EventScript_AdminFinal::
 	lock
 	faceplayer
 	msgbox MonitoringStation_Text_AdminFinal
-	waitmessage
 	release
 	end
 
@@ -51,7 +50,6 @@ MonitoringStation_EventScript_StorageFinal::
 	lock
 	faceplayer
 	msgbox MonitoringStation_Text_StorageFinal
-	waitmessage
 	release
 	end	
 	
@@ -118,7 +116,6 @@ MonitoringStation_EventScript_AdminConvo::
 	waitmovement 0
 	textcolor 0
 	msgbox MonitoringStation_Text_Executive5
-	closemessage
 	setflag FLAG_HIDE_ENTRANCE_PEOPLE
 	setflag FLAG_GOT_YELLOW_KEY
 	setflag FLAG_ENDGAME
@@ -130,7 +127,6 @@ MonitoringStation_EventScript_Admin::
 	lock
 	faceplayer
 	msgbox MonitoringStation_Text_AdminLoose
-	waitmessage
 	release
 	end
 	
@@ -138,7 +134,6 @@ MonitoringStation_EventScript_StorageGrunt::
 	lock
 	faceplayer
 	msgbox MonitoringStation_Text_StorageGruntLoose
-	waitmessage
 	release
 	end
 	
@@ -146,7 +141,6 @@ MonitoringStation_EventScript_Executive::
 	lock
 	faceplayer
 	msgbox MonitoringStation_Text_Executive5
-	waitmessage
 	release
 	end
 	
@@ -161,7 +155,6 @@ MonitoringStation_EventScript_ExecutiveReal::
 	compare VAR_RESULT, TRUE
 	goto_if_eq MonitoringStation_EventScript_ExecutiveYay
 	msgbox MonitoringStation_Text_ExecutiveAww
-	waitmessage
 	release
 	end
 	
@@ -171,7 +164,6 @@ MonitoringStation_EventScript_ExecutiveIntro::
 	
 MonitoringStation_EventScript_ExecutiveYay::
 	msgbox MonitoringStation_Text_ExecutiveYay
-	waitmessage
 	release
 	end
 	
@@ -235,7 +227,6 @@ MonitoringStation_EventScript_RedDoor::
 	goto_if_eq MonitoringStation_EventScript_RemoveRedDoor
 	textcolor 2
 	msgbox MonitoringStation_Text_RedDoor
-	closemessage
 	release
 	end
 	
@@ -313,7 +304,6 @@ MonitoringStation_EventScript_ElevatorBroken::
 	waitmovement 0
 	delay 20
 	msgbox MonitoringStation_Text_OutOfOrder
-	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, MonitoringStation_Movement_ForcePlayerFromDoor
 	waitmovement 0
 	releaseall
