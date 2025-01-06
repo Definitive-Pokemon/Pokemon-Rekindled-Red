@@ -1077,7 +1077,6 @@ static u16 GetLocationMusic(struct WarpData * warp)
     return Overworld_GetMapHeaderByGroupAndId(warp->mapGroup, warp->mapNum)->music;
 }
 
-//TODO:MIGRATION group maybe exists?
 static bool8 IsWarpInsideMonitoringStation(struct WarpData * warp)
 {
     bool8 result = FALSE;
@@ -1111,6 +1110,20 @@ static bool8 IsWarpInsideSixIslandAlteringCave(struct WarpData * warp)
     if (warp->mapGroup == 0x01)
     {
         if (warp->mapNum == ((u8)MAP_SIX_ISLAND_ALTERING_CAVE))
+        {
+            result = TRUE;
+        }
+    }
+    return result;
+}
+
+static bool8 IsWarpInsideNavelRockExterior(struct WarpData * warp)
+{
+    bool8 result = FALSE;
+    u8 mapGroup = warp->mapGroup;
+    if (warp->mapGroup == 0x02)
+    {
+        if (warp->mapNum == ((u8)MAP_NAVEL_ROCK_EXTERIOR))
         {
             result = TRUE;
         }
@@ -1152,6 +1165,13 @@ static u16 GetCurrLocationDefaultMusic(void)
             music = MUS_ENCOUNTER_DEOXYS;
 		}
     }
+    else if ((bool8)IsWarpInsideNavelRockExterior(&gSaveBlock1Ptr->location))
+	{
+		if (VarGet(VAR_BLOCK) == 4)
+        {
+            music = MUS_SEVII_ROUTE;
+		}
+    }
     return music;
 }
 
@@ -1186,6 +1206,13 @@ static u16 GetWarpDestinationMusic(void)
 		else if (FlagGet (FLAG_HIDE_MURAL))
         {
             music = MUS_ENCOUNTER_DEOXYS;
+		}
+    }
+    else if ((bool8)IsWarpInsideNavelRockExterior(&sWarpDestination))
+	{
+	    if (VarGet(VAR_BLOCK) == 4)
+        {
+		    music = MUS_SEVII_ROUTE;
 		}
     }
     return music;
