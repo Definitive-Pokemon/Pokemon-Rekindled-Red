@@ -96,7 +96,6 @@ MonitoringStation_Power_EventScript_Restore_Power::
 	doweather
 	delay 60
 	msgbox MonitoringStation_Power_Text_Restore_Power
-	waitmessage
 	setflag FLAG_HIDE_HORROR_NPC
 	setflag FLAG_HORROR_POWER_RESTORED
 	setvar VAR_MONITORING_STATION_HALLWAY2_HELP, 1

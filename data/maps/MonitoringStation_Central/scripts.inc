@@ -240,9 +240,9 @@ MonitoringStation_Central_EventScript_Kabutops::
 MonitoringStation_Central_Eventscript_Admin::
 	lock
 	faceplayer
+	setflag FLAG_FIND_BLUE_KEY
 	goto_if_set FLAG_FIND_BLUE_KEY, MonitoringStation_Central_Eventscript_Admin2
 	msgbox MonitoringStation_Central_Text_Admin
-	setflag FLAG_FIND_BLUE_KEY
 	release
 	end
 	
