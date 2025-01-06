@@ -138,7 +138,7 @@ Std_MsgboxAutoclose::
 	return
 
 EventScript_Debug_IncreaseLevelScale::
-	goto_if_eq VAR_DEBUG_REMATCH_SCALING, 12, Skipsom
-	addvar VAR_DEBUG_REMATCH_SCALING, 1
+	goto_if_eq VAR_0x403C, 12, Skipsom
+	addvar VAR_0x403C, 1
 	Skipsom::
 	return
