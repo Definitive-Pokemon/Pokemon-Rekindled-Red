@@ -1665,7 +1665,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                         fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                     if(inBattleHouse)
                     {
-                        level = partyData[i].lvl + VarGet(VAR_0x403C);
+                        level = partyData[i].lvl + VarGet(VAR_DEBUG_REMATCH_SCALING);
                         if(level > 86)
                             level = 86;
                         CreateMon(&party[i], partyData[i].species, level + levelScaling, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
@@ -1702,7 +1702,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                         CreateMonWithGenderNatureAbility(&party[i], partyData[i].species, GetMonData(&gPlayerParty[0], MON_DATA_LEVEL, NULL), fixedIV, gender, partyData[i].nature, partyData[i].abilityNum);
                     else if(inBattleHouse)
                     {
-                        level = partyData[i].lvl + VarGet(VAR_0x403C);
+                        level = partyData[i].lvl + VarGet(VAR_DEBUG_REMATCH_SCALING);
                         if(level > 86)
                             level = 86;
                         CreateMonWithGenderNatureAbility(&party[i], partyData[i].species, level + levelScaling, fixedIV, gender, partyData[i].nature, partyData[i].abilityNum);
