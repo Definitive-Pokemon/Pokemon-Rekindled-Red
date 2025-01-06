@@ -136,9 +136,3 @@ Std_MsgboxAutoclose::
 	waitbuttonpress
 	release
 	return
-
-EventScript_Debug_IncreaseLevelScale::
-	goto_if_eq VAR_DEBUG_REMATCH_SCALING, 12, Skipsom
-	addvar VAR_DEBUG_REMATCH_SCALING, 1
-	Skipsom::
-	return

@@ -261,7 +261,7 @@
 #define VAR_ENTEI                  0x40D0
 #define VAR_RAIKOU                 0x40D1
 #define VAR_SUICUNE                0x40D2
-#define VAR_DEBUG_REMATCH_SCALING  0x40D3
+#define VAR_0x40D3                 0x40D3
 #define VAR_0x40D4                 0x40D4
 #define VAR_0x40D5                 0x40D5
 #define VAR_0x40D6                 0x40D6
