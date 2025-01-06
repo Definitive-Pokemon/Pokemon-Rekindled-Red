@@ -13280,7 +13280,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CueBallPaxton[] = {
 static const struct TrainerMonItemCustomMoves sParty_LeaderBrockChallenge[] = {
         {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_NINETALES,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13304,7 +13304,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBrockChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_AERODACTYL,
         .heldItem = ITEM_LIECHI_BERRY,
         .abilityNum = 0,
@@ -13312,7 +13312,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBrockChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_RHYDON,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 1,
@@ -13320,7 +13320,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBrockChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_GOLEM,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 1,
@@ -13331,7 +13331,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBrockChallenge[] = {
 static const struct TrainerMonItemCustomMoves sParty_LeaderMistyChallenge[] = {
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_CLOYSTER,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13355,7 +13355,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMistyChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_SWAMPERT,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13363,7 +13363,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMistyChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_GYARADOS,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13371,7 +13371,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMistyChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_STARMIE,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 1,
@@ -13382,7 +13382,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMistyChallenge[] = {
 static const struct TrainerMonItemCustomMoves sParty_LeaderLtSurgeChallenge[] = {
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_MANECTRIC,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 1,
@@ -13406,7 +13406,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderLtSurgeChallenge[] = 
     },
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_AMPHAROS,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13414,7 +13414,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderLtSurgeChallenge[] = 
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_MAGNETON,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13422,7 +13422,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderLtSurgeChallenge[] = 
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_RAICHU,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13433,7 +13433,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderLtSurgeChallenge[] = 
 static const struct TrainerMonItemCustomMoves sParty_LeaderErikaChallenge[] = {
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_VENUSAUR,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13457,7 +13457,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderErikaChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_BLISSEY,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13465,7 +13465,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderErikaChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_VICTREEBEL,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13473,7 +13473,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderErikaChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_VILEPLUME,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13484,7 +13484,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderErikaChallenge[] = {
 static const struct TrainerMonItemCustomMoves sParty_LeaderKogaChallenge[] = {
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_VENOMOTH,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13508,7 +13508,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderKogaChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_FORRETRESS,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13516,7 +13516,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderKogaChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_WEEZING,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13524,7 +13524,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderKogaChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_CROBAT,
         .heldItem = ITEM_CHOICE_BAND,
         .abilityNum = 0,
@@ -13535,7 +13535,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderKogaChallenge[] = {
 static const struct TrainerMonItemCustomMoves sParty_LeaderSabrinaChallenge[] = {
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_MR_MIME,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13559,7 +13559,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderSabrinaChallenge[] = 
     },
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_GENGAR,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13567,7 +13567,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderSabrinaChallenge[] = 
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_JYNX,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13575,7 +13575,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderSabrinaChallenge[] = 
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_ALAKAZAM,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13586,7 +13586,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderSabrinaChallenge[] = 
 static const struct TrainerMonItemCustomMoves sParty_LeaderBlaineChallenge[] = {
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_ARCANINE,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13610,7 +13610,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBlaineChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 83,
+        .lvl = 84,
         .species = SPECIES_KABUTOPS,
         .heldItem = ITEM_CHOICE_BAND,
         .abilityNum = 0,
@@ -13618,7 +13618,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBlaineChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_BLAZIKEN,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -13626,7 +13626,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBlaineChallenge[] = {
     },
     {
         .iv = 255,
-        .lvl = 86,
+        .lvl = 84,
         .species = SPECIES_MAGMAR,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
