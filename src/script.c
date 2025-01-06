@@ -880,7 +880,7 @@ u8 ReturnBattleHouseLevel(void)
 
 void UpdateBattleHouseStepCounter(void)
 {
-    struct BattleHouse* BattleHouseVar = &gSaveBlock1Ptr->battleHouseDat;
+    struct BattleHouse* BattleHouseVar = &gSaveBlock1Ptr->battleHouseData;
     u8 chanceOfVisit = 46;
 
     if((BattleHouseVar->boxesMoved || BattleHouseVar->spearowState
