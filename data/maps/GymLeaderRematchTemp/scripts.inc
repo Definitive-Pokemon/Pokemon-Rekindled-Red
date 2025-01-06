@@ -24,31 +24,31 @@ GymLeaderRematchTemp_Text_Sign::
 	.string "according to quality standards.$"
 
 Brock1::
-	trainerbattle_single_no_intro_text TRAINER_LEADER_BROCK_REMATCH, Gym_Text_Done
+	trainerbattle TRAINERBATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_LEADER_BROCK_REMATCH, Gym_Text_Done
 	end
 
 Misty1::
-	trainerbattle_single_no_intro_text TRAINER_LEADER_MISTY_REMATCH, Gym_Text_Done
+	trainerbattle TRAINERBATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_LEADER_MISTY_REMATCH, Gym_Text_Done
 	end
 
 Surge1::
-	trainerbattle_single_no_intro_text TRAINER_LEADER_LT_SURGE_REMATCH, Gym_Text_Done
+	trainerbattle TRAINERBATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_LEADER_LT_SURGE_REMATCH, Gym_Text_Done
 	end
 
 Erika1::
-	trainerbattle_single_no_intro_text TRAINER_LEADER_ERIKA_REMATCH, Gym_Text_Done
+	trainerbattle TRAINERBATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_LEADER_ERIKA_REMATCH, Gym_Text_Done
 	end
 
 Koga1::
-	trainerbattle_single_no_intro_text TRAINER_LEADER_KOGA_REMATCH, Gym_Text_Done
+	trainerbattle TRAINERBATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_LEADER_KOGA_REMATCH, Gym_Text_Done
 	end
 
 Sabrina1::
-	trainerbattle_single_no_intro_text TRAINER_LEADER_SABRINA_REMATCH, Gym_Text_Done
+	trainerbattle TRAINERBATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_LEADER_SABRINA_REMATCH, Gym_Text_Done
 	end
 
 Blaine1::
-	trainerbattle_single_no_intro_text TRAINER_LEADER_BLAINE_REMATCH, Gym_Text_Done
+	trainerbattle TRAINERBATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_LEADER_BLAINE_REMATCH, Gym_Text_Done
 	end
 
 Gym_Text_Done::
