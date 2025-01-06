@@ -18,7 +18,7 @@ NavelRock_Exterior_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR
 	call_if_eq VAR_BLOCK, 1, NavelRock_Exterior_EventScript_Moved
 	call_if_eq VAR_BLOCK, 3, NavelRock_Exterior_EventScript_Location
-	call_if_eq VAR_BLOCK, 4, NavelRock_Exterior_EventScript_Music
+	call_if_eq VAR_BLOCK, 4, NavelRock_Exterior_EventScript_Weather
 	end
 
 NavelRock_Exterior_OnFrame::
@@ -44,8 +44,7 @@ NavelRock_Exterior_EventScript_Moved::
 	setobjectxyperm LOCALID_MAXIMUS, 8, 10
 	return
 
-NavelRock_Exterior_EventScript_Music::
-	playbgm MUS_SEVII_ROUTE, 0
+NavelRock_Exterior_EventScript_Weather::
 	setweather 2
 	doweather
 	return
@@ -56,8 +55,6 @@ NavelRock_Exterior_EventScript_Location::
 	return
 
 NavelRock_Exterior_PrepareFinale::
-	@special SpawnCameraObject
-	@setobjectxy OBJ_EVENT_ID_PLAYER, 0, 0
 	setmetatile 8, 9, METATILE_General_Floory, 0
 	setmetatile 9, 9, METATILE_SeviiIslands6_Rocky, 1
 	special DrawWholeMapView
@@ -85,7 +82,7 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	setvar VAR_0x8004, 30  @ Num loops
 	setvar VAR_0x8005, 35 @ Delay
 	applymovement LOCALID_LUGIA, NavelRock_Base_Movement_LugiaGoForth
-	applymovement OBJ_EVENT_ID_CAMERA, NavelRock_Base_Movement_LugiaGoForth
+	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_LugiaGoForth
 	setweather 2
 	doweather
 	playmoncry SPECIES_LUGIA, 2
@@ -93,8 +90,6 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	waitmovement 0
 	delay 40
 	showobjectat OBJ_EVENT_ID_PLAYER, MAP_NAVEL_ROCK_EXTERIOR
-	@setobjectxy OBJ_EVENT_ID_PLAYER, 9, 16
-	@special RemoveCameraObject
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_Back
 	waitmovement 0
 	delay 25
