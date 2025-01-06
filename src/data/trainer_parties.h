@@ -1,3 +1,5 @@
+#include "constants/battle_tower.h"
+
 static const struct TrainerMonItemCustomMoves sParty_LeaderLtSurgeRematch[] = {
     {
         .iv = 255,
@@ -14497,4 +14499,12 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMistyRematch[] = {
         .abilityNum = 1,
         .moves = {MOVE_HYDRO_PUMP, MOVE_THUNDERBOLT, MOVE_ICE_BEAM, MOVE_PSYCHIC},
     },
+};
+
+//specify battle tower EV spreads in the lvl field, correct examples:
+// .lvl = F_EV_SPREAD_SPEED | F_EV_SPREAD_DEFENSE,
+// .lvl = F_EV_SPREAD_SPEED,
+
+const struct TrainerMonItemCustomMoves sParty_AnabelBrain[] = {
+    
 };

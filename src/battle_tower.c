@@ -1072,16 +1072,55 @@ void StartSpecialBattle(void)
         BattleTransition_StartOnField(transition);
         break;
     case 3: // battle tower brain battle
-        gBattleTypeFlags = (BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_TRAINER);
-        gTrainerBattleOpponent_A = 0;
+        {
+            u8 level;
+            s32 partyIndex;
+            u8 friendship = 255;
+            // Use the appropriate list of pokemon and level depending on the
+            // current challenge type. (level 50 or level 100 challenge)
+            if (gSaveBlock2Ptr->battleTower.battleTowerLevelType != 0)
+            {
+                battleTowerMons = gBattleTowerLevel100Mons;
+                level = GetHighestLevelInPlayerParty();
+                if(level < 60)
+                    level = 60;
+            }
+            else
+            {
+                battleTowerMons = gBattleTowerLevel50Mons;
+                level = 50;
+            }
+            gBattleTypeFlags = (BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_TRAINER);
+            gTrainerBattleOpponent_A = 0;
 
-        FillBattleTowerTrainerParty(); // overwrite?
+            for (partyIndex = 0; partyIndex < 3; partyIndex++)
+            {
+                // Place the chosen pokemon into the trainer's party.
+                CreateMonWithEVSpread(
+                    &gEnemyParty[partyIndex],
+                    sParty_AnabelBrain[partyIndex].species,
+                    level,
+                    sParty_AnabelBrain[partyIndex].iv,
+                    sParty_AnabelBrain[partyIndex].lvl);
 
-        CreateTask(Task_WaitBT, 1);
-        PlayMapChosenOrBattleBGM(MUS_VS_FRONTIER_BRAIN);
-        transition = BattleSetup_GetBattleTowerBattleTransition();
-        BattleTransition_StartOnField(transition);
-        break;
+                // Give the chosen pokemon its specified moves.
+                for (i = 0; i < 4; i++)
+                {
+                    SetMonMoveSlot(&gEnemyParty[partyIndex], sParty_AnabelBrain[partyIndex].moves[i], i);
+                    if (sParty_AnabelBrain[partyIndex].moves[i] == MOVE_FRUSTRATION)
+                        friendship = 0;  // MOVE_FRUSTRATION is more powerful the lower the pokemon's friendship is.
+                }
+
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_FRIENDSHIP, &friendship);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_HELD_ITEM, sParty_AnabelBrain[partyIndex].heldItem);
+            }
+
+            CreateTask(Task_WaitBT, 1);
+            PlayMapChosenOrBattleBGM(MUS_VS_FRONTIER_BRAIN);
+            transition = BattleSetup_GetBattleTowerBattleTransition();
+            BattleTransition_StartOnField(transition);
+            break;
+        }
     }
 }
 
