@@ -1111,7 +1111,7 @@ void StartSpecialBattle(void)
                 }
 
                 SetMonData(&gEnemyParty[partyIndex], MON_DATA_FRIENDSHIP, &friendship);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_HELD_ITEM, sParty_AnabelBrain[partyIndex].heldItem);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_HELD_ITEM, &sParty_AnabelBrain[partyIndex].heldItem);
             }
 
             CreateTask(Task_WaitBT, 1);
