@@ -64,7 +64,7 @@
 #define TRAINER_BRENDAN_2                         60
 #define TRAINER_BRENDAN_3                         61
 #define TRAINER_MAY                               62
-#define TRAINER_MAY_2                             63
+#define BRAIN_TRAINER_ANABEL                      63
 #define TRAINER_MAY_3                             64
 #define TRAINER_RS_PKMN_BREEDER_M                 65
 #define TRAINER_RS_PKMN_BREEDER_F                 66
@@ -770,12 +770,11 @@
 #define TRAINER_BROCK_REMATCH                    765
 #define TRAINER_BROCK_REMATCH_CHALLENGE          766
 #define TRAINER_MISTY_REMATCH                    767
-#define BRAIN_TRAINER_ANABEL                     768
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is 
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define NUM_TRAINERS                             769
-#define MAX_TRAINERS_COUNT                       769
+#define NUM_TRAINERS                             768
+#define MAX_TRAINERS_COUNT                       768
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
