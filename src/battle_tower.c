@@ -1090,27 +1090,27 @@ void StartSpecialBattle(void)
             }
             gBattleTypeFlags = (BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_TRAINER);
             gTrainerBattleOpponent_A = 0;
-
             for (partyIndex = 0; partyIndex < 3; partyIndex++)
             {
                 // Place the chosen pokemon into the trainer's party.
                 CreateMonWithEVSpread(
                     &gEnemyParty[partyIndex],
-                    gTrainers[BRAIN_TRAINER_ANABEL].party[partyIndex].species,
+                    gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].species,
                     level,
-                    gTrainers[BRAIN_TRAINER_ANABEL].party[partyIndex].iv,
-                    gTrainers[BRAIN_TRAINER_ANABEL].party[partyIndex].lvl);
+                    gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].iv,
+                    gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].lvl);
+                    //TODO
 
                 // Give the chosen pokemon its specified moves.
                 for (i = 0; i < 4; i++)
                 {
-                    SetMonMoveSlot(&gEnemyParty[partyIndex], gTrainers[BRAIN_TRAINER_ANABEL].party[partyIndex].moves[i], i);
-                    if (gTrainers[BRAIN_TRAINER_ANABEL].party[partyIndex].moves[i] == MOVE_FRUSTRATION)
+                    SetMonMoveSlot(&gEnemyParty[partyIndex], gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].moves[i], i);
+                    if (gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].moves[i] == MOVE_FRUSTRATION)
                         friendship = 0;  // MOVE_FRUSTRATION is more powerful the lower the pokemon's friendship is.
                 }
-
+                //set mon data nature
                 SetMonData(&gEnemyParty[partyIndex], MON_DATA_FRIENDSHIP, &friendship);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_HELD_ITEM, &gTrainers[BRAIN_TRAINER_ANABEL].party[partyIndex].heldItem);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_HELD_ITEM, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].heldItem);
             }
 
             CreateTask(Task_WaitBT, 1);

@@ -14507,10 +14507,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMistyRematch[] = {
     },
 };
 
-//specify battle tower EV spreads in the lvl field, correct examples:
-// .lvl = F_EV_SPREAD_SPEED | F_EV_SPREAD_DEFENSE,
-// .lvl = F_EV_SPREAD_SPEED,
-
+// lvl field ignored
 const struct TrainerMonItemCustomMovesEVs sParty_AnabelBrain[] = {
     {
         .iv = 255,
