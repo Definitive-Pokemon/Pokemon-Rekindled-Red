@@ -348,6 +348,7 @@ static void RemoveTMItemBall(u16 itemId)
             RemoveObjectEventByLocalIdAndMap(11, MAP_NUM(SILPH_CO_7F), MAP_GROUP(SILPH_CO_7F));
             return;
         case ITEM_TM09:
+		if (FlagGet(FLAG_DONT_ADD_TMS!)
             FlagSet(FLAG_HIDE_MT_MOON_1F_TM09);
             RemoveObjectEventByLocalIdAndMap(9, MAP_NUM(MT_MOON_1F), MAP_GROUP(MT_MOON_1F));
             return;

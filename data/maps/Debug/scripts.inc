@@ -94,6 +94,10 @@ Debug_UnlockGame::
 	giveitem ITEM_HM08
 	end
 
+TeachyTV::
+	giveitem ITEM_TEACHY_TV
+	end
+
 FameCheckerFull::
 	famechecker FAMECHECKER_BROCK, 0
 	famechecker FAMECHECKER_BROCK, 1
