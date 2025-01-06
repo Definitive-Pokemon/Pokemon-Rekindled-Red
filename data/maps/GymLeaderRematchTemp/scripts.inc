@@ -31,45 +31,39 @@ GymLeaderRematchTemp_Text_Sign::
 	.string "properly replaced by a GYM house\l"
 	.string "according to quality standards.$"
 
-GymLeaderRematchTemp_Debug_IncreaseLevelScale::
-	goto_if_eq VAR_0x403C, 12, GymLeaderRematchTemp_Skipsom
-	addvar VAR_0x403C, 1
-	GymLeaderRematchTemp_Skipsom::
-	return
-
 Brock1::
 	trainerbattle TRAINER_BATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_BROCK_REMATCH, LOCALID_BROCK, Gym_Text_Done
-	call GymLeaderRematchTemp_Debug_IncreaseLevelScale
+	call EventScript_Debug_IncreaseLevelScale
 	end
 
 Misty1::
 	trainerbattle TRAINER_BATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_MISTY_REMATCH, LOCALID_MISTY, Gym_Text_Done
-	call GymLeaderRematchTemp_Debug_IncreaseLevelScale
+	call EventScript_Debug_IncreaseLevelScale
 	end
 
 Surge1::
 	trainerbattle TRAINER_BATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_LT_SURGE_REMATCH, LOCALID_SURGE, Gym_Text_Done
-	call GymLeaderRematchTemp_Debug_IncreaseLevelScale
+	call EventScript_Debug_IncreaseLevelScale
 	end
 
 Erika1::
 	trainerbattle TRAINER_BATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_ERIKA_REMATCH, LOCALID_ERIKA, Gym_Text_Done
-	call GymLeaderRematchTemp_Debug_IncreaseLevelScale
+	call EventScript_Debug_IncreaseLevelScale
 	end
 
 Koga1::
 	trainerbattle TRAINER_BATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_KOGA_REMATCH, LOCALID_KOGA, Gym_Text_Done
-	call GymLeaderRematchTemp_Debug_IncreaseLevelScale
+	call EventScript_Debug_IncreaseLevelScale
 	end
 
 Sabrina1::
 	trainerbattle TRAINER_BATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_SABRINA_REMATCH, LOCALID_SABRINA, Gym_Text_Done
-	call GymLeaderRematchTemp_Debug_IncreaseLevelScale
+	call EventScript_Debug_IncreaseLevelScale
 	end
 
 Blaine1::
 	trainerbattle TRAINER_BATTLE_SINGLE_NO_INTRO_TEXT, TRAINER_BLAINE_REMATCH, LOCALID_BLAINE, Gym_Text_Done
-	call GymLeaderRematchTemp_Debug_IncreaseLevelScale
+	call EventScript_Debug_IncreaseLevelScale
 	end
 
 Gym_Text_Done::

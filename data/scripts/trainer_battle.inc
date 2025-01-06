@@ -136,3 +136,9 @@ Std_MsgboxAutoclose::
 	waitbuttonpress
 	release
 	return
+
+EventScript_Debug_IncreaseLevelScale::
+	goto_if_eq VAR_0x403C, 12, Skipsom
+	addvar VAR_0x403C, 1
+	Skipsom::
+	return
