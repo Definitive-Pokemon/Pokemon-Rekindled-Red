@@ -65,6 +65,7 @@ NavelRock_Exterior_PrepareFinale::
 
 NavelRock_Exterior_EventScript_FinaleHideAvatar::
 	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_NAVEL_ROCK_EXTERIOR
+	end
 
 NavelRock_Exterior_EventScript_SetUpFinale::
 	lockall
