@@ -770,11 +770,12 @@
 #define TRAINER_BROCK_REMATCH                    765
 #define TRAINER_BROCK_REMATCH_CHALLENGE          766
 #define TRAINER_MISTY_REMATCH                    767
+#define BRAIN_TRAINER_ANABEL                     768
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is 
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define NUM_TRAINERS                             768
-#define MAX_TRAINERS_COUNT                       768
+#define NUM_TRAINERS                             769
+#define MAX_TRAINERS_COUNT                       769
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
