@@ -5,13 +5,13 @@
 
 NavelRock_Exterior_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, NavelRock_Exterior_OnTransition
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, NavelRock_Exterior_OnWarp
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, NavelRock_Exterior_OnFrame
 	map_script MAP_SCRIPT_ON_LOAD, NavelRock_Exterior_OnLoad
 	.byte 0
 
 NavelRock_Exterior_OnLoad::
-	call_if_eq VAR_BLOCK, 3, NavelRock_Exterior_Block
+	call_if_eq VAR_BLOCK, 3, NavelRock_Exterior_PrepareFinale
+	end
 
 NavelRock_Exterior_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR
@@ -19,10 +19,6 @@ NavelRock_Exterior_OnTransition::
 	call_if_eq VAR_BLOCK, 3, NavelRock_Exterior_EventScript_Location
 	call_if_eq VAR_BLOCK, 4, NavelRock_Exterior_EventScript_Music
 	end
-
-NavelRock_Exterior_OnWarp::
-	map_script_2 VAR_BLOCK, 3, NavelRock_Exterior_PrepareFinale
-	.2byte 0
 
 NavelRock_Exterior_OnFrame::
 	map_script_2 VAR_BLOCK, 3, NavelRock_Exterior_EventScript_SetUpFinale
@@ -54,15 +50,12 @@ NavelRock_Exterior_EventScript_Location::
 	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_NAVEL_ROCK_EXTERIOR
 	return
 
-NavelRock_Exterior_Block::
-	setmetatile 8, 9, METATILE_General_Floory, 0
-	setmetatile 9, 9, METATILE_SeviiIslands6_Rocky, 1
-	special DrawWholeMapView
-	return
-
 NavelRock_Exterior_PrepareFinale::
 	special SpawnCameraObject
 	setobjectxy OBJ_EVENT_ID_PLAYER, 0, 0
+	setmetatile 8, 9, METATILE_General_Floory, 0
+	setmetatile 9, 9, METATILE_SeviiIslands6_Rocky, 1
+	special DrawWholeMapView
 	end
 
 NavelRock_Exterior_EventScript_SetUpFinale::
