@@ -637,7 +637,7 @@
       "x": 28,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_MONITORING_STATION",
+      "dest_map": "MAP_TRAINER_TOWER_ROOF",
       "dest_warp_id": "0"
     },
     {
