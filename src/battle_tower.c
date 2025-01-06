@@ -1080,14 +1080,12 @@ void StartSpecialBattle(void)
             // current challenge type. (level 50 or level 100 challenge)
             if (gSaveBlock2Ptr->battleTower.battleTowerLevelType != 0)
             {
-                battleTowerMons = gBattleTowerLevel100Mons;
                 level = GetHighestLevelInPlayerParty();
                 if(level < 60)
                     level = 60;
             }
             else
             {
-                battleTowerMons = gBattleTowerLevel50Mons;
                 level = 50;
             }
             gBattleTypeFlags = (BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_TRAINER);
