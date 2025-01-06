@@ -7673,4 +7673,14 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = ITEM_CUSTOM_MOVES(sParty_LeaderMistyRematch),
     },
+    [BRAIN_TRAINER_ANABEL] = {
+        .trainerClass = 0,
+        .encounterMusic_gender = 0,
+        .trainerPic = 0,
+        .trainerName = _(""),
+        .items = {ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_AnabelBrain),
+    },
 };

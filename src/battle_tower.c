@@ -23,7 +23,6 @@
 #include "trainer_tower.h"
 #include "load_save.h"
 #include "malloc.h"
-#include "data/trainer_parties.h"
 #include "constants/trainers.h"
 #include "constants/songs.h"
 #include "constants/species.h"
@@ -1097,21 +1096,21 @@ void StartSpecialBattle(void)
                 // Place the chosen pokemon into the trainer's party.
                 CreateMonWithEVSpread(
                     &gEnemyParty[partyIndex],
-                    sParty_AnabelBrain[partyIndex].species,
+                    gTrainers[BRAIN_TRAINER_ANABEL].party[partyIndex].species,
                     level,
-                    sParty_AnabelBrain[partyIndex].iv,
-                    sParty_AnabelBrain[partyIndex].lvl);
+                    gTrainers[BRAIN_TRAINER_ANABEL].party[partyIndex].iv,
+                    gTrainers[BRAIN_TRAINER_ANABEL].party[partyIndex].lvl);
 
                 // Give the chosen pokemon its specified moves.
                 for (i = 0; i < 4; i++)
                 {
-                    SetMonMoveSlot(&gEnemyParty[partyIndex], sParty_AnabelBrain[partyIndex].moves[i], i);
-                    if (sParty_AnabelBrain[partyIndex].moves[i] == MOVE_FRUSTRATION)
+                    SetMonMoveSlot(&gEnemyParty[partyIndex], gTrainers[BRAIN_TRAINER_ANABEL].party[partyIndex].moves[i], i);
+                    if (gTrainers[BRAIN_TRAINER_ANABEL].party[partyIndex].moves[i] == MOVE_FRUSTRATION)
                         friendship = 0;  // MOVE_FRUSTRATION is more powerful the lower the pokemon's friendship is.
                 }
 
                 SetMonData(&gEnemyParty[partyIndex], MON_DATA_FRIENDSHIP, &friendship);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_HELD_ITEM, &sParty_AnabelBrain[partyIndex].heldItem);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_HELD_ITEM, &gTrainers[BRAIN_TRAINER_ANABEL].party[partyIndex].heldItem);
             }
 
             CreateTask(Task_WaitBT, 1);
