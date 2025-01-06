@@ -1552,8 +1552,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     else
         sTrainers = (struct Trainer*)gTrainers;
 
-    if(gMapHeader.mapLayoutId == LAYOUT_SEVEN_ISLAND_HOUSE_ROOM2 || gMapHeader.mapLayoutId == LAYOUT_GYM_LEADER_REMATCH_TEMP
-       || gMapHeader.mapLayoutId == LAYOUT_NEW_MAP2 || gMapHeader.mapLayoutId == LAYOUT_NEW_MAP3)
+    if(gMapHeader.mapLayoutId == LAYOUT_SEVEN_ISLAND_HOUSE_ROOM2 || gMapHeader.regionMapSectionId == MAPSEC_SEVEN_ISLAND)
         inBattleHouse = TRUE;
 
     if(trainerNum >= TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE && trainerNum <= TRAINER_RIVAL_ROUTE22_LATE_CHARMANDER)
