@@ -14,9 +14,9 @@ GymLeaderRematchTemp_EventScript_CitySign::
 	end
 
 GymLeaderRematchTemp_Text_Sign::
-	.string "Welcome to this interior,\n"
-	.string "designed to battle KANTO's\l"
-	.string "GYM LEADERS for now.\p"
+	.string "Welcome to this interior, designed\n"
+	.string "to let you battle KANTO's LEADERS\l"
+	.string "for now.\p"
 	.string "Until DEOKISHISU updates the base\n"
 	.string "used for this hack, this is how\l"
 	.string "you will have to rematch LEADERS.\p"
@@ -27,8 +27,8 @@ GymLeaderRematchTemp_Text_Sign::
 	.string "version of each LEADER.\p"
 	.string "The next contains stronger teams.\n"
 	.string "The last one contains the strongest.\p"
-	.string "This is a TEMPORARY room, and will\n"
-	.string "be properly replaced by a GYM house\l"
+	.string "This is a TEMPORARY room, and will be\n"
+	.string "properly replaced by a GYM house\l"
 	.string "according to quality standards.$"
 
 Brock1::
