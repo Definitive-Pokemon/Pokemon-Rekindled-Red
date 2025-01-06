@@ -304,6 +304,7 @@ MonitoringStation_EventScript_ElevatorBroken::
 	waitmovement 0
 	delay 20
 	msgbox MonitoringStation_Text_OutOfOrder
+	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, MonitoringStation_Movement_ForcePlayerFromDoor
 	waitmovement 0
 	releaseall
