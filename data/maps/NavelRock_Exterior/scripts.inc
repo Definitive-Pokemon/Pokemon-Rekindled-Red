@@ -25,7 +25,7 @@ NavelRock_Exterior_OnFrame::
 	map_script_2 VAR_BLOCK, 3, NavelRock_Exterior_EventScript_SetUpFinale
 	.2byte 0
 
-NavelRock_Exterior_OnWarp
+NavelRock_Exterior_OnWarp::
 	map_script_2 VAR_BLOCK, 3, NavelRock_Exterior_EventScript_FinaleHideAvatar
 	.2byte 0
 
