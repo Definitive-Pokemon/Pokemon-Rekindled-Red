@@ -23,6 +23,7 @@
 #include "trainer_tower.h"
 #include "load_save.h"
 #include "malloc.h"
+#include "data/trainer_parties.h"
 #include "constants/trainers.h"
 #include "constants/songs.h"
 #include "constants/species.h"
