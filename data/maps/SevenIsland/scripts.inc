@@ -92,18 +92,3 @@ SevenIsland_EventScript_Buffer7::
 	callnative UseBattleHouseVar
 	msgbox SevenIsland_Text_BattleHouseSevenVisitors, MSGBOX_SIGN
 	end
-
-SevenIsland_EventScript_Spearow::
-	lock
-	faceplayer
-	waitse
-	playmoncry SPECIES_SPEAROW, CRY_MODE_NORMAL
-	msgbox SevenIsland_Text_Spearow
-	waitmoncry
-	release
-	end
-
-SevenIsland_Text_Spearow::
-	.string "SPEAROW: Roorrw!\p"
-	.string "The SPEAROW doesn't want you\n"
-	.string "to enter this house yet!$"
