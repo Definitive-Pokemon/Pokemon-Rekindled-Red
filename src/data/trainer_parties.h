@@ -1106,27 +1106,33 @@ static const struct TrainerMonItemCustomMoves sParty_BlackBeltKoichi2[] = {
     },
 };
 
-static const struct TrainerMonItemCustomMoves sParty_MysteryGirlAnabel[] = {
+static const struct TrainerMonItemCustomMovesEVs sParty_MysteryGirlAnabel[] = {
     {
         .iv = 255,
-        .lvl = 80,
+        .lvl = 75,
+        .evs = { 106, 0, 152, 100, 0, 152},
+        .nature = NATURE_MODEST,
         .species = SPECIES_ALAKAZAM,
 		.heldItem = ITEM_BRIGHT_POWDER,
-        .moves = {MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_THUNDER_PUNCH, MOVE_FIRE_PUNCH},
+        .moves = {MOVE_DISABLE, MOVE_ICE_PUNCH, MOVE_THUNDER_PUNCH, MOVE_FIRE_PUNCH},
     },
 	{
         .iv = 255,
-        .lvl = 80,
+        .lvl = 75,
+        .evs = { 100, 152, 152, 100, 6, 0},
+        .nature = NATURE_LONELY,
         .species = SPECIES_ENTEI,
 		.heldItem = ITEM_LUM_BERRY,
-        .moves = {MOVE_SUNNY_DAY, MOVE_FLAMETHROWER, MOVE_SOLAR_BEAM, MOVE_CALM_MIND},
+        .moves = {MOVE_FIRE_BLAST, MOVE_CALM_MIND, MOVE_DOUBLE_EDGE, MOVE_ROAR},
     },
 	{
         .iv = 255,
-        .lvl = 80,
+        .lvl = 75,
+        .evs = { 152, 152, 0, 106, 100, 0},
+        .nature = NATURE_ADAMANT,
         .species = SPECIES_SNORLAX,
 		.heldItem = ITEM_QUICK_CLAW,
-        .moves = {MOVE_EARTHQUAKE, MOVE_REST, MOVE_BODY_SLAM, MOVE_CURSE},
+        .moves = {MOVE_BELLY_DRUM, MOVE_YAWN, MOVE_BODY_SLAM, MOVE_CRUNCH},
     },
 };
 
@@ -14505,6 +14511,32 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMistyRematch[] = {
 // .lvl = F_EV_SPREAD_SPEED | F_EV_SPREAD_DEFENSE,
 // .lvl = F_EV_SPREAD_SPEED,
 
-const struct TrainerMonItemCustomMoves sParty_AnabelBrain[] = {
-    
+const struct TrainerMonItemCustomMovesEVs sParty_AnabelBrain[] = {
+    {
+        .iv = 255,
+        .lvl = 50,
+        .evs = { 158, 0, 252, 0, 0, 100},
+        .nature = NATURE_MODEST,
+        .species = SPECIES_RAIKOU,
+		.heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_THUNDERBOLT, MOVE_CALM_MIND, MOVE_REFLECT, MOVE_REST},
+    },
+	{
+        .iv = 255,
+        .lvl = 50,
+        .evs = { 252, 0, 252, 0, 0, 6},
+        .nature = NATURE_MODEST,
+        .species = SPECIES_LATIOS,
+		.heldItem = ITEM_BRIGHT_POWDER,
+        .moves = {MOVE_PSYCHIC, MOVE_DRAGON_CLAW, MOVE_CALM_MIND, MOVE_RECOVER},
+    },
+	{
+        .iv = 255,
+        .lvl = 50,
+        .evs = { 252, 252, 0, 6, 0, 0},
+        .nature = NATURE_ADAMANT,
+        .species = SPECIES_SNORLAX,
+		.heldItem = ITEM_CHESTO_BERRY,
+        .moves = {MOVE_CURSE, MOVE_DOUBLE_EDGE, MOVE_REST, MOVE_CRUNCH},
+    },
 };

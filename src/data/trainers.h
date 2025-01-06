@@ -290,7 +290,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = ITEM_CUSTOM_MOVES(sParty_MysteryGirlAnabel),
+        .party = CUSTOM_MOVES_EVS(sParty_MysteryGirlAnabel),
     },
     [TRAINER_CELIO] = {
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
@@ -7675,12 +7675,12 @@ const struct Trainer gTrainers[] = {
     },
     [BRAIN_TRAINER_ANABEL] = {
         .trainerClass = 0,
-        .encounterMusic_gender = 0,
-        .trainerPic = 0,
-        .trainerName = _(""),
-        .items = {ITEM_POTION},
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_AQUA_LEADER_ARCHIE,
+        .trainerName = _("ANABEL"),
+        .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = ITEM_CUSTOM_MOVES(sParty_AnabelBrain),
+        .party = CUSTOM_MOVES_EVS(sParty_AnabelBrain),
     },
 };
