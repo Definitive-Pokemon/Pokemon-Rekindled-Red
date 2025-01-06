@@ -7,6 +7,7 @@ NavelRock_Exterior_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, NavelRock_Exterior_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, NavelRock_Exterior_OnFrame
 	map_script MAP_SCRIPT_ON_LOAD, NavelRock_Exterior_OnLoad
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, NavelRock_Exterior_OnWarp
 	.byte 0
 
 NavelRock_Exterior_OnLoad::
@@ -22,6 +23,10 @@ NavelRock_Exterior_OnTransition::
 
 NavelRock_Exterior_OnFrame::
 	map_script_2 VAR_BLOCK, 3, NavelRock_Exterior_EventScript_SetUpFinale
+	.2byte 0
+
+NavelRock_Exterior_OnWarp::
+	map_script_2 VAR_BLOCK, 3, NavelRock_Exterior_EventScript_FinaleHideAvatar
 	.2byte 0
 
 NavelRock_Exterior_EventScript_Lugia::
@@ -51,12 +56,15 @@ NavelRock_Exterior_EventScript_Location::
 	return
 
 NavelRock_Exterior_PrepareFinale::
-	special SpawnCameraObject
-	setobjectxy OBJ_EVENT_ID_PLAYER, 0, 0
+	@special SpawnCameraObject
+	@setobjectxy OBJ_EVENT_ID_PLAYER, 0, 0
 	setmetatile 8, 9, METATILE_General_Floory, 0
 	setmetatile 9, 9, METATILE_SeviiIslands6_Rocky, 1
 	special DrawWholeMapView
 	end
+
+NavelRock_Exterior_EventScript_FinaleHideAvatar::
+	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_NAVEL_ROCK_EXTERIOR
 
 NavelRock_Exterior_EventScript_SetUpFinale::
 	lockall
@@ -83,8 +91,9 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	waitmoncry
 	waitmovement 0
 	delay 40
-	setobjectxy OBJ_EVENT_ID_PLAYER, 9, 16
-	special RemoveCameraObject
+	showobjectat OBJ_EVENT_ID_PLAYER, MAP_NAVEL_ROCK_EXTERIOR
+	@setobjectxy OBJ_EVENT_ID_PLAYER, 9, 16
+	@special RemoveCameraObject
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_Back
 	waitmovement 0
 	delay 25
