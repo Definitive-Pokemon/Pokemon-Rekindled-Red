@@ -1666,8 +1666,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                     if(inBattleHouse)
                     {
                         level = partyData[i].lvl + ReturnBattleHouseLevel();
-                        if(level > 86)
-                            level = 86;
+                        if(level > 84)
+                            level = 84;
                         CreateMon(&party[i], partyData[i].species, level + levelScaling, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                     }
                     else
@@ -1703,8 +1703,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                     else if(inBattleHouse)
                     {
                         level = partyData[i].lvl + ReturnBattleHouseLevel();
-                        if(level > 86)
-                            level = 86;
+                        if(level > 84)
+                            level = 84;
                         CreateMonWithGenderNatureAbility(&party[i], partyData[i].species, level + levelScaling, fixedIV, gender, partyData[i].nature, partyData[i].abilityNum);
                     }
                     else
@@ -1712,9 +1712,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                         if(gMapHeader.mapLayoutId == LAYOUT_PALLET_TOWN_PROFESSOR_OAKS_LAB)
                         {   //special casing superboss battle with Oak
                             if(gSaveBlock1Ptr->keyFlags.difficulty == DIFFICULTY_CHALLENGE)
-                                levelScaling = 5;
+                                levelScaling = 0;
                             else if(gSaveBlock1Ptr->keyFlags.difficulty == DIFFICULTY_EASY)
-                                levelScaling = -5;
+                                levelScaling = 0;
                             else
                                 levelScaling = 0;
                         }
