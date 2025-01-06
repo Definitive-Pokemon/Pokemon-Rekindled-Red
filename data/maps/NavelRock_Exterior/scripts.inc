@@ -89,6 +89,7 @@ NavelRock_Exterior_EventScript_SetUpFinale::
 	playmoncry SPECIES_LUGIA, 2
 	waitmoncry
 	waitmovement 0
+	delay 40
 	setobjectxy OBJ_EVENT_ID_PLAYER, 9, 16
 	special RemoveCameraObject
 	applymovement OBJ_EVENT_ID_PLAYER, NavelRock_Base_Movement_Back
