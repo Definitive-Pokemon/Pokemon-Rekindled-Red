@@ -836,37 +836,9 @@ void CheckNoFreeHealsMode(void)
 #define CHECK_ALL_TOLD 11
 #define CREATE_VISITOR_STRING 12
 
-struct BattleHouse
-{
-    u16 spearowState:1;     //whether Spearow is gone. 0 for no, 1 for yes
-    u16 toldBrock:1;
-    u16 toldMisty:1;
-    u16 toldLtSurge:1;
-    u16 toldErika:1;
-    u16 toldKoga:1;
-    u16 toldSabrina:1;
-    u16 toldBlaine:1;       // ^^ filled out Fame Checker and told lady for person
-    // 1 byte
-    u16 boxesMoved:1;       // controls setting the layout. Happens when Spearow returns for the first time.
-    u16 visitorBrock:1;
-    u16 visitorMisty:1;
-    u16 visitorLtSurge:1;
-    u16 visitorErika:1;
-    u16 visitorKoga:1;
-    u16 visitorSabrina:1;
-    u16 visitorBlaine:1;    // ^^ visitors currently in house
-    // 1 byte, overflows into next scripting var
-    u16 spawnFails:3;       // after a Gym Leader fails to visit 6 times, this starts forcing visits
-    u16 levelGrowth:5;      // adds levels to rematch Pokemon up to level 80. Maxes at +12.
-    // 1 byte
-    u16 steps:8;            // used to bring back Spearow and bring in visitors
-};
-
 static bool8 AllPossibleGymLeadersPresent(void)
 {
-    struct BattleHouse* BattleHouseVar;
-    u16 *varPtr = GetVarPointer(VAR_BATTLE_HOUSE);
-    (void*) BattleHouseVar = varPtr;
+    struct BattleHouse* BattleHouseVar = &gSaveBlock1Ptr->battleHouseData;
 
     if(BattleHouseVar->toldBrock && !BattleHouseVar->visitorBrock)
     {
@@ -901,24 +873,20 @@ static bool8 AllPossibleGymLeadersPresent(void)
 
 u8 ReturnBattleHouseLevel(void)
 {
-    struct BattleHouse* BattleHouseVar;
-    u16 *varPtr = GetVarPointer(VAR_BATTLE_HOUSE);
-    u8 levelGrowth;
-    (void*) BattleHouseVar = varPtr;
-
-    levelGrowth = BattleHouseVar->levelGrowth;
-
+    struct BattleHouse* BattleHouseVar = &gSaveBlock1Ptr->battleHouseData;
+    u8 levelGrowth = BattleHouseVar->levelGrowth;
     return levelGrowth;
 }
 
 void UpdateBattleHouseStepCounter(void)
 {
-    struct BattleHouse* BattleHouseVar;
-    u16 *varPtr = GetVarPointer(VAR_BATTLE_HOUSE);
+    struct BattleHouse* BattleHouseVar = &gSaveBlock1Ptr->battleHouseDat;
     u8 chanceOfVisit = 46;
-    (void*) BattleHouseVar = varPtr;
 
-    if(VarGet(VAR_BATTLE_HOUSE) && gMapHeader.regionMapSectionId != MAPSEC_SEVEN_ISLAND)
+    if((BattleHouseVar->boxesMoved || BattleHouseVar->spearowState
+        || BattleHouseVar->toldBrock || BattleHouseVar->toldMisty || BattleHouseVar->toldLtSurge
+        || BattleHouseVar->toldErika || BattleHouseVar->toldKoga || BattleHouseVar->toldSabrina || BattleHouseVar->toldBlaine) 
+        && gMapHeader.regionMapSectionId != MAPSEC_SEVEN_ISLAND)
     {
         if(BattleHouseVar->steps != 255)
             BattleHouseVar->steps++;
@@ -1036,11 +1004,9 @@ void UseBattleHouseVar(void)
 {
     u8 type = gSpecialVar_0x8003;
     u8 argument = gSpecialVar_0x8004;
-    struct BattleHouse* BattleHouseVar;
-    u16 *varPtr = GetVarPointer(VAR_BATTLE_HOUSE);
+    struct BattleHouse* BattleHouseVar = &gSaveBlock1Ptr->battleHouseData;
     u8 totalCount = 0;
     u8 runningCount = 0;
-    (void*) BattleHouseVar = varPtr;
 
     switch(type)
     {
