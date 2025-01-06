@@ -5,6 +5,7 @@
 
 NavelRock_Exterior_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, NavelRock_Exterior_OnTransition
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, NavelRock_Exterior_OnWarp
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, NavelRock_Exterior_OnFrame
 	map_script MAP_SCRIPT_ON_LOAD, NavelRock_Exterior_OnLoad
 	.byte 0
@@ -18,6 +19,10 @@ NavelRock_Exterior_OnTransition::
 	call_if_eq VAR_BLOCK, 3, NavelRock_Exterior_EventScript_Location
 	call_if_eq VAR_BLOCK, 4, NavelRock_Exterior_EventScript_Music
 	end
+
+NavelRock_Exterior_OnWarp::
+	map_script_2 VAR_BLOCK, 3, NavelRock_Exterior_PrepareFinale
+	.2byte 0
 
 NavelRock_Exterior_OnFrame::
 	map_script_2 VAR_BLOCK, 3, NavelRock_Exterior_EventScript_SetUpFinale
@@ -55,10 +60,13 @@ NavelRock_Exterior_Block::
 	special DrawWholeMapView
 	return
 
-NavelRock_Exterior_EventScript_SetUpFinale::
-	lockall
+NavelRock_Exterior_PrepareFinale::
 	special SpawnCameraObject
 	setobjectxy OBJ_EVENT_ID_PLAYER, 0, 0
+	end
+
+NavelRock_Exterior_EventScript_SetUpFinale::
+	lockall
 	setvar VAR_BLOCK, 4
 	delay 100
 	playse SE_THUNDERSTORM_STOP
