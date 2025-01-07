@@ -1125,7 +1125,7 @@ void StartSpecialBattle(void)
                 //set mon data nature
                 SetMonData(&gEnemyParty[partyIndex], MON_DATA_HP_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[0]);
                 SetMonData(&gEnemyParty[partyIndex], MON_DATA_ATK_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[1]);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_DEF_EV, &&Trainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[2]);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_DEF_EV, &Trainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[2]);
                 SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPATK_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[3]);
                 SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPDEF_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[4]);
                 SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPEED_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[5]);
