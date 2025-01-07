@@ -617,6 +617,10 @@ static void UpdateOrInsertReceivedBattleTowerRecord(struct BattleTowerRecord * r
 
 u8 GetBattleTowerTrainerFrontSpriteId(void)
 {
+    if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId == 0xFF)
+    {
+        return gTrainers[BRAIN_TRAINER_ANABEL].trainerPic;
+    }
     if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId == BATTLE_TOWER_EREADER_TRAINER_ID)
     {
         return gFacilityClassToPicIndex[gSaveBlock2Ptr->battleTower.ereaderTrainer.trainerClass];
@@ -633,6 +637,10 @@ u8 GetBattleTowerTrainerFrontSpriteId(void)
 
 u8 GetBattleTowerTrainerClassNameId(void)
 {
+    if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId == 0xFF)
+    {
+        return TRAINER_CLASS_TOWER_TYCOON;
+    }
     if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId == BATTLE_TOWER_EREADER_TRAINER_ID)
     {
         return gFacilityClassToTrainerClass[gSaveBlock2Ptr->battleTower.ereaderTrainer.trainerClass];
@@ -650,6 +658,13 @@ u8 GetBattleTowerTrainerClassNameId(void)
 void GetBattleTowerTrainerName(u8 *dest)
 {
     s32 i;
+    if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId == 0xFF)
+    {
+        for (i = 0; i < 7; i++)
+            dest[i] = gTrainers[BRAIN_TRAINER_ANABEL].trainerName[i];
+        dest[i] = EOS;
+        return;
+    }
     if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId == BATTLE_TOWER_EREADER_TRAINER_ID)
     {
         for (i = 0; i < 7; i++)
@@ -1099,7 +1114,6 @@ void StartSpecialBattle(void)
                     level,
                     gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].iv,
                     gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].lvl);
-                    //TODO
 
                 // Give the chosen pokemon its specified moves.
                 for (i = 0; i < 4; i++)
