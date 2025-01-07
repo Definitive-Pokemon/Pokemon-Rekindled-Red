@@ -13,7 +13,7 @@ BattleTower_BattleRoom_EventScript_1608EB::
 
 BattleTower_BattleRoom_EventScript_1608FA::
 	special ChooseNextBattleTowerTrainer
-    compare VAR_RESULT, TRUE
+    compare VAR_0x8006, TRUE
 	goto_if_eq BattleTower_BrainBattleVar
 	setvar VAR_0x8004, 0
 	goto BattleTower_BattleRoom_EventScript_1608FA_Continue

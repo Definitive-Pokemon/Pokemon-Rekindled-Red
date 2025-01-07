@@ -391,7 +391,7 @@ static bool8 ChooseSpecialBattleTowerTrainer(void)
         {
             // return true and set special trainer value to brain
             gSaveBlock2Ptr->battleTower.battleTowerTrainerId = 0xFF;
-            gSpecialVar_Result = 1;
+            gSpecialVar_0x8006 = 1;
             return TRUE;
         }
         // Check if one of the battle tower trainers from record mixing should be the next trainer.
@@ -436,7 +436,7 @@ void ChooseNextBattleTowerTrainer(void)
     int i;
     u16 trainerId;
     bool8 levelType;
-    gSpecialVar_Result = 0;
+    gSpecialVar_0x8006 = FALSE;
 
     levelType = gSaveBlock2Ptr->battleTower.battleTowerLevelType;
     if (ChooseSpecialBattleTowerTrainer())
