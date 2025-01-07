@@ -1113,7 +1113,7 @@ void StartSpecialBattle(void)
                     gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].species,
                     level,
                     gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].iv,
-                    &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].nature);
+                    gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].nature);
 
                 // Give the chosen pokemon its specified moves.
                 for (i = 0; i < 4; i++)
