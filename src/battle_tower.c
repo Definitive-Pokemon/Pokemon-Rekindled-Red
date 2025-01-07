@@ -1108,12 +1108,12 @@ void StartSpecialBattle(void)
             for (partyIndex = 0; partyIndex < 3; partyIndex++)
             {
                 // Place the chosen pokemon into the trainer's party.
-                CreateMonWithEVSpread(
+                CreateMonWithNature(
                     &gEnemyParty[partyIndex],
                     gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].species,
                     level,
                     gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].iv,
-                    gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].lvl);
+                    &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].nature);
 
                 // Give the chosen pokemon its specified moves.
                 for (i = 0; i < 4; i++)
@@ -1123,13 +1123,12 @@ void StartSpecialBattle(void)
                         friendship = 0;  // MOVE_FRUSTRATION is more powerful the lower the pokemon's friendship is.
                 }
                 //set mon data nature
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_HP_EV, &&gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[0]);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_ATK_EV, &&gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[1]);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_DEF_EV, &&gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[2]);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPATK_EV, &&gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[3]);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPDEF_EV, &&gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[4]);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPEED_EV, &&gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[5]);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_NATURE, &&gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].nature);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_HP_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[0]);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_ATK_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[1]);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_DEF_EV, &&Trainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[2]);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPATK_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[3]);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPDEF_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[4]);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPEED_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[5]);
                 SetMonData(&gEnemyParty[partyIndex], MON_DATA_FRIENDSHIP, &friendship);
                 SetMonData(&gEnemyParty[partyIndex], MON_DATA_HELD_ITEM, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].heldItem);
             }
