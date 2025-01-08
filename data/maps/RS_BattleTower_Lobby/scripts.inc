@@ -15,9 +15,6 @@ BattleTower_Lobby_EventScript_16029C::
 	checkitem ITEM_EON_TICKET, 1
 	compare VAR_RESULT, TRUE
 	goto_if_eq BattleTower_Lobby_EventScript_HideScott
-	checkitem ITEM_AURORA_TICKET, 1
-	compare VAR_RESULT, TRUE
-	goto_if_eq BattleTower_Lobby_EventScript_CheckShouldGiveEonTicket
 	callnative GetBestBattleTowerStreakToVar0x8007
 	compare VAR_0x8007, 28
 	goto_if_lt BattleTower_Lobby_EventScript_HideScott

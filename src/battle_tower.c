@@ -387,7 +387,7 @@ static bool8 ChooseSpecialBattleTowerTrainer(void)
     else
     {
         //TODO: change back
-        if (winStreak == 21 || winStreak == 6)
+        if (winStreak == 27 || winStreak == 27)
         {
             // return true and set special trainer value to brain
             gSaveBlock2Ptr->battleTower.battleTowerTrainerId = 0xFF;
