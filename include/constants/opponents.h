@@ -47,7 +47,7 @@
 #define TRAINER_LEADER_GIOVANNI_MEWTWO            43
 #define TRAINER_LEADER_SIDNEY                     44
 #define TRAINER_COLLECTOR_MAXIMUS                 45
-#define TRAINER_DRAGON_TAMER                      46
+#define TRAINER_LEADER_DAISY_REMATCH              46
 #define TRAINER_RS_BIRD_KEEPER                    47
 #define TRAINER_NINJA_BOY                         48
 #define TRAINER_BATTLE_GIRL                       49
