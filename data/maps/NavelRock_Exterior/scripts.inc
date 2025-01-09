@@ -233,7 +233,7 @@ NavelRock_Exterior_Text_Response::
 	.string "Mother of…\p"
 	.string "Who do you think you are,\n"
 	.string "you jumped-up piece of…\l"
-	.string "third-rate Columbo!$"
+	.string "third-rate COLUMBO!$"
 
 NavelRock_Exterior_Text_Nu::
 	.string "Sir, now you've gone too far.\p"
