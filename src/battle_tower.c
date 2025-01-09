@@ -3,6 +3,7 @@
 #include "random.h"
 #include "text.h"
 #include "event_data.h"
+#include "event_scripts.h"
 #include "event_object_movement.h"
 #include "string_util.h"
 #include "battle_message.h"
