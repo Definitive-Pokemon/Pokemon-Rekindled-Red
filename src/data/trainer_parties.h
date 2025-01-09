@@ -954,7 +954,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMistyRematchChallenge
 static const struct TrainerMonItemCustomMoves sParty_LeaderDaisy[] = {
     {
         .iv = 255,
-        .lvl = 77,
+        .lvl = 78,
         .species = SPECIES_TAUROS,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -962,7 +962,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderDaisy[] = {
     },
     {
         .iv = 255,
-        .lvl = 78,
+        .lvl = 79,
         .species = SPECIES_ALTARIA,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -970,7 +970,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderDaisy[] = {
     },
     {
         .iv = 255,
-        .lvl = 78,
+        .lvl = 79,
         .species = SPECIES_ESPEON,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -978,7 +978,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderDaisy[] = {
     },
     {
         .iv = 255,
-        .lvl = 77,
+        .lvl = 78,
         .species = SPECIES_URSARING,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -994,7 +994,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderDaisy[] = {
     },
     {
         .iv = 255,
-        .lvl = 80,
+        .lvl = 81,
         .species = SPECIES_SNORLAX,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
