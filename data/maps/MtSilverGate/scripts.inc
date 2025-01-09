@@ -123,7 +123,7 @@ MtSilverGate_Text_NewBarkPass::
 	.string "ROUTE 26 and beyond.$"
 
 MtSilverGate_Text_Mt_Silver::
-	.string "Mt. Silver lies in this direction.\p"
+	.string "MT. SILVER lies in this direction.\p"
 	.string "The strongest TRAINERS come here\n"
 	.string "to battle and train their POKéMON.$"
 
