@@ -167,9 +167,46 @@ PalletTown_RivalsHouse_EventScript_CantGroomEgg::
 	end
 
 PalletTown_RivalsHouse_EventScript_DeclineGrooming::
+	goto_if_set FLAG_BEAT_DAISY, PalletTown_RivalsHouse_EventScript_DeclineGrooming2
 	msgbox PalletTown_RivalsHouse_Text_DontNeedAnyGrooming
 	release
 	end
+
+PalletTown_RivalsHouse_EventScript_DeclineGrooming2::
+	msgbox PalletTown_RivalsHouse_Text_DontNeedAnyGrooming2, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq PalletTown_RivalsHouse_EventScript_Battle
+	msgbox PalletTown_RivalsHouse_Text_Nope
+	release
+	end
+
+PalletTown_RivalsHouse_Text_DontNeedAnyGrooming2::
+    .string "You don't need any grooming done?\n"
+    .string "Would you instead like to battle?$"
+
+PalletTown_RivalsHouse_Text_Nope::
+    .string "Okay, we'll just have tea.$"
+
+PalletTown_RivalsHouse_EventScript_Battle::
+	trainerbattle_single TRAINER_LEADER_DAISY_REMATCH, PalletTown_RivalsHouse_Text_DaisyIntro, PalletTown_RivalsHouse_Text_DaisyDefeat, PalletTown_RivalsHouse_EventScript_DefeatedDaisy, NO_MUSIC
+	release
+	end
+	
+
+PalletTown_RivalsHouse_Text_DaisyIntro::
+	.string "Let's battle.$"
+
+PalletTown_RivalsHouse_Text_DaisyDefeat::
+	.string "You won.$"
+
+PalletTown_RivalsHouse_EventScript_DefeatedDaisy::
+	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 0
+	msgbox PalletTown_RivalsHouse_Text_YouWon
+	release
+	end
+
+PalletTown_RivalsHouse_Text_YouWon::
+	.string "You won.$"
 
 PalletTown_RivalsHouse_EventScript_RateMonFriendship::
 	msgbox PalletTown_RivalsHouse_Text_MayISeeFirstMon

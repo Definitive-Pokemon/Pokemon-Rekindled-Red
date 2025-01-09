@@ -293,7 +293,7 @@ const struct Trainer gTrainers[] = {
         .party = CUSTOM_MOVES_EVS(sParty_MysteryGirlAnabel),
     },
     [TRAINER_CELIO] = {
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
+        .trainerClass = TRAINER_CLASS_RS_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_LEADER_WALLACE,
         .trainerName = _("CELIO"),
@@ -452,15 +452,15 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_HP_AWARE,
         .party = ITEM_CUSTOM_MOVES(sParty_CollectorMaximus),
     },
-    [TRAINER_DRAGON_TAMER] = {
-        .trainerClass = TRAINER_CLASS_DRAGON_TAMER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_DRAGON_TAMER,
-        .trainerName = _(""),
-        .items = {},
+    [TRAINER_LEADER_DAISY_REMATCH] = {
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_LEADER_WINONA,
+        .trainerName = _("DAISY"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_DragonTamer),
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = ITEM_CUSTOM_MOVES(sParty_LeaderDaisyRematch),
     },
     [TRAINER_RS_BIRD_KEEPER] = {
         .trainerClass = TRAINER_CLASS_RS_BIRD_KEEPER,
