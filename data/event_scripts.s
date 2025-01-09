@@ -1002,6 +1002,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_MOM_REAL
 	setflag FLAG_HIDE_DAISY
 	setflag FLAG_HIDE_CAVE_BALL
+	setflag FLAG_HIDE_LETTER_AIDE
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
 	setvar VAR_JIRACHI, 1
 	setvar VAR_REGICHECK, 1
