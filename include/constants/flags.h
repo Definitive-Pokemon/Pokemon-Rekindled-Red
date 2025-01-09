@@ -565,7 +565,7 @@
 #define FLAG_HIDE_PROTEIN                                       0x21D
 #define FLAG_HIDE_TM24                                          0x21E
 #define FLAG_HIDE_SUN_STONE                                     0x21F
-#define FLAG_0x220               0x220
+#define FLAG_HIDE_MAGNET                                        0x220
 #define FLAG_0x221               0x221
 #define FLAG_0x222               0x222
 #define FLAG_0x223               0x223

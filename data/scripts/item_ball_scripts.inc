@@ -781,6 +781,10 @@ MtSilverCave_EventScript_FullRestore::
 	finditem ITEM_FULL_RESTORE
 	end
 
+MtSilver_EventScript_ItemMagnet::
+	finditem ITEM_MAGNET
+	end
+
 MtSilverCave_EventScript_Dragon_Fang::
 	finditem ITEM_DRAGON_FANG
 	end
