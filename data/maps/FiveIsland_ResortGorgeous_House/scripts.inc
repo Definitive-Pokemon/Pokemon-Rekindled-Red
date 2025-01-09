@@ -36,6 +36,8 @@ FiveIsland_ResortGorgeous_House_EventScript_SelphyLetter::
 	waitmovement 0
 	msgbox FiveIsland_ResortGorgeous_House_Text_SelphyThisLetter
 	setflag FLAG_HIDE_LOST_HIKER
+	setflag FLAG_HIDE_LOST_PSYCHIC
+	setvar VAR_CELEBI, 1
 	release
 	end
 

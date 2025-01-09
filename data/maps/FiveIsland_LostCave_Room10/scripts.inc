@@ -4,38 +4,42 @@
 .set LOCALID_CELEBI, 4
 
 FiveIsland_LostCave_Room10_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, FiveIsland_LostCave_Room10_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, FiveIsland_LostCave_Room10_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, FiveIsland_LostCave_Room10_OnResume
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, FiveIsland_LostCave_Room10_OnFrame
 	.byte 0
+	
+FiveIsland_LostCave_Room10_OnLoad::
+	compare_var_to_value VAR_CELEBI, 0
+	goto_if_eq DontShowCelebiYet
+	call_if_unset FLAG_FOUGHT_CELEBI, FiveIsland_LostCave_Room10_EventScript_TryShowCelebi
+DontShowCelebiYet::
+	end
+
+FiveIsland_LostCave_Room10_OnTransition::
+	call_if_set FLAG_FOUGHT_CELEBI, FiveIsland_LostCave_Room10_EventScript_HideCelebi
+	end
 
 FiveIsland_LostCave_Room10_OnResume::
 	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, FiveIsland_LostCave_Room10_EventScript_TryRemoveCelebi
 	call_if_defeated TRAINER_LADY_SELPHY, FiveIsland_LostCave_Room10_EventScript_StopSelphySceneTrigger
 	end
 	
+FiveIsland_LostCave_Room10_EventScript_TryShowCelebi::
+	goto_if_set FLAG_CELEBI_FLED, EventScript_Return
+	clearflag FLAG_HIDE_STORY_CELEBI
+	return
+	
+FiveIsland_LostCave_Room10_EventScript_HideCelebi::
+	setflag FLAG_HIDE_STORY_CELEBI
+	return
+	
 FiveIsland_LostCave_Room10_EventScript_TryRemoveCelebi::
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_ne EventScript_Return
 	removeobject VAR_LAST_TALKED
-	return
-	
-FiveIsland_LostCave_Room10_OnTransition::
-	call_if_set FLAG_FOUGHT_CELEBI, FiveIsland_LostCave_Room10_EventScript_HideCelebi
-	call_if_unset FLAG_FOUGHT_CELEBI, FiveIsland_LostCave_Room10_EventScript_TryShowCelebi
-	end
-	
-FiveIsland_LostCave_Room10_EventScript_TryShowCelebi::
-	compare_var_to_value VAR_CELEBI_EVENT6, 0
-	goto_if_eq DontShowCelebiYet
-	goto_if_set FLAG_CELEBI_FLED, EventScript_Return
-	clearflag FLAG_HIDE_STORY_CELEBI
-DontShowCelebiYet::
-	return
-	
-FiveIsland_LostCave_Room10_EventScript_HideCelebi::
-	setflag FLAG_HIDE_STORY_CELEBI
 	return
 	
 FiveIsland_LostCave_Room10_EventScript_Celebi::
@@ -48,7 +52,6 @@ FiveIsland_LostCave_Room10_EventScript_Celebi::
 	waitmessage
 	waitmoncry
 	delay 10
-	playbgm MUS_ENCOUNTER_GYM_LEADER, 0
 	waitbuttonpress
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartLegendaryBattle
@@ -80,12 +83,12 @@ FiveIsland_LostCave_Room10_EventScript_CelebiFled::
     fadescreenswapbuffers FADE_TO_BLACK
     removeobject VAR_LAST_TALKED
     fadescreenswapbuffers FADE_FROM_BLACK
-    msgbox FiveIsland_LostCave_Room10_Text_CelebiFled
-	closemessage
-	release
+    bufferspeciesname STR_VAR_1, VAR_0x8004
+    msgbox Text_CelebiFled
+    release
 	end
 	
-FiveIsland_LostCave_Room10_Text_CelebiFled::
+Text_CelebiFled::
 	.string "CELEBI suddenly disappeared.$"
 	
 FiveIsland_LostCave_Entrance_EventScript_CelebiEvent6::
@@ -256,6 +259,8 @@ FiveIsland_LostCave_Entrance_EventScript_CelebiEvent6::
 	delay 60
 	setflag FLAG_HIDE_DUO6
 	setvar VAR_CELEBI_EVENT6, 2
+	clearflag FLAG_HIDE_LOST_HIKER
+	clearflag FLAG_HIDE_LOST_PSYCHIC
 	releaseall
 	end
 
@@ -550,4 +555,4 @@ FiveIsland_LostCave_Room10_Movement_Oak4::
 	step_end
 	
 FiveIsland_LostCave_Room10_Text_Celebi::
-	.string "Biiii!$"
+	.string "Cyybol!$"
