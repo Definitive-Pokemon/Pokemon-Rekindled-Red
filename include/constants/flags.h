@@ -252,9 +252,9 @@
 #define FLAG_GIVEN_CORSOLA_EGG                0x0E8
 #define FLAG_MASTER_TRAINER_BATTLE            0x0E9
 #define FLAG_HIDE_MASTER_TRAINERS             0x0EA
-#define FLAG_DEFEATED_KYOGRE                  0x0EB
-#define FLAG_DEFEATED_GROUDON                 0x0EC
-#define FLAG_DEFEATED_RAYQUAZA                0x0ED
+#define FLAG_KYOGRE_FLED                      0x0EB
+#define FLAG_GROUDON_FLED                     0x0EC
+#define FLAG_RAYQUAZA_FLED                    0x0ED
 #define FLAG_HIDE_MARINE_CAVE_KYOGRE          0x0EE
 #define FLAG_HIDE_TERRA_CAVE_GROUDON          0x0EF
 #define FLAG_HIDE_AERO_CAVE_RAYQUAZA          0x0F0
@@ -1314,9 +1314,9 @@
 #define FLAG_ANABEL_DONE               0x4F3
 #define FLAG_HIDE_LOST_PSYCHIC               0x4F4
 #define FLAG_HIDE_LETTER_AIDE               0x4F5
-#define FLAG_0x4F6               0x4F6
-#define FLAG_0x4F7               0x4F7
-#define FLAG_0x4F8               0x4F8
+#define FLAG_FOUGHT_KYOGRE               0x4F6
+#define FLAG_FOUGHT_GROUDON               0x4F7
+#define FLAG_FOUGHT_RAYQUAZA               0x4F8
 #define FLAG_0x4F9               0x4F9
 #define FLAG_0x4FA               0x4FA
 #define FLAG_0x4FB               0x4FB

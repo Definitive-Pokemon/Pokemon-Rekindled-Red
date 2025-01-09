@@ -17,7 +17,7 @@ MarineCave_EventScript_TryRemoveKyogre::
 	return
 
 MarineCave_OnTransition:
-	call_if_unset FLAG_DEFEATED_KYOGRE, MarineCave_EventScript_ShowKyogre
+	call_if_unset FLAG_FOUGHT_KYOGRE, MarineCave_EventScript_ShowKyogre
 	end
 
 MarineCave_EventScript_ShowKyogre::
@@ -46,12 +46,12 @@ MarineCave_EventScript_Kyogre::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MarineCave_EventScript_DefeatedKyogre
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MarineCave_EventScript_RanFromKyogre
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, MarineCave_EventScript_RanFromKyogre
-	setflag FLAG_DEFEATED_KYOGRE
+	setflag FLAG_FOUGHT_KYOGRE
 	releaseall
 	end
 
 MarineCave_EventScript_DefeatedKyogre::
-	setflag FLAG_DEFEATED_KYOGRE
+	setflag FLAG_KYOGRE_FLED
 	setvar VAR_0x8004, SPECIES_KYOGRE
 	goto MarineCave_EventScript_KyogreFled
 	end

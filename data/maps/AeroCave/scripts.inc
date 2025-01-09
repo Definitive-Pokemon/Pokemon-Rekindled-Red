@@ -17,7 +17,7 @@ AeroCave_EventScript_TryRemoveRayquaza::
 	return
 
 AeroCave_OnTransition:
-	call_if_unset FLAG_DEFEATED_RAYQUAZA, AeroCave_EventScript_ShowRayquaza
+	call_if_unset FLAG_FOUGHT_RAYQUAZA, AeroCave_EventScript_ShowRayquaza
 	end
 
 AeroCave_EventScript_ShowRayquaza::
@@ -53,12 +53,12 @@ AeroCave_EventScript_Rayquaza::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AeroCave_EventScript_DefeatedRayquaza
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AeroCave_EventScript_RanFromRayquaza
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AeroCave_EventScript_RanFromRayquaza
-	setflag FLAG_DEFEATED_RAYQUAZA
+	setflag FLAG_FOUGHT_RAYQUAZA
 	releaseall
 	end
 
 AeroCave_EventScript_DefeatedRayquaza::
-	setflag FLAG_DEFEATED_RAYQUAZA
+	setflag FLAG_RAYQUAZA_FLED
 	setvar VAR_0x8004, SPECIES_RAYQUAZA
 	goto AeroCave_EventScript_RayquazaFled
 	end

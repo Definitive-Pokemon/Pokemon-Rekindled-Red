@@ -17,7 +17,7 @@ TerraCave_EventScript_TryRemoveGroudon::
 	return
 
 TerraCave_OnTransition:
-	call_if_unset FLAG_DEFEATED_GROUDON, TerraCave_EventScript_ShowGroudon
+	call_if_unset FLAG_FOUGHT_GROUDON, TerraCave_EventScript_ShowGroudon
 	end
 
 TerraCave_EventScript_ShowGroudon::
@@ -46,12 +46,12 @@ TerraCave_EventScript_Groudon::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, TerraCave_EventScript_DefeatedGroudon
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, TerraCave_EventScript_RanFromGroudon
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, TerraCave_EventScript_RanFromGroudon
-	setflag FLAG_DEFEATED_GROUDON
+	setflag FLAG_FOUGHT_GROUDON
 	releaseall
 	end
 
 TerraCave_EventScript_DefeatedGroudon::
-	setflag FLAG_DEFEATED_GROUDON
+	setflag FLAG_GROUDON_FLED
 	setvar VAR_0x8004, SPECIES_GROUDON
 	goto TerraCave_EventScript_GroudonFled
 	end

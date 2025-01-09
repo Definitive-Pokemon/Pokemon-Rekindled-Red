@@ -25,6 +25,19 @@ EventScript_ResetLegendaries::
 	clearflag FLAG_DEFEATED_LATIOS
 	clearflag FLAG_DEFEATED_LATIAS
 	clearflag FLAG_DEFEATED_SUDOWOODO
+	clearflag FLAG_REGIROCK_FLED
+	clearflag FLAG_REGICE_FLED
+	clearflag FLAG_REGISTEEL_FLED
+	clearflag FLAG_REGIGIGAS_GONE
+	clearflag FLAG_GROUDON_FLED
+	clearflag FLAG_KYOGRE_FLED
+	clearflag FLAG_RAYQUAZA_FLED
+	clearflag FLAG_RAIKOU_FLED
+	clearflag FLAG_ENTEI_FLED
+	clearflag FLAG_SUICUNE_FLED
+	clearflag FLAG_CELEBI_FLED
+	clearflag FLAG_CYNDAQUIL_FLED
+	clearflag FLAG_KABUTOPS_FLED
 	return
 
 EventScript_ResetEliteFourEnd::
