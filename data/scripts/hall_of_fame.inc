@@ -38,6 +38,7 @@ EventScript_ResetLegendaries::
 	clearflag FLAG_CELEBI_FLED
 	clearflag FLAG_CYNDAQUIL_FLED
 	clearflag FLAG_KABUTOPS_FLED
+	clearflag FLAG_LATIAS_FLED
 	return
 
 EventScript_ResetEliteFourEnd::
