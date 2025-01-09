@@ -23,6 +23,18 @@ PalletTown_EventScript_TryReadySignLady::
 	setvar VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1
 	return
 
+EventScript_Oak_Has_Letter::
+	msgbox PalletTown_Text_Aide, MSGBOX_NPC
+	end
+
+PalletTown_Text_Aide::
+	.string "Hey, {PLAYER}.\n"
+	.string "I'm one of PROF. OAK's AIDES.\p"
+	.string "The PROFESSOR wanted me to tell\n"
+	.string "you that he's looking for you.\p"
+	.string "He has something special to\n"
+	.string "give you.$"
+	
 PalletTown_EventScript_SetSignLadyDone::
 	setvar VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 2
 	return

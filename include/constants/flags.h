@@ -1313,7 +1313,7 @@
 #define FLAG_ELM_DONE               0x4F2
 #define FLAG_ANABEL_DONE               0x4F3
 #define FLAG_HIDE_LOST_PSYCHIC               0x4F4
-#define FLAG_0x4F5               0x4F5
+#define FLAG_HIDE_LETTER_AIDE               0x4F5
 #define FLAG_0x4F6               0x4F6
 #define FLAG_0x4F7               0x4F7
 #define FLAG_0x4F8               0x4F8
