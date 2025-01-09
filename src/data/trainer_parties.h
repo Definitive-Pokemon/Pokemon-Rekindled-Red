@@ -35,7 +35,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderLtSurgeRematch[] = {
     },
     {
         .iv = 255,
-        .lvl = 75,
+        .lvl = 74,
         .species = SPECIES_MAGNETON,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -86,7 +86,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderLtSurgeRematchChallen
     },
     {
         .iv = 255,
-        .lvl = 81,
+        .lvl = 80,
         .species = SPECIES_MAGNETON,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -137,7 +137,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderErikaRematch[] = {
     },
     {
         .iv = 255,
-        .lvl = 75,
+        .lvl = 74,
         .species = SPECIES_VICTREEBEL,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -188,7 +188,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderErikaRematchChallenge
     },
     {
         .iv = 255,
-        .lvl = 81,
+        .lvl = 80,
         .species = SPECIES_VICTREEBEL,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -239,7 +239,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderKogaRematch[] = {
     },
     {
         .iv = 255,
-        .lvl = 75,
+        .lvl = 74,
         .species = SPECIES_WEEZING,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -290,7 +290,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderKogaRematchChallenge[
     },
     {
         .iv = 255,
-        .lvl = 81,
+        .lvl = 80,
         .species = SPECIES_WEEZING,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -341,7 +341,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderSabrinaRematch[] = {
     },
     {
         .iv = 255,
-        .lvl = 75,
+        .lvl = 74,
         .species = SPECIES_JYNX,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -392,7 +392,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderSabrinaRematchChallen
     },
     {
         .iv = 255,
-        .lvl = 81,
+        .lvl = 80,
         .species = SPECIES_JYNX,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -443,7 +443,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBlaineRematch[] = {
     },
     {
         .iv = 255,
-        .lvl = 75,
+        .lvl = 74,
         .species = SPECIES_BLAZIKEN,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -494,7 +494,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBlaineRematchChalleng
     },
     {
         .iv = 255,
-        .lvl = 81,
+        .lvl = 80,
         .species = SPECIES_BLAZIKEN,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -935,7 +935,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMistyRematchChallenge
     },
     {
         .iv = 255,
-        .lvl = 81,
+        .lvl = 80,
         .species = SPECIES_GYARADOS,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
@@ -14389,7 +14389,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBrockRematch[] = {
     },
     {
         .iv = 255,
-        .lvl = 75,
+        .lvl = 74,
         .species = SPECIES_RHYDON,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 1,
@@ -14440,7 +14440,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBrockRematchChallenge
     },
     {
         .iv = 255,
-        .lvl = 81,
+        .lvl = 80,
         .species = SPECIES_RHYDON,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 1,
@@ -14491,7 +14491,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMistyRematch[] = {
     },
     {
         .iv = 255,
-        .lvl = 75,
+        .lvl = 74,
         .species = SPECIES_GYARADOS,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
