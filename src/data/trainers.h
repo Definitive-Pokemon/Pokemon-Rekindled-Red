@@ -7664,7 +7664,7 @@ const struct Trainer gTrainers[] = {
         .party = ITEM_CUSTOM_MOVES(sParty_LeaderMistyRematch),
     },
     [BRAIN_TRAINER_ANABEL] = {
-        .trainerClass = TRAINER_CLASS_MYSTERY_GIRL,
+        .trainerClass = TRAINER_CLASS_TOWER_TYCOON,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
         .trainerPic = TRAINER_PIC_AQUA_LEADER_ARCHIE,
         .trainerName = _("ANABEL"),

@@ -29,3 +29,9 @@ BattleTower_BattleRoom_BrainAnabel_Intro::
 	.string "Well, there is but one reason…\p"
 	.string "Let me see your talent in\n"
 	.string "its entirety…$"
+
+BattleTower_BattleRoom_BrainAnabel_Defeated_InBattle::
+
+BattleTower_BattleRoom_BrainAnabel2_Intro::
+
+BattleTower_BattleRoom_BrainAnabel2_Defeated_InBattle::

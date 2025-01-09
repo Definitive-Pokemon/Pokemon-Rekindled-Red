@@ -1161,6 +1161,9 @@ extern const u8 EventScript_TryDoNormalTrainerBattle[];
 extern const u8 EventScript_TryDoDoubleRematchBattle[];
 extern const u8 EventScript_TryDoRematchBattle[];
 extern const u8 EventScript_DoTrainerBattleFromApproach[];
+// weird hack workaround, to include defeat text for frontier brain
+extern const u8 BattleTower_BattleRoom_BrainAnabel_Defeated_InBattle[];
+extern const u8 BattleTower_BattleRoom_BrainAnabel2_Defeated_InBattle[];
 
 // new_game
 extern const u8 EventScript_ResetAllMapFlags[];

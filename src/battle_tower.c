@@ -1093,6 +1093,7 @@ void StartSpecialBattle(void)
             u8 friendship = 255;
             // Use the appropriate list of pokemon and level depending on the
             // current challenge type. (level 50 or level 100 challenge)
+            SetTrainerADefeatSpeech(BattleTower_BattleRoom_BrainAnabel_Defeated_InBattle);
             if (gSaveBlock2Ptr->battleTower.battleTowerLevelType != 0)
             {
                 level = GetHighestLevelInPlayerParty();
@@ -1104,7 +1105,7 @@ void StartSpecialBattle(void)
                 level = 50;
             }
             gBattleTypeFlags = (BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_TRAINER);
-            gTrainerBattleOpponent_A = 0;
+            gTrainerBattleOpponent_A = BRAIN_TRAINER_ANABEL;
             for (partyIndex = 0; partyIndex < 3; partyIndex++)
             {
                 // Place the chosen pokemon into the trainer's party.
@@ -1132,7 +1133,6 @@ void StartSpecialBattle(void)
                 SetMonData(&gEnemyParty[partyIndex], MON_DATA_FRIENDSHIP, &friendship);
                 SetMonData(&gEnemyParty[partyIndex], MON_DATA_HELD_ITEM, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].heldItem);
             }
-
             CreateTask(Task_WaitBT, 1);
             PlayMapChosenOrBattleBGM(MUS_VS_FRONTIER_BRAIN);
             transition = BattleSetup_GetBattleTowerBattleTransition();

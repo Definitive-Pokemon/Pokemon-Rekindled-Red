@@ -14,6 +14,7 @@ void StartGroudonKyogreBattle(void);
 void StartRegiBattle(void);
 u8 BattleSetup_GetTerrainId(void);
 u8 BattleSetup_GetBattleTowerBattleTransition(void);
+void SetTrainerADefeatSpeech(const u8 *textPtr);
 const u8 *BattleSetup_ConfigureTrainerBattle(const u8 *data);
 void ConfigureAndSetUpOneTrainerBattle(u8 trainerEventObjId, const u8 *trainerScript);
 bool32 GetTrainerFlagFromScriptPointer(const u8 *data);

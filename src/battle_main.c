@@ -3867,8 +3867,16 @@ static void HandleEndTurn_BattleWon(void)
     else if (gBattleTypeFlags & (BATTLE_TYPE_TRAINER_TOWER | BATTLE_TYPE_EREADER_TRAINER | BATTLE_TYPE_BATTLE_TOWER))
     {
         BattleStopLowHpSound();
-        PlayBGM(MUS_VICTORY_TRAINER);
-        gBattlescriptCurrInstr = BattleScript_BattleTowerTrainerBattleWon;
+        if (sTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TOWER_TYCOON)
+        {
+            PlayBGM(MUS_VICTORY_GYM_LEADER);
+            gBattlescriptCurrInstr = BattleScript_BattleTowerBrainBattleWon;
+        } 
+        else
+        {
+            PlayBGM(MUS_VICTORY_TRAINER);
+            gBattlescriptCurrInstr = BattleScript_BattleTowerTrainerBattleWon;
+        }
     }
     else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && !(gBattleTypeFlags & BATTLE_TYPE_LINK))
     {

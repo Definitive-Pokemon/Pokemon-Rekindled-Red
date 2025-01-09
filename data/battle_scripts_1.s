@@ -3025,6 +3025,12 @@ BattleScript_BattleTowerEtcTrainerBattleWonSkipText::
 	//pickup
 	end2
 
+BattleScript_BattleTowerBrainBattleWon::
+	printstring STRINGID_PLAYERDEFEATEDTRAINER1
+	trainerslidein BS_ATTACKER
+	printstring STRINGID_TRAINER1LOSETEXT
+	end2
+
 BattleScript_MasterTrainerBattleWon::
 	printstring STRINGID_PLAYERDEFEATEDTRAINER1
 	trainerslidein BS_ATTACKER

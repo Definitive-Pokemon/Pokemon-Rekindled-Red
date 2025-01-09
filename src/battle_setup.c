@@ -861,6 +861,11 @@ u8 BattleSetup_GetBattleTowerBattleTransition(void)
         return B_TRANSITION_BIG_POKEBALL;
 }
 
+void SetTrainerADefeatSpeech(const u8 *textPtr)
+{
+    SetU32(sTrainerADefeatSpeech, TrainerBattleLoadArg32(textPtr));
+}
+
 static u32 TrainerBattleLoadArg32(const u8 *ptr)
 {
     return T1_READ_32(ptr);

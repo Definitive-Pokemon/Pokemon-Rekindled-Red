@@ -32,6 +32,7 @@ extern const u8 BattleScript_MasterTrainerBattleWon[];
 extern const u8 BattleScript_CheckDomeDrew[];
 extern const u8 BattleScript_LinkBattleWonOrLost[];
 extern const u8 BattleScript_BattleTowerTrainerBattleWon[];
+extern const u8 BattleScript_BattleTowerBrainBattleWon[];
 extern const u8 BattleScript_SmokeBallEscape[];
 extern const u8 BattleScript_RanAwayUsingMonAbility[];
 extern const u8 BattleScript_GotAwaySafely[];
@@ -233,6 +234,7 @@ extern const u8 BattleScript_GhostBallDodge[];
 extern const u8 BattleScript_OldMan_Pokedude_CaughtMessage[];
 extern const u8 BattleScript_SilphScopeUnveiled[];
 extern const u8 BattleScript_BattleTowerTrainerBattleWon[];
+extern const u8 BattleScript_BattleTowerBrainBattleWon[];
 extern const u8 BattleScript_PickedUpItem[];
 extern const u8 BattleScript_PickedUpItemSolo[];
 
