@@ -195,6 +195,7 @@ EventScript_PlaceSapphire::
 EventScript_PlaceRuby::
 	addobject LOCALID_RUBY
 	clearflag FLAG_UNPLACED_RUBY
+        clearflag FLAG_HIDE_TOWER_CELIO
 	removeitem ITEM_RUBY, 1
 	playse SE_EXP_MAX
 	waitse
