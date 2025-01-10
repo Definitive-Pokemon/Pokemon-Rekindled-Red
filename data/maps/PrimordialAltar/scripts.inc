@@ -12,6 +12,7 @@ PrimordialAltar_OnTransition::
 
 PrimordialAltar_EventScript_Altar::
 	lockall
+	textcolor 2
 	msgbox PrimordialAltar_Text_Altar1
 	goto_if_unset FLAG_UNPLACED_SAPPHIRE, PrimordialAltar_EventScript_RemoveSapphire
 	goto_if_unset FLAG_UNPLACED_RUBY, PrimordialAltar_EventScript_RemoveRuby
