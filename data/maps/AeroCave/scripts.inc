@@ -22,11 +22,14 @@ AeroCave_OnTransition:
 
 AeroCave_EventScript_ShowRayquaza::
 	checkitem ITEM_RUBY
-	goto_if_eq VAR_RESULT, 0, EventScript_Return
+	goto_if_eq VAR_RESULT, 0, AeroCave_EventScript_HideRayquaza
 	checkitem ITEM_SAPPHIRE
-	goto_if_eq VAR_RESULT, 0, EventScript_Return
+	goto_if_eq VAR_RESULT, 0, AeroCave_EventScript_HideRayquaza
 	clearflag FLAG_HIDE_AERO_CAVE_RAYQUAZA
 	setvar VAR_TEMP_1, 1
+	return
+AeroCave_EventScript_HideRayquaza::
+	setflag FLAG_HIDE_AERO_CAVE_RAYQUAZA
 	return
 
 AeroCave_EventScript_Rayquaza::
