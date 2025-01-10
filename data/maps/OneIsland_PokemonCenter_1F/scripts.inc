@@ -263,6 +263,7 @@ OneIsland_PokemonCenter_1F_EventScript_CelioDefeated::
 	setflag FLAG_HIDE_ONE_ISLAND_POKECENTER_CELIO
 	release
 	clearflag FLAG_SYS_CAN_LINK_WITH_RS
+        clearflag FLAG_HIDE_TOWER_CELIO
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 8
 	end
 	
