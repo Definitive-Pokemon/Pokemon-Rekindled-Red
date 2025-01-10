@@ -29,6 +29,7 @@ PokemonTower_7F_EventScript_MrFuji::
 	closemessage
 	warp MAP_LAVENDER_TOWN_VOLUNTEER_POKEMON_HOUSE, 4, 7
 	waitstate
+	setflag FLAG_HIDE_LETTER_AIDE
 	release
 	end
 
