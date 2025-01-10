@@ -392,6 +392,10 @@ static void RemoveTMItemBall(u16 itemId)
             FlagSet(FLAG_HIDE_SAFARI_ZONE_WEST_TM32);
             RemoveObjectEventByLocalIdAndMap(2, MAP_NUM(SAFARI_ZONE_WEST), MAP_GROUP(SAFARI_ZONE_WEST));
             return;
+        case ITEM_TM35:
+            FlagSet(FLAG_HIDE_TM35);
+            RemoveObjectEventByLocalIdAndMap(1, MAP_NUM(ROUTE28), MAP_GROUP(ROUTE28));
+            return;
         case ITEM_TM36:
             FlagSet(FLAG_HIDE_FIVE_ISLAND_ROCKET_WAREHOUSE_TM36);
             RemoveObjectEventByLocalIdAndMap(8, MAP_NUM(FIVE_ISLAND_ROCKET_WAREHOUSE), MAP_GROUP(FIVE_ISLAND_ROCKET_WAREHOUSE));
