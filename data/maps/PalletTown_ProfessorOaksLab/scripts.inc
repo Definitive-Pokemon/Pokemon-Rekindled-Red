@@ -611,6 +611,7 @@ PalletTown_ProfessorOaksLab_EventScript_OakGiveLetter::
 	msgbox PalletTown_ProfessorOaksLab_Text_HaveThisLetter,
 	giveitem_msg PalletTown_ProfessorOaksLab_Text_ReceivedLetterFromOak, ITEM_LETTER
 	setflag FLAG_OAK_GIVEN_LETTER
+        setflag FLAG_HIDE_LETTER_AIDE
 	msgbox PalletTown_ProfessorOaksLab_Text_BringToSelphy,
 	release
 	end
