@@ -30,7 +30,7 @@ ViridianCity_Gym_EventScript_DefeatedDaisy::
 	setflag FLAG_HIDE_SILVER_SCIENTIST
 	setflag FLAG_HIDE_DAISY
 	clearflag FLAG_DAISY_READY
-        clearflag FLAG_HIDE_CAVE_BALL
+        setflag FLAG_HIDE_CAVE_BALL
 	setvar VAR_MT_SILVER_ACCESS, 1
 	end
 
