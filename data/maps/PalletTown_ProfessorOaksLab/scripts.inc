@@ -30,8 +30,12 @@ PalletTown_ProfessorOaksLab_OnTransition::
 	call_if_set FLAG_GOT_POKEBALLS_FROM_OAK_AFTER_22_RIVAL, PalletTown_ProfessorOaksLab_EventScript_SetSkipPokeBallCheck
 	end
 
-PalletTown_ProfessorOaksLab_EventScript_ReadyExpoScene::
+PalletTown_ProfessorOaksLab_EventScript_ManageExpoScene::
+	goto_if_unset FLAG_OAK_READY_EXPO, PalletTown_ProfessorOaksLab_EventScript_ExpoOver
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	end
+PalletTown_ProfessorOaksLab_EventScript_ExpoOver::
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 9
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_StartOakExpo::
@@ -68,7 +72,7 @@ PalletTown_ProfessorOaksLab_EventScript_ReadyOakForNationalDexScene::
 
 PalletTown_ProfessorOaksLab_OnWarp::
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1, PalletTown_ProfessorOaksLab_EventScript_ReadyPlayerForStarterScene
-	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 10, PalletTown_ProfessorOaksLab_EventScript_ReadyExpoScene
+	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 10, PalletTown_ProfessorOaksLab_EventScript_ManageExpoScene
 	.2byte 0
 
 PalletTown_ProfessorOaksLab_EventScript_ReadyPlayerForStarterScene::
@@ -587,6 +591,7 @@ PalletTown_ProfessorOaksLab_EventScript_RivalChoseStarter::
 PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	lock
 	faceplayer
+	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 10, PalletTown_ProfessorOaksLab_EventScript_PostExpoDialog
 	call_if_set FLAG_OAK_HAS_LETTER, PalletTown_ProfessorOaksLab_EventScript_CheckOakGiveLetter
 	goto_if_set SHOWED_OAK_COMPLETE_DEX, PalletTown_ProfessorOaksLab_EventScript_OakJustShownCompleteDex
 	goto_if_set WON_BATTLE, PalletTown_ProfessorOaksLab_EventScript_BattleJustWon
@@ -600,6 +605,11 @@ PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4, PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon
 	msgbox PalletTown_ProfessorOaksLab_Text_OakWhichOneWillYouChoose
+	release
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_PostExpoDialog::
+	@oak post expo script
 	release
 	end
 

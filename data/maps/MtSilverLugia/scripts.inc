@@ -228,6 +228,7 @@ MtSilverLugia_EventScript_Event::
 	removeobject LOCALID_MAXIMUS
 	setflag FLAG_MAXIMUS_SILVER_HIDE
 	setflag FLAG_OAK_READY_EXPO
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 10
 	clearflag FLAG_HIDE_SILVER_SCIENTIST
 	fadescreen FADE_FROM_BLACK
 	fadenewbgm MUS_NONE
