@@ -609,9 +609,14 @@ PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_PostExpoDialog::
-	@oak post expo script
+	msgbox PalletTowen_ProfessorOaksLab_EventScript_PostExpo
 	release
 	end
+
+PalletTowen_ProfessorOaksLab_EventScript_PostExpo::
+	.string "I wish you the very best\n"
+	.string "of luck, {PLAYER}.\p"
+	.string "Give ELM my regards.$"
 
 PalletTown_ProfessorOaksLab_EventScript_CheckOakGiveLetter::
 	goto_if_unset FLAG_OAK_GIVEN_LETTER, PalletTown_ProfessorOaksLab_EventScript_OakGiveLetter
