@@ -14059,7 +14059,33 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourLoreleiChallenge2[
     },
     {
         .iv = 255,
-        .lvl = 89,
+        .lvl = 89,{
+        .iv = 255,
+        .lvl = 50,
+        .evs = { 158, 0, 252, 0, 0, 100},
+        .nature = NATURE_MODEST,
+        .species = SPECIES_RAIKOU,
+		.heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_THUNDERBOLT, MOVE_CALM_MIND, MOVE_REFLECT, MOVE_REST},
+    },
+	{
+        .iv = 255,
+        .lvl = 50,
+        .evs = { 252, 0, 252, 0, 0, 6},
+        .nature = NATURE_MODEST,
+        .species = SPECIES_LATIOS,
+		.heldItem = ITEM_BRIGHT_POWDER,
+        .moves = {MOVE_PSYCHIC, MOVE_DRAGON_CLAW, MOVE_CALM_MIND, MOVE_RECOVER},
+    },
+	{
+        .iv = 255,
+        .lvl = 50,
+        .evs = { 252, 252, 0, 6, 0, 0},
+        .nature = NATURE_ADAMANT,
+        .species = SPECIES_SNORLAX,
+		.heldItem = ITEM_CHESTO_BERRY,
+        .moves = {MOVE_CURSE, MOVE_DOUBLE_EDGE, MOVE_REST, MOVE_CRUNCH},
+    },
         .species = SPECIES_EXEGGUTOR,
         .heldItem = ITEM_NONE,
         .abilityNum = 0,
@@ -14554,7 +14580,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMistyRematch[] = {
 const struct TrainerMonItemCustomMovesEVs sParty_AnabelBrain[] = {
     {
         .iv = 255,
-        .lvl = 75,
+        .lvl = 50,
         .evs = { 106, 0, 152, 100, 0, 152},
         .nature = NATURE_MODEST,
         .species = SPECIES_ALAKAZAM,
@@ -14563,7 +14589,7 @@ const struct TrainerMonItemCustomMovesEVs sParty_AnabelBrain[] = {
     },
 	{
         .iv = 255,
-        .lvl = 75,
+        .lvl = 50,
         .evs = { 100, 152, 152, 100, 6, 0},
         .nature = NATURE_LONELY,
         .species = SPECIES_ENTEI,
@@ -14572,7 +14598,7 @@ const struct TrainerMonItemCustomMovesEVs sParty_AnabelBrain[] = {
     },
 	{
         .iv = 255,
-        .lvl = 75,
+        .lvl = 50,
         .evs = { 152, 152, 0, 106, 100, 0},
         .nature = NATURE_ADAMANT,
         .species = SPECIES_SNORLAX,
