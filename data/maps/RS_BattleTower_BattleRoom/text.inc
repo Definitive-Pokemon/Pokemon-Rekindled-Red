@@ -31,7 +31,17 @@ BattleTower_BattleRoom_BrainAnabel_Intro::
 	.string "its entirety…$"
 
 BattleTower_BattleRoom_BrainAnabel_Defeated_InBattle::
+	.string "Okay, I understand…$"
 
 BattleTower_BattleRoom_BrainAnabel2_Intro::
+	.string "ANABEL: You really did come back to\n"
+	.string "see me…\p"
+	.string "… … … … … …\p"
+	.string "You've won straight matches to see me…\n"
+	.string "I won't have to hold back against you…\p"
+	.string "It's been too long now…\p"
+	.string "Too long since I've been able to battle\n"
+	.string "without thinking about anything…$"
 
 BattleTower_BattleRoom_BrainAnabel2_Defeated_InBattle::
+	.string "Thank you…$"
