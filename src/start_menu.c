@@ -286,7 +286,7 @@ static s8 PrintStartMenuItems(s8 *cursor_p, u8 nitems)
         else if (sStartMenuOrder[i] == STARTMENU_EXIT)
         {
             u8 tempText[8] = {};
-            ConvertIntToHexStringN(tempText, *GetFlagPointer(FLAG_TEMP_2), STR_CONV_MODE_LEADING_ZEROS, 4);
+            ConvertIntToHexStringN(tempText, FlagGet(FLAG_TEMP_2), STR_CONV_MODE_LEADING_ZEROS, 4);
             StringExpandPlaceholders(gStringVar4, tempText);
             AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_NORMAL, gStringVar4, 8, i * 15, 0xFF, NULL); 
         }   
