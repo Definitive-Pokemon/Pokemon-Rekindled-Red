@@ -387,12 +387,17 @@ static bool8 ChooseSpecialBattleTowerTrainer(void)
     }
     else
     {
-        //TODO: change back
-        if (winStreak == 27 || winStreak == 27)
+        if (winStreak == 27)
         {
             // return true and set special trainer value to brain
             gSaveBlock2Ptr->battleTower.battleTowerTrainerId = 0xFF;
             gSpecialVar_0x8006 = 1;
+            return TRUE;
+        }
+        else if (winStreak == 55)
+        {
+            gSaveBlock2Ptr->battleTower.battleTowerTrainerId = 0xFE;
+            gSpecialVar_0x8006 = 2;
             return TRUE;
         }
         // Check if one of the battle tower trainers from record mixing should be the next trainer.
@@ -507,7 +512,7 @@ static void SetBattleTowerTrainerGfxId(u8 trainerClass)
             break;
     }
 
-    if (trainerClass == 0xFF) //Brain exception
+    if (trainerClass > 0xFD) //Brain exception
     {
         trainerGfx1 = OBJ_EVENT_GFX_ANABEL;
         gSpecialVar_LastTalked = FEMALE;
@@ -618,7 +623,7 @@ static void UpdateOrInsertReceivedBattleTowerRecord(struct BattleTowerRecord * r
 
 u8 GetBattleTowerTrainerFrontSpriteId(void)
 {
-    if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId == 0xFF)
+    if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId > 0xFD)
     {
         return gTrainers[BRAIN_TRAINER_ANABEL].trainerPic;
     }
@@ -638,7 +643,7 @@ u8 GetBattleTowerTrainerFrontSpriteId(void)
 
 u8 GetBattleTowerTrainerClassNameId(void)
 {
-    if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId == 0xFF)
+    if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId > 0xFD)
     {
         return TRAINER_CLASS_TOWER_TYCOON;
     }
@@ -659,7 +664,7 @@ u8 GetBattleTowerTrainerClassNameId(void)
 void GetBattleTowerTrainerName(u8 *dest)
 {
     s32 i;
-    if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId == 0xFF)
+    if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId > 0xFD)
     {
         for (i = 0; i < 7; i++)
             dest[i] = gTrainers[BRAIN_TRAINER_ANABEL].trainerName[i];
@@ -1092,9 +1097,9 @@ void StartSpecialBattle(void)
             u8 level;
             s32 partyIndex;
             u8 friendship = 255;
+            u16 selectedTrainer;
             // Use the appropriate list of pokemon and level depending on the
             // current challenge type. (level 50 or level 100 challenge)
-            SetTrainerADefeatSpeech(BattleTower_BattleRoom_BrainAnabel_Defeated_InBattle);
             if (gSaveBlock2Ptr->battleTower.battleTowerLevelType != 0)
             {
                 level = GetHighestLevelInPlayerParty();
@@ -1106,33 +1111,42 @@ void StartSpecialBattle(void)
                 level = 50;
             }
             gBattleTypeFlags = (BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_TRAINER);
-            gTrainerBattleOpponent_A = BRAIN_TRAINER_ANABEL;
+            if (gSaveBlock2Ptr->battleTower.battleTowerTrainerId == 0xFE)
+            {
+                SetTrainerADefeatSpeech(BattleTower_BattleRoom_BrainAnabel2_Defeated_InBattle);
+                gTrainerBattleOpponent_A = BRAIN_TRAINER_ANABEL2;
+            }
+            else
+            {
+                SetTrainerADefeatSpeech(BattleTower_BattleRoom_BrainAnabel_Defeated_InBattle);
+                gTrainerBattleOpponent_A = BRAIN_TRAINER_ANABEL;
+            }
             for (partyIndex = 0; partyIndex < 3; partyIndex++)
             {
                 // Place the chosen pokemon into the trainer's party.
                 CreateMonWithNature(
                     &gEnemyParty[partyIndex],
-                    gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].species,
+                    gTrainers[gTrainerBattleOpponent_A].party.ItemCustomMovesEVs[partyIndex].species,
                     level,
-                    gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].iv,
-                    gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].nature);
+                    gTrainers[gTrainerBattleOpponent_A].party.ItemCustomMovesEVs[partyIndex].iv,
+                    gTrainers[gTrainerBattleOpponent_A].party.ItemCustomMovesEVs[partyIndex].nature);
 
                 // Give the chosen pokemon its specified moves.
                 for (i = 0; i < 4; i++)
                 {
-                    SetMonMoveSlot(&gEnemyParty[partyIndex], gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].moves[i], i);
-                    if (gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].moves[i] == MOVE_FRUSTRATION)
+                    SetMonMoveSlot(&gEnemyParty[partyIndex], gTrainers[gTrainerBattleOpponent_A].party.ItemCustomMovesEVs[partyIndex].moves[i], i);
+                    if (gTrainers[gTrainerBattleOpponent_A].party.ItemCustomMovesEVs[partyIndex].moves[i] == MOVE_FRUSTRATION)
                         friendship = 0;  // MOVE_FRUSTRATION is more powerful the lower the pokemon's friendship is.
                 }
                 //set mon data nature
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_HP_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[0]);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_ATK_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[1]);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_DEF_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[2]);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPATK_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[3]);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPDEF_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[4]);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPEED_EV, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].evs[5]);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_HP_EV, &gTrainers[gTrainerBattleOpponent_A].party.ItemCustomMovesEVs[partyIndex].evs[0]);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_ATK_EV, &gTrainers[gTrainerBattleOpponent_A].party.ItemCustomMovesEVs[partyIndex].evs[1]);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_DEF_EV, &gTrainers[gTrainerBattleOpponent_A].party.ItemCustomMovesEVs[partyIndex].evs[2]);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPATK_EV, &gTrainers[gTrainerBattleOpponent_A].party.ItemCustomMovesEVs[partyIndex].evs[3]);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPDEF_EV, &gTrainers[gTrainerBattleOpponent_A].party.ItemCustomMovesEVs[partyIndex].evs[4]);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_SPEED_EV, &gTrainers[gTrainerBattleOpponent_A].party.ItemCustomMovesEVs[partyIndex].evs[5]);
                 SetMonData(&gEnemyParty[partyIndex], MON_DATA_FRIENDSHIP, &friendship);
-                SetMonData(&gEnemyParty[partyIndex], MON_DATA_HELD_ITEM, &gTrainers[BRAIN_TRAINER_ANABEL].party.ItemCustomMovesEVs[partyIndex].heldItem);
+                SetMonData(&gEnemyParty[partyIndex], MON_DATA_HELD_ITEM, &gTrainers[gTrainerBattleOpponent_A].party.ItemCustomMovesEVs[partyIndex].heldItem);
             }
             CreateTask(Task_WaitBT, 1);
             PlayMapChosenOrBattleBGM(MUS_VS_FRONTIER_BRAIN);

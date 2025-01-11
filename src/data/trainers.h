@@ -622,16 +622,6 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_May),
     },
-    [TRAINER_MAY_3] = {
-        .trainerClass = TRAINER_CLASS_PKMN_TRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_RS_MAY_1,
-        .trainerName = _(""),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_May3),
-    },
     [TRAINER_RS_PKMN_BREEDER_M] = {
         .trainerClass = TRAINER_CLASS_RS_PKMN_BREEDER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -7672,5 +7662,15 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = CUSTOM_MOVES_EVS(sParty_AnabelBrain),
+    },
+    [BRAIN_TRAINER_ANABEL2] = {
+        .trainerClass = TRAINER_CLASS_TOWER_TYCOON,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_AQUA_LEADER_ARCHIE,
+        .trainerName = _("ANABEL"),
+        .items = {ITEM_POTION},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .party = CUSTOM_MOVES_EVS(sParty_SecondAnabelBrain),
     },
 };

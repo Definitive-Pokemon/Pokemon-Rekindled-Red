@@ -14579,4 +14579,34 @@ const struct TrainerMonItemCustomMovesEVs sParty_AnabelBrain[] = {
 		.heldItem = ITEM_CHESTO_BERRY,
         .moves = {MOVE_CURSE, MOVE_DOUBLE_EDGE, MOVE_REST, MOVE_CRUNCH},
     },
+
+// lvl field ignored
+const struct TrainerMonItemCustomMovesEVs sParty_SecondAnabelBrain[] = {
+    {
+        .iv = 255,
+        .lvl = 50,
+        .evs = { 158, 0, 252, 0, 0, 100},
+        .nature = NATURE_MODEST,
+        .species = SPECIES_RAIKOU,
+		.heldItem = ITEM_LUM_BERRY,
+        .moves = {MOVE_THUNDERBOLT, MOVE_CALM_MIND, MOVE_REFLECT, MOVE_REST},
+    },
+	{
+        .iv = 255,
+        .lvl = 50,
+        .evs = { 252, 0, 252, 0, 0, 6},
+        .nature = NATURE_MODEST,
+        .species = SPECIES_LATIOS,
+		.heldItem = ITEM_BRIGHT_POWDER,
+        .moves = {MOVE_PSYCHIC, MOVE_DRAGON_CLAW, MOVE_CALM_MIND, MOVE_RECOVER},
+    },
+	{
+        .iv = 255,
+        .lvl = 50,
+        .evs = { 252, 252, 0, 6, 0, 0},
+        .nature = NATURE_ADAMANT,
+        .species = SPECIES_SNORLAX,
+		.heldItem = ITEM_CHESTO_BERRY,
+        .moves = {MOVE_CURSE, MOVE_DOUBLE_EDGE, MOVE_REST, MOVE_CRUNCH},
+    },
 };

@@ -28,10 +28,14 @@ BattleTower_BattleRoom_EventScript_1608FA_Continue::
 	compare VAR_LAST_TALKED, 1
 	call_if_eq BattleTower_BattleRoom_EventScript_TextcolorFemale
 	goto_if_eq VAR_0x8004, 3, BattleTower_BrainBattleMessage
+	goto_if_eq VAR_0x8006, 2, BattleTower_SecondBrainBattleMessage
 	special PrintBattleTowerTrainerGreeting
 	msgbox gStringVar4, MSGBOX_DEFAULT
 	goto BattleTower_BattleRoom_EventScript_1608FA_Message_Continue
 BattleTower_BrainBattleMessage::
+	msgbox BattleTower_BattleRoom_BrainAnabel_Intro
+	goto BattleTower_BattleRoom_EventScript_1608FA_Message_Continue
+BattleTower_SecondBrainBattleMessage::
 	msgbox BattleTower_BattleRoom_BrainAnabel_Intro
 BattleTower_BattleRoom_EventScript_1608FA_Message_Continue::
 	waitmessage

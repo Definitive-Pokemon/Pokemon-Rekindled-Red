@@ -65,7 +65,7 @@
 #define TRAINER_BRENDAN_3                         61
 #define TRAINER_MAY                               62
 #define BRAIN_TRAINER_ANABEL                      63
-#define TRAINER_MAY_3                             64
+#define BRAIN_TRAINER_ANABEL2                     64
 #define TRAINER_RS_PKMN_BREEDER_M                 65
 #define TRAINER_RS_PKMN_BREEDER_F                 66
 #define TRAINER_RS_PKMN_RANGER_M                  67
