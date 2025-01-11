@@ -28,6 +28,7 @@ SevenIsland_House_Room2_MapScripts::
 	.byte 0
 
 SevenIsland_House_Room2_OnLoad::
+	playse SE_PC_ON
 	setvar TYPE, CHECK_VISITOR_STATE
 	setvar ARGUMENT, FAMECHECKER_BROCK
 	callnative UseBattleHouseVar
@@ -58,7 +59,6 @@ SevenIsland_House_Room2_HideBrock::
 
 SevenIsland_House_Room2_HideMisty::
 	setflag FLAG_TEMP_2
-	playse SE_PC_ON
 	return
 
 SevenIsland_House_Room2_HideLtSurge::
