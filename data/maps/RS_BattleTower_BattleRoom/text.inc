@@ -41,7 +41,8 @@ BattleTower_BattleRoom_BrainAnabel2_Intro::
 	.string "I won't have to hold back against you…\p"
 	.string "It's been too long now…\p"
 	.string "Too long since I've been able to battle\n"
-	.string "without thinking about anything…$"
+	.string "without thinking about anything…\p"
+	.string "Let's begin, shall we?$"
 
 BattleTower_BattleRoom_BrainAnabel2_Defeated_InBattle::
 	.string "Thank you…$"
