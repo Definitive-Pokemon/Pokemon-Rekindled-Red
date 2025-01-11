@@ -58,6 +58,7 @@ SevenIsland_House_Room2_HideBrock::
 
 SevenIsland_House_Room2_HideMisty::
 	setflag FLAG_TEMP_2
+	playse SE_PC_ON
 	return
 
 SevenIsland_House_Room2_HideLtSurge::
