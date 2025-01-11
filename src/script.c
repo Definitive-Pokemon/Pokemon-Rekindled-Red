@@ -1102,25 +1102,25 @@ void UseBattleHouseVar(void)
             switch(argument)
             {
                 case FAMECHECKER_BROCK:
-                    gSpecialVar_Result = BattleHouseVar->visitorBrock;
+                    gSpecialVar_0x8009 = BattleHouseVar->visitorBrock;
                     break;
                 case FAMECHECKER_MISTY:
-                    gSpecialVar_Result = TRUE;//BattleHouseVar->visitorMisty;
+                    gSpecialVar_0x8009 = TRUE;//BattleHouseVar->visitorMisty;
                     break;
                 case FAMECHECKER_LTSURGE:
-                    gSpecialVar_Result = BattleHouseVar->visitorLtSurge;
+                    gSpecialVar_0x8009 = BattleHouseVar->visitorLtSurge;
                     break;
                 case FAMECHECKER_ERIKA:
-                    gSpecialVar_Result = BattleHouseVar->visitorErika;
+                    gSpecialVar_0x8009 = BattleHouseVar->visitorErika;
                     break;
                 case FAMECHECKER_KOGA:
-                    gSpecialVar_Result = BattleHouseVar->visitorKoga;
+                    gSpecialVar_0x8009 = BattleHouseVar->visitorKoga;
                     break;
                 case FAMECHECKER_SABRINA:
-                    gSpecialVar_Result = BattleHouseVar->visitorSabrina;
+                    gSpecialVar_0x8009 = BattleHouseVar->visitorSabrina;
                     break;
                 case FAMECHECKER_BLAINE:
-                    gSpecialVar_Result = BattleHouseVar->visitorBlaine;
+                    gSpecialVar_0x8009 = BattleHouseVar->visitorBlaine;
                     break;
             }
             break;
