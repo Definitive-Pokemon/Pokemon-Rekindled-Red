@@ -155,6 +155,7 @@ CeruleanCave_B1F_Text_GiovanniDefeat1::
 CeruleanCave_B1F_EventScript_GiovanniOntoBattle2::
 	applymovement LOCALID_GIOVANNI, CeruleanCave_B1F_Movement_Down
 	waitmovement 0
+	cleartrainerflag TRAINER_LEADER_GIOVANNI_MEWTWO
 	textcolor 0
 	trainerbattle_single TRAINER_LEADER_GIOVANNI_REMATCH, CeruleanCave_B1F_Text_Impressive, CeruleanCave_B1F_Text_GiovanniDefeat2, CeruleanCave_B1F_EventScript_GiovanniAfter, NO_MUSIC
 	releaseall
