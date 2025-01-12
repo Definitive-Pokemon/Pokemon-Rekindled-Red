@@ -1102,25 +1102,43 @@ void UseBattleHouseVar(void)
             switch(argument)
             {
                 case FAMECHECKER_BROCK:
-                    gSpecialVar_0x8009 = BattleHouseVar->visitorBrock;
+                    if (BattleHouseVar->visitorBrock)
+                        FlagSet(FLAG_TEMP_1);
+                    else
+                        FlagClear(FLAG_TEMP_1);
                     break;
                 case FAMECHECKER_MISTY:
                     gSpecialVar_0x8009 = TRUE;//BattleHouseVar->visitorMisty;
                     break;
                 case FAMECHECKER_LTSURGE:
-                    gSpecialVar_0x8009 = BattleHouseVar->visitorLtSurge;
+                    if (BattleHouseVar->visitorLtSurge)
+                        FlagSet(FLAG_TEMP_3);
+                    else
+                        FlagClear(FLAG_TEMP_3);
                     break;
                 case FAMECHECKER_ERIKA:
-                    gSpecialVar_0x8009 = BattleHouseVar->visitorErika;
+                    if (BattleHouseVar->visitorErika)
+                        FlagSet(FLAG_TEMP_4);
+                    else
+                        FlagClear(FLAG_TEMP_4);
                     break;
                 case FAMECHECKER_KOGA:
-                    gSpecialVar_0x8009 = BattleHouseVar->visitorKoga;
+                    if (BattleHouseVar->visitorKoga)
+                        FlagSet(FLAG_TEMP_5);
+                    else
+                        FlagClear(FLAG_TEMP_5);
                     break;
                 case FAMECHECKER_SABRINA:
-                    gSpecialVar_0x8009 = BattleHouseVar->visitorSabrina;
+                    if (BattleHouseVar->visitorSabrina)
+                        FlagSet(FLAG_TEMP_6);
+                    else
+                        FlagClear(FLAG_TEMP_6);
                     break;
                 case FAMECHECKER_BLAINE:
-                    gSpecialVar_0x8009 = BattleHouseVar->visitorBlaine;
+                    if (BattleHouseVar->visitorBlaine)
+                        FlagSet(FLAG_TEMP_7);
+                    else
+                        FlagClear(FLAG_TEMP_7);
                     break;
             }
             break;
