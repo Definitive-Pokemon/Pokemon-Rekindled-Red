@@ -14579,6 +14579,7 @@ const struct TrainerMonItemCustomMovesEVs sParty_AnabelBrain[] = {
 		.heldItem = ITEM_QUICK_CLAW,
         .moves = {MOVE_BELLY_DRUM, MOVE_YAWN, MOVE_BODY_SLAM, MOVE_CRUNCH},
     },
+}
 
 // lvl field ignored
 const struct TrainerMonItemCustomMovesEVs sParty_SecondAnabelBrain[] = {
