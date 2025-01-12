@@ -105,7 +105,7 @@ ForsakenTombB9F_EventScript_RegigigasGone::
     end
 
 Text_RegigigasGone::
-	.string "REGIGIGAS ran away!"
+	.string "REGIGIGAS ran away!$"
 
 ForsakenTombB9F_Text_Engraving::
 	.string "It's a statue of a POKéMON.\n"
