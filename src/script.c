@@ -898,19 +898,19 @@ void UpdateBattleHouseStepCounter(void)
                 BattleHouseVar->spearowState = 0;
                 BattleHouseVar->boxesMoved = 1;
                 if(BattleHouseVar->toldBrock)
-                    BattleHouseVar->visitorBrock = 1;
+                    BattleHouseVar->visitorBrock = TRUE;
                 if(BattleHouseVar->toldMisty)
-                    BattleHouseVar->visitorMisty = 1;
+                    BattleHouseVar->visitorMisty = TRUE;
                 if(BattleHouseVar->toldLtSurge)
-                    BattleHouseVar->visitorLtSurge = 1;
+                    BattleHouseVar->visitorLtSurge = TRUE;
                 if(BattleHouseVar->toldErika)
-                    BattleHouseVar->visitorErika = 1;
+                    BattleHouseVar->visitorErika = TRUE;
                 if(BattleHouseVar->toldKoga)
-                    BattleHouseVar->visitorKoga = 1;
+                    BattleHouseVar->visitorKoga = TRUE;
                 if(BattleHouseVar->toldSabrina)
-                    BattleHouseVar->visitorSabrina = 1;
+                    BattleHouseVar->visitorSabrina = TRUE;
                 if(BattleHouseVar->toldBlaine)
-                    BattleHouseVar->visitorBlaine = 1;
+                    BattleHouseVar->visitorBlaine = TRUE;
                 return;
             }
             if(BattleHouseVar->spearowState)
