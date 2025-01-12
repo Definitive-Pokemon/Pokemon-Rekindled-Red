@@ -32,32 +32,25 @@ SevenIsland_House_Room2_OnLoad::
 	setvar TYPE, CHECK_VISITOR_STATE
 	setvar ARGUMENT, FAMECHECKER_BROCK
 	callnative UseBattleHouseVar
-	compare VAR_TEMP_9, 0
-	call_if_eq SevenIsland_House_Room2_HideBrock
+	call_if_eq VAR_TEMP_9, FALSE, SevenIsland_House_Room2_HideBrock
 	setvar ARGUMENT, FAMECHECKER_MISTY
 	callnative UseBattleHouseVar
-	compare VAR_TEMP_9, 0
-	call_if_eq SevenIsland_House_Room2_HideMisty
+	call_if_eq VAR_TEMP_9, FALSE, SevenIsland_House_Room2_HideMisty
 	setvar ARGUMENT, FAMECHECKER_LTSURGE
 	callnative UseBattleHouseVar
-	compare VAR_TEMP_9, 0
-	call_if_eq SevenIsland_House_Room2_HideLtSurge
+	call_if_eq VAR_TEMP_9, FALSE, SevenIsland_House_Room2_HideLtSurge
 	setvar ARGUMENT, FAMECHECKER_ERIKA
 	callnative UseBattleHouseVar
-	compare VAR_TEMP_9, 0
-	call_if_eq SevenIsland_House_Room2_HideErika
+	call_if_eq VAR_TEMP_9, FALSE, SevenIsland_House_Room2_HideErika
 	setvar ARGUMENT, FAMECHECKER_KOGA
 	callnative UseBattleHouseVar
-	compare VAR_TEMP_9, 0
-	call_if_eq SevenIsland_House_Room2_HideKoga
+	call_if_eq VAR_TEMP_9, FALSE, SevenIsland_House_Room2_HideKoga
 	setvar ARGUMENT, FAMECHECKER_SABRINA
 	callnative UseBattleHouseVar
-	compare VAR_TEMP_9, 0
-	call_if_eq SevenIsland_House_Room2_HideSabrina
+	call_if_eq VAR_TEMP_9, FALSE, SevenIsland_House_Room2_HideSabrina
 	setvar ARGUMENT, FAMECHECKER_BLAINE
 	callnative UseBattleHouseVar
-	compare VAR_TEMP_9, 0
-	call_if_eq SevenIsland_House_Room2_HideBlaine
+	call_if_eq VAR_TEMP_9, FALSE, SevenIsland_House_Room2_HideBlaine
 	end
 
 SevenIsland_House_Room2_HideBrock::
