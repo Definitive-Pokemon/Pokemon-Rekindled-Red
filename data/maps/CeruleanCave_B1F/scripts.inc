@@ -37,6 +37,7 @@ CeruleanCave_B1F_EventScript_GiovanniEvent::
 	applymovement OBJ_EVENT_ID_PLAYER, CeruleanCave_B1F_Movement_LookUp
 	waitmovement 0
 	delay 60
+	cleartrainerflag TRAINER_LEADER_GIOVANNI_MEWTWO
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, CeruleanCave_B1F_Movement_PanToActionFromBottom
 	waitmovement 0
