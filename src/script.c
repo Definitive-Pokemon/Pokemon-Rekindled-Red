@@ -1007,7 +1007,8 @@ void CheckVisitorState(void)
     switch(argument)
     {
         case FAMECHECKER_BROCK:
-            if (BattleHouseVar->visitorBrock)
+            gSpecialVar_Result = BattleHouseVar->visitorBrock;
+            /*if (BattleHouseVar->visitorBrock)
             {
                 FlagClear(FLAG_TEMP_1);
                 PlaySE(SE_PC_ON);
@@ -1018,40 +1019,45 @@ void CheckVisitorState(void)
                 PlaySE(SE_BANG);
             }
             else
-                PlaySE(SE_FALL);
+                PlaySE(SE_FALL);*/
             break;
         case FAMECHECKER_MISTY:
                 FlagSet(FLAG_TEMP_2);
             break;
         case FAMECHECKER_LTSURGE:
-            if (BattleHouseVar->visitorLtSurge == 1)
+            gSpecialVar_Result = BattleHouseVar->visitorLtSurge;
+            /*if (BattleHouseVar->visitorLtSurge == 1)
                 FlagSet(FLAG_TEMP_3);
             else
-                FlagClear(FLAG_TEMP_3);
+                FlagClear(FLAG_TEMP_3);*/
             break;
         case FAMECHECKER_ERIKA:
-            if (BattleHouseVar->visitorErika == 1)
+        gSpecialVar_Result = BattleHouseVar->visitorErika;
+            /*if (BattleHouseVar->visitorErika == 1)
                 FlagSet(FLAG_TEMP_4);
             else
-                FlagClear(FLAG_TEMP_4);
+                FlagClear(FLAG_TEMP_4);*/
             break;
         case FAMECHECKER_KOGA:
-            if (BattleHouseVar->visitorKoga)
+            gSpecialVar_Result = BattleHouseVar->visitorKoga;
+            /*if (BattleHouseVar->visitorKoga)
                 FlagSet(FLAG_TEMP_5);
             else
-                FlagClear(FLAG_TEMP_5);
+                FlagClear(FLAG_TEMP_5);*/
             break;
         case FAMECHECKER_SABRINA:
-            if (BattleHouseVar->visitorSabrina)
+            gSpecialVar_Result = BattleHouseVar->visitorSabrina;
+            /*if (BattleHouseVar->visitorSabrina)
                 FlagSet(FLAG_TEMP_6);
             else
-                FlagClear(FLAG_TEMP_6);
+                FlagClear(FLAG_TEMP_6);*/
             break;
         case FAMECHECKER_BLAINE:
-            if (BattleHouseVar->visitorBlaine)
+            gSpecialVar_Result = BattleHouseVar->visitorBlaine;
+            /*if (BattleHouseVar->visitorBlaine)
                 FlagSet(FLAG_TEMP_7);
             else
-                FlagClear(FLAG_TEMP_7);
+                FlagClear(FLAG_TEMP_7);*/
             break;
     }
 }
