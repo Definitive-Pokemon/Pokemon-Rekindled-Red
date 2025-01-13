@@ -1007,7 +1007,7 @@ void CheckVisitorState(void)
     switch(argument)
     {
         case FAMECHECKER_BROCK:
-            gSpecialVar_Result = BattleHouseVar->visitorBrock;
+            gSpecialVar_0x8009 = BattleHouseVar->visitorBrock;
             /*if (BattleHouseVar->visitorBrock)
             {
                 FlagClear(FLAG_TEMP_1);
@@ -1025,7 +1025,7 @@ void CheckVisitorState(void)
                 FlagSet(FLAG_TEMP_2);
             break;
         case FAMECHECKER_LTSURGE:
-            gSpecialVar_Result = BattleHouseVar->visitorLtSurge;
+            gSpecialVar_0x8009 = BattleHouseVar->visitorLtSurge;
             if (BattleHouseVar->visitorLtSurge)
             {
                 PlaySE(SE_PC_ON);
@@ -1036,28 +1036,28 @@ void CheckVisitorState(void)
                 FlagClear(FLAG_TEMP_3);*/
             break;
         case FAMECHECKER_ERIKA:
-        gSpecialVar_Result = BattleHouseVar->visitorErika;
+            gSpecialVar_0x8009 = BattleHouseVar->visitorErika;
             /*if (BattleHouseVar->visitorErika == 1)
                 FlagSet(FLAG_TEMP_4);
             else
                 FlagClear(FLAG_TEMP_4);*/
             break;
         case FAMECHECKER_KOGA:
-            gSpecialVar_Result = BattleHouseVar->visitorKoga;
+            gSpecialVar_0x8009 = BattleHouseVar->visitorKoga;
             /*if (BattleHouseVar->visitorKoga)
                 FlagSet(FLAG_TEMP_5);
             else
                 FlagClear(FLAG_TEMP_5);*/
             break;
         case FAMECHECKER_SABRINA:
-            gSpecialVar_Result = BattleHouseVar->visitorSabrina;
+            gSpecialVar_0x8009 = BattleHouseVar->visitorSabrina;
             /*if (BattleHouseVar->visitorSabrina)
                 FlagSet(FLAG_TEMP_6);
             else
                 FlagClear(FLAG_TEMP_6);*/
             break;
         case FAMECHECKER_BLAINE:
-            gSpecialVar_Result = BattleHouseVar->visitorBlaine;
+            gSpecialVar_0x8009 = BattleHouseVar->visitorBlaine;
             /*if (BattleHouseVar->visitorBlaine)
                 FlagSet(FLAG_TEMP_7);
             else
