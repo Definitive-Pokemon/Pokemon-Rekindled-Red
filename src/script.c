@@ -1024,13 +1024,13 @@ void CheckVisitorState(void)
                 FlagSet(FLAG_TEMP_2);
             break;
         case FAMECHECKER_LTSURGE:
-            if (BattleHouseVar->visitorLtSurge)
+            if (BattleHouseVar->visitorLtSurge == 1)
                 FlagSet(FLAG_TEMP_3);
             else
                 FlagClear(FLAG_TEMP_3);
             break;
         case FAMECHECKER_ERIKA:
-            if (BattleHouseVar->visitorErika)
+            if (BattleHouseVar->visitorErika == 1)
                 FlagSet(FLAG_TEMP_4);
             else
                 FlagClear(FLAG_TEMP_4);
