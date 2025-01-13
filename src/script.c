@@ -1007,7 +1007,6 @@ void UseBattleHouseVar(void)
     struct BattleHouse* BattleHouseVar = &gSaveBlock1Ptr->battleHouseData;
     u8 totalCount = 0;
     u8 runningCount = 0;
-    PlaySE(SE_PC_ON);
     switch(type)
     {
         case SET_SPEAROW_STATE:
@@ -1099,6 +1098,7 @@ void UseBattleHouseVar(void)
             }
             break;
         case CHECK_VISITOR_STATE:
+            PlaySE(SE_PC_ON);
             switch(argument)
             {
                 case FAMECHECKER_BROCK:
