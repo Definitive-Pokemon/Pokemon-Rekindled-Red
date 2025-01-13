@@ -1054,7 +1054,6 @@ void CheckVisitorState(void)
                 FlagClear(FLAG_TEMP_7);
             break;
     }
-    break;
 }
 
 void UseBattleHouseVar(void)
