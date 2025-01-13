@@ -30,25 +30,25 @@ SevenIsland_House_Room2_MapScripts::
 SevenIsland_House_Room2_OnLoad::
 	setvar ARGUMENT, FAMECHECKER_BROCK
 	callnative CheckVisitorState
-	call_if_set FLAG_TEMP_13, SevenIsland_House_Room2_HideBrock
+	call_if_eq VAR_TEMP_9, 0, SevenIsland_House_Room2_HideBrock
 	setvar ARGUMENT, FAMECHECKER_MISTY
 	callnative CheckVisitorState
-	call_if_set FLAG_TEMP_13, SevenIsland_House_Room2_HideMisty
+	call_if_eq VAR_TEMP_9, 0, SevenIsland_House_Room2_HideMisty
 	setvar ARGUMENT, FAMECHECKER_LTSURGE
 	callnative CheckVisitorState
-	call_if_set FLAG_TEMP_13, SevenIsland_House_Room2_HideLtSurge
+	call_if_eq VAR_TEMP_9, 0, SevenIsland_House_Room2_HideLtSurge
 	setvar ARGUMENT, FAMECHECKER_ERIKA
 	callnative CheckVisitorState
-	call_if_set FLAG_TEMP_13, SevenIsland_House_Room2_HideErika
+	call_if_eq VAR_TEMP_9, 0, SevenIsland_House_Room2_HideErika
 	setvar ARGUMENT, FAMECHECKER_KOGA
 	callnative CheckVisitorState
-	call_if_set FLAG_TEMP_13, SevenIsland_House_Room2_HideKoga
+	call_if_eq VAR_TEMP_9, 0, SevenIsland_House_Room2_HideKoga
 	setvar ARGUMENT, FAMECHECKER_SABRINA
 	callnative CheckVisitorState
-	call_if_set FLAG_TEMP_13, SevenIsland_House_Room2_HideSabrina
+	call_if_eq VAR_TEMP_9, 0, SevenIsland_House_Room2_HideSabrina
 	setvar ARGUMENT, FAMECHECKER_BLAINE
 	callnative CheckVisitorState
-	call_if_set FLAG_TEMP_13, SevenIsland_House_Room2_HideBlaine
+	call_if_eq VAR_TEMP_9, 0, SevenIsland_House_Room2_HideBlaine
 	end
 
 SevenIsland_House_Room2_HideBrock::
