@@ -28,7 +28,6 @@ SevenIsland_House_Room2_MapScripts::
 	.byte 0
 
 SevenIsland_House_Room2_OnLoad::
-	playse SE_PC_ON
 	setvar TYPE, CHECK_VISITOR_STATE
 	setvar ARGUMENT, FAMECHECKER_BROCK
 	callnative UseBattleHouseVar
@@ -36,7 +35,6 @@ SevenIsland_House_Room2_OnLoad::
 	callnative UseBattleHouseVar
 	setvar ARGUMENT, FAMECHECKER_LTSURGE
 	callnative UseBattleHouseVar
-	setflag FLAG_TEMP_3
 	setvar ARGUMENT, FAMECHECKER_ERIKA
 	callnative UseBattleHouseVar
 	setvar ARGUMENT, FAMECHECKER_KOGA

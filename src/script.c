@@ -1103,9 +1103,17 @@ void UseBattleHouseVar(void)
             {
                 case FAMECHECKER_BROCK:
                     if (BattleHouseVar->visitorBrock)
+                    {
                         FlagClear(FLAG_TEMP_1);
-                    else
+                        PlaySE(SE_PC_ON);
+                    }
+                    else if (BattleHouseVar->visitorBrock == 0)
+                    {
                         FlagSet(FLAG_TEMP_1);
+                        PlaySE(SE_BANG);
+                    }
+                    else
+                        PlaySE(SE_RAIN);
                     break;
                 case FAMECHECKER_MISTY:
                         FlagClear(FLAG_TEMP_3);
