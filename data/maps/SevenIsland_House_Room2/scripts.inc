@@ -36,6 +36,7 @@ SevenIsland_House_Room2_OnLoad::
 	callnative UseBattleHouseVar
 	setvar ARGUMENT, FAMECHECKER_LTSURGE
 	callnative UseBattleHouseVar
+	setflag FLAG_TEMP_3
 	setvar ARGUMENT, FAMECHECKER_ERIKA
 	callnative UseBattleHouseVar
 	setvar ARGUMENT, FAMECHECKER_KOGA

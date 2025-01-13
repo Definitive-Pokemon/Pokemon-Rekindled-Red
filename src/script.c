@@ -1108,7 +1108,7 @@ void UseBattleHouseVar(void)
                         FlagSet(FLAG_TEMP_1);
                     break;
                 case FAMECHECKER_MISTY:
-                    gSpecialVar_0x8009 = TRUE;//BattleHouseVar->visitorMisty;
+                        FlagClear(FLAG_TEMP_3);
                     break;
                 case FAMECHECKER_LTSURGE:
                     if (BattleHouseVar->visitorLtSurge)
