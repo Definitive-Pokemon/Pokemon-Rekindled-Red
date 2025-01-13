@@ -1103,9 +1103,9 @@ void UseBattleHouseVar(void)
             {
                 case FAMECHECKER_BROCK:
                     if (BattleHouseVar->visitorBrock)
-                        FlagSet(FLAG_TEMP_1);
-                    else
                         FlagClear(FLAG_TEMP_1);
+                    else
+                        FlagSet(FLAG_TEMP_1);
                     break;
                 case FAMECHECKER_MISTY:
                     gSpecialVar_0x8009 = TRUE;//BattleHouseVar->visitorMisty;
