@@ -1000,6 +1000,63 @@ void UpdateBattleHouseStepCounter(void)
     }
 }
 
+void CheckVisitorState(void)
+{
+    u8 argument = gSpecialVar_0x8004;
+    struct BattleHouse* BattleHouseVar = &gSaveBlock1Ptr->battleHouseData;
+    switch(argument)
+    {
+        case FAMECHECKER_BROCK:
+            if (BattleHouseVar->visitorBrock)
+            {
+                FlagClear(FLAG_TEMP_1);
+                PlaySE(SE_PC_ON);
+            }
+            else if (BattleHouseVar->visitorBrock == 0)
+            {
+                FlagSet(FLAG_TEMP_1);
+                PlaySE(SE_BANG);
+            }
+            else
+                PlaySE(SE_FALL);
+            break;
+        case FAMECHECKER_MISTY:
+                FlagSet(FLAG_TEMP_2);
+            break;
+        case FAMECHECKER_LTSURGE:
+            if (BattleHouseVar->visitorLtSurge)
+                FlagSet(FLAG_TEMP_3);
+            else
+                FlagClear(FLAG_TEMP_3);
+            break;
+        case FAMECHECKER_ERIKA:
+            if (BattleHouseVar->visitorErika)
+                FlagSet(FLAG_TEMP_4);
+            else
+                FlagClear(FLAG_TEMP_4);
+            break;
+        case FAMECHECKER_KOGA:
+            if (BattleHouseVar->visitorKoga)
+                FlagSet(FLAG_TEMP_5);
+            else
+                FlagClear(FLAG_TEMP_5);
+            break;
+        case FAMECHECKER_SABRINA:
+            if (BattleHouseVar->visitorSabrina)
+                FlagSet(FLAG_TEMP_6);
+            else
+                FlagClear(FLAG_TEMP_6);
+            break;
+        case FAMECHECKER_BLAINE:
+            if (BattleHouseVar->visitorBlaine)
+                FlagSet(FLAG_TEMP_7);
+            else
+                FlagClear(FLAG_TEMP_7);
+            break;
+    }
+    break;
+}
+
 void UseBattleHouseVar(void)
 {
     u8 type = gSpecialVar_0x8003;
@@ -1094,59 +1151,6 @@ void UseBattleHouseVar(void)
                     break;
                 case FAMECHECKER_BLAINE:
                     gSpecialVar_Result = BattleHouseVar->toldBlaine;
-                    break;
-            }
-            break;
-        case CHECK_VISITOR_STATE:
-            PlaySE(SE_PC_ON);
-            switch(argument)
-            {
-                case FAMECHECKER_BROCK:
-                    if (BattleHouseVar->visitorBrock)
-                    {
-                        FlagClear(FLAG_TEMP_1);
-                        PlaySE(SE_PC_ON);
-                    }
-                    else if (BattleHouseVar->visitorBrock == 0)
-                    {
-                        FlagSet(FLAG_TEMP_1);
-                        PlaySE(SE_BANG);
-                    }
-                    else
-                        PlaySE(SE_FALL);
-                    break;
-                case FAMECHECKER_MISTY:
-                        FlagSet(FLAG_TEMP_2);
-                    break;
-                case FAMECHECKER_LTSURGE:
-                    if (BattleHouseVar->visitorLtSurge)
-                        FlagSet(FLAG_TEMP_3);
-                    else
-                        FlagClear(FLAG_TEMP_3);
-                    break;
-                case FAMECHECKER_ERIKA:
-                    if (BattleHouseVar->visitorErika)
-                        FlagSet(FLAG_TEMP_4);
-                    else
-                        FlagClear(FLAG_TEMP_4);
-                    break;
-                case FAMECHECKER_KOGA:
-                    if (BattleHouseVar->visitorKoga)
-                        FlagSet(FLAG_TEMP_5);
-                    else
-                        FlagClear(FLAG_TEMP_5);
-                    break;
-                case FAMECHECKER_SABRINA:
-                    if (BattleHouseVar->visitorSabrina)
-                        FlagSet(FLAG_TEMP_6);
-                    else
-                        FlagClear(FLAG_TEMP_6);
-                    break;
-                case FAMECHECKER_BLAINE:
-                    if (BattleHouseVar->visitorBlaine)
-                        FlagSet(FLAG_TEMP_7);
-                    else
-                        FlagClear(FLAG_TEMP_7);
                     break;
             }
             break;

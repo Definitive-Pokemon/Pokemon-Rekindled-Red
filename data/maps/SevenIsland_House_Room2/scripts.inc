@@ -28,21 +28,20 @@ SevenIsland_House_Room2_MapScripts::
 	.byte 0
 
 SevenIsland_House_Room2_OnLoad::
-	setvar TYPE, CHECK_VISITOR_STATE
 	setvar ARGUMENT, FAMECHECKER_BROCK
-	callnative UseBattleHouseVar
+	callnative CheckVisitorState
 	setvar ARGUMENT, FAMECHECKER_MISTY
-	callnative UseBattleHouseVar
+	callnative CheckVisitorState
 	setvar ARGUMENT, FAMECHECKER_LTSURGE
-	callnative UseBattleHouseVar
+	callnative CheckVisitorState
 	setvar ARGUMENT, FAMECHECKER_ERIKA
-	callnative UseBattleHouseVar
+	callnative CheckVisitorState
 	setvar ARGUMENT, FAMECHECKER_KOGA
-	callnative UseBattleHouseVar
+	callnative CheckVisitorState
 	setvar ARGUMENT, FAMECHECKER_SABRINA
-	callnative UseBattleHouseVar
+	callnative CheckVisitorState
 	setvar ARGUMENT, FAMECHECKER_BLAINE
-	callnative UseBattleHouseVar
+	callnative CheckVisitorState
 	end
 
 SevenIsland_House_Room2_HideBrock::
