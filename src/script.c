@@ -1116,7 +1116,7 @@ void UseBattleHouseVar(void)
                         PlaySE(SE_RAIN);
                     break;
                 case FAMECHECKER_MISTY:
-                        FlagClear(FLAG_TEMP_3);
+                        FlagClear(FLAG_TEMP_2);
                     break;
                 case FAMECHECKER_LTSURGE:
                     if (BattleHouseVar->visitorLtSurge)
