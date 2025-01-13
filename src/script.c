@@ -1007,34 +1007,13 @@ void CheckVisitorState(void)
     switch(argument)
     {
         case FAMECHECKER_BROCK:
-            gSpecialVar_0x8009 = BattleHouseVar->visitorBrock;
-            /*if (BattleHouseVar->visitorBrock)
-            {
-                FlagClear(FLAG_TEMP_1);
-                PlaySE(SE_PC_ON);
-            }
-            else if (BattleHouseVar->visitorBrock == 0)
-            {
-                FlagSet(FLAG_TEMP_1);
-                PlaySE(SE_BANG);
-            }
-            else
-                PlaySE(SE_FALL);*/
+            VarSet(VAR_ELEVATOR_FLOOR, BattleHouseVar->visitorBrock);
             break;
         case FAMECHECKER_MISTY:
                 FlagSet(FLAG_TEMP_2);
             break;
         case FAMECHECKER_LTSURGE:
-            gSpecialVar_0x8009 = BattleHouseVar->visitorLtSurge;
-            if (BattleHouseVar->visitorLtSurge)
-            {
-                PlaySE(SE_PC_ON);
-            }
-            /*if (BattleHouseVar->visitorLtSurge == 1)
-                FlagSet(FLAG_TEMP_3);
-            else
-                FlagClear(FLAG_TEMP_3);*/
-            break;
+            VarSet(VAR_ELEVATOR_FLOOR, BattleHouseVar->visitorLtSurge);
         case FAMECHECKER_ERIKA:
             gSpecialVar_0x8009 = BattleHouseVar->visitorErika;
             /*if (BattleHouseVar->visitorErika == 1)
@@ -1043,14 +1022,14 @@ void CheckVisitorState(void)
                 FlagClear(FLAG_TEMP_4);*/
             break;
         case FAMECHECKER_KOGA:
-            gSpecialVar_0x8009 = BattleHouseVar->visitorKoga;
+            VarSet(VAR_ELEVATOR_FLOOR, BattleHouseVar->visitorKoga);
             /*if (BattleHouseVar->visitorKoga)
                 FlagSet(FLAG_TEMP_5);
             else
                 FlagClear(FLAG_TEMP_5);*/
             break;
         case FAMECHECKER_SABRINA:
-            gSpecialVar_0x8009 = BattleHouseVar->visitorSabrina;
+            VarSet(VAR_ELEVATOR_FLOOR, BattleHouseVar->visitorSabrina);
             /*if (BattleHouseVar->visitorSabrina)
                 FlagSet(FLAG_TEMP_6);
             else

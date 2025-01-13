@@ -256,7 +256,7 @@ static void DrawSafariZoneStatsWindow(void)
     sSafariZoneStatsWindowId = AddWindow(&sSafariZoneStatsWindowTemplate);
     PutWindowTilemap(sSafariZoneStatsWindowId);
     DrawStdWindowFrame(sSafariZoneStatsWindowId, FALSE);
-    ConvertIntToDecimalStringN(gStringVar1, gSafariZoneStepCounter, STR_CONV_MODE_RIGHT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar1, *GetVarPointer(VAR_ELEVATOR_FLOOR), STR_CONV_MODE_RIGHT_ALIGN, 3);
     ConvertIntToDecimalStringN(gStringVar2, 600, STR_CONV_MODE_RIGHT_ALIGN, 3);
     ConvertIntToDecimalStringN(gStringVar3, gNumSafariBalls, STR_CONV_MODE_RIGHT_ALIGN, 2);
     StringExpandPlaceholders(gStringVar4, gText_MenuSafariStats);
