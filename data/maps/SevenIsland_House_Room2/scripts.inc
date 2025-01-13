@@ -29,25 +29,25 @@ SevenIsland_House_Room2_MapScripts::
 
 SevenIsland_House_Room2_OnLoad::
 	setvar ARGUMENT, FAMECHECKER_BROCK
-	callnative CheckVisitorState
+	special CheckVisitorState
 	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideBrock
 	setvar ARGUMENT, FAMECHECKER_MISTY
-	callnative CheckVisitorState
+	special CheckVisitorState
 	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideMisty
 	setvar ARGUMENT, FAMECHECKER_LTSURGE
-	callnative CheckVisitorState
+	special CheckVisitorState
 	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideLtSurge
 	setvar ARGUMENT, FAMECHECKER_ERIKA
-	callnative CheckVisitorState
+	special CheckVisitorState
 	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideErika
 	setvar ARGUMENT, FAMECHECKER_KOGA
-	callnative CheckVisitorState
+	special CheckVisitorState
 	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideKoga
 	setvar ARGUMENT, FAMECHECKER_SABRINA
-	callnative CheckVisitorState
+	special CheckVisitorState
 	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideSabrina
 	setvar ARGUMENT, FAMECHECKER_BLAINE
-	callnative CheckVisitorState
+	special CheckVisitorState
 	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideBlaine
 	end
 
