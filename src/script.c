@@ -1026,6 +1026,10 @@ void CheckVisitorState(void)
             break;
         case FAMECHECKER_LTSURGE:
             gSpecialVar_Result = BattleHouseVar->visitorLtSurge;
+            if (BattleHouseVar->visitorLtSurge)
+            {
+                PlaySE(SE_PC_ON);
+            }
             /*if (BattleHouseVar->visitorLtSurge == 1)
                 FlagSet(FLAG_TEMP_3);
             else
