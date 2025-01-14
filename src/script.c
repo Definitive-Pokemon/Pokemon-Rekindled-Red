@@ -877,6 +877,13 @@ u8 ReturnBattleHouseLevel(void)
     return levelGrowth;
 }
 
+void BattleHouseScaleLevelUp(void)
+{
+    PlaySE(SE_PC_ON);
+    if(gSaveBlock1Ptr->BattleHouseVar.levelGrowth < 12)
+        gSaveBlock1Ptr->BattleHouseVar.levelGrowth++;
+}
+
 void UpdateBattleHouseStepCounter(void)
 {
     struct BattleHouse* BattleHouseVar = &gSaveBlock1Ptr->battleHouseData;
@@ -1082,10 +1089,6 @@ void UseBattleHouseVar(void)
                     BattleHouseVar->toldBlaine = 1;
                     break;
             }
-            break;
-        case SET_LEVEL_GROWTH:
-            if(BattleHouseVar->levelGrowth < 12)
-                BattleHouseVar->levelGrowth++;
             break;
         case CHECK_SPEAROW_STATE:
             gSpecialVar_Result = BattleHouseVar->spearowState;
