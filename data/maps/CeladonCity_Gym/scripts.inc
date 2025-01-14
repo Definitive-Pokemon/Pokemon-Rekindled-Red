@@ -1,3 +1,6 @@
+CeladonCity_Gym_MapScripts::
+	.byte 0
+
 CeladonCity_Gym_EventScript_Erika::
 	famechecker FAMECHECKER_ERIKA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	callnative IsChallengeModeToVarResult

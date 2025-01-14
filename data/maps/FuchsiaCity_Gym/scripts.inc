@@ -1,3 +1,6 @@
+FuchsiaCity_Gym_MapScripts::
+	.byte 0
+
 FuchsiaCity_Gym_EventScript_Koga::
 	famechecker FAMECHECKER_KOGA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	callnative IsChallengeModeToVarResult

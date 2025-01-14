@@ -1,3 +1,6 @@
+CeruleanCity_Gym_MapScripts::
+	.byte 0
+
 CeruleanCity_Gym_EventScript_Misty::
 	famechecker FAMECHECKER_MISTY, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	callnative IsChallengeModeToVarResult

@@ -1,3 +1,6 @@
+PewterCity_Gym_MapScripts::
+	.byte 0
+
 PewterCity_Gym_EventScript_Brock::
 	famechecker FAMECHECKER_BROCK, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	callnative IsChallengeModeToVarResult

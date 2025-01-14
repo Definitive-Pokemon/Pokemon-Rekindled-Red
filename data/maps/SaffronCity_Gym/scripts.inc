@@ -1,3 +1,6 @@
+SaffronCity_Gym_MapScripts::
+	.byte 0
+
 SaffronCity_Gym_EventScript_Sabrina::
 	famechecker FAMECHECKER_SABRINA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	callnative IsChallengeModeToVarResult
