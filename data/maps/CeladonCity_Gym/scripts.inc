@@ -1,22 +1,3 @@
-.equ CHECK_VISITOR_STATE, 6
-.equ TYPE, VAR_0x8003
-.equ ARGUMENT, VAR_0x8004
-
-CeladonCity_Gym_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, CeladonCity_Gym_OnTransition
-	.byte 0
-
-CeladonCity_Gym_OnTransition::
-	setvar TYPE, CHECK_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_ERIKA
-	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, 1, CeladonCity_Gym_EventScript_HideErika
-	end
-
-CeladonCity_Gym_EventScript_HideErika::
-	setflag FLAG_TEMP_1
-	return
-
 CeladonCity_Gym_EventScript_Erika::
 	famechecker FAMECHECKER_ERIKA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	callnative IsChallengeModeToVarResult

@@ -2658,52 +2658,6 @@ void UpdateLoreleiDollCollection(void)
     }
 }
 
-void CheckVisitorState(void)
-{
-    u8 argument = gSpecialVar_0x8004;
-    struct BattleHouse* BattleHouseVar = &gSaveBlock1Ptr->battleHouseData;
-    switch(argument)
-    {
-        case FAMECHECKER_BROCK:
-            VarSet(VAR_ELEVATOR_FLOOR, BattleHouseVar->visitorBrock);
-            break;
-        case FAMECHECKER_MISTY:
-                FlagSet(FLAG_TEMP_2);
-            break;
-        case FAMECHECKER_LTSURGE:
-            VarSet(VAR_ELEVATOR_FLOOR, BattleHouseVar->visitorLtSurge);
-        case FAMECHECKER_ERIKA:
-            gSpecialVar_0x8009 = BattleHouseVar->visitorErika;
-            /*if (BattleHouseVar->visitorErika == 1)
-                FlagSet(FLAG_TEMP_4);
-            else
-                FlagClear(FLAG_TEMP_4);*/
-            break;
-        case FAMECHECKER_KOGA:
-            VarSet(VAR_ELEVATOR_FLOOR, BattleHouseVar->visitorKoga);
-            /*if (BattleHouseVar->visitorKoga)
-                FlagSet(FLAG_TEMP_5);
-            else
-                FlagClear(FLAG_TEMP_5);*/
-            break;
-        case FAMECHECKER_SABRINA:
-            VarSet(VAR_ELEVATOR_FLOOR, BattleHouseVar->visitorSabrina);
-            /*if (BattleHouseVar->visitorSabrina)
-                FlagSet(FLAG_TEMP_6);
-            else
-                FlagClear(FLAG_TEMP_6);*/
-            break;
-        case FAMECHECKER_BLAINE:
-            gSpecialVar_0x8009 = BattleHouseVar->visitorBlaine;
-            /*if (BattleHouseVar->visitorBlaine)
-                FlagSet(FLAG_TEMP_7);
-            else
-                FlagClear(FLAG_TEMP_7);*/
-            break;
-    }
-}
-
-
 void LoopWingFlapSound(void)
 {
     // 8004 = Num flaps

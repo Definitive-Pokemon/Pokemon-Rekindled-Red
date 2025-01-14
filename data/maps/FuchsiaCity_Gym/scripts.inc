@@ -1,22 +1,3 @@
-.equ CHECK_VISITOR_STATE, 6
-.equ TYPE, VAR_0x8003
-.equ ARGUMENT, VAR_0x8004
-
-FuchsiaCity_Gym_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, FuchsiaCity_Gym_OnTransition
-	.byte 0
-
-FuchsiaCity_Gym_OnTransition::
-	setvar TYPE, CHECK_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_KOGA
-	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, 1, FuchsiaCity_Gym_EventScript_HideKoga
-	end
-
-FuchsiaCity_Gym_EventScript_HideKoga::
-	setflag FLAG_TEMP_1
-	return
-
 FuchsiaCity_Gym_EventScript_Koga::
 	famechecker FAMECHECKER_KOGA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	callnative IsChallengeModeToVarResult

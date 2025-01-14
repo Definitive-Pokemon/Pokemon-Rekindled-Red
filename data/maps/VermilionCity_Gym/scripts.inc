@@ -45,17 +45,7 @@ VermilionCity_Gym_EventScript_SetBeamsOff::
 
 VermilionCity_Gym_OnTransition::
 	call VermilionCity_Gym_EventScript_InitTrashCans
-	setvar TYPE, CHECK_VISITOR_STATE
-	copyvar VAR_0x800A, ARGUMENT
-	setvar ARGUMENT, FAMECHECKER_LTSURGE
-	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, 1, VermilionCity_Gym_EventScript_HideLtSurge
-	copyvar ARGUMENT, VAR_0x800A
 	end
-
-VermilionCity_Gym_EventScript_HideLtSurge::
-	setflag FLAG_TEMP_2
-	return
 
 VermilionCity_Gym_EventScript_InitTrashCans::
 	goto_if_set FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES, EventScript_Return

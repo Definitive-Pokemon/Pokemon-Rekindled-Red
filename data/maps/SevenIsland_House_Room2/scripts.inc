@@ -28,27 +28,13 @@ SevenIsland_House_Room2_MapScripts::
 	.byte 0
 
 SevenIsland_House_Room2_OnLoad::
-	setvar ARGUMENT, FAMECHECKER_BROCK
-	special CheckVisitorState
-	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideBrock
-	setvar ARGUMENT, FAMECHECKER_MISTY
-	special CheckVisitorState
-	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideMisty
-	setvar ARGUMENT, FAMECHECKER_LTSURGE
-	special CheckVisitorState
-	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideLtSurge
-	setvar ARGUMENT, FAMECHECKER_ERIKA
-	special CheckVisitorState
-	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideErika
-	setvar ARGUMENT, FAMECHECKER_KOGA
-	special CheckVisitorState
-	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideKoga
-	setvar ARGUMENT, FAMECHECKER_SABRINA
-	special CheckVisitorState
-	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideSabrina
-	setvar ARGUMENT, FAMECHECKER_BLAINE
-	special CheckVisitorState
-	call_if_eq VAR_ELEVATOR_FLOOR, 0, SevenIsland_House_Room2_HideBlaine
+	call_if_unset FLAG_BATTLEHOUSE_BROCK_VISITOR, SevenIsland_House_Room2_HideBrock
+	call_if_unset FLAG_BATTLEHOUSE_MISTY_VISITOR, SevenIsland_House_Room2_HideMisty
+	call_if_unset FLAG_BATTLEHOUSE_LT_SURGE_VISITOR, SevenIsland_House_Room2_HideLtSurge
+	call_if_unset FLAG_BATTLEHOUSE_ERIKA_VISITOR, SevenIsland_House_Room2_HideErika
+	call_if_unset FLAG_BATTLEHOUSE_KOGA_VISITOR, SevenIsland_House_Room2_HideKoga
+	call_if_unset FLAG_BATTLEHOUSE_SABRINA_VISITOR, SevenIsland_House_Room2_HideSabrina
+	call_if_unset FLAG_BATTLEHOUSE_BLAINE_VISITOR, SevenIsland_House_Room2_HideBlaine
 	end
 
 SevenIsland_House_Room2_HideBrock::
@@ -262,9 +248,7 @@ SevenIsland_House_Room2_Movement_BrockToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_BrockBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_BROCK
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_BROCK_VISITOR
 	applymovement LOCALID_BROCK, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 0
@@ -420,9 +404,7 @@ SevenIsland_House_Room2_Movement_MistyDownToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_MistyBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_MISTY
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_MISTY_VISITOR
 	applymovement LOCALID_MISTY, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 1
@@ -562,9 +544,7 @@ SevenIsland_House_Room2_Movement_LtSurgeToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_LtSurgeBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_LTSURGE
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_LT_SURGE_VISITOR
 	applymovement LOCALID_LT_SURGE, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 0
@@ -717,9 +697,7 @@ SevenIsland_House_Room2_Movement_ErikaDownToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_ErikaBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_ERIKA
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_ERIKA_VISITOR
 	applymovement LOCALID_ERIKA, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 1
@@ -865,9 +843,7 @@ SevenIsland_House_Room2_Movement_KogaToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_KogaBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_KOGA
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_KOGA_VISITOR
 	applymovement LOCALID_KOGA, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 0
@@ -1024,9 +1000,7 @@ SevenIsland_House_Room2_Movement_SabrinaUpToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_SabrinaBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_SABRINA
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_SABRINA_VISITOR
 	applymovement LOCALID_SABRINA, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 1
@@ -1179,9 +1153,7 @@ SevenIsland_House_Room2_Movement_BlaineUpToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_BlaineBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_BLAINE
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_BLAINE_VISITOR
 	applymovement LOCALID_BLAINE, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 0

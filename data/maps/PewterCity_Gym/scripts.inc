@@ -1,22 +1,3 @@
-.equ CHECK_VISITOR_STATE, 6
-.equ TYPE, VAR_0x8003
-.equ ARGUMENT, VAR_0x8004
-
-PewterCity_Gym_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, PewterCity_Gym_OnTransition
-	.byte 0
-
-PewterCity_Gym_OnTransition::
-	setvar TYPE, CHECK_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_BROCK
-	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, 1, PewterCity_Gym_EventScript_HideBrock
-	end
-
-PewterCity_Gym_EventScript_HideBrock::
-	setflag FLAG_TEMP_1
-	return
-
 PewterCity_Gym_EventScript_Brock::
 	famechecker FAMECHECKER_BROCK, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	callnative IsChallengeModeToVarResult

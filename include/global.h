@@ -266,28 +266,19 @@ struct RecordMixingGift
 
 struct BattleHouse
 {
-    bool8 spearowState;     //whether Spearow is gone. 0 for no, 1 for yes
-    bool8 toldBrock;
-    bool8 toldMisty;
-    bool8 toldLtSurge;
-    bool8 toldErika;
-    bool8 toldKoga;
-    bool8 toldSabrina;
-    bool8 toldBlaine;       // ^^ filled out Fame Checker and told lady for person
-    // 1 byte
-    bool8 boxesMoved;       // controls setting the layout. Happens when Spearow returns for the first time.
-    bool8 visitorBrock;
-    bool8 visitorMisty;
-    bool8 visitorLtSurge;
-    bool8 visitorErika;
-    bool8 visitorKoga;
-    bool8 visitorSabrina;
-    bool8 visitorBlaine;    // ^^ visitors currently in house
-    // 1 byte, overflows into next scripting var
+    u16 spearowState:1;     //whether Spearow is gone. 0 for no, 1 for yes
+    u16 toldBrock:1;
+    u16 toldMisty:1;
+    u16 toldLtSurge:1;
+    u16 toldErika:1;
+    u16 toldKoga:1;
+    u16 toldSabrina:1;
+    u16 toldBlaine:1;       // ^^ filled out Fame Checker and told lady for person
     u16 spawnFails:3;       // after a Gym Leader fails to visit 6 times, this starts forcing visits
     u16 levelGrowth:5;      // adds levels to rematch Pokemon up to level 80. Maxes at +12.
     // 1 byte
-    u16 steps:8;            // used to bring back Spearow and bring in visitors
+    u8 steps:8;            // used to bring back Spearow and bring in visitors
+    bool8 boxesMoved;       // controls setting the layout. Happens when Spearow returns for the first time.
 };
 
 #include "constants/game_stat.h"

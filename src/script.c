@@ -838,33 +838,32 @@ void CheckNoFreeHealsMode(void)
 
 static bool8 AllPossibleGymLeadersPresent(void)
 {
-    struct BattleHouse* BattleHouseVar = &gSaveBlock1Ptr->battleHouseData;
-
-    if(BattleHouseVar->toldBrock && !BattleHouseVar->visitorBrock)
+    struct BattleHouse* BattleHouseVar = &gSaveBlock1Ptr->battleHouseData; 
+    if(BattleHouseVar->toldBrock && !FlagGet(FLAG_BATTLEHOUSE_BROCK_VISITOR))
     {
         return FALSE;
     }
-    if(BattleHouseVar->toldMisty && !BattleHouseVar->visitorMisty)
+    if(BattleHouseVar->toldMisty && !FlagGet(FLAG_BATTLEHOUSE_MISTY_VISITOR))
     {
         return FALSE;
     }
-    if(BattleHouseVar->toldLtSurge && !BattleHouseVar->visitorLtSurge)
+    if(BattleHouseVar->toldLtSurge && !FlagGet(FLAG_BATTLEHOUSE_LT_SURGE_VISITOR))
     {
         return FALSE;
     }
-    if(BattleHouseVar->toldErika && !BattleHouseVar->visitorErika)
+    if(BattleHouseVar->toldErika && !FlagGet(FLAG_BATTLEHOUSE_ERIKA_VISITOR))
     {
         return FALSE;
     }
-    if(BattleHouseVar->toldKoga && !BattleHouseVar->visitorKoga)
+    if(BattleHouseVar->toldKoga && !FlagGet(FLAG_BATTLEHOUSE_KOGA_VISITOR))
     {
         return FALSE;
     }
-    if(BattleHouseVar->toldSabrina && !BattleHouseVar->visitorSabrina)
+    if(BattleHouseVar->toldSabrina && !FlagGet(FLAG_BATTLEHOUSE_SABRINA_VISITOR))
     {
         return FALSE;
     }
-    if(BattleHouseVar->toldBlaine && !BattleHouseVar->visitorBlaine)
+    if(BattleHouseVar->toldBlaine && !FlagGet(FLAG_BATTLEHOUSE_BLAINE_VISITOR))
     {
         return FALSE;
     }
@@ -898,19 +897,19 @@ void UpdateBattleHouseStepCounter(void)
                 BattleHouseVar->spearowState = 0;
                 BattleHouseVar->boxesMoved = 1;
                 if(BattleHouseVar->toldBrock)
-                    BattleHouseVar->visitorBrock = TRUE;
+                    FlagSet(FLAG_BATTLEHOUSE_BROCK_VISITOR);
                 if(BattleHouseVar->toldMisty)
-                    BattleHouseVar->visitorMisty = TRUE;
+                    FlagSet(FLAG_BATTLEHOUSE_MISTY_VISITOR);
                 if(BattleHouseVar->toldLtSurge)
-                    BattleHouseVar->visitorLtSurge = TRUE;
+                    FlagSet(FLAG_BATTLEHOUSE_LT_SURGE_VISITOR);
                 if(BattleHouseVar->toldErika)
-                    BattleHouseVar->visitorErika = TRUE;
+                    FlagSet(FLAG_BATTLEHOUSE_ERIKA_VISITOR);
                 if(BattleHouseVar->toldKoga)
-                    BattleHouseVar->visitorKoga = TRUE;
+                    FlagSet(FLAG_BATTLEHOUSE_KOGA_VISITOR);
                 if(BattleHouseVar->toldSabrina)
-                    BattleHouseVar->visitorSabrina = TRUE;
+                    FlagSet(FLAG_BATTLEHOUSE_SABRINA_VISITOR);
                 if(BattleHouseVar->toldBlaine)
-                    BattleHouseVar->visitorBlaine = TRUE;
+                    FlagSet(FLAG_BATTLEHOUSE_BLAINE_VISITOR);
                 return;
             }
             if(BattleHouseVar->spearowState)
@@ -929,57 +928,57 @@ void UpdateBattleHouseStepCounter(void)
                     switch(leader)
                     {
                         case 0:
-                            if(BattleHouseVar->toldBrock && !BattleHouseVar->visitorBrock)
+                            if(BattleHouseVar->toldBrock && !FlagGet(FLAG_BATTLEHOUSE_BROCK_VISITOR))
                             {
-                                BattleHouseVar->visitorBrock = 1;
+                                FlagSet(FLAG_BATTLEHOUSE_BROCK_VISITOR);
                                 BattleHouseVar->spawnFails = 0;
                                 return;
                             }
                             break;
                         case 1:
-                            if(BattleHouseVar->toldMisty && !BattleHouseVar->visitorMisty)
+                            if(BattleHouseVar->toldMisty && !FlagGet(FLAG_BATTLEHOUSE_MISTY_VISITOR))
                             {
-                                BattleHouseVar->visitorMisty = 1;
+                                FlagSet(FLAG_BATTLEHOUSE_MISTY_VISITOR);
                                 BattleHouseVar->spawnFails = 0;
                                 return;
                             }
                             break;
                         case 2:
-                            if(BattleHouseVar->toldLtSurge && !BattleHouseVar->visitorLtSurge)
+                            if(BattleHouseVar->toldLtSurge && !FlagGet(FLAG_BATTLEHOUSE_LT_SURGE_VISITOR))
                             {
-                                BattleHouseVar->visitorLtSurge = 1;
+                                FlagSet(FLAG_BATTLEHOUSE_LT_SURGE_VISITOR);
                                 BattleHouseVar->spawnFails = 0;
                                 return;
                             }
                             break;
                         case 3:
-                            if(BattleHouseVar->toldErika && !BattleHouseVar->visitorErika)
+                            if(BattleHouseVar->toldErika && !FlagGet(FLAG_BATTLEHOUSE_ERIKA_VISITOR))
                             {
-                                BattleHouseVar->visitorErika = 1;
+                                FlagSet(FLAG_BATTLEHOUSE_ERIKA_VISITOR);
                                 BattleHouseVar->spawnFails = 0;
                                 return;
                             }
                             break;
                         case 4:
-                            if(BattleHouseVar->toldKoga && !BattleHouseVar->visitorKoga)
+                            if(BattleHouseVar->toldKoga && !FlagGet(FLAG_BATTLEHOUSE_KOGA_VISITOR))
                             {
-                                BattleHouseVar->visitorKoga = 1;
+                                FlagSet(FLAG_BATTLEHOUSE_KOGA_VISITOR);
                                 BattleHouseVar->spawnFails = 0;
                                 return;
                             }
                             break;
                         case 5:
-                            if(BattleHouseVar->toldSabrina && !BattleHouseVar->visitorSabrina)
+                            if(BattleHouseVar->toldSabrina && !FlagGet(FLAG_BATTLEHOUSE_SABRINA_VISITOR))
                             {
-                                BattleHouseVar->visitorSabrina = 1;
+                                FlagSet(FLAG_BATTLEHOUSE_SABRINA_VISITOR);
                                 BattleHouseVar->spawnFails = 0;
                                 return;
                             }
                             break;
                         case 6:
-                            if(BattleHouseVar->toldBlaine && !BattleHouseVar->visitorBlaine)
+                            if(BattleHouseVar->toldBlaine && !FlagGet(FLAG_BATTLEHOUSE_BLAINE_VISITOR))
                             {
-                                BattleHouseVar->visitorBlaine = 1;
+                                FlagSet(FLAG_BATTLEHOUSE_BLAINE_VISITOR);
                                 BattleHouseVar->spawnFails = 0;
                                 return;
                             }
@@ -997,6 +996,52 @@ void UpdateBattleHouseStepCounter(void)
                     BattleHouseVar->spawnFails++;
             }
         }
+    }
+}
+
+// can be removed, probably
+void CheckVisitorState(void)
+{
+    u8 argument = gSpecialVar_0x8004;
+    struct BattleHouse* BattleHouseVar = &gSaveBlock1Ptr->battleHouseData;
+    switch(argument)
+    {
+        case FAMECHECKER_BROCK:
+            VarSet(VAR_ELEVATOR_FLOOR, 0);
+            break;
+        case FAMECHECKER_MISTY:
+                FlagSet(FLAG_TEMP_2);
+            break;
+        case FAMECHECKER_LTSURGE:
+            VarSet(VAR_ELEVATOR_FLOOR, 0);
+        case FAMECHECKER_ERIKA:
+            gSpecialVar_0x8009 = FlagGet(FLAG_BATTLEHOUSE_ERIKA_VISITOR);
+            /*if (FlagGet(FLAG_BATTLEHOUSE_ERIKA_VISITOR) == 1)
+                FlagSet(FLAG_TEMP_4);
+            else
+                FlagClear(FLAG_TEMP_4);*/
+            break;
+        case FAMECHECKER_KOGA:
+            VarSet(VAR_ELEVATOR_FLOOR, 0);
+            /*if (FlagGet(FLAG_BATTLEHOUSE_KOGA_VISITOR))
+                FlagSet(FLAG_TEMP_5);
+            else
+                FlagClear(FLAG_TEMP_5);*/
+            break;
+        case FAMECHECKER_SABRINA:
+            VarSet(VAR_ELEVATOR_FLOOR, 0);
+            /*if (FlagGet(FLAG_BATTLEHOUSE_SABRINA_VISITOR))
+                FlagSet(FLAG_TEMP_6);
+            else
+                FlagClear(FLAG_TEMP_6);*/
+            break;
+        case FAMECHECKER_BLAINE:
+            gSpecialVar_0x8009 = 0;
+            /*if (FlagGet(FLAG_BATTLEHOUSE_BLAINE_VISITOR))
+                FlagSet(FLAG_TEMP_7);
+            else
+                FlagClear(FLAG_TEMP_7);*/
+            break;
     }
 }
 
@@ -1035,32 +1080,6 @@ void UseBattleHouseVar(void)
                     break;
                 case FAMECHECKER_BLAINE:
                     BattleHouseVar->toldBlaine = 1;
-                    break;
-            }
-            break;
-        case SET_VISITOR_STATE:
-            switch(argument)
-            {
-                case FAMECHECKER_BROCK:
-                    BattleHouseVar->visitorBrock ^= 1; //toggle state
-                    break;
-                case FAMECHECKER_MISTY:
-                    BattleHouseVar->visitorMisty ^= 1;
-                    break;
-                case FAMECHECKER_LTSURGE:
-                    BattleHouseVar->visitorLtSurge ^= 1;
-                    break;
-                case FAMECHECKER_ERIKA:
-                    BattleHouseVar->visitorErika ^= 1;
-                    break;
-                case FAMECHECKER_KOGA:
-                    BattleHouseVar->visitorKoga ^= 1;
-                    break;
-                case FAMECHECKER_SABRINA:
-                    BattleHouseVar->visitorSabrina ^= 1;
-                    break;
-                case FAMECHECKER_BLAINE:
-                    BattleHouseVar->visitorBlaine ^= 1;
                     break;
             }
             break;
@@ -1111,37 +1130,37 @@ void UseBattleHouseVar(void)
             break;
         case CHECK_ANY_VISITORS:
             gSpecialVar_Result = 0;
-            if(BattleHouseVar->visitorBrock)
+            if(FlagGet(FLAG_BATTLEHOUSE_BROCK_VISITOR))
             {
                 gSpecialVar_Result++;
                 StringCopy(gStringVar1, gText_Brock);
             }
-            if(BattleHouseVar->visitorMisty)
+            if(FlagGet(FLAG_BATTLEHOUSE_MISTY_VISITOR))
             {
                 gSpecialVar_Result++;
                 StringCopy(gStringVar1, gText_Misty);
             }
-            if(BattleHouseVar->visitorLtSurge)
+            if(FlagGet(FLAG_BATTLEHOUSE_LT_SURGE_VISITOR))
             {
                 gSpecialVar_Result++;
                 StringCopy(gStringVar1, gText_LtSurge);
             }
-            if(BattleHouseVar->visitorErika)
+            if(FlagGet(FLAG_BATTLEHOUSE_ERIKA_VISITOR))
             {
                 gSpecialVar_Result++;
                 StringCopy(gStringVar1, gText_Erika);
             }
-            if(BattleHouseVar->visitorKoga)
+            if(FlagGet(FLAG_BATTLEHOUSE_KOGA_VISITOR))
             {
                 gSpecialVar_Result++;
                 StringCopy(gStringVar1, gText_Koga);
             }
-            if(BattleHouseVar->visitorSabrina)
+            if(FlagGet(FLAG_BATTLEHOUSE_SABRINA_VISITOR))
             {
                 gSpecialVar_Result++;
                 StringCopy(gStringVar1, gText_Sabrina);
             }
-            if(BattleHouseVar->visitorBlaine)
+            if(FlagGet(FLAG_BATTLEHOUSE_BLAINE_VISITOR))
             {
                 gSpecialVar_Result++;
                 StringCopy(gStringVar1, gText_Blaine);
@@ -1165,23 +1184,23 @@ void UseBattleHouseVar(void)
                 gSpecialVar_Result++;
             break;
         case CREATE_VISITOR_STRING: //used for mailbox outside
-            if(BattleHouseVar->visitorBrock)
+            if(FlagGet(FLAG_BATTLEHOUSE_BROCK_VISITOR))
                 totalCount++;
-            if(BattleHouseVar->visitorMisty)
+            if(FlagGet(FLAG_BATTLEHOUSE_MISTY_VISITOR))
                 totalCount++;
-            if(BattleHouseVar->visitorLtSurge)
+            if(FlagGet(FLAG_BATTLEHOUSE_LT_SURGE_VISITOR))
                 totalCount++;
-            if(BattleHouseVar->visitorErika)
+            if(FlagGet(FLAG_BATTLEHOUSE_ERIKA_VISITOR))
                 totalCount++;
-            if(BattleHouseVar->visitorKoga)
+            if(FlagGet(FLAG_BATTLEHOUSE_KOGA_VISITOR))
                 totalCount++;
-            if(BattleHouseVar->visitorSabrina)
+            if(FlagGet(FLAG_BATTLEHOUSE_SABRINA_VISITOR))
                 totalCount++;
-            if(BattleHouseVar->visitorBlaine)
+            if(FlagGet(FLAG_BATTLEHOUSE_BLAINE_VISITOR))
                 totalCount++;
             StringCopy(gStringVar1, gExpandedPlaceholder_Empty);
             gSpecialVar_Result = 0;
-            if(BattleHouseVar->visitorBrock)
+            if(FlagGet(FLAG_BATTLEHOUSE_BROCK_VISITOR))
             {
                 gSpecialVar_Result++;
                 runningCount++;
@@ -1200,7 +1219,7 @@ void UseBattleHouseVar(void)
                     StringAppend(gStringVar1, gText_AndSpace);
                 }
             }
-            if(BattleHouseVar->visitorMisty)
+            if(FlagGet(FLAG_BATTLEHOUSE_MISTY_VISITOR))
             {
                 gSpecialVar_Result++;
                 runningCount++;
@@ -1219,7 +1238,7 @@ void UseBattleHouseVar(void)
                     StringAppend(gStringVar1, gText_AndSpace);
                 }
             }
-            if(BattleHouseVar->visitorLtSurge)
+            if(FlagGet(FLAG_BATTLEHOUSE_LT_SURGE_VISITOR))
             {
                 gSpecialVar_Result++;
                 runningCount++;
@@ -1238,7 +1257,7 @@ void UseBattleHouseVar(void)
                     StringAppend(gStringVar1, gText_AndSpace);
                 }
             }
-            if(BattleHouseVar->visitorErika)
+            if(FlagGet(FLAG_BATTLEHOUSE_ERIKA_VISITOR))
             {
                 gSpecialVar_Result++;
                 runningCount++;
@@ -1257,7 +1276,7 @@ void UseBattleHouseVar(void)
                     StringAppend(gStringVar1, gText_AndSpace);
                 }
             }
-            if(BattleHouseVar->visitorKoga)
+            if(FlagGet(FLAG_BATTLEHOUSE_KOGA_VISITOR))
             {
                 runningCount++;
                 if(gSpecialVar_Result == 4 && totalCount != runningCount)
@@ -1281,7 +1300,7 @@ void UseBattleHouseVar(void)
                     StringAppend(gStringVar1, gText_AndSpace);
                 }
             }
-            if(BattleHouseVar->visitorSabrina)
+            if(FlagGet(FLAG_BATTLEHOUSE_SABRINA_VISITOR))
             {
                 runningCount++;
                 if(gSpecialVar_Result == 4)
@@ -1305,7 +1324,7 @@ void UseBattleHouseVar(void)
                     StringAppend(gStringVar1, gText_AndSpace);
                 }
             }
-            if(BattleHouseVar->visitorBlaine)
+            if(FlagGet(FLAG_BATTLEHOUSE_BLAINE_VISITOR))
             {
                 runningCount++;
                 if(gSpecialVar_Result == 4)
