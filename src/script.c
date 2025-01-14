@@ -880,8 +880,8 @@ u8 ReturnBattleHouseLevel(void)
 void BattleHouseScaleLevelUp(void)
 {
     PlaySE(SE_PC_ON);
-    if(gSaveBlock1Ptr->BattleHouseData.levelGrowth < 12)
-        gSaveBlock1Ptr->BattleHouseData.levelGrowth++;
+    if(gSaveBlock1Ptr->battleHouseData.levelGrowth < 12)
+        gSaveBlock1Ptr->battleHouseData.levelGrowth++;
 }
 
 void UpdateBattleHouseStepCounter(void)
