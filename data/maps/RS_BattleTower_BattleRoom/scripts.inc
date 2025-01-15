@@ -1,3 +1,5 @@
+	.set LOCALID_ATTENDANT, 2
+
 RS_BattleTower_BattleRoom_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleTower_BattleRoom_MapScript2_1608E1
 	.byte 0
@@ -19,6 +21,10 @@ BattleTower_BattleRoom_EventScript_1608FA::
 	goto BattleTower_BattleRoom_EventScript_1608FA_Continue
 BattleTower_BrainBattleVar::
 	setvar VAR_0x8004, 3
+	msgbox BattleTower_BattleRoom_Text_BrainAnnounce
+	closemessage
+	BattleTower_BattleRoom_Text_BrainQuestion
+	closemessage
 BattleTower_BattleRoom_EventScript_1608FA_Continue::
 	addobject 1
 	applymovement 1, BattleTower_BattleRoom_Movement_160AC0
@@ -56,6 +62,16 @@ BattleTower_BattleRoom_EventScript_1608FA_Message_Continue::
 	//special sub_810FF60 //fan club thing
 	warp MAP_RS_BATTLE_TOWER_LOBBY, 255, 6, 6
 	waitstate
+
+BattleTower_BattleRoom_Text_BrainAnnounce::
+	.string "Excuse me, but…\p"
+	.string "Our leader, the TOWER TYCOON, is on\n"
+	.string "her way here in hopes of battling you.\p"
+	.string "She should be arriving very shortly.$"
+
+BattleTower_BattleRoom_Text_BrainQuestion::
+	.string "You will be facing the TOWER TYCOON.\n"
+	.string "Are you prepared?$"
 
 BattleTower_BattleRoom_EventScript_160961::
 	setvar VAR_0x8004, 6
