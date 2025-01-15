@@ -1,7 +1,7 @@
 # Pokémon Rekindled Red
 
 ## Based on Pokémon FireRed and LeafGreen+
-This hack is based on the [FRLG+ hack](https://github.com/Deokishisu/FRLG-Plus/releases/latest), retaining many of it's features. Nuzlocke mode, Leader rematches and faster loading, among others.
+This hack is based on the [FRLG+ hack](https://github.com/Deokishisu/FRLG-Plus/releases/latest), retaining many of it's features. Leader rematches and faster loading, among others.
 
 ## Based on Pokémon Fire Red Omega
 Most wild Pokémon and Trainer encounters have been adopted from [Drayano's](https://www.romhacking.net/community/2785/) FireRed Omega hack.
