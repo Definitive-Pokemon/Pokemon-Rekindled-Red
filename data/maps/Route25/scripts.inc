@@ -3,23 +3,19 @@
 .set TRAINER, VAR_0x8009
 
 Route25_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, Route25_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, Route25_MapScript_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route25_OnResume
 	.byte 0
-
-Route25_OnLoad::
-	compare_var_to_value VAR_SUICUNE, 0
-	goto_if_eq DontShowSuicuneYet
-	call_if_unset FLAG_FOUGHT_SUICUNE, Route25_EventScript_TryShowSuicune
-DontShowSuicuneYet::
-	end
 
 Route25_MapScript_OnTransition::
 	setvar TRAINER, MASTER_STARMIE
 	callnative ShouldChangeMasterTrainerMovementType
 	call_if_eq VAR_RESULT, FALSE, Route25_MapScript_StarmieMasterMovementType
 	call_if_set FLAG_FOUGHT_SUICUNE, Route25_EventScript_HideSuicune
+	compare_var_to_value VAR_SUICUNE, 0
+	goto_if_eq DontShowSuicuneYet
+	call_if_unset FLAG_FOUGHT_SUICUNE, Route25_EventScript_TryShowSuicune
+DontShowSuicuneYet::
 	end
 
 Route25_OnResume::

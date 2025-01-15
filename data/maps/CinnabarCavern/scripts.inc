@@ -1,17 +1,9 @@
 .set LOCALID_RAIKOU, 1
 
 CinnabarCavern_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, CinnabarCavern_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, CinnabarCavern_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CinnabarCavern_OnResume
 	.byte 0
-
-CinnabarCavern_OnLoad::
-	compare_var_to_value VAR_RAIKOU, 0
-	goto_if_eq DontShowRaikouYet
-	call_if_unset FLAG_FOUGHT_RAIKOU, CinnabarCavern_EventScript_TryShowRaikou
-DontShowRaikouYet::
-	end
 
 CinnabarCavern_OnTransition::
 	call_if_set FLAG_FOUGHT_RAIKOU, CinnabarCavern_EventScript_HideRaikou
@@ -19,6 +11,10 @@ CinnabarCavern_OnTransition::
 
 CinnabarCavern_OnResume::
 	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, CinnabarCavern_EventScript_TryRemoveRaikou
+	compare_var_to_value VAR_RAIKOU, 0
+	goto_if_eq DontShowRaikouYet
+	call_if_unset FLAG_FOUGHT_RAIKOU, CinnabarCavern_EventScript_TryShowRaikou
+DontShowRaikouYet::
 	end
 
 CinnabarCavern_EventScript_TryShowRaikou::

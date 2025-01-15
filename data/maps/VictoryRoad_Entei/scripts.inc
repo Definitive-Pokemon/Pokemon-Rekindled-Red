@@ -1,20 +1,16 @@
 .set LOCALID_ENTEI, 1
 
 VictoryRoad_Entei_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, VictoryRoad_Entei_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, VictoryRoad_Entei_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, VictoryRoad_Entei_OnResume
 	.byte 0
 
-VictoryRoad_Entei_OnLoad::
+VictoryRoad_Entei_OnTransition::
+	call_if_set FLAG_FOUGHT_ENTEI, VictoryRoad_Entei_EventScript_HideEntei
 	compare_var_to_value VAR_ENTEI, 0
 	goto_if_eq DontShowEnteiYet
 	call_if_unset FLAG_FOUGHT_ENTEI, VictoryRoad_Entei_EventScript_TryShowEntei
 DontShowEnteiYet::
-	end
-
-VictoryRoad_Entei_OnTransition::
-	call_if_set FLAG_FOUGHT_ENTEI, VictoryRoad_Entei_EventScript_HideEntei
 	end
 
 VictoryRoad_Entei_OnResume::
