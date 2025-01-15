@@ -255,7 +255,7 @@ gSpecials::
 	def_special AwardBattleTowerRibbons
 	def_special ChooseBattleTowerPlayerParty
 	def_special ValidateEReaderTrainer
-	def_special NullFieldSpecial
+	def_special IsNextBattleTowerTrainerFrontierLeader
 	def_special ReducePlayerPartyToThree
 	def_special BedroomPC
 	def_special PlayerPC

@@ -391,13 +391,11 @@ static bool8 ChooseSpecialBattleTowerTrainer(void)
         {
             // return true and set special trainer value to brain
             gSaveBlock2Ptr->battleTower.battleTowerTrainerId = 0xFF;
-            gSpecialVar_0x8006 = 1;
             return TRUE;
         }
         else if (winStreak == 55)
         {
             gSaveBlock2Ptr->battleTower.battleTowerTrainerId = 0xFE;
-            gSpecialVar_0x8006 = 2;
             return TRUE;
         }
         // Check if one of the battle tower trainers from record mixing should be the next trainer.
@@ -435,6 +433,17 @@ static bool8 ChooseSpecialBattleTowerTrainer(void)
         }
     }
     return retVal;
+}
+
+void IsNextBattleTowerTrainerFrontierLeader(void)
+{
+    u16 winStreak = GetCurrentBattleTowerWinStreak(gSaveBlock2Ptr->battleTower.battleTowerLevelType);
+    gSpecialVar_0x8006 = 0;
+    if (winStreak == 27)
+        // return true and set special trainer value to brain
+        gSpecialVar_0x8006 = 1;
+    else if (winStreak == 55)
+        gSpecialVar_0x8006 = 2;
 }
 
 void ChooseNextBattleTowerTrainer(void)

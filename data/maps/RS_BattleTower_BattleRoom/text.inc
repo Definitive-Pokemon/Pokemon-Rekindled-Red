@@ -1,12 +1,12 @@
-BattleTower_BattleRoom_Text_19ACDC::
+BattleTower_BattleRoom_Text_Heal::
 	.string "We will restore your POKéMON to\n"
 	.string "full health.$"
 
-BattleTower_BattleRoom_Text_19AD09::
+BattleTower_BattleRoom_Text_OpponentAnnounce::
 	.string "You will be facing opponent no. {STR_VAR_1}.\n"
 	.string "Are you ready?$"
 
-BattleTower_BattleRoom_Text_19AD3C::
+BattleTower_BattleRoom_Text_ConfirmSaveAndQuit::
 	.string "Would you like to save and\n"
 	.string "quit the game?$"
 
@@ -14,7 +14,19 @@ BattleTower_BattleRoom_Text_19AD66::
 	.string "Would you like to cancel your\n"
 	.string "BATTLE ROOM challenge?$"
 
-BattleTower_BattleRoom_Text_1C6CE1::
+BattleTower_BattleRoom_Text_BrainAnnounce::
+	.string "Excuse me, but…\p"
+	.string "Our leader, the TOWER TYCOON, is on\n"
+	.string "her way here in hopes of battling you.\p"
+	.string "She should be arriving very shortly.\p"
+	.string "You will be facing the TOWER TYCOON.\n"
+	.string "Are you prepared?$"
+
+BattleTower_BattleRoom_Text_BrainAnnounce_Repeat::
+	.string "You will be facing the TOWER TYCOON.\n"
+	.string "Are you prepared?$"
+
+BattleTower_BattleRoom_Text_System_Saving::
 	.string "SAVING...\n"
 	.string "DON'T TURN OFF THE POWER.$"
 
