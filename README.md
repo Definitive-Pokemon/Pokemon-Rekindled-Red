@@ -30,7 +30,8 @@ Most wild Pokémon and Trainer encounters have been adopted from [Drayano's](htt
 *	Newly added story/lore elements;
 *	A lot more to explore in an overhauled Sevii Islands chain; 
 *	Puzzles, riddles and mysteries;
-*	Powerful post-game Trainers, both new and familiar; 
+*	Similar events for obtaining every Starter Pokémon; 
+*	Powerful new Trainer battles, both new and familiar; 
 *	Many entirely new areas, like the Viridian Forest Depths; 
 *	Familiar areas, never seen before in Generation 3; 
 *	Dark is now Physical; Ghost is now Special; 
