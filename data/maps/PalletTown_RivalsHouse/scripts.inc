@@ -194,10 +194,13 @@ PalletTown_RivalsHouse_EventScript_Battle::
 	
 
 PalletTown_RivalsHouse_Text_DaisyIntro::
-	.string "Let's battle.$"
+	.string "Me and my friends have been training\n"
+	.string "a lot during your travels.\p"
+	.string "We won't go easy on you.$"
 
 PalletTown_RivalsHouse_Text_DaisyDefeat::
-	.string "You won.$"
+	.string "I'm so proud, {PLAYER}.\n"
+	.string "I still have so much to learn.$"
 
 PalletTown_RivalsHouse_EventScript_DefeatedDaisy::
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 0
@@ -206,7 +209,12 @@ PalletTown_RivalsHouse_EventScript_DefeatedDaisy::
 	end
 
 PalletTown_RivalsHouse_Text_YouWon::
-	.string "You won.$"
+	.string "Just like last time, I really put\n"
+	.string "everything I had into this fight.\p"
+	.string "We'd love to battle you again\n"
+	.string "sometime soon.\p"
+	.string "My POKéMON feel get excited just\n"
+	.string "thinking about it.$"
 
 PalletTown_RivalsHouse_EventScript_RateMonFriendship::
 	msgbox PalletTown_RivalsHouse_Text_MayISeeFirstMon
