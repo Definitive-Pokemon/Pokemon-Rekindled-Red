@@ -1,4 +1,4 @@
-# Pokémon Rekindled Red (Under construction)
+# Pokémon Rekindled Red
 
 ## Based on Pokémon FireRed and LeafGreen+
 This hack is based on the [FRLG+ hack](https://github.com/Deokishisu/FRLG-Plus/releases/latest), retaining many of it's features. Nuzlocke mode, Leader rematches and faster loading, among others.
@@ -6,31 +6,32 @@ This hack is based on the [FRLG+ hack](https://github.com/Deokishisu/FRLG-Plus/r
 ## Based on Pokémon Fire Red Omega
 Most wild Pokémon and Trainer encounters have been adopted from [Drayano's](https://www.romhacking.net/community/2785/) FireRed Omega hack.
 
-## Features introduced in Rekindled Red
-* Pokémon variants/forms.
-* Catchable Regis with new puzzles.
-* Catchable Starters.
-* New areas.
-* Sevii music update.
-* Ghost Type is now Special.
-* Dark Type is now Physical. 
-* New events.
+**Some of the features hailing from FRLG-Plus:** 
+•	Infinite TM usage; 
+•	Gym Leader rematches; 
+•	The addition of a familiar HM move; 
+•	The Battle Tower from Ruby and Sapphire; 
+•	Master Trainers, akin to those featured in Let’s Go Pikachu/Eevee; 
+•	Indoor running; 
+•	Cut trees being permanently gone after being removed; 
+•	Auto-run toggle; 
+•	Toggleable Mach Bike speed; 
+•	Faster Surfing; 
+•	More Bag pockets for easier menu navigating; 
+•	Berries ported from Emerald; 
+•	Battle-related options, like speeding up the HP Bar; 
+•	Instant text option. 
 
-## Credits
-* Dialogue and text: Thirteen1355
-* conception and direction: Thirteen1355
-* Map editing: Thirteen1355
-* Pokemon and trainer data: Thirteen1355
-* Overworld scripting: Thirteen1355 & Elwin
-* Repository management and CI/CD: Elwin
-* Testing and debugging: Thirteen & Elwin
-* Novel code and engine changes: Elwin
-* Regigigas sprites: [MrDollSteak and other contributors from this PC thread](https://www.pokecommunity.com/threads/sugimori-palettes-the-ds-style-64x64-pok%C3%A9mon-sprite-resource.336945/)
-* Regigigas overworld sprite: Dragoon for ripping from HG/SS and Elwin for further modification
-* members of the pret discord server, for helping with technical questions and feedback
-
-## Questions
-WIP
-
-## Contact
-WIP
+**Features added for Rekindled Red:**
+•	Wild Pokémon locations overhauled, based on Drayano’s FireRed Omega; 
+•	Trainer teams overhauled, based on Drayano’s FireRed Omega; 
+•	Different Starters;
+•	Unique events for every single Legendary Pokémon, designed and written by Thirteen1355;  
+o	Newly added story/lore elements;
+o	A lot more to explore in an overhauled Sevii Islands chain; 
+o	Puzzles, riddles and mysteries;
+•	Powerful post-game Trainers, both new and familiar; 
+•	Many entirely new areas, like the Viridian Forest Depths; 
+•	Familiar areas, never seen before in Generation 3; 
+•	Dark is now Physical; Ghost is now Special; 
+•	Regional Forms. 
