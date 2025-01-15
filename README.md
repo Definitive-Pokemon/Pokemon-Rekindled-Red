@@ -36,3 +36,4 @@ Most wild Pokémon and Trainer encounters have been adopted from [Drayano's](htt
 *	Familiar areas, never seen before in Generation 3; 
 *	Dark is now Physical; Ghost is now Special; 
 *	Regional Forms. 
+*	Many unique visual flourishes, including sideways stairs. 
