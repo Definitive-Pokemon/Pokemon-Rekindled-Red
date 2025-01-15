@@ -391,11 +391,15 @@ static bool8 ChooseSpecialBattleTowerTrainer(void)
         {
             // return true and set special trainer value to brain
             gSaveBlock2Ptr->battleTower.battleTowerTrainerId = 0xFF;
+            gSpecialVar_0x8006 = 1;
+            gSpecialVar_0x8004 = 3;
             return TRUE;
         }
         else if (winStreak == 55)
         {
             gSaveBlock2Ptr->battleTower.battleTowerTrainerId = 0xFE;
+            gSpecialVar_0x8006 = 2;
+            gSpecialVar_0x8004 = 3;
             return TRUE;
         }
         // Check if one of the battle tower trainers from record mixing should be the next trainer.
