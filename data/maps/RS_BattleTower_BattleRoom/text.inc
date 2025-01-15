@@ -17,7 +17,7 @@ BattleTower_BattleRoom_Text_19AD66::
 BattleTower_BattleRoom_Text_BrainAnnounce::
 	.string "Excuse me, but…\p"
 	.string "Our leader, the TOWER TYCOON, is on\n"
-	.string "her way here in hopes of battling you.\p"
+	.string "her way here, eager to battle you.\p"
 	.string "She should be arriving very shortly.\p"
 	.string "You will be facing the TOWER TYCOON.\n"
 	.string "Are you prepared?$"
