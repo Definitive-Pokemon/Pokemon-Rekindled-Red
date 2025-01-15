@@ -38,7 +38,7 @@ Most wild Pokémon and Trainer encounters have been adopted from [Drayano's](htt
 *	Regional Forms. 
 *	Many unique visual flourishes, including sideways stairs. 
 
-**Credits: **
+**Credits:**
 *	Dialogue and text: Thirteen1355
 *	conception and direction: Thirteen1355
 *	Map editing: Thirteen1355
