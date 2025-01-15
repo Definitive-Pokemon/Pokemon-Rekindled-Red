@@ -188,10 +188,10 @@ PalletTown_RivalsHouse_Text_Nope::
     .string "Okay, we'll just have tea.$"
 
 PalletTown_RivalsHouse_EventScript_Battle::
+	cleartrainerflag TRAINER_LEADER_DAISY_REMATCH 
 	trainerbattle_single TRAINER_LEADER_DAISY_REMATCH, PalletTown_RivalsHouse_Text_DaisyIntro, PalletTown_RivalsHouse_Text_DaisyDefeat, PalletTown_RivalsHouse_EventScript_DefeatedDaisy, NO_MUSIC
 	release
 	end
-	
 
 PalletTown_RivalsHouse_Text_DaisyIntro::
 	.string "Me and my friends have been training\n"
