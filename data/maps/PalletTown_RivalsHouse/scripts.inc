@@ -204,6 +204,7 @@ PalletTown_RivalsHouse_Text_DaisyDefeat::
 
 PalletTown_RivalsHouse_EventScript_DefeatedDaisy::
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 0
+	cleartrainerflag TRAINER_LEADER_DAISY_REMATCH 
 	msgbox PalletTown_RivalsHouse_Text_YouWon
 	release
 	end
