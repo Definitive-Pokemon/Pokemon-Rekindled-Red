@@ -23,6 +23,7 @@ BattleTower_BattleRoom_EventScript_Battle::
 	call_if_eq BattleTower_BattleRoom_EventScript_TextcolorFemale
 	goto_if_eq VAR_0x8006, 3, BattleTower_BrainBattleMessage
 	goto_if_eq VAR_0x8006, 2, BattleTower_SecondBrainBattleMessage
+	setvar VAR_0x8004, 0
 	special PrintBattleTowerTrainerGreeting
 	msgbox gStringVar4, MSGBOX_DEFAULT
 	goto BattleTower_BattleRoom_EventScript_Battle_Message_Continue
@@ -72,6 +73,7 @@ BattleTower_BattleRoom_EventScript_PlayerWin::
 	waitfanfare
 	callnative HealPlayerPartyOak
 	special IsNextBattleTowerTrainerFrontierLeader
+	@ this special will also set VAR_TEMP_4 to brain if necessary, required for special battle case
 	goto_if_eq VAR_0x8006, FALSE, BattleTower_BattleRoom_EventScript_PlayerChooseContinueNormal
 	@ for sake of text matching, brain starts a different dialog loop
 	textcolor 0x1
