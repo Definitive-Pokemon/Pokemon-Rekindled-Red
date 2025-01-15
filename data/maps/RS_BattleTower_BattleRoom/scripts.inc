@@ -23,7 +23,7 @@ BattleTower_BrainBattleVar::
 	setvar VAR_0x8004, 3
 	msgbox BattleTower_BattleRoom_Text_BrainAnnounce
 	closemessage
-	BattleTower_BattleRoom_Text_BrainQuestion
+	msgbox BattleTower_BattleRoom_Text_BrainQuestion
 	closemessage
 BattleTower_BattleRoom_EventScript_1608FA_Continue::
 	addobject 1
