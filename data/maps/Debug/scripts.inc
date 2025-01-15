@@ -14,6 +14,10 @@ MoltresMaxiFlag::
 	setflag FLAG_MOLTRES_FIRST_TIME
 	end
 
+RegiGoneClear::
+	clearflag FLAG_REGIGIGAS_GONE
+	end
+
 Debug_UnlockGame::
 	@unlock all fly locations
 	setflag FLAG_WORLD_MAP_PALLET_TOWN
