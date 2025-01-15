@@ -443,12 +443,12 @@ void IsNextBattleTowerTrainerFrontierLeader(void)
     {
         // return true and set special trainer value to brain
         gSpecialVar_0x8006 = 1;
-        gSpecialVar_0x8004 = 3
+        gSpecialVar_0x8004 = 3;
     }
     else if (winStreak == 55)
     {
         gSpecialVar_0x8006 = 2;
-        gSpecialVar_0x8004 = 3
+        gSpecialVar_0x8004 = 3;
     }
 }
 
