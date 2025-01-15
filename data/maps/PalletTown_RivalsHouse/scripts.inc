@@ -196,7 +196,8 @@ PalletTown_RivalsHouse_EventScript_Battle::
 PalletTown_RivalsHouse_Text_DaisyIntro::
 	.string "Me and my friends have been training\n"
 	.string "a lot during your travels.\p"
-	.string "We won't go easy on you.$"
+	.string "We won't go easy on you!\n"
+	.string "Give it your all, {PLAYER}!$"
 
 PalletTown_RivalsHouse_Text_DaisyDefeat::
 	.string "I'm so proud, {PLAYER}.\n"
