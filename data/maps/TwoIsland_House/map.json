@@ -2,7 +2,7 @@
   "id": "MAP_TWO_ISLAND_HOUSE",
   "name": "TwoIsland_House",
   "layout": "LAYOUT_HOUSE3",
-  "music": "MUS_GSC_PEWTER",
+  "music": "MUS_FORTREE",
   "region_map_section": "MAPSEC_TWO_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -18,7 +18,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "in_connection": false,
       "x": 7,
       "y": 5,
       "elevation": 3,
@@ -28,11 +27,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "TwoIsland_House_EventScript_MoveManiac",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
-      "in_connection": false,
       "x": 4,
       "y": 4,
       "elevation": 3,
@@ -42,7 +42,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "TwoIsland_House_EventScript_EffortWoman",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     }
   ],
   "warp_events": [

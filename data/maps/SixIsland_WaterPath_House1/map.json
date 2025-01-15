@@ -2,7 +2,7 @@
   "id": "MAP_SIX_ISLAND_WATER_PATH_HOUSE1",
   "name": "SixIsland_WaterPath_House1",
   "layout": "LAYOUT_HOUSE4",
-  "music": "MUS_FUCHSIA",
+  "music": "MUS_SEVII_45",
   "region_map_section": "MAPSEC_WATER_PATH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -18,7 +18,6 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
-      "in_connection": false,
       "x": 3,
       "y": 4,
       "elevation": 3,
@@ -28,7 +27,8 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SixIsland_WaterPath_House1_EventScript_Beauty",
-      "flag": "0"
+      "flag": "0",
+      "in_connection": false
     }
   ],
   "warp_events": [
