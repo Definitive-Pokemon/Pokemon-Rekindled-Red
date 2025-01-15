@@ -37,3 +37,17 @@ Most wild Pokémon and Trainer encounters have been adopted from [Drayano's](htt
 *	Dark is now Physical; Ghost is now Special; 
 *	Regional Forms. 
 *	Many unique visual flourishes, including sideways stairs. 
+
+**Credits: **
+*	Dialogue and text: Thirteen1355
+*	conception and direction: Thirteen1355
+*	Map editing: Thirteen1355
+*	Pokémon and trainer data: Thirteen1355
+*	Overworld scripting: Thirteen1355 & Elwin
+*	Repository management and CI/CD: Elwin
+*	Testing and debugging: Thirteen1355 & Elwin
+*	Novel code and engine changes: Elwin
+*	Celio sprite: MkLXIV
+*	Regigigas sprites: MrDollSteak and other contributors from this PC thread
+*	Regigigas overworld sprite: Dragoon for ripping from HG/SS and Elwin for further modification
+Members of the pret discord server, for helping with technical questions and feedback
