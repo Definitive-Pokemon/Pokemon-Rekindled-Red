@@ -50,11 +50,11 @@ BattleTower_BattleRoom_BrainAnabel2_Intro::
 	.string "ANABEL: You really did come back to\n"
 	.string "see me…\p"
 	.string "… … … … … …\p"
-	.string "You've won straight matches to see me…\n"
-	.string "I won't have to hold back against you…\p"
+	.string "You've won many matches to see me…\n"
+	.string "I won't have to hold back…\p"
 	.string "It's been too long now…\p"
-	.string "Too long since I've been able to battle\n"
-	.string "without thinking about anything…\p"
+	.string "Too long since I've been able to\n"
+	.string "battle without thinking about anything…\p"
 	.string "Let's begin, shall we?$"
 
 BattleTower_BattleRoom_BrainAnabel2_Defeated_InBattle::
