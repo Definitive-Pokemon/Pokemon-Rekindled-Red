@@ -36,6 +36,7 @@ ForsakenTombB9F_EventScript_StopChecking::
 ForsakenTombB9F_EventScript_Regigigas::
 	lock
 	faceplayer
+	textcolor 2
 	msgbox ForsakenTombB9F_Text_Engraving
 	closemessage
 	setvar VAR_0x8004, SPECIES_REGIROCK
