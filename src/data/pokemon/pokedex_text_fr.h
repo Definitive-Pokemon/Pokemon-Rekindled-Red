@@ -1022,8 +1022,8 @@ const u8 gZapdosPokedexTextUnused_FR[] = _("");
 
 const u8 gMoltresPokedexText_FR[] = _(
     "One of the legendary bird POKéMON.\n"
-    "Those seeing it are overwhelmed by its\n"
-    "orange wings that seem to be on fire.");
+    "To many it represents the coming of\n"
+    "spring, rebirth, and fiery desire.");
 
 const u8 gMoltresPokedexTextUnused_FR[] = _("");
 

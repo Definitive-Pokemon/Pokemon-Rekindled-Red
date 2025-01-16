@@ -36,8 +36,8 @@ BattleTower_BattleRoom_Text_1C6D05::
 
 BattleTower_BattleRoom_BrainAnabel_Intro::
 	.string "Greetings…\p"
-	.string "I am the TOWER TYCOON, and I am in\n"
-	.string "charge of running the BATTLE TOWER…\p"
+	.string "I am the TOWER TYCOON, in charge\n"
+	.string "of running the BATTLE TOWER…\p"
 	.string "The reason I've come to see you…\n"
 	.string "Well, there is but one reason…\p"
 	.string "Let me see your talent in\n"
