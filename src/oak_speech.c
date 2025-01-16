@@ -630,7 +630,8 @@ static const u8 *const sMaleNameChoices_LG[] = {
 };
 
 static const u8 *const sFemaleNameChoices_FR[] = {
-    gNameChoice_Red,
+    gNameChoice_Green,
+    gNameChoice_Leaf,
     gNameChoice_Fire,
     gNameChoice_Omi,
     gNameChoice_Jodi,
@@ -674,7 +675,9 @@ static const u8 *const sFemaleNameChoices_LG[] = {
 };
 
 static const u8 *const sRivalNameChoices_FR[] = {
-    gNameChoice_Green,
+    gNameChoice_Ash,
+    gNameChoice_Kene,
+    gNameChoice_Geki,
     gNameChoice_Gary,
     gNameChoice_Kaz,
     gNameChoice_Toru
