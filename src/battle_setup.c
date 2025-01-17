@@ -1345,5 +1345,6 @@ s8 GetScaledLevel(void)
 
 void SetTrainerADefeatSpeech(const u8 *textPtr)
 {
-    SetU32(sTrainerADefeatSpeech, TrainerBattleLoadArg32(textPtr));
+    sTrainerADefeatSpeech = (u8 *) textPtr;
+    //SetU32(sTrainerADefeatSpeech, TrainerBattleLoadArg32(textPtr));
 }
