@@ -935,6 +935,7 @@ static inline void SetPtr(const void *ptr, const void *value)
 
 static void TrainerBattleLoadArgs(const struct TrainerBattleParameter *specs, const u8 *data)
 {
+    PlaySE(SE_PC_ON);
     while (1)
     {
         switch (specs->ptrType)
@@ -1290,7 +1291,7 @@ static const u8 *ReturnEmptyStringIfNull(const u8 *string)
 {
     if (string == NULL)
     {
-        PlaySE(SE_PC_ON);
+        
         return gString_Dummy;
     }
     else
