@@ -387,7 +387,7 @@ static bool8 ChooseSpecialBattleTowerTrainer(void)
     }
     else
     {
-        if (winStreak == 27)
+        if (winStreak == 1)
         {
             // return true and set special trainer value to brain
             gSaveBlock2Ptr->battleTower.battleTowerTrainerId = 0xFF;
@@ -443,7 +443,7 @@ void IsNextBattleTowerTrainerFrontierLeader(void)
 {
     u16 winStreak = GetCurrentBattleTowerWinStreak(gSaveBlock2Ptr->battleTower.battleTowerLevelType);
     gSpecialVar_0x8006 = 0;
-    if (winStreak == 27)
+    if (winStreak == 1)
     {
         // return true and set special trainer value to brain
         gSpecialVar_0x8006 = 1;

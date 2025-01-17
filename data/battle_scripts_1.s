@@ -3028,6 +3028,7 @@ BattleScript_BattleTowerEtcTrainerBattleWonSkipText::
 BattleScript_BattleTowerBrainBattleWon::
 	printstring STRINGID_PLAYERDEFEATEDTRAINER1
 	trainerslidein BS_ATTACKER
+	waitstate
 	printstring STRINGID_TRAINER1LOSETEXT
 	end2
 
