@@ -517,7 +517,7 @@ $(MID_SUBDIR)/mus_rg_celadon.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G168 -V070
 
 $(MID_SUBDIR)/mus_rg_title.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G052 -V090
+	$(MID) $< $@ -E -R$(STD_REVERB) -G137 -V090
 
 $(MID_SUBDIR)/mus_rg_game_freak.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G181 -V075
