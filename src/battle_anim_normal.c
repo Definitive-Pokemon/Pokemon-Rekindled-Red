@@ -1068,14 +1068,15 @@ void AnimTask_CrushGrip(u8 taskId)
         u8 y = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
 
         if (GetBattlerSide(gBattleAnimAttacker) == B_SIDE_OPPONENT)
-            CreateSprite(&gCrushGripTowardTemplate, x, y, 4);
+            gTasks[taskId].data[1] = CreateSprite(&gCrushGripTowardTemplate, x, y, 4);
         else
-            CreateSprite(&gCrushGripAwayTemplate, x, y, 4);
+            gTasks[taskId].data[1] = CreateSprite(&gCrushGripAwayTemplate, x, y, 4);
     }
     gTasks[taskId].data[0]++;
     
     if (gTasks[taskId].data[0] > 85)
     {
+        DestroySprite(gSprites[gTasks[taskId].data[1]]);
         DestroyAnimVisualTask(taskId);
     }
 }
