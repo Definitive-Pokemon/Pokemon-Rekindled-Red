@@ -935,7 +935,6 @@ static inline void SetPtr(const void *ptr, const void *value)
 
 static void TrainerBattleLoadArgs(const struct TrainerBattleParameter *specs, const u8 *data)
 {
-    PlaySE(SE_PC_ON);
     while (1)
     {
         switch (specs->ptrType)
@@ -980,6 +979,7 @@ static void SetMapVarsToTrainer(void)
 
 const u8 *BattleSetup_ConfigureTrainerBattle(const u8 *data)
 {
+    PlaySE(SE_PC_ON);
     InitTrainerBattleVariables();
     sTrainerBattleMode = TrainerBattleLoadArg8(data);
     switch (sTrainerBattleMode)
