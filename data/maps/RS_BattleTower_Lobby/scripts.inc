@@ -213,8 +213,8 @@ BattleTower_Lobby_EventScript_1604FA::
 	case 2, BattleTower_Lobby_EventScript_160652
 	case 127, BattleTower_Lobby_EventScript_160652
 	special CheckPartyBattleTowerBanlist
-	@compare VAR_0x8004, 1
-	@goto_if_eq BattleTower_Lobby_EventScript_16060D
+	compare VAR_0x8004, 1
+	goto_if_eq BattleTower_Lobby_EventScript_16060D
 	setvar VAR_0x8004, 1
 	copyvar VAR_0x8005, VAR_RESULT
 	copyvar VAR_0x8006, VAR_RESULT
