@@ -28,7 +28,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "VermilionCity_Gym_EventScript_LtSurge",
-      "flag": "FLAG_TEMP_2"
+      "flag": "FLAG_BATTLEHOUSE_LT_SURGE_VISITOR"
     },
     {
       "type": "object",

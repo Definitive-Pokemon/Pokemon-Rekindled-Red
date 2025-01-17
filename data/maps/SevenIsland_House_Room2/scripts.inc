@@ -28,28 +28,13 @@ SevenIsland_House_Room2_MapScripts::
 	.byte 0
 
 SevenIsland_House_Room2_OnLoad::
-	setvar TYPE, CHECK_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_BROCK
-	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideBrock
-	setvar ARGUMENT, FAMECHECKER_MISTY
-	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideMisty
-	setvar ARGUMENT, FAMECHECKER_LTSURGE
-	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideLtSurge
-	setvar ARGUMENT, FAMECHECKER_ERIKA
-	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideErika
-	setvar ARGUMENT, FAMECHECKER_KOGA
-	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideKoga
-	setvar ARGUMENT, FAMECHECKER_SABRINA
-	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideSabrina
-	setvar ARGUMENT, FAMECHECKER_BLAINE
-	callnative UseBattleHouseVar
-	call_if_eq VAR_RESULT, FALSE, SevenIsland_House_Room2_HideBlaine
+	call_if_unset FLAG_BATTLEHOUSE_BROCK_VISITOR, SevenIsland_House_Room2_HideBrock
+	call_if_unset FLAG_BATTLEHOUSE_MISTY_VISITOR, SevenIsland_House_Room2_HideMisty
+	call_if_unset FLAG_BATTLEHOUSE_LT_SURGE_VISITOR, SevenIsland_House_Room2_HideLtSurge
+	call_if_unset FLAG_BATTLEHOUSE_ERIKA_VISITOR, SevenIsland_House_Room2_HideErika
+	call_if_unset FLAG_BATTLEHOUSE_KOGA_VISITOR, SevenIsland_House_Room2_HideKoga
+	call_if_unset FLAG_BATTLEHOUSE_SABRINA_VISITOR, SevenIsland_House_Room2_HideSabrina
+	call_if_unset FLAG_BATTLEHOUSE_BLAINE_VISITOR, SevenIsland_House_Room2_HideBlaine
 	end
 
 SevenIsland_House_Room2_HideBrock::
@@ -263,9 +248,7 @@ SevenIsland_House_Room2_Movement_BrockToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_BrockBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_BROCK
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_BROCK_VISITOR
 	applymovement LOCALID_BROCK, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 0
@@ -274,8 +257,7 @@ SevenIsland_House_Room2_Eventscript_BrockBattle:
 	callnative IsChallengeModeToVarResult
 	goto_if_eq VAR_RESULT, TRUE, SevenIsland_House_Room2_Eventscript_ChallengeBrockBattle
 	trainerbattle_no_intro TRAINER_BROCK_REMATCH, SevenIsland_House_Room2_Text_BrockLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_BrockExit
 	release
 	end
@@ -293,8 +275,7 @@ SevenIsland_House_Room2_Text_BrockLoss:
 
 SevenIsland_House_Room2_Eventscript_ChallengeBrockBattle:
 	trainerbattle_no_intro TRAINER_BROCK_REMATCH_CHALLENGE, SevenIsland_House_Room2_Text_BrockLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_BrockExit
 	release
 	end
@@ -421,9 +402,7 @@ SevenIsland_House_Room2_Movement_MistyDownToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_MistyBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_MISTY
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_MISTY_VISITOR
 	applymovement LOCALID_MISTY, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 1
@@ -432,8 +411,7 @@ SevenIsland_House_Room2_Eventscript_MistyBattle:
 	callnative IsChallengeModeToVarResult
 	goto_if_eq VAR_RESULT, TRUE, SevenIsland_House_Room2_Eventscript_ChallengeMistyBattle
 	trainerbattle_no_intro TRAINER_MISTY_REMATCH, SevenIsland_House_Room2_Text_MistyLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_MistyExit
 	release
 	end
@@ -449,8 +427,7 @@ SevenIsland_House_Room2_Text_MistyLoss:
 
 SevenIsland_House_Room2_Eventscript_ChallengeMistyBattle:
 	trainerbattle_no_intro TRAINER_MISTY_REMATCH_CHALLENGE, SevenIsland_House_Room2_Text_MistyLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_MistyExit
 	release
 	end
@@ -563,9 +540,7 @@ SevenIsland_House_Room2_Movement_LtSurgeToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_LtSurgeBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_LTSURGE
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_LT_SURGE_VISITOR
 	applymovement LOCALID_LT_SURGE, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 0
@@ -574,8 +549,7 @@ SevenIsland_House_Room2_Eventscript_LtSurgeBattle:
 	callnative IsChallengeModeToVarResult
 	goto_if_eq VAR_RESULT, TRUE, SevenIsland_House_Room2_Eventscript_ChallengeLtSurgeBattle
 	trainerbattle_no_intro TRAINER_LT_SURGE_REMATCH, SevenIsland_House_Room2_Text_LtSurgeLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_LtSurgeExit
 	release
 	end
@@ -590,8 +564,7 @@ SevenIsland_House_Room2_Text_LtSurgeLoss:
 
 SevenIsland_House_Room2_Eventscript_ChallengeLtSurgeBattle:
 	trainerbattle_no_intro TRAINER_LT_SURGE_REMATCH_CHALLENGE, SevenIsland_House_Room2_Text_LtSurgeLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_LtSurgeExit
 	release
 	end
@@ -718,9 +691,7 @@ SevenIsland_House_Room2_Movement_ErikaDownToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_ErikaBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_ERIKA
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_ERIKA_VISITOR
 	applymovement LOCALID_ERIKA, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 1
@@ -729,8 +700,7 @@ SevenIsland_House_Room2_Eventscript_ErikaBattle:
 	callnative IsChallengeModeToVarResult
 	goto_if_eq VAR_RESULT, TRUE, SevenIsland_House_Room2_Eventscript_ChallengeErikaBattle
 	trainerbattle_no_intro TRAINER_ERIKA_REMATCH, SevenIsland_House_Room2_Text_ErikaLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_ErikaExit
 	release
 	end
@@ -745,8 +715,7 @@ SevenIsland_House_Room2_Text_ErikaLoss:
 
 SevenIsland_House_Room2_Eventscript_ChallengeErikaBattle:
 	trainerbattle_no_intro TRAINER_ERIKA_REMATCH_CHALLENGE, SevenIsland_House_Room2_Text_ErikaLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_ErikaExit
 	release
 	end
@@ -866,9 +835,7 @@ SevenIsland_House_Room2_Movement_KogaToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_KogaBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_KOGA
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_KOGA_VISITOR
 	applymovement LOCALID_KOGA, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 0
@@ -877,8 +844,7 @@ SevenIsland_House_Room2_Eventscript_KogaBattle:
 	callnative IsChallengeModeToVarResult
 	goto_if_eq VAR_RESULT, TRUE, SevenIsland_House_Room2_Eventscript_ChallengeKogaBattle
 	trainerbattle_no_intro TRAINER_KOGA_REMATCH, SevenIsland_House_Room2_Text_KogaLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_KogaExit
 	release
 	end
@@ -897,8 +863,7 @@ SevenIsland_House_Room2_Text_KogaLoss:
 
 SevenIsland_House_Room2_Eventscript_ChallengeKogaBattle:
 	trainerbattle_no_intro TRAINER_KOGA_REMATCH_CHALLENGE, SevenIsland_House_Room2_Text_KogaLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_KogaExit
 	release
 	end
@@ -1025,9 +990,7 @@ SevenIsland_House_Room2_Movement_SabrinaUpToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_SabrinaBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_SABRINA
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_SABRINA_VISITOR
 	applymovement LOCALID_SABRINA, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 1
@@ -1036,8 +999,7 @@ SevenIsland_House_Room2_Eventscript_SabrinaBattle:
 	callnative IsChallengeModeToVarResult
 	goto_if_eq VAR_RESULT, TRUE, SevenIsland_House_Room2_Eventscript_ChallengeSabrinaBattle
 	trainerbattle_no_intro TRAINER_SABRINA_REMATCH, SevenIsland_House_Room2_Text_SabrinaLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_SabrinaExit
 	release
 	end
@@ -1056,8 +1018,7 @@ SevenIsland_House_Room2_Text_SabrinaLoss:
 
 SevenIsland_House_Room2_Eventscript_ChallengeSabrinaBattle:
 	trainerbattle_no_intro TRAINER_SABRINA_REMATCH_CHALLENGE, SevenIsland_House_Room2_Text_SabrinaLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_SabrinaExit
 	release
 	end
@@ -1180,9 +1141,7 @@ SevenIsland_House_Room2_Movement_BlaineUpToMat:
 	step_end
 
 SevenIsland_House_Room2_Eventscript_BlaineBattle:
-	setvar TYPE, SET_VISITOR_STATE
-	setvar ARGUMENT, FAMECHECKER_BLAINE
-	callnative UseBattleHouseVar
+	clearflag FLAG_BATTLEHOUSE_BLAINE_VISITOR
 	applymovement LOCALID_BLAINE, SevenIsland_House_Room2_Movement_StepFastestLeft
 	waitmovement 0
 	textcolor 0
@@ -1191,8 +1150,7 @@ SevenIsland_House_Room2_Eventscript_BlaineBattle:
 	callnative IsChallengeModeToVarResult
 	goto_if_eq VAR_RESULT, TRUE, SevenIsland_House_Room2_Eventscript_ChallengeBlaineBattle
 	trainerbattle_no_intro TRAINER_BLAINE_REMATCH, SevenIsland_House_Room2_Text_BlaineLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_BlaineExit
 	release
 	end
@@ -1207,8 +1165,7 @@ SevenIsland_House_Room2_Text_BlaineLoss:
 
 SevenIsland_House_Room2_Eventscript_ChallengeBlaineBattle:
 	trainerbattle_no_intro TRAINER_BLAINE_REMATCH_CHALLENGE, SevenIsland_House_Room2_Text_BlaineLoss
-	setvar TYPE, SET_LEVEL_GROWTH
-	callnative UseBattleHouseVar
+	callnative BattleHouseScaleLevelUp
 	goto SevenIsland_House_Room2_Eventscript_BlaineExit
 	release
 	end

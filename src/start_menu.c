@@ -256,7 +256,7 @@ static void DrawSafariZoneStatsWindow(void)
     sSafariZoneStatsWindowId = AddWindow(&sSafariZoneStatsWindowTemplate);
     PutWindowTilemap(sSafariZoneStatsWindowId);
     DrawStdWindowFrame(sSafariZoneStatsWindowId, FALSE);
-    ConvertIntToDecimalStringN(gStringVar1, gSafariZoneStepCounter, STR_CONV_MODE_RIGHT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar1, *GetVarPointer(VAR_ELEVATOR_FLOOR), STR_CONV_MODE_RIGHT_ALIGN, 3);
     ConvertIntToDecimalStringN(gStringVar2, 600, STR_CONV_MODE_RIGHT_ALIGN, 3);
     ConvertIntToDecimalStringN(gStringVar3, gNumSafariBalls, STR_CONV_MODE_RIGHT_ALIGN, 2);
     StringExpandPlaceholders(gStringVar4, gText_MenuSafariStats);
@@ -282,7 +282,14 @@ static s8 PrintStartMenuItems(s8 *cursor_p, u8 nitems)
         if (sStartMenuOrder[i] == STARTMENU_PLAYER || sStartMenuOrder[i] == STARTMENU_PLAYER2)
         {
             Menu_PrintFormatIntlPlayerName(GetStartMenuWindowId(), sStartMenuActionTable[sStartMenuOrder[i]].text, 8, i * 15);
-        }
+        } 
+        else if (sStartMenuOrder[i] == STARTMENU_EXIT)
+        {
+            u8 tempText[8] = {};
+            ConvertIntToHexStringN(tempText, FlagGet(FLAG_BATTLEHOUSE_BROCK_VISITOR), STR_CONV_MODE_LEADING_ZEROS, 4);
+            StringExpandPlaceholders(gStringVar4, tempText);
+            AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_NORMAL, gStringVar4, 8, i * 15, 0xFF, NULL); 
+        }   
         else
         {
             StringExpandPlaceholders(gStringVar4, sStartMenuActionTable[sStartMenuOrder[i]].text);
