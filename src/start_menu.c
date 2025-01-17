@@ -282,14 +282,7 @@ static s8 PrintStartMenuItems(s8 *cursor_p, u8 nitems)
         if (sStartMenuOrder[i] == STARTMENU_PLAYER || sStartMenuOrder[i] == STARTMENU_PLAYER2)
         {
             Menu_PrintFormatIntlPlayerName(GetStartMenuWindowId(), sStartMenuActionTable[sStartMenuOrder[i]].text, 8, i * 15);
-        } 
-        else if (sStartMenuOrder[i] == STARTMENU_EXIT)
-        {
-            u8 tempText[8] = {};
-            ConvertIntToHexStringN(tempText, FlagGet(FLAG_BATTLEHOUSE_BROCK_VISITOR), STR_CONV_MODE_LEADING_ZEROS, 4);
-            StringExpandPlaceholders(gStringVar4, tempText);
-            AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_NORMAL, gStringVar4, 8, i * 15, 0xFF, NULL); 
-        }   
+        }
         else
         {
             StringExpandPlaceholders(gStringVar4, sStartMenuActionTable[sStartMenuOrder[i]].text);
