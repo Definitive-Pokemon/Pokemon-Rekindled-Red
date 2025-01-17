@@ -2708,9 +2708,9 @@ const u8 gDeoxysPokedexText_FR[] = _(
     "altering its appearance.");
 
 const u8 gRegigigasPokedexText[] = _(
-    "It is said to have made POKéMON that look\n"
-    "like itself from a special ice mountain,\n"
-    "rocks, and magma.");
+    "It is said to have made POKéMON that\n"
+    "look like itself from a special\n"
+    "ice mountain, rocks, and magma.");
     
 const u8 gFossilizedKabutopsPokedexText_FR[] = _(
     "This KABUTOPS fossil is being inhabited\n"
