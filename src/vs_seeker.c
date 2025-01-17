@@ -588,7 +588,7 @@ static const struct RematchData sRematches[] = {
       MAP(ROUTE26) },
    { {TRAINER_SAMMY, SKIP, SKIP, SKIP, TRAINER_SAMMY},
       MAP(ROUTE27) },
-   { {TRAINER_DAVID, SKIP, SKIP, SKIP, TRAINER_ANDREW},
+   { {TRAINER_DAVID, SKIP, SKIP, SKIP, TRAINER_DAVID},
       MAP(ROUTE27) },
 };
 
