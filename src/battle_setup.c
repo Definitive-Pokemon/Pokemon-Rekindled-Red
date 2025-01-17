@@ -979,7 +979,6 @@ static void SetMapVarsToTrainer(void)
 
 const u8 *BattleSetup_ConfigureTrainerBattle(const u8 *data)
 {
-    PlaySE(SE_PC_ON);
     InitTrainerBattleVariables();
     sTrainerBattleMode = TrainerBattleLoadArg8(data);
     switch (sTrainerBattleMode)
