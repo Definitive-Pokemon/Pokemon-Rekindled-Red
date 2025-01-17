@@ -1289,7 +1289,10 @@ void PlayTrainerEncounterMusic(void)
 static const u8 *ReturnEmptyStringIfNull(const u8 *string)
 {
     if (string == NULL)
+    {
+        PlaySE(SE_PC_ON);
         return gString_Dummy;
+    }
     else
         return string;
 }
