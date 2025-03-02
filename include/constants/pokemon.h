@@ -115,7 +115,8 @@
 #define TYPE_PSYCHIC        15
 #define TYPE_ICE            16
 #define TYPE_GHOST           17
-#define NUMBER_OF_MON_TYPES 18
+#define TYPE_FAIRY           18
+#define NUMBER_OF_MON_TYPES 19
 
 // Pokemon egg groups
 #define EGG_GROUP_NONE         0
