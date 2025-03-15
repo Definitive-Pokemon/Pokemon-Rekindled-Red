@@ -455,7 +455,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBlaineRematch[] = {
         .species = SPECIES_MAGMAR,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
-        .moves = {MOVE_THUNDER_PUNCH, MOVE_CROSS_CHOP, MOVE_FLAMETHROWER, MOVE_FIRE_BLAST},
+        .moves = {MOVE_THUNDER_PUNCH, MOVE_KNOCK_OFF, MOVE_FLAMETHROWER, MOVE_FIRE_BLAST},
     },
 };
 
@@ -506,7 +506,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBlaineRematchChalleng
         .species = SPECIES_MAGMAR,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
-        .moves = {MOVE_THUNDER_PUNCH, MOVE_CROSS_CHOP, MOVE_FLAMETHROWER, MOVE_FIRE_BLAST},
+        .moves = {MOVE_THUNDER_PUNCH, MOVE_KNOCK_OFF, MOVE_FLAMETHROWER, MOVE_FIRE_BLAST},
     },
 };
 
@@ -7814,7 +7814,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBlaine[] = {
         .lvl = 58,
         .species = SPECIES_MAGMAR,
 		.heldItem = ITEM_STARF_BERRY,
-        .moves = {MOVE_CROSS_CHOP, MOVE_FIRE_BLAST, MOVE_THUNDER_PUNCH, MOVE_SUBSTITUTE},
+        .moves = {MOVE_KNOCK_OFF, MOVE_FIRE_BLAST, MOVE_THUNDER_PUNCH, MOVE_SUBSTITUTE},
     },
 };
 
@@ -8059,7 +8059,7 @@ static const struct TrainerMonItemCustomMoves sParty_RivalPokemonTowerBulbasaur[
         .lvl = 38,
         .species = SPECIES_MAGMAR,
 		.heldItem = ITEM_STARF_BERRY,
-		.moves = {MOVE_FLAMETHROWER, MOVE_BRICK_BREAK, MOVE_THUNDER_PUNCH, MOVE_SUNNY_DAY},
+		.moves = {MOVE_FLAMETHROWER, MOVE_KNOCK_OFF, MOVE_THUNDER_PUNCH, MOVE_SUNNY_DAY},
     },
 };
 
@@ -8173,7 +8173,7 @@ static const struct TrainerMonItemCustomMoves sParty_RivalSilphBulbasaur[] = {
         .lvl = 49,
         .species = SPECIES_MAGMAR,
 		.heldItem = ITEM_CHARCOAL,
-		.moves = {MOVE_FIRE_BLAST, MOVE_THUNDER_PUNCH, MOVE_CROSS_CHOP, MOVE_BARRIER},
+		.moves = {MOVE_FIRE_BLAST, MOVE_THUNDER_PUNCH, MOVE_KNOCK_OFF, MOVE_BARRIER},
     },
 };
 
@@ -8301,7 +8301,7 @@ static const struct TrainerMonItemCustomMoves sParty_RivalRoute22LateBulbasaur[]
         .lvl = 61,
         .species = SPECIES_MAGMAR,
 		.heldItem = ITEM_WHITE_HERB,
-        .moves = {MOVE_OVERHEAT, MOVE_THUNDER_PUNCH, MOVE_FIRE_PUNCH, MOVE_CROSS_CHOP},
+        .moves = {MOVE_OVERHEAT, MOVE_THUNDER_PUNCH, MOVE_FIRE_PUNCH, MOVE_KNOCK_OFF},
     },
 };
 
@@ -8448,7 +8448,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionFirstBulbasaur[] = 
         .species = SPECIES_MAGMAR,
         .heldItem = ITEM_STARF_BERRY,
         .abilityNum = 0,
-        .moves = {MOVE_FIRE_BLAST, MOVE_CROSS_CHOP, MOVE_SUNNY_DAY, MOVE_THUNDER_PUNCH},
+        .moves = {MOVE_FIRE_BLAST, MOVE_KNOCK_OFF, MOVE_SUNNY_DAY, MOVE_THUNDER_PUNCH},
     },
 };
 
@@ -13016,7 +13016,7 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourBruno2[] = {
         .species = SPECIES_MAGMAR,
         .heldItem = ITEM_SITRUS_BERRY,
         .abilityNum = 0,
-        .moves = {MOVE_OVERHEAT, MOVE_CROSS_CHOP, MOVE_COUNTER, MOVE_BARRIER},
+        .moves = {MOVE_OVERHEAT, MOVE_KNOCK_OFF, MOVE_COUNTER, MOVE_BARRIER},
     },
     {
         .iv = 255,
@@ -13252,7 +13252,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionRematchBulbasaur[] 
         .species = SPECIES_MAGMAR,
         .heldItem = ITEM_WHITE_HERB,
         .abilityNum = 0,
-        .moves = {MOVE_OVERHEAT, MOVE_CROSS_CHOP, MOVE_THUNDER_PUNCH, MOVE_SUNNY_DAY},
+        .moves = {MOVE_OVERHEAT, MOVE_KNOCK_OFF, MOVE_THUNDER_PUNCH, MOVE_SUNNY_DAY},
     },
 };
 
@@ -13673,7 +13673,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBlaineChallenge[] = {
         .species = SPECIES_MAGMAR,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
-        .moves = {MOVE_THUNDER_PUNCH, MOVE_CROSS_CHOP, MOVE_FLAMETHROWER, MOVE_FIRE_BLAST},
+        .moves = {MOVE_THUNDER_PUNCH, MOVE_KNOCK_OFF, MOVE_FLAMETHROWER, MOVE_FIRE_BLAST},
     },
 };
 
@@ -13985,7 +13985,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionFirstBulbasaurChall
         .species = SPECIES_MAGMAR,
         .heldItem = ITEM_SITRUS_BERRY,
         .abilityNum = 0,
-        .moves = {MOVE_FIRE_BLAST, MOVE_CROSS_CHOP, MOVE_SUNNY_DAY, MOVE_THUNDER_PUNCH},
+        .moves = {MOVE_FIRE_BLAST, MOVE_KNOCK_OFF, MOVE_SUNNY_DAY, MOVE_THUNDER_PUNCH},
     },
 };
 
@@ -14106,7 +14106,7 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourBrunoChallenge2[] 
         .species = SPECIES_MAGMAR,
         .heldItem = ITEM_NONE,
         .abilityNum = 0,
-        .moves = {MOVE_OVERHEAT, MOVE_CROSS_CHOP, MOVE_COUNTER, MOVE_BARRIER},
+        .moves = {MOVE_OVERHEAT, MOVE_KNOCK_OFF, MOVE_COUNTER, MOVE_BARRIER},
     },
     {
         .iv = 255,
@@ -14342,7 +14342,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionRematchBulbasaurCha
         .species = SPECIES_MAGMAR,
         .heldItem = ITEM_SITRUS_BERRY,
         .abilityNum = 0,
-        .moves = {MOVE_OVERHEAT, MOVE_CROSS_CHOP, MOVE_THUNDER_PUNCH, MOVE_SUNNY_DAY},
+        .moves = {MOVE_OVERHEAT, MOVE_KNOCK_OFF, MOVE_THUNDER_PUNCH, MOVE_SUNNY_DAY},
     },
 };
 
