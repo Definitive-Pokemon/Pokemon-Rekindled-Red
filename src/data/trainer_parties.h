@@ -8059,7 +8059,7 @@ static const struct TrainerMonItemCustomMoves sParty_RivalPokemonTowerBulbasaur[
         .lvl = 38,
         .species = SPECIES_MAGMAR,
 		.heldItem = ITEM_STARF_BERRY,
-		.moves = {MOVE_FLAMETHROWER, MOVE_KNOCK_OFF, MOVE_THUNDER_PUNCH, MOVE_SUNNY_DAY},
+		.moves = {MOVE_FLAMETHROWER, MOVE_POISON_TAIL, MOVE_THUNDER_PUNCH, MOVE_SUNNY_DAY},
     },
 };
 
