@@ -31,7 +31,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderLtSurgeRematch[] = {
         .species = SPECIES_AMPHAROS,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
-        .moves = {MOVE_THUNDERBOLT, MOVE_FIRE_PUNCH, MOVE_REFLECT, MOVE_THUNDER_WAVE},
+        .moves = {MOVE_THUNDERBOLT, MOVE_DRAGON_CLAW, MOVE_REFLECT, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 255,
@@ -82,7 +82,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderLtSurgeRematchChallen
         .species = SPECIES_AMPHAROS,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
-        .moves = {MOVE_THUNDERBOLT, MOVE_FIRE_PUNCH, MOVE_REFLECT, MOVE_THUNDER_WAVE},
+        .moves = {MOVE_THUNDERBOLT, MOVE_DRAGON_CLAW, MOVE_REFLECT, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 255,
@@ -8121,7 +8121,7 @@ static const struct TrainerMonItemCustomMoves sParty_RivalSilphSquirtle[] = {
         .lvl = 47,
         .species = SPECIES_AMPHAROS,
 		.heldItem = ITEM_NONE,
-		.moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_FIRE_PUNCH, MOVE_SIGNAL_BEAM},
+		.moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_DRAGON_CLAW, MOVE_SIGNAL_BEAM},
     },
     {
         .iv = 100,
@@ -8152,7 +8152,7 @@ static const struct TrainerMonItemCustomMoves sParty_RivalSilphBulbasaur[] = {
         .lvl = 47,
         .species = SPECIES_AMPHAROS,
 		.heldItem = ITEM_NONE,
-		.moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_DOUBLE_EDGE, MOVE_FIRE_PUNCH},
+		.moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_DOUBLE_EDGE, MOVE_DRAGON_CLAW},
     },
     {
         .iv = 100,
@@ -8242,7 +8242,7 @@ static const struct TrainerMonItemCustomMoves sParty_RivalRoute22LateSquirtle[] 
         .lvl = 58,
         .species = SPECIES_AMPHAROS,
 		.heldItem = ITEM_NONE,
-        .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_FIRE_PUNCH, MOVE_SUBSTITUTE},
+        .moves = {MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE, MOVE_DRAGON_CLAW, MOVE_SUBSTITUTE},
     },
     {
         .iv = 255,
@@ -8287,7 +8287,7 @@ static const struct TrainerMonItemCustomMoves sParty_RivalRoute22LateBulbasaur[]
         .lvl = 58,
         .species = SPECIES_AMPHAROS,
 		.heldItem = ITEM_NONE,
-        .moves = {MOVE_THUNDER_WAVE, MOVE_SIGNAL_BEAM, MOVE_RAIN_DANCE, MOVE_THUNDER},
+        .moves = {MOVE_THUNDER_WAVE, MOVE_DRAGON_CLAW, MOVE_RAIN_DANCE, MOVE_THUNDER},
     },
     {
         .iv = 255,
@@ -8373,7 +8373,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionFirstSquirtle[] = {
         .species = SPECIES_AMPHAROS,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
-        .moves = {MOVE_TAIL_GLOW, MOVE_SUBSTITUTE, MOVE_THUNDERBOLT, MOVE_FIRE_PUNCH},
+        .moves = {MOVE_TAIL_GLOW, MOVE_SUBSTITUTE, MOVE_THUNDERBOLT, MOVE_DRAGON_CLAW},
     },
     {
         .iv = 255,
@@ -8432,7 +8432,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionFirstBulbasaur[] = 
         .species = SPECIES_AMPHAROS,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
-        .moves = {MOVE_THUNDERBOLT, MOVE_TAIL_GLOW, MOVE_SUBSTITUTE, MOVE_FIRE_PUNCH},
+        .moves = {MOVE_THUNDERBOLT, MOVE_TAIL_GLOW, MOVE_SUBSTITUTE, MOVE_DRAGON_CLAW},
     },
     {
         .iv = 255,
@@ -13193,7 +13193,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionRematchSquirtle[] =
         .species = SPECIES_AMPHAROS,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
-        .moves = {MOVE_TAIL_GLOW, MOVE_SUBSTITUTE, MOVE_FIRE_PUNCH, MOVE_THUNDERBOLT},
+        .moves = {MOVE_TAIL_GLOW, MOVE_SUBSTITUTE, MOVE_DRAGON_CLAW, MOVE_THUNDERBOLT},
     },
     {
         .iv = 255,
@@ -13453,7 +13453,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderLtSurgeChallenge[] = 
         .species = SPECIES_AMPHAROS,
         .heldItem = ITEM_LEFTOVERS,
         .abilityNum = 0,
-        .moves = {MOVE_THUNDERBOLT, MOVE_FIRE_PUNCH, MOVE_REFLECT, MOVE_THUNDER_WAVE},
+        .moves = {MOVE_THUNDERBOLT, MOVE_DRAGON_CLAW, MOVE_REFLECT, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 255,
@@ -13910,7 +13910,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionFirstSquirtleChalle
         .species = SPECIES_AMPHAROS,
         .heldItem = ITEM_NONE,
         .abilityNum = 0,
-        .moves = {MOVE_TAIL_GLOW, MOVE_SUBSTITUTE, MOVE_THUNDERBOLT, MOVE_FIRE_PUNCH},
+        .moves = {MOVE_TAIL_GLOW, MOVE_SUBSTITUTE, MOVE_THUNDERBOLT, MOVE_DRAGON_CLAW},
     },
     {
         .iv = 255,
@@ -13969,7 +13969,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionFirstBulbasaurChall
         .species = SPECIES_AMPHAROS,
         .heldItem = ITEM_NONE,
         .abilityNum = 0,
-        .moves = {MOVE_THUNDERBOLT, MOVE_TAIL_GLOW, MOVE_SUBSTITUTE, MOVE_FIRE_PUNCH},
+        .moves = {MOVE_THUNDERBOLT, MOVE_TAIL_GLOW, MOVE_SUBSTITUTE, MOVE_DRAGON_CLAW},
     },
     {
         .iv = 255,
@@ -14283,7 +14283,7 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionRematchSquirtleChal
         .species = SPECIES_AMPHAROS,
         .heldItem = ITEM_NONE,
         .abilityNum = 0,
-        .moves = {MOVE_TAIL_GLOW, MOVE_SUBSTITUTE, MOVE_FIRE_PUNCH, MOVE_THUNDERBOLT},
+        .moves = {MOVE_TAIL_GLOW, MOVE_SUBSTITUTE, MOVE_DRAGON_CLAW, MOVE_THUNDERBOLT},
     },
     {
         .iv = 255,

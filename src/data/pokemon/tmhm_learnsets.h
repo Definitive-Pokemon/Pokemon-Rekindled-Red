@@ -1465,6 +1465,7 @@ static const u8 sGolduckTMHMLearnset[] =
     TMHM(TM23_IRON_TAIL),
     TMHM(TM27_RETURN),
     TMHM(TM28_DIG),
+    TMHM(TM29_PSYCHIC),
     TMHM(TM31_BRICK_BREAK),
     TMHM(TM32_DOUBLE_TEAM),
     TMHM(TM40_AERIAL_ACE),
@@ -2248,6 +2249,7 @@ static const u8 sFarfetchdTMHMLearnset[] =
     TMHM(TM21_FRUSTRATION),
     TMHM(TM23_IRON_TAIL),
     TMHM(TM27_RETURN),
+    TMHM(TM31_BRICK_BREAK),
     TMHM(TM32_DOUBLE_TEAM),
     TMHM(TM40_AERIAL_ACE),
     TMHM(TM42_FACADE),
@@ -5135,6 +5137,7 @@ static const u8 sFlaaffyTMHMLearnset[] =
 static const u8 sAmpharosTMHMLearnset[] = 
 {
     TMHM(TM01_FOCUS_PUNCH),
+    TMHM(TM02_DRAGON_CLAW),
     TMHM(TM06_TOXIC),
     TMHM(TM10_HIDDEN_POWER),
     TMHM(TM15_HYPER_BEAM),
@@ -8059,7 +8062,9 @@ static const u8 sMasquerainTMHMLearnset[] =
     TMHM(TM44_REST),
     TMHM(TM45_ATTRACT),
     TMHM(TM46_THIEF),
+    TMHM(HM03_SURF),
     TMHM(HM05_FLASH),
+    TMHM(HM07_WATERFALL),
     0xFF,
 };
 
@@ -9032,6 +9037,7 @@ static const u8 sGlalieTMHMLearnset[] =
     TMHM(TM27_RETURN),
     TMHM(TM30_SHADOW_BALL),
     TMHM(TM32_DOUBLE_TEAM),
+    TMHM(TM39_ROCK_TOMB),
     TMHM(TM41_TORMENT),
     TMHM(TM42_FACADE),
     TMHM(TM43_SECRET_POWER),
