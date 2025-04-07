@@ -80,6 +80,20 @@
 #define ABILITY_CACOPHONY 76
 #define ABILITY_AIR_LOCK 77
 #define ABILITY_SLOW_START 78
+#define ABILITY_ADAPTABILITY 78 (Adaptability increases STAB of a Pokémon with this Ability from 1.5 to 2.)
+#define ABILITY_MOTOR_DRIVE 78 (cancels ANY targeted electric move, boosts speed stat by 1)
+#define ABILITY_SOLID_ROCK 78 (Solid Rock reduces damage from supereffective moves by 25%. For example, a move that would do 2× damage will do 1.5× damage instead.)
+#define ABILITY_STEADFEST 78 (raise speed stage by 1 on flinch hit)
+#define ABILITY_TECHNICIAN 78
+#define ABILITY_SNOW_CLOAK 78 (During hail or snow, the accuracy of any move used against a Pokémon with this Ability is modified by a factor of 4/5. A Pokémon with this Ability will take no damage from hail if it otherwise would.)
+#define ABILITY_TINTED_LENS 78 (doubles not very effective)
+#define ABILITY_SUPER_LUCK (Super Luck increases the critical hit ratio by 1 stage. PASSIVE)
+#define ABILITY_DOWNLOAD (on enter: raise either sp or atk based on opposing def stats)
+#define ABILITY_LEAF_GUARD (prevents status effects including yawn during sunny weather, and does not heal!, however going to sleep from yawn in the same turn a sun appeared is prevented)
+
+Technician increases the power of moves which have a power of 60 or less by 50%.
+
+For moves with variable power, Technician will only apply if the power is 60 or less when used. For example, Low Kick and Grass Knot will only get a Technician boost if the target's weight is 110.0 lbs. (49.9 kg) or less.
 
 #define ABILITIES_COUNT 79
 
