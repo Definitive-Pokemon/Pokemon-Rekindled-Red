@@ -1253,6 +1253,7 @@ static const u64 sTutorLearnsets[] =
                                 | TUTOR(MOVE_SWAGGER)
                                 | TUTOR(MOVE_SLEEP_TALK)
                                 | TUTOR(MOVE_SWIFT)
+                                | TUTOR(MOVE_COUNTER)
                                 | TUTOR(MOVE_SKY_ATTACK)),
 
     [SPECIES_DODUO]            = (TUTOR(MOVE_BODY_SLAM)
@@ -4776,6 +4777,7 @@ static const u64 sTutorLearnsets[] =
                                 | TUTOR(MOVE_SWAGGER)
                                 | TUTOR(MOVE_SLEEP_TALK)
                                 | TUTOR(MOVE_DEFENSE_CURL)
+                                | TUTOR(MOVE_ROCK_SLIDE)
                                 | TUTOR(MOVE_SELF_DESTRUCT)),
 
     [SPECIES_LUNATONE]         = (TUTOR(MOVE_BODY_SLAM)
