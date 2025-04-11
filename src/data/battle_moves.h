@@ -4631,7 +4631,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DISARMING_VOICE] = 
     {
         .effect = EFFECT_ALWAYS_HIT,
-        .power = 40,
+        .power = 50,
         .type = TYPE_FAIRY,
         .accuracy = 0,
         .pp = 15,
@@ -4643,8 +4643,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_DRAINING_KISS] = 
     {
-        .effect = EFFECT_CRUSH_GRIP,
-        .power = 50,
+        .effect = EFFECT_ABSORB,
+        .power = 75,
         .type = TYPE_FAIRY,
         .accuracy = 100,
         .pp = 10,
@@ -4652,7 +4652,6 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
-        //contact!  drains for 75% 
     },
 
     [MOVE_MOONBLAST] = 
