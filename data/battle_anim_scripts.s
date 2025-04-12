@@ -5107,6 +5107,8 @@ Move_DISARMING_VOICE:
 	waitforvisualfinish
 	createvisualtask SoundTask_WaitForCry, 5
 	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG, 1, 16, 0, RGB_LIGHT_PINK
+	waitforvisualfinish
 	end
 
 Move_SNORE:
