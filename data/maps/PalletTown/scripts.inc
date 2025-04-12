@@ -18,7 +18,7 @@ PalletTown_OnTransition::
 	end
 
 PTDebug_Give::
-	givemon SPECIES_KIRLIA, 17
+	givemon SPECIES_CHIKORITA, 21
 	end
 
 PTDebug_Battle::
