@@ -18,7 +18,7 @@ PalletTown_OnTransition::
 	end
 
 PTDebug_Give::
-	givemon SPECIES_MISDREAVUS, 14
+	givemon SPECIES_KIRLIA, 17
 	end
 
 PTDebug_Battle::
