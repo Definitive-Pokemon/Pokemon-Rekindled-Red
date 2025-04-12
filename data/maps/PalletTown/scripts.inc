@@ -22,7 +22,7 @@ PTDebug_Give::
 	end
 
 PTDebug_Battle::
-	setwildbattle SPECIES_PIGEON, 10
+	setwildbattle SPECIES_PIDGEY, 10
 	dowildbattle
 	end
 

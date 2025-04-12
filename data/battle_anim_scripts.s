@@ -10170,6 +10170,12 @@ Move_CRUSH_GRIP:
 	unloadspritegfx ANIM_TAG_GRAB_TOWARDS
 	end
 
+Move_DRAINING_KISS::
+Move_MOONBLAST::
+Move_DAZZLING_GLEAM::
+Move_PLAY_ROUGH::
+end
+
 Move_COUNT:
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
