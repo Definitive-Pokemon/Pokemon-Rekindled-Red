@@ -2322,7 +2322,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
             {
                 if (primary == TRUE || certain == MOVE_EFFECT_CERTAIN)
                 {
-                    gLastUsedAbility = gBattleMons[gBattlerTarget];
+                    gLastUsedAbility = gBattleMons[gBattlerTarget].ability;
                     RecordAbilityBattle(gEffectBattler, gBattleMons[gBattlerTarget].ability);
 
                     BattleScriptPush(gBattlescriptCurrInstr + 1);
@@ -2353,7 +2353,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
                     (gBattleMons[gBattlerTarget].ability == ABILITY_LEAF_GUARD &&
                     WEATHER_HAS_EFFECT && gBattleWeather & B_WEATHER_SUN)))
             {
-                gLastUsedAbility = gBattleMons[gEffectBattler];
+                gLastUsedAbility = gBattleMons[gEffectBattler].ability;
                 RecordAbilityBattle(gEffectBattler, gBattleMons[gEffectBattler].ability);
 
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
