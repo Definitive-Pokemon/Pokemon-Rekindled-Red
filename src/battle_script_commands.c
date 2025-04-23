@@ -9063,7 +9063,7 @@ static void Cmd_doubledamagedealtifdamaged(void)
 static void Cmd_setyawn(void)
 {
     if (gStatuses3[gBattlerTarget] & STATUS3_YAWN
-        || gBattleMons[gBattlerTarget].status1 & STATUS1_ANY)
+        || gBattleMons[gBattlerTarget].status1 & STATUS1_ANY
         || (gBattleMons[gBattlerTarget].ability == ABILITY_LEAF_GUARD &&
                 WEATHER_HAS_EFFECT && gBattleWeather & B_WEATHER_SUN))
     {
