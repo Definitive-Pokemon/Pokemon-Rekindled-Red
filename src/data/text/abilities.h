@@ -159,6 +159,11 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_CACOPHONY] = sCacophonyDescription,
     [ABILITY_AIR_LOCK] = sAirLockDescription,
     [ABILITY_SLOW_START] = sSlowStartDescription,
+    [ABILITY_ADAPTABILITY]  = sSlowStartDescription,
+[ABILITY_MOTOR_DRIVE]  = sSlowStartDescription,
+[ABILITY_SOLID_ROCK]  = sSlowStartDescription,
+[ABILITY_STEADFEST]  = sSlowStartDescription,
+[ABILITY_TECHNICIAN]  = sSlowStartDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -242,4 +247,9 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_CACOPHONY] = _("CACOPHONY"),
     [ABILITY_AIR_LOCK] = _("AIR LOCK"),
     [ABILITY_SLOW_START] = _("SLOW START"),
+    #define ABILITY_ADAPTABILITY 78
+#define ABILITY_MOTOR_DRIVE 78
+#define ABILITY_SOLID_ROCK 78
+#define ABILITY_STEADFEST 78
+#define ABILITY_TECHNICIAN 78
 };
