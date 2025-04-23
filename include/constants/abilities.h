@@ -96,6 +96,6 @@ Technician increases the power of moves which have a power of 60 or less by 50%.
 
 For moves with variable power, Technician will only apply if the power is 60 or less when used. For example, Low Kick and Grass Knot will only get a Technician boost if the target's weight is 110.0 lbs. (49.9 kg) or less.
 */
-#define ABILITIES_COUNT 79
+#define ABILITIES_COUNT 89
 
 #endif  // GUARD_CONSTANTS_ABILITIES_H
