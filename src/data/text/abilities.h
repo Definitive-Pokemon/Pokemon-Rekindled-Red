@@ -160,10 +160,15 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_AIR_LOCK] = sAirLockDescription,
     [ABILITY_SLOW_START] = sSlowStartDescription,
     [ABILITY_ADAPTABILITY]  = sSlowStartDescription,
-[ABILITY_MOTOR_DRIVE]  = sSlowStartDescription,
-[ABILITY_SOLID_ROCK]  = sSlowStartDescription,
-[ABILITY_STEADFEST]  = sSlowStartDescription,
-[ABILITY_TECHNICIAN]  = sSlowStartDescription,
+    [ABILITY_MOTOR_DRIVE]  = sSlowStartDescription,
+    [ABILITY_SOLID_ROCK]  = sSlowStartDescription,
+    [ABILITY_STEADFEST]  = sSlowStartDescription,
+    [ABILITY_TECHNICIAN]  = sSlowStartDescription,
+    [ABILITY_SNOW_CLOAK]  = sSlowStartDescription,
+    [ABILITY_TINTED_LENS]  = sSlowStartDescription,
+    [ABILITY_SUPER_LUCK]  = sSlowStartDescription,
+    [ABILITY_DOWNLOAD]  = sSlowStartDescription,
+    [ABILITY_LEAF_GUARD]  = sSlowStartDescription,
 };
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =

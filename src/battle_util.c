@@ -2333,6 +2333,9 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             side = GetBattlerSide(battler);
             for (i = 0; i < gBattlersCount; i++)
             {
+                if (ability == ABILITY_LEAF_GUARD &&
+                    !(WEATHER_HAS_EFFECT && gBattleWeather & B_WEATHER_SUN))
+                    break;
                 if (GetBattlerSide(i) != side && gBattleMons[i].ability == ability)
                 {
                     gLastUsedAbility = ability;
@@ -2344,6 +2347,9 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             side = GetBattlerSide(battler);
             for (i = 0; i < gBattlersCount; i++)
             {
+                if (ability == ABILITY_LEAF_GUARD &&
+                    !(WEATHER_HAS_EFFECT && gBattleWeather & B_WEATHER_SUN))
+                    break;
                 if (GetBattlerSide(i) == side && gBattleMons[i].ability == ability)
                 {
                     gLastUsedAbility = ability;
