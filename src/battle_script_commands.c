@@ -1343,7 +1343,7 @@ static void Cmd_typecalc(void)
     }
     else if(gBattleMons[gBattlerTarget].ability == ABILITY_SOLID_ROCK && (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE))
         gBattleMoveDamage = gBattleMoveDamage * 3 / 4;
-    else if(gBattleMons[gBattlerAttacker].ability == ABILITY_TINTED_LIST && (gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE))
+    else if(gBattleMons[gBattlerAttacker].ability == ABILITY_TINTED_LENS && (gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE))
         gBattleMoveDamage = gBattleMoveDamage * 2
     if (gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE)
         gProtectStructs[gBattlerAttacker].targetNotAffected = 1;
