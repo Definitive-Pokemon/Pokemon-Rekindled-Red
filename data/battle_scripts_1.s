@@ -3764,6 +3764,14 @@ BattleScript_MoveUsedIsParalyzed::
 
 BattleScript_MoveUsedFlinched::
 	printstring STRINGID_PKMNFLINCHED
+	jumpifability BS_TARGET, ABILITY_STEADFAST, BattleScript_SteadfastTrigger
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+BattleScript_SteadfastTrigger::
+	setstatchanger STAT_SPEED, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printfromtable gStatUpStringIds
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
