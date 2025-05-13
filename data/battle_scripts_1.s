@@ -3768,6 +3768,7 @@ BattleScript_MoveUsedFlinched::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 BattleScript_SteadfastTrigger::
+	setbyte sSTAT_ANIM_PLAYED, FALSE
 	setstatchanger STAT_SPEED, 1, FALSE
 	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
 	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
@@ -4120,6 +4121,18 @@ BattleScript_FlashFireBoost::
 	attackstring
 	pause B_WAIT_TIME_SHORT
 	printfromtable gFlashFireStringIds
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
+BattleScript_MotorDriveBoost_PPLoss::
+	ppreduce
+BattleScript_MotorDriveBoost::
+	attackstring
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	setstatchanger STAT_SPEED, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
+	printfromtable gMotorDriveStringIds
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 

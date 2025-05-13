@@ -1956,6 +1956,18 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         }
                     }
                     break;
+                case ABILITY_MOTOR_DRIVE:
+                    if (moveType == TYPE_ELECTRIC)
+                    {
+                        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_MOTOR_DRIVE_BOOST;
+                        if (gProtectStructs[gBattlerAttacker].notFirstStrike)
+                            gBattlescriptCurrInstr = BattleScript_MotorDriveBoost;
+                        else
+                            gBattlescriptCurrInstr = BattleScript_MotorDriveBoost_PPLoss;
+
+                        effect = 2;
+                    }
+                    break;
                 }
                 if (effect == 1)
                 {
