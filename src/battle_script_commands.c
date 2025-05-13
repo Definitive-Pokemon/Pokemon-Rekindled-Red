@@ -1295,7 +1295,7 @@ static void Cmd_typecalc(void)
     // check stab
     if (IS_BATTLER_OF_TYPE(gBattlerAttacker, moveType))
     {
-        if (gBattleMons[attacker].ability == ABILITY_ADAPTABILITY)
+        if (gBattleMons[gBattlerAttacker].ability == ABILITY_ADAPTABILITY)
         {
             gBattleMoveDamage = gBattleMoveDamage * 2;
         }
