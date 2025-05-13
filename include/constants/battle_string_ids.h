@@ -390,7 +390,7 @@
 #define STRINGID_PKMNCANTGETITGOING 389
 #define STRINGID_PKMNRAISEDSPEEDWITH 390
 
-#define BATTLESTRINGS_COUNT     390
+#define BATTLESTRINGS_COUNT     391
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
