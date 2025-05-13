@@ -413,7 +413,10 @@ static u8 GetAbilityEncounterRateModType(void)
             sWildEncounterData.abilityEffect = 2;
         else if (ability == ABILITY_SAND_VEIL && gSaveBlock1Ptr->weather == WEATHER_SANDSTORM)
             sWildEncounterData.abilityEffect = 1;
+        else if (ability == ABILITY_SNOW_CLOAK && gSaveBlock1Ptr->weather == WEATHER_SNOW)
+            sWildEncounterData.abilityEffect = 1;
     }
+    
     return sWildEncounterData.abilityEffect;
 }
 
