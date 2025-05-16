@@ -4132,7 +4132,7 @@ BattleScript_MotorDriveBoost::
 	setstatchanger STAT_SPEED, 1, FALSE
 	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_MoveEnd
 	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MoveEnd
-	printfromtable gMotorDriveStringIds
+	printstring STRINGID_PKMNRAISEDSPEED
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
@@ -4240,6 +4240,23 @@ BattleScript_AbilityCuredStatus::
 	waitmessage B_WAIT_TIME_LONG
 	updatestatusicon BS_SCRIPTING
 	return
+
+BattleScript_DownloadAbility::
+	pause B_WAIT_TIME_SHORT
+	printfromtable gDownloadStringIds
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_DOWNLOAD_ATTACK, BattleScript_DownloadAbility_Attack
+	setstatchanger STAT_SPATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_DownloadAbility_End
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_DownloadAbility_End
+	goto BattleScript_DownloadAbility_End
+BattleScript_DownloadAbility_Attack::
+	setstatchanger STAT_ATK, 1, FALSE
+	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_DownloadAbility_End
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_DownloadAbility_End
+BattleScript_DownloadAbility_End::
+	waitmessage B_WAIT_TIME_LONG
+	end3
 
 BattleScript_SlowStartActivates::
 	pause B_WAIT_TIME_SHORT

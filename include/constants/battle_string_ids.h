@@ -388,9 +388,10 @@
 #define STRINGID_PICKUP 387
 #define STRINGID_PICKUPSOLO 388
 #define STRINGID_PKMNCANTGETITGOING 389
-#define STRINGID_PKMNRAISEDSPEEDWITH 390
+#define STRINGID_PKMNRAISEDATTACKWITH 390
+#define STRINGID_PKMNRAISEDSPATKWITH 391
 
-#define BATTLESTRINGS_COUNT     391
+#define BATTLESTRINGS_COUNT     392
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -566,7 +567,9 @@
 #define B_MSG_FLASH_FIRE_BOOST    0
 #define B_MSG_FLASH_FIRE_NO_BOOST 1
 
-#define B_MSG_MOTOR_DRIVE_BOOST 0
+// gDownloadStringIds
+#define B_MSG_DOWNLOAD_SP_ATK 0
+#define B_MSG_DOWNLOAD_ATTACK 1
 
 // gBerryEffectStringIds
 #define B_MSG_CURED_PROBLEM     0

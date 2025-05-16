@@ -1208,6 +1208,7 @@ bool8 HandleFaintedMonActions(void)
             break;
         case 6:
             if (AbilityBattleEffects(ABILITYEFFECT_INTIMIDATE1, 0, 0, 0, 0)
+             || AbilityBattleEffects(ABILITYEFFECT_DOWNLOAD, 0, 0, 0, 0)
              || AbilityBattleEffects(ABILITYEFFECT_SLOW_START, 0, 0, 0, 0)
              || AbilityBattleEffects(ABILITYEFFECT_TRACE, 0, 0, 0, 0)
              || ItemBattleEffects(ITEMEFFECT_NORMAL, 0, TRUE)
@@ -1698,7 +1699,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
         GET_MOVE_TYPE(move, moveType);
 
         if (IS_BATTLE_TYPE_GHOST_WITHOUT_SCOPE(gBattleTypeFlags)
-         && (gLastUsedAbility == ABILITY_INTIMIDATE || gLastUsedAbility == ABILITY_TRACE))
+         && (gLastUsedAbility == ABILITY_INTIMIDATE || gLastUsedAbility == ABILITY_TRACE ||
+            gLastUsedAbility == ABILITY_DOWNLOAD))
             return effect;
 
         switch (caseID)
@@ -1959,7 +1961,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 case ABILITY_MOTOR_DRIVE:
                     if (moveType == TYPE_ELECTRIC)
                     {
-                        gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_MOTOR_DRIVE_BOOST;
                         if (gProtectStructs[gBattlerAttacker].notFirstStrike)
                             gBattlescriptCurrInstr = BattleScript_MotorDriveBoost;
                         else
@@ -2250,6 +2251,81 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     gStatuses3[i] &= ~STATUS3_INTIMIDATE_POKES;
                     BattleScriptPushCursorAndCallback(BattleScript_IntimidateActivatesEnd3);
                     gBattleStruct->intimidateBattler = i;
+                    effect++;
+                    break;
+                }
+            }
+            break;
+        case ABILITYEFFECT_DOWNLOAD: // 21
+            for (i = 0; i < gBattlersCount; i++)
+            {
+                if (gBattleMons[i].ability == ABILITY_DOWNLOAD)
+                {
+                    u16 realDefense;
+                    u16 realSpDefense;
+                    u8 selectedStat = B_MSG_DOWNLOAD_SP_ATK;
+                    u8 target2;
+                    gLastUsedAbility = ABILITY_DOWNLOAD;
+                    side = (GetBattlerPosition(i) ^ BIT_SIDE) & BIT_SIDE; // side of the opposing pokemon
+                    target1 = GetBattlerAtPosition(side);
+                    target2 = GetBattlerAtPosition(side + BIT_FLANK);
+                    realDefense = gBattleMons[target1].speed
+                        * (gStatStageRatios[gBattleMons[target1].statStages[STAT_DEF]][0])
+                        / (gStatStageRatios[gBattleMons[target1].statStages[STAT_DEF]][1]);
+                    realSpDefense = gBattleMons[target1].speed
+                        * (gStatStageRatios[gBattleMons[target1].statStages[STAT_SPDEF]][0])
+                        / (gStatStageRatios[gBattleMons[target1].statStages[STAT_SPDEF]][1]);
+                    
+                    if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+                    {
+                        if (gBattleMons[target1].hp != 0 && gBattleMons[target2].hp != 0)
+                        {
+                            u16 totalDefense = realDefense;
+                            u16 totalSpDefense = realSpDefense;
+                            realDefense = gBattleMons[target2].speed
+                                * (gStatStageRatios[gBattleMons[target2].statStages[STAT_DEF]][0])
+                                / (gStatStageRatios[gBattleMons[target2].statStages[STAT_DEF]][1]);
+                            realSpDefense = gBattleMons[target2].speed
+                                * (gStatStageRatios[gBattleMons[target2].statStages[STAT_SPDEF]][0])
+                                / (gStatStageRatios[gBattleMons[target2].statStages[STAT_SPDEF]][1]);
+                            u16 totalDefense += realDefense;
+                            u16 totalSpDefense += realSpDefense;
+                            if (totalDefense < totalSpDefense)
+                            {
+                                selectedStat = B_MSG_DOWNLOAD_ATTACK;
+                            }
+                        }
+                        else if (gBattleMons[target1].hp != 0)
+                        {
+                            if (realDefense < realSpDefense)
+                            {
+                                selectedStat = B_MSG_DOWNLOAD_ATTACK;
+                            }
+                        }
+                        else if (gBattleMons[target2].hp != 0)
+                        {
+                            realDefense = gBattleMons[target2].speed
+                                * (gStatStageRatios[gBattleMons[target2].statStages[STAT_DEF]][0])
+                                / (gStatStageRatios[gBattleMons[target2].statStages[STAT_DEF]][1]);
+                            realSpDefense = gBattleMons[target2].speed
+                                * (gStatStageRatios[gBattleMons[target2].statStages[STAT_SPDEF]][0])
+                                / (gStatStageRatios[gBattleMons[target2].statStages[STAT_SPDEF]][1]);
+                            if (realDefense < realSpDefense)
+                            {
+                                selectedStat = B_MSG_DOWNLOAD_ATTACK;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (realDefense < realSpDefense)
+                        {
+                            selectedStat = B_MSG_DOWNLOAD_ATTACK;
+                        }
+                    }
+                    gBattleCommunication[MULTISTRING_CHOOSER] = selectedStat;
+                    BattleScriptPushCursorAndCallback(BattleScript_DownloadAbility);
+                    gBattleScripting.battler = i;
                     effect++;
                     break;
                 }

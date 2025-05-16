@@ -260,6 +260,8 @@ static const u8 sText_PkmnCantUseMoveTaunt[] = _("{B_ACTIVE_NAME_WITH_PREFIX} ca
 static const u8 sText_PkmnCantUseMoveSealed[] = _("{B_ACTIVE_NAME_WITH_PREFIX} can't use the\nsealed {B_CURRENT_MOVE}!\p");
 static const u8 sText_PkmnMadeItRain[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmade it rain!");
 static const u8 sText_PkmnRaisedSpeed[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its SPEED!");
+static const u8 sText_PkmnRaisedAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s raised its ATTACK\nusing {B_SCR_ACTIVE_ABILITY}!");
+static const u8 sText_PkmnRaisedSpAttackWith[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s raised its SP. ATK\nusing {B_SCR_ACTIVE_ABILITY}!");
 static const u8 sText_PkmnProtectedBy[] = _("{B_DEF_NAME_WITH_PREFIX} was protected\nby {B_DEF_ABILITY}!");
 static const u8 sText_PkmnPreventsUsage[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents {B_ATK_NAME_WITH_PREFIX}\lfrom using {B_CURRENT_MOVE}!");
 static const u8 sText_PkmnRestoredHPUsing[] = _("{B_DEF_NAME_WITH_PREFIX} restored HP\nusing its {B_DEF_ABILITY}!");
@@ -295,7 +297,6 @@ static const u8 sText_PkmnsXPreventsFlinching[] = _("{B_EFF_NAME_WITH_PREFIX}'s 
 static const u8 sText_PkmnsXPreventsYsZ[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}\nprevents {B_DEF_NAME_WITH_PREFIX}'s\l{B_DEF_ABILITY} from working!");
 static const u8 sText_PkmnsXCuredItsYProblem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncured its {B_BUFF1} problem!");
 static const u8 sText_PkmnsXHadNoEffectOnY[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nhad no effect on {B_EFF_NAME_WITH_PREFIX}!");
-static const u8 sText_PkmnRaisedSpeedWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nraised its Speed!");
 static const u8 sText_TooScaredToMove[] = _("{B_ATK_NAME_WITH_PREFIX} is too scared to move!");
 static const u8 sText_GetOutGetOut[] = _("GHOST: Get out…… Get out……");
 static const u8 sText_StatSharply[] = _("sharply ");
@@ -712,6 +713,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_PKMNSNATCHEDMOVE - BATTLESTRINGS_TABLE_START]              = sText_PkmnSnatchedMove,
     [STRINGID_PKMNMADEITRAIN - BATTLESTRINGS_TABLE_START]                = sText_PkmnMadeItRain,
     [STRINGID_PKMNCANTGETITGOING - BATTLESTRINGS_TABLE_START]            = sText_MonCantGetGoing,
+    [STRINGID_PKMNRAISEDATTACKWITH - BATTLESTRINGS_TABLE_START]          = sText_PkmnRaisedAttackWith,
+    [STRINGID_PKMNRAISEDSPATKKWITH - BATTLESTRINGS_TABLE_START]          = sText_PkmnRaisedSpAttackWith,
     [STRINGID_PKMNRAISEDSPEED - BATTLESTRINGS_TABLE_START]               = sText_PkmnRaisedSpeed,
     [STRINGID_PKMNPROTECTEDBY - BATTLESTRINGS_TABLE_START]               = sText_PkmnProtectedBy,
     [STRINGID_PKMNPREVENTSUSAGE - BATTLESTRINGS_TABLE_START]             = sText_PkmnPreventsUsage,
@@ -907,7 +910,6 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_ENEMYABOUTTOSWITCHPKMNNOPREDICT - BATTLESTRINGS_TABLE_START] = sText_EnemyAboutToSwitchPkmnNoPredict,
     [STRINGID_PICKUP - BATTLESTRINGS_TABLE_START]                        = sText_MonPickedUpItem,
     [STRINGID_PICKUPSOLO - BATTLESTRINGS_TABLE_START]                    = sText_MonPickedUpItemSolo,
-    [STRINGID_PKMNRAISEDSPEEDWITH - BATTLESTRINGS_TABLE_START] = sText_PkmnRaisedSpeed
 };
 
 const u16 gMissStringIds[] =
@@ -1261,9 +1263,10 @@ const u16 gFlashFireStringIds[] =
     [B_MSG_FLASH_FIRE_NO_BOOST] = STRINGID_PKMNSXMADEYINEFFECTIVE
 };
 
-const u16 gMotorDriveStringIds[] = 
+const u16 gDownloadStringIds[] = 
 {
-    [B_MSG_MOTOR_DRIVE_BOOST] = STRINGID_PKMNRAISEDSPEEDWITH
+    [B_MSG_DOWNLOAD_SP_ATK] = STRINGID_PKMNRAISEDSPATKWITH,
+    [B_MSG_DOWNLOAD_ATTACK] = STRINGID_PKMNRAISEDATTACKWITH
 };
 
 const u16 gCaughtMonStringIds[] =

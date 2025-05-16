@@ -3014,6 +3014,8 @@ static void TryDoEventsBeforeFirstTurn(void)
     
     if (AbilityBattleEffects(ABILITYEFFECT_INTIMIDATE1, 0, 0, 0, 0) != 0)
         return;
+    if (AbilityBattleEffects(ABILITYEFFECT_DOWNLOAD, 0, 0, 0, 0) != 0)
+        return;
     if (AbilityBattleEffects(ABILITYEFFECT_SLOW_START, 0, 0, 0, 0) != 0)
         return;
     if (AbilityBattleEffects(ABILITYEFFECT_TRACE, 0, 0, 0, 0) != 0)
