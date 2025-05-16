@@ -2288,8 +2288,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                             realSpDefense = gBattleMons[target2].speed
                                 * (gStatStageRatios[gBattleMons[target2].statStages[STAT_SPDEF]][0])
                                 / (gStatStageRatios[gBattleMons[target2].statStages[STAT_SPDEF]][1]);
-                            u16 totalDefense += realDefense;
-                            u16 totalSpDefense += realSpDefense;
+                            totalDefense += realDefense;
+                            totalSpDefense += realSpDefense;
                             if (totalDefense < totalSpDefense)
                             {
                                 selectedStat = B_MSG_DOWNLOAD_ATTACK;
