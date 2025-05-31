@@ -63,6 +63,7 @@ AI_CBM_CheckIfNegatesType::
 	if_equal ABILITY_FLASH_FIRE, CheckIfFlashFireCancelsFire
 	if_equal ABILITY_WONDER_GUARD, CheckIfWonderGuardCancelsMove
 	if_equal ABILITY_LEVITATE, CheckIfLevitateCancelsGroundMove
+	if_equal ABILITY_MOTOR_DRIVE, CheckIfMotorDriveCancelsElectric
 	goto AI_CheckBadMove_CheckSoundproof
 
 CheckIfVoltAbsorbCancelsElectric::
@@ -87,6 +88,11 @@ CheckIfWonderGuardCancelsMove::
 CheckIfLevitateCancelsGroundMove::
 	get_curr_move_type
 	if_equal_ TYPE_GROUND, Score_Minus10
+	goto AI_CheckBadMove_CheckSoundproof
+
+CheckIfMotorDriveCancelsElectric::
+	get_curr_move_type
+	if_equal_ TYPE_ELECTRIC, Score_Minus12
 
 AI_CheckBadMove_CheckSoundproof::
 	get_ability AI_TARGET
@@ -217,6 +223,7 @@ AI_CBM_Sleep::
 	get_ability AI_TARGET
 	if_equal ABILITY_INSOMNIA, Score_Minus10
 	if_equal ABILITY_VITAL_SPIRIT, Score_Minus10
+	if_equal ABILITY_LEAF_GUARD, CheckIfLeafGuardActive
 	if_status AI_TARGET, STATUS1_ANY, Score_Minus10
 	if_side_affecting AI_TARGET, SIDE_STATUS_SAFEGUARD, Score_Minus10
 	end
@@ -350,6 +357,7 @@ AI_CBM_Poison::
 	if_equal TYPE_POISON, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_IMMUNITY, Score_Minus10
+	if_equal ABILITY_LEAF_GUARD, CheckIfLeafGuardActive
 	if_status AI_TARGET, STATUS1_ANY, Score_Minus10
 	if_side_affecting AI_TARGET, SIDE_STATUS_SAFEGUARD, Score_Minus10
 	end
@@ -402,6 +410,7 @@ AI_CBM_Paralyze::
 	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_LIMBER, Score_Minus10
+	if_equal ABILITY_LEAF_GUARD, CheckIfLeafGuardActive
 	if_status AI_TARGET, STATUS1_ANY, Score_Minus10
 	if_side_affecting AI_TARGET, SIDE_STATUS_SAFEGUARD, Score_Minus10
 	end
@@ -535,6 +544,7 @@ AI_CBM_Torment::
 AI_CBM_WillOWisp::
 	get_ability AI_TARGET
 	if_equal ABILITY_WATER_VEIL, Score_Minus10
+	if_equal ABILITY_LEAF_GUARD, CheckIfLeafGuardActive
 	if_status AI_TARGET, STATUS1_ANY, Score_Minus10
 	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
 	if_type_effectiveness AI_EFFECTIVENESS_x0_5, Score_Minus10
@@ -2502,6 +2512,11 @@ AI_CV_ChangeSelfAbility_AbilitiesToEncourage::
 	.byte ABILITY_SPEED_BOOST
 	.byte ABILITY_BATTLE_ARMOR
 	.byte ABILITY_SAND_VEIL
+	.byte ABILITY_SNOW_CLOAK
+	.byte ABILITY_MOTOR_DRIVE
+	.byte ABILITY_SOLID_ROCK
+	.byte ABILITY_TINTED_LENS
+	.byte ABILITY_SUPER_LUCK
 	.byte ABILITY_STATIC
 	.byte ABILITY_FLASH_FIRE
 	.byte ABILITY_WONDER_GUARD
@@ -3218,6 +3233,11 @@ AI_Unknown::
 	score +5
 
 AI_Unknown_End::
+	end
+
+CheckIfLeafGuardActive::
+	get_weather
+	if_equal AI_WEATHER_SUN, Score_Minus10
 	end
 
 AI_Roaming::
