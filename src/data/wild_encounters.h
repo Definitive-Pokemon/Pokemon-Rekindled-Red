@@ -207,7 +207,7 @@ const struct WildPokemonInfo sViridianForest_FireRed_LandMonsInfo = { 14, sVirid
 const struct WildPokemon sMtMoon1F_FireRed_LandMons[] =
 {
     { 13, 13, SPECIES_ZUBAT },
-    { 14, 14, SPECIES_ZUBAT },
+    { 14, 14, SPECIES_WHISMUR },
     { 13, 13, SPECIES_GEODUDE },
     { 14, 14, SPECIES_SOLROCK },
     { 14, 14, SPECIES_LUNATONE },
@@ -7233,11 +7233,11 @@ const struct WildPokemon sRoute24_LeafGreen_LandMons[] =
 {
     { 17, 17, SPECIES_TAILLOW },
     { 18, 18, SPECIES_TAILLOW },
-    { 17, 17, SPECIES_TAILLOW },
-    { 18, 18, SPECIES_ODDISH },
+    { 17, 17, SPECIES_ILLUMISE },
+    { 18, 18, SPECIES_VOLBEAT },
+    { 17, 17, SPECIES_ODDISH },
     { 17, 17, SPECIES_ODDISH },
     { 18, 18, SPECIES_BELLSPROUT },
-    { 17, 17, SPECIES_BELLSPROUT },
     { 16, 16, SPECIES_ABRA },
     { 17, 17, SPECIES_RALTS },
     { 18, 18, SPECIES_ABRA },
