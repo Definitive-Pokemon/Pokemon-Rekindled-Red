@@ -34,8 +34,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER_2",
-      "x": 8,
-      "y": 11,
+      "x": 10,
+      "y": 16,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_UP",
       "movement_range_x": 1,
@@ -48,7 +48,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 16,
+      "x": 6,
       "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -63,7 +63,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER_2",
-      "x": 34,
+      "x": 24,
       "y": 7,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -77,7 +77,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIRD_KEEPER",
-      "x": 43,
+      "x": 33,
       "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -91,7 +91,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-      "x": 23,
+      "x": 13,
       "y": 10,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_RIGHT_DOWN_LEFT_UP",
@@ -106,7 +106,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 73,
+      "x": 63,
       "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -121,7 +121,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-      "x": 111,
+      "x": 101,
       "y": 9,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_LEFT_DOWN_RIGHT",
@@ -136,7 +136,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-      "x": 106,
+      "x": 96,
       "y": 11,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_LEFT_UP_RIGHT",
@@ -151,7 +151,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER_2",
-      "x": 93,
+      "x": 83,
       "y": 10,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -165,7 +165,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER_2",
-      "x": 54,
+      "x": 44,
       "y": 11,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -179,7 +179,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 69,
+      "x": 59,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -194,7 +194,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER",
-      "x": 82,
+      "x": 72,
       "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -209,7 +209,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MASTER_SCIENTIST",
-      "x": 76,
+      "x": 66,
       "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -224,7 +224,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER",
-      "x": 63,
+      "x": 53,
       "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -239,7 +239,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER",
-      "x": 40,
+      "x": 30,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -254,7 +254,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MASTER_SCIENTIST",
-      "x": 22,
+      "x": 12,
       "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -269,7 +269,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MAXIMUS",
-      "x": 60,
+      "x": 50,
       "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -283,14 +283,14 @@
   ],
   "warp_events": [
     {
-      "x": 60,
+      "x": 50,
       "y": 8,
       "elevation": 3,
       "dest_map": "MAP_SEAFOAM_ISLANDS_1F",
       "dest_warp_id": "3"
     },
     {
-      "x": 72,
+      "x": 62,
       "y": 14,
       "elevation": 3,
       "dest_map": "MAP_SEAFOAM_ISLANDS_1F",
@@ -303,7 +303,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 68,
+      "x": 58,
       "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -311,7 +311,7 @@
     },
     {
       "type": "sign",
-      "x": 64,
+      "x": 54,
       "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -319,7 +319,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 23,
+      "x": 13,
       "y": 6,
       "elevation": 3,
       "item": "ITEM_STARDUST",
