@@ -28,7 +28,7 @@ PalletTown_Debug::
 	setflag FLAG_BADGE06_GET
 	setflag FLAG_BADGE07_GET
 	setflag FLAG_BADGE08_GET
-	setflag FLAG_ABSOLUTE_HORROR
+	setflag FLAG_HORROR_ABSOLUTE
 	giveitem ITEM_HM05
 	end
 
