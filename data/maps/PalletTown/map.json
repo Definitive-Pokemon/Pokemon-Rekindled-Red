@@ -141,8 +141,8 @@
       "x": 2,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_SILPH_CO_11F",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_MONITORING_STATION_POWER",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

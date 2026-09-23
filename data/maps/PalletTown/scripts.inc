@@ -19,7 +19,17 @@ PalletTown_OnTransition::
 
 PalletTown_Debug::
     givemon SPECIES_MEWTWO, 100
-	givemon SPECIES_TYRANITAR, 100
+	givemon SPECIES_PORYGON, 100
+	setflag FLAG_BADGE01_GET
+	setflag FLAG_BADGE02_GET
+	setflag FLAG_BADGE03_GET
+	setflag FLAG_BADGE04_GET
+	setflag FLAG_BADGE05_GET
+	setflag FLAG_BADGE06_GET
+	setflag FLAG_BADGE07_GET
+	setflag FLAG_BADGE08_GET
+	setflag FLAG_ABSOLUTE_HORROR
+	giveitem ITEM_HM05
 	end
 
 PalletTown_EventScript_TryReadySignLady::
