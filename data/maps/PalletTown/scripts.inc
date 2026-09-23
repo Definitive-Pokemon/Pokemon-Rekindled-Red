@@ -17,6 +17,11 @@ PalletTown_OnTransition::
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_OAK, 3, PalletTown_EventScript_PlaceMasterYoungsterOutsideLab
 	end
 
+PalletTown_Debug::
+    givemon SPECIES_MEWTWO, 100
+	givemon SPECIES_TYRANITAR, 100
+	end
+
 PalletTown_EventScript_TryReadySignLady::
 	goto_if_unset FLAG_OPENED_START_MENU, EventScript_Return
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1, EventScript_Return
